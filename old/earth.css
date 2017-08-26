@@ -1,0 +1,31 @@
+﻿body { border: 0px double #eab064;
+background-image: url(https://bc579014-a-62cb3a1a-s-sites.googlegroups.com/site/surveyearth/config/kartobg.png.1394576830996.png.1425429458138.png);
+background-color: #eee;
+background-repeat: repeat;
+background-position: left top;
+}
+h1             {
+	        text-align: left;
+                margin-bottom:30px
+	font-family: Helvetica,arial,serif;
+	font-size: 35px; text-transform: none;font-weight:bold;
+	color: #FFFFFF;
+	text-shadow: 0 1px 0 #eab064, 
+               0 2px 0 #eab064,
+               0 3px 0 #fff,
+               0 4px 0 #fff,
+               0 5px 0 #fff,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+.xg_widget_groups xg_sprite xg_sprite-add xj_new_topic_link:before {
+content:url(http://api.ning.com/files/HcBphgbkUnRtjy2Ph4BH0bRoEtFBXhB-t8BYTGFvoPgpB5S3VH4ZoV0QAtyTv79eSRM6WJ725ltv-wHR2l7JY1WwtDicIMDF/startnewdiscussion.png);
+position:top;
+top:20px;
+left:200px;
+}

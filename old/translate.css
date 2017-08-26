@@ -1,0 +1,83 @@
+/* Start google translate css V8.2 */
+DIV#google_translate_element{
+   position:fixed!important;
+   top:6px;
+   right:20%;
+   width:135px;
+   height:20px;
+   z-index:111!important;
+   border-radius:5px !important;
+   background-color: rgba(155, 155, 355, 0)!important;}
+DIV.skiptranslate.goog-te-gadget{
+   font-size: 0px;
+   padding:0px!important;
+   height:20px;}
+SELECT.goog-te-combo{
+   margin-top:0px!important;
+   margin-bottom:1px!important;
+   padding:0px;
+   height:20px!important;}
+DIV#google_translate_element .targetLanguage{
+   height:65px!important;}
+DIV#google_translate_element OPTION{
+   background: rgb(104, 128, 118);
+   background: rgb(77, 77, 86);
+   background: rgba(242,246,248, 1);
+   background: -moz-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(216,225,231,0.77) 50%, rgba(181,198,208,0.77) 51%, rgba(224,239,249,0.54) 100%);
+   background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(242,246,248,1)), color-stop(50%, rgba(216,225,231,0.77)), color-stop(51%, rgba(181,198,208,0.77)), color-stop(100%, rgba(224,239,249,0.54)));
+   background: -webkit-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(216,225,231,0.77) 50%, rgba(181,198,208,0.77) 51%, rgba(224,239,249,0.54) 100%);
+   background: -o-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(216,225,231,0.77) 50%, rgba(181,198,208,0.77) 51%, rgba(224,239,249,0.54) 100%);
+   background: -ms-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(216,225,231,0.77) 50%, rgba(181,198,208,0.77) 51%, rgba(224,239,249,0.54) 100%);
+   background: linear-gradient(to bottom, rgba(242,246,248,1) 0%, rgba(216,225,231,0.77) 50%, rgba(181,198,208,0.77) 51%, rgba(224,239,249,0.54) 100%); }
+DIV.ningbar A#username{
+   position:absolute!important;
+   top:0px;
+   margin-top:21px!important;
+   margin-right:-30px!important;
+   width:130px!important;
+   height:20px!important;
+   right:0%;
+   overflow:hidden!important;
+   font-size:12px;}
+DIV.ningbar UL.ningbar-userLinks.linkbar{
+   position:absolute!important;
+   height:22px!important;
+   padding:0px;
+   top:0px;
+   right:0%;}
+select.goog-te-combo {
+   border: 1px solid #333;
+   -moz-border-radius-topleft: 5px;
+   -webkit-border-top-left-radius: 5px;
+   border-top-left-radius: 5px;
+   -moz-border-radius-topright: 5px;
+   -webkit-border-top-right-radius: 5px;
+   border-top-right-radius: 5px;
+   background: rgb(30, 32, 35);
+   background: rgb(77, 77, 86);
+   background: rgba(242,246,248,1);
+   background: -moz-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(216,225,231,0.77) 50%, rgba(181,198,208,0.77) 51%, rgba(224,239,249,0.54) 100%);
+   background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(242,246,248,1)), color-stop(50%, rgba(216,225,231,0.77)), color-stop(51%, rgba(181,198,208,0.77)), color-stop(100%, rgba(224,239,249,0.54)));
+   background: -webkit-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(216,225,231,0.77) 50%, rgba(181,198,208,0.77) 51%, rgba(224,239,249,0.54) 100%);
+   background: -o-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(216,225,231,0.77) 50%, rgba(181,198,208,0.77) 51%, rgba(224,239,249,0.54) 100%);
+   background: -ms-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(216,225,231,0.77) 50%, rgba(181,198,208,0.77) 51%, rgba(224,239,249,0.54) 100%);
+   background: linear-gradient(to bottom, rgba(242,246,248,1) 0%, rgba(216,225,231,0.77) 50%, rgba(181,198,208,0.77) 51%, rgba(224,239,249,0.54) 100%);
+   color:#333!important;
+   font-size:14px!important;}
+.goog-logo-link {
+   visibility:hidden;}
+DIV.central-content,
+BODY{
+   top:0px!important;}
+DIV#goog-gt-tt.skiptranslate,
+.goog-te-banner-frame.skiptranslate {
+   display:none!important;}
+@media screen and (max-width:720px)  {
+DIV.ningbar A#username{
+   margin-top:-8000px!important;}
+DIV#google_translate_element{
+   top:16px;
+   right:10px;
+   box-shadow: 0px -5px 11px rgba(0, 2, 0, 0.0) !important;} 
+DIV.ningbar UL.ningbar-userLinks.linkbar{
+   margin-top:-5px!important;}} @media screen and (max-width:482px)  { DIV.ningbar A#username{ position:relative!important; max-width:100px!important;} }

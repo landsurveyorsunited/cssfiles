@@ -1,0 +1,904 @@
+/******** Social Channels Video Sections ***************************************************************************************************************************************************************/
+
+/*.Cursor For Video Feed Page On Hover*/
+.matrix-item {cursor:pointer}
+
+.feedListPagePlayer .nav {
+   background: antiquewhite; text-align: center;border-radius: 0.5em;font-weight:normal;
+    font-size: 1.5em;box-shadow: inset 0px 4px 8px rgba(0, 80, 0, .4), 0px 0px 1px 3px ivory ,5px 10px 15px 0.7px grey;color: #828282;
+    cursor: pointer;}
+
+.feedListPagePlayer .nav:hover{
+   background:darkslategray; text-align: center;border-radius: 0.5em;font-weight:normal;
+    font-size: 1.5em;box-shadow: inset 0px 4px 8px rgba(0, 80, 0, .4), 0px 0px 1px 3px ivory ,5px 10px 15px 0.7px grey;color: silver;
+    cursor: pointer;}
+
+.feedListPage .matrix .matrix-itemFrame {
+border-style: none;
+border-color:grey;border-bottom-right-radius:8px;border-bottom-left-radius:8px;background-color:black;
+}
+.feedListPage .matrix .matrix-itemFrame:hover {background-color:brown;cursor:pointer}
+
+.page-video .column.span16 .matrix > .row > .span-full {width: 100%}
+.page-video .span {padding:10px;}
+.page-video .matrix-itemFrame {padding:2px}
+
+.feedListPage .matrix .matrix-itemFrame .feedListPage-itemTitle {
+text-align:center;padding-top:6px;margin-bottom: 3px;color:white}
+
+/* You Tube Player Screen */
+
+.feedListPagePlayer.container{height: 100%;background-color:rgba(0, 0, 0,0);}
+
+.feedListPagePlayer .row-centered {margin-top:5%;position:relative}
+
+.feedListPage .feedListPagePlayer  {z-index: 1001; position: fixed;top: 0px; }
+
+div.span13.sourceContainer {border-radius: 0.5em;background-color :#ffe4c4;box-shadow: inset 0px 4px 8px rgba(0, 80, 0, .4), 0px 0px 1px 3px ivory ,5px 10px 15px 0.7px grey;color: #828282} 
+
+/********************************** End Video Section Code ******************************************************************************************************************************************************/
+/******************** Photo Viewer Navigation **************/
+
+/* This makes the photo clickable on either side to go forward or back */
+.page-photos .adjacentEntryLink {    
+     height: 100%;
+    width: 50%; 
+position:absolute;top:0%;
+}
+
+.page-photos .adjacentEntryLink a{ width:100%; height:100%;position:absolute;top:0px;/* this shows the test for next and previous */ text-indent: 35%; }
+.adjacentEntryLink a:after{/* this goes before the next previous text */  content:" Photo "; }
+
+.page-photos .adjacentEntryLink-previous a:hover {opacity:1;cursor:pointer; z-index:0}
+.page-photos .adjacentEntryLink-previous a{
+    background: url("http://api.ning.com:80/files/GAt6ovdCmTrr5Kv9igyCtziSHe1JGqd*wgV2j4lD4CrlCdq9*wBp4bVLXDttPjTC7ju7*F9xNw9OZZy2-TkyMaJ0xlDdT1pZ/mypreviousbutton.png") no-repeat scroll 0% 0% transparent;background-size:17%;background-position:left center;opacity:0; left: 0px; }
+
+.page-photos .adjacentEntryLink-next a:hover {opacity:1; cursor: pointer; z-index:0 }
+.page-photos .adjacentEntryLink-next a {
+    background: url("http://api.ning.com:80/files/GAt6ovdCmToRLpY6XEVT0DQX0wCw1og4rgHC1luuBj2-Ehq2ugf1cgc2r9iNrDvQbGY-PvkTL2Zqi*2kBb4Av4-5T87EYDdM/mynextbutton.png") no-repeat scroll 0% 0% transparent;background-size:17%;background-position:center right;opacity:0; right: 0px;}
+
+/****************** Burlesque Photo Page ******************/
+/* This makes the photo clickable on either side to go forward or back */
+.page-photos-test .adjacentEntryLink {    
+     height: 100%;
+    width: 50%; 
+position:absolute;top:0%;
+}
+
+.page-photos-test  .adjacentEntryLink a{ width:100%; height:100%;position:absolute;top:0px;/* this shows the test for next and previous */ text-indent: 35%; }
+.page-photos-test  .adjacentEntryLink a:after{/* this goes before the next previous text */  content:" Photo "; }
+
+.page-photos-test  .adjacentEntryLink-previous a:hover {/*background-color: rgba( 0, 0, 0 , 0.4);*/ opacity:1;cursor:pointer; z-index:0}
+
+.page-photos-test  .adjacentEntryLink-previous a{
+    background: url("http://api.ning.com:80/files/GAt6ovdCmTrr5Kv9igyCtziSHe1JGqd*wgV2j4lD4CrlCdq9*wBp4bVLXDttPjTC7ju7*F9xNw9OZZy2-TkyMaJ0xlDdT1pZ/mypreviousbutton.png") no-repeat scroll 0% 0% transparent;background-size:17%;background-position:center left;opacity:0; left: 0px; }
+
+.page-photos-test  .adjacentEntryLink-next a:hover {/*background-color: rgba( 0, 0, 0 , 0.4);*/opacity:1; cursor: pointer; z-index:0 }
+.page-photos-test  .adjacentEntryLink-next a {
+    background: url("http://api.ning.com:80/files/GAt6ovdCmToRLpY6XEVT0DQX0wCw1og4rgHC1luuBj2-Ehq2ugf1cgc2r9iNrDvQbGY-PvkTL2Zqi*2kBb4Av4-5T87EYDdM/mynextbutton.png") no-repeat scroll 0% 0% transparent;background-size:17%;background-position:center right;opacity:0; right: 0px;}
+
+
+/******************** END GENERAL PHOTO PAGE SETTINGS *****************/
+/****************** MAIN PHOTOS PAGE **************************/
+
+/**** Make the screen full width *****/
+
+@media screen and (min-width:959px){
+
+.page-photos .container{ width:100% }
+.page-photos .span16{ width:100% }
+
+/* Prevent add/edit page from resizing */
+.page-photos FORM#entry-form.sheet.grid-frame{width:959px!important }
+
+/* MAIN LIST PAGE*/
+.page-photos .photoListPage .matrix > .row > .span { width: 16.5%; }
+.page-photos .photoListPage .matrix-itemFrame{ padding:11px }
+
+/* MAIN PHOTOS VIEWER */
+
+.page-photos .photoDetailPage .image-aspect-4-3 {
+    width:63%;
+    height: 0px;
+    padding-bottom:36.5%;right:0px;left:20px }
+
+
+.page-photos .photoDetailPage-image > img {
+    position:absolute;
+    display: block;
+width:auto;
+    max-height: 100%;
+    margin: auto;
+    top: 0px;
+    bottom: 0px;    
+    left:0px; }
+
+/* This brings the nav, title and add, edit, featured all onto the same line */
+.page-photos .subnavBar.condenseable.span-full{ float:none;}
+
+/* Move up the photo detail page a bit */
+
+.page-photos .photoDetailPage{ margin-top:-27px;}
+
+/* Move over the page title  */
+.page-photos H2.module-name{ margin-left:50px }
+
+/* Headline Section */
+
+.page-photos .photoDetailPage .headline{ margin-left:20px; max-width:960px;}
+.page-photos .photoDetailPage .headline h3{ text-transform:uppercase;font-size:1.05em;}
+.page-photos .photoDetailPage .headline-byline{ margin-top:10px }
+.page-photos .photoDetailPage .headline .avatar.avatar-48{width:40px; height:40px; margin-top:-6px;}
+
+
+/* This stops the photos moving down if a description is added to the photo */
+.page-photos .photoDetailPage .row:after { content: none!important; }
+.page-photos .photoDetailPage .sheet:after { content: none!important; }
+
+
+/* Removes the line that was separating the more entries from the description of photo */
+.page-photos .photoDetailPage .buttonGroup:before {border-top:none}
+
+
+/* This is the section which holds the photo details description and the photo title etc */
+.page-photos .photoDetailPage .sheet.grid-frame{ border:none;box-shadow:none;background:transparent }
+.page-photos .photoDetailPage div.row-narrower1:nth-child(1) > div:nth-child(1){ background: rgba(0,0,0,0.3);border-radius: 0px 0px 25px 25px; border: 5px solid #333;border-style:double;}
+
+/* Description of photo section */
+
+.page-photos .photoDetailPage div.content:nth-child(4){ padding-left:10px;padding-right:10px;width:70%;max-width:70%; margin-left:15px }
+
+/*.page-photos .photoDetailPage div.content:nth-child(4){margin-bottom: 0px; background: rgba(0,0,0,0.8); border-radius: 8px; border: 5px solid #333;border-style:double; padding:10px}*/
+
+
+
+/*** Comments Add Comment Box Area ****/
+
+/* Move the NONE MEMBER COMMENT up and add extra message */
+
+.page-photos div.span-full.commentingMessage{position: absolute; top:155px; margin-left: 62% ;width:auto; }
+
+.page-photos  div.span-full.commentingMessage{background: rgba(0,0,0,0.6); border-radius:6px }
+
+.page-photos div.span-full.commentingMessage:after{content:" Why not come and join the community today! "; }
+.page-photos div.span-full.commentingMessage { text-align:center }
+
+/* Comment Entry box transparent until clicked in */
+.page-photos .commentForm textarea { background:rgba(0,0,0,0.8); border-radius: 8px; border: 5px solid #333;border-style:double; color:ivory;opacity:0.8  }
+.page-photos .commentForm textarea:focus {background:white;color: black; opacity:10 }
+
+
+/* Position of the box */
+.page-photos div.addCommentContainer.span-full{ position:absolute;margin-left:62%;margin-top:0px;}
+.page-photos div.addCommentContainer.span-full > form.commentForm{ width:26% }
+
+/* Add comment button */
+.page-photos .photoDetailPage .commentForm input.button.button-primary{ font-size:0.9em;padding:0.3em;float:right}
+
+/*********** Comments List section ***********/
+/*.page-photos .photoDetailPage .comments-ningSemiThreaded .comments-list{max-height:300px; overflow:auto;padding-bottom:3px;}*/
+
+.page-photos .photoDetailPage DIV.comments-main.row.row-narrower1{ position:absolute; margin-left:65.5%; margin-top: 135px; z-index:50;width:28%;}
+.page-photos .photoDetailPage DIV.comments-main.row.row-narrower1{ background: rgba(0,0,0,0.8); border-radius: 8px; border: 5px solid #333;border-style:double}
+.page-photos .photoDetailPage .grid-frame.sheet{ border:none;box-shadow:none;padding:0px;margin:0px; }
+/* Layout of list info comments details */
+.page-photos .photoDetailPage .comments-metadata .comments-timestamp { display:none }
+.page-photos .photoDetailPage .comments-commentBody .avatar {float:left }
+.page-photos .photoDetailPage .comments-commentBody .avatar-48{ width:32px;height:32px }
+.page-photos .photoDetailPage DIV.comments-main.row.row-narrower1 > .span-full { padding-top:10px }
+.page-photos .photoDetailPage DIV.comments-main .span-full { padding:0px }
+.page-photos .photoDetailPage .comments-text, .comments-editContainer { margin-bottom: 6px;margin-left:50px; font-size:0.9em;}
+.page-photos .photoDetailPage .comments-metadata {margin-bottom: 6px;margin-left: 50px;font-size: 9.5px; line-height: 1.2;}
+.page-photos .photoDetailPage div.commentsPagination.row.row-centered  button{ font-size:9px }
+.page-photos .photoDetailPage .comments-commentBody {background:rgba(47,79,79,0.4);border-radius: 0px 6px 6px 6px}
+
+/** More Entries List and Position **/
+
+/* The more entries strip */
+.page-photos .photoDetailPage-moreEntries{z-index:9999!important;position:absolute; margin-top:104px; margin-left:79px;background:#333;height:35px; width:165px;background: rgba(0,0,0,0.2); border-radius: 8px; border: 5px solid #333;border-style:double;transition: all 0.3s linear; -ms-transition : all 0.3s linear  ;
+-moz-transition : all 0.3s linear ;
+-webkit-transition :  all 0.3s linear  ;
+-o-transition : all 0.3s linear ;}
+
+/* Reveal on hover */
+.page-photos .photoDetailPage-moreEntries:hover{z-index:9999!important;position:absolute; margin-top:104px; margin-left:79px;background:#333;width:auto;height:220px;overflow-x:hidden;background: rgba(0,0,0,0.8); border-radius: 8px; border: 5px solid #333;border-style:double;transition: all 0.5s ease-in-out; -ms-transition : all 0.5s ease-in-out  ;
+-moz-transition : all 0.5s ease-in-out ;
+-webkit-transition : all 0.5s ease-in-out  ;
+-o-transition : all 0.5s ease-in-out ;}
+
+
+/* Previews text */
+.page-photos .photoDetailPage-moreEntries > div:nth-child(1):before{content:"Next Photo Previews";position:absolute; color:ivory;padding:4px;border-radius:2px;margin-left:-3px;top:0px;opacity:0.8}
+
+/* Align image positions */
+.page-photos .photoDetailPage-moreEntries .image-aspect-1-1 {
+    background-position: center top;width:120%;padding-bottom:150%}
+.page-photos .photoDetailPage-moreEntries > .span {padding:13px;margin-top:20px}
+
+.page-photos div.photoDetailPage-socialActions {margin-top:0px; margin-left:20px;margin-bottom:5px; max-width:250px;margin-left:25%}
+
+/* Email Follow Link */
+ .page-photos div.pull-right:nth-child(3){font-size:1.3em; float:right ;}
+    
+}
+
+/* Limit comment list length Media queries */
+@media screen and (min-width:1400px){
+.page-photos .photoDetailPage .comments-ningFlat .comments-list{max-height:420px; overflow:auto;padding-bottom:3px;}}
+
+@media screen and (max-width:1400px){
+.page-photos .photoDetailPage .comments-ningFlat .comments-list{max-height:320px; overflow:auto;padding-bottom:3px;}}
+
+@media screen and (max-width:1112px) and (min-width:956px){
+.page-photos .photoDetailPage .comments-ningFlat .comments-list{max-height:210px; overflow:auto;padding-bottom:3px;}}
+
+
+.page-photos .photoDetailPage .avatar.avatar-48{width:36px; height:36px }
+/*** End of media queries ***/
+
+/*******************************************************************************************************************************************************************************************************************/
+
+
+/****************** PHOTO TEST PAGE **************************/
+
+/**** Make the screen full width *****/
+
+@media screen and (min-width:959px){
+
+.page-photos-test .container{ width:100% }
+.page-photos-test .span16{ width:100% }
+
+/* Prevent add/edit page from resizing */
+.page-photos-test FORM#entry-form.sheet.grid-frame{width:959px!important }
+/* MAIN LIST PAGE*/
+
+.page-photos-test .photoListPage .matrix > .row > .span { width: 16.5%; }
+.page-photos-test .photoListPage .matrix-itemFrame{ padding:11px }
+
+/* MAIN PHOTOS VIEWER */
+
+.page-photos-test .photoDetailPage .image-aspect-4-3 {
+    width:63%;
+    height: 0px;
+    padding-bottom: 36.5%;right:0px;left:20px }
+
+
+.page-photos-test .photoDetailPage-image > img {
+    position:absolute;
+    display: block;
+    max-height: 100%;
+width:auto;
+    margin: auto;
+    top: 0px;
+    bottom: 0px;    
+    left:0px; }
+
+/* More Entries Previews **/
+.page-photos-test .photoDetailPage-moreEntries{z-index:9999!important;position:absolute; margin-top:104px; margin-left:79px;background:#333;height:35px; width:165px;background: rgba(0,0,0,0.2); border-radius: 8px; border: 5px solid #333;border-style:double;transition: all 0.3s linear; -ms-transition : all 0.3s linear  ;
+-moz-transition : all 0.3s linear ;
+-webkit-transition :  all 0.3s linear  ;
+-o-transition : all 0.3s linear ;}
+
+/* Reveal on hover */
+.page-photos-test .photoDetailPage-moreEntries:hover{z-index:9999!important;position:absolute;width:auto;height:220px;overflow-X:hidden; margin-top:104px; margin-left:79px;background:#333;background: rgba(0,0,0,0.8); border-radius: 8px; border: 5px solid #333;border-style:double;transition: all 0.5s ease-in-out; -ms-transition : all 0.5s ease-in-out  ;
+-moz-transition : all 0.5s ease-in-out ;
+-webkit-transition : all 0.5s ease-in-out  ;
+-o-transition : all 0.5s ease-in-out ;}
+
+
+/* Previews text */
+.page-photos-test .photoDetailPage-moreEntries > div:nth-child(1):before{content:"Next Photo Previews";position:absolute; color:ivory;padding:4px;border-radius:2px;margin-left:-3px;top:0px;opacity:0.8}
+
+/* Align image positions */
+.page-photos-test .photoDetailPage-moreEntries .image-aspect-1-1 {
+    background-position: center top;width:120%;padding-bottom:150%;}
+.page-photos-test .photoDetailPage-moreEntries > .span {padding:13px;margin-top:20px;}
+
+
+
+
+/* This brings the nav, title and add, edit, featured all onto the same line */
+.page-photos-test .subnavBar.condenseable.span-full{ float:none;}
+
+/* Move up the photo detail page a bit */
+
+.page-photos-test .photoDetailPage{ margin-top:-27px;}
+
+
+/* Move over the page title  */
+.page-photos-test H2.module-name{ margin-left:50px }
+
+/* Headline Section */
+
+.page-photos-test .photoDetailPage .headline{ margin-left:20px; max-width:960px;}
+.page-photos-test .photoDetailPage .headline h3{ text-transform:uppercase;font-size:1.05em;}
+.page-photos-test .photoDetailPage .headline-byline{ margin-top:10px }
+.page-photos-test .photoDetailPage .headline .avatar.avatar-48{width:40px; height:40px; margin-top:-6px;}
+
+
+/* This stops the photos moving down if a description is added to the photo */
+.page-photos-test .photoDetailPage .row:after { content: none!important; }
+.page-photos-test .photoDetailPage .sheet:after { content: none!important; }
+
+
+/* Removes the line that was separating the more entries from the description of photo */
+.page-photos-test .photoDetailPage .buttonGroup:before {border-top:none}
+
+
+/* This is the section which holds the photo details description and the photo title etc */
+.page-photos-test .photoDetailPage .sheet.grid-frame{ border:none;box-shadow:none;background:transparent }
+.page-photos-test .photoDetailPage div.row-narrower1:nth-child(1) > div:nth-child(1){ background: rgba(0,0,0,0.3);border-radius: 0px 0px 25px 25px; border: 5px solid #333;border-style:double;border-top-style:solid;}
+
+/* Description of photo section */
+
+.page-photos-test .photoDetailPage div.content:nth-child(4){ padding-left:10px; padding-right:10px ;width:70%;max-width:70%; margin-left:15px }
+
+/*** Comments Add Comment Box Area ****/
+
+/* Move the NONE MEMBER COMMENT up and add extra message */
+
+.page-photos-test div.span-full.commentingMessage{position: absolute; top:155px; margin-left: 62% ;width:auto; }
+
+.page-photos-test  div.span-full.commentingMessage{background: rgba(0,0,0,0.6); border-radius:6px }
+
+.page-photos-test div.span-full.commentingMessage:after{content:" Why not come and join the community today! "; }
+.page-photos-test div.span-full.commentingMessage { text-align:center }
+
+/* Comment Entry box transparent until clicked in */
+.page-photos-test .commentForm textarea { background:rgba(0,0,0,0.8); border-radius: 8px; border: 5px solid #333;border-style:double;color:ivory;opacity:0.8  }
+.page-photos-test .commentForm textarea:focus {background:white;color: black; opacity:10 }
+
+
+/* Position of the box */
+.page-photos-test div.addCommentContainer.span-full{ position:absolute;margin-left:62%;margin-top:0px;}
+.page-photos-test div.addCommentContainer.span-full > form.commentForm{ width:26% }
+
+/* Add comment button */
+.page-photos-test .photoDetailPage .commentForm input.button.button-primary{ font-size:0.9em;padding:0.3em;float:right}
+
+/*********** Comments List section ***********/
+
+.page-photos-test .photoDetailPage DIV.comments-main.row.row-narrower1{ position:absolute; margin-left:65.5%; margin-top: 135px; z-index:50;width:28%;}
+.page-photos-test .photoDetailPage DIV.comments-main.row.row-narrower1{ background: rgba(0,0,0,0.8); border-radius: 8px; border: 5px solid #333;border-style:double}
+.page-photos-test .photoDetailPage .grid-frame.sheet{ border:none;box-shadow:none;padding:0px;margin:0px; }
+/* Layout of list info comments details */
+.page-photos-test .photoDetailPage .comments-metadata .comments-timestamp { display:none }
+.page-photos-test .photoDetailPage .comments-commentBody .avatar {float:left }
+.page-photos-test .photoDetailPage .comments-commentBody .avatar-48{ width:32px;height:32px }
+.page-photos-test .photoDetailPage DIV.comments-main.row.row-narrower1 > .span-full { padding-top:10px }
+.page-photos-test .photoDetailPage DIV.comments-main .span-full { padding:0px }
+.page-photos-test .photoDetailPage .comments-text, .comments-editContainer { margin-bottom: 6px;margin-left:50px; font-size:0.9em;}
+.page-photos-test .photoDetailPage .comments-metadata {margin-bottom: 6px;margin-left: 50px;font-size: 9.5px; line-height: 1.2;}
+.page-photos-test .photoDetailPage div.commentsPagination.row.row-centered  button{ font-size:9px }
+.page-photos-test .photoDetailPage .comments-commentBody {background:rgba(47,79,79,0.4);border-radius: 0px 6px 6px 6px}
+
+/** Social Actions **/
+.page-photos-test div.photoDetailPage-socialActions {margin-top:0px; margin-left:20px;margin-bottom:5px; max-width:350px;margin-left:25%}
+
+}
+
+
+/* Limit comment list length Media queries */
+@media screen and (min-width:1400px){
+.page-photos-test .photoDetailPage .comments-ningFlat .comments-list{max-height:420px; overflow:auto;padding-bottom:3px;}}
+
+@media screen and (max-width:1400px){
+.page-photos-test .photoDetailPage .comments-ningFlat .comments-list{max-height:320px; overflow:auto;padding-bottom:3px;}}
+
+@media screen and (max-width:1112px) and (min-width:956px){
+.page-photos-test .photoDetailPage .comments-ningFlat .comments-list{max-height:210px; overflow:auto;padding-bottom:3px;}}
+
+ .page-photos-test .photoDetailPage .avatar.avatar-48{width:36px; height:36px;}
+
+/*** End of media queries ***/
+
+/****************** VIDEO LISTINGS TEST PAGE **************************/
+
+/**** Make the screen full width *****/
+
+.page-videolistings .photoDetailPage .image-aspect-4-3 {   
+    height: 0px;
+    padding-bottom:0%;right:0px;left:0px;visibility:hidden;margin-top:20px }
+
+.page-videolistings .adjacentEntryLink-next a {visibility:visible!important }
+.page-videolistings .adjacentEntryLink-previous a {visibility:visible!important }
+
+
+@media screen and (min-width:959px){
+.page-videolistings .photoDetailPage .image-aspect-4-3 {
+    width:56.7%;
+    height: 0px;
+    padding-bottom:0%;right:0px;left:25px;visibility:hidden }
+
+/* Controls for the image-aspect next and previous */
+.page-videolistings .adjacentEntryLink-next a {visibility:visible!important }
+.page-videolistings .adjacentEntryLink-previous a {visibility:visible!important }
+.page-videolistings .adjacentEntryLink a{margin-top:250px }
+
+.page-videolistings .container{ width:100% }
+.page-videolistings .span16{ width:100% }
+
+/* Prevent add/edit page from resizing */
+.page-videolistings FORM#entry-form.sheet.grid-frame{width:959px!important }
+
+/* MAIN LIST PAGE*/
+.page-videolistings .photoListPage .matrix > .row > .span { width: 16.5%; }
+.page-videolistings .photoListPage .matrix-itemFrame{ padding:11px }
+
+/* MAIN PHOTOS VIEWER */
+
+.page-videolistings .photoDetailPage-image > img {
+    position:absolute;
+    display: block;
+    max-height: 100%;
+width:auto;
+    margin: auto;
+    top: 0px;
+    bottom: 0px;    
+    left:0px; }
+
+/* This brings the nav, title and add, edit, featured all onto the same line */
+.page-videolistings .subnavBar.condenseable.span-full{ float:none;}
+
+/* Move up the photo detail page a bit */
+.page-videolistings .photoDetailPage{ margin-top:-27px;}
+
+/* Move over the page title  */
+.page-videolistings H2.module-name{ margin-left:50px }
+
+/* Headline Section */
+
+.page-videolistings .photoDetailPage .headline{ margin-left:20px; max-width:960px;}
+.page-videolistings .photoDetailPage .headline h3{ text-transform:uppercase;font-size:1.05em;}
+.page-videolistings .photoDetailPage .headline-byline{ margin-top:10px }
+.page-videolistings .photoDetailPage .headline .avatar.avatar-48{width:40px; height:40px; margin-top:-6px;}
+
+
+/* This stops the photos moving down if a description is added to the photo */
+.page-videolistings .photoDetailPage .row:after { content: none!important; }
+.page-videolistings .photoDetailPage .sheet:after { content: none!important; }
+
+
+/* Removes the line that was separating the more entries from the description of photo */
+.page-videolistings .photoDetailPage .buttonGroup:before {border-top:none}
+
+
+/* This is the section which holds the photo details description and the photo title etc */
+.page-videolistings .photoDetailPage .sheet.grid-frame{ border:none;box-shadow:none;background:transparent }
+.page-videolistings .photoDetailPage div.row-narrower1:nth-child(1) > div:nth-child(1){ background: rgba(0,0,0,0.3);border-radius: 0px 0px 25px 25px; border: 5px solid 
+
+#333;border-style:double;border-top-style:solid;}
+
+/* Description of photo section */
+
+.page-videolistings .photoDetailPage div.content:nth-child(4){ padding-left:10px; padding-right:10px ;width:70%;max-width:70%; margin-left:15px }
+
+/*** Comments Add Comment Box Area ****/
+
+/* Move the NONE MEMBER COMMENT up and add extra message */
+
+.page-videolistings div.span-full.commentingMessage{position: absolute; top:155px; margin-left: 62% ;width:auto; }
+
+.page-videolistings div.span-full.commentingMessage{background: rgba(0,0,0,0.6); border-radius:6px }
+
+.page-videolistings div.span-full.commentingMessage:after{content:" Why not come and join the community today! "; }
+.page-videolistings div.span-full.commentingMessage { text-align:center }
+
+/* Comment Entry box transparent until clicked in */
+.page-videolistings .commentForm textarea { background:rgba(0,0,0,0.8); border-radius: 8px; border: 5px solid #333;border-style:double;color:ivory;opacity:0.8  }
+.page-videolistings .commentForm textarea:focus {background:white;color: black; opacity:10 }
+
+
+/* Position of the box */
+.page-videolistings div.addCommentContainer.span-full{ position:absolute;margin-left:62%;margin-top:0px;}
+.page-videolistings div.addCommentContainer.span-full > form.commentForm{ width:26% }
+
+/* Add comment button */
+.page-videolistings .photoDetailPage .commentForm input.button.button-primary{ font-size:0.9em;padding:0.3em;float:right}
+
+/*********** Comments List section ***********/
+/*.page-photos-test .photoDetailPage .comments-ningSemiThreaded .comments-list{max-height:300px; overflow:auto;padding-bottom:3px;}*/
+
+.page-videolistings .photoDetailPage DIV.comments-main.row.row-narrower1{ position:absolute; margin-left:65.5%; margin-top: 135px; z-index:50;width:28%;}
+.page-videolistings .photoDetailPage DIV.comments-main.row.row-narrower1{ background: rgba(0,0,0,0.8); border-radius: 8px; border: 5px solid #333;border-style:double}
+.page-videolistings .photoDetailPage .grid-frame.sheet{ border:none;box-shadow:none;padding:0px;margin:0px; }
+/* Layout of list info comments details */
+.page-videolistings .photoDetailPage .comments-metadata .comments-timestamp { display:none }
+.page-videolistings .photoDetailPage .comments-commentBody .avatar {float:left }
+.page-videolistings .photoDetailPage .comments-commentBody .avatar-48{ width:32px;height:32px }
+.page-videolistings .photoDetailPage DIV.comments-main.row.row-narrower1 > .span-full { padding-top:10px }
+.page-videolistings .photoDetailPage DIV.comments-main .span-full { padding:0px }
+.page-videolistings .photoDetailPage .comments-text, .comments-editContainer { margin-bottom: 6px;margin-left:50px; font-size:0.9em;}
+.page-videolistings .photoDetailPage .comments-metadata {margin-bottom: 6px;margin-left: 50px;font-size: 9.5px; line-height: 1.2;}
+.page-videolistings .photoDetailPage div.commentsPagination.row.row-centered  button{ font-size:9px }
+.page-videolistings .photoDetailPage .comments-commentBody {background:rgba(47,79,79,0.4);border-radius: 0px 6px 6px 6px}
+
+/** More Entries List and Position **/
+/* More Entries Previews **/
+.page-videolistings .photoDetailPage-moreEntries{position:absolute; margin-top:60px; margin-left:60px;height:30px; width:165px;background:black; border: 2px solid #333;transition: all 0.3s linear; -ms-transition : all 0.3s linear  ;
+-moz-transition : all 0.3s linear ;
+-webkit-transition :  all 0.3s linear  ;
+-o-transition : all 0.3s linear ;}
+
+/* Reveal on hover */
+.page-videolistings .photoDetailPage-moreEntries:hover{position:absolute;width:auto;height:170px;overflow-X:hidden; margin-top:60px; margin-left:60px;background: black; border: 2px solid #333;transition: all 0.5s ease-in-out; -ms-transition : all 0.5s ease-in-out  ;
+-moz-transition : all 0.5s ease-in-out ;
+-webkit-transition : all 0.5s ease-in-out  ;
+-o-transition : all 0.5s ease-in-out ;}
+
+
+/* Previews text */
+.page-videolistings .photoDetailPage-moreEntries > div:nth-child(1):before{content:"Next Video Previews";position:absolute; color:ivory;padding:4px;border-radius:2px;margin-left:-3px;top:0px;opacity:0.8}
+
+/* Align image positions */
+.page-videolistings .photoDetailPage-moreEntries .image-aspect-1-1 {
+    background-position: center top;}
+.page-videolistings .photoDetailPage-moreEntries > .span {padding:5px;margin-top:20px;}
+
+
+
+.page-videolistings div.photoDetailPage-socialActions {margin-top:0px; margin-left:20px;margin-bottom:5px; max-width:350px;margin-left:25%}
+.page-videolistings div.photoDetailPage-socialActions {display:none }
+
+}
+
+/* Limit comment list length Media queries */
+@media screen and (min-width:1112px){
+.page-videolistings .photoDetailPage .comments-ningFlat .comments-list{max-height:320px; overflow:auto;padding-bottom:3px;}}
+@media screen and (max-width:1112px) and (min-width:956px){
+.page-videolistings .photoDetailPage .comments-ningFlat .comments-list{max-height:210px; overflow:auto;padding-bottom:3px;}}
+ .page-videolistings .photoDetailPage .avatar.avatar-48{width:36px; height:36px;}
+
+/* FROM OLD CODE LAYOUT */
+.page-videolistings .photoDetailPage .content iframe{ background-color:rgba(0, 0, 0, 0.3); }
+.page-videolistings .photoDetailPage .content  iframe{ border-radius: 4px; border: 10px solid grey;box-shadow: inset 0px 4px 8px rgba(0, 80, 0, .4), 0px 0px 1px 5px bisque ,5px 10px 15px 0.7px #333333;color:black;margin-bottom:12px }
+
+@media only screen and ( min-width:959px ){ 
+.page-videolistings .photoDetailPage  iframe{width:80%;margin-top:-20px }
+.page-videolistings .photoDetailPage .content iframe{ padding-bottom:0%;padding-top:1%;padding-left:0em;padding-right:0em;margin-left:0em; }}
+
+/*** End of media queries ***/
+
+/********************************************************************************* EVENTS GROUP *****************************************************************************/
+/* Set screen size */
+@media screen and (min-width:959px){
+.page-groups-events .container{ width:100% }
+/* Home page description width */
+.page-groups-events .span16{ width:100%;margin-left:0% }
+.page-groups-events .span8{ width:50%}
+
+/* NAV BAR */
+.page-groups-events .groupHeader > div:nth-child(1){width:80%;margin-left:10% }
+}
+@media screen and (min-width:959px){
+.page-groups-events .span8.push4.column{ left:20%;width:60% }
+.page-groups-events .span4.pull8.column{left:-60%;width:20%}
+.page-groups-events .span4{width:20%}}
+/*Background of blog post in main list */
+.page-groups-events .span8.push4.column LI.blogListPage-entry{padding:10px;background-color:rgba(255,255,195,0.3); box-shadow: 0px 0px 0px 8px darkslategray, 9px 10px 5px 1px rgba(255,255,255,0.5);}
+/* Title of post background */
+.page-groups-events .span8.push4.column LI.blogListPage-entry .headline{background:transparent }
+
+/* Edit entry form resize to be the same as the span16 so there is not difference in layout of post */
+.page-groups-events FORM#entry-form.sheet.grid-frame{ max-width:60%!important }
+
+.page-groups-events .span8 .photoDetailPage-moreEntries > .span {width:120px;}
+.page-groups-events DIV.row.row-narrower1.photoDetailPage-moreEntries{height:120px}
+
+/* Main Page Settings */
+/* About group */
+.page-groups-events .grid-frame.sheet.section-aboutGroup{ background-color: rgba(255, 255, 195, 0.3);
+    box-shadow: 0px 0px 0px 7px #2F4F4F, 6px 8px 5px 1px rgba(255, 255, 255, 0.5);}
+.page-groups-events .grid-frame.sheet.section-aboutGroup .content > p:nth-child(1){ font-size:2em;text-shadow: 3px 3px 4px black }
+
+/* This brings the nav, title and add, edit, featured all onto the same line */
+.page-groups-events .subnavBar.condenseable.span-full{ float:none;}
+
+.page-groups-events li.subnav-more > ul > li {
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 0px;
+    margin-top: 20px; }
+
+.page-groups-events li.subnav-more { float:right}
+.page-groups-events .subnav-moreLink:after { width:40px;}
+.page-groups-events A.subnav-moreLink:after { content:"Dates";font-size:12px;font: inherit}
+.page-groups-events A.subnav-moreLink img{ display:none }
+
+.page-groups-events li.subnav-more > ul { max-width:800px!important }
+
+.groupHeader-titleBox {padding-bottom:20px }
+
+.page-groups-events .groupHeader-nav > li:nth-child(2){ background:transparent}
+.page-groups-events .groupHeader-nav > li:nth-child(2) a:hover{ color:gold }
+.page-groups-events .groupHeader-nav > li:nth-child(1) a:hover{ color:gold }
+
+.page-groups-events .groupHeader-nav >li a:hover{ color:darkblue }
+.page-groups-events .groupHeader-nav >li a{ border-radius:0px }
+
+.page-groups-events .groupHeader-nav > li + li { margin-left: 0px;background:bisque;border-left:solid grey 1px;border-right:solid grey 1px}
+
+/* Month heading Size */
+.page-groups-events .blogListPage .row-narrower2:nth-child(1) > div:nth-child(1) > h3:nth-child(1){ font-size:1.2em }
+/* Post heading size */
+.page-groups-events .blogListPage .headline h3 { margin-left: 0px;margin-bottom:5px;font-size:1.35em;text-shadow: 3px 3px 4px black; }
+
+.page-groups-events .blogDetailPage-mainSection .headline h3{ font-size:1.55em; text-shadow: 3px 3px 2px  darkslategray }
+
+.page-groups-events .blogListPage .headline-byline { display:none }
+.page-groups-events .blogListPage .avatar.avatar-48{ display:none }
+
+/*Background of blog post in main list */
+.page-groups-events .span12 LI.blogListPage-entry{padding:10px;background-color:rgba(255,255,195,0.3); box-shadow: 0px 0px 0px 8px darkslategray, 9px 10px 5px 1px rgba(255,255,255,0.5);}
+
+/* Group H2 name heading */
+.page-groups-events H2.groupHeader-heading{ font-size:2.1em;text-shadow: 3px 3px 4px black;}
+
+
+/* Title of posts MAIN HOMEPAGE*/
+.page-groups-events .span8 .headline{ background-color:rgba(255,255,195,0.3);padding:2px;border-radius:4px}
+.page-groups-events .span8 .headline h3 a{ padding-left:4px;color:ivory;opacity:0.8 }
+.page-groups-events .span8 .headline h3 a:hover{ color:gold;opacity:10 }
+
+/* Post description text MAIN HOME PAGE*/
+.page-groups-events .span8 .blogListPage-entryDescription{ line-height:1.2em;font-size:1em;opacity:0.8 }
+
+/*** Warning message about dates showing for posts ***/
+.page-groups-events nav.subnavBar.condenseable.span-full:before {content:" NOTE: Only dates that have events added to them will show up in the month ";padding:10px;font-weight:bold;}
+
+/* Remove the before content message about dates in posts */
+.page-groups-events-events-photos nav.subnavBar.condenseable.span-full:before { content:"" }
+
+
+.page-groups-events UL.subnav.linkbar.expanded{ padding-top:20px }
+.page-groups-events .subnav{ padding-top:10px }
+
+/* Side Bar Settings */
+.page-groups-events .grid-frame > .row { margin-left:0px; margin-right:0px }
+.page-groups-events .span4 h3{ font-size:0.9em }
+.page-groups-events .span4 h3:hover{color:beige }
+.page-groups-events .span4 div.span-full { padding:0px }
+.page-groups-events .span4 h3{background-color:rgba(255,255,195,0.1);border-radius: 4px ;padding:8px;float:left;margin-top:1px;text-align:center;width:95%}
+.page-groups-events .span4 .headline a{ color:beige; }
+.page-groups-events .span4 .headline a:hover{ color: gold }
+.page-groups-events .span4 .headline:hover{ background:rgba(47,79,79,0.5);}
+.page-groups-events .span4 .headline{ margin-bottom:0px;margin-right:2px;margin-left:0px;margin-top:2px; }
+.page-groups-events .span4 .headline h3 {padding:8px;margin:0px;font-size:1.15em}
+.page-groups-events .span4 :nth-child(2) > div:nth-child(1) > div:nth-child(1) > h3:nth-child(1){ background-color:rgba(255,255,195,0.3);}
+.page-groups-events .span4 li.blogListPage-entry { margin-bottom:0px }
+
+
+/****** Featured Only, must be at the top of list******/
+/*.page-groups-events .span4 :nth-child(1) > div:nth-child(1) > div:nth-child(1) > h3:nth-child(1){font-size:0.9em }*/
+.page-groups-events .span4 :nth-child(1) > div:nth-child(1) > div:nth-child(1) > h3:nth-child(1){ background-color:rgba(181,0,0,.4);}
+.page-groups-events .span4 .blogListPage-entryDescription{margin-top:10px;font-size:0.85em;line-height:1.3em }
+.page-groups-events .span4 .blogListPage .blogListPage-entry .blogListPage-socialActions li { display:none }
+
+/* Disables the other content coming through to the main blogs page */
+.page-groups-events .blogListPage-entryDescription.content img.align-full {display:none}
+.page-groups-events .blogListPage-entryDescription.content img.align-center {display:none}
+.page-groups-events .blogListPage-entryDescription.content img.align-left {display:none}
+.page-groups-events .blogListPage-entryDescription.content img.align-right{display:none}
+.page-groups-events .blogListPage-entry .content p >iframe{display:none}
+.page-groups-events span.image.image-contain.image-aspect-4-3.blogListPage-entryImage{display:none}
+
+/* Removes the option to upload lead photo */
+.page-groups-events .image-picker { display:none }
+
+
+/* Content background in main post */
+
+.page-groups-events .blogDetailPage-mainSection > .content {
+    margin-bottom: 12px;
+    background: ivory;
+    color: darkslategray;
+    padding: 10px;}
+
+/*** Social actions and like button ****/
+/* Move the like button to the far right hand side of blogs */
+.page-groups-events .blogListPage-entry .likeButton{ float:right;background:transparent;padding-left:20px}
+.page-groups-events .blogListPage .blogListPage-entry .blogListPage-socialActions li { font-size:1.2em }
+
+.page-groups-events .blogListPage .blogListPage-socialActions{ background:rgba(0,0,0,0.3);border-top: 4px;border-style:double}
+.page-groups-events .span4 .blogListPage .blogListPage-entry .blogListPage-socialActions{border:none;background:transparent }
+
+/*Read More Link into button */
+.page-groups-events .blogListPage-readMore {
+    font-size: 11px;
+    display: block;
+    margin-bottom: 0.1%;
+    background-color: green;
+    color: white;
+    float: right;
+    padding: 8px;    
+    margin-right:5px;
+    margin-top: 10px;
+    border: medium solid antiquewhite;
+    border-radius: 10px;    
+    text-align: left; }
+/* Side Bar */
+.page-groups-events .span4 .blogListPage-readMore {
+    font-size: 9px;
+    display: block;
+    margin-bottom: 2px;
+    background-color: green;
+    color: white;
+    float: right;
+    padding: 6px;
+    margin-left: 0;
+    margin-top: 0;
+    border: medium solid antiquewhite;
+    border-radius: 10px;
+    text-align: left;
+}
+
+/* No Posts Yet Message */
+.page-groups-events .blogListPage-emptyPageMessage {color:darkslategray; background:ivory;text-align:center;font-size:1.2em;padding:5px;
+box-shadow: 4px 4px 8px gray }
+
+.page-groups-events .blogListPage-readMore:hover {color:white;background-color:darkblue}
+/* All normal post headings for month and count of posts */
+.page-groups-events .blogListPage .row-narrower2:nth-child(1) > div:nth-child(1) > h3:nth-child(1){ background-color:rgba(255,255,195,0.1);color:ivory;font-size:1.5em;padding:8px;border-radius:6px;text-shadow: 3px 3px 4px black;text-align:center }
+
+/* January code */
+.page-groups-events-january .subnav-current > a:nth-child(1):before{content:"January";margin-right:3px}
+
+.page-groups-events-january .blogListPage .row-narrower2:nth-child(1) > div:nth-child(1) > h3:nth-child(1):before{content:"January";padding-right:5px }
+.page-groups-events-january-list-featured .blogListPage .row-narrower2:nth-child(1) > div:nth-child(1) > h3:nth-child(1){ background-color:rgba(181,0,0,.4);color:ivory;font-size:1.5em;padding:8px;border-radius:6px;text-shadow: 3px 3px 4px black;text-align:center }
+
+/* February code */
+.page-groups-events-february .subnav-current > a:nth-child(1):before{content:"February";margin-right:3px}
+
+.page-groups-events-february .blogListPage .row-narrower2:nth-child(1) > div:nth-child(1) > h3:nth-child(1):before{content:"February";padding-right:5px }
+.page-groups-events-february-list-featured .blogListPage .row-narrower2:nth-child(1) > div:nth-child(1) > h3:nth-child(1){ background-color:rgba(181,0,0,.4);color:ivory;font-size:1.5em;padding:8px;border-radius:6px;text-shadow: 3px 3px 4px black;text-align:center }
+
+/* March code */
+.page-groups-events-march .subnav-current > a:nth-child(1):before{content:"March";margin-right:3px}
+
+.page-groups-events-march .blogListPage .row-narrower2:nth-child(1) > div:nth-child(1) > h3:nth-child(1):before{content:"March";padding-right:5px }
+.page-groups-events-march-list-featured .blogListPage .row-narrower2:nth-child(1) > div:nth-child(1) > h3:nth-child(1){ background-color:rgba(181,0,0,.4);color:ivory;font-size:1.5em;padding:8px;border-radius:6px;text-shadow: 3px 3px 4px black;text-align:center }
+
+/* April code */
+.page-groups-events-april .subnav-current > a:nth-child(1):before{content:"April";margin-right:3px}
+
+.page-groups-events-april .blogListPage .row-narrower2:nth-child(1) > div:nth-child(1) > h3:nth-child(1):before{content:"April";padding-right:5px }
+.page-groups-events-april-list-featured .blogListPage .row-narrower2:nth-child(1) > div:nth-child(1) > h3:nth-child(1){ background-color:rgba(181,0,0,.4);color:ivory;font-size:1.5em;padding:8px;border-radius:6px;text-shadow: 3px 3px 4px black;text-align:center }
+
+/* May code */
+.page-groups-events-may .subnav-current > a:nth-child(1):before{content:"May";margin-right:3px}
+
+.page-groups-events-may .blogListPage .row-narrower2:nth-child(1) > div:nth-child(1) > h3:nth-child(1):before{content:"May";padding-right:5px }
+.page-groups-events-may-list-featured .blogListPage .row-narrower2:nth-child(1) > div:nth-child(1) > h3:nth-child(1){ background-color:rgba(181,0,0,.4);color:ivory;font-size:1.5em;padding:8px;border-radius:6px;text-shadow: 3px 3px 4px black;text-align:center }
+
+/* June code */
+.page-groups-events-june .subnav-current > a:nth-child(1):before{content:"June";margin-right:3px}
+
+.page-groups-events-june .blogListPage .row-narrower2:nth-child(1) > div:nth-child(1) > h3:nth-child(1):before{content:"June";padding-right:5px }
+.page-groups-events-june-list-featured .blogListPage .row-narrower2:nth-child(1) > div:nth-child(1) > h3:nth-child(1){ background-color:rgba(181,0,0,.4);color:ivory;font-size:1.5em;padding:8px;border-radius:6px;text-shadow: 3px 3px 4px black;text-align:center }
+
+/* July code */
+/*navbar text addition before all posts text */
+.page-groups-events-july .subnav-current > a:nth-child(1):before{content:"July";margin-right:3px}
+
+.page-groups-events-july .blogListPage .row-narrower2:nth-child(1) > div:nth-child(1) > h3:nth-child(1):before{content:"July";padding-right:5px }
+.page-groups-events-july-list-featured .blogListPage .row-narrower2:nth-child(1) > div:nth-child(1) > h3:nth-child(1){ background-color:rgba(181,0,0,.4);color:ivory;font-size:1.5em;padding:8px;border-radius:6px;text-shadow: 3px 3px 4px black;text-align:center }
+
+/*August code */
+.page-groups-events-august .subnav-current > a:nth-child(1):before{content:"August";margin-right:3px}
+
+.page-groups-events-august .blogListPage .row-narrower2:nth-child(1) > div:nth-child(1) > h3:nth-child(1):before{content:"August";padding-right:5px }
+.page-groups-events-august-list-featured .blogListPage .row-narrower2:nth-child(1) > div:nth-child(1) > h3:nth-child(1){ background-color:rgba(181,0,0,.4);color:ivory;font-size:1.5em;padding:8px;border-radius:6px;text-shadow: 3px 3px 4px black;text-align:center }
+
+/* September code */
+.page-groups-events-september .subnav-current > a:nth-child(1):before{content:"September";margin-right:3px}
+
+.page-groups-events-september .blogListPage .row-narrower2:nth-child(1) > div:nth-child(1) > h3:nth-child(1):before{content:"September";padding-right:5px }
+.page-groups-events-september-list-featured .blogListPage .row-narrower2:nth-child(1) > div:nth-child(1) > h3:nth-child(1){ background-color:rgba(181,0,0,.4);color:ivory;font-size:1.5em;padding:8px;border-radius:6px;text-shadow: 3px 3px 4px black;text-align:center }
+
+/* October code */
+.page-groups-events-october .subnav-current > a:nth-child(1):before{content:"October";margin-right:3px}
+
+.page-groups-events-october .blogListPage .row-narrower2:nth-child(1) > div:nth-child(1) > h3:nth-child(1):before{content:"October";padding-right:5px }
+.page-groups-events-october-list-featured .blogListPage .row-narrower2:nth-child(1) > div:nth-child(1) > h3:nth-child(1){ background-color:rgba(181,0,0,.4);color:ivory;font-size:1.5em;padding:8px;border-radius:6px;text-shadow: 3px 3px 4px black;text-align:center }
+
+/*November code */
+.page-groups-events-november .subnav-current > a:nth-child(1):before{content:"November";margin-right:3px}
+
+.page-groups-events-november .blogListPage .row-narrower2:nth-child(1) > div:nth-child(1) > h3:nth-child(1):before{content:"November";padding-right:5px }
+.page-groups-events-november-list-featured .blogListPage .row-narrower2:nth-child(1) > div:nth-child(1) > h3:nth-child(1){ background-color:rgba(181,0,0,.4);color:ivory;font-size:1.5em;padding:8px;border-radius:6px;text-shadow: 3px 3px 4px black;text-align:center }
+
+/* December code */
+.page-groups-events-december .subnav-current > a:nth-child(1):before{content:"December";margin-right:3px}
+
+.page-groups-events-december .blogListPage .row-narrower2:nth-child(1) > div:nth-child(1) > h3:nth-child(1):before{content:"December";padding-right:5px }
+.page-groups-events-december-list-featured .blogListPage .row-narrower2:nth-child(1) > div:nth-child(1) > h3:nth-child(1){ background-color:rgba(181,0,0,.4);color:ivory;font-size:1.5em;padding:8px;border-radius:6px;text-shadow: 3px 3px 4px black;text-align:center }
+
+/***************** photos test section **********************/
+
+
+
+.page-photos li.subnav-more > ul > li {width:100%;margin-right: 0px; margin-left: 0px;padding:4px;margin-bottom:4px;}
+.page-photos li.subnav-more > ul {width:230px!important}
+/* Main list background and space between each item */
+.page-photos li.subnav-more > ul > li {padding:2px}
+/* Background behind main list */
+.page-photos .subnav-more > ul:nth-child(2){background-color:rgba(0, 0, 0, .7); border-radius:8px ;padding:16px;border: 5px solid  #333;border-style:double;}
+.page-photos .subnav-more > ul:nth-child(2){ width:230px!important }
+
+.page-photos-test li.subnav-more > ul > li {width:100%;margin-right: 0px; margin-left: 0px;padding:4px;margin-bottom:4px;}
+.page-photos-test li.subnav-more > ul {width:230px!important}
+/* Main list background and space between each item */
+.page-photos-test li.subnav-more > ul > li {padding:2px}
+/* Background behind main list */
+.page-photos-test .subnav-more > ul:nth-child(2){background-color:rgba(0, 0, 0, .7); border-radius:8px ;padding:16px;border: 5px solid  #333;border-style:double;}
+.page-photos-test .subnav-more > ul:nth-child(2){ width:230px!important }
+
+.page-videolistings li.subnav-more > ul > li {width:100%;margin-right: 0px; margin-left: 0px;padding:4px;margin-bottom:4px;}
+.page-videolistings li.subnav-more > ul {width:230px!important}
+/* Main list background and space between each item */
+.page-videolistings li.subnav-more > ul > li {padding:2px}
+
+/* Background behind main list */
+.page-videolistings .subnav-more > ul:nth-child(2){background-color:rgba(0, 0, 0, .7); border-radius:8px ;padding:16px;border: 5px solid  #333;border-style:double;}
+.page-videolistings .subnav-more > ul:nth-child(2){ width:230px!important }
+
+
+
+/********* Events Calendar Section ************/
+/* Set the span for full width */
+.page-groups-events-calendar .span16.column{width:100%;margin-left:0%}
+/* Calendar Heading */
+
+
+
+
+/* Set the sizes of the bundles */
+@media screen and (min-width:959px){
+.page-groups-events-calendar .section-blogBundle{display:block;max-width:100%; width:24.5%;height:300px;float:left;overflow-X:auto; }}
+@media screen and (max-width:959px){
+.page-groups-events-calendar .section-blogBundle{ float:left;width:100%;height:200px;overflow-X:auto; }}
+
+.page-groups-events-calendar .section-blogBundle{background-color: rgba(255, 255, 195, 0.3);
+    box-shadow: 0px 0px 0px 5px #2F4F4F, 4px 8px 10px 1px rgba(255, 255, 255, 0.5);padding:2px;margin-right:0.5%}
+.page-groups-events-calendar .blogListPage-entry{ margin-bottom:5px;}
+
+.page-groups-events-calendar .section-blogBundle h3{ font-size:1.3em;text-shadow: 3px 3px 4px black;color:bisque}
+.page-groups-events-calendar .section-blogBundle h3 a{ color:seashell;opacity:0.7 }
+.page-groups-events-calendar .section-blogBundle h3 a:hover{ color:gold;opacity:0.9 }
+
+.page-groups-events-calendar .section-blogBundle .headline {
+    margin-bottom:10px;
+        border-bottom: dashed 0.11em bisque;}
+@media screen and (min-width:959px){
+.page-groups-events-calendar div.grid-frame:nth-child(1) > div:nth-child(1) > div:nth-child(1) > h3:nth-child(1){ font-size:2em;text-shadow: 3px 3px 4px black;text-align:center }}
+.page-groups-events-calendar div.grid-frame:nth-child(1){background-color:rgba(255, 255, 135, 0.2);}
+
+/*** Calendar Detail Page Section **/
+
+/* Month selector for going to detail page */
+DIV.calendarmonthselector{ float:left;}
+.page-groups-events-calendar .content > p:nth-child(1){float:left;margin-right:20px;font-size:1.2em;color:bisque}
+
+
+
+/* JANUARY DETAIL CALENDAR DETAIL PAGE */
+@media screen and (min-width:959px){
+.page-groups-events-january-calendar-detail .section-blogBundle{display:block;max-width:100%; width:24.5%;height:240px;float:left;overflow-X:auto; }}
+@media screen and (max-width:959px){
+.page-groups-events-january-calendar-detail .section-blogBundle{width:100%;height:150px;float:left;overflow-X:auto; }}
+/* Calendar Detail Page Styling */
+.page-groups-events-january-calendar-detail .section-blogBundle{background-color: rgba(255, 255, 195, 0.3);
+    box-shadow: 0px 0px 0px 5px #2F4F4F, 4px 8px 10px 1px rgba(255, 255, 255, 0.5);padding:2px;margin-right:0.5%}
+/* Space between posts */
+.page-groups-events-january-calendar-detail .blogListPage-entry{ margin-bottom:10px;}
+/* Date size and colour */
+.page-groups-events-january-calendar-detail div.grid-frame h3:nth-child(1){ font-size:1.2em; color:bisque;text-shadow:2px 2px 3px black;margin-bottom:10px}
+/* Post title */
+.page-groups-events-january-calendar-detail .section-blogBundle .headline h3{ font-size:1.1em;width:100%; }
+.page-groups-events-january-calendar-detail .section-blogBundle .headline h3 a{ color:seashell;opacity:0.8;text-shadow:2px 2px 3px black }
+.page-groups-events-january-calendar-detail .section-blogBundle .headline h3 a:hover{ color:gold;opacity:10 }
+.page-groups-events-january-calendar-detail .section-blogBundle .span-full{padding:3px}
+.page-groups-events-january-calendar-detail .section-blogBundle .headline { margin-bottom:10px;border-bottom: dashed 0.11em bisque;}
+
+/* Hide the calendar detail link from navbar */
+.page-groups-events .groupHeader-nav > li:nth-child(4){display:none}

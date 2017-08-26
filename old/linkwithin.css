@@ -1,0 +1,57 @@
+#linkwithin_logolink_0
+{
+display:none!important;
+}
+#linkwithin_logo_0
+{
+display:none;
+}
+#lws_0
+{
+clear: both!important;
+margin: 0 0 20px 0!important;
+}
+.linkwithin_outer
+{
+margin: 0 0 20px 0!important;
+}
+.linkwithin_text
+{
+color:#FF683F!important;
+font-size:16px!important;
+padding-bottom:5px!important;
+}
+.linkwithin_posts a
+{
+background:#333333 !important;
+border-right:1px solid #404040!important;
+}
+.linkwithin_posts a:hover
+{
+background:#666666 !important;
+}
+.linkwithin_img_0
+{
+border: 2px solid #dddddd !important;
+padding:2px !important;
+width:100px!important;
+height:100px!important;
+}
+.linkwithin_img_0:hover
+{
+border: 2px solid #333333 !important;
+padding:2px !important;
+}
+.linkwithin_title
+{
+color:#ffffff !important;
+font-family:'tahoma', sans-serif !important;
+font-size:11px !important;
+line-height:14px !important;
+text-decoration: none;
+border-top:1px solid #ddd !important;
+}
+.linkwithin_title:hover
+{
+border-top:1px solid #333 !important;
+}
