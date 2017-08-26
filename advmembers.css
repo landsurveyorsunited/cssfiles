@@ -1,3 +1,4 @@
 div.at-nb-results {color:white!important;}
 
-div.awt-csvFilter-button, tr.google-visualization-table-tr-head {background:#a12712!important; color:white!important;}
+tr.google-visualization-table-tr-head {background:#a12712!important; color:white!important;}
+div.awt-csvFilter-button {color:rgba(192, 57, 43,1.0)!important;}
