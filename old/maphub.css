@@ -1,0 +1,75 @@
+html { 
+    background: url('http://api.ning.com:80/files/kYkWoLTW4g84SHYjfqca5N9MbmIIaXrvFXvAn5ajcn3yncSUWp8YNjRfK9HuAr6kLzkilOUIRQuR3Orw8RFBJzY07CZmIJuj/mapheader.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.sheet{
+border: 0px double #fd0e19;
+background-image: url(http://www.wsls.org/templates/yoo_crystal/images/module_transparent_bg_2.png);
+background-color: transparent;
+background-repeat: repeat;
+}
+
+/* Social media buttons */	
+	.tw, .fb,
+	.tw:hover, .fb:hover
+	{
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.5)), to(rgba(255,255,255,0)));
+        background-image: -webkit-linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+        background-image: -moz-linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+        background-image: -ms-linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+        background-image: -o-linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+        background-image: linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+	}
+
+	.tw, .tw:focus
+	{
+	  background-color: #88E1E6;
+	}
+	
+	.fb, .fb:focus
+	{
+	  background-color: #3C5A98;
+	  color: #fff;	  
+	  text-shadow: 0 1px 0 rgba(0,0,0,.4);		
+	}
+
+	.tw:hover
+	{
+	  background-color: #b1f0f3;
+	}
+	
+	.fb:hover
+	{
+	  background-color: #879bc3; 
+	}
+	
+    .tw:before
+    {
+        content: "t";
+        background: #91cfd3;
+        background: rgba(0,0,0,.1);		
+		color: #fff;
+		font-family: verdana;
+		text-shadow: 0 1px 0 rgba(0,0,0,.4);
+    }
+    
+    .fb:before
+    {
+        content: "f";
+        background: #4467ac;
+        background: rgba(0,0,0,.1);		
+		color: #fff;	
+		text-shadow: 0 1px 0 rgba(0,0,0,.4);
+    }
+.sheet {
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
+  -moz-box-shadow:    0px 0px 8px rgba(0,0,0,0.3);
+  box-shadow:         0px 0px 8px rgba(0,0,0,0.3);
+  position: relative;
+  z-index: 90;
+}
+

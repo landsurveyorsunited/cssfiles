@@ -1,0 +1,13 @@
+body { border: 0px double #001c5a;
+background-image: url(http://api.ning.com/files/3eDg1OQAIQSwOuWtgbFqTPnK-4RNae*ewUL3thyTKIHf7ZO9-*d2B5DHOkS3MVYuY4U-QwHf-BUeU6jQTb*mtsBdua2AIpFN/SOUTHAMERICA.jpg);
+background-color: transparent;
+background-repeat: no-repeat;
+background-position: left center;
+background-attachment: fixed;
+}
+.xg_widget_groups .xg_headline .tb ul.byline li{
+display:none !important;
+}
+.xg_widget_groups .dy-avatar-64{
+display:none;
+}

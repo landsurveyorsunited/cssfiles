@@ -1,0 +1,185 @@
+/* -----------------------------------------
+    Responsive Starter Template
+   ----------------------------------------- */
+ 
+/* Reset & Base
+================================================================================================= */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline; 
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {content: ''; content: none;}
+table {border-collapse: collapse; border-spacing: 0;}
+figure {margin: 0}
+img, object, embed, video {max-width: 100%; _width: 100%} /* Fluid images */
+img {border: 0; -ms-interpolation-mode: bicubic; height: auto;} /* Improve IE's resizing of images */
+svg:not(:root) {overflow: hidden} /* Correct IE9 overflow */
+ 
+ 
+/* Links (No outline borders) 
+============================================================================================== */
+a{text-decoration: none;}
+a:hover, a:active {outline: 0;}
+ 
+ 
+/* #Containers
+================================================================================================= */
+.fixed-container {
+    width:1024px;
+    margin: 0 auto;
+    display: block;
+}
+ 
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: block;
+}
+ 
+/* #Colummns
+================================================================================================= */
+.one-unit, .two-units, .three-units, .four-units, .five-units, .six-units, .seven-units, .eight-units, .nine-units, .ten-units, .eleven-units, .twelve-units {
+    float: left;
+    position: relative;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+ 
+/* #Grid 12 Colummns
+================================================================================================= */
+.one-unit      {width:6.333%;}
+.two-units     {width:14.667%;}
+.three-units   {width:23.0%;}
+.four-units    {width:31.333%;}
+.five-units    {width:39.667%;}
+.six-units     {width:48.0%;}
+.seven-units   {width:56.333%;}
+.eight-units   {width:64.667%;}
+.nine-units    {width:73.0%;}
+.ten-units     {width:81.333%;}
+.eleven-units  {width:89.667%;}
+.twelve-units  {width:98.0%;}
+ 
+/* #Clear Margin left and right
+================================================================================================= */
+.first {margin-left: 0;}
+.last {margin-right: 0;}
+ 
+ 
+ 
+/* Responsive Navigation Basic Style 
+----------------------------------------------------------------------------------------------------*/
+nav ul {list-style: none;}
+nav li {display: inline-block;}
+nav a {display: inline-block;}
+nav select {display: none;}
+     
+     
+/* Clear 
+----------------------------------------------------------------------------------------------------*/
+.cf:before, .cf:after {content:""; display:table;}
+.cf:after {clear:both;}
+.cf {zoom:1;}
+ 
+ 
+/* General small screen Mobile 
+============================================================================================== */
+body {
+font-size: 1.0em;
+-webkit-text-size-adjust: none;
+-ms-text-size-adjust: none;
+}
+ 
+.fixed-container,.container {
+width: 100%;
+min-width: 0;
+margin-left: 0px;
+margin-right: 0px;
+padding-left: 0px;
+padding-right: 0px;
+}
+ 
+.one-unit, .two-units, .three-units, .four-units, .five-units, .six-units, .seven-units, .eight-units, .nine-units, .ten-units, .eleven-units, .twelve-units {
+{
+width: auto;
+float: none;
+margin-left: 10px;
+margin-right: 10px;
+padding-left: 10px;
+padding-right: 10px;
+}
+ 
+ 
+/* #MEDIA QUERIES - Progressively Enhance With Mobile First
+============================================================================================== */
+@media screen and (min-width: 320px) {
+ /* Add your styles for devices with a maximum width of 320 */
+}
+ 
+@media screen and (min-width: 480px) {
+ /* Add your styles for devices with a maximum width of 480 */
+}
+ 
+@media screen and (min-width: 768px) {
+ /* GRID FOR DESKTOPS */
+/* #Containers
+================================================================================================= */
+.fixed-container {
+    width:1024px;
+    margin: 0 auto;
+    display: block;
+}
+ 
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: block;
+}
+ 
+/* #Colummns
+================================================================================================= */
+.one-unit, .two-units, .three-units, .four-units, .five-units, .six-units, .seven-units, .eight-units, .nine-units, .ten-units, .eleven-units, .twelve-units {
+    float: left;
+    position: relative;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+ 
+/* #Grid 12 Colummns
+================================================================================================= */
+.one-unit      {width:6.333%;}
+.two-units     {width:14.667%;}
+.three-units   {width:23.0%;}
+.four-units    {width:31.333%;}
+.five-units    {width:39.667%;}
+.six-units     {width:48.0%;}
+.seven-units   {width:56.333%;}
+.eight-units   {width:64.667%;}
+.nine-units    {width:73.0%;}
+.ten-units     {width:81.333%;}
+.eleven-units  {width:89.667%;}
+.twelve-units  {width:98.0%;}
+}
+ 
+@media screen and (min-width: 1024px) {
+ /* Add your styles for devices with a maximum width of 1024 */
+}
+ 
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+   /* Add your styles for devices with a maximum width of 1024 */
+}
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  /* Add your styles for devices with a maximum width of 768 */
+}

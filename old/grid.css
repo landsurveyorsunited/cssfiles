@@ -1,0 +1,12 @@
+.grid {	width:930px; margin:auto; text-align:left; }
+.grid .col { float:left; margin:0 20px 0 0; }
+
+.grid .x1  { width:170px; }
+.grid .x2  { width:360px; }
+* html .grid .x2  { width:359px; }
+.grid .x3  { width:550px; }
+.grid .x4  { width:740px; }
+.grid .x5  { width:930px; margin-right:0; }
+.grid .end { margin-right:0; }
+
+.grid .debug { border:thin solid red; }

@@ -1,0 +1,94 @@
+/* Main Nav Bar */
+
+.mainTab-item{ border-radius:8px }
+
+.navbar a{text-align:center;padding-left:4px;padding-right:4px;}
+
+.navbar>ul>li.active>a {background-color:antiquewhite; text-align:center;border-radius:0.2em;color:black; }
+
+.mainTab-item a:hover{background-color:antiquewhite;border-radius:0.2em;color:black;}
+
+/* Sub Nav Links */
+
+.subnav li { border-radius:7px;text-align:center; background:transparent;font-size:0.9em; box-shadow: inset 0px 4px 8px rgba(0, 80, 0, .4), 0px 0px 1px 3px ivory ,5px 10px 15px 0.7px grey; color: #828282;margin-right:15px;padding:5px;border:solid 0.5px;border-color:green; }
+
+/* Current sub nav link */
+
+li.subnav-current { margin-top:-7px; background:bisque; box-shadow: inset 0px 4px 8px rgba(0, 80, 0, .4),  0px 0px 1px 3px ivory ,5px 10px 15px 0.7px #333333;color:black }
+
+/* Sub Nav Hover */
+
+.subnav li:hover{ background:bisque;color:#333333;box-shadow: inset 0px 4px 8px rgba(0, 80, 0, .4),  0px 0px 1px 3px ivory ,5px 10px 15px 0.7px #333333;color:black }
+
+/* This brings the nav, title and add, edit, featured all onto the same line */ NAV.subnavBar.condenseable.span-full{ float:none }
+
+/************** Members Page and general buttons navigation ***************/
+
+/* General Button Settings */
+
+.profilePageContentTab .button{ border-radius:20px;font-weight:bold; text-align:center; background:transparent; box-shadow: inset 0px 4px 8px rgba(0, 80, 0, .4), 0px 0px 1px 3px ivory ,5px 10px 15px 0.7px grey; margin-bottom:5px;color: #828282;margin-left:0px;margin-right:0px;border:solid grey 0.5px;}
+
+/* Current Button, the minus figure in the margin top is what brings up the tab */
+
+.profilePageContentTab.current .button{ margin-top:-8px; background:bisque; box-shadow:  inset 0px 4px 8px rgba(0, 80, 0, .4), 0px 0px 1px 3px ivory ,5px 10px 15px 0.7px #333333;color:black }
+
+/* On Hover */
+
+.profilePageContentTab .button:hover{ background:bisque;color:#333333 }
+
+/* General Site buttons settings */
+
+input[type="button"],input[type="submit"],input[type="reset"], .button{ border-radius:7px;font-weight:bold; text-align:center; background:transparent;
+box-shadow: inset 0px 4px 8px rgba(0, 80, 0, .4), 0px 0px 1px 3px ivory ,5px 10px 15px 0.7px grey;color: #828282;margin:3px}
+
+/* On Hover */
+input[type="button"]:hover{ background:bisque;color:#333333;box-shadow: inset 0px 4px 8px rgba(0, 80, 0, .4), 0px 0px 1px 3px ivory ,5px 10px 15px 0.7px #333333;color:black }
+
+
+input[type="submit"]:hover{ background:bisque;color:#333333;box-shadow: inset 0px 4px 8px rgba(0, 80, 0, .4), 0px 0px 1px 3px ivory ,5px 10px 15px 0.7px #333333;color:black  }
+
+
+input[type="reset"]:hover{ background:bisque;color:#333333;box-shadow: inset 0px 4px 8px rgba(0, 80, 0, .4), 0px 0px 1px 3px ivory ,5px 10px 15px 0.7px #333333;color:black  }
+
+
+.button:hover{ background:bisque;color:#333333;box-shadow: inset 0px 4px 8px rgba(0, 80, 0, .4), 0px 0px 1px 3px ivory ,5px 10px 15px 0.7px #333333;color:black  }
+
+button[disabled]{ opacity: 0.5; cursor: default; border-radius: 30px; }
+
+/* Hover background for the add,feature,edit buttons */
+
+A.button.button-iconic:hover { background:bisque }
+
+/***** PAGES PAGINATION INPUT AND NUMBERS /******
+
+/* High Light Page Numbers */
+
+.pagination-current { font-weight: normal; background-color: darkolivegreen; color: white;font-size:0.9em;border-radius:0.2em;box-shadow: 3px 3px 3px gray}
+
+a.pagination-number{font-size:0.9em;border-radius:0.2em;padding-right:0.4em;padding-right:0.4em}
+
+a.pagination-number:hover{background-color:blue;color:white;box-shadow: 3px 3px 3px gray}
+
+/* Input Page Number Box Style*/
+
+.pagination input { border-width:0.1em;border-radius: 5px;background:transparent;border:solid;border-color:darkolivegreen; padding:0.2em;font-size:0.9em;text-align:center }
+
+.pagination input:hover{background-color:#fffff0;box-shadow: 3px 3px 3px gray;}
+
+.pagination input:focus{background-color:#fffff0;box-shadow: 3px 3px 3px gray:}
+
+/* Feed List Player Navigation */
+
+.feedListPagePlayer .nav { background: antiquewhite; text-align: center;border-radius: 0.5em;font-weight:bold; font-size: 1.5em;box-shadow: inset 0px 4px 8px rgba(0, 80, 0, .4), 0px 0px 1px 3px ivory ,5px 10px 15px 0.7px grey;color: #828282; cursor: pointer;}
+
+.feedListPagePlayer .nav:hover{ background:darkslategray; text-align: center;border-radius: 0.5em;font-weight:bold; font-size: 1.5em;box-shadow: inset 0px 4px 8px rgba(0, 80, 0, .4), 0px 0px 1px 3px ivory ,5px 10px 15px 0.7px grey;color: silver; cursor: pointer; }
+
+ 
+
+And Finally the more link settings I used to make it drop down and add some background to it.
+
+/* More Navigation Styles */
+.page-groups-classifieds li.subnav-more a:before {content:"View";padding:5px;}
+.page-groups-classifieds li.subnav-more{float:left}
+.page-groups-classifieds li.subnav-more > ul > li {display:block;background-color:rgba(255, 255, 240,.8);padding:5px;margin:5px}
+.page-groups-classifieds .subnav-more > ul:nth-child(2){width:250px!important;background-color:rgba(0, 0, 0, .5)}

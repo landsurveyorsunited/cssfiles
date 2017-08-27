@@ -1,0 +1,111 @@
+.sprite {
+    background: url(https://dl.dropbox.com/u/49702/images/indexsprite.png) no-repeat;
+}
+
+.sprite-Maps101-png {
+    width: 93px;
+    height: 125px;
+    background-position: -524px -511px;
+}
+
+.sprite-construction-map-pin-png {
+    width: 95px;
+    height: 112px;
+    background-position: -1055px -511px;
+}
+
+.sprite-construction-png {
+    width: 32px;
+    height: 37px;
+    background-position: -1562px -511px;
+}
+
+.sprite-disk-png {
+    width: 32px;
+    height: 32px;
+    background-position: -1605px -511px;
+}
+
+.sprite-explore-button-png {
+    width: 202px;
+    height: 52px;
+    background-position: -628px -511px;
+}
+
+.sprite-footprint-png {
+    width: 32px;
+    height: 37px;
+    background-position: -1519px -511px;
+}
+
+.sprite-forestry-map-pin-png {
+    width: 110px;
+    height: 112px;
+    background-position: -403px -511px;
+}
+
+.sprite-geodesy-map-pin-png {
+    width: 95px;
+    height: 112px;
+    background-position: -949px -511px;
+}
+
+.sprite-global-surveyors-directory-png {
+    width: 256px;
+    height: 256px;
+    background-position: -0px -511px;
+}
+
+.sprite-globe_surveyors-png {
+    width: 2000px;
+    height: 500px;
+    background-position: -0px -0px;
+}
+
+.sprite-icon_target-png {
+    width: 32px;
+    height: 31px;
+    background-position: -1648px -511px;
+}
+
+.sprite-land-surveyor-map-pin-png {
+    width: 76px;
+    height: 112px;
+    background-position: -1341px -511px;
+}
+
+.sprite-land-surveyor-map-pin-png-1 {
+    width: 76px;
+    height: 112px;
+    background-position: -1254px -511px;
+}
+
+.sprite-marine-surveyors-map-pin-png {
+    width: 82px;
+    height: 118px;
+    background-position: -1161px -511px;
+}
+
+.sprite-medlandsurveyorsunitedsupport23-png {
+    width: 125px;
+    height: 118px;
+    background-position: -267px -511px;
+}
+
+.sprite-ribbon_bkg-png {
+    width: 37px;
+    height: 54px;
+    background-position: -1428px -511px;
+}
+
+.sprite-surveyor-png {
+    width: 32px;
+    height: 37px;
+    background-position: -1476px -511px;
+}
+
+.sprite-transportation-map-pin-png {
+    width: 97px;
+    height: 110px;
+    background-position: -841px -511px;
+}

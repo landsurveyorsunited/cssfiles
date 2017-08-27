@@ -1,0 +1,130 @@
+body { 
+    margin: 10px;
+    padding: 0; 
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    background-color: #EDEDEC;
+}
+
+#wrapper {
+    width: 760px;
+    margin: 0 auto;
+}
+
+#intro {
+    padding-bottom: 10px;
+}
+
+h2 {
+    margin: 0;
+    margin-bottom: 14px;
+    padding: 0;
+}
+dd{font-size:10px}
+dt{font-size:13px}
+
+#slider {
+    width: 620px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.scroll {
+    height: 260px;
+    width: 620px;
+    overflow: auto;
+    overflow-x: hidden;
+    position: relative;
+    clear: left;
+    background: #FFFFFF url(http://surveyoring.appspot.com/images/content_pane-gradient.gif) repeat-x scroll left bottom;
+}
+
+.scrollContainer div.panel {
+    padding: 20px;
+    height: 220px;
+    width: 580px;
+}
+
+#shade {
+    background: #EDEDEC url(http://surveyoring.appspot.com/images/shade.jpg) no-repeat 0 0;
+    height: 50px;
+}
+
+ul.navigation {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 9px;
+}
+
+ul.navigation li {
+    display: inline;
+    margin-right: 8px;
+}
+
+ul.navigation a {
+    padding: 8px;
+    color: #fff;
+    text-decoration: none;
+}
+
+ul.navigation a:hover {
+    background-color: #990000;
+}
+
+ul.navigation a.selected {
+    background-color: #fff;
+}
+
+ul.navigation a:focus {
+    outline: none;
+}
+
+.scrollButtons {
+    position: absolute;
+    top: 150px;
+    cursor: pointer;
+}
+
+.scrollButtons.left {
+    left: -20px;
+}
+
+.scrollButtons.right {
+    right: -20px;
+}
+
+.hide {
+    display: none;
+}
+.button {
+   border-top: 1px solid #96d1f8;
+   background: #750707;
+   background: -webkit-gradient(linear, left top, left bottom, from(#cf0b0e), to(#750707));
+   background: -webkit-linear-gradient(top, #cf0b0e, #750707);
+   background: -moz-linear-gradient(top, #cf0b0e, #750707);
+   background: -ms-linear-gradient(top, #cf0b0e, #750707);
+   background: -o-linear-gradient(top, #cf0b0e, #750707);
+   padding: 3px 6px;
+   -webkit-border-radius: 4px;
+   -moz-border-radius: 4px;
+   border-radius: 4px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 11px;
+   font-family: Georgia, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.button:hover {
+   border-top-color: #050e14;
+   background: #050e14;
+   color: #ccc;
+   }
+.button:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+   }

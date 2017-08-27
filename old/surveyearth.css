@@ -1,0 +1,86 @@
+.groupHub .matrix-item {
+    width: 100%;
+    background-size: 100%; */ This you can adjust to what you like and is the size of the group image in the frame */
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: center top; /* This makes sure the image is centred and moved to the top, if you leave out the top bit you will see the image centre's in the frame and leaves a big gap at the top*/
+
+}
+
+.groupHub .matrix-item {
+    padding-bottom: 125%; /* This percentage is the amount of length you want them to be */
+
+}
+
+.groupHub .matrix-itemFrame {
+    padding:8px; /* This adds some padding around the image inside the frame */
+
+}
+
+/* Increase the group name text box area */
+
+.groupHub-groupTitleContainer{height:auto} /* You have to add this to stop the default height for the groups title container */
+
+.groupHub-groupTitle{height:60px} /* This is the height you want the title box to be */
+
+/* Note by increasing the padding length of the groupHub .matrix-item this will push down the title so you can adjust it's position to how you want it */
+
+Complete code without the notes
+
+ .groupHub .matrix-item { width: 100%; background-size: 100%; background-repeat: no-repeat;     position: relative; background-position: center top; }
+
+.groupHub .matrix-item { padding-bottom: 125%; }
+
+.groupHub .matrix-itemFrame { padding:8px;}
+
+.groupHub-groupTitleContainer{height:auto}
+
+.groupHub-groupTitle{height:60px}
+
+.page-groups .blogListPage-entryDescription.content{font-size:0.83em}
+
+/* Floats the Tags and Like button up to the right of comments number on same line */
+
+.page-groups .blogListPage .blogListPage-entry .blogListPage-socialActions li { margin-bottom: 12px; font-size: 14px; float: left; margin-right:2em }
+
+/* Move the like button to the far right hand side of blogs */
+
+.page-groups .blogListPage-entry .likeButton{ float:right }
+.subnav li a {border-top: 1px solid #96d1f8;
+   background: #cf0c26;
+   background: -webkit-gradient(linear, left top, left bottom, from(#9c3e40), to(#cf0c26));
+   background: -webkit-linear-gradient(top, #9c3e40, #cf0c26);
+   background: -moz-linear-gradient(top, #9c3e40, #cf0c26);
+   background: -ms-linear-gradient(top, #9c3e40, #cf0c26);
+   background: -o-linear-gradient(top, #9c3e40, #cf0c26);
+   padding: 5px 6px;
+   -webkit-border-radius: 4px;
+   -moz-border-radius: 4px;
+   border-radius: 4px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 1.0em;
+   font-family: 'Oswald', Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.subnav li a:hover {
+   border-top-color: #232526;
+   background: #232526;
+   color: #ccc;
+   }
+.subnav li a:active {
+   border-top-color: #000;
+   background: #1b435e;
+   color:#fff;
+   }
+   .subnav-current a{
+   border-top-color: #000;
+   background: #ffffff;
+   color:#000000;
+   }
+   
+   

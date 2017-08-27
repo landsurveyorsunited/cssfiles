@@ -1,0 +1,354 @@
+﻿
+html, html a {
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
+#xn_bar                                 {   background: transparent}
+
+
+.xg_widget_notes .notes_list h3 {font-size:1.1em;padding-left: 85px;line-height: 4em;background-image: url(http://api.ning.com/files/dg1dzWuePXCBqpKIK4x-XNJOQqn*4n13TLDBPPRB1bhCDkZ0Qeg2vYmLELQX4QQA09a-jEHm6mjqgZSHvK6RXg__/notesbg.png);
+background-repeat: no-repeat;
+background-position: left top;
+background-color: transparent;}
+.xg_widget_notes p.small {border-bottom:1px dashed #333333!important; padding-bottom:95px;}
+#welcome { display:none !important; }
+.xg_floating_container {
+position:top !important;
+width:600px;
+}
+.xg_theme .xg_lightfont {
+		color:#000;
+}
+
+.xg_widget_main .xg_module.module_blog {
+width:285px;
+float:left !important;
+margin-right:20px;
+}
+
+.xg_widget_main .xg_module.module_forum {
+width:315px;
+float:left;
+clear:none;
+}
+.xg_widget_main_index .module_groups .xg_lightfont,.xg_ads,.module_about,.module_about,.xg_widget_main_index_index .xg_dock {display:none !important;}
+/* Inbox Alert */
+.xj_messages_present .xj_count_unreadMessages {
+    background-color: #990000;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 1px;
+    color: #FFFFFF;
+    margin-left: 2px;
+    padding-bottom: 0px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 0px;
+text-shadow: 1px 1px #3F3F3F;
+-moz-border-radius: 2px;
+border-radius: 2px;
+}
+.xj_messages_present small{
+    background-color: #000000;
+}
+.xj_messages_present small a{
+text-decoration:none !important;
+color:transparent !important;
+}
+/* Inbox Alert END */
+
+
+/* friend request */
+.xj_one_friend_request small{
+background-color: #990000;
+    border-color: #006600;
+    border-style: solid;
+    border-width: 1px;
+    color: #FFFFFF;
+    margin-left: 2px;
+    padding-bottom: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 0px;
+text-shadow: 1px 1px #3F3F3F;
+-moz-border-radius: 2px;
+border-radius: 2px;
+}
+.xj_one_friend_request small a{
+text-decoration:none !important;
+color:#ffffff;
+}
+/* friend request END */
+/* Styling messages*/
+.xg_widget_profiles_message ul.page_tabs {
+    clear: right;
+    margin-bottom: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: -5px;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Scroll Bar for Latest Activity */
+.xg_widget_main .xg_module_activity .xg_module_body {height: 500px;overflow : auto;position:relative;}
+ul.sidecn li{
+margin-left:0px!important;
+margin-bottom:1px!important;
+list-style: none!important;
+}
+
+
+div.left-panel  {
+background: #f5f5f5; padding-top: 10px;
+-moz-box-shadow: 1px 1px 5px #dcdcdc;
+    -webkit-box-shadow: 1px 1px 5px #dcdcdc;
+        box-shadow: 1px 1px 5px #dcdcdc;
+    float: right;
+    margin: 0 5px 0 0;
+-webkit-box-shadow: 5px 5px 5px 5px #de1717;
+-moz-box-shadow: 5px 5px 5px 5px #de1717;
+box-shadow: 5px 5px 5px 5px #de1717;
+}
+
+/* Design 7 */
+table.Design7 {
+border-spacing: 0px;
+border-collapse: collapse;
+background: #F9F5D7;
+border: 0.3em solid #000000;
+}
+table.Design7 th {
+text-align: left;
+font-weight: normal;
+padding: 0.1em 0.5em;
+border: 0px;
+border-bottom: 1px solid #000000;
+}
+table.Design7 td {
+text-align: right;
+border: 0px;
+border-bottom: 1px solid #000000;
+padding: 0.1em 0.5em;
+}
+table.Design7 thead th {
+text-align: center;
+font-weight: bold;
+background-color: #AA0000;
+color: #FFFFFF;
+}
+table.Design7 th.Corner {
+text-align: left;
+}
+table.Design7 td.Odd {
+background: #E8E4C0;
+}
+/*search*/
+#cn-search-form{
+text-align:center;
+width:638px;
+background: none repeat scroll 0 0 #b81414;
+border-radius: 5px 5px 5px 5px;
+margin: 5px 5px 4px;
+min-height: 29px;
+height:30px;
+font-size: 20px;
+padding:10px;
+}
+
+.search-title{
+color:#fff;
+float:left;
+padding-right: 5px;
+}
+
+.cn-sengines{
+float:left;
+background: none repeat scroll 0 0 #FFFFFF !important;
+border: 1px solid #CCCCCC;
+color: #403F41;
+float: left;
+font-size: 20px;
+height: 29px;
+margin: 0;
+width: 150px;
+}
+
+#inputTextboxId{
+float:left;
+background: none repeat scroll 0 0 #FFFFFF !important;
+border: 1px solid #CCCCCC;
+color: #403F41;
+float: left;
+font-size: 20px;
+height: 25px;
+margin: 0;
+width: 310px;
+padding-left:5px;
+}
+
+.cn-form-submit{
+background: url(http://creatorsnook.com/cn/img/search.gif) no-repeat scroll 0 0 #b81414;
+border: 0px solid #4F4A4F;
+border-radius: 0;
+color: #FFFFFF!important;
+float: left;
+font-size:0;
+height: 29px;
+width: 33px;
+margin: 0;
+}
+
+.cn-form-submit a, .cn-form-submit a:hover{
+color:red!important;
+}
+
+.userListContainer .xg_chatWindow xg_userWindow {background-repeat: no-repeat;
+background-image: url(http://api.ning.com:80/files/KBFTCnyCKJAgpbDEL4*aQpKYW2tQIOmGbtflceqNHvcCo-KEzOTT1F-z5NEuqD6wj*caKq9OIHdVbxoECdxjNg__/lsuiphone.png);
+background-position: center bottom;}
+/***BLOCK QUOTE STYLE**/
+blockquote {
+padding: 10px;
+border: 1px dashed #303030;
+ border-radius: 10px;
+ }
+cite {
+font-style: italic;
+}
+/***BLOCK QUOTE STYLE**/
+@-webkit-keyframes rotatey {
+0% {transform:rotate(0deg); -ms-transform:rotate(0deg); -moz-transform:rotate(0deg); -webkit-transform:rotate(0deg); -o-transform:rotate(0deg);}
+25% {transform:rotate(1deg); -ms-transform:rotate(1deg); -moz-transform:rotate(1deg); -webkit-transform:rotate(1deg); -o-transform:rotate(1deg);}
+50% {transform:rotate(-1deg); -ms-transform:rotate(-1deg); -moz-transform:rotate(-1deg); -webkit-transform:rotate(-1deg); -o-transform:rotate(-1deg);}
+100% {transform:rotate(0deg); -ms-transform:rotate(0deg); -moz-transform:rotate(0deg); -webkit-transform:rotate(0deg); -o-transform:rotate(0deg);}
+}
+
+.xg_avatar{
+cursor:pointer;
+-webkit-transition:-webkit-transform 1s,opacity 1s,background 1s,width 1s,height 1s,font-size 1s;
+-o-transition-property:width,height,-o-transform,background,font-size,opacity,color;
+-o-transition-duration:1s,1s,1s,1s,1s,1s,1s;
+-moz-transition-property:width, height, -moz-transform, background, font-size, opacity, color;
+-moz-transition-duration:1s,1s,1s,1s,1s,1s,1s;
+transition-property:width,height,transform,background,font-size,opacity;
+transition-duration:1s,1s,1s,1s,1s,1s;
+text-shadow:0 0 5px rgba(255,255,255,0.5);
+display:inline-block; /* It is important for the button to rotate*/
+transition-property:width,height,transform,background,font-size,opacity;
+transition-duration:1s,1s,1s,1s,1s,1s;
+transition: opacity 2s ease-out , background 1s linear , width 1s , height 1s , font-size 1s;
+}
+
+.xg_avatar:hover{
+-moz-box-shadow: 2px 2px 10px #888;
+-webkit-box-shadow: 2px 2px 10px #888;
+box-shadow: 2px 2px 10px #888;
+-moz-transform: rotate(360deg);
+-webkit-transform: rotate(360deg);
+-o-transform: rotate(360deg);
+transform: rotate(360deg);
+}
+.view-count-container {padding:4px;display:block;width:360px;height:60px;border:1px solid #cccccc;text-align:left;background-color: #e2e2e2}
+.view-count {font-size:1em;}
+/***********Inner Shadow for Photo Album************/
+.xg_list_photo{-webkit-box-shadow: inset 0px 0px 100px #1e81c8; /* webkit browser*/ -moz-box-shadow: inset 0px 0px 100px #1e81c8; /* firefox */ box-shadow: inset 0px 0px 100px;
+}/***********Inner Shadow for Photo Album************/
+.layered-paper {
+    background: #eee;
+    box-shadow:
+        0 1px 1px rgba(0,0,0,0.15), /* The top layer shadow */
+        0 10px 0 -5px #eee, /* The second layer */
+        0 10px 1px -4px rgba(0,0,0,0.15), /* The second layer shadow */
+        0 20px 0 -10px #eee, /* The third layer */
+        0 20px 1px -9px rgba(0,0,0,0.15); /* The third layer shadow */
+}
+
+ .xg_module_body .note .xg_lightfont { display:none; }
+.xg_theme .xg_floating_container{color:#000}
+p.small.object-detail{width:330px;}
+div.xg_signup big strong a {
+background:url(http://dl.dropbox.com/u/49702/images/joinnow_red.png) no-repeat scroll center top transparent;
+display:block;
+height:38px;
+margin-left:auto;
+margin-right:auto;
+text-indent:-9999em;
+width:159px;
+}
+
+label.toggle {
+cursor: pointer;
+color: #990000;
+}
+input.toggle {
+display: none;
+}
+input.toggle:checked + div {
+display: none;
+}
+
+ul.navigation.easyclear {width:550px;color:#000; font-size:11px;padding: 1px 3px;
+	margin: 0px;
+	background: #ebe8e8;
+	color: #fff;
+position:static;
+	line-height: 1.3em;
+	border: 2px dashed #000;
+	border-radius: 3px;
+	}
+a.xg_sprite.xg_sprite-add.xj_new_topic_link,a.xg_sprite.xg_sprite-add, li.right a{
+	padding: 5px 10px;
+	margin: 10px;
+	background: #990000;
+	color: #fff;
+	font-size: 12px;
+	line-height: 1.3em;
+	border: 2px dashed #fff;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-box-shadow: 0 0 0 4px #000, 2px 1px 4px 4px rgba(10,10,0,.5);
+	-webkit-box-shadow: 0 0 0 4px #ff0030, 2px 1px 4px 4px rgba(10,10,0,.5);
+	box-shadow: 0 0 0 4px #000, 2px 1px 6px 4px rgba(10,10,0,.5);
+	text-shadow: -1px -1px #aa3030;
+}
+div.tb h3,div.topic.indent h3{
+	padding: 2px 5px;
+	margin: 10px;
+	background: #fff;
+	color: #fff;
+	font-size: 13px;
+	line-height: 1.3em;
+	border: 2px dashed #fff;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-box-shadow: 0 0 0 4px #000, 2px 1px 4px 4px rgba(10,10,0,.5);
+	-webkit-box-shadow: 0 0 0 4px #fff, 2px 1px 4px 4px rgba(10,10,0,.5);
+	box-shadow: 0 0 0 4px #000, 2px 1px 6px 4px rgba(10,10,0,.5);
+	text-shadow: -1px -1px #aa3030;
+}
+.xg_module_activity .status{
+   color: #666;
+   border: 1px solid #ccc;
+   background-color: #fff;
+   border-radius: 50px;
+   -moz-border-radius: 50px;
+   -webkit-border-radius: 50px;
+   padding-left:25px;
+   margin-left:25px;
+
+}
+.xg_module_activity .feed-story .status-bg {
+   -ms-filter:none;
+   opacity:100;
+   display: block;
+   width:25px;
+   background: #fff url('http://api.ning.com/files/xg0J3iV36Kn1MxHGKZHBa*3KNy52Gv85V4BDU6hyCKZQQVRDo8F90hMmf9hty7Wv5n4MgY2KJWpzHl6IFenyGGMVd23k0GEY/bubble.gif') no-repeat 0 20%;
+}
+.xg_module_activity .feed-story-status .current {
+   padding-right: 30px;
+}
+.xg_module_activity .status-bg {display:none;}
+.xg_module_activity .left_arrow {display:none;} 
