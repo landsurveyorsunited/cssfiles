@@ -1,0 +1,15 @@
+﻿body { border: 0px double #990000;
+background-image: url(https://dl.dropbox.com/u/49702/images/universitybg.jpg);
+background-color: transparent;
+background-repeat: no-repeat;
+background-position: left center;
+background-attachment: fixed;
+}
+#xg_navigation a {background-color:#990000}
+#xg_navigation a{
+   color: white;
+   text-shadow:
+}
+ #xn_bar #xn_bar_menu {display:none!important;}
+
+

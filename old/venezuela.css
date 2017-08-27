@@ -1,0 +1,13 @@
+body { border: 0px double #001c5a;
+background-image: url(https://dl.dropbox.com/u/49702/images/venezuela.jpg);
+background-color: transparent;
+background-repeat: no-repeat;
+background-position: left center;
+background-attachment: fixed;
+}
+.xg_widget_groups .xg_headline .tb ul.byline li{
+display:none !important;
+}
+.xg_widget_groups .dy-avatar-64{
+display:none;
+}
