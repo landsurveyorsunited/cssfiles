@@ -36,3 +36,9 @@
   border-top: 15px solid #1E1E1E;
   bottom: -15px;
 }
+div.at-layout-vertical.at-chart-panel.at-layout-container { 
+  background: url(https://goo.gl/7Y57sW) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;}
