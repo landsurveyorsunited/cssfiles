@@ -1,0 +1,38 @@
+.b-map-tooltip {
+  background-color: #1E1E1E;
+  width: 250px;
+  height: 150px;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 15px;
+  position: relative;
+  color: white;
+}
+.b-map-tooltip .b-map-tooltip__photo {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -60px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  left: 75px;
+}
+.b-map-tooltip .b-map-tooltip__title {
+  text-transform: uppercase;
+}
+.b-map-tooltip .b-map-tooltip__more {
+  color: white;
+}
+.b-map-tooltip::after {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 110px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #1E1E1E;
+  bottom: -15px;
+}
