@@ -1,11 +1,5 @@
 
-.xg_status_wrapper,body { 
-  background: url(https://goo.gl/SKKVh2) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
+
 .xg_widget_photo_index_index .xg_list_photo ul li .ib a img:hover {
 -webkit-filter: grayscale(100%);
 }
