@@ -79,7 +79,7 @@ p.left,p.right.xg_lightfont {font-size:0.6em}
   left: -9999px;
 }
 
-.xg_widget_main_index .module_groups .xg_lightfont,.xg_ads,.module_about,.module_about,.xg_widget_main_index_index,.xg_dock {
+.xg_dock {
   position: absolute;
   left: -9999px;
 }
