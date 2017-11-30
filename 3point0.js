@@ -170,3 +170,143 @@ x$('DIV.matrix-media-4-3').each(function() {
 });
 });
 });
+
+
+
+x$('.feedListPagePlayer .nav').click(function(){
+x$(".matrix-itemFrame").removeClass('videoActive');
+  var _c = x$(this);
+  var id = _c.data("itemId");
+  var _e = _c.data("itemSource");
+ x$(".matrix-itemFrame[data-item-id='" + id + "'][data-item-source='" + _e + "']").addClass('videoActive');
+x$('.matrix-itemFluid.matrix-itemFrame.feedListPage-item.videoActive').first().focus();
+   });
+
+
+
+x$(".matrix-itemFluid.matrix-itemFrame.feedListPage-item").click(function(){
+x$(".matrix-itemFluid.matrix-itemFrame.feedListPage-item").removeClass('videoActive');
+x$(this).addClass('videoActive');
+});
+
+
+
+x$("<div></div>").attr('class','videolistControl').prependTo('.sourceContainer');
+x$("<div></div>").attr('class','videolist').appendTo('.videolistControl');
+x$( ".feedListPage .module-body" ).clone(true).appendTo('.videolist');
+x$('.videolist').hide();
+
+
+
+x$(".videolistControl").click(function(){
+x$('.videolist').slideToggle(300);
+x$(this).toggleClass('close');
+});
+
+
+
+x$('a.closer.pull-right.feedListPagePlayer-close').click(function(){
+x$(".videolistControl").removeClass('close');
+x$('.videolist').hide();
+});
+
+
+
+x$(document).ready(function(){
+x$("<div></div>").attr('id','overlayLight').prependTo('.central-content').hide();
+});
+
+
+
+x$("<div></div>").attr('class','slideshowControls').prependTo('.photoListPage .module-header ');
+x$("<div></div>").attr('class','slideshowControls').appendTo('.photoListPage .matrix.row');
+x$(".slideshowControls").append('<a class="slideshowstart" title="Start Slideshow">Start Slideshow</a><a class="Stopslideshow" title="Pause Slideshow">Pause</a><a class="ReStartslideshow" title="Play Slideshow">Play</a><a class="fullslideshow" title="Full Screen Slideshow">Full Screen</a><a class="exitslideshow" title="Exit Slideshow">Exit</a>');
+x$(".slideshowControls a").css('cursor','pointer');
+x$('a.exitslideshow').click(function(){
+x$('.photoListPage').removeClass('photoshower2');
+x$('.site-headerFrame,this').removeClass('photoview');
+x$('.site-bodyFrame,this').removeClass('photoview');
+x$('.matrix-itemFluid.photoListPage-entry').removeClass('fullscreenslides');
+x$("#overlayLight").slideUp(200);
+x$('.photoListPage-entry').show();
+x$('.SP_Photo_Title').hide();
+});
+
+
+
+x$('a.slideshowstart').click(function(){
+x$('.site-headerFrame,this').addClass('photoview');
+x$('.site-bodyFrame,this').addClass('photoview');
+x$("#overlayLight").show();
+x$('.SP_Photo_Title').show();
+x$('.photoListPage').addClass('photoshower2');
+var myIndex = 0;
+var timer;
+carousel();
+function carousel() {  
+var i;
+    var x = x$('.photoshower2 .matrix-itemFluid.photoListPage-entry');
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";
+timer = setTimeout(carousel, 3000);
+}
+x$('.matrix-itemFluid.photoListPage-entry, a.exitslideshow, a.Stopslideshow').click(function(event){
+    clearTimeout(timer);
+x$('a.ReStartslideshow').click(function(event){
+x$(this).resumeTimer = setTimeout(carousel, 3000).resume();
+      });   
+   });
+});
+
+
+
+x$('a.ReStartslideshow').hide();
+x$('a.Stopslideshow').click(function(){
+x$(this).hide();
+x$('a.ReStartslideshow').show().css('display','inline-block');
+});
+
+
+
+x$('a.ReStartslideshow').click(function(){
+x$(this).hide();
+x$('a.Stopslideshow').show().css('display','inline-block');
+});
+
+
+
+x$('a.fullslideshow').click(function(){
+x$('.photoshower2 .matrix-itemFluid.photoListPage-entry').toggleClass('fullscreenslides');
+});
+
+
+
+x$('a.fullslideshow').toggle(
+function(){
+x$(this).addClass('fullscreenmode');
+x$(this).text('X');
+x$('a.Stopslideshow').addClass('fullscreenmode').text('II');
+x$('a.ReStartslideshow').addClass('fullscreenmode').text('V');
+},
+function(){
+x$(this).removeClass('fullscreenmode');
+x$(this).text('Full Screen');
+x$('a.Stopslideshow').removeClass('fullscreenmode').text('Pause');
+x$('a.ReStartslideshow').removeClass('fullscreenmode').text('Play');
+});
+
+
+
+x$(document).ready(function() {
+x$('a.slideshowstart').click(function(){
+x$('DIV.matrix-media-4-3').each(function() {
+  var GCmatrix = x$(this).css('background-image');
+  x$(this).css('background-image', GCmatrix.replace(/\?width=\d+/, ''));
+});
+});
+});
+
