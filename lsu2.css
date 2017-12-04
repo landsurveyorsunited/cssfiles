@@ -185,7 +185,7 @@ p.small.object-detail {
 
 div.xg_signup big strong
 a {
-  background: url(http://go.srvyr.com/joinuslsu) no-repeat scroll center top transparent;
+  background: url(joinus_red.png) no-repeat scroll center top transparent;
   display: block;
   height: 38px;
   margin-left: auto;
@@ -390,7 +390,7 @@ solid #e4e4e4;
 }
 
 #comments dl.comment dd:before,#discussionReplies .discussion dd div.description:before,.xg_module_comment_wall dl.comment dd:before {
-  background: url(http://go.srvyr.com/2itnChC) no-repeat scroll 5px 15px transparent;
+  background: url(cornerright.png) no-repeat scroll 5px 15px transparent;
   content: " ";
   display: block;
   height: 36px;
@@ -629,8 +629,8 @@ font-size:1em;
   display: inline-block;
   padding-left: 15px;
 }
-ul.navigation.byline li a, div.pad5.group_details{background:url(http://goo.gl/dL7ptK);width:100%;}
-div.xg_module_body.nopad {background:url(http://goo.gl/QnxpSv)no-repeat;width:100%;'Lato', sans-serif;
+ul.navigation.byline li a, div.pad5.group_details{background:url(bgtrans.png);width:100%;}
+div.xg_module_body.nopad {background:url(groupmfo.png)no-repeat;width:100%;'Lato', sans-serif;
   font-weight: 700;}
 .xg_widget_groups_group_show .xg_3col, .xg_span-16 {width: 938px;}
 
@@ -651,7 +651,7 @@ background-image: url(https://goo.gl/UE8QlD)!important;
 padding-top: 4.5%!important;
 padding-bottom: 42% ;}
 DIV#xg.account.external-auth.xg_widget_main.xg_widget_main_authorization.xg_widget_main_authorization_signIn{
-background-image: url(https://goo.gl/oIJOFP)!important;
+background-image: url(15000.jpg)!important;
 background-attachment:
 fixed; background-size:100% 100%; }
 DIV.xg_module.xg_lightborder.signin-module a {
