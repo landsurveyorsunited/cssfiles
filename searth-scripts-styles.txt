@@ -1,0 +1,1961 @@
+<script>
+x$(document).ready(function() {
+if (x$('.videoDetailPage-video iframe').length > 0) {
+x$('.videoDetailPage-video').addClass('iframed');
+}
+});
+</script>
+
+<script>
+// For Vid in Activity Feed
+x$(document).ready(function(){
+x$('body').on('click','.feedEvent-createVideoRollup .activityFeed-content a.activityFeed-image, .feedEvent-createVideoLike .activityFeed-content a.activityFeed-image, .feedEvent-createVideoRollup .activityFeed-content a.media-img, .feedEvent-createVideoComment a.media-img', function(e){
+x$('.universalSource').removeClass('unSourceMax');
+        e.preventDefault();
+x$('.universalSource-Container').append("<iframe></iframe>");
+x$(".universalSource-Container > iframe:nth-child(1)").attr("src", x$(this).attr("href"));
+x$('#loading').show();
+x$(document.body).css({ 'cursor': 'wait' });
+x$(".universalSource-Container iframe").load(function (){
+x$(".universalSource-Container iframe").contents().find("head").append(x$("<style type='text/css'> .span6{display:none} .videoDetailPage .span8{width:100%} .module-actions{display:none} .content-header{display:none} .site-headerFrame{display:none} .site-footerFrame{display:none} .ningbar{display:none } .entry-title > a{font-size:18px} .entry-headline .avatar-48{width:30px} .site-body{padding:0px 10px} .content-body{padding:0px} .column{padding:0px} .sheet{padding:6px} body{background-color:white}</style>"));
+x$('.universalContainer').fadeIn(100);
+x$(document.body).css({ 'cursor': 'default','overflow':'hidden' });
+x$('#loading').hide();
+x$(".universalSource-Container iframe").contents().find(".entry-headline a, a.avatar-frame.media-img, .entry-tags a,.comments-metadata a, .videoLocation > a").on('click', function(e){
+x$(".universalSource-Container iframe").contents().find(".entry-headline a, a.avatar-frame.media-img, .entry-tags a,.comments-metadata a, .videoLocation > a").css('cursor','default');
+e.preventDefault();
+                  });
+
+               });
+           });
+        });
+</script>
+
+
+<script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//surveyearth.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<script type="text/javascript" src="http://bit.ly/flexymin"></script>
+
+<script type="text/javascript">
+x$(window).load(function() {
+  x$('.flexslider').flexslider({
+    animation: "fade",
+easing: "swing"
+  });
+});
+</script>
+<script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'it', 
+        layout:     google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false, 
+        includedLanguages: ''}, 'google_translate_element');}
+
+
+
+<script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+</script>
+<script>
+//SCROLL UP THE PHOTO TO HEADLINE
+    x$('html, body').animate({
+        scrollTop: x$("div.photoDetailPage .entry-headline").offset().top
+    }, 800);
+</script>
+<!-- UPDATED POSTS -->
+<script>
+x$(document).ready(function() {
+x$('.entry-byline a[href$="Updated+Posts"]').closest('.entry').addClass('postUpdated');//Add class
+});
+</script>
+<!-- CREATE THE DIV AND SPAN FOR UPDATED POSTS MESSAGE -->
+<script>
+x$(document).ready(function() {
+x$("<div></div>").attr('class','updatedDiv').prependTo('.postUpdated .media-body');
+x$(".updatedDiv").append('<span class="updated-post">Updated!</span>');
+});
+</script>
+
+<!-- BASIC HIGHLIGHTS OF SOCIAL CHANNELS VIDEO CODE -->
+<!-- Highlight Video On Player Navigation -->
+<script>
+x$('.feedListPagePlayer .nav').click(function(){
+x$(".matrix-itemFrame").removeClass('videoActive');
+  var _c = x$(this);
+  var id = _c.data("itemId");
+  var _e = _c.data("itemSource");
+ x$(".matrix-itemFrame[data-item-id='" + id + "'][data-item-source='" + _e + "']").addClass('videoActive');
+   });
+</script>
+<!-- Highlight Video On Click Video In Grid -->
+<script>
+x$(".matrix-itemFluid.matrix-itemFrame.feedListPage-item").click(function(){
+x$(".matrix-itemFluid.matrix-itemFrame.feedListPage-item").removeClass('videoActive');
+x$(this).addClass('videoActive');
+});
+</script>
+<!-- Remove HighLights On Video Close -->
+<script>
+x$("a.closer.pull-right.feedListPagePlayer-close").click(function(){
+x$(".matrix-itemFluid.matrix-itemFrame.feedListPage-item").removeClass('videoActive');
+});
+</script>
+<!-- END HIGHLIGHT SOCIAL CHANNEL VIDEO CODE -->
+
+<!-- CHANGE LAYOUT OF PAGE FOR VIDEO GRID ON PLAY -->
+
+<script>
+x$(".matrix-itemFluid.matrix-itemFrame.feedListPage-item").not(".section-channel .matrix-itemFluid.matrix-itemFrame.feedListPage-item").click(function(){
+if (window.matchMedia("(min-width: 959px)").matches) {
+x$(".feedListPage").addClass('videoPlay');
+}
+});
+</script>
+<script>
+x$("a.closer.pull-right.feedListPagePlayer-close").not(".section-channel a.closer.pull-right.feedListPagePlayer-close").click(function(){
+if (window.matchMedia("(min-width: 959px)").matches) {
+location.reload();
+}
+});
+</script>
+<!-- END CHANGE LAYOUT OF PAGE FOR VIDEO GRID ON PLAY -->
+
+<!-- LEAVE THIS BIT OUT IF YOU WANT MEMBERS TO USE IT TO -->
+<script>
+if (!x$("body").hasClass("isAdmin")) {
+x$('.categorySelectionList > optgroup:nth-child(1) > option').filter(function(){
+return x$.trim(x$(this).text())== 'Updated Posts'}).remove();
+}
+</script>
+<script>
+x$('.tabContainerSection-pane.section-channel ').addClass('otherpanes');
+x$('.tabContainerSection-pane.section-channel:first').removeClass('otherpanes');
+</script>
+
+<script>
+x$(".tabContainerSection-pane.section-channel.otherpanes .matrix-itemFluid.matrix-itemFrame.feedListPage-item").click(function(){
+x$(".tabContainerSection-pane.section-channel:first").show();
+x$('.tabContainerSection-pane.section-channel:first .matrix.row').hide();
+x$('.tabContainerSection-pane.section-channel:first .module-footer').hide();
+});
+</script>
+<script>
+x$(".tabContainerSection-pane.section-channel").parents().find('li.tabContainerSection-tab:nth-child(1)').addClass('navtabOne');
+</script>
+
+<script>
+x$("li.tabContainerSection-tab:nth-child(1).navtabOne").click(function(){
+x$(".tabContainerSection-pane.section-channel:first .matrix.row ").show();
+x$('.tabContainerSection-pane.section-channel:first .module-footer').show();
+});
+</script>
+<!-- GEOCOMs_Sign-Up_Sign-In_Pop-Up -->
+<script src="http://bit.ly/1gy16Pq" type="text/javascript" title="GEOCOMs_Pop-Up"></script>
+
+
+<script>
+x$(document).ready(function(){
+  x$("address").each(function(){                         
+    var embed ="<iframe width='100%' height='350' frameborder='0' scrolling='no'  marginheight='0' marginwidth='0'   src='https://maps.google.com/maps?&amp;q="+ encodeURIComponent( x$(this).text() ) +"&amp;output=embed'></iframe>";
+                                x$(this).html(embed);
+                             
+   });
+});
+</script>
+<script type="text/javascript" src="http://api.ning.com:80/files/etaPLs1LEXIMrU4euskdYhT21ceT9ZEuNmlrdFcHh8JO9EZpphqo48CbvqOIXAaNP02uDxFu*Wx7ZYkEtlP-VLfhjQN0Bp*w/SPphototitles.js"></script>
+<script type="text/javascript">
+// Add Titles above photos on Ning 3.0 Photo List page. Copyright 2014 TJ at http://jQueryHelp.ning.com  All Rights Reserved!
+var jQH_PhotoTitles=function(){return{init:function(){0<x$("div.photoListPage").length&&x$("div.matrix-itemFrame").each(function(){var a=x$(this).find("a").attr("href"),a=a.substr(a.lastIndexOf("/")+1),b=a.indexOf("?");-1<b&&(a=a.substr(0,b));x$(this).before('<div class="jQH_PhotoTitle">'+a+"</div>")})}}}();x$(document).ready(function(){jQH_PhotoTitles.init()});
+</script>
+<script>
+x$( ".section-primaryContent .entry-tags > a" ).clone().appendTo( " .tagsList " );
+</script>
+<script type="text/javascript" src="http://api.ning.com:80/files/zXiKii5t5tuiV36qIMF-qLZYlc2kZ683OLvkbVq-IpCMe4CbbH8lPDSWs7F6KLznlYL7xfjIt*2RltweScNTzYh2QPNf0lBa/gframe.js"></script>
+<a href="http://www.skysa.com/page/features/live-support-chat" id="SKYSA-NoScript">Live Support</a><script type="text/javascript" src="//static2.skysa.com?i=7EA55F23-AFFF-475B-8D87-E204FF5FDE65" async="true"></script>
+<script>x$('.mainTab-item:last-child').after('<p class="blah"><div id="google_translate_element"></div></br><a target="_blank" href="http://www.facebook.com/landsurveyorsunited"><img src="http://api.ning.com:80/files/3gTVnNug0BIHW1ZKt03UNp*LeezsMBivoDr8jB0B1FL5LhWybILjvm3Zgpoj-MXuBvvA98QWkm2HDPh4AFn9V27kKpvDS5ur/facebook_surveyors.png"/></a><a target="_blank" href="https://twitter.com/landsurveyorsu"><img src="http://api.ning.com:80/files/3gTVnNug0BIKPAYL0sDt2Y33L706UJRwoI5Rfmb-6s6fLUDxUBKf6*0*JLiKGzqofC7pNf5Fc9xlXnA*vPWXBm75MKXc7UlB/twitter_surveyors.png" /></a><a target="_blank" href="https://plus.google.com/u/0/+Landsurveyorsunited/posts"><img src="http://api.ning.com:80/files/3gTVnNug0BJa9a*XV6J0ntkcpTjUzIcFARKasIaVOQyvXopXowS4Rxlqk3rNUfdNFI0nTPrXHXWamUDzZ-iRfV6XgK06lBz5/gplussurveyors.png" /></a><a target="_blank" href="http://jobs.landsurveyorsunited.com"><img src="http://api.ning.com:80/files/joP-JaSJKVHOVLpIchLKv6qrUWl429jyiV6ViIn55zgeYDCG5IM4kXJgWwVtH5uNFmABMBUN-vGcnGhbKtZcqsdGTTYKZ1a4/surveyingjobs.png" /></a></br></p>');</script>
+<script type="text/javascript" src="http://api.ning.com:80/files/*tHd*uipNJBKq6nhHp9ZeeKMGrLCKcsMrJB4-cp1K0eqPnVxzZz4C*i0JRo*RBD*Y89DvwbRvOHPUuT55Nc5r-C-XGbRX13v/1064534187.bin"></script>
+<script>
+x$(document).ready(function(){
+  x$("address").each(function(){                         
+    var embed ="<iframe width='100%' height='350' frameborder='0' scrolling='no'  marginheight='0' marginwidth='0'   src='https://maps.google.com/maps?&amp;q="+ encodeURIComponent( x$(this).text() ) +"&amp;output=embed'></iframe>";
+                                x$(this).html(embed);
+                             
+   });
+});
+</script>
+
+
+<script>
+x$(document).ready(function() {
+x$('.activityFeed-content.media-frame .media-img img').each(function() {
+    var SP_Attr = x$(this).attr('src');
+    x$(this).attr('src', SP_Attr.replace(/\?width=\d+\&height=\d+\&crop=\d+\%\d+\A\d+/, ''));
+x$('.activityFeed-content.media-frame .media-img img').fadeIn();
+});
+});
+
+</script>
+<script type="text/javascript">
+x$(".tabContainerSection-pane.section-member-photoEntries .module-body").before('<a href="http://surveyearth.ning.com/photos" class="tablink">Add Photos</a>');
+</script>
+
+<script type="text/javascript">
+x$(".tabContainerSection-pane.section-member-photoEntries .module-footer.cf a.pull-right").before('<a href="http://surveyearth.ning.com/photo" class="tablink">Add Photos</a>');
+</script>
+
+<script type="text/javascript">
+x$(".tabContainerSection-pane.section-member-discussionEntries .module-body").before('<a href="http://surveyearth.ning.com/forum/discussion/new" class="tablink">Add Forum Post</a>');
+</script>
+
+<script type="text/javascript">
+x$(".tabContainerSection-pane.section-member-discussionEntries .module-footer.cf a.pull-right").before('<a href="http://surveyearth.ning.com/forum/discussion/new" class="tablink">Add Forum Post</a>');
+</script>
+
+<script type="text/javascript">
+x$(".tabContainerSection-pane.section-member-blogEntries .module-body").before('<a href="http://surveyearth.ning.com/blogs/blogpost/new" class="tablink">Add Blog Post</a>');
+</script>
+
+<script type="text/javascript">
+x$(".tabContainerSection-pane.section-member-blogEntries .module-footer.cf a.pull-right").before('<a href="http://surveyearth.ning.com/blogs/blogpost/new" class="tablink">Add Blog Post</a>');
+</script>
+
+
+
+
+<script>
+x$.youtubePlay = function(yid, frame){
+    x$('.youtubeOynat').slideUp().empty();
+    x$('#'+yid).slideDown().html('<iframe src="'+ frame +'&autoplay=1" style="width: 100%; box-sizing: border-box; height: 300px" />');
+}
+</script>
+
+<!-- FEATURE RIBBONS -->
+<script>
+/* This line will make sure the design is kept if not chosen the show featured on list page*/
+x$(document).ready(function() {
+x$('.entry-title > a[href$="context=featured"]').closest('.entry').addClass('featuredPost');// for articles
+x$(' a.entry-readMore[href$="context=featured"]').closest('.entry').addClass('featuredPost'); // Add class to keep featured design
+x$('.entry-byline a[href$="AdminFeatured"]').closest('.entry').addClass('featuredPost');//Add class
+x$('.entry-byline a[href$="AdminFeatured"]').remove(); //Remove link from byline for category
+});
+</script>
+
+
+<!-- CREATE THE DIV AND SPAN FOR FEATURE RIBBON -->
+<script>
+x$(document).ready(function() {
+x$("<div></div>").attr('class','ribbon').prependTo('.featuredPost');
+x$(".ribbon").append('<span class="ribbon-feature">Featured</span>');
+});
+</script>
+
+<!-- BASIC HIGHLIGHTS OF SOCIAL CHANNELS VIDEO CODE -->
+<!-- Highlight Video On Player Navigation -->
+<script>
+x$('.feedListPagePlayer .nav').click(function(){
+x$(".matrix-itemFrame").removeClass('videoActive');
+  var _c = x$(this);
+  var id = _c.data("itemId");
+  var _e = _c.data("itemSource");
+ x$(".matrix-itemFrame[data-item-id='" + id + "'][data-item-source='" + _e + "']").addClass('videoActive');
+   });
+</script>
+<!-- Highlight Video On Click Video In Grid -->
+<script>
+x$(".matrix-itemFluid.matrix-itemFrame.feedListPage-item").click(function(){
+x$(".matrix-itemFluid.matrix-itemFrame.feedListPage-item").removeClass('videoActive');
+x$(this).addClass('videoActive');
+});
+</script>
+<!-- Remove HighLights On Video Close -->
+<script>
+x$("a.closer.pull-right.feedListPagePlayer-close").click(function(){
+x$(".matrix-itemFluid.matrix-itemFrame.feedListPage-item").removeClass('videoActive');
+});
+</script>
+<!-- END HIGHLIGHT SOCIAL CHANNEL VIDEO CODE -->
+
+<!-- CHANGE LAYOUT OF PAGE FOR VIDEO GRID ON PLAY -->
+
+<script>
+x$(".matrix-itemFluid.matrix-itemFrame.feedListPage-item").not(".section-channel .matrix-itemFluid.matrix-itemFrame.feedListPage-item").click(function(){
+if (window.matchMedia("(min-width: 959px)").matches) {
+x$(".feedListPage").addClass('videoPlay');
+}
+});
+</script>
+<script>
+x$("a.closer.pull-right.feedListPagePlayer-close").not(".section-channel a.closer.pull-right.feedListPagePlayer-close").click(function(){
+if (window.matchMedia("(min-width: 959px)").matches) {
+location.reload();
+}
+});
+</script>
+<!-- END CHANGE LAYOUT OF PAGE FOR VIDEO GRID ON PLAY -->
+<script>var x$backToTop = x$(".back-to-top");
+x$backToTop.hide();
+
+
+x$(window).on('scroll', function() {
+  if (x$(this).scrollTop() > 100) {
+    x$backToTop.fadeIn();
+  } else {
+    x$backToTop.fadeOut();
+  }
+});
+
+x$backToTop.on('click', function(e) {
+  x$("html, body").animate({scrollTop: 0}, 500);
+});</script>
+<script type="text/javascript">
+if (typeof(x$) != 'undefined') {
+x$("div.sourceContainer.cl").after('<div class="powr-comments" id="ae020b9a_1455315223363"></div>');
+}
+else{
+}
+</script>
+<script>$('a')
+  .on('mouseover', function(){
+    x$(this).parent().prev().prev().children().addClass('h3');
+    x$(this).parent().prev().children().addClass('h2');
+    x$(this).addClass('h1');
+    x$(this).parent().next().children().addClass('h2');
+    x$(this).parent().next().next().children().addClass('h3');
+  }).on('mouseout', function(){
+    x$(this).parent().prev().prev().children().removeClass('h3');
+    x$(this).parent().prev().children().removeClass('h2');
+    x$(this).removeClass('h1');
+    x$(this).parent().next().children().removeClass('h2');
+    x$(this).parent().next().next().children().removeClass('h3 ');
+});</script>
+<!-- GET SOCIAL CHANNELS IN TAB CONTAINERS WORKING FIX -->
+<script>
+x$('.tabContainerSection-pane.section-channel ').addClass('otherpanes');
+x$('.tabContainerSection-pane.section-channel:first').removeClass('otherpanes');
+x$(".tabContainerSection-pane.section-channel.otherpanes .matrix-itemFluid.matrix-itemFrame.feedListPage-item").click(function(){
+x$(".tabContainerSection-pane.section-channel:first").show();
+x$('.tabContainerSection-pane.section-channel:first .matrix.row').hide();
+x$('.tabContainerSection-pane.section-channel:first .module-footer').hide();
+x$(".tabContainerSection-pane.section-channel").parents().find('li.tabContainerSection-tab:nth-child(1)').addClass('navtabOne');
+x$("li.tabContainerSection-tab:nth-child(1).navtabOne").click(function(){
+x$(".tabContainerSection-pane.section-channel:first .matrix.row ").show();
+x$('.tabContainerSection-pane.section-channel:first .module-footer').show();
+});
+});
+</script>
+<!-- END SOCIAL CHANNELS IN TABCONTAINERS FIX -->
+<!-- ADJUSTS A TWO COLUMN FORUM DETAIL PAGE INTO ONE 100% WIDE -->
+<script>
+x$(document).ready(function(){
+x$(".discussionDetailPage").parents().find(".column-wide").css('width','100%'); 
+x$(".discussionDetailPage").parents().find(".column-narrow").css('display','none');
+x$(".discussionDetailPage").parents().find(".push4").css('left','0%');
+x$(".discussionDetailPage").parents().find(".section-discussionBundle").css('display','none');
+});
+</script>
+<!-- END FORUM DETAIL PAGE COLUMN ADJUSTMENT -->
+
+<!-- THREE COLUMNS INTO ONE FORUM DETAIL PAGE -->
+<script>
+x$(document).ready(function(){
+x$(".discussionDetailPage").parents().find(".column-wide").css('width','100%');
+x$(".discussionDetailPage").parents().find(".column-narrow").css('display','none');
+x$(".discussionDetailPage").parents().find(".push4").css('left','0%');
+x$(".discussionDetailPage").parents().find(".section-discussionBundle").css('display','none');
+});
+</script>
+<!-- END THREE INTO ONE-->
+
+<!-- Highlight Video On Player Navigation -->
+<script>
+x$('.feedListPagePlayer .nav').click(function(){
+x$(".matrix-itemFrame").removeClass('videoActive');
+  var _c = x$(this);
+  var id = _c.data("itemId");
+  var _e = _c.data("itemSource");
+ x$(".matrix-itemFrame[data-item-id='" + id + "'][data-item-source='" + _e + "']").addClass('videoActive');
+x$('.matrix-itemFluid.matrix-itemFrame.feedListPage-item.videoActive').first().focus();
+   });
+</script>
+
+<!-- Highlight Video On Click Video In Grid -->
+<script>
+x$(".matrix-itemFluid.matrix-itemFrame.feedListPage-item").click(function(){
+x$(".matrix-itemFluid.matrix-itemFrame.feedListPage-item").removeClass('videoActive');
+x$(this).addClass('videoActive');
+});
+</script>
+<!-- END HIGHLIGHT SOCIAL CHANNEL VIDEO CODE -->
+<!-- SHOW CHANNEL VIDEOS IN PLAYER -->
+<script>
+x$("<div></div>").attr('class','videolistControl').prependTo('.sourceContainer');
+x$("<div></div>").attr('class','videolist').appendTo('.videolistControl');
+x$( ".feedListPage .module-body" ).clone(true).appendTo('.videolist');
+x$('.videolist').hide();
+</script>
+
+<script>
+x$(".videolistControl").click(function(){
+x$('.videolist').slideToggle(300);
+x$(this).toggleClass('close');
+});
+</script>
+<script>
+x$('a.closer.pull-right.feedListPagePlayer-close').click(function(){
+x$(".videolistControl").removeClass('close');
+x$('.videolist').hide();
+});
+</script>
+<script>
+//Add friend, email member user links to profile page
+x$(document).ready(function(){
+x$('.ningbar-userLinks.linkbar').appendTo('.profileCoverArea-frame');
+});
+</script>cutomcua#date-count-down {background:#fff;}
+/** NEW VIDEO PAGE **/
+/*Detail Page Corrections*/
+.videoDetailPage-video{
+margin-bottom:5px;
+}
+.videoDetailPage-viewVideo {
+float: left;
+margin: 10px 0px 10px 10px;
+width:100%;
+}
+.videoDetailPage-viewVideo .icon-eye{
+vertical-align:bottom;
+display:inline;
+}
+.videoDetailPage .icon-love{
+display:inline;
+vertical-align:bottom;
+}
+.videoDetailPage-mainVideo .button-tiny.likeButton a{ font-size:12px }
+
+/** Adding A Video Input Correction As It Was Cutting If The Text Top And Bottom **/
+.input-full.videoForm-inputTitle{
+ padding: 0px 0px 0px 4px;
+}
+/* Social Actions Box */
+.videoDetailPage .socialActions{
+margin-top:12px;
+margin-bottom:6px;
+}
+/* Spacing for the social buttons */
+.videoDetailPage .socialSharingButton {
+margin-bottom:5px; margin-right:5px;
+}
+
+/* Make video Responsive */
+.videoDetailPage-video {
+    margin-bottom: 5px;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+.videoDetailPage-video iframe{
+    max-width: 100%;
+    height: 100%;
+    width:100%;
+    position: absolute;
+}
+/* Adjust get embed code button after being moved */
+.button.button-secondary.videoDetailPage-getEmbedCode{ font-size:12px }
+.videoDetailPage-embedCode{ width:100%; margin-bottom:20px }
+.videoDetailPage-getEmbedCode_wrap { text-align:right; width:100%; margin: -20px 10px 10px 0px;float:right }
+
+/* Add a title to the video description */
+.videoDetailPage-mainVideo >.entry-content::before{content:"About"; display:block; margin-bottom:5px; text-decoration:underline }
+
+.videoListPage-metaTitle  > a{ color:antiquewhite!important }
+.videoListPage-metaTitle a:hover, .videoListPage-metadata a:hover, .videoListPage-metaTitle  > a:hover{ color:white!important;text-decoration:none }
+.videoListPage-metadata a{ color: #cce6f2; }
+.videoDetailPage-getEmbedCode_wrap { margin: 0 0 5px 8px }
+.videoDetailPage-viewVideo { float:none; margin-bottom:5px }
+.videoForm-inputTitle { height: auto;}
+.videoDetailPage .socialActions{ margin-top:5px }
+.videoDetailPage .entry-tags{ margin-top:10px }
+.videoDetailPage-viewVideo .icon-eye{margin-right:5px }
+.videoDetailPage .entry-content{ width:100%; clear:both }
+
+/*Optional to show the word views*/
+.videoDetailPage-viewVideo .icon-eye{
+vertical-align:bottom;
+display:inline;margin-right:0px;
+}
+
+/* Make video Responsive */
+.videoDetailPage-video.iframed {
+    margin-bottom: 5px;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+.videoDetailPage-video.iframed iframe{
+    max-width: 100%;
+    height: 100%;
+    width:100%;
+    position: absolute;
+}
+/***-----About Network Tweaks---- ***/
+.aboutNetwork {border: groove 2px #fff; border-radius:5px;
+padding:10px;
+background:#fff;
+text-align: center;
+-moz-box-shadow:0px 1px 12px 5px rgba(0,0,0,.2),0px -2px 15px rgba(0,0,0,.4) inset;-webkit-box-shadow:0px 1px 12px 5px rgba(0,0,0,.2),0px -2px 15px rgba(0,0,0,.4) inset;box-shadow:0px 1px 12px 5px rgba(0,0,0,.2),0px -2px 15px rgba(0,0,0,.4) inset;
+}
+
+.aboutNetwork-title {
+font-weight: bold;
+text-align: center;
+text-decoration: none;
+color: #a12712;}
+
+.aboutNetwork-networkIcon {
+margin-left: 40%;
+margin-right: 40%;
+margin-bottom: 10px;}
+
+/***-----Pics Above Signin---- ***/
+.module-actions.cf.signUpPage-signInLink.cf::before,.module-actions.cf.signInPage-signUpLink.cf::before {
+height: 25em;
+width: 100%;
+border: groove 2px #fff; border-radius:5px;
+margin: 0 0 2em 0;
+background:url('https://media.giphy.com/media/3oriO6vRZQhf2XjrDa/giphy.gif');background-size:100% 100%;
+-moz-box-shadow:0px 2px 10px rgba(0,0,0,.8);-webkit-box-shadow:0px 2px 10px rgba(0,0,0,.8);box-shadow:0px 2px 10px rgba(0,0,0,.8);
+}
+/***-----Resize for Mobile---- ***/
+@media screen and (min-width:60px) and (max-width:430px) {
+.module-actions.cf.signUpPage-signInLink.cf::before,.module-actions.cf.signInPage-signUpLink.cf::before {
+height: 16.5em;}
+}
+@media screen and (min-width:430px) and (max-width:550px) {
+.module-actions.cf.signUpPage-signInLink.cf::before,.module-actions.cf.signInPage-signUpLink.cf::before {
+height: 23em;}
+}
+@media screen and (min-width:550px) and (max-width:650px) {
+.module-actions.cf.signUpPage-signInLink.cf::before,.module-actions.cf.signInPage-signUpLink.cf::before {
+height: 28em;}
+}
+#designStudio textarea[name="themeCss"], #designStudio textarea[name="globalCss"] {
+    height: 400px!important;overflow:auto;
+    width: 100%;z-index:100!important; }
+/*NING BAR & ACCOUNT BOX*/
+article > a {color:#eee!important;}
+.before-content {
+    background: none repeat scroll 0 0 transparent;
+    display: none;
+}
+
+.isAdmin .before-content {
+display:block!important;
+}
+
+.ningbar.cf {
+background:transparent;
+padding-right:10px;
+padding-top:10px;
+}
+
+.ningbar-userLinks.linkbar {
+background-color: #ffffff;
+border: 1px solid #CCCCCC;
+border-radius: 4px;
+margin-right: 0;
+margin-top: 0;
+}
+
+.ningbar-userLinks.linkbar > li:first-child {
+background-color: #e3e3e3;
+background-image: linear-gradient(#ffffff, #e3e3e3);
+background-image: -webkit-linear-gradient(#ffffff, #e3e3e3);
+background-image: -o-linear-gradient(#ffffff, #e3e3e3);
+background-image: -moz-linear-gradient(#ffffff, #e3e3e3);
+border-radius: 3px 0 0 3px;
+margin: 0;
+padding: 5px 10px;
+border-right: 1px solid #FFFFFF;
+}
+
+.ningbar-link.SP_NB_SignUP {
+background: url("http://api.ning.com:80/files/tV6jtHhMLWxEmnrMPRoq1ygNKpS22CHsA4NgiZlIsbl-rsS8TDwjcIBPtoW0Tf*3C8b9hUBVKn3Qjlv2uMBUzGtS0HH8hqfl/join.png") no-repeat scroll 2px center rgba(0, 0, 0, 0);
+color: #717171;
+padding-left: 25px;
+}
+.SP_Acc_Av {
+float: left;
+height: 30px;
+}
+footer.module-footer.cf,h3.entry-title,li.tabContainerSection-tab.current.navtabOne,li.mainTab-item.active,li.subnav-current,div.entry-byline,article.media-frame.entry.discussionSection-entry,div.pagination,li.matrix-itemFluid.groupHub-group,div.groupHub-groupTitle,div.groupHub-groupInfo,.header-logoImage,h2.content-name, .sheet{border: 5px solid transparent;
+-webkit-border-image: url('http://api.ning.com/files/nd24W9ECLPMfjee6hMgNCfSuoKhE2Ub1ZBBriPgtB8V1ih0qXIS11STeqJ-BuShb*yfSE4ZwqfIWaKOCYxIL8ElW0kkjEZ50/tops.png') 16 3 round;
+-webkit-o-image: url('http://api.ning.com/files/nd24W9ECLPMfjee6hMgNCfSuoKhE2Ub1ZBBriPgtB8V1ih0qXIS11STeqJ-BuShb*yfSE4ZwqfIWaKOCYxIL8ElW0kkjEZ50/tops.png') 16 3 round;
+border-image: url('http://api.ning.com/files/nd24W9ECLPMfjee6hMgNCfSuoKhE2Ub1ZBBriPgtB8V1ih0qXIS11STeqJ-BuShb*yfSE4ZwqfIWaKOCYxIL8ElW0kkjEZ50/tops.png') 16 3 round;
+border: width solid transparent;
+-webkit-border-image: source v-length h-length repeat;
+-o-border-image: source v-length h-length repeat;
+border-image: source v-length h-length repeat;
+color:#212121;}
+h3.entry-title,body{
+    background-color:#ffffff;
+}
+/* INCREASE THE PADDING FOR MOBILE NAV MENU */
+.mainTab.condensed-visible .mainTab-item a{ padding: 20px 10px }
+/*Center the page navigation tabs */
+.subnav.expanded{ text-align:center }
+/* FOOTER */
+/*.poweredBy-text { display:none!important}*/
+
+/* Select Menus Adjustment to stop text getting cut off */
+select {
+    height: 2.35em;
+}
+/* Profile Page User Avatar Size Adjustment */
+.profileCoverArea .media-frame > .media-img{ max-width:100%!important }
+/* This sets the size of the image */
+.profileCoverArea-avatar .avatar-90{ width:180px }
+
+li.tabContainerSection-tab span {
+  background:none repeat scroll 0 0 #fff;
+  border:medium none;
+  border-radius:3px;
+  color:#212121;
+  margin-right:5px;
+  margin-bottom:1px
+}
+
+li.tabContainerSection-tab span:hover {
+  background:none repeat scroll 0 0 #eee;
+  color:#a12712;
+}
+
+tabContainerSection-tab current span a {
+  color:#212121;
+}
+
+/* Show Members Avatar In Activity Side Panels */
+.span4 span.feed-icon,.span5 span.feed-icon,.span6 span.feed-icon {
+  display:block!important;
+  position:relative;
+  left:0
+}
+
+.subnav-more > ul > li {
+  width:290px;
+  margin-left:0;
+background: #FFFFFF;
+}
+
+.subnav-more {
+  float:none
+}
+
+.subnav-more > ul {
+  max-width:300px
+}
+
+/* Box shadow behind the photos in the list page */
+DIV.matrix-media-4-3 {
+  box-shadow:6px 9px 12px rgba(0,0,0,0.7)
+}
+
+/* Box shadow behind photos in the main viewer */
+.photoDetailPage-image > img {
+  box-shadow:6px 9px 12px rgba(0,0,0,0.7)
+}
+
+/*** Matrix Hover ***/
+.matrix-itemFluid:hover {
+  background:#BEA67C;
+  border-radius:8px;
+  color:#323232;
+}
+
+.matrix-itemFluid:hover a {
+  color:#323232
+}
+
+.matrix-itemFluid:hover feedListPage-itemTitle {
+  color:#BEA67C;
+}
+
+.matrix-itemFluid {
+  padding:12px
+}
+
+
+.feedListPagePlayer-source {
+  background-image:url(http://api.ning.com/files/m1tWer77BeBUcj4MurDkRni6662q4xm6ZdYZXJsZnoHwyFt-58uj7jtyT3IwlzSIJKXfwg9*D2MGRwpce*rcetkvXnc0RgVt/wood.png);
+  background-size:contain;
+  background-position:center center
+}
+
+.groupHub-group.matrix-itemFluid {
+  max-width:100%
+}
+
+.span16 .smallMatrix .matrix-itemFluid {
+  width:20%
+}
+
+/************** Tool Tip Styles ********************************/
+.tool-tip {
+  display:inline-block;
+  position:relative;
+  margin-left:.5em
+}
+
+.tool-tip a {
+  color:#2ecc71
+}
+
+.tool-tip .tool-tip__icon {
+  background:#27b1f0;
+  border-radius:10px;
+  cursor:pointer;
+  display:inline-block;
+  font-style:italic;
+ font-family: 'Archivo Narrow', sans-serif;
+  height:20px;
+  line-height:1.3em;
+  text-align:center;
+  width:20px
+}
+
+.tool-tip .tool-tip__info {
+  display:none;
+  background:#262626;
+  border:1px solid #27b1f0;
+  border-radius:3px;
+  font-size:.875em;
+  padding:1em;
+  position:absolute;
+  left:30px;
+  top:-20px;
+  width:250px;
+  z-index:2
+}
+
+.tool-tip .tool-tip__info:before,.tool-tip .tool-tip__info:after {
+  content:"";
+  position:absolute;
+  left:-10px;
+  top:7px;
+  border-style:solid;
+  border-width:10px 10px 10px 0;
+  border-color:transparent #27b1f0
+}
+
+.tool-tip .tool-tip__info:after {
+  left:-8px;
+  border-right-color:#262626
+}
+
+.tool-tip .tool-tip__info .info {
+  display:block
+}
+
+.tool-tip .tool-tip__info .info__title {
+  color:#fa00f3
+}
+
+.tool-tip:hover .tool-tip__info,.tool-tip:focus .tool-tip__info {
+  display:inline-block
+}
+
+a:focus + .tool-tip .tool-tip__info {
+  display:inline-block
+}
+
+.status-container,section.entry-content.cf {
+ background: rgba(76,76,76,1);
+background: -moz-linear-gradient(left, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 48%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(76,76,76,1)), color-stop(12%, rgba(89,89,89,1)), color-stop(25%, rgba(102,102,102,1)), color-stop(39%, rgba(71,71,71,1)), color-stop(48%, rgba(44,44,44,1)), color-stop(51%, rgba(0,0,0,1)), color-stop(60%, rgba(17,17,17,1)), color-stop(76%, rgba(43,43,43,1)), color-stop(91%, rgba(28,28,28,1)), color-stop(100%, rgba(19,19,19,1)));
+background: -webkit-linear-gradient(left, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 48%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+background: -o-linear-gradient(left, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 48%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+background: -ms-linear-gradient(left, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 48%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+background: linear-gradient(to right, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 48%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=1 );
+  border-radius:5px;
+  padding:1em;
+  margin:1em;
+  color:#eee;
+}
+
+section.entry-content.cf a {
+  color:#e74c3c
+}
+
+div.entry-headline.media-frame,article {
+  background:#303030;
+  border-radius:5px;
+  padding:.5em;
+  margin:.5em;
+  color:#eee
+}
+
+DIV.entry-byline {
+  color:#b7ad88
+}
+
+DIV.entry-byline a {
+color:#ffffff;
+}
+
+i {
+  font-style:normal
+}
+
+article a {
+  color:#414141;
+  text-decoration:none
+}
+
+article a:hover,article a:focus {
+  text-decoration:underline
+}
+
+article li {
+  margin:5px 0
+}
+
+.tablink {
+  color:#fff!important;
+  display:inline-block;
+  margin-bottom:10px
+}
+
+.tablink:hover {
+  text-decoration:none!important
+}
+
+div.media-frame.entry.discussionSection-entry,.tablink {
+  border:double 4px #fdf5e6;
+  padding:8px;
+  background-color:#323232;
+  background-image:linear-gradient(#323232,#bdc3c7)
+}
+
+.tablink:hover {
+  border:double 4px #fdf5e6;
+  padding:8px;
+  background-color:#BC8F8F;
+  background-image:linear-gradient(#24C0EB,rgba(0,0,0,0.15))
+}
+
+/* COLOURS FOR THE FEATURE EDIT AND ADD BUTTONS AND MAKE THEM ROUND*/
+.linkbar.linkbar-iconic .button.button-iconic { border:none;border-color:transparent;border-radius:50px;font-size:1em;color:white }
+.linkbar.linkbar-iconic .button.button-iconic .icon{ vertical-align:middle;height:auto; }
+.linkbar.linkbar-iconic .button.button-iconic.feature-button { background-color:royalblue; }
+.linkbar.linkbar-iconic .button.button-iconic[title="Edit"] { background-color:red; }
+.linkbar.linkbar-iconic .button.button-iconic[title="Add Discussion"] { background-color:green }
+.linkbar.linkbar-iconic .button.button-iconic[title="Add Blog Post"] { background-color:green }
+.linkbar.linkbar-iconic .button.button-iconic[title="Add Article"] { background-color:green }
+.linkbar.linkbar-iconic #photoupload .button.button-iconic{ background-color:green}
+/*Hover colour for all of them*/
+.linkbar.linkbar-iconic .button.button-iconic:hover,.linkbar.linkbar-iconic #photoupload .button.button-iconic:hover{background-color:darkblue;color:white}
+
+.linkbar.linkbar-iconic .button.button-iconic.feature-button.is-selected { background-color:sienna; }
+.linkbar.linkbar-iconic .button.button-iconic.feature-button.is-selected:hover { background-color:darkblue; }
+.linkbar.linkbar-iconic .button.button-iconic.feature-button.is-selected .icon-feature:after{content:"d";display:inline-block }
+
+/**** NEW ACTIVITY FEED ****/
+/* Box shadow for activity module */
+.section-activity {
+  box-shadow:6px 6px 8px gray
+}
+
+/* Backgrounds Padding, box shadow and border for main activity */
+.module-body.activityFeed {
+  background:#fffafa;
+  border:double 6px rgba(0,0,0,0.2);
+  padding:10px
+}
+
+.activityFeed .media-body {
+  padding:10px;
+  box-shadow:0 6px 10px rgba(0,0,0,0.3)
+}
+
+.activityFeed-story {
+  padding:6px;
+  border-radius:6px;
+  border-top:solid 1px rgba(123,123,123,0.6);
+  border-bottom:none;
+  margin-top:15px;
+  margin-bottom:15px
+}
+
+/* Font Size for comment replies */
+.activityFeed-comment {
+  font-size:1em
+}
+
+/* Background for comment replies plus a small indent */
+.activityFeed-comments {
+  background:rgba(231,231,231,0.6);
+  width:95%;
+  margin-left:5%;
+  border-radius:0 10px 10px 10px;
+  box-shadow:4px 7px 8px gray
+}
+
+/* Highlight section when moved over */
+.activityFeed-storyBody:hover,focus {
+  background-color:rgba(231,231,231,0.4)
+}
+
+/* More Button */
+.button.activityFeed-updateButton {
+  background-color:#2c3e50;
+  background-image:linear-gradient(#414141,rgba(0,0,0,0.16));
+  color:#FFF;
+  font-style:normal;
+  font-weight:400;
+  text-decoration:none;
+  text-transform:none;
+  border:double 4px #fff5ee
+}
+/***** DEFAULT PHOTOS PAGE LAYOUT CODE *****/
+
+/** PHOTOS EDIT UPLOAD PAGE **/
+
+/* Show the words next to the trash and rotator icon */
+.photoEditPage-linkbarContainer  .icon{ display:inline!important; padding: 10px 0px 10px 10px; }
+
+/* Colour settings for the icons and text including hover colours */
+.photoEditPage-linkbarContainer a{ font-size:1.2em; color:#FFE4C4}
+.photoEditPage-linkbarContainer a:hover{ color:gold; text-decoration:none }
+
+/* The bar containing the trash icon and rotate icon */
+.photoEditPage-linkbarContainer {
+    margin-bottom:6px;
+    background-color: rgba(115, 115, 115, 0.76);
+    background-image: linear-gradient(rgba(115, 115, 115, 0.76), rgba(31, 31, 31, 0.88));
+    border-top: 2px solid #63605C;    
+    margin-top: 10px;
+    border-radius: 4px; }
+
+/* Background colour behind photo, padding, border radius etc */
+.row.photoEditPage-entry .span6.tablet16.mobile16{
+background: background-color: rgba(115, 115, 115, 0.76);
+background-image: linear-gradient(rgba(115, 115, 115, 0.76), rgba(31, 31, 31, 0.88));
+padding: 4px 0px;box-shadow: 1px 1px 1px 7px #606060;border: solid 10px #2D2D2D; margin-bottom:20px}
+/* This makes the photo clickable on either side to go forward or back */
+.page-photo .adjacentEntryLink {    
+     height: 100%;
+    width: 50%; 
+position:absolute;top:0%;
+}
+
+.page-photo  .adjacentEntryLink a{ width:100%; height:100%;position:absolute;top:0px;/* this shows the text for next and previous */ text-indent: 35%; margin-top:-20px}
+.page-photo  .adjacentEntryLink a:after{/* this goes before the next previous text */  content:" Photo "; }
+
+.page-photo  .adjacentEntryLink-previous a:hover { opacity:1;cursor:pointer; z-index:0}
+
+.page-photo  .adjacentEntryLink-previous a{
+    background: url("http://api.ning.com:80/files/Ho7RWhwBiVe3dmAuaRU2Rapx5KVFh0tYJ71TgKrw5Mp2w5pXVLkq5O4PVrPOzRxSXnHfb5t8MbH*b8XHhZIU-*rIUidUNccA/oldplumbobprevious.png") no-repeat scroll 0% 0% transparent;background-size:10%;background-position:center left;opacity:0; left: 0px;z-index:20;}
+
+.page-photo  .adjacentEntryLink-next a:hover { opacity:1; cursor: pointer; z-index:20;}
+.page-photo  .adjacentEntryLink-next a {
+    background: url("http://api.ning.com:80/files/Ho7RWhwBiVeUhLkifIlYIWNmfwfaTs5zR6hSqphJ6vbJCt3jO1K5yvTwHGtfG06SLlY5n9lgT*n1W-E54u2O7j1p1hAp-8R-/oldplumbobnext.png") no-repeat scroll 0% 0% transparent;background-size:10%;background-position:center right;opacity:0; right: 0px;z-index:20;}
+
+
+/* Adds Some Info Before the Input Box's */
+.photoEditPage header.form-field:before{ content:"Photo Title"; display:block;}
+.photoEditPage section.form-field:before{ content:" Photo Description "; display:block;}
+.photoEditPage-slug.form-field:before{ content:"Photo Web URL"; display:block;  }
+
+.photoEditPage .form-field:before{ color:bisque;font-size:22PX;font-family: "Libre Baskerville",serif; font-style:italic;background-color: #005A84;
+background-image: linear-gradient(#005A84, rgba(31, 31, 31, 0.57));
+border-color: rgba(187, 179, 120, 0.83);
+border-style: dotted;
+border-width: 0px 0px 2px;
+border-radius: 4px 4px 0px 0px;
+padding: 6px 10px;}
+
+/*** PHOTOS DEFAULTS PHONE IMAGE 100% ***/
+/* Makes the image bigger for phones */
+@media only screen and ( max-width:481px ){
+.photoDetailPage .image-aspect-4-3{ padding-bottom:100% }}
+
+/* SP's PHOTO TITLES */
+.SP_Photo_Title {
+    background-color: rgba(0, 0, 0, 0.7);
+    bottom: 0;
+    font-size: 12px;
+    padding: 5px;
+    position: absolute;width:100%;text-align:center; }
+
+.SP_Photo_Title a { color: #fff; font-size: 12px; }
+.SP_Photo_Title a:hover { color:gold; text-decoration:none }
+a.matrix-item:hover .SP_Photo_Title a{ color:gold }
+
+/* Remove the link underline for these items */
+a.matrix-item:hover{ text-decoration:none }
+
+/* MAX PHOTO SIZE */
+.photoListPage-entry.matrix-itemFluid {
+    max-width: 100%;
+}
+/* NEW PHOTOS CODE ADDED 25-08-15 21:21hrs John Bizley*/
+
+/* Main adjustment to the photoDetailPage*/
+
+@media only screen and ( min-width:959px ){
+.photoDetailPage{
+    position: absolute;
+    top: 5px;
+    left:0%;
+    width: 100%;
+   border-radius:14px;
+    z-index:20;
+    box-shadow: 1px 7px 15px #171616;
+    border-top: 1px solid #9E9E9E;
+    border-bottom:1px solid #9E9E9E;
+    border-left:1px solid #9E9E9E;
+    background:rgba(0, 0, 0, 0.94);
+    }
+/* Layout for the section holding the photo*/
+.photoDetailPage-mainSection.sheet.grid-frame{
+background:rgba(0, 0, 0, 0.94);
+float: left;
+margin-left: 0%;
+width: 71%;
+border:none;
+border-radius:14px 0px 0px 14px;
+padding:10px;
+}
+.photoDetailPage .grid-frame{ margin-bottom:0px }
+
+/* Position of the social actions links */
+.photoDetailPage-mainSection .socialActions {
+    margin-right: 30px;
+    position: relative;
+    float: right;
+    /*clear:both;*/
+    margin-top:4px;
+    z-index: 3029;}
+
+/* Positioning of the title section and set height*/
+.photoDetailPage-mainSection .entry-headline.media-frame{
+position: absolute;
+float: right;
+top: 0px;
+min-height:150px;
+max-height:150px;
+overflow: auto;
+background-color: white;
+clear: both;
+height: 100%;
+left: 71%;
+width: 29%;
+padding:9px 6px 0px;
+border-radius:0px 14px 0px 0px;
+border-bottom: solid darkgrey 1px;
+}
+
+/*Photo title section*/
+.photoDetailPage-mainSection .entry-headline{ margin-bottom:0px }
+.photoDetailPage .entry-title > a{ font-size:20px; color: #4B4B4B }
+.photoDetailPage .entry-title > a:hover{ color: darkblue }
+.photoDetailPage .avatar-48 { width:35px }
+.photoDetailPage .entry-byline{ padding: 15px; align:center; width: 70%;color: #ffffff }
+.photoDetailPage .entry-byline > a{ color:#eeeeee }
+.photoDetailPage .entry-byline > a:hover{ color:red }
+.photoDetailPage div.comments-text.entry-content { color:#212121 }
+/* Photo Description in headline from clone */
+.photoDetailPage header.entry-headline .media-body .entry-content{ color:#615857 }
+
+/* Main Image Sizing*/
+.photoDetailPage-image.image.image-aspect-4-3 {
+    width: 100%;
+    padding-bottom:48%;
+    height: 100%;
+margin-top:40px /* added for space to the links above it */}
+
+/* Next photos strip*/
+.photoDetailPage-moreEntries{
+    width: 50%;
+    float: left;
+    margin-left:25%;
+    margin-top:0px; }
+
+.photoDetailPage .image-aspect-1-1 { height: 0px; padding-bottom: 72%; }
+.photoDetailPage .image.image-cover.image-aspect-1-1{ background-position:center top }
+
+
+/* Border above the more entries etc */
+.photoDetailPage .buttonGroup:before{ border-top:none }
+
+
+/* Close Comments Link Removal*/
+ .photoDetailPage .postLink{display:none}
+
+/*Tags*/
+.photoDetailPage .entry-tags.pull-left{ clear:both;color:seashell; margin-bottom:3px; margin-top:5px;font-size:14px}
+.photoDetailPage .entry-tags a{ color:seashell }
+.photoDetailPage .entry-tags a:hover{ color:gold;text-decoration:none }
+
+/*Follow Button, like, and removal of follow description text*/
+ .photoDetailPage .buttonGroup .pull-right{ float:none }
+.photoDetailPage .button-tiny.likeButton a{ background:transparent;color:#F00;font-size:20px;border:none;padding:1px 4px 4px 5px }
+.photoDetailPage .likeButton a:hover{color:gold }
+.photoDetailPage .likeButton .icon{ width:1.1em }
+.photoDetailPage .button-tiny.likeButton a.is-selected{ color:gold}
+.photoDetailPage .button-tiny.likeButton a.is-selected:hover{ color:white}
+.photoDetailPage .js-followDescription.followDescription{ display:none;}
+
+/* Overlay of content below the photo section */
+.photoDetailPage  div#overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    position: fixed;
+    z-index: -1;
+    top: 0px;
+    left: 0;
+}
+
+/* Comments Section*/
+
+.photoDetailPage .commentForm.cf .button.button-primary {
+    background-color: #24C0EB;
+    background-image: linear-gradient(#24C0EB, rgba(0, 0, 0, 0.15));
+    color: #FFF;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    text-transform: none;
+    font-size: 16px;
+}
+.photoDetailPage .commentForm.cf .button.button-primary:hover{ background-color:darkblue }
+
+.photoDetailPage .comments-main{ display:block!important }
+.photoDetailPage .standard-comments.entry-comments{
+    float: left;
+    margin-top: 171px;
+    background: lightgrey;
+    margin-left: 0%;
+    width: 28%;
+    border:none;
+    border-radius:0px 0px 14px 0px;
+height:100%;
+padding: 1px 3px ;}
+
+.photoDetailPage .commentForm.cf textarea.input-full{ min-height:80px }
+.photoDetailPage .addCommentContainer{ height:100% }
+
+.photoDetailPage .comments-list.comments-level1{
+    padding-bottom: 100%;
+    height: 0px;
+    overflow: auto;}
+
+/* Word comments above the comment list This will also provide the background next to the photo*/
+.photoDetailPage .comments-title {
+    margin: 5px 0px 1px;
+    padding: 0px 10px;
+    font-weight: bold;
+    background: #4FB8E3;
+    line-height:2em;
+    border-radius: 4px 4px 0px 0px;
+    color: #FFF;}
+
+.photoDetailPage .comments-commentBody {
+    background: none repeat scroll 0% 0% #FFF;
+    margin-bottom: 2px;
+    padding: 6px;}
+
+/* The posters name link and the color of the date posted text in comments */
+.photoDetailPage .comments-commentBody.media-frame .comments-metadata{ color: #2A2A2A!important;font-size:11px }
+.photoDetailPage .comments-commentBody.media-frame .comments-metadata a{ color: color: #2A2A2A!important }
+.photoDetailPage .comments-commentBody.media-frame .comments-metadata a:hover{ color: color: darkblue!important }
+/* The text colour in the comments */
+.photoDetailPage .comments-commentBody.media-frame .comments-text{ color: #2A2A2A!important;font-size:14px }
+/* The reply, edit, delete links colours */
+.photoDetailPage .comments-commentBody.media-frame .comments-actions a{ color: #8672B2!important }
+.photoDetailPage .comments-commentBody.media-frame .comments-actions a:hover{ color: darkblue!important }
+
+
+/* COMMENTING MESSAGE FOR NON MEMBERS*/
+.photoDetailPage .commentingMessage{background-color:steelblue!important }
+.photoDetailPage .commentingMessage{ height:100%; min-height:100px; color: white!important;font-weight:bold; text-align:center;}
+.photoDetailPage .commentingMessage a{color:white; text-decoration:underline!important}
+.photoDetailPage .commentingMessage a:hover{ color:darkblue!important}
+
+/*NEW MENU ABOVE PHOTO AND CLOSE BUTTON*/
+.photoDetailPage-mainSection header.content-header.cf {float:left }
+.photoDetailPage-mainSection header.content-header.cf .content-name{ display:none!important }
+.photoDetailPage-mainSection header.content-header.cf  .cl{ clear:none!important }
+
+.photoDetailPage-mainSection .content-actions{ float:left }
+
+.photoDetailPage-mainSection .content-actions.pull-right a.button.button-iconic {
+    background-color: #eee!important;background-image:none;
+    border-color: #323232;
+    border-style: solid;
+    border-width: 1px;
+    color: #323232;
+font-size:14px}
+.photoDetailPage-mainSection .content-actions.pull-right  a.button.button-iconic.feature-button { background-color: #057ACF!important;background-image:none }
+.photoDetailPage-mainSection .content-actions.pull-right a.button.button-iconic.feature-button.is-selected{ background-color:#004475!important;background-image:none }
+.photoDetailPage-mainSection .content-actions.pull-right a.button.button-iconic:hover{ background-color:darkblue!important }
+
+.photoDetailPage-mainSection .photoClose{
+background-color: #6A5ACD;
+border-radius: 2px;
+color: #FFF;
+border:solid 2px #FFF;
+padding: 4px 8px;
+font-size:16px;
+float:right;
+}
+.photoDetailPage-mainSection .photoClose:hover{ text-decoration:none; background-color:blue;color:white }
+
+}
+
+/************* Media query End ****************/
+@media only screen and ( max-width:959px ){
+.photoDetailPage-mainSection .content-actions{display:none}
+/*.photoDetailPage-mainSection > a:nth-child(1){ display:none}*/
+.photoDetailPage-mainSection .photoClose{ display:none }
+}
+
+@media only screen and ( min-width:959px ){
+
+/* PAGINATION */
+.photoDetailPage .pagination{ background-color:#4A5965;margin-top:5px;padding:2px;margin-right:2px;border-radius:6px;}
+.photoDetailPage .pagination-number {padding:  5px;font-size: 16px;}
+.photoDetailPage a.pagination-number{ color:linen }
+.photoDetailPage .pagination-current { color: #FFF; background-color: #2F3D60; }
+.photoDetailPage a.pagination-number:hover{ background-color: #2F3D60;color:white; text-decoration:none }
+/* Input Page Number Box Style*/
+.photoDetailPage .pagination{ color: antiquewhite }
+.photoDetailPage .pagination input { text-align:center;}
+.photoDetailPage a.pagination-next{ color:antiquewhite }
+.photoDetailPage a.pagination-previous{ color:antiquewhite }
+.photoDetailPage a.pagination-last{ color:antiquewhite}
+.photoDetailPage a.pagination-first{ color:antiquewhite }
+.photoDetailPage a.pagination-next:hover{ color:gold }
+.photoDetailPage a.pagination-previous:hover{ color:gold }
+.photoDetailPage a.pagination-last:hover{ color:gold}
+.photoDetailPage a.pagination-first:hover{ color:gold }
+}
+/*NEW MENU ABOVE PHOTO AND CLOSE BUTTON*/
+.photoDetailPage-mainSection header.content-header.cf {float:left }
+.photoDetailPage-mainSection header.content-header.cf .content-name{ display:none!important }
+.photoDetailPage-mainSection header.content-header.cf  .cl{ clear:none!important }
+
+@media only screen and ( max-width:481px ){
+.photoDetailPage .image-aspect-4-3{ padding-bottom:100% }}
+
+/* NAV BAR FOR CATEGORIES ETC */
+
+/
+/* This line sets the margin of each tab from one another, for greater spacing to the right adjust the 3px, the margin bottom lifts the tabs up a bit and this can also be changed to your liking */
+.subnav li { margin-right:3px; margin-bottom:5px }
+
+/* These lines sets the background colour for the tabs and adds some padding around the text with a little border radius. Also a little box shadow to lift them of the page a bit*/
+.subnav li a {color:#000;
+background-color: #ecf0f1;
+padding:10px;
+border-radius:2px;
+}
+
+
+/* These lines sets the hover colour when moving over the tabs and also sets the same colour for the current active tab, the text decoration removes any underline of the text */
+.subnav li a:hover, .subnav li.subnav-current > a {
+    background-color: #212121;  
+color:#ffffff;
+    text-decoration: bold;
+}
+/* Groups Page Categories Menu */
+.groupHeader-nav .subnavline > li { margin-right:3px; margin-bottom:5px }
+ul.subnav.expanded>li a,.groupHeader-nav .subnavline > li a{ background-color: #323232; padding:10px; border-radius:2px; border:none; font-family: 'Alegreya Sans SC', sans-serif;
+ font-weight:700; 
+color: #BEA67C;
+  font-size:1.1em; }
+li..subnav.expanded,.groupHeader-nav .subnavline > li:hover > a, .subnavline > li.current > a { background-color: #323232; color: #fff; text-decoration: none; }
+
+/** End Groups Pages Categories Nave Menu **/
+/* NAV BAR FOR CATEGORIES ETC */
+.subnav li { margin-right:3px; margin-bottom:5px }
+.subnav li a { background-color: #323232;
+    background-image: linear-gradient(#212121, rgba(0, 0, 0,1.0));
+    color: #BEA67C!important; padding:10px; border-radius:2px;  }
+
+.subnav li a:hover, .subnav li.subnav-current > a {
+    background-color: #FFFFFF;
+font-weight:900;
+    background-image: linear-gradient(#BEA67C, rgba(255,204,153,1.0));
+    color: #212121!important;
+    text-decoration: none;
+}
+
+/* Groups Page Categories Menu */
+.groupHeader-nav .subnavline > li { margin-right:3px; margin-bottom:5px }
+.groupHeader-nav .subnavline > li a{ background-color: #34495e;
+    background-image: linear-gradient(#ecf0f1, rgba(189, 195, 199,1.0));
+    color: #34495e; padding:10px; border-radius:2px; border:none }
+
+.groupHeader-nav .subnavline > li:hover > a, .subnavline > li.current > a { background-color: #323232;
+    background-image: linear-gradient(#2c3e50, rgba(44, 62, 80,1.0));
+    color: #FFF;
+    text-decoration: none;
+}
+/* CHANGE LAYOUT ON PLAY */
+@media only screen and ( min-width:959px ){
+.videoPlay.feedListPage .feedListPagePlayer{ height:100%;}
+.videoPlay.feedListPage{ position:absolute;top:0px;right:0px;width:100%;z-index:10;background:rgba(0,0,0,0.7);height:100%}
+.videoPlay.feedListPage .content-body{ width:30%;float:right}
+.videoPlay.feedListPage .span16 .matrix-itemFluid{width:50%}
+.videoPlay.feedListPage .feedListPage-item.matrix-itemFluid{ max-width:100%}
+.videoPlay.feedListPage .content-header{ display:none }
+.videoPlay.feedListPage .feedListPagePlayer{ left:0px;width:70%}
+.videoPlay.feedListPage .feedListPagePlayer-source{ margin-top:0px;padding-top:5px }
+.videoPlay.feedListPage .content-body .sheet{
+ background-color: #EFEFEF; border-color:rgba(200, 32, 32, 0.28);
+border-style: solid;
+border-width: 6px 6px 10px 6px;
+border-radius: 0px;
+padding: 10px;height:100%}
+}
+
+
+@media only screen and (  max-width:480px){
+.videoPlay.feedListPage .sourceContainer.cl iframe{width:380px;height:213px;display:flex;margin:auto}}
+
+@media only screen and ( min-width:481px ) and (max-width:680px ){
+.videoPlay.feedListPage .sourceContainer.cl iframe{width:440px;height:250px; display:flex; margin:auto}}
+
+@media only screen and ( min-width:680px ) and ( max-width:959px){
+.videoPlay.feedListPage .sourceContainer.cl iframe{width:640px;height:360px; display:flex;margin:auto }}
+
+@media only screen and ( min-width:959px ) and ( max-width:1440px ) {
+.videoPlay.feedListPage .sourceContainer.cl iframe{width:843px;height:480px; display:flex;margin:auto}}
+
+@media only screen and (min-width:1440px ) {
+.videoPlay.feedListPage .sourceContainer.cl iframe{width:1130px;height:640px; display:flex;margin:auto}}
+
+
+
+/**** ACTIVITY FEED CODE ***/
+
+ .activityFeed-title a:first-of-type:before{ content:"Posted By";display:inline-block;margin-right:5px }
+ .activityFeed-embed[data-type="video"]{ max-width:100vw; max-height:100vh;} 
+
+/* This adds a little  > after the person name */
+.activityFeed-comment .media-body a:first-of-type:after{ content:">"; display:inline-block; margin-left:3px;margin-right:4px }
+.activityFeed-comment {font-size:0.85em }
+
+/* Reveal The Word Comment before the count number */
+.activityFeed .icon-comment{display:inline;vertical-align:bottom}
+a.activityFeed-commentCount, a.activityFeed-commentFormDisplay {font-size: 0.9em; line-height: 1em; float:right; }
+.icon-comment.icon:before{ float:right!important;margin-left:5px;margin-top:-5px }
+
+/*Reveal The Like Word */
+.activityFeed-counts .icon{ display:inline;vertical-align:0 }
+.button-tiny.likeButton a{ padding:3px 6px;font-size:0.75em }
+.button-tiny.likeButton a:hover, .button-tiny.likeButton a.is-selected {background-color:royalblue;border: 1px solid #a2bf1f;text-decoration: none; color:white}
+/* Only use this line if using the Like option rather than Favorite or Promoted */
+a.is-selected .icon-love:after{content:"s";display:inline;}
+
+/*Site Wide*/
+.button-tiny.likeButton a .icon {
+    display: inline;
+    width: auto;
+    overflow: hidden;
+    vertical-align: middle;}
+.likeButton-count{ vertical-align:middle;}
+
+/* Add the word 'Add' before comment on a activity feed post*/
+a.activityFeed-commentFormDisplay:before{content:"Add";display:inline-block;margin-right:2px;}
+
+.activityFeed-comments.js-activityFeedCommentsList .feedEvent-createStatusComment{display:none}
+.activityFeed-comments.js-activityFeedCommentsList .feedEvent-createStatusComment:first-child::before{content:"Latest Comment";display:block;margin-bottom:5px; }
+.activityFeed-comments.js-activityFeedCommentsList .feedEvent-createStatusComment:first-child{display:block }
+.status-commentForm.js-statusCommentForm:before{content:"Add Comment";display:block;font-size:14px;margin-bottom:5px}
+.addCommentContainer:before{content:"Add Comment";display:block;font-size:14px;margin-bottom:5px}
+
+/* For The Photos */
+.activityFeed-comments.js-activityFeedCommentsList .feedEvent-createPhotoComment{display:none}
+.activityFeed-comments.js-activityFeedCommentsList .feedEvent-createPhotoComment:first-child{display:block }
+.activityFeed-comments.js-activityFeedCommentsList .feedEvent-createPhotoComment:first-child::before{content:"Latest Comment";display:block;margin-bottom:5px; }
+.activityFeed-comments.js-activityFeedCommentsList .media-body{border-top: solid 1px lightgrey;}
+
+
+
+/********* PHOTOS****/
+/* Adjust the viewer to adjust to photo size eliminating white space and showing photo size 100% **/
+
+.photoDetailPage-image > img {
+    position: relative; display: flex; max-height: 100vh; height:auto; margin: 0px auto ;}
+.photoDetailPage-image { position: relative;}
+.photoDetailPage .image-aspect-4-3 {
+    width: 100%;
+    height: auto;
+max-height:100vh;
+padding-bottom:0px; }
+
+/** BLOGS CODE **/
+/* Filter Blogs Box Under Module Header In Blogs */
+.filterBlogsBox{ 
+    border-width:2px;
+    border-style: none none solid;
+    border-color: lightgrey;
+    padding: 4px 10px;
+    border-radius: 0px;}
+/* Adjust the size for the font for the additional text under the name to show the filter state */
+.blogListPage .sortstate{ font-size:0.6em }
+/*.blogListPage .module-name{font-size:24px }*/
+/*.page-blog .blogListPage .module-header{ margin: -20px -20px 0px -20px; }*/
+
+.feed-story a.activity-close{color:white }
+.feed-story .activity-close:hover{background-color:royalblue }
+.feed-story .activity-close{ padding:4px;border:solid 1px lightgrey;background-color:#00a6eb}
+
+
+
+/** SITE HEADER AUTO ADJUSTMENT IN HEIGHT **/
+.site-header{ height:auto}
+/********** FEED LIST PLAYER **********/
+
+@media only screen and (min-width:771px){
+a.feedListPagePlayer-close,a.feedListPagePlayer-close:hover{font-size:25px;margin-bottom:10px }}
+
+.feedListPagePlayer { background-color: rgba(0, 0, 0, 0.82); height:100%}
+.feedListPagePlayer .sourceContainer{ border: 1px solid rgb(54, 54, 54);background-color:rgba(0, 0, 0, 0.4);}
+
+/*Sizing The Playing Video*/
+@media only screen and ( min-width:481px){
+.feedListPagePlayer-source {height:100vh; width:95vw;margin:auto;padding-bottom:1em}
+.feedListPagePlayer-source iframe {
+    max-width: 85vw;
+    height: 80vh;
+        width: 100%;}
+.feedListPagePlayer-source .nav {font-size:3em}
+}
+
+/* Adjust social page nav to go above the video inline with the close button*/
+@media only screen and (max-width:771px){
+.feedListPagePlayer-source >.cf{ float:right!important; }
+.feedListPagePlayer-source .nav{ width:auto!important;top:0%;margin-top:0px;font-size:2em;padding:0px}
+.feedListPagePlayer-source .navNext{margin-right:0.7em!important}}
+
+/* Replaces the max width of 400px for the list page */
+@media only screen and (min-width:959px){
+.feedListPage-item.matrix-itemFluid { max-width: 100%;}}
+
+@media only screen and ( max-width:769px){
+.feedListPage-item.matrix-itemFluid {width:50%;}}
+
+.feedListPage-itemTitle {overflow:hidden;padding:.2em 0.5em;line-height:1.28;height:4.2em;max-height:4.2em;font-size:1.1em;}
+
+/** Highlight Videos Colours **/
+.feedListPage-item:hover .matrix-item.matrix-sheet{ box-shadow:0px 10px 8px rgba(0,0,0,0.3);border-radius:0px 0px 4px 4px}
+.feedListPage-item:hover .feedListPage-itemTitle{ color:whitesmoke;background: rgba(169, 0, 0, 0.74);border-radius:0px 0px 4px 4px; }
+
+/* Pagination on pages, shows the words next previous*/
+#feedListPagination.pagination .icon{ display:inline!important; }
+#feedListPagination.pagination .icon-next::before{ display:none }
+#feedListPagination.pagination .icon-next::after {
+    content: "";
+}
+
+#feedListPagination.pagination .icon-next::after {
+    font-family: "ning-icon-fonts";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    display: inline-block;
+    margin-left: 0.5em;
+}
+
+#feedListPagination a.pagination-previous{ margin-right:10px}
+#feedListPagination a.pagination-next{ margin-left:10px }
+#feedListPagination a.pagination-previous:hover{text-decoration:none}
+#feedListPagination a.pagination-next:hover{text-decoration:none}
+#feedListPagination .pagination .is-disabled{ display:none }
+#feedListPagination{ margin-top:15px }
+
+/*** VIDEO LIST UNDER THE VIDEO PLAYER ***/
+
+/** SHOW VIDEOS LIST ON PLAYER **/
+@media only screen and ( max-width:481px){
+.videolistControl {
+position:relative!important;
+}}
+
+.videolistControl:before { content:"More Videos";display:block;color:white;font-size:14px }
+.videolistControl {
+position:absolute;
+height: 45px;width:65px;
+background-color:rgba(40, 32, 66, 0.84);
+padding: 4px;
+cursor:pointer;
+border-radius: 0px 0px 4px 0px;
+}
+.videolistControl:hover, .videolistControl:focus{
+background-color:rgb(69, 27, 16);
+}
+.videolistControl.close:before { content:"Close Videos";display:block;color:white;font-size:14px }
+.videolist .feedListPage-item.matrix-itemFluid {
+max-width: 200px;
+}
+.videolist .matrix-item.matrix-sheet{
+border: solid 1px #565252;
+background-color: #4e4040;
+padding: 4px;
+border-radius:0px 0px 4px 4px;
+}
+.feedListPagePlayer-source .videolist .feedListPage-itemTitle{
+overflow:hidden;
+padding:0.1em 0.2em;
+line-height:1.1em;
+height:3.58em;
+max-height:3.58em;
+font-size:12px;
+color:whitesmoke;
+}
+.videolist .matrix-item.matrix-sheet:hover{
+background-color: darkgrey;
+}
+.videolist .matrix-item.matrix-sheet:hover .feedListPage-itemTitle{
+background-color: rgba(169, 0, 0, 0.74);
+}
+.videolist{
+position: absolute;
+margin-top:50px;
+width: 94.9vw;
+background: rgba(0, 0, 0, 0.91) none repeat scroll 0% 0%;
+overflow-x: auto;
+overflow-y: hidden;
+border-bottom: solid 1px #666;
+}
+.videolist .module-body {
+padding: 0px 5px 10px 5px;
+width: 2400px;
+}
+.videolist #feedListPagination{
+display:none;
+ }
+.tabContainerSection-pane .videolistControl{ display:none }
+.section-channel .videolistControl{ display:none }
+
+@media only screen and ( min-width:771px ){
+.sourceContainer:hover .videolistControl::after { position: absolute; top: -50px; left: -50px;display:block}}
+.videolistControl::after {
+    display:none;
+    content: "View More Videos By Clicking More Videos Box";
+    margin-left: 52px;
+    color: #d7d7d7;
+    background: rgba(0,0,0,0.95);
+    float: left;
+    width: 300px;
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 0.8em;
+    border: solid 1px lightgrey; }
+.videolistControl.close::after{display:none!important}
+.buttonisAdmin {background: #a12712;}
+
+/* Open Photo Page*/
+a.OpenStatusAddPhoto{ float:left;cursor:default }
+a.OpenStatusAddPhoto:hover{ cursor:pointer }
+/* Position of box in the member photo tabContainer section*/
+.page-members .tabContainerSection-pane.section-member-photoEntries a.OpenStatusAddPhoto{ float:none;display:inline-block; margin:10px 0px }
+
+
+/** Events Monthly Headers **/
+.monthHeader-Container{ width:100%;float:left;clear:both }
+.monthHeader{ margin-bottom:15px; /* border-bottom:dashed 1px lightgray;*/ width:100%;float:left;clear:both}
+.monthHeader-name{  font-weight:bold;display:block;padding:10px 28px; color:white;background-color:royalblue;float:left; border-radius:6px 6px 0px 0px }
+
+.eventListPage .entry .monthHeader{
+background-image: url("http://api.ning.com/files/RnVdzGQ*fcK6zE5PqlOHudT3Dg-7en3BLgLocfWh9voRiOSNXziDoweRdZvKhnZcfX1qvTnHqZ-Qn242R1YAGhS0HI5xc1Ge/sports-mesh-10-blk.png");
+/*background-attachment: fixed;*/
+background-position: center center;
+background-size: initial;
+background-repeat: repeat;
+}
+
+/***** EVENTS DEMO 2 PAGE *****/
+/** New Entry Title Adjustment After Moving It Above the Event Content **/
+.page-events .eventListPage .eventPage-details > .entry-title{
+ margin-bottom:14px;
+box-shadow: 0px 5px 5px lightgray;
+padding: 4px;
+ }
+.page-events .eventListPage .eventPage-details{ padding:5px }
+
+/* Change the spans of the main content and the date day column to 100% width */
+.page-events .eventListPage .span3, .page-events .eventListPage .span13{ width:100% ; }
+.page-events .eventListPage .span3{ text-align:center; padding:2px 0px 2px; border-bottom: dashed 1px lightgray;margin-bottom:5px }
+
+/*Move the start date to the left and make it an inline block */
+.page-events .eventListPage .eventListPage-startDate {
+    text-align:center;display:inline-block;
+}
+/* Do the same for the day of the week */
+.page-events .eventListPage .eventListPage-startDayOfWeek {
+    text-align: left;display:inline-block;
+}
+
+/*Remove entry content image*/
+    .page-events .eventListPage .eventPage-detail.entry-content.cf a > img{ display:none!important }
+    .page-events .column-narrow .eventPage-detail.entry-content.cf a > img{ display:none!important }
+/*Remove entry content iframes*/
+     .page-events .eventListPage .eventPage-detail.entry-content.cf iframe{ display:none!important }
+      .page-events .column-narrow .eventPage-detail.entry-content.cf iframe{ display:none!important }
+
+/* Margin between each post */
+/** Margin between each of the posts **/
+.page-events .eventListPage .entry{ margin-bottom:30px }
+
+.page-events .eventListPage .entry, .page-events .section-eventBundle .entry {   
+    box-shadow: 0px 5px 5px lightgray;
+    padding: 6px;    
+    border-top: solid 1px #eaeaea;
+}
+.page-events .section-eventBundle .entry {  margin-bottom: 15px; }
+
+.page-events .eventListPage .entry:hover, .page-events .section-eventBundle .entry:hover{ box-shadow: 0px 8px 7px darkgray; }
+
+.page-events .eventListPage.myEventListHeader .module-body:before{content:"All Upcoming Events";display:block;
+    background-color: #00a6eb;
+    border-radius: 4px 4px 0 0;
+    padding: 13px 10px 10px 10px;
+    margin: -10px -10px 10px -10px;
+    font-size: 20px; color:white;font-weight:bold;
+}
+/*Links In The Header Module ByLine For Inviting Members when creating and event */
+.module-byline > a{ color:white; font-size:16px }
+ .module-byline > a:hover{ color:antiquewhite; text-decoration:none }
+/*Optional Make a button*/
+.module-byline{ margin-top:10px }
+.module-byline > a{ background-color:royalblue; padding:3px 6px; border-radius:4px }
+.module-byline > a:hover{ background-color:darkblue }
+
+/* Space out the Events Details li list */
+.page-events li.eventPage-detail{ margin:10px }
+.page-events .eventPage-detail{ margin-bottom:0px }
+.page-events li.eventPage-detail.entry-content{ margin:15px 0px; border-top:solid 1px lightgray; border-bottom:solid 1px lightgray;padding:4px }
+.page-events li.eventPage-detail.entry-content p{ font-size:0.93em }
+
+/* Options drop down for going or not */
+/*.eventPage-details .optionsDropdown{ text-align:center }*/
+.page-events .span6.narrow16.tablet16.mobile16{ text-align:center; border:solid 1px lightgray;padding:6px }
+.page-events .eventPage-rsvp { margin-bottom:20px }
+.page-events .eventPage-details .optionsDropdown:before{content:"Attend Event options";display:block;padding:8px 0px}
+.page-events .span6.narrow16.tablet16.mobile16 a[href^="http://www.google.com/calendar/event?action"]{ margin-bottom:10px }
+.page-events .span6.narrow16.tablet16.mobile16 a[href^="http://www.google.com/calendar/event?action"]:before{content:"Click Here To Add Event To Google Calendar";display:block;padding:4px 0px; font-size:0.85em}
+
+/* Events Detail Page */
+.page-events .eventDetailPage .entry-content:before{content:"Event Details"; display:block; padding:8px 0px ; font-size:1.1em; font-weight:bold; color:darkblue;border-bottom:solid 1px lightgray;margin-bottom:10px;}
+.page-events .eventDetailPage-attendees{ display:none }
+.page-events .eventDetailPage .trispan{ margin-top:6px }
+.page-events .triplet.eventDetailPage-triplet{ border: solid 1px #efefef;padding:4px;max-width:100% }
+/* Page Header*/
+.page-events .EventDetail-header{  
+  display: block;
+    background-color: #00a6eb;
+    border-radius: 4px 4px 0 0;
+    padding: 13px 10px 10px 10px;
+    margin: -10px -10px 10px -10px;
+    }
+.page-events .EventDetail-header a,.page-events .EventDetail-header a:hover{ color:white; font-size:1.3em; font-weight:bold }
+
+/* EVENTS MOBILE VIEW*/
+ /* Move the image above the content so it gives the text more space to fill the screen either side */
+@media only screen and (max-width:771px){
+.page-events .eventListPage .media-frame.eventPage-details > .media-img {float:none!important}
+.page-events .eventDetailPage .media-frame > .media-body{ overflow:visible }}
+
+/* Add a border around each entry to make give them more seperation */
+.eventListPage .span13 { border:solid 1px lightgray }
+.page-events-demo2 .eventListPage .span3 {border-top: solid 1px lightgray;border-left: solid 1px lightgray;border-right: solid 1px lightgray }
+
+
+/*** EVENT MESSAGES SECTION **/
+
+.page-events-demo .eventPage-details{ padding:4px }
+
+.eMessagesContainer{ width:100%; margin-bottom:6px; display:block;padding:4px 6px; background-color:#c6e7ff }
+.eMessages{ height: auto; overflow: visible;text-align:center; }
+
+/*Default Settings*/
+.eMessages > li{ list-style:none; margin:4px; display:inline-block; padding:8px 6px; border-radius:4px; border:solid 1px #777; box-shadow: 0px 4px 2px darkgray;font-size:0.9em }
+
+/* By Message Type Settings Note: You can define your own colours depending on the message type by changing the colours in the lines below */
+/* The message displayed is shown above each of them */
+/*Event Dates Changed*/
+.eMessages > li.msgDatesChanged{ background-color: #00a6eb; color:white }
+/* Event Has Been Cancelled */
+/** Has Important marked on cancelled events as it needs to stand out no matter what other colours are added to messages **/
+.eMessages > li.msgEventCancelled{ background-color: red!important;color:white!important;padding:6px!important;font-size:1em!important }
+/* Events Location Has Changed */
+.eMessages > li.msgLocationChanged{ background-color: #00a6eb; color:white }
+/* This Event Is Full */
+.eMessages > li.msgEventFull{ background-color: gold; color:darkblue;  }
+/* Limited Spaces Left !  */
+.eMessages > li.msgEventLimitedSpaces{ background-color: #00a6eb; color:white }
+/*  * Special Offer *  */
+.eMessages > li.msgEventSpecialOffer{ background-color:orange; color:white }
+/* Children Free *terms apply* */
+.eMessages > li.msgEventChildrenFree{ background-color:#00a6eb; color:white }
+/* 2 For 1 Tickets *terms apply* */
+.eMessages > li.msgEvent2For1Tickets{ background-color:#00a6eb; color:white }
+/* Entrance Free For Serving Military*/
+.eMessages > li.msgEventServingMilitary{ background-color:darkgreen; color:white }
+
+/* Messages In The Bundles column narrow*/
+.column-narrow .section-eventBundle .eMessages > li {
+    list-style: none;
+    margin: 1px;
+    display: inline-block;
+    background-color: transparent;
+    color: #686666;
+    border-radius: 0px;
+    border: none;
+    box-shadow: none;
+    font-size: 0.8em;
+    padding: 2px 10px;
+}        
+
+.column-narrow .section-eventBundle .entry-content, .column-narrow .section-eventBundle .eventPage-detail{ display:none }
+.column-narrow .section-eventBundle .entry{ border-bottom:solid 1px lightgray }
+
+/* Show Wheelchair image if marked as wheelchair access */
+.eMessagesDisabledImage{
+ background-image:url("http://api.ning.com:80/files/JomcnL50vYADUbC53ynWM1sIJ0kUBl28w1aIkERL2oam33zScIUiW1zz1p26fjg9txTYIUJyP-XSu9gz47k2wJJCuU7eZYLk/wheelcahir.png");
+background-repeat: no-repeat;    
+    height: 40px;
+    background-size:contain;
+   background-position:center right;
+}
+.column-narrow .section-eventBundle .eMessagesDisabledImage{height:30px; background-size:contain }
+.column-narrow .section-eventBundle .eMessagesDisabled:hover::before{ margin-right:33px }
+.eMessagesDisabledImage:hover{ cursor:help }
+.eMessagesDisabled{ text-align:right;width:50px;float:right }
+.eMessagesDisabled:hover{ width:100% }
+.eMessagesDisabled::before{display:none;}
+.eMessagesDisabled:hover::before{content:"This Event Has Wheelchair Access";display:inline-block;background-color:green;padding:4px;color:white;text-align:center;font-size:12px;float:right;margin-right:55px}
+
+/*Entry Title Make Uppercase */
+.eventPage-details .entry-title > a, .section-eventBundle .entry-title > a{text-transform:uppercase }
+.section-eventBundle .entry-title > a{font-size:1em }
+
+/* Remove the RSVP Section If Cancelled */
+.eventCancelled .span6{ display:none }
+/* Add The Cancelled Ribbon */
+.eMessagesCancelledContainer{display:block;position:relative;width:100%;height:auto}
+.cancelled-ribbon{
+    font-size: 1.6em;
+   transform: rotate(-45deg);
+    margin-top: 85px;
+    position:absolute;
+    background-color: red;
+    padding: 6px;
+    color: white;
+    box-shadow: 0px 3px 7px #7b6e6e;
+}
+
+@media only screen and (max-width:771px){
+.column-wide .cancelled-ribbon{
+    font-size: 1.5em;
+}}
+/** Info Added To The Edit Entry Page Of Events **/
+/* The Pop Up Help For Tags In Event Page */          
+.eventEdit-PageTags .span10 .popupHelp {
+    display: inline;
+    position: relative;
+    width: 100%;    
+}
+.eventEdit-PageTags .span10 .popupHelp .icon{ display:inline }
+.eventEdit-PageTags .span10 .popupHelp-content.eMessageInfo{
+    position:relative;
+    top: 0;
+    left: 0;
+    display: block;
+    visibility: hidden;
+    z-index: 1000;
+    width: 100%;
+    padding: 5px 10px;     
+}
+.eventEdit-PageTags .span10 .popupHelp-content.eMessageInfo > p{ padding:13px;font-weight:bold;text-align:center;font-size:1em }
+.eventEdit-PageTags .span10 .popupHelp-content.eMessageInfo > p > li{ font-weight:normal;text-align:left;font-size:0.9em }
+.eventEdit-PageTags .span10 .popupHelp-close {
+    position: relative;
+    right: 0.5em;
+    top: 0;
+    line-height: 1; margin:5px;
+}
+/** Tags Edit Page Overlay **/
+.tagOverlayClear{ position:fixed;height:100%;width:100%;top:0;bottom:0;z-index:198;overflow:hidden;background-color:transparent}
+.eventEdit-PageTags .span10 .popupHelp-content::before {display:none }
+.eventEdit-PageTags .span10 .popupHelp-content::after{display:none }
+
+/*Add infromation about tags and messages*/
+.eventEdit-PageTags .span10 > div:nth-child(5){ margin-bottom:10px;
+}
+.eventEdit-PageTags .span10 > div:nth-child(5):after{content:"Tags And Messages";display:block;padding-top:30px;font-weight:bold;border-bottom:solid 1px lightgray;
+ }
+.eventEdit-PageTags .form-field.entryEditPage-tagContainer::before{content:"Tags: You can add tags to your event by clicking in the tagbox then type a word and press enter. To remove a tag click the X by it. Preset Messages: You can use these to add a message above your event, add them as you would a tag and type them exactly as shown in the list available. You can add more than one if you like. Click on the Question mark to see what each message will say.";display:block;margin-bottom:10px; word-spacing:0.2em; font-size:13px;line-height:1.5em
+ }
+.eventEdit-PageTags .form-field.entryEditPage-tagContainer::after{content:"Preset Messages:  #DatesChanged  #Cancelled  #NewLocation  #EventFull  #LimitedSpaces  #SpecialOffer  #ChildrenFree  #2For1Tickets  #ServingMilitary   #Wheelchair   note: will display a green wheelchair icon in the botton corner of the post";display:block;margin-top:5px;line-height:1.6em;word-spacing:0.5em;
+}
+
+}
+/*Change the size of the tag box*/
+.eventEdit-PageTags .form-field.entryEditPage-tagContainer{width:100%}
+.eventEdit-PageTags .form-field.entryEditPage-tagContainer .tagit{width:100%!important; margin-bottom:20px}
+
+/*** EVENTS CALENDAR OVERVIEW **/
+.page-events-calendar .section-eventBundle{ width:32.33%; display:inline-table }
+.page-events-calendar .section-eventBundle .media-frame > .eventPage-image { max-width:25px;width:25px }
+.page-events-calendar .section-eventBundle .media-frame > .eventPage-image{ float:right;}
+
+.page-events-calendar .section-eventBundle .media-frame > .eventPage-image::before{ content:"Quick View";display:inline-block;font-size:11px;text-align:center }
+
+.page-events-calendar .section-eventBundle .entry{ margin-bottom:5px;border-bottom:solid 1px lightgray }
+.page-events-calendar .section-eventBundle .entry .entry-headline{ margin-bottom:5px }
+
+.page-events-calendar .section-eventBundle .entry-byline.eDates > a:first-of-type{ font-weight:bold; font-size:1.2em;}
+
+                       /*.page-events-calendar .section-eventBundle > .module-body{height:420px;max-height:420px; overflow:auto }*/
+
+.page-events-calendar .content-body{ text-align:center }
+.page-events-calendar .sheet{ text-align:left }
+/* CSS FOR EVENT LIST GOES IN YOUR DESIGN STUDIO CUSTOM CSS */
+
+/***** START EVENT LIST CSS *************************************************************/
+
+  /* NEW CALENDAR GRID This is the grid which will surround each of the months */
+.calendarGrid{ border:solid 1px lightgray; border-radius:6px;padding:4px; margin-bottom:20px}
+.calendarGrid-Title{ width:100%; float:left;clear:both;margin-bottom:20px }
+.calendarGrid-Title{
+background-image: url("http://api.ning.com/files/RnVdzGQ*fcK6zE5PqlOHudT3Dg-7en3BLgLocfWh9voRiOSNXziDoweRdZvKhnZcfX1qvTnHqZ-Qn242R1YAGhS0HI5xc1Ge/sports-mesh-10-blk.png");
+background-position: center center;
+background-size: initial;
+background-repeat: repeat;
+}
+.monthHeader-name{  font-weight:bold;display:block;padding:10px 20px; color:white;background-color:royalblue;float:left; border-radius:6px 6px 0px 0px }
+
+/***** EVENTS STANDARD ****/
+/* Margin between each post */
+/** Margin between each of the posts plus some padding**/
+.eventListPage .entry{ margin-bottom:15px; padding:10px }
+.section-eventBundle .entry {  margin-bottom: 15px; }
+
+/*OPTIONAL Links In The Header Module ByLine For Inviting Members when creating an event */
+.module-byline > a{ color:white; font-size:16px }
+ .module-byline > a:hover{ color:antiquewhite; text-decoration:none }
+
+/*OPTIONAL Make a button for the inivite members links*/
+.module-byline{ margin-top:10px }
+.module-byline > a{ background-color:royalblue; padding:3px 6px; border-radius:4px }
+.module-byline > a:hover{ background-color:darkblue }
+
+/* Add a border around each entry to make give them more seperation */
+.eventListPage .span13 { border:solid 1px lightgray }
+/*********** END EVENT LIST CSS **********************************************************/
+
+@media only screen and ( min-width:771px ){
+.eventDetail .content-actions .optionsDropdown-button{ display:none }
+.eventDetail .content-actions #eventPage-optionsDropdown{ display:block!important }
+.eventDetail .content-actions .optionsDropdown-list{ width:auto; position:relative; border:none }
+.eventDetail .content-actions .optionsDropdown-list > li { padding: 4px; display: inline-block; float: left; }
+.eventDetail .content-actions .linkbar{ width:100%; clear:both }
+.eventDetail .content-actions .linkbar > li{ float:right;  }
+.eventDetail .content-actions .optionsDropdown a{ margin-right:5px }
+.eventDetail .content-actions .optionsDropdown{ float:right }
+}
+.eventDetail .content-actions .optionsDropdown a{ padding: 6px 8px;border-radius:4px }
+.eventDetail .content-actions .optionsDropdown a:hover{ background-color:royalblue; color:white }
+.eventDetail .optionsDropdown-featureButton.feature-button.is-selected{ background-color:darkblue;color:white; border-radius:4px }
+
+@media only screen and ( max-width:771px ){
+.eventDetail .content-actions .optionsDropdown-list{
+background-color:#c9d3f2;
+border-radius:4px;
+box-shadow: 0px 8px 7px darkgray; 
+}
+.eventDetail .content-actions .optionsDropdown a{
+color: #5c5151
+}
+.eventDetail .content-actions .optionsDropdown-button {
+background-color: #d1e0f8;
+}
+.eventDetail .content-actions .optionsDropdown{
+margin-right:10px;
+}
+}
+
+div.span6.narrow16.tablet16.mobile16 {background: #a12712; color: #fff;}
+
+a {
+  color: #DD4D42!important;
+  font-weight: bold;
+  text-decoration:none;
+}
+a,.roll-link, .slide-link {
+    display: inline-block;
+    perspective: 600px;
+    perspective-origin: 50% 50%;
+    overflow:hidden;
+}
+.slide-link {
+    perspective: 800px;
+    perspective-origin: 0% 0%;
+}
+a span,.roll-link span, .slide-link span{
+    display: block;
+    padding: 0 2px;
+    position: relative;
+    transform-origin: 50% 0;
+    transform-style: preserve-3d;
+    transition: all 400ms ease 0s;
+}
+
+
+a span:after,.roll-link span:after {
+    background: none repeat scroll 0 0 #DD4D42;
+    color: #FFFFFF;
+    content: attr(data-title);
+    display: block;
+    left: 0;
+    padding: 0 2px;
+    position: absolute;
+    top: 0;
+    transform: translate3d(0px, 105%, 0px) rotateX(-90deg);
+    transform-origin: 50% 0%;
+}
+a:hover span,.roll-link:hover span {
+    background: none repeat scroll 0 0 #DD4D42;
+color:#fff;
+    transform: translate3d(0px, 0px, -30px) rotateX(90deg);
+}
