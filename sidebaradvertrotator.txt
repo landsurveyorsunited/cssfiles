@@ -1,0 +1,33 @@
+<div class="SP_Sidebar_Ad_Rotate">
+<ul>
+<li><a target="_blank" href="http://www.targetURL.com"><img src="http://api.ning.com:80/files/aq07GQXjwH3qyhE5ODqtDIT1XLFHHgs-wYL92GrdymTjWD1yzDrV8R3CVLCb0bmD3k*cFYsifPfTF1XxuOE8sm**53VHxk23/ad1.jpg" /></a></li>
+<li><a target="_blank" href="http://www.targetURL.com"><img src="http://api.ning.com:80/files/aq07GQXjwH0CjnYUF0iheuF2nEgZK8NJDZeH2qrL4D3pcC7dUT6xJKFN8SUmronc9Xzchr3MeDwbFEdl9VksOEMYPngCij71/ad2.jpg" /></a></li>
+<li><a target="_blank" href="http://www.targetURL.com"><img src="http://api.ning.com:80/files/aq07GQXjwH3ayo4KbAWgB6A9yv56iQqxv0SYwM5v0iPEypXYrj5uZ4YRIN0wDnd5NfuLZguxclOx-wdNewOaTiOj5qSKypd7/ad3.jpg" /></a></li>
+</ul>
+</div>
+
+
+
+<!-- SP ADVERTS RANDOM -->
+<script>
+xg.addOnRequire(function () {
+x$(document).ready(function() {
+x$(".SP_Sidebar_Ad_Rotate").html(x$(".SP_Sidebar_Ad_Rotate li").sort(function(){
+    return Math.random()-0.5;
+}));
+x$('.SP_Sidebar_Ad_Rotate').css('display','block');
+});
+});
+</script>
+
+
+/*Side bar Ads*/
+.SP_Sidebar_Ad_Rotate {
+text-align: center;
+display: none;
+}
+
+.SP_Sidebar_Ad_Rotate > li {
+list-style: none!important;
+margin-bottom: 5px;
+}
