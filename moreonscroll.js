@@ -28,7 +28,7 @@ var jQH_MOS_MaxPage;
 var jQH_MOS_PageSize;
 var jQH_MOS_OverrideBaseURL = '';
 var jQH_MOS_MoreLoading = 0;
-var jQH_MOS_LoadingCode = '<div class="jQH_MOS_LoadingCode" style="padding:1em; border: solid 1px #dddddd; background-color: white;"><img class="align-center" src="http://api.ning.com:80/files/*hEUPDiLn3tyq2ATpoDZlpa9BLLTWY80f2NtE*XPwWQSed3H8YnT72ef4nolrvzgCPGkun-6e4SbicQ5N6wCnzw2JoPbPWyQ/survey.gif" alt= "" /></div>';
+var jQH_MOS_LoadingCode = '<div class="jQH_MOS_LoadingCode" style="padding:1em; border: solid 1px #dddddd; background-color: white;"><img class="align-center" src="survey-load.gif" alt= "" /></div>';
 var jQH_MOS_BlogTitlesOnly = 0;
 
 var jQH_MOS_ScrollSwitchValue = 1;  // Default to ON.  Set by cookie and Settings for Content Scrolliong.
