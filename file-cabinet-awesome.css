@@ -1,3 +1,45 @@
+/* Colour the header in red at the top and bottom */
+ 
+.google-visualization-table-tr-head .gradient, .google-visualization-table-tr-head-nonstrict .gradient, .google-visualization-table-div-page .gradient {
+    background: linear-gradient(to bottom, rgba(255, 78, 77, 0.95) 2%, rgba(255, 78, 77, 0.01) 7%, rgba(255, 78, 77, 0.04) 95%, rgba(255, 78, 77, 0.88) 6%) repeat scroll 0 0 rgba(42, 93, 41, 0) !important;
+}
+ 
+ 
+/* Progress Bars */
+ 
+            .PercentageBar_red {position: relative; font-size: small; width: 100px; height: 14px; margin: 1px;}
+            .PercentageBar_red DIV {height: 9px; line-height: 6px;}
+            .PercentageBar_red .percent {position: relative; background-color: #ee7980; left: 0px top: 0px; z-index: 0;border: 1px solid;}
+            .PercentageBar_red .caption {position: relative; text-align: center; color: #000; z-index: 1;}
+             
+             
+            .PercentageBar_green {position: relative; font-size: small; width: 100px; height: 14px; margin: 1px;}
+            .PercentageBar_green DIV {height: 9px; line-height: 6px;}
+            .PercentageBar_green .percent {position: relative; background-color: #55e84c; left: 0px top: 0px; z-index: 0;border: 1px solid;}
+            .PercentageBar_green .caption {position: relative; text-align: center; color: #000; z-index: 1;}
+ 
+ 
+            .PercentageBar_amber {position: relative; font-size: small; width: 100px; height: 14px; margin: 1px;}
+            .PercentageBar_amber DIV {height: 9px; line-height: 6px;}
+            .PercentageBar_amber .percent {position: relative; background-color: #fcc564; left: 0px top: 0px; z-index: 0;border: 1px solid;}
+            .PercentageBar_amber .caption {position: relative; text-align: center; color: #000; z-index: 1;}
+             
+                        .PercentageBar_black {position: relative; font-size: small; width: 100px; height: 14px; margin: 1px;}
+            .PercentageBar_black DIV {height: 9px; line-height: 6px;}
+            .PercentageBar_black .percent {position: relative; background-color: #000000; left: 0px top: 0px; z-index: 0;border: 1px solid;}
+            .PercentageBar_black .caption {position: relative; text-align: center; color: #000; z-index: 1;}
+             
+                        .PercentageBar_blue {position: relative; font-size: small; width: 100px; height: 14px; margin: 1px;}
+            .PercentageBar_blue DIV {height: 9px; line-height: 6px;}
+            .PercentageBar_blue .percent {position: relative; background-color: #91C0EF; left: 0px top: 0px; z-index: 0;border: 1px solid;}
+            .PercentageBar_blue .caption {position: relative; text-align: center; color: #000; z-index: 1;}
+             
+    .number {
+    font-size: small;
+    position: absolute;
+    text-align: right;
+}
+
 .typeimg {
 width:80px;
 height: 80px;
