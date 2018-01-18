@@ -1,0 +1,119 @@
+html {
+    font-size: 100%;
+    overflow-y: scroll;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body:before{content:",";
+    background-image: url('daysky.jpg');
+    background-attachment: fixed;
+    background-position: left top;
+    background-size: cover;
+    background-repeat: no-repeat;}
+h3.module-name {background-image:rgba (0,51,0,0.5);background-color: #ecf0f1}
+ul.tabContainerSection-tabs.subnavline,section.module-body,div.photoDetailPage-mainSection.sheet.grid-frame,a.date-count-down.button.isAdmin,a.button.button-iconic,article.media-frame.entry.discussionListPage-entry,nav.header-nav.navbar a:active,li.mainTab-item a,div.gsc-control-cse.gsc-control-cse-en,div.status-container.media-frame,section.module-body.activityFeed,a.entry-readMore,section.entry-content.cf,header.entry-headline.media-frame,footer.entry-footnote,div.entry-socialActions.cf,article.media-frame.entry.discussionSection-entry,div.banner-frame,header.activityFeed-headline,.module-header, div#tabzilla-contents {
+  background:url(sky.jpg) repeat;position: relative;
+color: #212121;
+}
+
+a.entry-readMore, a {color:#ecf0f1!important;}
+.sheet {  background:url(nikon-grey.png);color:#ffffff;
+}
+div.banner-header.groupHeader.groupHeader-coverPhoto,header.content-header.cf {background:url(sky.jpg) #fff!important;color:#212121;
+}
+/* Groups Page Categories Menu */
+.groupHeader-nav .subnavline > li { margin-right:3px; margin-bottom:5px }
+ul.subnav.expanded>li a,.groupHeader-nav .subnavline > li a{ background-color: #323232; padding:10px; border-radius:2px; border:none }
+li..subnav.expanded,.groupHeader-nav .subnavline > li:hover > a, .subnavline > li.current > a { background-color: #323232; color: #fff; text-decoration: none; }
+
+/** End Groups Pages Categories Nave Menu **/
+/* NAV BAR FOR CATEGORIES ETC */
+.subnav li { margin-right:3px; margin-bottom:5px }
+.subnav li a { background-color: #ffffff;
+    background-image: linear-gradient(#ecf0f1, rgba(189, 195, 199,1.0));
+    color: #FFFFFF; padding:10px; border-radius:2px; }
+
+.subnav li a:hover, .subnav li.subnav-current > a {
+    background-color: #BEA67C;
+    background-image: linear-gradient(#df1b33, rgba(192, 57, 43,1.0));
+    color: #FFF;
+    text-decoration: none;
+}
+ 
+/* Groups Page Categories Menu */
+.groupHeader-nav .subnavline > li { margin-right:3px; margin-bottom:5px }
+.groupHeader-nav .subnavline > li a{ background-color: #34495e;
+    background-image: linear-gradient(#ecf0f1, rgba(189, 195, 199,1.0));
+    color: #34495e; padding:10px; border-radius:2px; border:none }
+
+li.subnav-current,.groupHeader-nav .subnavline > li:hover > a, .subnavline > li.current > a { background-color: #df1b33;
+    background-image: linear-gradient(#df1b33, rgba(192, 57, 43,1.0))!important;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.page-forum-topics .push4 {
+    left: 0;
+}
+
+.page-forum-topics .span4 {
+    left: 0;
+}
+
+.page-forum-topics .span4.pull8.tablet8.mobile16.column.column-narrow {
+    border: 1px solid #e3e3e3;
+}
+
+.page-forum-topics .span8 .section-primaryContent {
+    background: none repeat scroll 0 0 #f9f9f9;
+    padding: 10px;
+    border: 1px solid #e3e3e3;
+}
+.page-forum-topics .span8 .discussionDetailPage {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #e3e3e3;
+}
+
+.page-forum-topics .span8 .discussionListPage-entry {
+    background-color: #fff;
+    border: 1px solid #e3e3e3;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.discussionListPage-entry {
+    border-bottom: 1px solid #e3e3e3;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.discussionListPage-entry .entry-title > a {
+    color: #3b3b3b;
+}
+
+.discussionListPage-entry .entry-title > a:hover {
+    color: #789524;
+}
+a.button.button-block.button-rounded.button-primary.button-caution {color:#212121!important;}
+
+
+.discussionListPage-entry .entry-byline {
+    float: left;
+    font-size: 0.9em;
+    line-height: 26px;
+    margin-right:10px;
+}
+
+.discussionListPage-entry .entry-byline a{
+    color: #789524;
+}
+
+.discussionListPage-entry .entry-commentsCount {
+    float: left;
+    font-size: 0.9em;
+}
+
+.discussionListPage-entry .entry-commentsCount a{
+    color: #789524;
+}

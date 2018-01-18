@@ -1,0 +1,105 @@
+body:before{content:",";
+    background-image: url('http://api.ning.com:80/files/ln14u6pAMADYAl0sXHWpNyDFZnoxJT9isV1qPXPo0*EbSmAGDz5M0BukouWx9hiSp94RQLWkjzyglG1SWRT108Nie*8BTCEi/woods.jpg');
+    background-attachment: fixed;
+    background-position: left top;
+    background-size: cover;
+    background-repeat: no-repeat;}
+section.activityFeed-content.media-frame,h3.module-name {background-color:rgba(0,51,0,0.8);}
+ul.tabContainerSection-tabs.subnavline,section.module-body,div.photoDetailPage-mainSection.sheet.grid-frame,a.date-count-down.button.isAdmin,a.button.button-iconic,article.media-frame.entry.discussionListPage-entry,nav.header-nav.navbar a:active,li.mainTab-item a,div.gsc-control-cse.gsc-control-cse-en,div.status-container.media-frame,section.module-body.activityFeed,a.entry-readMore,section.entry-content.cf,header.entry-headline.media-frame,footer.entry-footnote,div.entry-socialActions.cf,article.media-frame.entry.discussionSection-entry,div.banner-frame,header.activityFeed-headline,.module-header, div#tabzilla-contents {
+  background:url(http://api.ning.com:80/files/ln14u6pAMADYAl0sXHWpNyDFZnoxJT9isV1qPXPo0*EbSmAGDz5M0BukouWx9hiSp94RQLWkjzyglG1SWRT108Nie*8BTCEi/woods.jpg) repeat;position: relative;
+color: #212121;
+}
+
+p, a {color: #BEA67C!important;}
+article.media-frame.entry.discussionSection-entry,.sheet {  background:url(BrownPaper.jpg)!important;color:#ffffff;
+}
+div.banner-header.groupHeader.groupHeader-coverPhoto,header.content-header.cf {  background:url(nightsky.png)#fff!important;color:#ffffff;
+}
+/* Groups Page Categories Menu */
+.groupHeader-nav .subnavline > li { margin-right:3px; margin-bottom:5px }
+ul.subnav.expanded>li a,.groupHeader-nav .subnavline > li a{ background-color: #323232; padding:10px; border-radius:2px; box-shadow:1px 3px 6px #424242;border:none }
+li..subnav.expanded,.groupHeader-nav .subnavline > li:hover > a, .subnavline > li.current > a { background-color: #323232; color: #fff; text-decoration: none; }
+
+/** End Groups Pages Categories Nave Menu **/
+/* NAV BAR FOR CATEGORIES ETC */
+.subnav li { margin-right:3px; margin-bottom:5px }
+.subnav li a { background-color: #323232;
+    background-image: linear-gradient(#ecf0f1, rgba(189, 195, 199,1.0));
+    color: #323232; padding:10px; border-radius:2px; box-shadow:1px 3px 6px #424242 }
+
+.subnav li a:hover, .subnav li.subnav-current > a {
+    background-color: #ED2A00;
+    background-image: linear-gradient(#34495e, rgba(44, 62, 80,1.0));
+    color: #FFF;
+    text-decoration: none;
+}
+ 
+/* Groups Page Categories Menu */
+.groupHeader-nav .subnavline > li { margin-right:3px; margin-bottom:5px }
+.groupHeader-nav .subnavline > li a{ background-color: #34495e;
+    background-image: linear-gradient(#ecf0f1, rgba(189, 195, 199,1.0));
+    color: #34495e; padding:10px; border-radius:2px; box-shadow:1px 3px 6px #424242;border:none }
+
+li.subnav-current,.groupHeader-nav .subnavline > li:hover > a, .subnavline > li.current > a { background-color: #323232;
+    background-image: linear-gradient(#ffdd00, rgba(243, 156, 18,1.0));
+    color: #FFF;
+    text-decoration: none;
+}
+
+/* GRID LAYOUT FOR FORUM */
+
+@media only screen and ( min-width:959px ){
+.media-frame.entry.discussionListPage-entry{
+display: inline-block;
+width: 32.9%;
+float: left;
+max-height: 390px;
+height: 390px;
+margin:0.5% 0.2%;}
+.discussionListPage .module-footer{ float:none;clear:both }
+.discussionListPage .media-body img{display:none}
+.discussionListPage .entry:last-child{ margin-bottom:20px }
+}
+
+/* REST OF THE CSS FOR FORUM GRID LAYOUT COLOURS BACKGROUNDS ETC */
+
+.discussionListPage .media-body{ overflow:visible }
+.discussionListPage .entry-title{ padding:10px;box-shadow: 0px 1px 4px;text-align: center;min-height:55px }
+
+.discussionListPage-entry{border: solid 1px rgba(211, 211, 211, 0.31);
+background: rgba(250, 235, 215, 0.22);}
+.discussionListPage .media-body{ border: solid 1px lightgrey;padding: 10px;background:white}
+
+.discussionListPage .entry-title{ padding: 4px 6px;box-shadow: 0px 1px 4px;text-align: center; }
+.discussionListPage .media-frame > .media-img{ margin-right:4px;margin-top:2px;margin-left:3px }
+
+
+.discussionListPage a.entry-readMore {
+float:left;   
+    font-size: 0.8em;
+    padding: 6px 8px;
+    background: rgb(110, 146, 255) none repeat scroll 0% 0%;    
+    border-radius: 6px;
+    line-height: 1em;
+   color:white;
+margin-bottom:2px;
+}
+.discussionListPage .entry-byline{clear:both;background: rgba(211, 211, 211, 0.2);
+border-radius: 4px; padding: 4px 6px;margin-bottom:2px;  }
+
+.discussionListPage .entry-commentsCount {
+    float: right;
+    font-size: 0.9em;
+    padding: 6px 8px;
+    background: rgba(110, 146, 255,0.4) none repeat scroll 0% 0%;    
+    border-radius: 6px;
+line-height: 1.1em;
+margin-top:15px;
+margin-bottom:4px;
+}
+
+.discussionListPage .entry-commentsCount { color:#514c45 }
+.discussionListPage .entry-commentsCount a{ color:#7e7e7e }
+.discussionListPage .entry-commentsCount a:hover{ color:darkblue}
+
+/****************** END FORUM GRID CSS **************/

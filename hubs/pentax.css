@@ -1,0 +1,45 @@
+body:before{content:",";
+    background-image: url('http://api.ning.com/files/x7p0yuCwu9uqVfAHRXFkR32kkXzlzU*wj7XFtXZWnsh1XiLYTPWzQHH-ah3*49bjHiCPX*4*Ppq7FrP6K*-lYiE-gm8luebT/headerwhite.jpg.1409967310969.jpg');
+    background-attachment: fixed;
+    background-position: left top;
+    background-size: cover;
+    background-repeat: no-repeat;}
+	
+ul.tabContainerSection-tabs.subnavline,section.module-body,div.photoDetailPage-mainSection.sheet.grid-frame,a.date-count-down.button.isAdmin,a.button.button-iconic,article.media-frame.entry.discussionListPage-entry,nav.header-nav.navbar a:active,li.mainTab-item a,div.gsc-control-cse.gsc-control-cse-en,div.status-container.media-frame,section.module-body.activityFeed,a.entry-readMore,section.entry-content.cf,header.entry-headline.media-frame,footer.entry-footnote,div.entry-socialActions.cf,article.media-frame.entry.discussionSection-entry,div.banner-frame,header.activityFeed-headline,.module-header, div#tabzilla-contents {
+  background:url(sokkia-grey.png) repeat;position: relative;
+color: #212121;
+}
+.sheet {  background:url(pentax-red.png);color:#ffffff;
+}
+header.content-header.cf {  background:url(pentax-logo.png)#fff;color:#ffffff;
+}
+/* Groups Page Categories Menu */
+.groupHeader-nav .subnavline > li { margin-right:3px; margin-bottom:5px }
+ul.subnav.expanded>li a,.groupHeader-nav .subnavline > li a{ background-color: #323232; padding:10px; border-radius:2px; box-shadow:1px 3px 6px #424242;border:none }
+li..subnav.expanded,.groupHeader-nav .subnavline > li:hover > a, .subnavline > li.current > a { background-color: #323232; color: #fff; text-decoration: none; }
+
+/** End Groups Pages Categories Nave Menu **/
+/* NAV BAR FOR CATEGORIES ETC */
+.subnav li { margin-right:3px; margin-bottom:5px }
+.subnav li a { background-color: #323232;
+    background-image: linear-gradient(#ecf0f1, rgba(189, 195, 199,1.0));
+    color: #323232; padding:10px; border-radius:2px; box-shadow:1px 3px 6px #424242 }
+
+.subnav li a:hover, .subnav li.subnav-current > a {
+    background-color: #ED2A00;
+    background-image: linear-gradient(#34495e, rgba(44, 62, 80,1.0));
+    color: #FFF;
+    text-decoration: none;
+}
+ 
+/* Groups Page Categories Menu */
+.groupHeader-nav .subnavline > li { margin-right:3px; margin-bottom:5px }
+.groupHeader-nav .subnavline > li a{ background-color: #34495e;
+    background-image: linear-gradient(#ecf0f1, rgba(189, 195, 199,1.0));
+    color: #34495e; padding:10px; border-radius:2px; box-shadow:1px 3px 6px #424242;border:none }
+
+li.subnav-current,.groupHeader-nav .subnavline > li:hover > a, .subnavline > li.current > a { background-color: #323232;
+    background-image: linear-gradient(#ff0033, rgba(192, 57, 43,1.0));
+    color: #FFF;
+    text-decoration: none;
+}
