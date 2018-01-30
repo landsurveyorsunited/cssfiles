@@ -9,3 +9,4 @@
 .page-home article.entry.blogSection-entry .media-frame > .media-img { position: relative; top: 55px;z-index: 20;}
 .page-home article.entry.blogSection-entry .media-frame > .media-body { overflow: hidden; padding-top: 1px; position: relative; width: 100%; top: -44px; left: 5%;}}
 */
+div.card {box-shadow: inset 0 0 0 2px red}
