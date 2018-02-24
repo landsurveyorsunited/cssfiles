@@ -1,6 +1,6 @@
 .subnav-more > ul { background-color: white; border-radius: 5px 5px 5px 5px; margin-top: 5px;}
 .entry-title > a {color: #1f1f1f; font-weight: normal; font-family: 'Fira Sans', sans-serif;}
-.entry-title > a:hover {font-weight: normal; font-family: 'Fira Sans', sans-serif;}
+.entry-title > a:hover {font-weight: normal; font-family: 'Fira Sans', sans-serif;color:gold;}
 .entry-title > a:active {font-weight: normal; font-family: 'Fira Sans', sans-serif;}
 .module-footer.cf > a {float:none;}
 .xg_module > .pagination.clear {padding-bottom: 15px;}
