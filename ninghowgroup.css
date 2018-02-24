@@ -12,5 +12,5 @@
 div.card {border-style: solid;
     border-width: 5px;
 border-color:rgba(68, 189, 50,0.8);}
-div.card-content:hover {background:rgba(232, 65, 24,1.0);color:gold!important;}
+div.card-content:hover {background:rgba(53, 59, 72,0.5);color:gold!important;}
 div.cards-pageNumber {font-size:2em;color:gold!important;}
