@@ -1,0 +1,574 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:International Surveyors Week 2018
+X-WR-TIMEZONE:America/New_York
+X-WR-CALDESC:Land Surveyors United Community is celebrating the greatest pr
+ ofession on planet Earth June 17th-23rd with days dedicated to locations ar
+ ound the world.  On the day for your location\, share experience
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20180618
+DTEND;VALUE=DATE:20180619
+DTSTAMP:20180409T153944Z
+UID:2mi4kngl0ln2dvq04vbptelpmd@google.com
+X-GOOGLE-HANGOUT:https://hangouts.google.com/hangouts/_/calendar/czE1OHMyMm
+ 5jbW83bXFkanNtaG05YnRwZTBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ.2mi4kngl0ln2dv
+ q04vbptelpmd
+CREATED:20180405T221558Z
+DESCRIPTION:<span style="color: rgb(0\, 0\, 0)\; font-family: Arial\; font-
+ size: 13px\; white-space: pre-wrap\; background-color: rgb(255\, 255\, 255)
+ \;">Celebrate the Land Surveying Profession in countries of North America a
+ nd the Caribbean by sharing stories in the Land Surveyors Forums and by upl
+ oading photos of surveying in Africa to the network to increase public awar
+ eness.   All 50 US States 📍 Canada 📍 Mexico</span><br><br><br><b><u>Group
+  Forums to Introduce Yourself In:</u></b><br><ul class="nav nav-list" style
+ ="padding: 0px 15px\; margin: 0px\; list-style: none\; color: rgb(51\, 51\,
+  51)\; font-family: &quot\;Helvetica Neue&quot\;\, Helvetica\, Arial\, sans
+ -serif\;"><li class="nav-header" style="line-height: 20px\; display: block\
+ ; padding: 3px 15px\; font-size: 11px\; font-weight: bold\; color: rgb(153\
+ , 153\, 153)\; text-shadow: rgba(255\, 255\, 255\, 0.5) 0px 1px 0px\; text-
+ transform: uppercase\; margin-right: -15px\; margin-left: -15px\;">NORTH AM
+ ERICA</li><li class="active" style="line-height: 20px\;"><a href="http://la
+ ndsurveyorsunited.com/group/surveyorsnorthamerica" style="color: rgb(255\, 
+ 255\, 255)\; text-decoration-line: none\; display: block\; margin-right: -1
+ 5px\; margin-left: -15px\; text-shadow: rgba(0\, 0\, 0\, 0.2) 0px -1px 0px\
+ ; padding: 3px 15px\; background-color: rgb(0\, 136\, 204)\;">N. America La
+ nd Surveyors</a></li><li style="line-height: 20px\;"><a href="http://landsu
+ rveyorsunited.com/group/unitedstatessurveyors" style="color: rgb(0\, 136\, 
+ 204)\; text-decoration-line: none\; display: block\; margin-right: -15px\; 
+ margin-left: -15px\; text-shadow: rgba(255\, 255\, 255\, 0.5) 0px 1px 0px\;
+  padding: 3px 15px\;">United States of America Surveyors</a></li><li style=
+ "line-height: 20px\;"><a href="http://landsurveyorsunited.com/group/surveyo
+ rscanada" style="color: rgb(0\, 136\, 204)\; text-decoration-line: none\; d
+ isplay: block\; margin-right: -15px\; margin-left: -15px\; text-shadow: rgb
+ a(255\, 255\, 255\, 0.5) 0px 1px 0px\; padding: 3px 15px\;">Canada Land Sur
+ veyors</a></li><li style="line-height: 20px\;"><a href="http://landsurveyor
+ sunited.com/group/mexicolandsurveyors" style="color: rgb(0\, 85\, 128)\; te
+ xt-decoration-line: none\; outline: 0px\; display: block\; margin-right: -1
+ 5px\; margin-left: -15px\; text-shadow: rgba(255\, 255\, 255\, 0.5) 0px 1px
+  0px\; padding: 3px 15px\; background-color: rgb(238\, 238\, 238)\;">Mexico
+  Land Surveyors</a></li></ul>\n\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:
+ ~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-\nPlease do not edit this sect
+ ion of the description.\n\nThis event has a Google Hangouts video call.\nJo
+ in: https://hangouts.google.com/hangouts/_/calendar/czE1OHMyMm5jbW83bXFkanN
+ taG05YnRwZTBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ.2mi4kngl0ln2dvq04vbptelpmd?
+ hs=121\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~::~:~::-
+LAST-MODIFIED:20180405T221558Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:North America Surveyors Day
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:This is an event reminder
+TRIGGER:-P0DT0H30M0S
+END:VALARM
+BEGIN:VALARM
+ACTION:EMAIL
+DESCRIPTION:This is an event reminder
+SUMMARY:Alarm notification
+ATTENDEE:mailto:landsurveyorsunited@gmail.com
+TRIGGER:-P0DT7H10M0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20180619
+DTEND;VALUE=DATE:20180620
+DTSTAMP:20180409T153944Z
+UID:34vo79dceirbj8mddgrk5i63c7@google.com
+X-GOOGLE-HANGOUT:https://hangouts.google.com/hangouts/_/calendar/czE1OHMyMm
+ 5jbW83bXFkanNtaG05YnRwZTBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ.34vo79dceirbj8
+ mddgrk5i63c7
+CREATED:20180405T221741Z
+DESCRIPTION:<span style="color: rgb(0\, 0\, 0)\; font-family: Arial\; font-
+ size: 13px\; white-space: pre-wrap\; background-color: rgb(255\, 255\, 255)
+ \;">Celebrate the Land Surveying Profession in countries of Asia by sharing
+  stories in the Asian Land Surveyors Forum and by uploading photos of surve
+ ying in Asia to the network to increase public awareness.  Russia 📍China 
+ 📍Japan 📍India 📍Qatar 📍Nepal📍Singapore📍Oman 📍Bhutan 📍Karnataka 📍Kor
+ ea</span><br><br><span style="color: rgb(0\, 0\, 0)\; font-family: Arial\; 
+ font-size: 13px\; white-space: pre-wrap\; background-color: rgb(255\, 255\,
+  255)\;"><b><u>Introduce Yourself Inside Your Local Group's Forum</u></b></
+ span><br><ul class="nav nav-list" style="padding: 0px 15px\; margin: 0px\; 
+ list-style: none\; color: rgb(51\, 51\, 51)\; font-family: &quot\;Helvetica
+  Neue&quot\;\, Helvetica\, Arial\, sans-serif\;"><li class="nav-header" sty
+ le="line-height: 20px\; display: block\; padding: 3px 15px\; font-size: 11p
+ x\; font-weight: bold\; color: rgb(153\, 153\, 153)\; text-shadow: rgba(255
+ \, 255\, 255\, 0.5) 0px 1px 0px\; text-transform: uppercase\; margin-right:
+  -15px\; margin-left: -15px\; margin-top: 9px\;">ASIA</li><li style="line-h
+ eight: 20px\;"><a href="http://landsurveyorsunited.com/group/surveyorsasia"
+  style="color: rgb(0\, 136\, 204)\; text-decoration-line: none\; display: b
+ lock\; margin-right: -15px\; margin-left: -15px\; text-shadow: rgba(255\, 2
+ 55\, 255\, 0.5) 0px 1px 0px\; padding: 3px 15px\;">Asia Land Surveyors</a><
+ /li><li style="line-height: 20px\;"><a href="http://landsurveyorsunited.com
+ /group/surveyorsrussia" style="color: rgb(0\, 136\, 204)\; text-decoration-
+ line: none\; display: block\; margin-right: -15px\; margin-left: -15px\; te
+ xt-shadow: rgba(255\, 255\, 255\, 0.5) 0px 1px 0px\; padding: 3px 15px\;">R
+ ussia Land Surveyors</a></li><li style="line-height: 20px\;"><a href="http:
+ //landsurveyorsunited.com/group/china-land-surveyors" style="color: rgb(0\,
+  136\, 204)\; text-decoration-line: none\; display: block\; margin-right: -
+ 15px\; margin-left: -15px\; text-shadow: rgba(255\, 255\, 255\, 0.5) 0px 1p
+ x 0px\; padding: 3px 15px\;">China Land Surveyors</a></li><li style="line-h
+ eight: 20px\;"><a href="http://landsurveyorsunited.com/group/japan-surveyor
+ s" style="color: rgb(0\, 136\, 204)\; text-decoration-line: none\; display:
+  block\; margin-right: -15px\; margin-left: -15px\; text-shadow: rgba(255\,
+  255\, 255\, 0.5) 0px 1px 0px\; padding: 3px 15px\;">Japan Land Surveyors</
+ a></li><li style="line-height: 20px\;"><a href="http://landsurveyorsunited.
+ com/group/indiageomatics" style="color: rgb(0\, 136\, 204)\; text-decoratio
+ n-line: none\; display: block\; margin-right: -15px\; margin-left: -15px\; 
+ text-shadow: rgba(255\, 255\, 255\, 0.5) 0px 1px 0px\; padding: 3px 15px\;"
+ >India Land Surveyors</a></li><li style="line-height: 20px\;"><a href="http
+ ://landsurveyorsunited.com/group/qatar-land-surveyors" style="color: rgb(0\
+ , 136\, 204)\; text-decoration-line: none\; display: block\; margin-right: 
+ -15px\; margin-left: -15px\; text-shadow: rgba(255\, 255\, 255\, 0.5) 0px 1
+ px 0px\; padding: 3px 15px\;">Qatar Land Surveyors</a></li><li style="line-
+ height: 20px\;"><a href="http://landsurveyorsunited.com/group/nepal-land-su
+ rveyors" style="color: rgb(0\, 136\, 204)\; text-decoration-line: none\; di
+ splay: block\; margin-right: -15px\; margin-left: -15px\; text-shadow: rgba
+ (255\, 255\, 255\, 0.5) 0px 1px 0px\; padding: 3px 15px\;">Nepal Land Surve
+ yors</a></li><li style="line-height: 20px\;"><a href="http://landsurveyorsu
+ nited.com/group/singapore-land-surveyors" style="color: rgb(0\, 136\, 204)\
+ ; text-decoration-line: none\; display: block\; margin-right: -15px\; margi
+ n-left: -15px\; text-shadow: rgba(255\, 255\, 255\, 0.5) 0px 1px 0px\; padd
+ ing: 3px 15px\;">Singapore Land Surveyors</a></li><li style="line-height: 2
+ 0px\;"><a href="http://landsurveyorsunited.com/group/oman-land-surveyors" s
+ tyle="color: rgb(0\, 136\, 204)\; text-decoration-line: none\; display: blo
+ ck\; margin-right: -15px\; margin-left: -15px\; text-shadow: rgba(255\, 255
+ \, 255\, 0.5) 0px 1px 0px\; padding: 3px 15px\;">Oman Land Surveyors</a></l
+ i><li style="line-height: 20px\;"><a href="http://landsurveyorsunited.com/g
+ roup/bhutan-surveyors" style="color: rgb(0\, 136\, 204)\; text-decoration-l
+ ine: none\; display: block\; margin-right: -15px\; margin-left: -15px\; tex
+ t-shadow: rgba(255\, 255\, 255\, 0.5) 0px 1px 0px\; padding: 3px 15px\;">Bh
+ utan Land Surveyors</a></li><li style="line-height: 20px\;"><a href="http:/
+ /landsurveyorsunited.com/group/karnataka-surveyors" style="color: rgb(0\, 8
+ 5\, 128)\; text-decoration-line: none\; outline: 0px\; display: block\; mar
+ gin-right: -15px\; margin-left: -15px\; text-shadow: rgba(255\, 255\, 255\,
+  0.5) 0px 1px 0px\; padding: 3px 15px\; background-color: rgb(238\, 238\, 2
+ 38)\;">Karnataka Land Surveyors</a></li></ul>\n\n-::~:~::~:~:~:~:~:~:~:~:~:
+ ~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-\nPlease do no
+ t edit this section of the description.\n\nThis event has a Google Hangouts
+  video call.\nJoin: https://hangouts.google.com/hangouts/_/calendar/czE1OHM
+ yMm5jbW83bXFkanNtaG05YnRwZTBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ.34vo79dceir
+ bj8mddgrk5i63c7?hs=121\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-
+LAST-MODIFIED:20180405T221741Z
+LOCATION:Asia
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Asia Land Surveyors Day
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20180620
+DTEND;VALUE=DATE:20180621
+DTSTAMP:20180409T153944Z
+UID:3hj09i03tja8c12bk6p31jul6r@google.com
+X-GOOGLE-HANGOUT:https://hangouts.google.com/hangouts/_/calendar/czE1OHMyMm
+ 5jbW83bXFkanNtaG05YnRwZTBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ.3hj09i03tja8c1
+ 2bk6p31jul6r
+CREATED:20180405T222056Z
+DESCRIPTION:<br><span>Celebrate the Land Surveying Profession in countries 
+ of Europe by sharing stories in the European Land Surveyors Forum and by up
+ loading photos of surveying in Europe to the network to increase public awa
+ reness. Albania 📍</span><br><span>Austria 📍</span><br><span>Cyprus 📍</sp
+ an><br><span>France 📍</span><br><span>Italy 📍</span><br><span>UK 📍</span
+ ><br><span>Poland 📍</span><br><span>German 📍</span><br><span>Swiss📍</spa
+ n><br><span>Romania 📍</span><br><span>Ireland 📍</span><br><span>Bulgaria
+ 📍</span><br><span>Greece 📍</span><br><span>Portugal 📍</span><br><span>Sp
+ ain 📍</span><br><span>Albania 📍</span><br><span>Serbia 📍</span><br><br><
+ span><br></span><br><span>Introduce Yourself and Share Experiences inside t
+ he Group's Forum for Your Location:</span><br><br><br><ul><li>EUROPE</li><l
+ i><a href="http://landsurveyorsunited.com/group/surveyorseurope">Europe Lan
+ d Surveyors</a></li><li><a href="http://landsurveyorsunited.com/group/alban
+ ia-land-surveyors">Albania Land Surveyors</a></li><li><a href="http://lands
+ urveyorsunited.com/group/austrian-surveyors">Austria Land Surveyors</a></li
+ ><li><a href="http://landsurveyorsunited.com/group/cyprus-land-surveyors">C
+ yprus Land Surveyors</a></li><li><a href="http://landsurveyorsunited.com/gr
+ oup/france-surveyors">France Land Surveyors</a></li><li><a href="http://lan
+ dsurveyorsunited.com/group/italylandsurveyors">Italy Land Surveyors</a></li
+ ><li><a href="http://landsurveyorsunited.com/group/uklandsurveyors">UK Land
+  Surveyors</a></li><li><a href="http://landsurveyorsunited.com/group/polish
+ -land-surveyors">Poland Land Surveyors</a></li><li><a href="http://landsurv
+ eyorsunited.com/group/german-land-surveyors">German Land Surveyors</a></li>
+ <li><a href="http://landsurveyorsunited.com/group/swiss-land-surveyors">Swi
+ ss Land Surveyors</a></li><li><a href="http://landsurveyorsunited.com/group
+ /romania-land-surveyors">Romania Land Surveyors</a></li><li><a href="http:/
+ /landsurveyorsunited.com/group/ireland-land-surveyors">Ireland Land Surveyo
+ rs</a></li><li><a href="http://landsurveyorsunited.com/group/bulgarian-land
+ -surveyors">Bulgaria Land Surveyors</a></li><li><a href="http://landsurveyo
+ rsunited.com/group/land-surveyors-of-greece">Greece Land Surveyors</a></li>
+ <li><a href="http://landsurveyorsunited.com/group/portugal-land-surveyors">
+ Portugal Land Surveyors</a></li><li><a href="http://landsurveyorsunited.com
+ /group/spainlandsurveyors">Spain Land Surveyors</a></li><li><a href="http:/
+ /landsurveyorsunited.com/group/albania-land-surveyors">Albania Land Surveyo
+ rs</a></li><li><a href="http://landsurveyorsunited.com/group/serbia-land-su
+ rveyors">Serbia Land Surveyors</a></li></ul><br><br><h1><br></h1>\n\n-::~:~
+ ::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::
+ ~:~::-\nPlease do not edit this section of the description.\n\nThis event h
+ as a Google Hangouts video call.\nJoin: https://hangouts.google.com/hangout
+ s/_/calendar/czE1OHMyMm5jbW83bXFkanNtaG05YnRwZTBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2
+ xlLmNvbQ.3hj09i03tja8c12bk6p31jul6r?hs=121\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-
+LAST-MODIFIED:20180405T222056Z
+LOCATION:Europe
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:European Surveyors Day
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20180617
+DTEND;VALUE=DATE:20180618
+DTSTAMP:20180409T153944Z
+UID:3tj3paprm972tj37bmktggfc08@google.com
+X-GOOGLE-HANGOUT:https://hangouts.google.com/hangouts/_/calendar/czE1OHMyMm
+ 5jbW83bXFkanNtaG05YnRwZTBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ.3tj3paprm972tj
+ 37bmktggfc08
+CREATED:20180405T221550Z
+DESCRIPTION:<span>Celebrate the Land Surveying Profession in countries of A
+ frica by sharing stories in the African Land Surveyors Forum and by uploadi
+ ng photos of surveying in Africa to the network to increase public awarenes
+ s.  Angola📍Algeria 📍Nigeria 📍Ghana 📍Tanzania 📍South Africa 📍Sudan 📍K
+ enya 📍Uganda 📍Zimbabwe📍Mozambique📍Morocco📍More  </span><br><span><br><
+ /span><br><span>Introduce Yourself Inside the Group's Forum for Your Locati
+ on</span><br><ul class="nav nav-list" style="padding: 0px 15px\; margin: 0p
+ x\; list-style: none\; color: rgb(51\, 51\, 51)\; font-family: &quot\;Helve
+ tica Neue&quot\;\, Helvetica\, Arial\, sans-serif\;"><li class="nav-header"
+  style="line-height: 20px\; display: block\; padding: 3px 15px\; font-size:
+  11px\; font-weight: bold\; color: rgb(153\, 153\, 153)\; text-shadow: rgba
+ (255\, 255\, 255\, 0.5) 0px 1px 0px\; text-transform: uppercase\; margin-ri
+ ght: -15px\; margin-left: -15px\; margin-top: 9px\;">AFRICA</li><li style="
+ line-height: 20px\;"><a href="http://landsurveyorsunited.com/group/surveyor
+ safrica" style="color: rgb(0\, 136\, 204)\; text-decoration-line: none\; di
+ splay: block\; margin-right: -15px\; margin-left: -15px\; text-shadow: rgba
+ (255\, 255\, 255\, 0.5) 0px 1px 0px\; padding: 3px 15px\;">Africa Land Surv
+ eyors</a></li><li style="line-height: 20px\;"><a href="http://landsurveyors
+ united.com/group/angola" style="color: rgb(0\, 136\, 204)\; text-decoration
+ -line: none\; display: block\; margin-right: -15px\; margin-left: -15px\; t
+ ext-shadow: rgba(255\, 255\, 255\, 0.5) 0px 1px 0px\; padding: 3px 15px\;">
+ Angola Land Surveyors</a></li><li style="line-height: 20px\;"><a href="http
+ ://landsurveyorsunited.com/group/algerian-surveyors" style="color: rgb(0\, 
+ 136\, 204)\; text-decoration-line: none\; display: block\; margin-right: -1
+ 5px\; margin-left: -15px\; text-shadow: rgba(255\, 255\, 255\, 0.5) 0px 1px
+  0px\; padding: 3px 15px\;">Algeria Land Surveyors</a></li><li style="line-
+ height: 20px\;"><a href="http://landsurveyorsunited.com/group/nigeria-land-
+ surveyors" style="color: rgb(0\, 136\, 204)\; text-decoration-line: none\; 
+ display: block\; margin-right: -15px\; margin-left: -15px\; text-shadow: rg
+ ba(255\, 255\, 255\, 0.5) 0px 1px 0px\; padding: 3px 15px\;">Nigeria Land S
+ urveyors</a></li><li style="line-height: 20px\;"><a href="http://landsurvey
+ orsunited.com/group/ghana-surveyors" style="color: rgb(0\, 136\, 204)\; tex
+ t-decoration-line: none\; display: block\; margin-right: -15px\; margin-lef
+ t: -15px\; text-shadow: rgba(255\, 255\, 255\, 0.5) 0px 1px 0px\; padding: 
+ 3px 15px\;">Ghana Land Surveyors</a></li><li style="line-height: 20px\;"><a
+  href="http://landsurveyorsunited.com/group/tanzania-professional-land-surv
+ eyors" style="color: rgb(0\, 136\, 204)\; text-decoration-line: none\; disp
+ lay: block\; margin-right: -15px\; margin-left: -15px\; text-shadow: rgba(2
+ 55\, 255\, 255\, 0.5) 0px 1px 0px\; padding: 3px 15px\;">Tanzania Land Surv
+ eyors</a></li><li style="line-height: 20px\;"><a href="http://landsurveyors
+ united.com/group/south-africa-surveyors" style="color: rgb(0\, 136\, 204)\;
+  text-decoration-line: none\; display: block\; margin-right: -15px\; margin
+ -left: -15px\; text-shadow: rgba(255\, 255\, 255\, 0.5) 0px 1px 0px\; paddi
+ ng: 3px 15px\;">South Africa Land Surveyors</a></li><li style="line-height:
+  20px\;"><a href="http://landsurveyorsunited.com/group/sudanese-surveyors" 
+ style="color: rgb(0\, 136\, 204)\; text-decoration-line: none\; display: bl
+ ock\; margin-right: -15px\; margin-left: -15px\; text-shadow: rgba(255\, 25
+ 5\, 255\, 0.5) 0px 1px 0px\; padding: 3px 15px\;">Sudan Land Surveyors</a><
+ /li><li style="line-height: 20px\;"><a href="http://landsurveyorsunited.com
+ /group/kenya-land-surveyors" style="color: rgb(0\, 136\, 204)\; text-decora
+ tion-line: none\; display: block\; margin-right: -15px\; margin-left: -15px
+ \; text-shadow: rgba(255\, 255\, 255\, 0.5) 0px 1px 0px\; padding: 3px 15px
+ \;">Kenya Land Surveyors</a></li><li style="line-height: 20px\;"><a href="h
+ ttp://landsurveyorsunited.com/group/surveyors-of-uganda" style="color: rgb(
+ 0\, 136\, 204)\; text-decoration-line: none\; display: block\; margin-right
+ : -15px\; margin-left: -15px\; text-shadow: rgba(255\, 255\, 255\, 0.5) 0px
+  1px 0px\; padding: 3px 15px\;">Uganda Land Surveyors</a></li><li style="li
+ ne-height: 20px\;"><a href="http://landsurveyorsunited.com/group/zimbabwe-s
+ urveyors" style="color: rgb(0\, 136\, 204)\; text-decoration-line: none\; d
+ isplay: block\; margin-right: -15px\; margin-left: -15px\; text-shadow: rgb
+ a(255\, 255\, 255\, 0.5) 0px 1px 0px\; padding: 3px 15px\;">Zimbabwe Land S
+ urveyors</a></li><li style="line-height: 20px\;"><a href="http://landsurvey
+ orsunited.com/group/mozambique-surveyors" style="color: rgb(0\, 136\, 204)\
+ ; text-decoration-line: none\; display: block\; margin-right: -15px\; margi
+ n-left: -15px\; text-shadow: rgba(255\, 255\, 255\, 0.5) 0px 1px 0px\; padd
+ ing: 3px 15px\;">Mozambique Land Surveyors</a></li><li style="line-height: 
+ 20px\;"><a href="http://landsurveyorsunited.com/group/morocco-land-surveyor
+ s" style="color: rgb(0\, 85\, 128)\; text-decoration-line: none\; outline: 
+ 0px\; display: block\; margin-right: -15px\; margin-left: -15px\; text-shad
+ ow: rgba(255\, 255\, 255\, 0.5) 0px 1px 0px\; padding: 3px 15px\; backgroun
+ d-color: rgb(238\, 238\, 238)\;">Morocco Land Surveyors</a></li></ul>\n\n-:
+ :~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~::~:~::-\nPlease do not edit this section of the description.\n\nThis eve
+ nt has a Google Hangouts video call.\nJoin: https://hangouts.google.com/han
+ gouts/_/calendar/czE1OHMyMm5jbW83bXFkanNtaG05YnRwZTBAZ3JvdXAuY2FsZW5kYXIuZ2
+ 9vZ2xlLmNvbQ.3tj3paprm972tj37bmktggfc08?hs=121\n-::~:~::~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-
+LAST-MODIFIED:20180405T222232Z
+LOCATION:Africa
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Africa Surveyors Day
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:This is an event reminder
+TRIGGER:-P0DT0H30M0S
+END:VALARM
+BEGIN:VALARM
+ACTION:EMAIL
+DESCRIPTION:This is an event reminder
+SUMMARY:Alarm notification
+ATTENDEE:mailto:landsurveyorsunited@gmail.com
+TRIGGER:-P0DT7H10M0S
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20180621
+DTEND;VALUE=DATE:20180622
+DTSTAMP:20180409T153944Z
+UID:4ldesho4hatqtgbhism96jq62l@google.com
+X-GOOGLE-HANGOUT:https://hangouts.google.com/hangouts/_/calendar/czE1OHMyMm
+ 5jbW83bXFkanNtaG05YnRwZTBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ.4ldesho4hatqtg
+ bhism96jq62l
+CREATED:20180405T222603Z
+DESCRIPTION:<br><b>7th Annual Worldwide Celebration of the Land Surveying P
+ ractice\, Surveying Industry and Surveyor Culture!</b><br><br><br>Join us o
+ n Thursday June 21st @ Noon and Occupy a monument or marker and Submit a Po
+ int from YOUR LOCATION in representation of Surveyors in your continent\, c
+ ountry\, state\, city or zip code! SURVEYORS ONLY! No Cellphone GPS data ac
+ cepted. This is a community GNSS /RTK data collection event\, exercise and 
+ experiment.<br><br><a href="https://www.surveyearth.com/log_point.html">LOG
+  YOUR POINT HERE</a>\n\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-\nPlease do not edit this section of th
+ e description.\n\nThis event has a Google Hangouts video call.\nJoin: https
+ ://hangouts.google.com/hangouts/_/calendar/czE1OHMyMm5jbW83bXFkanNtaG05YnRw
+ ZTBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ.4ldesho4hatqtgbhism96jq62l?hs=121\n-
+ ::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:
+ ~:~::~:~::-
+LAST-MODIFIED:20180405T222603Z
+LOCATION:Earth
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Survey Earth in a Day 7 Worldwide
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20180622
+DTEND;VALUE=DATE:20180623
+DTSTAMP:20180409T153944Z
+UID:0thq67rv4g1t4aaftmv3pju27t@google.com
+X-GOOGLE-HANGOUT:https://hangouts.google.com/hangouts/_/calendar/czE1OHMyMm
+ 5jbW83bXFkanNtaG05YnRwZTBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ.0thq67rv4g1t4a
+ aftmv3pju27t
+CREATED:20180405T223009Z
+DESCRIPTION:<span style="color: rgb(0\, 0\, 0)\; font-family: arial\, sans\
+ , sans-serif\; font-size: 13px\; white-space: pre-wrap\; background-color: 
+ rgb(255\, 255\, 255)\;">Celebrate the Land Surveying Profession in countrie
+ s of South America  by sharing stories in the Land Surveyors Forums and by 
+ uploading photos of surveying in South America to the network to increase p
+ ublic awareness.Brazil 📍</span><br style="color: rgb(0\, 0\, 0)\; font-fam
+ ily: arial\, sans\, sans-serif\; font-size: 13px\; white-space: pre-wrap\;"
+ ><span style="color: rgb(0\, 0\, 0)\; font-family: arial\, sans\, sans-seri
+ f\; font-size: 13px\; white-space: pre-wrap\; background-color: rgb(255\, 2
+ 55\, 255)\;">Chile📍</span><br style="color: rgb(0\, 0\, 0)\; font-family: 
+ arial\, sans\, sans-serif\; font-size: 13px\; white-space: pre-wrap\;"><spa
+ n style="color: rgb(0\, 0\, 0)\; font-family: arial\, sans\, sans-serif\; f
+ ont-size: 13px\; white-space: pre-wrap\; background-color: rgb(255\, 255\, 
+ 255)\;">Argentina📍</span><br style="color: rgb(0\, 0\, 0)\; font-family: a
+ rial\, sans\, sans-serif\; font-size: 13px\; white-space: pre-wrap\;"><span
+  style="color: rgb(0\, 0\, 0)\; font-family: arial\, sans\, sans-serif\; fo
+ nt-size: 13px\; white-space: pre-wrap\; background-color: rgb(255\, 255\, 2
+ 55)\;">Colombia 📍</span><br style="color: rgb(0\, 0\, 0)\; font-family: ar
+ ial\, sans\, sans-serif\; font-size: 13px\; white-space: pre-wrap\;"><span 
+ style="color: rgb(0\, 0\, 0)\; font-family: arial\, sans\, sans-serif\; fon
+ t-size: 13px\; white-space: pre-wrap\; background-color: rgb(255\, 255\, 25
+ 5)\;">Venezuela 📍 More</span><br><br><span style="color: rgb(0\, 0\, 0)\; 
+ font-family: arial\, sans\, sans-serif\; font-size: 13px\; white-space: pre
+ -wrap\; background-color: rgb(255\, 255\, 255)\;"><br></span><br><span styl
+ e="color: rgb(0\, 0\, 0)\; font-family: arial\, sans\, sans-serif\; font-si
+ ze: 13px\; white-space: pre-wrap\; background-color: rgb(255\, 255\, 255)\;
+ ">Introduce Yourself in the Group's Forum for Your Location:</span><br><ul 
+ class="nav nav-list" style="padding: 0px 15px\; margin: 0px\; list-style: n
+ one\; color: rgb(51\, 51\, 51)\; font-family: &quot\;Helvetica Neue&quot\;\
+ , Helvetica\, Arial\, sans-serif\;"><li class="nav-header" style="line-heig
+ ht: 20px\; display: block\; padding: 3px 15px\; font-size: 11px\; font-weig
+ ht: bold\; color: rgb(153\, 153\, 153)\; text-shadow: rgba(255\, 255\, 255\
+ , 0.5) 0px 1px 0px\; text-transform: uppercase\; margin-right: -15px\; marg
+ in-left: -15px\; margin-top: 9px\;">SOUTH AMERICA</li><li style="line-heigh
+ t: 20px\;"><a href="http://landsurveyorsunited.com/group/surveyorssouthamer
+ ica" style="color: rgb(0\, 136\, 204)\; text-decoration-line: none\; displa
+ y: block\; margin-right: -15px\; margin-left: -15px\; text-shadow: rgba(255
+ \, 255\, 255\, 0.5) 0px 1px 0px\; padding: 3px 15px\;">S. America Land Surv
+ eyors</a></li><li style="line-height: 20px\;"><a href="http://landsurveyors
+ united.com/group/brazillandsurveyors" style="color: rgb(0\, 136\, 204)\; te
+ xt-decoration-line: none\; display: block\; margin-right: -15px\; margin-le
+ ft: -15px\; text-shadow: rgba(255\, 255\, 255\, 0.5) 0px 1px 0px\; padding:
+  3px 15px\;">Brazil Land Surveyors</a></li><li style="line-height: 20px\;">
+ <a href="http://landsurveyorsunited.com/group/chile-land-surveyors" style="
+ color: rgb(0\, 136\, 204)\; text-decoration-line: none\; display: block\; m
+ argin-right: -15px\; margin-left: -15px\; text-shadow: rgba(255\, 255\, 255
+ \, 0.5) 0px 1px 0px\; padding: 3px 15px\;">Chile Land Surveyors</a></li><li
+  style="line-height: 20px\;"><a href="http://landsurveyorsunited.com/group/
+ argentina-land-surveyors" style="color: rgb(0\, 136\, 204)\; text-decoratio
+ n-line: none\; display: block\; margin-right: -15px\; margin-left: -15px\; 
+ text-shadow: rgba(255\, 255\, 255\, 0.5) 0px 1px 0px\; padding: 3px 15px\;"
+ >Argentina Land Surveyors</a></li><li style="line-height: 20px\;"><a href="
+ http://landsurveyorsunited.com/group/colombia-land-surveyors" style="color:
+  rgb(0\, 136\, 204)\; text-decoration-line: none\; display: block\; margin-
+ right: -15px\; margin-left: -15px\; text-shadow: rgba(255\, 255\, 255\, 0.5
+ ) 0px 1px 0px\; padding: 3px 15px\;">Colombia Land Surveyors</a></li><li st
+ yle="line-height: 20px\;"><a href="http://landsurveyorsunited.com/group/ven
+ ezuela-land-surveyors" style="color: rgb(0\, 85\, 128)\; text-decoration-li
+ ne: none\; outline: 0px\; display: block\; margin-right: -15px\; margin-lef
+ t: -15px\; text-shadow: rgba(255\, 255\, 255\, 0.5) 0px 1px 0px\; padding: 
+ 3px 15px\; background-color: rgb(238\, 238\, 238)\;">Venezuela Land Surveyo
+ rs</a></li></ul>\n\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~:~:~:~:~::~:~::-\nPlease do not edit this section of the de
+ scription.\n\nThis event has a Google Hangouts video call.\nJoin: https://h
+ angouts.google.com/hangouts/_/calendar/czE1OHMyMm5jbW83bXFkanNtaG05YnRwZTBA
+ Z3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ.0thq67rv4g1t4aaftmv3pju27t?hs=121\n-::~:
+ ~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:
+ :~:~::-
+LAST-MODIFIED:20180405T223009Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:South American Surveyors Day
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20180623
+DTEND;VALUE=DATE:20180624
+DTSTAMP:20180409T153944Z
+UID:3hvifh9v9bmd0amebicsqufnba@google.com
+X-GOOGLE-HANGOUT:https://hangouts.google.com/hangouts/_/calendar/czE1OHMyMm
+ 5jbW83bXFkanNtaG05YnRwZTBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ.3hvifh9v9bmd0a
+ mebicsqufnba
+CREATED:20180405T223244Z
+DESCRIPTION:<span style="color: rgb(0\, 0\, 0)\; font-family: arial\, sans\
+ , sans-serif\; font-size: 13px\; white-space: pre-wrap\; background-color: 
+ rgb(255\, 255\, 255)\;">Celebrate the Land Surveying Profession in countrie
+ s of Middle East  by sharing stories in the Land Surveyors Forums and by up
+ loading photos of surveying in Middle East to the network to increase publi
+ c awareness.Iraq 📍</span><br style="color: rgb(0\, 0\, 0)\; font-family: a
+ rial\, sans\, sans-serif\; font-size: 13px\; white-space: pre-wrap\;"><span
+  style="color: rgb(0\, 0\, 0)\; font-family: arial\, sans\, sans-serif\; fo
+ nt-size: 13px\; white-space: pre-wrap\; background-color: rgb(255\, 255\, 2
+ 55)\;">Egypt 📍</span><br style="color: rgb(0\, 0\, 0)\; font-family: arial
+ \, sans\, sans-serif\; font-size: 13px\; white-space: pre-wrap\;"><span sty
+ le="color: rgb(0\, 0\, 0)\; font-family: arial\, sans\, sans-serif\; font-s
+ ize: 13px\; white-space: pre-wrap\; background-color: rgb(255\, 255\, 255)\
+ ;">Saudi 📍</span><br style="color: rgb(0\, 0\, 0)\; font-family: arial\, s
+ ans\, sans-serif\; font-size: 13px\; white-space: pre-wrap\;"><span style="
+ color: rgb(0\, 0\, 0)\; font-family: arial\, sans\, sans-serif\; font-size:
+  13px\; white-space: pre-wrap\; background-color: rgb(255\, 255\, 255)\;">I
+ ran 📍 More</span><br><br><span style="color: rgb(0\, 0\, 0)\; font-family:
+  arial\, sans\, sans-serif\; font-size: 13px\; white-space: pre-wrap\; back
+ ground-color: rgb(255\, 255\, 255)\;"><br></span><br><span style="color: rg
+ b(0\, 0\, 0)\; font-family: arial\, sans\, sans-serif\; font-size: 13px\; w
+ hite-space: pre-wrap\; background-color: rgb(255\, 255\, 255)\;">Introduce 
+ Yourself in the Group Forum for Your Location:</span><br><ul class="nav nav
+ -list" style="padding: 0px 15px\; margin: 0px\; list-style: none\; color: r
+ gb(51\, 51\, 51)\; font-family: &quot\;Helvetica Neue&quot\;\, Helvetica\, 
+ Arial\, sans-serif\;"><li class="nav-header" style="line-height: 20px\; dis
+ play: block\; padding: 3px 15px\; font-size: 11px\; font-weight: bold\; col
+ or: rgb(153\, 153\, 153)\; text-shadow: rgba(255\, 255\, 255\, 0.5) 0px 1px
+  0px\; text-transform: uppercase\; margin-right: -15px\; margin-left: -15px
+ \; margin-top: 9px\;">MIDDLE EAST</li><li style="line-height: 20px\;"><a hr
+ ef="http://landsurveyorsunited.com/group/iraq-surveyors" style="color: rgb(
+ 0\, 136\, 204)\; text-decoration-line: none\; display: block\; margin-right
+ : -15px\; margin-left: -15px\; text-shadow: rgba(255\, 255\, 255\, 0.5) 0px
+  1px 0px\; padding: 3px 15px\;">Iraq Land Surveyors</a></li><li style="line
+ -height: 20px\;"><a href="http://landsurveyorsunited.com/group/egyptlandsur
+ veyors" style="color: rgb(0\, 136\, 204)\; text-decoration-line: none\; dis
+ play: block\; margin-right: -15px\; margin-left: -15px\; text-shadow: rgba(
+ 255\, 255\, 255\, 0.5) 0px 1px 0px\; padding: 3px 15px\;">Egypt Land Survey
+ ors</a></li><li style="line-height: 20px\;"><a href="http://landsurveyorsun
+ ited.com/group/saudiarabianlandsurveyors" style="color: rgb(0\, 136\, 204)\
+ ; text-decoration-line: none\; display: block\; margin-right: -15px\; margi
+ n-left: -15px\; text-shadow: rgba(255\, 255\, 255\, 0.5) 0px 1px 0px\; padd
+ ing: 3px 15px\;">Saudi Arabia Land Surveyors</a></li><li style="line-height
+ : 20px\;"><a href="http://landsurveyorsunited.com/group/iran-land-surveyors
+ " style="color: rgb(0\, 85\, 128)\; text-decoration-line: none\; outline: 0
+ px\; display: block\; margin-right: -15px\; margin-left: -15px\; text-shado
+ w: rgba(255\, 255\, 255\, 0.5) 0px 1px 0px\; padding: 3px 15px\; background
+ -color: rgb(238\, 238\, 238)\;">Iran Land Surveyors</a></li></ul>\n\n-::~:~
+ ::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::
+ ~:~::-\nPlease do not edit this section of the description.\n\nThis event h
+ as a Google Hangouts video call.\nJoin: https://hangouts.google.com/hangout
+ s/_/calendar/czE1OHMyMm5jbW83bXFkanNtaG05YnRwZTBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2
+ xlLmNvbQ.3hvifh9v9bmd0amebicsqufnba?hs=121\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-
+LAST-MODIFIED:20180405T223244Z
+LOCATION:Middle East
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Middle Eastern Surveyors Day
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20180624
+DTEND;VALUE=DATE:20180625
+DTSTAMP:20180409T153944Z
+UID:01nroag2fh0rkl5oj5b61nahn2@google.com
+X-GOOGLE-HANGOUT:https://hangouts.google.com/hangouts/_/calendar/czE1OHMyMm
+ 5jbW83bXFkanNtaG05YnRwZTBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ.01nroag2fh0rkl
+ 5oj5b61nahn2
+CREATED:20180405T223503Z
+DESCRIPTION:<span style="color: rgb(0\, 0\, 0)\; font-family: arial\, sans\
+ , sans-serif\; font-size: 13px\; white-space: pre-wrap\; background-color: 
+ rgb(255\, 255\, 255)\;">Celebrate the Land Surveying Profession in countrie
+ s of Oceania region by sharing stories in the Land Surveyors Forums and by 
+ uploading photos of surveying in Oceania to the network to increase public 
+ awarenessAustralia 📍</span><br style="color: rgb(0\, 0\, 0)\; font-family:
+  arial\, sans\, sans-serif\; font-size: 13px\; white-space: pre-wrap\;"><sp
+ an style="color: rgb(0\, 0\, 0)\; font-family: arial\, sans\, sans-serif\; 
+ font-size: 13px\; white-space: pre-wrap\; background-color: rgb(255\, 255\,
+  255)\;">Papua New Guinea📍</span><br style="color: rgb(0\, 0\, 0)\; font-f
+ amily: arial\, sans\, sans-serif\; font-size: 13px\; white-space: pre-wrap\
+ ;"><span style="color: rgb(0\, 0\, 0)\; font-family: arial\, sans\, sans-se
+ rif\; font-size: 13px\; white-space: pre-wrap\; background-color: rgb(255\,
+  255\, 255)\;">New Zealand 📍More</span><br><br><span style="color: rgb(0\,
+  0\, 0)\; font-family: arial\, sans\, sans-serif\; font-size: 13px\; white-
+ space: pre-wrap\; background-color: rgb(255\, 255\, 255)\;"><br></span><br>
+ <span style="color: rgb(0\, 0\, 0)\; font-family: arial\, sans\, sans-serif
+ \; font-size: 13px\; white-space: pre-wrap\; background-color: rgb(255\, 25
+ 5\, 255)\;">Introduce Yourself in the Group's Forum for Your Location:</spa
+ n><br><ul class="nav nav-list" style="padding: 0px 15px\; margin: 0px\; lis
+ t-style: none\; color: rgb(51\, 51\, 51)\; font-family: &quot\;Helvetica Ne
+ ue&quot\;\, Helvetica\, Arial\, sans-serif\;"><li class="nav-header" style=
+ "line-height: 20px\; display: block\; padding: 3px 15px\; font-size: 11px\;
+  font-weight: bold\; color: rgb(153\, 153\, 153)\; text-shadow: rgba(255\, 
+ 255\, 255\, 0.5) 0px 1px 0px\; text-transform: uppercase\; margin-right: -1
+ 5px\; margin-left: -15px\; margin-top: 9px\;">OCEANIA</li><li style="line-h
+ eight: 20px\;"><a href="http://landsurveyorsunited.com/group/surveyorsaustr
+ alia" style="color: rgb(0\, 136\, 204)\; text-decoration-line: none\; displ
+ ay: block\; margin-right: -15px\; margin-left: -15px\; text-shadow: rgba(25
+ 5\, 255\, 255\, 0.5) 0px 1px 0px\; padding: 3px 15px\;">Australia Land Surv
+ eyors</a></li><li style="line-height: 20px\;"><a href="http://landsurveyors
+ united.com/group/papua-new-guinea-surveyors" style="color: rgb(0\, 136\, 20
+ 4)\; text-decoration-line: none\; display: block\; margin-right: -15px\; ma
+ rgin-left: -15px\; text-shadow: rgba(255\, 255\, 255\, 0.5) 0px 1px 0px\; p
+ adding: 3px 15px\;">Papua New Guinea Surveyors</a></li><li style="line-heig
+ ht: 20px\;"><a href="http://landsurveyorsunited.com/group/new-zealand-land-
+ surveyors" style="color: rgb(0\, 85\, 128)\; text-decoration-line: none\; o
+ utline: 0px\; display: block\; margin-right: -15px\; margin-left: -15px\; t
+ ext-shadow: rgba(255\, 255\, 255\, 0.5) 0px 1px 0px\; padding: 3px 15px\; b
+ ackground-color: rgb(238\, 238\, 238)\;">New Zealand Land Surveyors</a></li
+ ></ul>\n\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~::~:~::-\nPlease do not edit this section of the description.
+ \n\nThis event has a Google Hangouts video call.\nJoin: https://hangouts.go
+ ogle.com/hangouts/_/calendar/czE1OHMyMm5jbW83bXFkanNtaG05YnRwZTBAZ3JvdXAuY2
+ FsZW5kYXIuZ29vZ2xlLmNvbQ.01nroag2fh0rkl5oj5b61nahn2?hs=121\n-::~:~::~:~:~:~
+ :~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-
+LAST-MODIFIED:20180405T223503Z
+LOCATION:Oceania
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Oceania Land Surveyors
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR
