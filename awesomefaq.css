@@ -1,9 +1,7 @@
 div.question {background:#eee; color:#000!important;}
 div.at-nb-results,div.at-pagination {color:#eee!important;font-size:2em;}
 div.information {color:#fff!important;}
-iframe,.wrapper {
-    
-    height: 600px;
+card,iframe,.wrapper {
     position: relative;
     border: 5px solid #333;
     margin: 1% auto;
@@ -41,35 +39,4 @@ iframe,.wrapper {
     }
 }
 
-.slider {
-    width: 390px;
-    height: 150px;
-    background-color: #4A148C;
-    color: #fff;
-    position: absolute;
-    left:0;
-    bottom:0px;
-    transform: translateY(50px);
-    transition: all 0.2s ease-in;
-    opacity: 0;
-    padding: 10%;
-    font-family: 'Montserrat', sans-serif;
-    box-sizing: border-box;
 
-    hr {
-        width: 60%;
-        margin-left: 0px !important;
-        color: #e7e7e7;
-    }
-
-    p {
-        font-weight: bold;
-        font-size: 26px;
-        margin-bottom: 5px;
-        margin-top: 5px !important;
-    }
-
-    span {
-        font-size: 22px;
-    }
-}
