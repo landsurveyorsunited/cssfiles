@@ -169,7 +169,7 @@ div.xg_module,.layered-paper {
 }
 
 embed.xg_slideshow {
-  width: 318px!important;
+  width: 100%!important;
   height: 243px!important;
 }
 
@@ -491,11 +491,11 @@ code {
   width: 70%!important;
 }
 
-img.limk-logo,.xg_widget_groups .xg_module_body div.xg_column div.pad5 p strong:first-child {
+.xg_module_body div.xg_column div.pad5 p strong:first-child {
   display: none!important;
 }
 
-.xg_widget_groups div.xg_column div.xg_span-16 div.xg_span-4 div.xg_module
+ div.xg_column div.xg_span-16 div.xg_span-4 div.xg_module
 div.xg_module_head {
   display: none!important;
 }
