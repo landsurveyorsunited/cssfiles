@@ -533,6 +533,7 @@ p.dy-small.xg_lightfont.indent, p.small.xg_lightfont {color:#212121;}
 .xg_widget_groups_group_show
 #comments.xg_module_body {
   height: 1000px;
+	width:100%;
   overflow: auto;
   position: relative;
 }
