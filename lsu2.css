@@ -634,51 +634,18 @@ font-size:1em;
 ul.navigation.byline li a, div.pad5.group_details{background:url(bgtrans.png);width:100%;}
 div.xg_module_body.nopad {background:url(groupmfo.png)no-repeat;width:100%;'Lato', sans-serif;
   font-weight: 700;}
-.xg_widget_groups_group_show .xg_3col, .xg_span-16 {width: 938px;}
-
-.xg_widget_groups_group_show .xg_span-12 {width: 745px;float: right;}
-
-.xg_widget_groups_group_show .xj_classic_sidebar {display: none;}
-
-.xg_widget_groups_group_show .xg_span-8 {width: 555px;margin-top: 32px;}
-.module_photo .body_list .clist img {
-width: 136px;
-height: 102px!important; margin-left:12px;
-}
-/* supergroup classes */
-
-.xg_widget_groups_group_show .xg_span-12 {
-   width:748px;
-}
-
-.xg_widget_groups_group_show .xg_span-12 img {
-max-width:737px;
-_width:expression(this.width > 737 ? 737: true);
-}
-
-.xg_widget_groups_group_show .xg_span-12 .xg_reset img {
-max-width:721px;
-_width:expression(this.width > 721 ? 721: true);
-}
-
-.xg_widget_groups_group_show .xg_span-4 img {
-max-width:120px;
-}
-
-.xg_widget_groups_group .xg_headline-img .tb {
-     margin-left:1px !important;
-}
-
-.xg_widget_groups_group .xg_headline .ib {
-     width:1px !important;
-}
-
-.xg_widget_groups_group .xg_headline-2l .photo,
-.xg_widget_groups_group .xg_headline-2l ul {
-           display: none !important;
-}
-
-.xg_widget_groups_group .xg_module_body .xg_span-8 {
-margin-left:-50px;
-width:571px;
-}
+/* Avatar Member list pg */
+.xg_list_members_feature .dy-avatar img.photo {width:96px!important;}
+/* Widen Groups */
+.xg_widget_groups div.xg_span-12 .xg_module_with_dialog div.xg_module_head {display:none;}
+img.groupicon {position:absolute!important;}
+.pad5.group_details {margin-left:115px!important;margin-top:-20px;}
+.xg_widget_groups #xg_canvas .xg_span-8 { width:730px;}
+.groupicon {width:100px;}
+/* .pad5.group_details {width:760px!important;} */
+.xg_widget_groups_group_show div#column2.xg_column.xg_span-7 {display:none!important;}
+.xg_widget_groups div#xg_body div.xg_column div.xg_span-12 {width:980px!important;}
+/* Widen Group Member Grid */
+.xg_widget_groups div#xg_body div.xg_column div.xg_span-16 div.xg_span-4 div.xg_module {width:965px;}
+.xg_widget_groups div#xg_canvas.xj_canvas div.xg_span-16 div.xg_span-4 {width:955px;}
+.xg_widget_groups div.xg_module .vcard-48grid{width:845px;}
