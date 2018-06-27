@@ -1,0 +1,181 @@
+*:after, *:before {
+ -moz-box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+ box-sizing: border-box;
+}
+a {
+ text-decoration: none;
+ color:red;
+}
+
+footer[role="contentinfo"] {
+  flex: none;
+  height: 600px;
+  background: #212121;
+		color:#fff;
+  vertical-align: middle;
+  align-items: center;
+}
+
+.toggle-box {
+  display: none;
+}
+h1 {
+	color:#212121;
+	font-weight:800;
+	font-size:2em;
+	font-family: 'Source Sans Pro', sans-serif;
+	text-transform:uppercase;
+	dispay:block;
+	width:100%;
+	text-align:center;
+	border:solid 1px rgba(255,255,255,.2);
+	position:relative;
+	text-shadow:0px 1px 2px #000;
+}
+h3 {
+	color:#a12712;
+	font-weight:600;
+	font-size:1.4em;
+	font-family: 'Source Sans Pro', sans-serif;
+	text-transform:uppercase;
+	dispay:block;
+	width:100%;
+	text-align:center;
+	border:solid 1px rgba(255,255,255,.2);
+	position:relative;
+	text-shadow:0px 1px 2px #000;
+}
+.toggle-box + label {
+  cursor: pointer;
+  display: block;
+  font-weight: bold;
+  line-height: 31px;
+  margin-bottom: 5px;
+  color:black;
+}
+.toggle-box + label + div {
+  display: none;
+  margin-bottom: 10px;
+}
+.toggle-box:checked + label + div {
+  display: block;
+}
+.toggle-box + label:before {
+  background-color: #a12712;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  color: #FFFFFF;
+  content: "+";
+  display: block;
+  float: left;
+  font-weight: bold;
+  height: 30px;
+  line-height: 30px;
+  margin-right: 5px;
+  text-align: center;
+  width: 30px;
+}
+.toggle-box:checked + label:before {
+  content: "\2212";
+}
+
+.content__items {z-index:2;display: inline-block}
+
+.quickNav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0; 
+}
+.quickNav::before {
+  content: '';
+  position: absolute;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(234, 32, 39,0.6);
+  opacity: 0;
+  transition: opacity .4s ease;
+  will-change: opacity;
+}
+.quickNav.active::before {
+  opacity: 1;
+}
+.quickNav__items {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #45484d; /* Old browsers */
+background: -moz-linear-gradient(top, #45484d 0%, #000000 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #45484d 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #45484d 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+	color:#fff!important;
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.05);
+  z-index: 1;
+}
+.quickNav__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: .5em 0;
+  text-decoration: none;
+}
+.quickNav__icon {
+  margin: 0 0 .25em;
+  width: 2em;
+  height: 2em;
+  background: #ecf0f1;
+  border-radius: 100%;
+  opacity: .4;
+  transition: opacity .4s ease;
+  will-change: opacity;
+}
+		.quickNav__icon:hover {background: #a12712;}
+.quickNav__item.active .quickNav__icon {
+  opacity: 1;
+}
+.quickNav__label {
+  color: #fff;
+  font-size: .8em;
+  transition: color .4s ease;
+}
+.quickNav__item.active .quickNav__label {
+  background: #00;
+}
+.quickNav__menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #ff3019; /* Old browsers */
+background: -moz-linear-gradient(top, #ff3019 0%, #cf0404 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #ff3019 0%,#cf0404 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #ff3019 0%,#cf0404 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=0 ); /* IE6-9 */
+  box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.05);
+  -webkit-transform: translateY(10%);
+          transform: translateY(10%);
+  transition: -webkit-transform .4s ease;
+  transition: transform .4s ease;
+  transition: transform .4s ease, -webkit-transform .4s ease;
+  will-change: transform;
+}
+.quickNav__menu.active {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+.quickNav__link {
+  display: block;
+  padding: 1em;
+  color: #FFF;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+		
+   
+.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
