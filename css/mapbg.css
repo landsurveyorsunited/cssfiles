@@ -1,0 +1,82 @@
+/* CSS FOR DEWEY BEACH SITE */
+
+#countdown_dashboard {
+	height: 110px;
+	z-index: 100;
+	position: absolute;
+	right: 50px;
+	top: 50px;
+}
+
+.dash {
+	width: 110px;
+	height: 114px;
+	background: transparent url('http://wadehammes.com/dewey-beach/dash.png') 0 0 no-repeat;
+	float: left;
+	margin-left: 20px;
+	position: relative;
+}
+
+.dash .digit {
+	font-size: 74px;
+	font-weight: bold;
+	float: left;
+	width: 55px;
+	text-align: center;
+	/*font-family: 'Helvetic Neue', Helvetica, Geneva, arial, sans-serif;*/
+	font-family: 'Lobster', arial, serif;
+	color: #111;
+	position: relative;
+	text-shadow: 0px 2px 2px #999;
+}
+
+.dash_title {
+	position: absolute;
+	display: block;
+	bottom: 0px;
+	right: 6px;
+	font-size: 9pt;
+	color: #111;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-family: 'Helvetic Neue', Helvetica, Geneva, arial, sans-serif;
+	text-shadow: 0px 1px 1px #5e89a6;
+}
+
+#font {
+	z-index: 100;
+	position: absolute;
+	right: 50px;
+	top:175px;
+	font-family: 'Lobster', arial, serif;
+	font-size: 50px;
+	text-shadow: 0px 2px 2px #5e89a6;
+	width: 525px;
+	text-align: right;
+	color: #111;
+	}
+	
+.text { 
+	float: right; 
+	margin-top: 15px; 
+	width: 525px;
+	}
+	
+.little {
+	font-size: 11pt;
+	font-family: 'Helvetica Neue' Helvetica, arial, sans-serif;
+	text-shadow: none;
+	color: #2e4352;
+	text-shadow: 0px 1px 1px #77a0bc;
+	line-height: 1.4em;
+	}
+	
+.little a {
+	text-decoration: none;
+	color: #2e4352;
+	text-shadow: 0px 1px 1px #77a0bc;
+	}
+	
+.little a:hover {
+	color: #212121;
+	}

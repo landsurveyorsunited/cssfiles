@@ -1,0 +1,280 @@
+/***START CODE****(Library) by (Lady Hekate 2012)*****/
+
+/*HIDE NETWORK NAME AND TAGLINE*/
+#xg_sitedesc { display: none;} #xg_sitename {display: }
+
+/**HIDE TOP NING BAR**/
+#xn_bar {display: none !important;}
+
+/*HIDE FOOTER BAR*/
+#xg_foot, #xg_foot a {display:none!important; }
+.xg_theme #xg_footcontent, #xg_foot {display:none!important; }
+
+/*****MAIN*****/
+.xg_theme #xg {background-color: transparent !important; background-position: center 0px; padding: 0px 0px 0px 0px !important; }
+
+/***** THEME BACKGROUND*****/
+body {
+background: #000000 url(http://1.bp.blogspot.com/-UoIyImvoIgM/TszKxD067LI/AAAAAAAAFOY/TrJV_-u2DCA/s1600/Google+Library+iPad+wallpaper+%2528600x600%2529.jpg) center fixed !important;
+}
+
+/*****HEADER IMAGE*****/
+.xg_theme #xg_masthead {
+margin: 0px 0px 0px 0px !important;
+padding: 0px 0px 0px 0px !important;
+display: block;
+width: auto !important;
+height: 400px;
+background: #000000 url(http://www.delacroix.net/Delacroix%20images/Library.png) center scroll no-repeat;
+border: 7px ridge #CCB280 !important;
+}
+
+/*****NAVIGATION DIMENSIONS*****/
+.xg_theme #xg_navigation {width:auto !important;
+background-position: center 0px !important;margin: 0px !important;
+padding-top: 0px !important;padding-bottom: 0px !important;}
+
+/*****NAVIGATION BACKGROUND & BORDER*****/
+.xg_theme #xg_navigation {
+margin-left: 0em; 
+height: auto !important;
+background: transparent url(http://rootfun.net/images/2012/01/Goth-Wallpaper.jpg) center 0px scroll !important;
+background-repeat: repeat !important;
+border: 3px solid #000000 !important;
+}
+
+/*****NAVIGATION TEXT*****/
+.xg_theme #xg_navigation ul li a {
+padding-left: 7px !important; padding-right: 7px !important;
+text-decoration: none !important;
+font-family: Georgia, Avant Garde;
+font-style: italic;
+font-weight: normal;
+font-size: 14px !important;
+color: #CCB280 !important;
+border: 4px solid transparent !important;
+}
+
+/*****NAVIGATION HOVER*****/
+.xg_theme #xg_navigation ul li.this a,
+.xg_theme #xg_navigation ul li a:hover{
+text-decoration: none !important;
+font-weight: bold;
+background: transparent url(URL IMAGE GOES HERE) no-repeat 0 !important;
+background-position: center !important;
+color: #B2B2B2 !important;
+border: 2px solid transparent !important;
+}
+
+/*****SUB TABS BACKGROUNDS*****/
+.xg_theme #xg_navigation ul div.xg_subtab ul li a{
+margin-left: 0em;
+background: #000000url(URL IMAGE GOES HERE) repeat !important;
+}
+
+/*****SUB TAB TEXT*****/
+.xg_theme #xg_navigation ul div.xg_subtab ul li a {
+padding-left: 7px !important; padding-right: 7px !important;
+text-align: center;
+font-weight: bold;
+font-style: italic;
+text-decoration: none !important;
+font-family: Georgia, Avant Garde;
+font-size: 14px !important;
+color: #B2B2B2 !important;
+}
+
+/*****SUB TAB HOVER*****/
+.xg_theme #xg_navigation ul div.xg_subtab ul li a:hover {
+text-decoration: none !important;
+font-weight: bold;
+background: #000000url(URL IMAGE GOES HERE) repeat !important;
+color: #http://creators.ning.com/forum/topics/styling-groups-with-new-design!important;
+}
+
+/******SUB TABS BORDERS******/
+.xg_theme #xg_navigation ul div.xg_subtab ul li a, .xg_theme #xg_navigation ul div.xg_subtab ul li a, .xg_theme #xg_navigation ul div.xg_subtab ul li a:hover {
+border: 4px ridge #CCB280  !important;
+}
+
+/*****BODY SECTION*****/
+.xg_theme .xg_module {margin-top: 2em;}
+
+/******HEADLINE TEXT BACKGROUND & BORDER******/
+#xg #xg_body h1 {
+padding: 10px 10px 10px 10px;
+text-align: center;
+font-family: Georgia, Avant Garde !important;
+font-style: italic !important;
+font-weight: normal !important;
+font-size: 18px !important;
+color: #999999 !important;
+background-color: transparent;
+background-image: url(http://www.scenicreflections.com/files/Grimoire_Wallpaper_yht10.jpeg);
+background-repeat: no-repeat;
+background-position: center;
+border: 2px solid #000000 !important;
+}
+
+/*Start Welcome*/
+.xg_widget_profiles_profile_show .xg_2col h1 {
+height: 700px;
+background-color:  #000000 !important;
+background-image: url('http://www.scenicreflections.com/files/Grimoire_Wallpaper_yht10.jpeg');
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: ;
+border:  3px #666666 ridge;
+font-family:  verdana;
+color:  #666666;
+font-size:  12px;
+text-align:  center;
+} /*End Welcome___Generated@ SkemaholicsAnonymous.com*/
+
+
+
+/******BODY BACKGROUND*****/
+.xg_theme #xg_body {
+background-position: center 0px !important;
+background-attachment: fixed !important;
+background: transparent url(http://images.desishock.com/upload/f839192c.jpg) !important;
+background-repeat: repeat !important;
+border: 5px ridge #CCB280 !important;
+}
+
+/*****LINKS*****/
+.xg_theme a {
+text-decoration: none !important;
+font-weight: bold !important;
+font-style: italic;
+font-size: 14px !important;
+color: #CCB280 !important;
+}
+
+/*****LINK HOVER*****/
+.xg_theme a:hover {
+text-decoration: none !important;
+font-weight: bold !important;
+font-size: 14px !important;
+background: transparent url(URL IMAGE GOES HERE) no-repeat center 0px !important;
+color: #951008 !important;
+}
+
+/*****MODULE BODY BACKGROUND*****/
+.xg_module_body, .xg_theme .xg_module_foot {
+background: transparent url(http://images.desishock.com/upload/f839192c.jpg) !important;
+background-repeat: repeat !important;
+border: 4px groove #CCB280 !important;
+}
+
+/***** MODULE TEXT & TEXT BOX TEXT*****/
+.xg_module_body, .xg_module_body legend,
+.xg_module_body legend.toggle a,
+.xg_module_foot, .module_text,
+ul.page_tabs li.this {
+padding: 7px 7px 7px 7px;
+font-weight: bold !important;
+font-style: italic !important;
+font-size: 14px !important;
+font-family: Georgia, Avant Garde !important;
+color: #CCB280 !important;
+}
+
+/**** MODULE HEADERS *****/
+.xg_module_head {
+background: transparent url(URL IMAGE GOES HERE) center repeat !important;
+border: 4px ridge #CCB280 !important;
+}
+
+/*****MODULE HEADER TEXT*****/
+.xg_module_head h2 {
+background: transparent !important;
+text-transform: none !important;
+font-size: 14px !important;
+font-weight: bold !important;
+font-style: italic;
+font-family: Georgia, Avant Garde !important;
+color: #CCB280 !important;
+}
+
+/*ROUNDED NAVIGATION BAR (DO NOT REMOVE OR ALTER THIS CODE.  IT IS A FUNCTIONAL CODE NEEDED FOR BOTH CLASSIC AND DESIGN STUDIO THEMES)*/
+#xg_navigation {
+-moz-border-radius-bottomleft:10px;
+-moz-border-radius-bottomright:10px;
+-webkit-border-bottom-right-radius:10px;
+-webkit-border-bottom-left-radius:10px;
+-moz-border-radius-topleft:10px;
+-moz-border-radius-topright:10px;
+-webkit-border-top-right-radius:10px;
+-webkit-border-top-left-radius:10px;
+-moz-border-radius-bottomleft:10px;
+-moz-border-radius-bottomright:10px;
+-webkit-border-bottom-right-radius:10px;
+-webkit-border-bottom-left-radius:10px;
+}
+
+/*CENTER NAVIGATION TEXT (Remove this code if you do not want to center navigation text)*/
+.xg_theme #xg_navigation ul {
+text-align: center;
+margin: 0 auto;
+}
+.xg_theme #xg_navigation ul li {
+display: -moz-inline-box; /* inline-block for earlier versions of FF */
+-moz-box-orient: vertical; /* inline-block for earlier versions of FF */
+display: inline-block;
+vertical-align: middle;
+*display: inline; /* ie7+ hack */
+*vertical-align: auto; /* ie7+ hack */
+text-align: left;
+float: none;
+}
+.xg_theme #xg_navigation ul li a {
+display: inline;
+}
+
+/*CENTER MODULE HEADER TEXT (Remove this code if you do not want to center module header text)*/
+.xg_module_head {text-align: center;margin: 0 auto;}
+.xg_module_head h2 {display: -moz-inline-box;-moz-box-orient: vertical;
+display: inline-block; *vertical-align: middle;*display: inline; text-align: center;float: none;
+}
+
+/* Hello Box */ 
+.xg_theme #xg_module_account, .account-links, .xg_theme #xg_module_body .narrow .viewer { margin-bottom:0px;
+background-color: transparent !important;
+background-image: url(URL IMAGE GOES HERE) !important;
+background-position: center !important;
+background-repeat: no-repeat !important;
+background-attachment: fixed;
+}
+
+/*COMMENT BOX*/
+#xg_profiles_chatterwall_post_comment{
+color: #C2A366;
+font-weight: bold;
+font-style: italic;
+font-family: Georgia, Avant Garde;
+background-color:#000000 !important;
+background-image: url() !important;
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: relative;
+height: 500px !important;
+}
+
+/*Buttons*/
+a.button, button, input.button {
+color: #831518 !important;
+background: transparent !important;
+border: 1px solid #000000 !important; 
+}
+a.button:hover, button:hover, input.button:hover {
+color: #000000 !important;
+border: 1px solid #831518 !important; 
+}
+
+/*****FLOATING CONTAINER*****/
+/*****DO NOT REMOVE***IT'S A FUNCTIONAL CODE****/
+.xg_theme .xg_floating_container {margin-top: -15em !important; width: 600px !important;}
+
+/**END CODE: Basic CSS code developed for use on Classic and Design Studio editors.**/
+/**CREDITS: DO NOT REMOVE****Debbie & Crickettt>Two By Two Design Studio creators at twobytwodesignstudio.ning.com**/

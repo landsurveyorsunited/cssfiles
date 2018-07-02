@@ -1,0 +1,162 @@
+/* Wrangling HTML5 tags */
+article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video{ display: block; }
+mark, rp, rt, ruby, summary, time{ display: inline }
+
+/* The proper box model */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+html, body{ 
+    height: 100%;
+    width: 100%; }
+
+body{
+    background: url(../img/noisy_grid.png);
+    color: #373236;
+    font: normal 500 10px/10px 'Raleway', Helvetica, Arial, Verdana, sans-serif; }
+
+    body:after{
+        box-shadow: 0 0 90px 35px #acacac inset;
+        content: '';
+        display: block;
+        height: 100%;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1; }
+
+    body:before{
+        background: #fff;
+        border-radius: 50%;
+        box-shadow: 0 0 100px 100px #fff;
+        content: '';
+        display: block;
+        height: 300px;
+        left: 50%;
+        margin: -150px 0 0 -150px;
+        position: fixed;
+        top: 50%;
+        width: 300px;
+        z-index: 2; }
+
+    hgroup{
+        margin: 0 auto;
+        position: relative;
+        text-align: center;
+        width: 940px;
+        z-index: 9; }
+
+        h1{
+            font: normal normal 8em/1em 'Didact Gothic', Helvetica, Arial, Verdana, sans-serif;
+            margin: 40px 0 0 0;
+            text-shadow: 0 0 20px #fff;
+            text-transform: uppercase; }
+
+        h2{
+            border-bottom: 1px dashed #1e8cc5;
+            font: normal 500 1.2em/1em 'Raleway', Helvetica, Arial, Verdana, sans-serif;
+            margin: 0 0 40px 0;
+            padding: 0 0 10px 0;
+            text-transform: uppercase; }
+
+             h2 a{
+                border-radius: 4px; 
+                padding: 2px 4px; }
+
+    a{
+        color: #35bde2;
+        text-decoration: none; }
+
+        a:hover{ 
+            background: #35bde2; 
+            color: #fff;             
+            text-shadow: 0 2px 3px #000; }
+
+        a:active{ color: #000 }
+
+    p{
+        color: #fff;
+        font-size: 1.4em;
+        line-height: 1.5em;
+        margin: 0 0 1em 0; }
+
+    ol{
+        background: rgba(235, 234, 235, 0.7);
+        border: 5px solid #fff;
+        border-radius: 20px;
+        box-shadow: 0 0 30px 10px #fff , 0 0 20px 2px rgba(0, 0, 0, 0.5) inset;
+        clear: both;
+        -moz-column-count: 3;
+        -moz-column-gap: 20px;
+        -webkit-column-count: 3;
+        -webkit-column-gap: 20px;
+        column-count: 3;
+        column-gap: 20px;
+        margin: 20px auto;
+        padding: 20px 20px 0 20px;
+        position: relative;
+        width: 980px;
+        z-index: 9; }
+
+        ol li{
+            background: rgba(5, 28, 50, 0.1);
+            border: 2px solid #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2) inset;
+            display: inline-block;
+            list-style: none;            
+            margin-bottom: 20px;
+            padding: 20px;
+            width: 100%; }
+
+            ol li p{ color: #62757c }
+
+            ol li strong{
+                border-bottom: 1px solid #bbb;
+                color: #373236;
+                display: block;
+                float: left;
+                font: normal normal 2em/1em 'Didact Gothic', Helvetica, Arial, Verdana, sans-serif;
+                margin: 0 0 10px 0;
+                padding: 0 0 5px 0;
+                text-transform: uppercase;
+                width: 100%; }
+
+            ol li p:last-child{ margin: 0; }
+
+    footer{
+        clear: both;        
+        float: left;
+        padding: 40px 0 80px 0;
+        position: relative;
+        text-align: center;
+        width: 100%;
+        z-index: 9; }
+
+        footer p{ 
+            color: #2b2925;
+            margin: 0 0 3em 0; }
+
+        footer a{
+            clear: both;
+            color: #0fcdef;
+            display: block;
+            font-size: 2.6em;
+            line-height: 1px;
+            margin: 0 auto;
+            text-shadow: 0 0 10px #fff;
+            text-transform: uppercase;
+            width: auto; }
+
+            footer a:hover{ 
+                background: #acacac;
+                background: -moz-linear-gradient(left, #acacac 5%, #dbdbdf 25%, #0fcdef 41%, #ffffff 50%, #0fcdef 58%, #dbdbdf 76%, #acacac 96%);
+                background: -webkit-gradient(linear, left top, right top, color-stop(5%,#acacac), color-stop(25%,#dbdbdf), color-stop(41%,#0fcdef), color-stop(50%,#ffffff), color-stop(58%,#0fcdef), color-stop(76%,#dbdbdf), color-stop(96%,#acacac));
+                background: -webkit-linear-gradient(left, #acacac 5%,#dbdbdf 25%,#0fcdef 41%,#ffffff 50%,#0fcdef 58%,#dbdbdf 76%,#acacac 96%);
+                background: -o-linear-gradient(left, #acacac 5%,#dbdbdf 25%,#0fcdef 41%,#ffffff 50%,#0fcdef 58%,#dbdbdf 76%,#acacac 96%);
+                background: -ms-linear-gradient(left, #acacac 5%,#dbdbdf 25%,#0fcdef 41%,#ffffff 50%,#0fcdef 58%,#dbdbdf 76%,#acacac 96%);
+                background: linear-gradient(to right, #acacac 5%,#dbdbdf 25%,#0fcdef 41%,#ffffff 50%,#0fcdef 58%,#dbdbdf 76%,#acacac 96%);
+                box-shadow: none;
+                color: #111;
+                text-shadow: 0 0 10px #fff }
+

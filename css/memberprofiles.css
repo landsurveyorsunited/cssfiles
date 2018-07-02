@@ -1,0 +1,78 @@
+/* QA Text In Profile Bio */
+
+/* This line removes the standard profile box back ground and the color is for the text */
+
+.profileCoverArea .profileCoverArea-box .profileCoverArea-bio {background:none ;color:#003300;}
+
+/* This line is for the dashed lines between the questions the color of the lines and a bit of spacing between the answers and the dashed border lines */
+
+.profileCoverArea .profileCoverArea-box .profileCoverArea-bio .profileCoverArea-questionAndAnswer {margin-top:10px; border-bottom: dashed 1px;border-color: brown; }
+
+/* Member Name h2 heading*/
+
+/*The margin at the top is set to -8 to move up the h2 heading more inline with the top of the Q&A box and a little percentage margin at the bottom to move the Q&A text down a little. The padding is for around the members name in the h2 and will increase the height of the h2 according to this setting  */
+
+.profileCoverArea-bio h2 {margin-top:-8px;margin-bottom:3%;padding:3px}
+
+/* Move Profile Avatar up to level of h2 heading */
+
+.profileCoverArea .span2{padding-top:2px}
+
+/* Is Your Friend Notification Button */
+
+.profileCoverArea .profileCoverArea-box .profileCoverArea-avatar .friend {background: none repeat scroll 0% 0% #f0efe4;opacity: .7;border-radius: 12em;}
+
+/* Adjustment for spacing of the "Is Your Friend" "Add As Friend Button" under avatar */
+
+.profileCoverArea-avatar .addFriend, .profileCoverArea-avatar .pending, .profileCoverArea-avatar .groupie, .profileCoverArea-avatar .friend, .profileCoverArea-avatar .accepted {margin-top:6px}
+
+/* Container height Adjustment Of Profile bio Information */
+
+/* The amount you set here for height is the amount for the Q&A box, if you adjust this you will see the scroll bar adjust in it's height. The width is to stretch this box across, I set mine at 55% so it does not move into my logo on the background image. Adjust this as per your own image */
+
+DIV.profileCoverArea-bio.span5{height:155px;width:55%;}
+
+/* This line is to move the like button and social buttons area */
+
+.profileCoverArea-socialButtons > .span-full {padding-top: 5px;padding-bottom:1px;margin-bottom: -15px; }
+
+/* Profile Cover Photo Section Height Adjustment For Image */
+
+.profileCoverArea {height:200px;position: relative;background-repeat: no-repeat;border-radius:8px; box-shadow: 3px 3px 3px gray }
+
+/* This is the height adjustment for the profile box */
+
+DIV.profileCoverArea-box.grid-frame{height:170px}
+
+/* This is the background for the profile box */
+
+DIV.profileCoverArea-box.grid-frame{background-image: url(http://api.ning.com/files/kYLfWN4-a0b3*pjkPHVGl815CWnFjA-2jBVtnTpikS82FkOHR0BoVOJxxNPIO2xT3ygAYR-xjfuY9VLoofIWWnvHGng78lpn/profileboxidcard.png);}
+_
+
+/* This adjusts the profile box to the full width of the span */
+_
+
+.page-members .span8{width:100%;padding-bottom:0.1em}
+_
+
+/* This adjusts the actual profile box to lengthen across the cover photo area adjusting the margins will lengthen or shorten it either side */
+_
+
+.page-members .span16 .row-narrower1, .span-full .row-narrower1 {margin-left:2%;margin-right: 2%;}
+_
+
+/* This adjusts the gap between the profile cover area and the main content below */
+_
+
+.page-members .span16{padding-bottom:0px}
+_
+
+/* Hide Cover Photo Upload Option so users can't change it */
+
+FORM.image-picker.profileCoverArea-coverPhotoForm.transparentFileInputButton{display:none}
+
+/* Bigger Like Button*/
+
+.likeButton {border-radius: 10px; box-shadow: 3px 3px 3px gray; }
+
+ 

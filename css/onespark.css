@@ -1,0 +1,31 @@
+html,body{
+  margin:0;
+  padding:0;
+  }
+body:before{content:",";
+    background-image: url('http://api.ning.com:80/files/Q4Epy2fSOlt5lRkR69fetcrJ9LXbG6G8AFIVJcfcq8Mj60cBUr3piVZDoXb7GiYwifct50EYxNDggJ7MvghAoDbFrmeBrApG/bos.jpg');
+    background-attachment: fixed;
+    background-position: left top;
+    background-size: cover;
+    background-repeat: no-repeat;}
+.header-wrapper{
+  height:600px;
+  width:100%;
+  background: url('http://api.ning.com:80/files/Q4Epy2fSOluCFPztu4X0bCDw9dxqV--yKRXanO2eQvWCk7QQblfY4s6OlSzsgfP-GguqL9TjewsISmQnGTgf-D-Y3vnMU0mi/bos.png') #2d5391;
+animation:wave-anim 1s infinite linear, loading-anim infinite 4s linear alternate;
+  background-size:200px 100px;
+  background-repeat:repeat-x;
+  opacity:1;
+  z-index:1;
+  }
+
+@keyframes wave-anim{
+  0%{background-position:0 bottom}
+  100%{background-position:200px bottom}
+}
+
+@keyframes loading-anim{
+  0%{background-size:200px 100px;height:600px;}
+  100%{background-size:200px 200px;height:0px;}
+}
+

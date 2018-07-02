@@ -1,0 +1,186 @@
+body:before{content:",";
+    background-image: url('http://api.ning.com:80/files/*tHd*uipNJBGGUvVcBWmT0Y6dkwHBrf5Er5b1PPezcUrj6IctXq6EE3ATkIm0ubZTNeo15PALKtCUUrM9WiDf8HzyQ0ebLr3/206.jpg');
+    background-attachment: fixed;
+    background-position: left top;
+    background-size: cover;
+    background-repeat: no-repeat;}
+	
+.sheet{
+border: 0px double #fd0e19;
+background-color: #eae9e5;
+background-repeat: repeat;
+}
+@media screen and (min-width: 481px) {
+  .button.button-iconic > .icon {
+    width: auto;
+    overflow: visible;
+    vertical-align: top;
+  }
+}
+.button.button-iconic:hover,
+.button.button-iconic.is-selected {
+  background-image: none;
+  background-color: #1f1f1f;
+  color: #ffffff;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+.button-tiny {
+  display: inline-block;
+}
+.button-tiny a {
+  padding: 3px 5px;
+  font-size: 11px;
+  border-radius: 2px;
+  border: 1px solid #bbb378;
+  color: #bbb378;
+  text-decoration: none;
+}
+.button-tiny a:hover,
+.button-tiny a.is-selected {
+  border: 1px solid #bbb378;
+  background-color: #bbb378;
+  color: #111111;
+  text-decoration: none;
+}
+.buttonGroup {
+  margin-top: 10px;
+}
+.buttonGroup::before {
+  margin-bottom: 12px;
+  display: block;
+  content: "";
+  height: 0;
+  border-top: 1px solid #cccccc;
+}
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+  vertical-align: middle;
+}
+.subnavline {
+border: none;
+margin-top: 10px;
+} 
+
+.groupHeader-nav {
+		    text-align: center;
+		    list-style: none;
+		    margin: 20px 0 20px;
+		    padding: 0;
+		    line-height: 24px;
+		    height: 26px;
+		    overflow: hidden;
+		    font-size: 12px;
+		    font-family: verdana;
+		    position: relative;
+		}
+		.groupHeader-nav li {
+		    border: 1px solid #AAA;
+		    background: #D1D1D1;
+		    background: -o-linear-gradient(top, #ECECEC 50%, #D1D1D1 100%);
+		    background: -ms-linear-gradient(top, #ECECEC 50%, #D1D1D1 100%);
+		    background: -moz-linear-gradient(top, #ECECEC 50%, #D1D1D1 100%);
+		    background: -webkit-linear-gradient(top, #ECECEC 50%, #D1D1D1 100%);
+		    background: linear-gradient(top, #ECECEC 50%, #D1D1D1 100%);
+		    display: inline-block;
+		    position: relative;
+		    z-index: 0;
+		    border-top-left-radius: 6px;
+		    border-top-right-radius: 6px;
+		    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4), inset 0 1px 0 #555;
+		    text-shadow: 0 1px #FFF;
+		    margin: 0 -5px;
+		    padding: 0 20px;
+		}
+		.groupHeader-nav a span{
+			  color: #555;
+			  text-decoration: none;
+		}
+		.groupHeader-nav li.selected {
+		    background: #3366ff;
+		    color: #333;
+		    z-index: 2;
+		    border-bottom-color: #555;
+		}
+		.groupHeader-nav:before {
+		    position: absolute;
+		    content: " ";
+		    width: 100%;
+		    bottom: 0;
+		    left: 0;
+		    border-bottom: 1px solid #AAA;
+		    z-index: 1;
+		}
+		.groupHeader-nav li:before,
+		.tabrow li:after {
+		    border: 1px solid #AAA;
+		    position: absolute;
+		    bottom: -1px;
+		    width: 5px;
+		    height: 5px;
+		    content: " ";
+		}
+		.groupHeader-nav li:before {
+		    left: -6px;
+		    border-bottom-right-radius: 6px;
+		    border-width: 0 1px 1px 0;
+		    box-shadow: 2px 2px 0 #D1D1D1;
+		}
+		.groupHeader-nav li:after {
+		    right: -6px;
+		    border-bottom-left-radius: 6px;
+		    border-width: 0 0 1px 1px;
+		    box-shadow: -2px 2px 0 #D1D1D1;
+		}
+		.groupHeader-nav li.selected:before {
+		    box-shadow: 2px 2px 0 #FFF;
+		}
+		.groupHeader-nav li.selected:after {
+		    box-shadow: -2px 2px 0 #555;
+		}
+		.groupHeader-nav li a {
+background: none repeat scroll 0 0 #1b1b1b;
+color: #fff;
+margin-right: 5px;
+margin-bottom:1px;
+}
+
+.groupHeader-nav li a:hover {
+background: none repeat scroll 0 0 #1b1b1b;
+color: #fff;
+}
+
+.groupHeader-nav li.groupHeader-tab.current a {
+background: #1b1b1b;
+color: #FFFFFF;
+text-decoration: none;
+}
+.subnavline > li:hover > a, .subnavline > li:hover > span, .subnavline > li.current > a, .subnavline > li.current > span{
+border:none;
+}
+
+.subnavline > li > a, .subnavline > li > span{
+border:none;
+}
+
+.section-blogBundle-6651893-Bundle-1201212 .module-header {
+    background: none repeat scroll 0 0 #EFC13C;
+}
+
+.section-blogBundle-6651893-Bundle-1201212 .module-name {
+    color: #333333;
+    text-shadow: 1px 1px #FFFFFF;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 769px)  {
+.banner-info > h2{color: #fff; background:rgba(0,0,0,0.80);}
+}
+
+SPAN.poweredBy-text{ margin-left:20px }
+.footer-left > a{font-style:italic;color:white!important }
+.footer-left > a:hover{color:gold!important }

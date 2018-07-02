@@ -1,0 +1,123 @@
+﻿/** Map Channels v4 Default CSS  **/
+/* Use this file as a template when creating a custom CSS file */
+
+body
+{
+    font-family:Arial; font-size:12px;
+    margin-top: 0px; margin-bottom: 0px; margin-right: 0px; margin-left: 0px;
+}
+
+html 
+{
+    max-height:100%;overflow:hidden
+}
+
+div.mc4Tooltip
+{
+     color:#000000; background-color:beige; padding:2px; border:solid 1px black; margin:0px;
+}
+
+div.tooltip
+{
+     position:absolute;color:#000000; background-color:beige; padding:2px; border:solid 1px black; margin:0px; white-space:nowrap
+}
+
+div.mc4ListRow { background-color:White; cursor:pointer; padding-top:1px; padding-bottom:1px; margin-left:4px; border-bottom:solid 1px gainsboro  }
+div.mc4ListRow:hover { background-color:beige }
+
+div.mc4ListRowSelected { background-color:Yellow; cursor:pointer; padding-top:1px; padding-bottom:1px; margin-left:4px; border-bottom:solid 1px gainsboro  }
+div.mc4ListRowSelected:hover { background-color:Gold }
+
+
+a.mc4Menu { color: gray; cursor:pointer; background-color:white; text-decoration: none; line-height:30px; border:solid 1px gainsboro; padding:4px; padding-left:8px; padding-right:8px   }
+a.mc4Menu:hover { color: black; background-color:skyblue; border:solid 1px black; }
+
+
+div.mc4SidebarCoordinates
+{
+     font-size:10px; margin-left:4px;
+}
+
+div.mc4InfoWindow
+{
+     /* background-color:white; padding:4px; border:solid 1px gray */
+     /* padding:4px; */
+}
+
+a.mc4InfoName
+{
+     color:#990000; font-weight: bold; font-size:16px; text-decoration:none;
+}
+
+div.mc4InfoName
+{
+     color:#990000; font-weight: bold; font-size:16px;
+}
+
+div.mc4InfoDescription
+{
+     color:gray; font-size: 11px;
+}
+
+
+div.mc4InfoLatLng
+{
+     color:green; font-style:italic; font-size: 10px;
+}
+a.mc4InfoExtra
+{
+     color:red; font-size: 10px;
+}
+
+div.mc4InfoPanel
+{
+    color:black; background-color:white;
+}
+
+div.mc4InfoPanelDescription
+{
+    padding:8px;
+}
+
+div.mc4InfoPanelHeader
+{
+    background-color:black; color:White; padding-top: 4px; padding-left: 4px;
+}
+
+div.mc4InfoPanelTitle
+{
+    color:Yellow; font-weight:bold;
+}
+
+a.mc4InfoPanelControl
+{
+    color:white; font-weight:bold; text-decoration:none;
+}
+
+a.mc4InfoPanelControl:hover   
+{
+     color: yellow; 
+}
+
+div.mc4mapControlUI 
+{
+	 filter:alpha(opacity=50); opacity:0.5; background-color:#FFFFFF; color:#000000; border-style:solid; border-width: 1px; text-align:center; cursor:pointer; 
+}
+
+div.mc4mapControlText 
+{
+	 font-family:Arial, Sans-Serif; font-size:12px; padding-left:4px; padding-right:4px; padding-top:2px; padding-bottom:2px;
+}
+
+div.mc4Header
+{
+}
+
+div.mc4Footer
+{
+}
+
+div.mc4About
+{
+     background-color: white;
+}
