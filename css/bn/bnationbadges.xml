@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+<ModulePrefs title="Open Badges Issuer Gadget" width="800" height="700" author="Justin Farrow"
+description="This gadget allows you to integrate the the Mozilla Open Badges Issuer API into Google Sites. To use insert into a Google site and set a base url for your hosted assertions. To allow users to collect their badges direct them to the web address of the Site page containing the gadget adding ?claim_code={insert the rest of their assertion url} to the url"
+author_email="justin@beautifulnationproject.org" scrolling="true"
+title_url="http://www.beautifulnationproject.org" author_affiliation="http://www.beautifulnationproject.org"
+screenshot="https://lh3.googleusercontent.com/-TqTcrKbb1dg/ULy8Iyb318I/AAAAAAAABo8/uZId4bI5G5s/s800/gadget-screenshot-280.png"
+thumbnail="https://lh5.googleusercontent.com/-cBAUZxwrM4A/ULy8IzXNlyI/AAAAAAAABpA/-dB90Stogww/s800/gadget-screenshot-120.png"/>
+<UserPref name="script_url" display_name="Base Url" datatype="string" default_value="" required="true"/>
+<Content type="html">
+<![CDATA[ <script src="https://beta.openbadges.org/issuer.js"></script>
+<script type="text/javascript">
+<!--
+var code = []; // initialize assesor array
+var prefs = new gadgets.Prefs();
+// Modification of http://stackoverflow.com/a/647272/1027723/
+function getQueryString() {
+var ref = document.referrer;
+var qs= ref.split('?');
+var result = {}, queryString = qs[1],
+re = /([^&=]+)=([^&]*)/g, m;
+while (m = re.exec(queryString)) {
+result[decodeURIComponent(m[1])] = decodeURIComponent(m[2]);
+}
+return result;
+}
+function init() {
+var base_url = prefs.getString("script_url");
+var codes = getQueryString().claim_code;
+code = codes.split(",");
+if (codes != "") {
+for ( var i = 0; i < code .length; i++ ) {
+code[i] = base_url + code[i];
+}
+document.getElementById("collectBadge").style.display='block';
+document.getElementById("msg").style.display='none';
+}
+}
+gadgets.util.registerOnLoadHandler(init);
+// -->
+</script>
+<p id="msg">No claim code</p>
+<p id="collectBadgeWrapper"><a href='javascript:void(0);' onclick='OpenBadges.issue(code, function(errors, successes)
+{ });' id="collectBadge" style="display:none">Claim your badge</a>
+</p> ]]>
+</Content>
+</Module> 

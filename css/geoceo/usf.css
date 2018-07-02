@@ -1,0 +1,13 @@
+body:before{content:",";
+    background-image: url('http://api.ning.com:80/files/tZHhhMhD8MBTFyPTTKgH2Ji1dwvujruUaJCpmpMjFVkJ4gzzHGc7*jv5MTp7wumE8FS8ODzHDMGR2EpRhCu5gHWK9XVRRfo1/bodybak.jpg');
+    background-attachment: fixed;
+    background-position: left top;
+    background-size: cover;
+    background-repeat: repeat-x;}
+	
+.sheet{
+border: 0px double #fd0e19;
+background-color: #eae9e5;
+background-repeat: repeat;
+}
+

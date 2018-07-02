@@ -1,0 +1,68 @@
+body {
+	height:100%;
+	background-attachment:fixed;
+    padding:0px;
+    margin:0px;
+    background-image: url('http://api.ning.com/files/M6EoYmTnuquGVo5pCsYqPwljxvGK*K*v08kZrFsqfkWYI6UdvA5G8UKMh6ZJIxkyXqbf6EtsyUQfsHp5FoCGOQhUDmxkPcua/surveyors.jpg');
+    /*Change this url to your panorama image*/
+    background-repeat:no-repeat;
+    background-position:0%;
+    background-size:auto;
+    animation-name:backgroundanimation;
+    animation-duration:50s;
+    animation-timing-function:linear;
+    animation-delay:0s;
+    animation-iteration-count:infinite;
+    animation-direction:alternate;
+    animation-play-state:running;
+    /* Firefox: */
+    -moz-animation-name:backgroundanimation;
+    -moz-animation-duration:50s;
+    -moz-animation-timing-function:linear;
+    -moz-animation-delay:0s;
+    -moz-animation-iteration-count:infinite;
+    -moz-animation-direction:alternate;
+    -moz-animation-play-state:running;
+    /* Safari and Chrome: */
+    -webkit-animation-name:backgroundanimation;
+    -webkit-animation-duration:50s;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-delay:0s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-direction:alternate;
+    -webkit-animation-play-state:running;
+    /* Opera: */
+    -o-animation-name:backgroundanimation;
+    -o-animation-duration:50s;
+    -o-animation-timing-function:linear;
+    -o-animation-delay:0s;
+    -o-animation-iteration-count:infinite;
+    -o-animation-direction:alternate;
+    -o-animation-play-state:running;
+}
+@keyframes backgroundanimation {
+    from {background-position:0%;}
+    to {background-position:100%}
+}
+
+@-moz-keyframes backgroundanimation {
+    from {background-position:0%;}
+    to {background-position:100%}
+}
+
+@-webkit-keyframes backgroundanimation {
+    from {background-position:0%;}
+    to {background-position:100%}
+}
+
+@-o-keyframes backgroundanimation {
+    from {background-position:0%;}
+    to {background-position:100%}
+}
+.linkbar mainTab,.navbar ul > li > a {
+color:#fff;
+}
+
+.navbar > ul > li.active > a {
+color:#a12712;
+}

@@ -1,0 +1,20 @@
+html{ border: 0px double #000;
+background-image: url(http://ui.agastya.org/images/html-bg.png)repeat;
+background-color: #e48f2e;
+}
+.sheet {background:url(http://ui.agastya.org/images/html-bg.png)repeat;-webkit-border-radius: 5px;
+border-radius: 5px;}
+.myspan {
+    display: block;
+}
+ul.xg_subtab {background-color:#e48f2e;}
+a {color:#000;}
+p {color:#ffffff;}
+.container-inner {background-color:#ebdca2;}
+ul.xg_subtab li a {color:#eee;font-family: 'Lato',san-serif; font-weight:400;}
+ul.xg_subtab li a:hover {color:#2c6ba1;}
+ul.xg_subtab li {color:#2c6ba1;-webkit-border-radius: 5px;
+border-radius: 5px;}
+ul.xg_subtab li:hover {color:#eee;}
+.span-full {background-color:#ebdca2;-webkit-border-radius: 5px;
+border-radius: 5px;}

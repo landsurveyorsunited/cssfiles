@@ -1,0 +1,112 @@
+body:before{content:",";
+    background-image: url('http://api.ning.com:80/files/OVFVLXLi8jlH5XW8WdNPES5Dh3C*emWvjQJzxfKLsYDEJWDphUnOgjXRAVgGwHYNikGt0VTMBGufFhLqbfmdo-QPWlT-MYuy/background.jpg');
+    background-attachment: fixed;
+    background-position: left top;
+    background-size: cover;
+    background-repeat: no-repeat;}
+	
+.sheet{
+border: 0px double #fd0e19;
+background-color: #eae9e5;
+color:#212121;
+background-repeat: repeat;
+}
+@media screen and (min-width: 481px) {
+  .button.button-iconic > .icon {
+    width: auto;
+    overflow: visible;
+    vertical-align: top;
+  }
+}
+.button.button-iconic:hover,
+.button.button-iconic.is-selected {
+  background-image: none;
+  background-color: #1f1f1f;
+  color: #ffffff;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+.button-tiny {
+  display: inline-block;
+}
+.button-tiny a {
+  padding: 3px 5px;
+  font-size: 11px;
+  border-radius: 2px;
+  border: 1px solid #bbb378;
+  color: #bbb378;
+  text-decoration: none;
+}
+.button-tiny a:hover,
+.button-tiny a.is-selected {
+  border: 1px solid #bbb378;
+  background-color: #bbb378;
+  color: #111111;
+  text-decoration: none;
+}
+.buttonGroup {
+  margin-top: 10px;
+}
+.buttonGroup::before {
+  margin-bottom: 12px;
+  display: block;
+  content: "";
+  height: 0;
+  border-top: 1px solid #cccccc;
+}
+.subnavline {
+border: none;
+margin-top: 10px;
+} 
+
+.groupHeader-nav li a {
+background: none repeat scroll 0 0 #1b1b1b;
+border: medium none;
+border-radius: 3px;
+color: #eae9e5;
+margin-right: 5px;
+margin-bottom:1px;
+font-size:1em;
+}
+li.tabContainerSection-tab {color:212121;}
+.groupHeader-nav li a:hover {
+background: none repeat scroll 0 0 #9b59b6;
+color: #000;
+}
+
+.groupHeader-nav li.groupHeader-tab.current a {
+background: #9b59b6;
+color: #000;
+text-decoration: none;
+}
+.subnavline > li:hover > a, .subnavline > li:hover > span, .subnavline > li.current > a, .subnavline > li.current > span{
+border:none;
+}
+
+.subnavline > li > a, .subnavline > li > span{
+border:none;
+}
+.tweety {background: none repeat scroll 0 0 #000;
+border: medium none;
+width:170px;
+align:center;
+border-radius: 3px;
+  font-size:1.5em;
+color: #000;
+margin-right: 5px;
+margin-bottom:1px;}
+.tweety a {color:#22b2d6;}
+.tweety:hover {background: none repeat scroll 0 0 #22b2d6;
+border: medium none;
+  width:170px;
+border-radius: 3px;
+color: #000;
+margin-right: 5px;
+margin-bottom:1px;}
+.tweety a:hover {color:#000;}
+h3.module-name {color:#000;}
+SPAN.poweredBy-text{ margin-left:20px }
+.footer-left > a{font-style:italic;color:white!important }
+.footer-left > a:hover{color:gold!important }

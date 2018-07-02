@@ -1,0 +1,13 @@
+body:before{content:",";
+    background-image: url('http://api.ning.com:80/files/wdDZeipuIRwHN0pFZBWmbn6is3IrjaXwkXBek2BdxzTZKhPhzCxA0OM-eMe9gQrwpQUJk5zfjNQQmFMlI036WtYpan9hwd1I/kirbati.gif');
+    background-attachment: fixed;
+    background-position: left top;
+    background-size: cover;
+    background-repeat: no-repeat;}
+	
+.sheet{
+border: 0px double #fd0e19;
+background-color: #eae9e5;
+background-repeat: repeat;
+}
+

@@ -1,0 +1,13 @@
+﻿body{content:",";
+    background-image: url('http://api.ning.com/files/3eDg1OQAIQSwOuWtgbFqTPnK-4RNae*ewUL3thyTKIHf7ZO9-*d2B5DHOkS3MVYuY4U-QwHf-BUeU6jQTb*mtsBdua2AIpFN/SOUTHAMERICA.jpg');
+    background-attachment: fixed;
+    background-position: left top;
+    background-size: cover;
+    background-repeat: no-repeat;}
+body{content:",";
+  background: linear-gradient(135deg, rgba(198,33,69,0.75) 0%,rgba(198,117,45,0.75) 100%), url("https://dl.dropboxusercontent.com/u/49702/images/pattern.svg"), url("http://api.ning.com/files/3eDg1OQAIQSwOuWtgbFqTPnK-4RNae*ewUL3thyTKIHf7ZO9-*d2B5DHOkS3MVYuY4U-QwHf-BUeU6jQTb*mtsBdua2AIpFN/SOUTHAMERICA.jpg") fixed;
+	background-repeat: repeat, repeat, no-repeat;
+	background-position: center center;
+	-webkit-background-size: 100%, 15%, cover;
+   background-size: 100%, 15%, cover;
+}	

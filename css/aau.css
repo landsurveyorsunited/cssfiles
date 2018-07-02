@@ -1,0 +1,14 @@
+body { border: 0px double #ff6600;
+background-image: url(http://www.aausports.org/Portals/0/aausports-generic-full-page2b.jpg);
+background-color: transparent;
+background-repeat: repeat;
+background-position: left top;
+background-attachment: fixed;
+}
+.sheet{
+border: 0px double #ff6600;
+background-image: url(http://www.wsls.org/templates/yoo_crystal/images/module_transparent_bg_2.png);
+background-color: transparent;
+background-repeat: repeat;
+}
+
