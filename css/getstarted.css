@@ -1,0 +1,38 @@
+
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+gspan {
+  font-family: 'entypo', sans-serif;
+  color: #000;
+  display: inline-block;
+  font-size: 1.2em;
+  margin-right: .7em;
+  position: relative;
+  transition: all .4s;
+}
+
+gbutton {
+  text-transform: uppercase;
+  display: block;
+  letter-spacing: 1px;
+  margin: 2em auto;
+  background-color: #fff;
+  border: 1px solid #000;
+  outline: none;
+  width: 30%;
+  padding: 1em 0;
+  box-shadow: 3px 3px 0px #000;
+  transition: all .4s ease-in-out;
+  &:hover {
+    background-color: #000;
+    color: white;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+    box-shadow: 0 0 0;
+  }
+}
+
+gbutton:hover gspan {
+   @include transform(rotate(360deg));
+   color: white;
+}

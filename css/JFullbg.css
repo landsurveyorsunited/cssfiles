@@ -1,0 +1,93 @@
+body { border: 0px double #fd0e19;
+background-image: url(http://api.ning.com:80/files/Hu6bOG3IkcToFG4lY**s*Kq36nBty4aoiOr0b2ZL3PnL6Jj6*MEQFc0nI-9yiUoIiB5d4wfxictpJBA-ijD1ZQMKM2ShaLY*/documentslibrarybg.jpg);
+background-color: transparent;
+background-repeat: repeat;
+background-position: left top;
+background-attachment: fixed;
+}
+.sheet{
+border: 0px double #fd0e19;
+background-image: url(http://www.wsls.org/templates/yoo_crystal/images/module_transparent_bg_2.png);
+background-color: transparent;
+background-repeat: repeat;
+}
+#JFullbg {
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+	
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+}
+#JFullbg {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+}
+#JFullbg img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+}
+/* Social media buttons */	
+	.tw, .fb,
+	.tw:hover, .fb:hover
+	{
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.5)), to(rgba(255,255,255,0)));
+        background-image: -webkit-linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+        background-image: -moz-linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+        background-image: -ms-linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+        background-image: -o-linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+        background-image: linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+	}
+
+	.tw, .tw:focus
+	{
+	  background-color: #88E1E6;
+	}
+	
+	.fb, .fb:focus
+	{
+	  background-color: #3C5A98;
+	  color: #fff;	  
+	  text-shadow: 0 1px 0 rgba(0,0,0,.4);		
+	}
+
+	.tw:hover
+	{
+	  background-color: #b1f0f3;
+	}
+	
+	.fb:hover
+	{
+	  background-color: #879bc3; 
+	}
+	
+    .tw:before
+    {
+        content: "t";
+        background: #91cfd3;
+        background: rgba(0,0,0,.1);		
+		color: #fff;
+		font-family: verdana;
+		text-shadow: 0 1px 0 rgba(0,0,0,.4);
+    }
+    
+    .fb:before
+    {
+        content: "f";
+        background: #4467ac;
+        background: rgba(0,0,0,.1);		
+		color: #fff;	
+		text-shadow: 0 1px 0 rgba(0,0,0,.4);
+    }
+
+

@@ -1,0 +1,16 @@
+body { border: 0px double #fd0e19;
+background-image: url(http://api.ning.com:80/files/th4*NBWP6GM0AfpI7y51goC8x1Zh*bo6bTQHyjt1pCTJe095EmocD4bAicfUSyvuO7r--W7Gx1cE2kk4M9rnt4hMfxisIvfT/gis.jpg);
+background-color: transparent;
+background-repeat: repeat-x;
+background-position: center top;
+background-attachment: fixed;
+}
+.xg_widget_groups .xg_headline .tb ul.byline li{
+display:none !important;
+}
+.xg_widget_groups .dy-avatar-64{
+display:none;
+}
+.myspan {
+    display: block;
+}

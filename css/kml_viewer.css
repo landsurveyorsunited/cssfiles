@@ -1,0 +1,52 @@
+
+
+
+
+
+/*
+     FILE ARCHIVED ON 20:54:39 Mar 8, 2013 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:29:04 Oct 2, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+@CHARSET "ISO-8859-1";
+
+.map_solo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+}
+
+#data_list {
+ overflow: auto;
+}
+
+.map_narrow {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 75%; 
+  height: 100%;
+}
+.sidebar {
+  position: absolute;
+  left: 75%;
+  top: 0;
+  width: 25%; 
+  height: 100%;
+}
+
+#data_list a {
+  font-size: 80%;
+  margin: 0.4em 0.5em 0.4em 1em;
+  display: block;
+  text-indent: -0.5em;
+}
+#data_list br {
+  display: none;
+}
+

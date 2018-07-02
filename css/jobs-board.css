@@ -1,0 +1,44 @@
+body {
+  font-family: 'Futura', 'Century Gothic', 'AppleGothic', serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: rgba(68,68,68,0);
+  background-image: url("http://api.ning.com:80/files/UytU4r62uFNUkH7qZFh1GIwW1IqiAMmLQ4UCL9yA622RQSpDpTzdYWznVbhXWrUkUiSvPAVC20vik89fsVo*DmQrRvk7JUQp/023.jpg");
+  background-attachment: fixed;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #3b3b3b;
+}
+div.content{
+border: 0px double #fd0e19;
+background-image: url("http://api.ning.com/files/4NHhjdQBWB6miE2abOiMMEuO*PUJwDFdPmVZqukR240EyvAa*mK9YgTx0cgDpHR28rag2Fngt3sZ*52JU61MYBN*oKeIDJp3/parcelbackground.JPG");
+background-color: transparent;
+background-repeat: repeat;
+}
+div.side{
+border: 0px double #fd0e19;
+background-image: url("http://api.ning.com/files/4NHhjdQBWB6miE2abOiMMEuO*PUJwDFdPmVZqukR240EyvAa*mK9YgTx0cgDpHR28rag2Fngt3sZ*52JU61MYBN*oKeIDJp3/parcelbackground.JPG");
+background-color: transparent;
+background-repeat: repeat;
+}
+
+.MBT-FB a {
+  font-family: tahoma, verdana, arial, sans-serif !important;
+  font-weight:bold !important;
+  font-size:12px !important;
+  width:150px !important;
+  border:solid #29447e 1px !important;
+  border-bottom:solid #29447e 1px !important;
+  cursor:pointer !important;
+  padding:6px 6px 6px 6px !important;
+  background-color:#5c75a9 !important;
+  border-top:solid #8a9cc2 1px !important;
+  text-align:center !important;
+  color:#fff !important;
+  text-decoration:none  ! important;
+ }
+ .MBT-FB a:active {
+  background-color:#4f6aa3 !important;
+ }

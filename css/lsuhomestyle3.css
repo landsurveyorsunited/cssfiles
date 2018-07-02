@@ -1,0 +1,111 @@
+body {
+margin: 0 auto;
+padding: 0;
+background-color: #f5f5f5;
+width: 600px;
+}
+h1 {
+color: #cd0000;
+font-family: Comfortaa;
+font-size: 42px;
+letter-spacing: -2px;
+text-align: left;
+}
+
+.button {
+background-image: url(http://api.ning.com:80/files/JQ-DgHe7*mD36dHAmw8skrrSZ-nol0iS7hSqyDvskO56k8XO5zqvBpOA68XmHiJv3LeSNGcolkIikVVst3CmNg__/redbg.png);
+font-family: Coustard;
+padding-right: 10px;
+padding-left: 10px;
+background-repeat: repeat-x;
+color: black;
+}
+address {
+color: black;
+font-family: Coustard;
+}
+.layered-paper {
+background: #eeeeee none repeat scroll 0% 50%;
+}
+.lbutton {
+border-top: 1px solid #96d1f8;
+padding: 15.5px 31px;
+background: #ba2929 none repeat scroll 0% 50%;
+-moz-border-radius-topleft: 8px;
+-moz-border-radius-topright: 8px;
+-moz-border-radius-bottomright: 8px;
+-moz-border-radius-bottomleft: 8px;
+color: white;
+font-size: 14px;
+font-family: Coustard;
+text-decoration: none;
+vertical-align: middle;
+}
+p {
+font-family: Coustard;
+font-size: 12px;
+}
+.lbutton:hover {
+background: #090b0d none repeat scroll 0% 50%;
+border-top-color: #090b0d;
+color: #cccccc;
+}
+.lbutton:active {
+background: #ed1717 none repeat scroll 0% 50%;
+border-top-color: #ed1717;
+}
+.more {
+margin: 0 auto;
+padding: 25px 0px;
+position: relative;
+clear: both;
+font-size: 10px;
+text-transform: uppercase;
+width: 390px;
+height: 50px;
+}
+.more ul {
+display: block;
+text-align: center;
+}
+.more ul li {
+padding: 4px 2px;
+display: block;
+float: left;
+}
+.more ul li.selected a, .more ul li.selected a:hover {
+background: #c52e00 none repeat scroll 0% 50%;
+color: #ffffff;
+text-shadow: none;
+font-weight: bold;
+}
+.more ul li a {
+padding: 2px 5px;
+background: #ffffff none repeat scroll 0% 50%;
+color: #555555;
+float: left;
+width: 64px;
+}
+.more ul li a:hover {
+background: #990000 none repeat scroll 0% 50%;
+color: #ffffff;
+}
+h2 {
+font-family: Comfortaa;
+font-size: 15px;
+}
+span.reference {
+position: fixed;
+left: 10px;
+bottom: 10px;
+font-size: 11px;
+}
+span.reference a {
+color: #ffffff;
+text-decoration: none;
+text-transform: uppercase;
+text-shadow: #000000 0 1px 0;
+}
+span.reference a:hover {
+color: #f0f0f0;
+}

@@ -1,0 +1,250 @@
+﻿body {
+margin: 0 auto;
+padding: 0;
+background-color: #f5f5f5;
+width: 600px;
+}
+h1 {
+color: #cd0000;
+font-family: Comfortaa;
+font-size: 42px;
+letter-spacing: -2px;
+text-align: left;
+}
+.list {
+border: 1px solid #dedede;
+padding: 0 ! important;
+color: #555555;
+font-size: 22px;
+width: 500px;
+font-family: courier,monospace;
+}
+.list li {
+border-bottom: 1px dotted #cccccc;
+padding: 10px;
+list-style-type: none;
+list-style-image: none;
+list-style-position: outside;
+text-indent: 25px;
+height: auto;
+text-transform: capitalize;
+}
+.list li:hover {
+background-color: #f0f0f0;
+}
+.lines {
+border-left: 1px solid #ffaa9f;
+border-right: 1px solid #ffaa9f;
+width: 2px;
+float: left;
+height: 495px;
+margin-left: 40px;
+}
+address {
+color: #cc0000;
+}
+.button {
+background-image: url(http://api.ning.com:80/files/JQ-DgHe7*mD36dHAmw8skrrSZ-nol0iS7hSqyDvskO56k8XO5zqvBpOA68XmHiJv3LeSNGcolkIikVVst3CmNg__/redbg.png);
+font-family: Coustard;
+padding-right: 10px;
+padding-left: 10px;
+background-repeat: repeat-x;
+color: black;
+}
+address {
+color: black;
+font-family: Coustard;
+}
+.layered-paper {
+background: #eeeeee none repeat scroll 0% 50%;
+}
+.lbutton {
+border-top: 1px solid #96d1f8;
+padding: 15.5px 31px;
+background: #ba2929 none repeat scroll 0% 50%;
+-moz-border-radius-topleft: 8px;
+-moz-border-radius-topright: 8px;
+-moz-border-radius-bottomright: 8px;
+-moz-border-radius-bottomleft: 8px;
+color: white;
+font-size: 14px;
+font-family: Coustard;
+text-decoration: none;
+vertical-align: middle;
+}
+p {
+font-family: Coustard;
+font-size: 12px;
+}
+.lbutton:hover {
+background: #090b0d none repeat scroll 0% 50%;
+border-top-color: #090b0d;
+color: #cccccc;
+}
+.lbutton:active {
+background: #ed1717 none repeat scroll 0% 50%;
+border-top-color: #ed1717;
+}
+.more {
+margin: 0 auto;
+padding: 25px 0px;
+position: relative;
+clear: both;
+font-size: 10px;
+text-transform: uppercase;
+width: 390px;
+height: 50px;
+}
+.more ul {
+display: block;
+text-align: center;
+}
+.more ul li {
+padding: 4px 2px;
+display: block;
+float: left;
+}
+.more ul li.selected a, .more ul li.selected a:hover {
+background: #c52e00 none repeat scroll 0% 50%;
+color: #ffffff;
+text-shadow: none;
+font-weight: bold;
+}
+.more ul li a {
+padding: 2px 5px;
+background: #ffffff none repeat scroll 0% 50%;
+color: #555555;
+float: left;
+width: 64px;
+}
+.more ul li a:hover {
+background: #990000 none repeat scroll 0% 50%;
+color: #ffffff;
+}
+h2 {
+font-family: Comfortaa;
+font-size: 15px;
+}
+span.reference {
+position: fixed;
+left: 10px;
+bottom: 10px;
+font-size: 11px;
+}
+span.reference a {
+color: #ffffff;
+text-decoration: none;
+text-transform: uppercase;
+text-shadow: #000000 0 1px 0;
+}
+span.reference a:hover {
+color: #f0f0f0;
+}
+.box {
+margin: 100px auto 0;
+background-color: transparent;
+background-repeat: no-repeat;
+height: 530px;
+width: 100%;
+position: relative;
+background-position: center center;
+}
+.box h2 {
+border-style: ridge ridge solid;
+border-color: #0e5a85;
+border-width: 0px;
+padding: 10px;
+color: #ffffff;
+font-size: 22px;
+text-shadow: #000000 1px 1px 1px;
+background-color: transparent;
+}
+ul.ldd_menu {
+border-top: 1px solid #ef593b;
+border-left: 10px solid #333333;
+border-bottom: 1px solid #ef593b;
+margin: 0px;
+padding: 0;
+display: block;
+height: 50px;
+list-style-type: none;
+list-style-image: none;
+list-style-position: outside;
+font-family: "Trebuchet MS",sans-serif;
+background-color: #333333;
+}
+ul.ldd_menu a {
+text-decoration: none;
+}
+ul.ldd_menu > li {
+float: left;
+position: relative;
+}
+ul.ldd_menu > li > span {
+border-left: 1px solid #c44d37;
+border-right: 1px solid #df7b61;
+padding: 0px 20px;
+float: left;
+color: #ffffff;
+background-color: #333333;
+height: 50px;
+cursor: default;
+text-shadow: #ffffff 0px 0px 1px;
+line-height: 50px;
+z-index: 2;
+}
+ul.ldd_menu .ldd_submenu {
+border-top: 1px solid #ef593b;
+background: #c34328 none repeat scroll 0% 50%;
+position: absolute;
+top: 50px;
+width: 550px;
+display: none;
+opacity: 0.95;
+left: 0px;
+font-size: 10px;
+font-weight: bold;
+font-family: Arial,Helvetica,sans-serif;
+z-index: 2;
+}
+a.ldd_subfoot {
+padding: 15px 20px;
+background-color: #f0f0f0;
+display: block;
+clear: both;
+text-transform: uppercase;
+font-family: Arial,serif;
+font-size: 12px;
+text-shadow: #ffffff 0px 0px 1px;
+color: #3366ff;
+font-weight: bold;
+z-index: 2;
+}
+ul.ldd_menu ul {
+border-left: 1px solid #df7b61;
+margin: 20px 0px 10px 30px;
+padding: 10px;
+list-style-type: none;
+list-style-image: none;
+list-style-position: outside;
+float: left;
+}
+li.ldd_heading {
+padding: 0px 0px 10px;
+font-style: italic;
+text-shadow: #b03e23 0px 0px 1px;
+font-weight: bold;
+color: black;
+font-family: georgia,serif;
+font-size: 13px;
+}
+ul.ldd_menu ul li a {
+padding: 1px 3px;
+font-family: Arial,serif;
+line-height: 20px;
+color: #ffffff;
+font-size: 12px;
+}
+ul.ldd_menu ul li a:hover {
+background: #af412b none repeat scroll 0% 50%;
+}
