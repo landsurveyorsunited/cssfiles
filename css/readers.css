@@ -1,0 +1,31 @@
+label{
+float: left;
+width: 80px;
+font-weight: bold;
+}
+body {
+	font: 11px Verdana, Arial, Helvetica, sans-serif;
+}
+
+input, textarea{
+margin-bottom: 5px;
+}
+
+#boxes{
+font-weight: bold;
+margin-bottom: 5px;
+}
+
+br{
+clear: left;
+}
+
+#instruction{
+	font: 11px Verdana, Arial, sans-serif;
+	background: #F2EFE9;
+	margin: 5px;
+	padding: 5px;
+	width: 90%;
+	border: 1px solid #808080;
+	color: #303030;
+}

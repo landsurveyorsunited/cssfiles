@@ -1,0 +1,85 @@
+#stickey_footer {
+  margin: 0 auto 0 -490px;
+  padding: 0 10px;
+  background: #1d1d1d none repeat scroll 0 50%;
+  bottom: 0;
+  font-family: Arial,Helvetica,sans-serif;
+  height: 40px;
+  left: 50%;
+  position: fixed;
+  text-shadow: #000000 1px 1px 1px;
+  width: 975px;
+  z-index: 2;
+  -webkit-border-radius: 3px 3px 0px 0px;
+border-radius: 3px 3px 0px 0px;
+}
+#stickey_footer {
+  -moz-border-radius-topleft: 10px;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-bottomright: 0px;
+  -moz-border-radius-bottomleft: 0px;
+}
+#stickey_footer:hover {
+  background: #2b2a2a none repeat scroll 0 50%;
+}
+#stickey_footer {
+}
+#footer_menu {
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+#footer_menu li {
+  padding: 5px 6px 6px;
+  list-style-type: none;
+  list-style-image: none;
+  list-style-position: outside;
+  float: left;
+  font-size: 13px;
+}
+#footer_menu .imgmenu {
+  border:  none;
+  padding: 5px 8px 3px 14px;
+  background: transparent url(http://api.ning.com:80/files/2xmvS7IAtKp*5UJVG3BWiF7akCFbH15i*MiupvnsiUB5AiO0OErdckiwo*CJ3nXugu6jOndXL*sxyNe1430j8WXHv-jvcKGY/tc.png) no-repeat scroll 13px 5px;
+  float: left;
+  width: 24px;
+  height: 20px;
+  cursor: pointer;
+}
+#footer_menu li:hover {
+  background: #202020 none repeat scroll 0% 50%;
+}
+#footer_menu .imgmenu:hover {
+  background: transparent url(http://api.ning.com/files/DcV5-HA7lo-W46uf5Nx0BGbM01iJl8AryyfwFbU7fwdJcIezsKs9Zr3NpPCC4kFE81NwjDMQ23NprVuXP*9EQThXfIy2TEQW/home_hover.png) no-repeat scroll 13px 5px;
+}
+#footer_menu li a {
+  display: block;
+  font-family: 'Oswald', Arial, sans-serif;
+  color: #cccccc;
+  text-decoration: none;
+}
+#footer_menu li a:hover {
+  color: #ffffff;
+}
+#footer_menu li span {
+  display: none;
+}
+#stickey_footer #social_icons {
+  margin: 5px 15px 5px;
+  padding: 0px;
+  float: right;
+  width: auto;
+  overflow: visible;
+}
+#stickey_footer #social_icons li {
+  padding: 0px;
+  margin-right: 8px;
+  float: left;
+  width: 16px;
+  height: 24px;
+  list-style-type: none;
+  list-style-image: none;
+  list-style-position: outside;
+}
+.imgmenu {
+}

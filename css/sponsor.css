@@ -1,0 +1,23 @@
+/*Fire-Tech Sponsor Rotator*/
+
+#Fire-Tech-Sponsor-Rotator {height: 7.25em; width:100%; position: relative; overflow: hidden; background: #fff;  margin:0; padding:0;}
+
+#Image-FTslide{height: 7em; width: 130em; position: absolute; left:0; top: 0px!important; 
+animation: FTslide 35s linear infinite alternate;
+-webkit-animation:  35s linear infinite alternate FTslide ; 
+animation-duration: 35s; animation-iteration-count: infinite; animation-name: FTslide; animation-direction: alternate; -moz-animation-timing-function: linear;}
+
+@-webkit-keyframes FTslide {0% { left: 101%;}  100% {left: -130em; } }
+@keyframes FTslide {0% { left: 101%;}  100% {left: -130em; } }
+
+#Image-FTslide:hover{animation-play-state:paused;-webkit-animation-play-state:paused;}
+
+#Fire-Tech-Sponsor-Rotator td img  {margin:auto!important; margin-bottom:15%!important; padding: .36em;} 
+
+#Fire-Tech-Sponsor-Rotator td img:hover  { 
+transform: scale(1.1);
+-webkit-transform:scale(1.1);
+-moz-transform: scale(1.1);
+} 
+
+/* End Fire-Tech Sponsor Rotator*/

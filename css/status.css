@@ -1,0 +1,23 @@
+﻿/* Quickpost Title Color and Font weight, Share */
+.quickadd-options-links .list-title  {
+color:#ffffff;font-weight:bold;
+}
+/* Quickpost Links Color */
+.quickadd-options a {
+color:#003366!important;
+}
+
+.xg_status_wrapper {
+-moz-transition: all 0.1s ease 0s;
+    background-color: #990000!important;
+/* Border */
+    border: 3px solid #000!important;
+/* Rounded Corners */
+    border-radius: 12px 12px 12px 12px;
+    padding: 12px 20px !important;
+}
+
+/* Hovered Background Color */
+.xg_status_wrapper:hover {
+    background-color: #000!important;
+}

@@ -1,0 +1,16 @@
+body { border: 0px double #000;
+background-image: url(http://api.ning.com:80/files/OVFVLXLi8jlH5XW8WdNPES5Dh3C*emWvjQJzxfKLsYDEJWDphUnOgjXRAVgGwHYNikGt0VTMBGufFhLqbfmdo-QPWlT-MYuy/background.jpg);
+background-color: #eeeeee;
+background-repeat: no-repeat;
+background-position: left center;
+background-attachment: fixed;
+}
+.xg_widget_groups .xg_headline .tb ul.byline li{
+display:none !important;
+}
+.xg_widget_groups .dy-avatar-64{
+display:none;
+}
+.myspan {
+    display: block;
+}

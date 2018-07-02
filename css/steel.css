@@ -1,0 +1,30 @@
+body:before{content:",";
+    background-image: url('http://api.ning.com/files/XewtWaR3V6YczD2h56qu1eRczvkDmerkQezuWoMzfm85GA*4QJrCDTLIHQUBeeYLgLTtD7pO7Yk-rRV*zmtk4B5cE8-AjMwm/flagged.jpg');
+    background-attachment: fixed;
+    background-position: left top;
+    background-size: cover;
+    background-repeat: no-repeat;}
+	
+.sheet{
+border: 0px double #fd0e19;
+background-color: #eae9e5;
+background-repeat: repeat;
+}
+
+header.content-header,.matrix-itemFluid:hover,.groupHeader-nav .subnavline > li:hover > a, .subnavline > li.current > a ,article.entry.rssFeed.rssFeed-detail,div.module-actions,li.subnav-current,li.mainTab-item a:active,LI.tabContainerSection-tab,p a:hover,span a:hover  , article.entry.blogListPage-entry,.pagination,div.media-body,header.content-header.cf ,li.mainTab-item a:active,div.ningbar.cf,li.tabContainerSection-tab,ul.tabContainerSection-tabs.subnavline  {
+  background:url(http://api.ning.com:80/files/0sapI6xeQDs8eEBiJ1*JSiDKxBFEHHbcHjumz91YI2cDKXBpmItb6YlbAB04*1NftGcGTKX9YgLkQY5ObZKOqDoNmlw3ffzY/large.jpg) repeat;position: relative;-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+color:#fff;
+}
+
+div.ningbar.cf, {
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.23), 0 8px 25px rgba(0, 0, 0, 0.05);
+} 
+div.ningbar.cf,div.photoDetailPage-mainSection.sheet.grid-frame,a.date-count-down.button.isAdmin,a.button.button-iconic,article.media-frame.entry.discussionListPage-entry,nav.header-nav.navbar a:active,li.mainTab-item a,div.gsc-control-cse.gsc-control-cse-en,div.status-container.media-frame,section.module-body.activityFeed,a.entry-readMore,section.entry-content.cf,header.entry-headline.media-frame,footer.entry-footnote,div.entry-socialActions.cf,div.groupHub-groupTitle,article.media-frame.entry.discussionSection-entry,div.banner-frame,header.activityFeed-headline,.module-header, div#tabzilla-contents {
+  background:url(http://api.ning.com/files/Nt4uQVNN8YTbojflX750yyEvtQGPzpScqJFnzDAq6PY*QnZ6gm8NPr84ndfW3SaaqQ8hi9chq4vFYtnHuvBr57INcKhjsscY/lists.jpg) repeat;position: relative;
+color: #ffffff;
+}
+.sheet {  background:url(http://api.ning.com:80/files/897FHu1DQvSyRCe2K5v-xy5X7eoM9s3QTHwMkbMXvrt1f8Rn2-hshpvyvjFH*sQLwD4VFZ28aOjHis84wv*QnlYib4vp28kD/woodfloor.jpg)
+}
