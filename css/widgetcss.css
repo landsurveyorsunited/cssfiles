@@ -1,0 +1,1368 @@
+﻿
+
+
+
+
+
+
+
+
+
+
+html {
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+body {
+	background-color: #ffffff;
+	color: #000000;
+	font-family: Arial;
+	font-size: 13px;
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+
+p {
+	margin: 0px;
+}
+
+/* ========================================================
+   General
+   ======================================================== */
+.DefaultFont {
+	font-size: 13px;
+	font-family: Arial;
+	font-weight: normal;
+}
+
+.SmallFont {
+	font-size: 11px;
+	font-family: Arial;
+}
+
+.XXSFont {
+	font-size: 10px;
+	font-family: Arial;
+}
+
+.LargeFont {
+	font-size: 16px;
+	font-family: Arial;
+}
+
+.XLFont {
+	font-size: 20px;
+	font-family: Arial;
+}
+
+.Transparent {
+	opacity: 0.0;
+	filter: alpha(opacity = 0);
+}
+
+.FloatRight {
+	float: right;
+}
+
+.FloatLeft {
+	float: left;
+}
+
+/* ========================================================
+   Cursors
+   ======================================================== */
+.CursorPointer {
+	cursor: pointer;
+}
+
+.CursorWaitingArrow {
+	cursor: progress;
+}
+
+.CursorNotAllowed {
+	cursor: not-allowed;
+}
+
+/* ========================================================
+   Anchors
+   ======================================================== */
+a.EnabledHyperlinkDecorator:link {
+	color: #;
+	background-color: ;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+a.EnabledHyperlinkDecorator:visited {
+	color: #;
+	background-color: ;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+a.EnabledHyperlinkDecorator:hover {
+	color: #FF0000;
+	background-color: #C0C0C0;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+a.EnabledHyperlinkDecorator:active {
+	color: #FF0000;
+	background-color: #C0C0C0;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+a.DisabledHyperlinkDecorator:link {
+	color: #4d4d4d;
+	background-color: ;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	text-decoration: none;
+	cursor: not-allowed;
+}
+
+a.DisabledHyperlinkDecorator:visited {
+	color: #4d4d4d;
+	background-color: ;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	text-decoration: none;
+	cursor: not-allowed;
+}
+
+a.DisabledHyperlinkDecorator:hover {
+	color: #4d4d4d;
+	background-color: ;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	text-decoration: none;
+	cursor: not-allowed;
+}
+
+a.DisabledHyperlinkDecorator:active {
+	color: #4d4d4d;
+	background-color: ;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	text-decoration: none;
+	cursor: not-allowed;
+}
+
+.EnabledImageHyperlink {
+	/* No colors and effects needed since this style is used when the HyperlinkPanel contains an image only */
+}
+
+/* EnabledHighlightedLink is only used for Bema */
+.EnabledHighlightedLink a:link {
+	color: #ffffbb;
+}
+
+.EnabledHighlightedLink a:visited {
+	color: #ffffbb;
+}
+
+.EnabledHighlightedLink a:hover {
+	color: red;
+}
+
+.EnabledHighlightedLink a:active {
+}
+
+a.EnabledAnchorDecorator:link {
+	color: #000;
+	background-color: transparent;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+a.EnabledAnchorDecorator:visited {
+	color: #C0C0C0;
+	background-color: transparent;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+a.EnabledAnchorDecorator:hover {
+	color: #FF0000;
+	background-color: #C0C0C0;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+a.EnabledAnchorDecorator:active {
+	color: #FF0000;
+	background-color: #C0C0C0;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+a.DisabledAnchorDecorator:link {
+	color: #4d4d4d;
+	background-color: ;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	text-decoration: none;
+	cursor: not-allowed;
+}
+
+a.DisabledAnchorDecorator:visited {
+	color: #4d4d4d;
+	background-color: ;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	text-decoration: none;
+	cursor: not-allowed;
+}
+
+a.DisabledAnchorDecorator:hover {
+	color: #4d4d4d;
+	background-color: ;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	text-decoration: none;
+	cursor: not-allowed;
+}
+
+a.DisabledAnchorDecorator:active {
+	color: #4d4d4d;
+	background-color: ;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	text-decoration: none;
+	cursor: not-allowed;
+}
+
+.EnabledImageAnchor {
+	/* No colors and effects needed since this style is used when the AnchorPanel contains an image only */
+}
+
+
+.EnabledLinkButton {
+	color: #0000FF;
+	background-color: ;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.EnabledLinkButton:hover {
+	color: #FF0000;
+	background-color: #C0C0C0;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.DisabledLinkButton {
+	color: #4d4d4d;
+	background-color: ;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	cursor: not-allowed;
+}
+
+.DisabledLinkButton:hover {
+	color: #4d4d4d;
+	background-color: ;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	cursor: not-allowed;
+}
+
+.EnabledImageLinkButton {
+	/* No colors and effects needed since this style is used when the LinkButtonPanel contains an image only */
+	cursor: pointer;
+}
+
+.DisabledSortByLinkButton {
+	color: #4d4d4d;
+	background-color: ;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	cursor: not-allowed;
+}
+
+.DisabledSortByLinkButton:hover {
+	color: #4d4d4d;
+	background-color: ;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	cursor: not-allowed;
+}
+
+/* ========================================================
+   Decorators and Elements
+   ======================================================== */
+.ButtonDecorator {
+	/* Following lines required to make buttons with a lot of text in IE to not look ridiculous */
+	padding-right: 2px;
+	padding-left: 2px;
+	width: auto;
+	overflow: visible;
+}
+
+.TextBoxDecorator {
+	padding: 0px;
+	margin: 1px;
+}
+
+.EnabledTextBoxDecorator {
+	color: #000000;
+	background-color: transparent;
+	background-image: url("/PnyxeClient/clear.cache.gif"); /* Fixing IE8 bug of focus to transparent input elements*/
+	border: 1px solid #b3b3b3;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+input.EnabledTextBoxDecorator:hover {
+	border: 1px solid #4d4d4d;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.DisabledTextBoxDecorator {
+	color: #4d4d4d;
+	background-color: transparent;
+	background-image: url("/PnyxeClient/clear.cache.gif"); /* Fixing IE8 bug of focus to transparent input elements*/
+	border: 1px solid #b3b3b3;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.EnabledPasswordTextBoxDecorator {
+	color: #000000;
+	background-color: transparent;
+	background-image: url("/PnyxeClient/clear.cache.gif"); /* Fixing IE8 bug of focus to transparent input elements*/
+	border: 1px solid #b3b3b3;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+input.EnabledPasswordTextBoxDecorator:hover {
+	border: 1px solid #4d4d4d;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.DisabledPasswordTextBoxDecorator {
+	color: #4d4d4d;
+	background-color: transparent;
+	background-image: url("/PnyxeClient/clear.cache.gif"); /* Fixing IE8 bug of focus to transparent input elements*/
+	border: 1px solid #b3b3b3;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.TextAreaDecorator {
+	padding: 0px;
+	margin: 1px;
+	overflow: auto;
+	color: #000000;
+	background-color: transparent;
+	background-image: url("/PnyxeClient/clear.cache.gif"); /* Fixing IE8 bug of focus to transparent input elements*/
+	border: 1px solid #b3b3b3;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+textarea.TextAreaDecorator:hover {
+	border: 1px solid #4d4d4d;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.EnabledCheckBoxDecorator:hover {
+	color: #FF0000;
+	background-color: #C0C0C0;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.DisabledCheckBoxDecorator {
+	color: #4d4d4d;
+	background-color: ;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	cursor: not-allowed;
+}
+
+.MouseOverRadioButton {
+	color: #FF0000;
+	background-color: #C0C0C0;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.EnabledRadioButtonDecorator:hover {
+	color: #FF0000;
+	background-color: #C0C0C0;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.DisabledRadioButtonDecorator {
+	color: #4d4d4d;
+	background-color: ;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	cursor: not-allowed;
+}
+
+.ListBoxDecorator {
+	border-width: 1px;
+	padding: 0px;
+	margin: 1px;
+	text-align: left;
+	color: black;
+	background-color: #EEEEEE;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+select.ListBoxDecorator:hover {
+	color: black;
+	background-color: #DFDFDF;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.DisabledListBoxDecorator {
+	color: gray;
+	background-color: #C5C5C5;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.FileUploadDecorator {
+	color: #000000;
+	background-color: transparent;
+	background-image: url("/PnyxeClient/clear.cache.gif"); /* Fixing IE8 bug of focus to transparent input elements*/
+	border: 1px solid #b3b3b3;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+input.FileUploadDecorator:hover {
+	border: 1px solid #4d4d4d;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.HidablePanelHeaderPanel {
+	color: #000000;
+	background-color: #76A4F3;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+/* Following class is required since HidablePanelHeaderPanel has links inside */ 
+.HidablePanelHeaderPanel * {
+	color: #000000 !important;
+	background-color: transparent !important;
+}
+
+table.HidablePanelHeaderPanel:hover {
+	background-color: #6a93da;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.HidablePanel {
+	border: 1px solid #e6e6e6;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.CreatePostButton {
+	font-weight: bold;
+}
+
+/* PreviewPostButton is disabled by default */ 
+.PreviewPostButton {
+	display: none;
+}
+
+.HidablePopupPanelPopup {
+	background-color: #cccccc;
+	border: 3px groove #b3b3b3;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.InvalidLabel {
+	color: red;
+	background-color: yellow;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.FadingMessageContainer {
+	color: #000000;
+	background-color: #76A4F3;
+	border: 1px dotted #5d82c0;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.FadingMessageText {
+	font-weight: bold;
+	font-size: 30px;
+}
+
+.FadingMessageCloseButton {
+	font-size: 20px;
+}
+
+.AbsolutePopupPanel {
+	background-color: #e6e6e6;
+	border: 1px dotted #b3b3b3;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.RedBackground {
+	background-color: red;
+}
+
+.AbsolutePopupPanelTitle {
+	color: #000000;
+	background-color: #5d82c0;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	border-bottom: 2px dotted #4d4d4d;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.MandatoryField {
+	font-weight: bold;
+}
+
+.OptionalField {
+}
+
+.RankingOptionsDisplayPost {
+	display: none;
+}
+
+.RankingImagePopup {
+	color: #000000;
+	font-weight: bold;
+}
+
+.RankingOptionsDisplayPopup {
+	font-weight: bold;
+	background-color: #e6e6e6;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.AsteriskLabel {
+	color: red;
+}
+
+.CheckedRadioButtonDecorator {
+	font-weight: bold;
+}
+
+.MessageBackground {
+	color: black;
+	background-color: #F7F762;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.MessagePanelError {
+	color: red;
+}
+
+.CurrentTopicInTopPanel {
+	font-size: 19px;
+}
+
+.TopicInTopPanel {
+	font-size: 14px;
+}
+
+.SimpleTreeViewItem {
+}
+
+.SimpleTreeViewItemIndentation {
+	width: 15px;
+	/* You can change the value, but do not set any other attributes to this class! */
+}
+
+.TogglableTreeViewItemBackgroundColor {
+	background-color: #ffffff;
+	/* You can change the value, but do not set any other attributes to this class! */
+}
+
+.FullPostDisplay {
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+.FullPostDisplayGradient {
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(106, 147, 218, 0.2)), to(rgba(93, 130, 192, 0.4)));
+	background: -moz-linear-gradient(top, rgba(106, 147, 218, 0.2), rgba(93, 130, 192, 0.4));
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#336a93da, endColorstr=#665d82c0);
+}
+
+.FullPostDisplayGradientHighlighted {
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(106, 147, 218, 0.3)), to(rgba(93, 130, 192, 0.45)));
+	background: -moz-linear-gradient(top, rgba(106, 147, 218, 0.3), rgba(93, 130, 192, 0.45));
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C6a93da, endColorstr=#735d82c0);
+}
+
+.FullPostDisplayGradientTalkAhead {
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(106, 147, 218, 0.5)), to(rgba(93, 130, 192, 0.7)));
+	background: -moz-linear-gradient(top, rgba(106, 147, 218, 0.5), rgba(93, 130, 192, 0.7));
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#806a93da, endColorstr=#B35d82c0);
+}
+
+.FullPostDisplayNoGradient {
+	background-color: #e6e6e6;
+}
+
+.FullPostDisplayNoGradientHighlighted {
+	background-color: #cccccc;
+}
+
+.FullPostDisplayNoGradientTalkAhead {
+	background-color: #cccccc;
+}
+
+.FullPostDisplayInfo {
+	color: #4d4d4d;
+}
+
+.FullPostDisplayHoverControlsVisible {
+	visibility: visible;
+}
+
+.FullPostDisplayHoverControlsHidden {
+	visibility: hidden;
+}
+
+.MiniPostDisplay {
+	background-color: #e6e6e6;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	border-bottom: 1px dotted #cccccc;
+}
+
+.MiniPostDisplayHighlighted {
+	background-color: #cccccc;
+}
+
+.ForumRootPostDisplay {
+	background-color: #e6e6e6;
+	border: 1px dotted #cccccc;
+}
+
+.ForumRootPostDisplayHeaderLine {
+	background-color: #cccccc;
+	border-left: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
+}
+
+.ForumRootPostDisplayLastApprovedBeforeColumn {
+	width: 80px;
+}
+
+.ForumRootPostDisplayStatisticsColumn {
+	width: 90px;
+}
+
+.ForumRootPostDisplayUserIndicationsColumn {
+	width: 60px;
+}
+
+.ForumRootPostDisplayAuthorNicknameColumn {
+	width: 80px;
+}
+
+/* this includes author nickname, user indications and author picture */
+.ForumRootPostDisplayAuthorHeaderColumn {
+	width: 180px;
+}
+
+.MiniPostDisplayContentPreview {
+	color: #4d4d4d;
+}
+
+.MiniPostDisplayInfo {
+	color: #4d4d4d;
+}
+
+.DiscussionDisplay {
+}
+
+.NoDisplaysMessage {
+	font-weight: bold;
+}
+
+.PanelSeparator {
+	color: #333333;
+}
+
+.VoteOptionDisplayPercentageLabel {
+	color: #4d4d4d;
+}
+
+.RankArticlePanel {
+	border-top: 1px solid #b3b3b3;
+	border-bottom: 1px solid #b3b3b3;
+}
+
+.MorePostDetailsPanel {
+	border-top: 1px dashed #4d4d4d;
+}
+
+.DisplaysHeaderBottom {
+	border-top: 1px solid #cccccc;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.DisplaysHeaderTop {
+	border-bottom: 1px solid #cccccc;
+}
+
+.FacebookProfileName {
+	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+.TwitterProfileName {
+	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+.ForgotPasswordLinkButton {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.TipsBanner {
+	background-color: #C3D9FF;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	padding: 4px;
+	margin-top: 10px;
+}
+
+/* ========================================================
+   Rich Text
+   ======================================================== */
+.RichTextEditor {
+	cursor: text;
+	border: 1px solid #b3b3b3;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.RichTextEditor:hover {
+	border: 1px solid #4d4d4d;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.RichTextAreaDecorator {
+	background-color: transparent;
+	background-image: url("/PnyxeClient/clear.cache.gif"); /* Fixing IE8 bug of focus to transparent input elements*/
+}
+
+.RichTextAreaToolbar {
+	cursor: pointer;
+	background-color: #C3D9FF;
+}
+
+.RichTextAreaToolbar .gwt-PushButton-up {
+	border: 1px solid #C3D9FF;
+}
+
+.RichTextAreaToolbar .gwt-PushButton-up-hovering {
+	border: 1px solid #C3D9FF;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	border-color: #E8F1FF rgb(157, 174, 205) rgb(157, 174, 205) rgb(232, 241, 255);
+}
+
+.RichTextAreaToolbar .gwt-PushButton-down {
+	border: 1px solid #C3D9FF;
+	border-color: #9DAECD rgb(232, 241, 255) rgb(232, 241, 255) rgb(157, 174, 205);
+}
+
+.RichTextAreaToolbar .gwt-PushButton-down-hovering {
+	border: 1px solid #C3D9FF;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	border-color: #9DAECD rgb(232, 241, 255) rgb(232, 241, 255) rgb(157, 174, 205);
+}
+
+.RichTextAreaToolbar .gwt-ToggleButton {
+	text-align: center;
+	cursor: hand;
+	display: inline;
+}
+
+.RichTextAreaToolbar .gwt-PushButton {
+	text-align: center;
+	cursor: hand;
+	display: inline;
+}
+
+.RichTextAreaToolbar .gwt-ToggleButton-up {
+	border: 1px solid #C3D9FF;
+}
+
+.RichTextAreaToolbar .gwt-ToggleButton-up-hovering {
+	border: 1px solid #C3D9FF;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	border-color: #E8F1FF rgb(157, 174, 205) rgb(157, 174, 205) rgb(232, 241, 255);
+}
+
+.RichTextAreaToolbar .gwt-ToggleButton-down {
+	background-color: #E8F1FF;
+	border: 1px solid #C3D9FF;
+	border-color: #9DAECD rgb(232, 241, 255) rgb(232, 241, 255) rgb(157, 174, 205);
+}
+
+.RichTextAreaToolbar .gwt-ToggleButton-down-hovering {
+	background-color: #E8F1FF;
+	border: 1px solid #C3D9FF;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	border-color: #9DAECD rgb(232, 241, 255) rgb(232, 241, 255) rgb(157, 174, 205);
+}
+
+/* ========================================================
+   GWT widgets
+   ======================================================== */
+.gwt-StackPanel {
+}
+
+.gwt-StackPanel .gwt-StackPanelItem {
+	color: #000000;
+	background-color: #76A4F3;
+	border-bottom: 1px solid #5d82c0;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	padding: 4px;
+	cursor: pointer;
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+.gwt-StackPanel .gwt-StackPanelItem-selected {
+	color: #000000;
+	background-color: #5d82c0;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	border-bottom: 1px solid #76A4F3;
+	padding: 4px;
+	cursor: pointer;
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+.gwt-Button {
+	font-family: Arial;
+	font-size: 13px;
+	color: ;
+	background-color: ;
+}
+
+.gwt-DialogBox {
+	border: 4px outset;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	color: #000000;
+	background-color: #e6e6e6;
+}
+
+.gwt-DialogBox .Caption {
+	color: #000000;
+	background-color: #5d82c0;
+	margin-bottom: 8px;
+	padding-right: 4px;
+	padding-left: 4px;
+	padding-bottom: 4px;
+	font-weight: bold;
+	text-decoration: underline;
+	cursor: move;
+}
+
+.gwt-SuggestBoxPopup .item {
+    color: #424242;
+    cursor: default;
+}
+.gwt-SuggestBoxPopup .item-selected {
+    background: none repeat scroll 0 0 #B7D6F6;
+}
+.gwt-SuggestBoxPopup .suggestPopupContent {
+    background: none repeat scroll 0 0 white;
+}
+.gwt-SuggestBoxPopup .suggestPopupTopCenter {
+    background: url("images/hborder.png") repeat-x scroll 0 0 transparent;
+}
+.gwt-SuggestBoxPopup .suggestPopupBottomCenter {
+    background: url("images/hborder.png") repeat-x scroll 0 -4px transparent;
+}
+.gwt-SuggestBoxPopup .suggestPopupMiddleLeft {
+    background: url("images/vborder.png") repeat-y scroll 0 0 transparent;
+}
+.gwt-SuggestBoxPopup .suggestPopupMiddleRight {
+    background: url("images/vborder.png") repeat-y scroll -4px 0 transparent;
+}
+.gwt-SuggestBoxPopup .suggestPopupTopLeftInner {
+    height: 5px;
+    width: 5px;
+}
+.gwt-SuggestBoxPopup .suggestPopupTopRightInner {
+    height: 5px;
+    width: 8px;
+}
+.gwt-SuggestBoxPopup .suggestPopupBottomLeftInner {
+    height: 8px;
+    width: 5px;
+}
+.gwt-SuggestBoxPopup .suggestPopupBottomRightInner {
+    height: 8px;
+    width: 8px;
+}
+.gwt-SuggestBoxPopup .suggestPopupTopLeft {
+    background: url("images/corner.png") no-repeat scroll 0 -23px transparent;
+}
+.gwt-SuggestBoxPopup .suggestPopupTopRight {
+    background: url("images/corner.png") no-repeat scroll -5px -23px transparent;
+}
+.gwt-SuggestBoxPopup .suggestPopupBottomLeft {
+    background: url("images/corner.png") no-repeat scroll 0 -28px transparent;
+}
+.gwt-SuggestBoxPopup .suggestPopupBottomRight {
+    background: url("images/corner.png") no-repeat scroll -5px -28px transparent;
+}
+
+/* ========================================================
+   Screen layout
+   ======================================================== */
+.SidePanelLTR,.SidePanelRTL {
+	position: absolute;
+	top: 36px;
+	width: 220px;
+}
+
+.SidePanelLTR {
+	left: 10px;
+	border-right: 1px solid silver;
+}
+
+.SidePanelRTL {
+	right: 10px;
+	border-left: 1px solid silver;
+}
+
+.ContentPanelBemaLTR,.ContentPanelBemaRTL {
+	min-width: 400px;
+	min-height: 598px;
+	height: auto !important;
+	height: 598px;
+	border-bottom: 1px solid silver;
+}
+
+.ContentPanelBemaLTR {
+	margin-left: 220px;
+	border-left: 1px solid silver;
+}
+
+.ContentPanelBemaRTL {
+	margin-right: 220px;
+	border-right: 1px solid silver;
+}
+
+.TopPanelBema {
+	height: 26px;
+	border-bottom: 1px solid silver;
+	text-align: center;
+	font-weight: bold;
+	background-color: #8FBFA0;
+}
+
+.TopPanelPresentational {
+}
+
+.BottomPanelBemaLTR,.BottomPanelBemaRTL {
+	height: 24px;
+	padding-top: 4px;
+	text-align: center;
+	vertical-align: bottom;
+}
+
+.BottomPanelBemaLTR {
+	margin-left: 220px;
+}
+
+.BottomPanelBemaRTL {
+	margin-right: 220px;
+}
+
+.BottomPanelPresentationalText {
+	font-family: Tahoma;
+	font-weight: bold;
+	font-size: 11px;
+	color: #C2C2C2;
+}
+
+.HtmlNextToCreatePostButton {
+	font-size: 10px;
+	padding-top: 10px;
+}
+
+.CreatePostPanelHidablePanelHeaderInvisible {
+	display: none;
+}
+
+.CreatePostPanelHidablePanel {
+	border: none; /* instead there's a border to inner widget - CreatePostPanel */
+}
+
+.CreatePostPanel {
+	padding: 10px;
+	border: 1px solid #e6e6e6;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.CreatePostAdvancedOptionsLinkButton {
+	display: none;
+}
+
+.CreatePostAdvancedOptionsPanel {
+	padding-top: 10px;
+}
+
+.ReadPostSubject {
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.UnreadPostSubject {
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.TopFrameSearchPanel {
+	display: none;
+}
+
+.CreateAccountPanel {
+	font-size: 10.5pt;
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.AccountCreatedPanel {
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.ReturnFromPayPalPanel {
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.AdminPanel {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.DisplaysPanelBase {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.TrackPaymentPanel {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.UserSettings {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+/* ========================================================
+   My Account
+   ======================================================== */
+
+.WebWidgetsAdminPanelHeaderPanel {
+	padding-bottom: 10px;
+}
+
+.WebWidgetsAdminPanelTopPanelPresentational {
+	margin-top: 4px;
+	float: Left;
+}
+
+.WebWidgetClientsListPanel .LabelDecorator {
+	float: Right;
+	margin-top: 4px;
+}
+
+.WebWidgetClientsListPanel .ListBoxDecorator {
+	float: Right;
+	margin-left: 5px;
+	height: 22px;
+}
+
+.WebWidgetClientsListPanel .gwt-SuggestBox {
+	float: Right;
+	margin-left: 5px;
+	height: 20px;
+	width: 300px;
+}
+
+.WebWidgetClientAdminPanel {
+	border: 1px solid silver;
+	margin-top: 10px;
+	background-color: #FFFFFF;
+}
+
+.WebWidgetClientAdminPanelMenu {
+	padding-bottom: 16px;
+	border-right: 1px solid silver;
+	font-size: 14px;
+}
+
+.SelectableList {
+}
+
+.SelectableListHeader {
+	padding-left: 10px;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 2px;
+}
+
+.SelectableListItemLevel1 {
+	padding-left: 26px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+.SelectableListItemLevel2 {
+	padding-left: 42px;
+	font-size: 11px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+.SelectableListSelectedItemLevel1 {
+	padding-left: 26px;
+	font-weight: bold;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	background-image: url("/presentational/images/twoArrowsRight.png");
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+.SelectableListSelectedItemLevel2 {
+	padding-left: 42px;
+	font-size: 11px;
+	font-weight: bold;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	background-image: url("/presentational/images/twoArrowsRight.png");
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+.WebWidgetClientAdminPanelInstallationHeader {
+}
+
+.WebWidgetClientAdminPanelSettingsHeader {
+}
+
+.WebWidgetClientAdminPanelToolsHeader {
+}
+
+.WebWidgetClientAdminPanelMonetizeHeader {
+}
+
+.WebWidgetClientAdminPanelPostsModerationHeader {
+}
+
+.WebWidgetClientAdminPanelReportsHeader {
+}
+
+.WebWidgetClientAdminPanelSupportHeader {
+}
+
+.WebWidgetClientAdminPanelPnyxeAdminHeader {
+}
+
+.WebWidgetClientAdminPanelOptions {
+	padding-right: 16px;
+	padding-left: 16px;
+	padding-bottom: 16px;
+}
+
+.WebWidgetClientAdminPanelOptions .WrappedInputElementLabel {
+	font-weight: bold;
+}
+
+.WebWidgetClientAdminContentWrapper {
+	margin-top: 20px;
+}
+
+.WebWidgetClientAdminContentWrapperHeader {
+	padding: 8px;
+	font-size: 16px;
+	font-weight: bold;
+	border-bottom: 1px solid silver;
+}
+
+.WebWidgetClientAdminContentWrapperContent {
+	padding: 8px;
+}
+
+.WebWidgetCodePanel .TextAreaDecorator {
+	width: 100%;
+	font-size: 10px;
+}
+
+.CommentSystemInstallationHeader {
+	font-size: 24px;
+	font-weight: bold;
+	margin-top: 16px;
+	margin-bottom: 15px;
+}
+
+.ForumSystemInstallationHeader {
+	font-size: 24px;
+	font-weight: bold;
+	margin-top: 16px;
+	margin-bottom: 15px;
+}
+
+.RecentPostsInstallationHeader {
+	font-size: 24px;
+	font-weight: bold;
+	margin-top: 16px;
+	margin-bottom: 15px;
+}
+
+.SponsoredCommentHeader {
+	font-size: 11px;
+	color: #4d4d4d;
+	padding-top: 10px;
+	text-align: Right;
+	clear: both;
+}
+
+.TalkAheadCreatePostTeaser {
+	background-color: #cccccc;
+	margin-top: 5px;
+	padding: 5px;
+}
+
+.TalkAheadCreatePostTeaserNewCommentLink {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.TalkAheadCreatePostTeaserLabel {
+}
+
+.WebWidgetAdminSponsoredCommentsPanelDefaultValueLabel {
+	font-size: 11px;
+	color: #444444;
+}
+
+.WebWidgetAdminAdvertisementPanelExampleValueLabel {
+	font-size: 11px;
+	color: #444444;
+}

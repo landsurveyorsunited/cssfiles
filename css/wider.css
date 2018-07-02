@@ -1,0 +1,41 @@
+@media screen and (min-width:1200px)  {
+.pull8 {
+left: 0px; }
+.push4 {
+left: 0px; }
+.container {
+width: 1202px;
+margin-top: 10px; }
+.span8 {
+width: 507px; }
+.span4 {
+width: 352px; }
+.span5 {
+width: 400px; }
+.span11 {
+width: 812px; }
+.span6 {
+width: 400px; }
+.span10 {
+width: 812px; }
+.span16 {
+width: 960px;
+margin-left: 120px; }
+.span-auto,
+ .span, .span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, 
+.span9, .span10, .span11, .span12, .span13, .span14, .span15, .span16, 
+.span-full {
+padding: 5px;
+}  }
+
+@media screen and (min-width:60px) and (max-width:960px)  {
+DIV.span16,
+DIV.sheet.grid-frame,
+DIV.span16.column,
+DIV.container, 
+DIV.container-inner.span-full {
+  margin-left:0px!important;
+  margin-right:0px!important;
+  padding-left:5px!important;
+  padding-right:10px!important;
+  width: 100%!important; }  }

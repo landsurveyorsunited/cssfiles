@@ -1,0 +1,40 @@
+body:before{content:",";
+    background-image: url('http://api.ning.com:80/files/MN6ZNqVOIKNiTjUVhqzHnUxs5ILzdxr3fQI*oElGlRl3-cZuPU6TmRFRHEzbKxB3gSUgw6k*r9CgqKJD6eoFv3yykb0LjpiQ/bg_water_center_rev.jpg');
+    background-attachment: fixed;
+    background-position: left top;
+    background-size: cover;
+    background-repeat: no-repeat;}
+	
+.sheet{
+border: 0px double #fd0e19;
+background-color: #eae9e5;
+background-repeat: repeat;
+}
+
+
+.groupHeader-nav li a {
+background: none repeat scroll 0 0 #2c3e50;
+border: medium none;
+border-radius: 3px;
+color: #fff;
+margin-right: 5px;
+margin-bottom:1px;
+}
+
+.groupHeader-nav li a:hover {
+background: none repeat scroll 0 0 #3498db;
+color: #000;
+}
+
+.groupHeader-nav li.groupHeader-tab.current a {
+background: #3498db;
+color: #000;
+text-decoration: none;
+}
+.subnavline > li:hover > a, .subnavline > li:hover > span, .subnavline > li.current > a, .subnavline > li.current > span{
+border:none;
+}
+
+.subnavline > li > a, .subnavline > li > span{
+border:none;
+}

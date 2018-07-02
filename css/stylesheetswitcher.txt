@@ -1,0 +1,20 @@
+<link href="Custom.css" rel="stylesheet" />
+<link href="Blue.css" rel="stylesheet" />
+<link href="Red.css" rel="stylesheet" />
+<link href="Yellow.css" rel="stylesheet" />
+
+
+
+<select id="changeCss"`enter code here`>
+        <option onclick="selectCss(this)" value="Blue">Blue</option>
+        <option onclick="selectCss(this)" value="Red">Red</option>
+        <option onclick="selectCss(this)" value="Yellow">Yellow</option>
+    </select>
+
+<script type="text/javacript">
+function selectCss() {
+            var link = $("link[rel=stylesheet]")[0].href;
+            var css = link.substring(link.lastIndexOf('/') + 1, link.length)
+            $('link[href="' + css + '"]').attr('href', $('#changeCss').val() + '.css');
+        }
+</script>

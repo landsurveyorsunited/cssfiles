@@ -1,0 +1,14 @@
+body.page-videolistings:before{content:",";
+background-image: url(http://www.wsls.org/templates/yoo_crystal/images/bg_map_4.jpg);
+background-color: transparent;
+background-repeat: repeat;
+background-position: left top;
+background-attachment: fixed;
+}
+.sheet{
+border: 0px double #fd0e19;
+background-image: url(http://www.wsls.org/templates/yoo_crystal/images/module_transparent_bg_2.png);
+background-color: transparent;
+background-repeat: repeat;
+}
+

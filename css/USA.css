@@ -1,0 +1,26 @@
+﻿body { border: 0px double #001c5a;
+background-image: url(http://api.ning.com/files/r760mwxOYBlvO3g4wnEOI-wqNbZkcuzfq7eFT6xk*7xM9r12WLRd8sVpPgPOHomF5t2J-p-tGCtc*3RJsqZUSFckj7zlhT-T/Unitedstatesofamericawallpaper_1680x1050.jpg);
+background-color: #FFFFFF;
+background-repeat: no-repeat;
+background-position: left center;
+background-attachment: fixed;
+}
+.xg_widget_groups .xg_headline .tb ul.byline li{
+display:none !important;
+}
+.xg_widget_groups .dy-avatar-64{
+display:none;
+
+
+body:before{content:",";
+    background-image: url('http://api.ning.com/files/r760mwxOYBlvO3g4wnEOI-wqNbZkcuzfq7eFT6xk*7xM9r12WLRd8sVpPgPOHomF5t2J-p-tGCtc*3RJsqZUSFckj7zlhT-T/Unitedstatesofamericawallpaper_1680x1050.jpg');
+    background-attachment: fixed;
+    background-position: left top;
+    background-size: cover;
+    background-repeat: no-repeat;}
+	
+.sheet{
+border: 0px double #fd0e19;
+background-color: #eae9e5;
+background-repeat: repeat;
+}

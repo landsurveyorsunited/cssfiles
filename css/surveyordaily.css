@@ -1,0 +1,88 @@
+/* Background */
+.page-surveyor-daily .site-bodyFrame{background-image:url('http://api.ning.com:80/files/ujcza9N5GbJR4-bsiuKk63BppnrHg2AwB-gd5OCs57xEBBVS*UoIUn99HWLA0Nl3lNuJ0Q6swZl9F86wBZmN5nUVw0P6BXsU/contentbackground.jpg');}
+
+.page-surveyor-daily SECTION.content-body{background-image:url('http://api.ning.com:80/files/ujcza9N5GbJR4-bsiuKk63BppnrHg2AwB-gd5OCs57xEBBVS*UoIUn99HWLA0Nl3lNuJ0Q6swZl9F86wBZmN5nUVw0P6BXsU/contentbackground.jpg');background-size:cover}
+.page-surveyor-daily .row:after {
+    clear: right;
+}
+.page-surveyor-daily .row:before{clear:left }
+.page-surveyor-daily .sheet{ background-color:rgba(255,245,238,0.7);/* seashell*/}
+.page-surveyor-daily SECTION.content-body > .row { box-shadow:none; background:seashell }
+.page-surveyor-daily .site-body { background: seashell;padding:0px }
+
+/* Header */
+.page-surveyor-daily .content-name { text-shadow: 0px 4px 7px #2f4f4f; color: sienna; font-size:4em;text-align:center;}
+.page-surveyor-daily .content-header{ border-bottom: solid 4px gray }
+/* Remove the space between the header and content */
+.page-surveyor-daily SECTION.content-body > .row { padding:0px;margin:0px }
+/* Side borders for page in the middle */
+.page-surveyor-daily .span8.push4.tablet16.mobile16.column{ border-left:solid 2px gray;border-right:solid 2px gray}
+.page-surveyor-daily .content-name{margin-bottom:0.3em}
+
+.page-surveyor-daily .site-body{ color:darkslategray}
+.page-surveyor-daily .site-body a{color:#696748; font-weight:bold; font-style:italic}
+.page-surveyor-daily .site-body a:hover{ color:darkblue;font-style:italic }
+.page-surveyor-daily .module-name{ text-shadow: 0px 5px 5px gray; color: sienna; font-size:2em;text-align:center;}
+.page-surveyor-daily .module-header{background:transparent }
+.page-surveyor-daily a.entry-readMore, .page-surveyor-daily a.entry-readMore:hover {color:ivory }
+.page-surveyor-daily .section-tabContainer .subnavline > li > span {background-color: rgba(85, 107, 47, 0.58);}
+.page-surveyor-daily .section-tabContainer .subnavline > li.current > span { color:seashell;background-color: rgba(0,0,0,0.4)}
+.page-surveyor-daily .section-tabContainer .subnavline > li > span:hover {background-color: ivory;color:sienna}
+
+/********************************************* Comments Background Settings *****************************/
+
+/* Comment wall box input box */ 
+.page-surveyor-daily .commentForm textarea.input-full { background-color:transparent; border:solid 4px gray;color:gray }
+.commentForm textarea.input-full:focus { background-color:white; border:solid 4px gray;color:black }
+.page-surveyor-daily .comments-timestamp{ color:brown }
+.page-surveyor-daily DIV.comments-main{background:transparent; padding:10px;border-radius:4px;border:double 3px gray;}
+.page-surveyor-daily .comments-commentBody {background:rgba(85, 107, 47, 0.2);}
+.page-surveyor-daily .comments-commentBody .avatar-48{ width:42px;height:42px }
+.page-surveyor-daily .comments-metadata{font-size:0.9em}
+.page-surveyor-daily .comments-replyingTo{color:#504d40;font-weight:bold;font-style:italic }
+.page-surveyor-daily .comments-actions {margin-top:16px;padding-left:5px }
+
+/* Replies color */
+.page-surveyor-daily .comments-ningSemiThreaded .comments-level2 .comments-commentBody{ background:rgba(222,184,135,0.35);}
+
+@media screen and (min-width:959px){
+/* Comment Bubbles above 959px only */
+/* Comment post */
+.page-surveyor-daily .comments-commentBody{ border-radius: 6px ;padding:2px 0px 2px 10px}
+/* Comment Reply*/
+.page-surveyor-daily .comments-ningSemiThreaded .comments-level2 .comments-commentBody{ border-radius: 6px;margin-left:2%;padding:2px 0px 2px 10px}
+/* Content */
+.page-surveyor-daily .comments-text.entry-content{ margin-left:3.5%;}
+
+}
+@media screen and (max-width:959px){
+.page-surveyor-daily .comments-ningSemiThreaded .comments-level2{margin-left:10px }}
+
+
+
+/* Tabs in tab container to go full width on smaller screen */
+@media screen and (max-width:1530px){
+.page-surveyor-daily .span4.pull8.tablet8.mobile16.column .tabContainerSection-tab { width: 100%; text-align: center;}
+.page-surveyor-daily .span4.tablet8.mobile16.column .tabContainerSection-tab { width: 100%; text-align: center;}
+}
+
+
+/* surveyor-daily NAVIGATION */
+.page-surveyor-daily .belowHeaderAdHtml{ color:darkslategray; font-style:italic;font-size:1em;font-weight:bold }
+
+
+/************** PHOTOS SLIDE SHOW PAGE *****/
+
+/* BACK TO PHOTOS BUTTON */
+.photosbackbutton button{background:rgba(0,0,0,0.4);color:ivory}
+.photosbackbutton button:hover{background:darkslategray}
+.photosbackbutton {padding-left:10px }
+.page-slideshow .span4 > div:nth-child(1){padding:5px;padding-bottom:0px;margin-bottom:3px}
+@media only screen and ( min-width:959px ){
+.page-slideshow .entry-content.cf iframe{box-shadow:6px 9px 12px rgba(0,0,0,0.7);border-radius:6px}}
+
+
+@media only screen and (min-width:1440px ){.page-slideshow .entry-content.cf iframe{height:700px;max-height:700px }}
+@media only screen and (min-width:959px ) and (max-width:1440px){.page-slideshow .entry-content.cf iframe{max-height:480px }}
+@media only screen and (max-width:959px ){.page-slideshow .entry-content.cf iframe{max-height:340px }}
+@media only screen and (max-width:480px ){.page-slideshow .entry-content.cf iframe{max-height:240px }}
