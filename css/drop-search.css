@@ -1,0 +1,121 @@
+.dropSearchList {
+  z-index: 100;
+  position: absolute;
+  border: 1px solid #777;
+  background: #eee;
+  font-size: 1em;
+}
+
+.dropSearchList a, .dropSearchList p, .dropSearchList img, .dropSearchList h3, .dropSearchList ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.dropSearchList a {
+  color: #000;
+  text-decoration: none;
+}
+
+.dropSearchList a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+.dropSearchList .title {
+  font-size: 12px;
+  background: #999;
+}
+
+.dropSearchList .title a {
+  color: #fff;
+}
+
+.dropSearchList .title b {
+  display:block;
+  margin-right:24px;
+}
+
+.dropSearchList .title b a {
+  display:block;
+  padding:2px 0;
+  font-size: 11px;
+  padding-left: 4px;
+  background: url(http://www.google.com/uds/css/small-logo.png) no-repeat bottom right;
+}
+
+.dropSearchList .title b a:hover {
+  background-color: #777;
+}
+
+.dropSearchList .title b a u {
+  text-decoration: none;
+  float: right;
+  margin-right: 60px;
+  color: #ccc;
+  font-size: 10px;
+}
+
+.dropSearchList .title span {
+  display:block;
+  float:right;
+  width:24px;
+  background: #444;
+  color: #eee;
+}
+
+.dropSearchList .title span a {
+  font-size: 11px;
+  display:block;
+  padding:2px 0;
+  color: #fff;
+  text-align: center;
+}
+
+.dropSearchList .title span a:hover {
+  display:block;
+  color: #fed;
+  background: #944;
+}
+
+.dropSearchList ul {
+  list-style: none;
+  clear:both;
+}
+
+.dropSearchList ul li {
+  height: 46px;
+  overflow:hidden;
+  border-top: 1px solid #999;
+}
+
+.dropSearchList li a {
+  display: block;
+  padding: 2px 4px;
+}
+
+.dropSearchList li.alt a {
+  background: #ddd;
+}
+
+.dropSearchList li a.hover, .dropSearchList li.alt a.hover {
+  background: #FFFDDB;
+}
+
+.dropSearchList h3 {
+  font-size: 11px;
+  margin-right: 4px;
+  font-weight: bold;
+  height: 16px;
+  overflow:hidden;
+}
+
+.dropSearchList p {
+  font-size: 11px;
+  margin-left: 12px;
+  line-height:13px;
+}
+
+.dropSearchList h3 b, .dropSearchList p b {
+  color: #44c;
+}

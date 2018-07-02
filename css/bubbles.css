@@ -1,0 +1,23 @@
+﻿.xg_module_activity .status{
+   color: #666;
+   border: 1px solid #ccc;
+   background-color: #fff;
+   border-radius: 50px;
+   -moz-border-radius: 50px;
+   -webkit-border-radius: 50px;
+   padding-left:25px;
+   margin-left:25px;
+
+}
+.xg_module_activity .feed-story .status-bg {
+   -ms-filter:none;
+   opacity:100;
+   display: block;
+   width:25px;
+   background: #fff url('http://api.ning.com/files/xg0J3iV36Kn1MxHGKZHBa*3KNy52Gv85V4BDU6hyCKZQQVRDo8F90hMmf9hty7Wv5n4MgY2KJWpzHl6IFenyGGMVd23k0GEY/bubble.gif') no-repeat 0 20%;
+}
+.xg_module_activity .feed-story-status .current {
+   padding-right: 30px;
+}
+.xg_module_activity .status-bg {display:none;}
+.xg_module_activity .left_arrow {display:none;} 

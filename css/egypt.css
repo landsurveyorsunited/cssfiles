@@ -1,0 +1,13 @@
+﻿body { border: 0px double #001c5a;
+background-image: url(http://api.ning.com:80/files/79xb1yI4El*3*YEBS6PshsL6Na0KcXKGxEeU0lVbUiTBnexV4zzph1pT-W52vY-km-0LPTYRlWgGiD66FqSS*6SRBVctzpCs/egypt.gif)no-repeat top center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.xg_widget_groups .xg_headline .tb ul.byline li{
+display:none !important;
+}
+.xg_widget_groups .dy-avatar-64{
+display:none;
+}

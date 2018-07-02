@@ -1,0 +1,45 @@
+      .hero-unit { padding:40px 60px;background-color:#f4f4f4;}
+      .hero-unit h2 {
+         font-family:'Poiret One', cursive;
+         color: #d00; font-size:50px; line-height:70px;
+      }
+
+h1 {font-size:18px}
+h2 {font-size:16px}
+
+      .social-share {
+         margin-top: 18px; display:inline; padding-right:20px;
+      }
+
+      .navbar {
+         background: #fff;
+         box-shadow: 0 1px 10px rgba(0, 0, 0, 0.25);
+       }
+
+
+.answer { 
+ font:1.8em/1.5em 'Satisfy', cursive;
+ margin-top: 25px;
+}
+
+#speech {
+  -webkit-transform: scale(8.0, 8.0);
+  -moz-transform: scale(8.0, 8.0);
+  -ms-transform: scale(8.0, 8.0);
+  transform: scale(8.0, 8.0);
+  width:15px;height:30px;
+  margin:40px 0 0;
+  padding:0;
+  outline:0;border:0;
+  background-color:transparent;
+  opacity:0.001;
+}
+
+.speech-wrapper {
+  width:60px; 
+  height:120px; 
+  text-align:center;
+  background:url(https://dl.dropbox.com/u/49702/images/mic.png) no-repeat center;
+  float:right;
+}
+

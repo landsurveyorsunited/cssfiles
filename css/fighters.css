@@ -1,0 +1,65 @@
+body {
+background:#bfbebe url(http://api.ning.com:80/files/PlzVWaEX7kAkfkdrZwfUiVf*c6-Zt2FgTi5QIa5nIF3L75iDSmntKH1f3XBq2qIi7fLITlfkv3xNQtwZRBQNagne5JBNXAye/bg4.jpg) no-repeat fixed center center;
+}
+
+#xn_bar {
+margin:auto;
+text-align:center;
+width:955px;
+}
+
+p#xg_sitedesc.xj_site_desc {
+float:right;
+position:relative;
+}
+
+#xn_bar {
+background:transparent;
+}
+
+.xg_widget_main_index #column2 {
+margin-top:0;
+}
+
+#featured_members .member_item img.xg_lightborder,#featured_members .member_item span.dy-avatar {
+border:0 solid;
+float:left;
+height:64px;
+width:64px;
+}
+
+.xg_widget_main .module_events {
+display:none;
+}
+
+.def {
+margin-top:-3px!important;
+}
+
+.icns a:hover {
+width:75px!important;
+}
+
+a#application_name_header_link {
+display:none;
+}
+
+div#xn_bar_menu_branding {
+margin-left:-100px;
+}
+
+#tl {
+position:absolute;
+}
+
+div.signin-right {
+border:0;
+width:280px;
+}
+
+a#application_name_header_link {
+margin-top:-10px!important;
+}
+
+div.xg_signup big strong a {
+background:
