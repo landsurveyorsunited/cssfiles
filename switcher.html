@@ -1,0 +1,40 @@
+<head>
+<style>select { display: block;background:#212121;color:#fff; } /* unimportant */</style>
+</head>
+<p>👀Use this switcher to quickly jump to useful land surveyor resources, tools and hubs</p>
+<select class="switcher">
+  <option value="https://view-awesome-table.com/-KP_tMmf4iUyrv44rYkY/view">Land Surveyor Support Groups Collection</option>
+  <option value="https://view-awesome-table.com/-Kq_I1WTSeqkVZT0eRmn/view">Ultimate Surveyor Community Guide</option>
+  <option value="https://www.sheet2site.com/api/?key=1K8jRhtxCxJKNIByLIgCTmlp6VXO-eIMGvzvxlIg58eI">Become SURVAmbassador For Your Location</option>
+  <option value="https://www.jbirds.co/surveyors">Get an affordable Website with jbirds.co</option>
+  <option value="https://view-awesome-table.com/-L8sFT9aUtB10a78mljh/view">Find and Join your Local Group Forum</option>
+  <option value="https://land-surveyor-online-resources.zeef.com/landsurveyorsu">Megalist of Land Surveyor Resources and Links</option>
+  <option value="https://app.additor.io/p/zE8OUzjX">Surveying Tutorials List</option>
+  <option value="https://landsurveyors.carto.com/viz/9c0755a0-8fc6-11e6-b3bf-0ef24382571b/embed_map">Global Member Map</option>
+  <option value="https://view-awesome-table.com/-L0g9Rz-l-kxvJj79wgQ/view">Surveying Equipment Manuals and Guides</option>
+  <option value="https://www.facebook.com/landsurveyorsunited">Land Surveyors United on Facebook</option>
+  <option value="https://www.facebook.com/surveyingjobs">Surveying Jobs on Facebook</option>
+  <option value="https://www.facebook.com/surveyingjobs/app/337680106275807/">Surveyors Seeking Employment</option>
+  <option value="https://www.facebook.com/surveyingjobs/app/338808983330/">Add a Support Tab to Your Facebook Page</option>
+  <option value="https://www.srvyr.com/about">International Surveyors Week</option>
+</select>
+
+
+<iframe class="switch-target" width="100%" height="600" src=""></iframe>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>var switcher$ = $('.switcher'),          // select element
+    switchTarget$ = $('.switch-target'); // iframe
+
+switcher$.on('change', switchIframeSrc); // event binding
+
+// our functiono to switch the iframe src
+function switchIframeSrc() {
+  // set the 'src' attribute of the iframe
+  // to the value of the selected option
+  switchTarget$.attr('src', switcher$.val());
+}
+
+// call the method on load
+switchIframeSrc();
+</script>
