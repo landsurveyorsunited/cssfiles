@@ -12,7 +12,7 @@ body:before{content:",";
 	-webkit-background-size: 100%, 15%, cover;
    background-size: 100%, 15%, cover;
 }	
-div.banner-footer {background: linear-gradient(135deg, rgba(198,33,69,0.75) 0%,rgba(198,117,45,0.75) 100%), url("https://dl.dropboxusercontent.com/s/bnjpyba893qh6kg/pattern.svg"), url("http://api.ning.com:80/files/QsQ1m7RyND344LDj25fOH8CH33f0OxffWCxyq7qoH6o4qrF1ba7sPTuACpMTOYS3pIThk91zEeBWhjxXHnx8K9W0n*c1DgN7/pattern.png") fixed;
+div.banner-footer {background: linear-gradient(135deg, rgba(198,33,69,0.75) 0%,rgba(198,117,45,0.75) 100%), url("https://st1.ning.com/storage/rest/1.0/file/getimage/45B582CB0C0EA3A781FA040731B0B7A3377EEB123AF828561B09EB359DD07FDA4C80C62E3ADECD6A447D886DAD4A0E3BBF98DBBDE3FA5534C43CB84F092E9561AC19A185D2885FC2AB5B3EE19953AF77C02256C5AEC06249C1B291A8BEADE7E0F4D15FCA50E518AC8ECD8488C31A79C01780ED7781BBEE8626F481F2A4055C066B1322FF639DB0884A5C2944E4365FED50588F025F6042A693C325484BC103D33B29D212D6A4F8376252A5DA6BD4EEF47544A4A9973B994B28D6ADB836AFEAE1E14B8715A2BE070BAB22740E3FB1B0874EE5C5295FA8726CC97397CED1A7DE60"), url("http://api.ning.com:80/files/QsQ1m7RyND344LDj25fOH8CH33f0OxffWCxyq7qoH6o4qrF1ba7sPTuACpMTOYS3pIThk91zEeBWhjxXHnx8K9W0n*c1DgN7/pattern.png") fixed;
 	background-repeat: repeat, repeat, no-repeat;
 	background-position: center center;
 	-webkit-background-size: 100%, 15%, cover;
