@@ -1,0 +1,7 @@
+html { 
+  background: url(https://www.laneconstruct.com/uploads/application/images/dugway-rotator-photo-2.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
