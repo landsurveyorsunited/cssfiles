@@ -1,0 +1,16 @@
+html { border: 0px double #fd0e19;
+background-image: url(http://api.ning.com:80/files/92MWjwydBRndlATlu8PpujQ1iWxChRYObYEc4fPQvBFeACNDeb6L9dCQK*vcbiYnYtCPsEBH0OHiz*UF-XdIQSwOuHzi8Vku/texas.jpg);
+background-color: transparent;
+background-repeat: no-repeat;
+background-position: left top;
+background-attachment: fixed;
+}
+.xg_widget_groups .xg_headline .tb ul.byline li{
+display:none !important;
+}
+.xg_widget_groups .dy-avatar-64{
+display:none;
+}
+.myspan {
+    display: block;
+}
