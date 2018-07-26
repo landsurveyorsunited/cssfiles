@@ -4,7 +4,7 @@
 display: none;
 }
 #xn_bar{position:fixed;top:0;z-index:100}#xg_themebody{padding-top:28px}#xn_bar .icon-home, #xn_bar .icon-top{background:transparent
-url(fistholdsm.png) 0 0 no-repeat}#xn_bar a.icon-home:hover{background-position:-24px 0}#xn_bar a.icon-top{background-position:-48px 0}#xn_bar a.icon-top:hover{background-position:-71px 0}
+url(fistholdsm.png?width=40px) 0 0 no-repeat}#xn_bar a.icon-home:hover{background-position:-24px 0}#xn_bar a.icon-top{background-position:-48px 0}#xn_bar a.icon-top:hover{background-position:-71px 0}
 .inset {
   border: 1px solid #111;
   -moz-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.35), inset 1px 0 1px rgba(255, 255, 255, 0.3), inset -1px 0 1px rgba(255, 255, 255, 0.3), inset 0 -1px 1px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(0, 0, 0, 0.2), 0 -1px 1px rgba(0, 0, 0, 0.3), 1px 0 1px rgba(255, 255, 255, 0.2), -1px 0 1px rgba(255, 255, 255, 0.2), 0 1px 1px rgba(255, 255, 255, 0.2);
