@@ -50,9 +50,10 @@ aside {
   border-right: 1px solid slategray;
 }
 aside ul {
-  list-style: none;
+  list-style: none!important;
   margin: 0;
   padding: 0;
+  width:20%;
 }
 aside ul li a {
   display: flex;
