@@ -70,6 +70,8 @@ main {
   grid-area: main;
   background-color: white;
   padding: 0 1rem;
+  width:75%;
+  float:right;
 }
 footer {
   grid-area: footer;
