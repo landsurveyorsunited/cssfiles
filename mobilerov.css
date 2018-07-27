@@ -25,7 +25,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #a12712!important;
+  color: #cc0000!important;
 }
 header {
   grid-area: header;
@@ -60,14 +60,15 @@ aside ul {
   list-style: none!important;
   margin: 0;
   padding: 0;
-  width:20%;
+  width:25%;
   float:left;
 }
 aside ul li a {
   display: flex;
   background-color: #212121;
   align-items: center;
-  padding: 0.4rem 1rem;
+  font-size: 0.7rem;
+  padding: 0.4rem 0,5rem;
   border-bottom: 1px solid slategray;
 }
 aside ul li a:hover {
@@ -78,7 +79,7 @@ main {
   grid-area: main;
   background-color: white;
   padding: 0 1rem;
-  width:75%;
+  width:72%;
   float:right;
 }
 footer {
