@@ -1,0 +1,104 @@
+
+html { 
+  background: url(https://go.srvyr.com/2mKKpWU) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body {
+  padding: 3em;
+  min-width: 25em;
+  background: white;
+}
+
+fieldset {
+  border: 1px solid black;
+  margin-bottom: 3em;
+  background: white;
+}
+
+legend {
+  padding: 0.25em 0.5em;
+}
+
+.one {
+  background: linear-gradient(to bottom, red, red 0.25em, white 0.25em, white);
+  padding-top: 1em;
+  margin-top: 1.5em;
+  position: relative;
+}
+.one legend {
+  font-size: 0.75em;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-left: 1em;
+  padding-right: 1em;
+  background: red;
+  color: white;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-top-left-radius: 0.33em;
+  border-top-right-radius: 0.33em;
+  position: absolute;
+  bottom: 100%;
+  left: 0.75em;
+}
+
+.two {
+  position: relative;
+  padding-top: 2em;
+  box-shadow: 0 0.25em 0.25em rgba(0, 0, 0, 0.5);
+}
+.two legend {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: blue;
+  color: white;
+  width: 100%;
+  font-size: 0.9em;
+  padding-left: 0.75em;
+  letter-spacing: 0.05em;
+}
+
+/* NOTE: vertical text will not show whitespace - so single words only :( */
+/* TODO: look for solution for previous note */
+.three {
+  position: relative;
+  padding: 1em 3em;
+  overflow: hidden;
+  background: linear-gradient(to left, green, green 1em, white 1em, white);
+  box-shadow: 0 0.25em 0.25em rgba(0, 0, 0, 0.5);
+}
+.three legend {
+  font-size: 1em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: 'Courier New', Courier, monospace;
+  word-break: break-all;
+  line-height: 1em;
+  background: green;
+  color: white;
+  width: 1.5em;
+  height: 100%;
+  padding: 1em 0.25em 1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.four {
+  padding-top: 1em;
+  border: 0.25em solid purple;
+}
+.four legend {
+  padding: 0.25em 1.67em;
+  font-size: 0.85em;
+  background: #dfbfdf;
+  border-left: 0.33em solid purple;
+  border-right: 0.33em solid purple;
+  text-transform: uppercase;
+  line-height: 1em;
+}
