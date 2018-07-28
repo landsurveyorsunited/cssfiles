@@ -61,15 +61,15 @@ aside ul {
   list-style: none!important;
   margin: 0;
   padding: 0;
-  width:25%;
+  width:20vw;
   float:left;
 }
 aside ul li a {
   display: flex;
   background-color: #212121;
   align-items: center;
-  font-size: 0.7rem;
-  padding: 0.4rem 0,5rem;
+  font-size: 0.8rem;
+  padding: 0.2rem 0,5rem;
   border-bottom: 1px solid slategray;
 }
 aside ul li a:hover {
@@ -80,7 +80,7 @@ main {
   grid-area: main;
   background-color: white;
   padding: 0 1rem;
-  width:72%;
+  width:72vw;
   float:right;
 }
 footer {
