@@ -45,12 +45,14 @@ header ul li {
 header ul li:last-child {
   margin: 0;
 }
+
+
 aside {
   grid-area: aside;
   background-color: gainsboro;
   border-right: 1px solid slategray;
 }
-aside { 
+lside,aside { 
   background: url(https://raw.githubusercontent.com/landsurveyorsunited/cssfiles/master/treemansurveyor.png) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
