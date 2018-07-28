@@ -19,7 +19,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #cc0000!important;
+  color: #eee!important;
 }
 header {
   grid-area: header;
