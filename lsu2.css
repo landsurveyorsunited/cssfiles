@@ -22,8 +22,8 @@ url(fistholdsm.png?width=40px) 0 0 no-repeat}#xn_bar a.icon-home:hover{backgroun
 -webkit-filter: grayscale(100%);
 }
 h1 {font-size:1.4em!important;}
-p.small.object-detail,div.right-panel,p.small,div.xg_module_body,.ui-link,.member_item_detail {background:rgba(236, 240, 241,1.0);color:#a12712;margin:auto;border:3px outset#fff;}
-.member_item a,.member_item_detail {color:#a12712!important}
+div.xg_module_body,.ui-link,.member_item_detail {background:rgba(236, 240, 241,1.0);color:#212121;margin:auto;border:3px outset#fff;}
+.member_item a,.member_item_detail {color:#000000!important}
 #u_0_0,.iframe,div.likebox.likebox-ning {background:#ecf0f1;width:100%;}
 div.xg_lightborder.like-button.like-button-3 {background:#3498db;width:90%;color:#212121;font-size:1.2em;border-radius: 5px;}
 div.xg_lightborder.like-button.like-button-3:hover {background:#7f8c8d;width: 72%;color:#bdc3c7;font-size:1.0em;border-radius: 5px;}
