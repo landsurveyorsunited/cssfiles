@@ -1,10 +1,12 @@
-body { border: 0px double #000;
-background-image: url(http://api.ning.com:80/files/bJVgM2FybcpmxpSAefEjCF8dBwQFTXSHB37hvg7aR7omXie4It60-IqGVEXqnfRbZsua1-W2WWk-rqRsSp9mkrZcIYEcFQ4n/studentsurveyors.jpg);
-background-color: #eeeeee;
-background-repeat: no-repeat;
-background-position: left center;
-background-attachment: fixed;
+.xg_status_wrapper,html { 
+  background: url(http://api.ning.com:80/files/bJVgM2FybcpmxpSAefEjCF8dBwQFTXSHB37hvg7aR7omXie4It60-IqGVEXqnfRbZsua1-W2WWk-rqRsSp9mkrZcIYEcFQ4n/studentsurveyors.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
+
+
 .xg_widget_groups .xg_headline .tb ul.byline li{
 display:none !important;
 }
