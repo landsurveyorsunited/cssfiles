@@ -1,0 +1,16 @@
+html { 
+  background: url(http://api.ning.com:80/files/hKtpqNhgCFGx2A34yT1Xi-IxW-G2P6OpyQSoZX-9JPHjSXVclez9RxLSbqHZsSzqBuwRlaWCCdl8CHLWkOOguI5yBU-CFjV1/haitilandsurveyors.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.xg_widget_groups .xg_headline .tb ul.byline li{
+display:none !important;
+}
+.xg_widget_groups .dy-avatar-64{
+display:none;
+}
+.myspan {
+    display: block;
+}
