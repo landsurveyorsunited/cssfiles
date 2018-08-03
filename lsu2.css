@@ -196,24 +196,7 @@ a {
 }
 div.xg_module.module_about_user.dt{color:#212121!importantl}
 
-h1,#xg_canvas > div.xg_module.xg_module_with_dialog > div.xg_headline.xg_headline-img.xg_headline-2l > div.tb > ul > li:nth-child(1),#cf > dt > p,#discussionReplies > div.xg_module_body > dl.discussion.clear.i0.xg_lightborder > p,span.limk-article-title,ul.navigation.easyclear {
-  width: 90%;
-   font-size: 1.1em;
-text-rendering: optimizeLegibility;
-  padding: 2px
-3px;
-  font-family: 'Lato', sans-serif;
-  font-weight: 500;
-  margin: 15px;
-  background: #fff;
-  color: #323232;
-  position: static;
-  line-height: 1.1em;
-  border-radius: 10px; border: double #707070; border-width: 6px 9px 6px 3px;
-word-wrap: break-word;
-    align-self: stretch;
-   
-}
+
 #xg_canvas > ul > li:nth-child(6) > a {color:#323232}
 a.xg_sprite.xg_sprite-add a,.xj_new_topic_link,li.right
  {
