@@ -216,24 +216,7 @@ a.xg_sprite.xg_sprite-add a,.xj_new_topic_link,li.right
   }
 
 
-h3 {
-  text-align: center;
-  background: #fff;
-  margin: 5px auto;
-  border: solid 1px black;
-  min-height: 30px;
-  word-wrap: break-word;
-  font-size: 1.1em;
-  line-height: 1.2em;
-  border: 2px
-dashed #fff;
-  border-radius: 3px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -moz-box-shadow: 0 0 0 4px #000,2px 1px 4px 4px rgba(10,10,0,.5);
-  -webkit-box-shadow: 0 0 0 4px #fff,2px 1px 4px 4px rgba(10,10,0,.5);
-  box-shadow: 0 0 0 4px #000,2px 1px 6px 4px rgba(10,10,0,.5);
-}
+
 
 ul.tabs,ul.jstabs {
   margin: 0!important;
