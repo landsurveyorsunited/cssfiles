@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700|Shrikhand');
+
+$nav-item-bg-clr: #212121;
+$nav-item-bg-clr-hvr: #1E1E1E;
+$nav-item-txt-clr: white;
+$ts: 0.3s;
+$td: 0.05s;
+
+* {
+  box-sizing: border-box;
+}
+
+html {background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,0.9023984593837535) 35%, rgba(0,212,255,1) 100%);}
+body {
+ background: transparent;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.4;
+  background-image: url(https://raw.githubusercontent.com/landsurveyorsunited/cssfiles/master/treemansurveyor.png)!important;
+  background-size: cover;
+  
+  @media (min-width: 450px) {
+    font-size: 1.25rem;
+  }
+}
+
+.page-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  overflow: visible;
+  padding: 1rem;
+  z-index: 200;
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  min-height: 100vh;
+  text-align: center;
+  color: white;
+}
+
+.page-tagline {
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px #cc0000;
+  z-index: 100;
+  
+  a {
+    color: darken($nav-item-bg-clr, 20%);
+    text-decoration: none;
+  }
+}
+
+p{font-family: 'Shrikhand', serif;
+  font-size: 1.6rem;
+  text-shadow: 2px 2px 4px #666;}
+
+.page-title {
+  margin-bottom: 1.5rem;
+  font-family: 'Shrikhand', serif;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px #666;
+  line-height: 1.2;
+  
+  @media (min-width: 450px) {
+    font-size: 3rem;
+  }
+}
+
+nav {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 3rem 1rem 1rem;
+  width: 100vw;
+  min-height: 100vh;
+  text-align: center;
+  background-color: white;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: 
+    opacity $ts * 1.5 $ts * 1.5 ease,
+    transform 0s $ts * 4 ;
+}
+
+.menu ol {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  width: 100%;
+ 
+  @media (min-width: 820px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  li {
+    display: grid;
+    grid-column: span 1;
+    grid-gap: 1rem;
+    overflow: hidden;
+     box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
+-moz-box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
+-webkit-box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
+  }
+  
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    font-family: 'Shrikhand', serif;
+  font-size: 1.7rem;
+  text-shadow: 2px 2px 4px #cc0000;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: $nav-item-bg-clr;
+    background-color: $nav-item-bg-clr;
+    border-radius: 2px;
+    
+    @media (min-width: 450px) {
+      font-size: 1.75rem;
+    }
+  }
+}
+
+
+.menu > ol > li:nth-child(n + 3) {
+  grid-column: span 2;
+}
+
+.menu .sub-menu {
+  padding: 0;
+  grid-template-columns: repeat(2, 1fr);
+  
+  @media (min-width: 500px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  li a {
+    font-size: 0.85rem;
+    color: darken($nav-item-bg-clr, 15%);
+    background-color: darken($nav-item-bg-clr, 15%);
+    
+    @media (min-width: 450px) {
+      font-size: 1rem;
+    }
+  }
+  
+  li:nth-child(3n) {
+    grid-column: span 2;
+
+    @media (min-width: 500px) {
+      grid-column: span 1;
+    }
+  }
+}
+
+.menu-toggle {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 2px;
+  position: relative;
+  background:#cc0000!important;
+  cursor: pointer;
+  width: 38px;
+  height: 32px;
+  z-index: 100;
+  
+  &:before {
+    content: '×';
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 3.4rem;
+    line-height: 0.4;
+    background:#fff;
+    color: darken($nav-item-bg-clr, 20%);
+    z-index: 2;
+    opacity: 0;
+    transition: opacity $ts ease;
+  }
+  
+  span {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: darken($nav-item-bg-clr, 20%);
+    border-radius: 2px;
+    transition: transform $ts ease;
+    transform-origin: 100% 100%;
+    
+    @for $i from 1 through 6 {
+      &:nth-child(#{$i}) {
+        transition-delay: $ts + ($td * $i);
+      }
+    }
+    
+    &:nth-child(1),
+    &:nth-child(2) {
+      grid-column: span 3;
+    }
+        
+    &:nth-child(3),
+    &:nth-child(6) {
+      grid-column: span 2;
+    }
+  
+    &:nth-child(4),
+    &:nth-child(5) {
+      grid-column: span 4;
+    }
+  }
+}
+
+#menu-toggle-input {
+  display: none;
+  
+  &:checked ~ .menu-toggle {
+    span {
+      transform: scaleX(0);
+      
+      @for $i from 1 through 6 {
+        &:nth-child(#{$i}) {
+          transition-delay: $td * $i;
+        }
+      }
+    }
+    
+    &:before {
+      opacity: 1;
+      transition-delay: $ts * 2.5;
+    }
+  }
+  
+  &:checked ~ nav {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0s;
+    
+    a {
+      color: $nav-item-txt-clr;
+      transform: translate(0, 0);
+    }
+    
+    @for $i from 1 through 5 {
+      > ol > li:nth-child(#{$i}) > a {
+        transition: 
+          color $ts ($ts * 2.5),
+          transform $ts ($ts + $td * $i) ease;
+      }
+
+      .sub-menu > li:nth-child(#{$i}) > a {
+        transition: 
+          color $ts ($ts * 2.5),
+          transform $ts ($ts * 1.5 + $td * $i) ease;
+      }
+    }
+  }
+}
+
+@for $i from 1 through 5 {
+  .menu > ol > li:nth-child(#{$i}) > a {
+    transform: translate(calc(-100% - 12px), 0);
+    transition: 
+      color $ts,
+      transform $ts ($ts / 2 + $td * $i) ease;
+  }
+  
+  .sub-menu > li:nth-child(#{$i}) > a {
+    transform: translate(0, calc(-100% - 12px));
+    transition: 
+      color $ts,
+      transform $ts ($ts / 2 + $td * $i) ease;
+  }
+}
