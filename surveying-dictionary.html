@@ -33,10 +33,11 @@ text-decoration: none;
 color: #fff;
 display: block;
 font-size: 0.8em;
-padding: 0 15px;
+padding: 0 18px;
 border: 1px solid #fff; /*--Gives the bevel look with a 1px white border inside the list item--*/
 outline: none;
 }
+
 ul.tabs li a:hover {
 background: #ccc;
 }
@@ -57,7 +58,58 @@ padding: 20px;
 font-size: 1.2em;
 color:#333;
 }
+
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    left: 16px;
+    top: 13px;
+    font-size: 19px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+#return-to-top:hover i {
+    color: #fff;
+    top: 5px;
+}
+
+
+/* Extra Things */
+body{background: #eee ;font-family: 'Open Sans', sans-serif;}h3{font-size: 30px; font-weight: 400;text-align: center;margin-top: 50px;}h3 i{color: #444;}
 </style>
+<!-- Return to Top -->
+<a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+
+<!-- ICON NEEDS FONT AWESOME FOR CHEVRON UP ICON -->
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 <script type="text/javascript" src="./A-Z-Land-Surveying-Subject-Index_files/jquery.min.js.download"></script>
 <script type="text/javascript">
 $(document).ready(function() {
@@ -11492,4 +11544,16 @@ Magellan</a> quite a few times (<a href="http://pro.magellangps.com/en/products/
 manufacturer</a>).&nbsp;&nbsp;</p>
 </div>
 </div>
-<div id="publicate_added" style="right: -370px; position: fixed; background-color: transparent; display: none; z-index: 9999999; top: 0px; width: 370px; height: 100%;"><div style="display: none; width: 20px; height: 20px; background-image: url(&quot;https://publicate.it/icon/cross_fff.svg&quot;); background-position: 50% 50%; background-repeat: no-repeat; background-color: rgb(204, 204, 204); background-size: 10px; position: absolute; top: 20px; right: 20px; cursor: pointer; border-radius: 50%;" id="publicate_ext_close_alt"></div><div id="publicate_iframe_spinner" style="text-align: center; width: 50px; max-width: 50px; height: 50px; margin: 20px 20px 0px 0px; float: right; background-image: url(&quot;https://publicate.it/resources/images/spinner_on_white.gif&quot;); background-repeat: no-repeat; background-position: 50% center; background-size: 50px;"><img src="./A-Z-Land-Surveying-Subject-Index_files/logo_circle.svg" style="width:40px!important; height:auto!important; margin:5px 0 0 0!important;"></div><iframe id="publicate_iframe" src="./A-Z-Land-Surveying-Subject-Index_files/saved_resource.html" style="height: 100%; width: 100%; border: none; display: none;"></iframe></div><div id="lo-engage-ext-container"><div data-reactroot=""></div></div><link rel="stylesheet" type="text/css" href="chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/css/content.css"><div id="viewedit-app"><div data-reactroot=""><!-- react-empty: 2 --><div><!-- react-empty: 4 --><!-- react-empty: 5 --><!-- react-empty: 6 --></div></div></div></body></html>
+<div id="publicate_added" style="right: -370px; position: fixed; background-color: transparent; display: none; z-index: 9999999; top: 0px; width: 370px; height: 100%;"><div style="display: none; width: 20px; height: 20px; background-image: url(&quot;https://publicate.it/icon/cross_fff.svg&quot;); background-position: 50% 50%; background-repeat: no-repeat; background-color: rgb(204, 204, 204); background-size: 10px; position: absolute; top: 20px; right: 20px; cursor: pointer; border-radius: 50%;" id="publicate_ext_close_alt"></div><div id="publicate_iframe_spinner" style="text-align: center; width: 50px; max-width: 50px; height: 50px; margin: 20px 20px 0px 0px; float: right; background-image: url(&quot;https://publicate.it/resources/images/spinner_on_white.gif&quot;); background-repeat: no-repeat; background-position: 50% center; background-size: 50px;"><img src="./A-Z-Land-Surveying-Subject-Index_files/logo_circle.svg" style="width:40px!important; height:auto!important; margin:5px 0 0 0!important;"></div><iframe id="publicate_iframe" src="./A-Z-Land-Surveying-Subject-Index_files/saved_resource.html" style="height: 100%; width: 100%; border: none; display: none;"></iframe></div><div id="lo-engage-ext-container"><div data-reactroot=""></div></div><link rel="stylesheet" type="text/css" href="chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/css/content.css"><div id="viewedit-app"><div data-reactroot=""><!-- react-empty: 2 --><div><!-- react-empty: 4 --><!-- react-empty: 5 --><!-- react-empty: 6 --></div></div></div> <script>// ===== Scroll to Top ==== 
+$(window).scroll(function() {
+    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+        $('#return-to-top').fadeIn(200);    // Fade in the arrow
+    } else {
+        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+    }
+});
+$('#return-to-top').click(function() {      // When arrow is clicked
+    $('body,html').animate({
+        scrollTop : 0                       // Scroll to top of body
+    }, 500);
+});</script></body></html>
