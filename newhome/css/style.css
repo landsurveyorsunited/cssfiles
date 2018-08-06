@@ -14,7 +14,10 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
   line-height: 1.4;
-  background-image: url(https://raw.githubusercontent.com/landsurveyorsunited/cssfiles/master/treemansurveyor.png) !important;
+  background-image: url(https://raw.githubusercontent.com/landsurveyorsunited/cssfiles/master/treemansurveyor.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 @media (min-width: 450px) {
