@@ -1,0 +1,402 @@
+@import url(https://fonts.googleapis.com/css?family=Supermercado+One);
+body {
+  background: #111;
+  background: #0b1114;
+  background: radial-gradient(#1f3a47, #0b1114);
+  display: flex;
+  padding: 50px;
+  box-sizing: border-box;
+  margin: 0;
+  background-clip: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.spinner h1 {
+  margin: auto;
+  font-size: 80px;
+  width: 100%;
+  height: calc(100%);
+  text-align: center;
+  top: 0%;
+  left: -100%;
+  margin: auto;
+  padding-right: 5%;
+  background: white;
+  -webkit-mask: linear-gradient(rgba(0, 0, 0, 0.1), #000000 90%);
+  transform-origin: 50% 55%;
+  transform: perspective(1600px) rotateX(-6deg);
+  transform: perspective(1600px) rotateX(-6deg);
+  animation: spinner-wiggle 3.2s infinite;
+  -webkit-transition: width 2s, box-shadow 3s,  border 3s, background-color 4s, height 2s, border-radius 2s;
+  -moz-transition: width 2s, box-shadow 3s,  border 3s, background-color 4s, height 2s, border-radius 2s;
+  -o-transition: width 2s, box-shadow 3s, border 3s,  background-color 4s, height 2s, border-radius 2s;
+  -ms-transition: width 2s, box-shadow 3s, border 3s,  background-color 4s, height 2s, border-radius 2s;
+  transition: width 2s, box-shadow 3s, border 3s,  background-color 4s, height 2s, border-radius 2s;
+}
+
+body:hover .active {
+  background: #646464;
+  border-color: rgba(100, 100, 100, 0.5);
+  box-shadow: 0 2px 35px 15px rgba(0, 0, 0, 0.3), 0 12px 15px 15px rgba(0, 0, 0, 0.4), 0 -5px 5px 15px rgba(64, 128, 180, 0), inset 0 -5px 15px 0px rgba(64, 128, 180, 0), inset 0 0 50px 0px rgba(0, 0, 0, 0.4);
+}
+
+body:hover .active h1 {
+  opacity: 1;
+}
+
+body:hover .active:hover h1:hover {
+  opacity: 1;
+}
+
+body:hover .active:hover h1:hover {
+  -webkit-transition: width 2s, box-shadow 3s, border 3s,  background-color 4s, height 2s, border-radius 2s;
+  -moz-transition: width 2s, box-shadow 3s, border 3s,  background-color 4s, height 2s, border-radius 2s;
+  -o-transition: width 2s, box-shadow 3s, border 3s,  background-color 4s, height 2s, border-radius 2s;
+  -ms-transition: width 2s, box-shadow 3s, border 3s,  background-color 4s, height 2s, border-radius 2s;
+  transition: width 2s, box-shadow 3s, border 3s,  background-color 4s, height 2s, border-radius 2s;
+}
+
+.one, .one:hover,
+.display
+.spinner h1:hover,
+.display .spinner h1 {
+  -webkit-transition: width 2s, box-shadow 3s, border 3s,  background-color 4s, height 2s, border-radius 2s;
+  -moz-transition: width 2s, box-shadow 3s, border 3s,  background-color 4s, height 2s, border-radius 2s;
+  -o-transition: width 2s, box-shadow 3s, border 3s,  background-color 4s, height 2s, border-radius 2s;
+  -ms-transition: width 2s, box-shadow 3s, border 3s,  background-color 4s, height 2s, border-radius 2s;
+  transition: width 2s, box-shadow 3s, border 3s,  background-color 4s, height 2s, border-radius 2s;
+}
+
+.one {
+  max-width: 1600px !important;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 50px;
+  height: 50px;
+  background-color: #4A8ACC;
+  border: 0px solid #4A8ACC;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 30px 10px rgba(0, 0, 0, 0.3), 0 12px 40px 10px rgba(0, 0, 0, 0.4), 0 -4px 30px 5px rgba(64, 128, 180, 0.9), inset 0 24px 10px 10px rgba(0, 0, 0, 0.1), inset 0 0 22px -2px rgba(0, 0, 0, 0.4);
+  background-clip: border-box;
+}
+
+.one.active:hover {
+  box-shadow: 0 2px 35px 15px rgba(0, 0, 0, 0.3), 0 12px 15px 15px rgba(0, 0, 0, 0.4), 0 -5px 5px 15px rgba(64, 128, 180, 0), inset 0 -5px 15px 0px rgba(64, 128, 180, 0), inset 0 0 50px 0px rgba(0, 0, 0, 0.4);
+}
+
+.one:hover {
+  width: 200px;
+  height: 200px;
+  border: 0px solid #FF9147;
+  background-color: #FF9147;
+  box-shadow: 0 20px 30px 15px rgba(128, 64, 40, 0.1), 0 60px 30px 0px rgba(0, 0, 0, 0.3), 0 0px 30px 10px rgba(150, 74, 60, 0.9), inset 0 24px 18px -10px rgba(128, 64, 40, 0.5), inset 0 0 22px -2px rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+}
+
+body .active {
+  width: 90%;
+  height: 90%;
+  border: 0px solid #4A8ACC;
+  background-color: #4A8ACC;
+  border-radius: 50px;
+  -webkit-transition: width 2s, box-shadow 3s, border 3s, background-color 4s, height 2s, border-radius 2s;
+  -moz-transition: width 2s, box-shadow 3s, border 3s,  background-color 4s, height 2s, border-radius 2s;
+  -o-transition: width 2s, box-shadow 3s, border 3s,  background-color 4s, height 2s, border-radius 2s;
+  -ms-transition: width 2s, box-shadow 3s, border 3s, background-color 4s, height 2s, border-radius 2s;
+  transition: width 2s, box-shadow 3s, border 3s,  background-color 4s, height 2s, border-radius 2s;
+}
+
+body:hover .active:hover {
+  width: 90%;
+  height: 90%;
+  border: 0px solid #4A8ACC;
+  background-color: #4A8ACC;
+  border-radius: 50px;
+  box-shadow: 0 2px 35px 15px rgba(0, 0, 0, 0.3), 0 12px 15px 15px rgba(0, 0, 0, 0.4), 0 -5px 5px 15px rgba(64, 128, 180, 0), inset 0 -5px 15px 0px rgba(64, 128, 180, 0), inset 0 0 50px 0px rgba(0, 0, 0, 0.4);
+}
+
+.one .stage {
+  width: 100%;
+  height: 100%;
+  border: 0px solid #4A8ACC;
+  background-color: transparent;
+  opacity: 0;
+  border-radius: inherit;
+  display: none;
+}
+
+.stage.display {
+  width: 100%;
+  height: 100%;
+  border: 0px solid #4A8ACC;
+  background-color: transparent;
+  opacity: 1;
+  border-radius: inherit;
+  display: inline-block;
+}
+
+.one .spinner {
+  max-width: 1600px !important;
+  opacity: 0.5;
+  -webkit-transition: width 2s, box-shadow 3s, border 3s, background-color 4s, height 2s, border-radius 2s opacity 2s;
+  -moz-transition: width 2s, box-shadow 3s, border 3s,  background-color 4s, height 2s, border-radius 2s opacity 2s;
+  -o-transition: width 2s, box-shadow 3s, border 3s,  background-color 4s, height 2s, border-radius 2s opacity 2s;
+  -ms-transition: width 2s, box-shadow 3s, border 3s, background-color 4s, height 2s, border-radius 2s opacity 2s;
+  transition: width 2s, box-shadow 3s, border 3s,  background-color 4s, height 2s, border-radius 2s opacity 2s;
+}
+
+.stage.display .spinner:hover {
+  opacity: 1;
+}
+
+.stage.display .spinner {
+  max-width: 1600px !important;
+  opacity: 0.5;
+  -webkit-transition: width 2s, box-shadow 3s, border 3s, background-color 4s, height 2s, border-radius 2s opacity 2s;
+  -moz-transition: width 2s, box-shadow 3s, border 3s,  background-color 4s, height 2s, border-radius 2s opacity 2s;
+  -o-transition: width 2s, box-shadow 3s, border 3s,  background-color 4s, height 2s, border-radius 2s opacity 2s;
+  -ms-transition: width 2s, box-shadow 3s, border 3s, background-color 4s, height 2s, border-radius 2s opacity 2s;
+  transition: width 2s, box-shadow 3s, border 3s,  background-color 4s, height 2s, border-radius 2s opacity 2s;
+}
+
+.spinner {
+  background: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  left: 5%;
+  top: 0%;
+  margin: auto;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  width: calc(90%);
+  height: calc(95%);
+  border-radius: 10.52632%;
+  -webkit-mask: linear-gradient(#000000 97%, rgba(0, 0, 0, 0.1) 101%);
+  transform-origin: 50% 50%;
+  transform: perspective(1454.54545px) rotateX(6deg);
+  animation: spinner-wiggle 3.2s infinite;
+  -webkit-transition: width 2s, box-shadow 3s, border 3s, background-color 4s, height 2s, border-radius 2s;
+  -moz-transition: width 2s, box-shadow 3s, border 3s,  background-color 4s, height 2s, border-radius 2s;
+  -o-transition: width 2s, box-shadow 3s, border 3s,  background-color 4s, height 2s, border-radius 2s;
+  -ms-transition: width 2s, box-shadow 3s, border 3s, background-color 4s, height 2s, border-radius 2s;
+  transition: width 2s, box-shadow 3s, border 3s,  background-color 4s, height 2s, border-radius 2s;
+}
+
+.display .spinner h1 {
+  float: left;
+  margin-top: 0%;
+  border-radius: 50px;
+}
+
+.display .spinner h1:hover {
+  background: white;
+}
+
+@keyframes spinner-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinner-fade {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadein {
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes spinner-wiggle {
+  30% {
+    transform: perspective(1600px) rotateX(10deg);
+  }
+  40% {
+    transform: perspective(1600px) rotateX(7deg);
+  }
+  50% {
+    transform: perspective(1600px) rotateX(10deg);
+  }
+  60% {
+    transform: perspective(1600px) rotateX(8deg);
+  }
+}
+.diy-slideshow {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+figure {
+  position: absolute;
+  opacity: 0;
+  transition: 1s opacity;
+  height: 100%;
+}
+
+figcaption {
+  position: relative;
+  font-family: sans-serif;
+  font-size: .8em;
+  top: -5em;
+  bottom: 2em;
+  padding: .5em;
+  margin-right: 2em;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 8px;
+  text-align: right;
+  width: Auto;
+  float: right;
+  opacity: 0.5;
+  z-index: 1001;
+}
+
+figcaption a {
+  color: #fff;
+}
+
+figure.show {
+  opacity: 1;
+  position: static;
+  transition: 1s opacity;
+}
+
+.next, .prev {
+  color: #fff;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  top: 50%;
+  z-index: 1;
+  font-size: 2em;
+  margin-top: -.75em;
+  opacity: .3;
+  user-select: none;
+  z-index: 1000;
+}
+
+.next:hover, .prev:hover, figcaption:hover, #close:hover {
+  cursor: pointer;
+  opacity: 1 !important;
+}
+
+.next {
+  right: 0;
+  padding: 10px 5px 15px 10px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  z-index: 1000;
+}
+
+.prev {
+  left: 0;
+  padding: 10px 10px 15px 5px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  z-index: 1000;
+}
+
+p, h2 {
+  margin: 10px 20px;
+  color: #fff;
+  text-shadow: 0 5px 6px rgba(0, 0, 0, 0.3), 0 2px 3px rgba(0, 0, 0, 0.9);
+}
+
+.description h2 {
+  color: white;
+  margin-top: 5%;
+  padding: .5em;
+  margin-right: 2em;
+  padding-left: 0em;
+  font-size: 4em;
+  font-family: 'Supermercado One';
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #bbb, 0 3px 0 #aaa, 0 4px 0 #999, 0 5px 0 #888, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+}
+
+a {
+  color: #eef;
+}
+
+.description {
+  position: absolute;
+  top: -10%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-left: 2em;
+  padding-right: 2em;
+  display: none;
+  opacity: 0 !important;
+  overflow: visible;
+  height: 100%;
+}
+
+.showme {
+  display: block;
+  opacity: 1 !important;
+}
+
+#close.showme {
+  display: block;
+  opacity: 0.5 !important;
+}
+
+#close.showme:hover {
+  opacity: 1 !important;
+}
+
+#close, .close {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: .8em;
+  top: 5px;
+  left: 0em;
+  right: 0em;
+  bottom: 0em;
+  padding: .1em;
+  margin-left: 5px;
+  margin-top: 5px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 50%;
+  text-align: right;
+  width: 32px;
+  height: 32px;
+  opacity: 0;
+  z-index: 2001;
+  -webkit-mask: linear-gradient(rgba(0, 0, 0, 0.8), #000000 90%);
+}
+
+#close p, .close p {
+  margin-left: 1em;
+  margin-top: 0.6em;
+}
