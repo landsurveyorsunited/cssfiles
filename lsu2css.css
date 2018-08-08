@@ -21,7 +21,7 @@ url(fistholdsm.png?width=40px) 0 0 no-repeat}#xn_bar a.icon-home:hover{backgroun
 .xg_widget_photo_index_index .xg_list_photo ul li .ib a img:hover {
 -webkit-filter: grayscale(100%);
 }
-h1 {font-size:1.4em!important;}
+h1 {font-size:1.1em!important;}
 div.xg_module_body,.ui-link,.member_item_detail {background:rgba(236, 240, 241,1.0);color:#212121;margin:auto;border:3px outset#fff;}
 .member_item a,.member_item_detail {color:#000000!important}
 #u_0_0,.iframe,div.likebox.likebox-ning {background:#ecf0f1;width:100%;}
@@ -38,11 +38,10 @@ div.js-limk_horizontal_widget_placeholder {align-self: left;width:100%;border-ra
 div.limk-content{font-size:0.6em;}
 
 .attachments,h1 {
-  font-size: 1.5em;
-  color: white;
   font-family: 'Lato', sans-serif;
   font-weight: 700;
-  background:#ecf0f1;
+  background:#212121;
+	color:#fff!important;
    background-repeat: repeat-x;
   overflow: visible;
   background-position: right top;
