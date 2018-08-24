@@ -4,7 +4,7 @@
 display: none;
 }
 #xn_bar{position:fixed;top:0;z-index:100}#xg_themebody{padding-top:28px}#xn_bar .icon-home, #xn_bar .icon-top{background:transparent
-url(fistholdsm.png?width=40px) 0 0 no-repeat}#xn_bar a.icon-home:hover{background-position:-24px 0}#xn_bar a.icon-top{background-position:-48px 0}#xn_bar a.icon-top:hover{background-position:-71px 0}
+url(fistholdsm.png?width=10px) 0 0 no-repeat}#xn_bar a.icon-home:hover{background-position:-24px 0}#xn_bar a.icon-top{background-position:-48px 0}#xn_bar a.icon-top:hover{background-position:-71px 0}
 .inset {
   border: 1px solid #111;
   -moz-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.35), inset 1px 0 1px rgba(255, 255, 255, 0.3), inset -1px 0 1px rgba(255, 255, 255, 0.3), inset 0 -1px 1px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(0, 0, 0, 0.2), 0 -1px 1px rgba(0, 0, 0, 0.3), 1px 0 1px rgba(255, 255, 255, 0.2), -1px 0 1px rgba(255, 255, 255, 0.2), 0 1px 1px rgba(255, 255, 255, 0.2);
@@ -602,5 +602,49 @@ img.groupicon {position:absolute!important;}
 .xg_widget_groups div#xg_canvas.xj_canvas div.xg_span-16 div.xg_span-4 {width:955px;}
 .xg_widget_groups div.xg_module .vcard-48grid{width:845px;}
 
+.xg_widget_profiles_profile_show .xg_column.xg_span-4.xg_last.xj_classic_sidebar {
+display:none !important;}
 
+.xg_widget_profiles_profile_show .xg_colgroup.last-child {
+width:930px!important;
+}
+.xg_widget_profiles_profile_show .xg_3col .xg_2col, .xg_widget_profiles_profile_apps .xg_3col .xg_2col
+{
+margin-left:15px;
+overflow-x:hidden;
+overflow-y:hidden;
+padding-bottom:0;
+padding-left:10px;
+padding-right:5px;
+padding-top:10px;
+
+width:565px !important;
+}
+.xg_widget_profiles_profile .xg_3col .xg_1col {
+padding-top:10px;
+overflow-x:hidden;
+overflow-y:hidden;
+width:194px !important;
+padding-right:5px !important;
+padding-left:15px!important;
+margin-left:-15px;
+}
+
+.xg_widget_profiles_profile_show .xg_2col .feed-timestamp {
+left:500px !important;
+top:4px;
+}
+.xg_widget_profiles_profile_show .xg_3col .xg_2col img {
+max-width: 550px !important;
+}
+.xg_widget_profiles_profile_show .xg_3col .xg_2col .xg_reset img {
+max-width: 550px !important;
+}
+.xg_widget_profiles_profile_show .xg_1col img {
+max-width: 180px !important;
+}
+
+.xg_widget_profiles_profile_show .xg_1col .xg_reset img {
+max-width: 180px !important;
+}
 
