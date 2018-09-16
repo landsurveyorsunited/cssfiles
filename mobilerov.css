@@ -14,12 +14,19 @@ body {
     "aside main"
     "footer footer";
 }
-a {
-  color: white!important;
+a, a:link {
+  color: black;
   text-decoration: none;
+  background-position-y: -0%;
+  background-image: linear-gradient( white 50%, gold 50%)!important;
+  transition: background 500ms ease;
+  background-size: 2px;
+  background-size: auto 175%;
 }
+
 a:hover {
-  color: #eee!important;
+  background-position-y: 100%;
+
 }
 header {
   grid-area: header;
