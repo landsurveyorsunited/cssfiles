@@ -1,0 +1,23 @@
+.vid {
+  transition: .5s all;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.vid-wrap {
+  border-radius: 3rem;
+  overflow: hidden;
+}
+
+.isAngled {
+  transform: perspective(1000px) rotateY(25deg);
+  perspective: 10px;
+  transform-style: preserve-3d;
+  box-shadow: -20px 30px 85px rgba(210, 130, 190, 0.5);
+  transition: .5s all;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.isAngled:hover {
+  transform: perspective(0px) rotateY(0deg);
+  box-shadow: 0 5px 20px rgba(210, 130, 190, 0.75);
+}
