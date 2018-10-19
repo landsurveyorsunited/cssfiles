@@ -56,7 +56,7 @@ var notifier = {
 			url: url,
 			dataType: 'html',
 			error:function(ajaxrequest){
-				alert('Error fetching content.<br />Server Response: '+ajaxrequest.responseText)
+				alert('Error fetching content. Server Response: '+ajaxrequest.responseText)
 			},
 			success:function(content){
 				$(document.body).prepend(content)
