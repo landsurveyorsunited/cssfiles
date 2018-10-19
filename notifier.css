@@ -1,0 +1,139 @@
+body{
+-webkit-transform: translate3d(0, 0, 0);
+transform: translate3d(0, 0, 0);
+-webkit-transition: all .5s ease-in; /* change all instances of .5s to another number to modify open/ close duration */
+transition: all .5s ease-in; /* change all instances of .5s to another number to modify open/ close duration */
+}
+
+
+.notify{ /* main notifier container */
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+-webkit-perspective: 1500px;
+-webkit-perspective-origin: 50% 100%;
+perspective: 1500px;
+perspective-origin: 50% 100%;
+width: 100%; /* width of notifier container */
+height: 230px; /* height of notifier container */
+position: absolute;
+top: 0;
+left: 0;
+z-index: 1000;
+background: rgba(0,0,0,.8);
+-webkit-transform: translate3d(0, -100%, 0);
+transform: translate3d(0, -100%, 0);
+-webkit-transition: all .5s ease-in;
+transition: all .5s ease-in;
+visibility: hidden;
+}
+
+
+.notify .content{ /* content container */
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+-webkit-transform-style:preserve-3d;
+transform-style:preserve-3d;
+width: 100%;
+background: #ffd990; /* background color of interface */
+background: rgb(255,217,144); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(255,217,144,1) 0%, rgba(255,225,173,1) 51%, rgba(255,217,144,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,217,144,1)), color-stop(51%,rgba(255,225,173,1)), color-stop(100%,rgba(255,217,144,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(255,217,144,1) 0%,rgba(255,225,173,1) 51%,rgba(255,217,144,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(255,217,144,1) 0%,rgba(255,225,173,1) 51%,rgba(255,217,144,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(255,217,144,1) 0%,rgba(255,225,173,1) 51%,rgba(255,217,144,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(255,217,144,1) 0%,rgba(255,225,173,1) 51%,rgba(255,217,144,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd990', endColorstr='#ffd990',GradientType=0 ); /* IE6-9 */
+color: black; /* color of interface */
+height: 100%;
+padding: 10px; /* padding of interface */
+position: absolute;
+-webkit-transform-origin: 50% 100%;
+-webkit-transform:translate3d(0%, 0px, 0) rotateX(90deg);
+transform-origin: 50% 100%;
+transform:translate3d(0%, 0px, 0) rotateX(90deg);
+-webkit-transition: all .5s ease-in;
+transition: all .5s ease-in;
+}
+
+.notify .content::after{ /* layer to create shadow effect */
+content: '';
+position: absolute;
+width: 100%;
+height: 100%;
+bottom: 0;
+left: 0;
+visibility: visible;
+background: rgba(0,0,0,.3);
+-webkit-transition: all .5s ease-in;
+transition: all .5s ease-in;
+}
+
+
+.notify .content img.float{
+margin: auto 10px auto auto;
+border: 10px solid darkred;
+}
+
+.notify .close{ /* CSS for close button inside container */
+color: white;
+background: darkred;
+display: inline-block;
+border-radius: 5px;
+padding: 5px 8px;
+position: absolute;
+right: 5px;
+bottom: 5px;
+text-shadow: 0 -1px 1px #8a8a8a;
+box-shadow: 0 0 2px 1px gray;
+cursor: pointer;
+}
+
+.toggle{ /* CSS for arbitrary toggle button */
+border-radius: 4px;
+background: blue;
+color: white;
+text-decoration: none;
+padding: 4px;
+font-size: 110%;
+}
+
+.notify.notransform, .notify.notransform .content{ /* 'notransform' class for browsers that don't support 3D transform */
+transition: none !important;
+}
+
+.notify.notransform .content::after{ /* 'notransform' class for browsers that don't support 3D transform */
+transition: none !important;
+display: none;
+}
+
+body.open_notify{ /* CSS for BODY when notifier is open */
+-webkit-transform: translate3d(0px, 100%, 0px);
+transform: translate3d(0px, 100%, 0px);
+-webkit-transition: all .5s ease-in;
+transition: all .5s ease-in;
+}
+
+body.open_notify .notify{ /* CSS for notifier container when notifier is open */
+visibility: visible;
+background: rgba(0,0,0,1);
+-webkit-transition: all .5s ease-in;
+transition: all .5s ease-in;
+}
+
+
+
+body.open_notify .notify .content{ /* CSS for content container when notifier is open */
+-webkit-transform:translate3d(0%, 0px, 0) rotateX(0deg);
+transform:translate3d(0%, 0px, 0) rotateX(0deg);
+transition: all .5s ease-in;
+}
+
+body.open_notify .notify .content::after{ /* CSS for shadow layer when notifier is open */
+background: rgba(0,0,0,0);
+bottom: 0;
+visibility: hidden;
+-webkit-transition: all .5s ease-in;
+transition: all .5s ease-in;
+}
