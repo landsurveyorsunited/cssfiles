@@ -1,0 +1,398 @@
+body {
+    /* body top margin so body content isnt' obscured by header */
+    margin-top: 90px;
+}
+
+/* ########## Fixed header ########## */
+#ddfixedheader {
+    position: fixed;
+    display: flex;
+    left: 0;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: white;
+    border-bottom: 5px solid purple;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    font: bold 16px 'Bitter', sans-serif;
+    /* use Google font */
+    transition: all .5s;
+}
+
+#ddfixedheader, #ddfixedheader * {
+    box-sizing: border-box;
+}
+
+/* ########## Left logo DIV area ########## */
+#ddfixedheader #logoarea {
+    width: 250px;
+    margin-right: 10px;
+}
+
+#ddfixedheader #logo img {
+    width: 237px;
+    height: auto;
+    transition: all .5s;
+}
+
+/* ########## Uneven Line Menu ########## */
+div.uneven-hamburger-icon {
+    width: 37px;
+    /* keep width/height ratio to 1.56 if changing dimensions */
+    height: 24px;
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    display: none;
+    margin-right: 25px;
+    justify-content: space-between;
+}
+
+div.uneven-hamburger-icon > div {
+    width: 80%;
+    height: 3px;
+    background: black;
+    transform-origin: 0 50%;
+    transition: all .5s;
+}
+
+div.uneven-hamburger-icon > div.line1 {
+    width: 100%;
+}
+
+/* ########## Center UL Menu inside Fixed Header ########## */
+
+#ddfixedheader ul#ddmainulmenu {
+    margin-left: auto;
+    margin-right: 20px;
+    position: relative;
+}
+
+#ddfixedheader ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#ddfixedheader ul#ddmainulmenu a {
+    text-decoration: none;
+    padding: 5px 10px;
+    display: inline-block;
+    color: #484848;
+}
+
+#ddfixedheader ul#ddmainulmenu > li {
+    /* top level LIs */
+    display: inline-block;
+    position: relative;
+}
+
+#ddfixedheader ul#ddmainulmenu li > a {
+    /* top level LI links */
+    border-bottom: 5px solid #eee;
+}
+
+#ddfixedheader ul#ddmainulmenu > li:hover > a {
+    /* top level LI links */
+    background: #eee;
+    border-bottom-color: gray;
+}
+
+#ddfixedheader ul#ddmainulmenu li > a:after {
+    /* Arrow beneath top level LI links  */
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    border: 6px solid transparent;
+    border-top-color: #eee;
+    bottom: -12px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+#ddfixedheader ul#ddmainulmenu li:hover > a:after {
+    /* Arrow beneath top level LI links hover style */
+    border-top-color: gray;
+}
+
+#ddfixedheader ul#ddmainulmenu li > a:only-child {
+    /* style for top level LI links with no sub UL */
+    border-bottom: none;
+}
+
+#ddfixedheader ul#ddmainulmenu li > a:only-child:after {
+    /* style for top level LI links with no sub UL */
+    display: none;
+}
+
+#ddfixedheader ul#ddmainulmenu > li > a:hover {
+    background: #eee;
+    color: black;
+}
+
+#ddfixedheader ul#ddmainulmenu > li ul {
+    /* sub ULs style */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border: 1px solid gray;
+    background: white;
+    overflow: hidden;
+    width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 4px 4px 2px rgba(0,0,0,.1);
+    transform: translateY(10%);
+    transition: opacity .3s, transform .3s, visibility 0s .3s;
+}
+
+#ddfixedheader ul#ddmainulmenu > li:hover > a {
+    color: black;
+}
+
+#ddfixedheader ul#ddmainulmenu > li:hover ul {
+    opacity: 1;
+    overflow: auto;
+    visibility: visible;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: opacity .5s, -webkit-transform .5s, visibility 0s;
+    transition: opacity .5s, transform .5s, visibility 0s;
+}
+
+#ddfixedheader ul#ddmainulmenu > li ul a {
+    display: block;
+    padding: 20px;
+}
+
+#ddfixedheader ul#ddmainulmenu > li ul a:hover {
+    background: #eee;
+    color: black;
+}
+
+/* ########## Right DIV containing search and social icons ########## */
+#ddfixedheader #rightarea {
+    font-size: 20px;
+}
+
+#ddfixedheader #rightarea ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#ddfixedheader #rightarea ul li{
+    display: inline;
+}
+
+#ddfixedheader #rightarea ul li > *{
+    padding: 10px;
+}
+
+#ddfixedheader #rightarea ul li label {
+    cursor: pointer;
+}
+
+/* ########## Fixed header when user begins to scroll down ########## */
+html.collapseheader #ddfixedheader {
+    position: fixed;
+    border-bottom-width: 0;
+    border-bottom-color: white;
+    box-shadow: 0 2px 2px #eee;
+    opacity: .9;
+}
+
+/* ########## Logo area when user begins to scroll down ########## */
+html.collapseheader #ddfixedheader #logoarea {
+    width: 170px;
+}
+
+html.collapseheader #ddfixedheader #logo img {
+    width: 170px;
+}
+
+/* ########## Shared style for mobilemenucontainer and ddsearchcontainer DIVs ########## */
+div#ddmobilemenucontainer, div#ddsearchcontainer {
+    position: fixed;
+    width: 100%;
+    z-index: 10000;
+    display: block;
+    background: purple;
+    left: -100%;
+    /* initially position container out of view */
+    top: 90px;
+    /* shift container downwards so the header is still visible when search is shown */
+    bottom: 0;
+    padding-top: 50px;
+    opacity: 0;
+    cursor: crosshair;
+    text-align: center;
+    font: bold 16px 'Bitter', sans-serif;
+    /* use google font */
+    -webkit-transform: scale(.9) translate3d(-0, -50px, 0);
+    transform: scale(.9) translate3d(-0, -50px, 0);
+    -webkit-transition: -webkit-transform .5s, opacity .5s, left 0s .5s;
+    transition: transform .5s, opacity .5s, left 0s .5s;
+}
+
+/* ######### Mobile Menu Container DIV style ######### */
+div#ddmobilemenucontainer {
+    text-align: left;
+    overflow: auto;
+}
+
+div#ddmobilemenucontainer, div#ddmobilemenucontainer * {
+    box-sizing: border-box;
+}
+
+    /* ########## Accordion Menu main UL style ########## */
+
+div#ddmobilemenucontainer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 350px;
+    position: relative;
+    margin: 0 auto;
+}
+
+div#ddmobilemenucontainer ul li {
+    display: block;
+    posiion: relative;
+}
+
+div#ddmobilemenucontainer ul li a {
+    width: 100%;
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    box-sizing: border-box;
+}
+
+div#ddmobilemenucontainer ul li a:hover {
+    background: rgba(255,255,255,1);
+    color: black;
+}
+
+div#ddmobilemenucontainer ul li a.header {
+    /* style for accordion headers */
+    background: navy;
+    color: white;
+    outline: none;
+}
+
+div#ddmobilemenucontainer ul li a span.accordionarrow {
+    /* style for right arrow span added to headers */
+    position: absolute;
+    right: 10px;
+    transition: all .2s;
+}
+
+div#ddmobilemenucontainer ul li a.header.active {
+    /* style for accordion header when expanded */
+    background: black;
+}
+
+div#ddmobilemenucontainer ul li a.active span.accordionarrow {
+    /* style for right arrow span when header expanded */
+    transform: rotate(90deg);
+}
+
+div#ddmobilemenucontainer > ul ul {
+    /* hide sub ULs inside accordion by default */
+    display: none;
+}
+
+div#ddmobilemenucontainer > ul li ul a {
+    padding-left: 30px;
+}
+
+/* ########## DD Search Container DIV ########## */
+div#ddsearchcontainer div {
+    padding: 5px;
+    color: white;
+}
+
+div#ddsearchcontainer form {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 50px, 0);
+    transform: translate3d(0, 50px, 0);
+    -webkit-transition: all .5s 0s;
+    transition: all .5s 0s;
+}
+
+div#ddsearchcontainer form input[type="text"] {
+    width: 90%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid gray;
+    outline: none;
+    font-size: 3em;
+    background: #eee;
+}
+
+/* ########## Uneven Hamburger Icon style ########## */
+html.openddmobilemenu div.uneven-hamburger-icon div.line1 {
+    width: 80%;
+    transform: rotate(45deg);
+}
+
+html.openddmobilemenu div.uneven-hamburger-icon div.line2 {
+    opacity: 0;
+    transform: translate3d(-10px,0,0);
+}
+
+html.openddmobilemenu div.uneven-hamburger-icon div.line3 {
+    transform: rotate(-45deg);
+}
+
+/* ########## Mobile Menu and Search Containers style when visible ########## */
+html.openddmobilemenu div#ddmobilemenucontainer, html.opensearch div#ddsearchcontainer {
+    left: 0;
+    opacity: 1;
+    -webkit-transform: scale(1) translate3d(0, 0, 0);
+    transform: scale(1) translate3d(0, 0, 0);
+    -webkit-transition: -webkit-transform .5s, opacity .5s, left 0s 0s;
+    transition: transform .5s, opacity .5s, left 0s 0s;
+}
+
+html.opensearch div#ddsearchcontainer form {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    transition: all .5s .5s;
+}
+
+/* ########## Media Query Breakpoints ########## */
+@media (max-width: 860px) {
+    #ddfixedheader ul#ddmainulmenu {
+        display: none;
+    }
+
+    div.uneven-hamburger-icon {
+        display: flex;
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    #ddfixedheader #rightarea ul li:not(:first-of-type) {
+        display: none;
+    }
+
+    div#ddsearchcontainer form input[type="text"] {
+        width: 95%;
+    }
+}
