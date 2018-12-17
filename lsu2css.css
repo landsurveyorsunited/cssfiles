@@ -601,3 +601,65 @@ img.groupicon {position:absolute!important;}
 .xg_widget_groups div#xg_canvas.xj_canvas div.xg_span-16 div.xg_span-4 {width:955px;}
 .xg_widget_groups div.xg_module .vcard-48grid{width:845px;}
 
+@keyframes ticker {
+	0%   {margin-top: -50px}
+  11%  {margin-top: -100px}
+	22%  {margin-top: -150px}
+  33%  {margin-top: -200px}
+  44%  {margin-top: -250px}
+  55%  {margin-top: -300px}
+  66%  {margin-top: -350px}
+  77%  {margin-top: -400px}
+  88%  {margin-top: -450px}
+	100% {margin-top: -50px}
+}
+
+.news {
+  background: #c8102e;
+  box-shadow: inset 0 -15px 30px rgba(0,0,0,0.4), 0 5px 10px rgba(0,0,0,0.5);
+  width: 570px;
+  height: 40px;
+  margin: 50px auto;
+  overflow: hidden;
+  border-radius: 4px;
+  padding: 3px;
+  -webkit-user-select: none;
+} 
+
+.news span {
+  float: left;
+  color: #fff;
+  padding: 4px;
+  position: relative;
+  top: 1%;
+  border-radius: 4px;
+  background: #333;
+  font: 28px Raleway, Arial, sans-serif;
+  vertical-align: -webkit-baseline-middle;
+  -webkit-font-smoothing: antialiased;
+  -webkit-user-select: none;
+  cursor: pointer;
+}
+
+.news ul {
+  float: left;
+  padding-left: 10px;
+  animation: ticker 25s cubic-bezier(1, 0, .5, 0) infinite;
+  -webkit-user-select: none;
+}
+
+.news ul li { line-height: 50px; list-style: none }
+
+.news ul li a {
+  margin-left:160px;
+  color: #fff;
+  text-decoration: none;
+  font: 22px Raleway, Arial, sans-serif;
+  vertical-align: -webkit-baseline-middle;
+  vertical-align: -moz-middle-with-baseline;
+  -webkit-font-smoothing: antialiased;
+  -webkit-user-select: none
+}
+
+.news ul:hover { animation-play-state: paused }
+.news span:hover+ul { animation-play-state: paused }
