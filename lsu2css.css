@@ -1,5 +1,3 @@
-
-
 #xn_bar_menu_tabs a#xn_username {
 display: none;
 }
@@ -481,13 +479,6 @@ p.dy-small.xg_lightfont.indent, p.small.xg_lightfont {color:#212121;}
   border-color: #212121;
 }
 
-.xg_widget_groups_group_show
-#comments.xg_module_body {
-  height: 1000px;
-	width:100%;
-  overflow: auto;
-  position: relative;
-}
 
 div#xg_foot {clear: both;
 	float: left;
