@@ -1,0 +1,65 @@
+@import "compass/css3";
+
+body {
+ font-family: tahoma, sans-serif;
+}
+.main-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 30px;
+  background: rgba(0,0,0,.8);
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+}
+.main-nav li {
+  display: inline-block;
+}
+.main-nav a:link,
+.main-nav a:visited {
+  display: inline-block;
+  padding: 5px 20px;
+  color: #fff;
+  text-decoration: none;
+  transition: color .3s;
+}
+.main-nav a:hover,
+.main-nav a:active {
+  color: #ccc;
+}
+.col-l {
+  float: left;
+  width: 50%;
+  background-color: #eeeeee;
+  color: #212121;
+  text-shadow: 1px 1px 1px rgba(255,255,255,.3);
+}
+.col-r {
+  float: right;
+  width: 100%;
+  background-color: #212121;
+  overflow: hidden;
+  color: #fff;
+  text-shadow: -1px -1px 1px rgba(0,0,0,.9);
+}
+.full-page {
+  box-sizing: border-box;
+  width: 100%;
+  border: 2px solid rgba(0,0,0,.2);
+  font-size: 20px;
+  font-weight: bold;
+}
+.mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 50%;
+  bottom: 0;
+  overflow: hidden; 
+}
+.page-content {
+  padding: 50px;
+  box-sizing: border-box;
+}
+.bd > .top,.personalize-bar > .container > .bd > .top {background-color: #eeeeee;}
