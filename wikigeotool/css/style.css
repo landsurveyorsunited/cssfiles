@@ -1,0 +1,441 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #F0F0F0;
+}
+body {
+  font-family: sans-serif;
+  font-size: 70%;
+}
+
+
+
+#container {
+  position: relative;
+  min-height: 100%;
+  padding: 0 1em;
+}
+#header {
+  height: 2.3em;
+  padding: 0.7em 0em 0em 0em;
+  background: url(http://en.wikipedia.org/skins-1.5/monobook/headbg.jpg);
+  border-bottom: 1px solid #AAAAAA;
+}
+#header .rightBox {
+  float: right;
+  padding: 0.1em 0 0 0.5em;
+}
+#left {
+  width: 450px;
+  padding-top: 0.75em;
+  padding-bottom: 2em;  /* Footer height */
+}
+#main {
+  position: absolute;
+  top: 3.7em;
+  bottom: 2em;
+  left: 475px;
+  right: 1em;
+  min-width: 414px;  /* Force minimal reasonable map size for small screens (< 1024x768) */
+  min-height: 430px;
+}
+* html #main {
+  /* IE6: conflicting absolute positions fix */
+  width: expression(Math.max(document.body.clientWidth - 485, 414) + "px");
+  height: expression(Math.max(document.documentElement.clientHeight - 70, 430) + "px");
+  /* height: expression(document.body.clientHeight - 120); */
+}
+#mainHeader {
+  position: absolute;
+  top: 0;
+  height: 1.25em;
+  left: 0;
+  right: 0;
+}
+#mainMap {
+  position: absolute;
+  top: 1.25em;
+  bottom: 12em;
+  left: 0;
+  right: 0;
+  border: 1px solid #333333;
+}
+* html #mainMap {
+  /* IE6: conflicting absolute positions fix */
+  height: expression(this.parentNode.clientHeight - 150 + "px");
+}
+#eMap {
+  height: 100%;
+}
+*:first-child+html #eMap {
+  /* IE7: 100% height inside absolute fix */
+  height: expression(this.parentNode.clientHeight + "px");
+}
+#mainFooter {
+  position: absolute;
+  bottom: 0;
+  height: 12em;
+  left: 0;
+  /* right: 0; */
+  width: 100%;  /* IE6 fix (does not support left+right) */
+}
+#footer {
+  position: absolute;
+  height: 1.5em;
+  padding: 0.5em 0 0 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #666666;
+}
+* html #footer {
+  position: static;  /* IE6 fix (bottom:0 => fixed instead of absolute) */
+}
+#footer a, #footer a:visited {
+  color: #465586;
+}
+
+
+.contentBody {
+  border-top: 1px solid #AAAAAA;
+  margin: 0 1em 0 1em;
+  padding: 1.5em 0em 1em 0em;
+}
+a {
+  color: #002BB8;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:visited {
+  color: #5A3696;
+}
+
+a.internal {
+  /* color: #008000; */
+}
+
+a.code, a.code:visited {
+  color: #880000;
+  text-decoration: none;
+}
+a.code:hover {
+  background: #CCCCCC;
+  text-decoration: none;
+}
+a.code.pre, a.code.PRE {
+  display: block;
+}
+a.disabled, a:visited.disabled {
+  color: #CCCCCC;
+}
+
+.clr {
+  position: relative;
+  top: -4px;
+  font-weight: bold;
+}
+td, th {
+  font-family: sans-serif;
+  /*  font-size: 80%; */
+}
+table.niceTable {
+  background: #AAAAAA;
+}
+table.niceTable td, table.niceTable tr {
+  background: #F0F0F0;
+}
+h1 {
+  font-size: 200%;
+  font-weight: normal;
+  display: inline;
+  margin: 0;
+}
+h2 {
+  /*  font-size: 150%; */
+  font-weight: normal;
+}
+h3 {
+  /*  font-size: 120%; */
+  font-weight: bold;
+}
+h1, h2, h3, h4, h5 {
+  margin-bottom: 0.8em;
+}
+.h2 {
+  /*   font-size: 85%; */
+}
+.note {
+  /*  font-size: 85%; */
+}
+table.note td, table.note th {
+  /*  font-size: 100%; */
+}
+span.output {
+  background: #FFFF99;
+}
+/*
+ul.output li {
+  background: #FFFF99;
+}
+*/
+table.output td {
+  /*   font-size: 70%; */
+}
+table.output td code, table.output td pre, table.output td tt {
+  /*   font-size: 120%; */
+}
+.padlr {
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+}
+tr.padding-above td, tr.padding-above th {
+  padding-top: 0.25em;
+}
+ul {
+  margin-top: 0.2em;
+  padding-left: 1.5em;
+  margin-left: 0;
+}
+ul.sparse li {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+code, pre {
+  font-family: "Lucida Console", Courier, monospace;
+  font-size: 90%;
+  /* line-height: 1.1em; */
+}
+.chrome code, .chrome pre {
+  font-size: 95%;  /* Google Chrome fix */
+}
+code {
+}
+pre {
+  margin: 0 0 0 0;
+}
+form {
+  margin: 0;
+  padding: 0;
+}
+select {
+  font-size: 85%;
+}
+.queryForm .label {
+  margin-left: 0.3em;
+  margin-right: -0.2em;
+}
+.queryForm .textareaBox {
+  padding: 0 5px 0 0;
+}
+.queryForm textarea {
+  font-family: "Courier New", monospace;
+  font-size: 95%;
+  width: 100%;
+  padding: 1px 1px;
+  height: 3.2em;
+}
+.queryForm input {
+  font-size: 80%;
+}
+.queryForm .buttons {
+  text-align: right;
+}
+.queryForm input.button {
+  font-size: 100%;
+  padding-left: 0.5em; padding-right: 0.5em;
+}
+.queryForm input.button.l {
+  margin-right: 0.2em;
+}
+.queryForm .params {
+  margin-top: -0.3em;
+  margin-bottom: 2px;
+}
+.queryForm .paramsRow {
+  margin-top: 0.3em;
+}
+#iGeoHackRegionMode {
+}
+#iGeoHackRegion {
+  width: 4em;
+  margin-right: 0em;
+}
+#iGeoHackDim {
+  width: 5em;
+}
+#iCustomTemplate {
+  font-size: 95%;
+}
+#iCustomTemplateDefault {
+  display: none;
+}
+#eQueryErrors {
+  margin-top: 1em;
+  color: red;
+}
+
+.locationBox {
+  margin: 1.5em 1em 1.5em 0;
+  text-align: center;
+}
+table.location {
+  margin: 0 auto;
+  border-top: 1px solid #AAAAAA;
+  border-bottom: 1px solid #AAAAAA;
+}
+td.latLng {
+  font-weight: normal;
+  font-size: 160%;
+  min-width: 8em;
+}
+table.location th {
+  font-weight: normal;
+  text-align: left;
+  /*  font-size: 80%; */
+}
+table.location td {
+  text-align: right;
+  padding-left: 1em;
+}
+table.location .tdParams {
+  white-space: nowrap;
+}
+table.location .tdParams div {
+}
+table.location .tdParams .output {
+  font-size: 100%;
+  font-weight: bold;
+  margin-left: -0.1em;
+  padding-left: 0.1em;
+  padding-right: 0.1em;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+  display: -moz-inline-stack;
+  display: inline-block;
+  min-width: 2em;
+  color: #1C1C1C;
+  text-align: center;
+  position: relative;  /* IE7 fix */
+}
+.clrIcon {
+  font-size: 85%;
+  position: relative;
+  top: -1em;
+  left: -0.3em;
+}
+.ie6 table.location .tdParams .output {
+  width: 2em;  /* IE6 min-width fix */
+}
+table.location .tdParams .label {
+  margin-left: 0em;
+}
+
+#trParams td, #trParams th {
+  padding-top: 10px;
+}
+#trHeading td, #trHeading th {
+  padding-top: 10px;
+}
+#tdHeading {
+  font-size: 160%;
+}
+#tdHeadingClear {
+  text-align: left;
+  padding-left: 0.2em;
+}
+.wizzText {
+  /* letter-spacing: 0.1em; */
+}
+.wizzNo {
+  font-weight: bold;
+  color: #C00000;
+}
+.helpIco {
+  font-weight: bold;
+  color: #C00000 !important;
+  color: #666666 !important;
+  position: relative;
+  top: -2px;
+}
+.helpIco.l2 {
+  /* top: -1.4em; */
+}
+.helpIco span {
+  padding: 0 3px;
+}
+.mapOuter {
+}
+.mapPresets {
+  margin: 0 0 0.1em 0;
+}
+.mapLegend0 {
+  /* width: 450px; */
+  position: relative;
+}
+.mapLegend {
+  width: 250px;
+  text-align: right;
+  position: absolute;
+  right: 0px;
+  color: #404040;
+}
+.mapLegend div {
+}
+.mapLegend span {
+  background: #F0F0F0;
+}
+.mapWizzSteps {
+}
+.mapWizzSteps ol {
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  list-style-type: lower-alpha;
+}
+.outputParagraph {
+  width: 100%;
+  overflow: auto;
+  word-wrap: break-word; /* IE overflow fix */
+  margin-top: 1em;
+}
+.outputParagraph ul, .outputParagraph ol {
+  margin-bottom: 0;
+}
+.outputParagraph li {
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+table.layout td {
+  vertical-align: top;
+}
+table.layout td.r {
+  vertical-align: top;
+  padding-left: 1.75em;
+}
+#eTrace {
+  font-family: monospace;
+}
+
+#lPrecRectDeg, #iDegPrecision, .degPrecision {
+  color: #9500C0;
+}
+#lPrecRectSec, #iSecPrecision, .secPrecision {
+  color: #00C000;
+  color: #06AE06;
+}
+#lPrecRectMin {
+  color: #E67700;
+}
+#lPrecRect1Deg {
+  color: #C00000;
+}
+
+#precisionSep {
+  padding: 0 0.25em 0 0.5em;
+  display: none;
+}

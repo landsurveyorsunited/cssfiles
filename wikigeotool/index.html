@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Wikipedia Geocoder Tool for Land Surveyors</title>
+
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+
+</head>
+
+<body>
+
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>GeoLocator - swiss army knife of georeferencing &amp; geotagging</title>
+  <meta name="description" content="Geotagging metadata authoring tool" />
+  <meta name="keywords" content="geotagging, geocoding, gps, coord, coordinate, template, markup, wikipedia, map, heading" />
+  <link rel="stylesheet" type="text/css" href="geolocator.css?20140128" />
+  <link rel="shortcut icon" href="http://landsurveyorsunited.com/favicon.ico" />
+  <!-- GoogleMaps API key is for *.landsurveyorsunited only, obtain new one at http://code.google.com/apis/maps/ for use on different domain -->
+  <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB1cf7qRhd2bawZprUNSituOLXDzbcqZ6E&libraries=geometry&sensor=false"></script>
+  <script type="text/javascript" src="http://api.ning.com:80/files/4O6eIqcn6-6kAhrlxU4erktXePignxQx0GUKYGOlbIiIBKsGlQglnGkEXPHlwVfeFi2AuZjmxxtov5KUMjsegkpcmdsn4NdQ/jGoogleBarV3.js"></script>
+  <script type="text/javascript" src="http://api.ning.com:80/files/4O6eIqcn6-6Y-e7*Y2uslGLSREpiBzflqjP2UwIMhRaQ1oxOa8Fustw7qJ*wHKu5txPjDr9GKPCVhhC*BwvCu3KxCmE8AyIv/geolocator.js"></script>
+  <script type="text/javascript" src="http://api.ning.com:80/files/4O6eIqcn6-7OPPgN4aRrPjOu*RKlg2jJQQHQTCXiiUkb4x47nuGAthMGExjBcPmnH-4j6R3Js2LVdgc262ZNu2d0um8pTUNf/geolocator.ua_css.js"></script>
+</head>
+<body>
+
+  <div id="container">
+
+    <!-- Heading, language selector -->
+
+    <div id="header">
+      <div class="rightBox">
+        <a href="http://en.wikipedia.org/wiki/User:Teslaton/Tools/GeoLocator" target="_blank"><span class="wizzNo">?</span> QuickRef</a>
+        <span style="margin: 0 0.2em 0 0.2em;">&middot;</span>
+        language:
+        <select id="iLanguage">
+          <option value=""></option> <!-- Useless empty option for HTML validator -->
+        </select>
+      </div>
+      <h1>GeoLocator</h1>
+      <span>
+        <span style="margin: 0 0.2em 0 0.2em;">&middot;</span> Interactive tool (not just) for <span style="font-family: serif;">W</span>ikipedians to ease <a href="http://en.wikipedia.org/wiki/Georeferencing" target="_blank">georeferencing</a> and <a href="http://en.wikipedia.org/wiki/Geotagging" target="_blank">geotagging</a>
+      </span>
+    </div>
+
+    <!-- Left column, fixed width -->
+
+    <div id="left">
+
+      <!-- Query form -->
+
+      <form class="queryForm" id="fQuery" method="get" action="">
+        <div>
+          <span class="wizzText"><span class="wizzNo">1.</span> Type/paste any initial coordinates, template or map URL in <a href="http://en.wikipedia.org/wiki/User:Teslaton/Tools/GeoLocator#Supported_coordinate_formats" target="_blank">almost any format</a></span>:
+        </div>
+        <div class="textareaBox">
+          <textarea id="iQuery" name="q" rows="" cols=""></textarea>
+        </div>
+        <div class="buttons">
+          <input type="submit" class="button l" value="Apply" id="bApply" />
+          <input type="button" class="button r" value="Clear" id="bClear" />
+        </div>
+      </form>
+
+      <div class="queryForm">
+        <div class="params">
+          <span class="wizzText"><span class="wizzNo">2.</span> Set/update <a href="http://en.wikipedia.org/wiki/Template:Coord#Coordinate_Parameters" target="_blank">coordinate parameters</a> and preferred <a href="http://en.wikipedia.org/wiki/User:Teslaton/Tools/GeoLocator#Precision" target="_blank">precisions</a>:</span>
+        </div>
+
+        <div class="paramsRow">
+
+          <span class="label" style="margin-left: 0"><a href="http://en.wikipedia.org/wiki/Template:Coord#type:T" target="_blank">type</a>:</span>
+          <select id="iGeoHackType">
+            <option value=""></option> <!-- Useless empty option for HTML validator -->
+          </select>
+
+          <span class="label"><a href="http://en.wikipedia.org/wiki/Template:Coord#dim:D" target="_blank">diameter</a>:</span>
+          <input type="text" id="iGeoHackDim" />
+
+          <span class="label"><a href="http://en.wikipedia.org/wiki/Template:Coord#scale:N" target="_blank">scale</a>:</span>
+          <select id="iGeoHackScale">
+            <option value="">(default)</option>
+            <option value="10000000">1:10'000'000</option>
+            <option value="1000000">1:1'000'000</option>
+            <option value="100000">1:100'000</option>
+            <option value="10000">1:10'000</option>
+            <option value="1000">1:1'000</option>
+          </select>
+
+          <span class="label"><a href="http://en.wikipedia.org/wiki/Template:Coord#region:R" target="_blank">region</a>:</span>
+          <select id="iGeoHackRegionMode">
+            <option value=""></option>
+            <option value="auto" selected="selected">(auto)</option>
+            <option value="custom">(cust.)</option>
+          </select>
+          <input type="text" id="iGeoHackRegion" />
+        </div>
+
+        <div class="paramsRow">
+          <a href="http://en.wikipedia.org/wiki/User:Teslaton/Tools/GeoLocator#Precision" target="_blank">precisions</a>:
+
+          <span class="degPrecision" title="Degree precision (decimal places)">
+          <span class="label"><span style="font-size: 140%">°</span>:</span>
+          <select id="iDegPrecision">
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6" selected="selected">6</option>
+          </select>
+          </span>
+
+          <span class="secPrecision" title="Seconds precision (decimal places)">
+          <span class="label"><span style="font-size: 140%;"><em style="margin-left: -0.2em;">" </em></span>:</span>
+          <select id="iSecPrecision">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2" selected="selected">2</option>
+          </select>
+          </span>
+
+          <span id="precisionSep">&middot;</span>
+
+          <span title="Diameter precision (significant digits)">
+          <span class="label">D:</span>
+          <select id="iDimPrecision">
+            <option value="1">1</option>
+            <option value="2" selected="selected">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+          </span>
+
+          <span title="Heading compass rose points">
+          <span class="label">h:</span>
+          <select id="iHeadingPoints">
+            <option value="4">4</option>
+            <option value="8">8</option>
+            <option value="16" selected="selected">16</option>
+            <option value="32">32</option>
+            <option value="360">360</option>
+          </select>
+          </span>
+
+          <!--
+          <div style="float: right; margin-top: 2px;">
+            <input type="submit" class="button l" value="Save" id="bApply" />
+            <input type="submit" class="button l" value="Load" id="bApply" />
+            <input type="submit" class="button l" value="Reset" id="bApply" />
+          </div>
+          -->
+          <!--
+          <div style="float: right; margin-top: 0.5em;">
+            <a id="aCfgSave" href="#">Save</a> &middot;
+            <a id="aCfgLoad" href="#">Load</a> &middot;
+            <a id="aCfgReset" href="#">Reset</a>
+          </div>
+          -->
+        </div>
+
+        <div class="paramsRow">
+          precision rects:
+
+          <input type="checkbox" id="iPrecRectDeg" />
+          <label for="iPrecRectDeg" id="lPrecRectDeg">0.0001<span style="font-size: 100%">°</span></label>
+
+          <input type="checkbox" id="iPrecRectSec" />
+          <label for="iPrecRectSec" id="lPrecRectSec">1<span style="font-size: 100%;"><em style="margin-left: -0.2em;">" </em></span></label>
+
+          <input type="checkbox" id="iPrecRectMin" />
+          <label for="iPrecRectMin" id="lPrecRectMin">1<span style="font-size: 100%;"><em style="margin-left: -0.2em;">' </em></span></label>
+
+          <input type="checkbox" id="iPrecRect1Deg" />
+          <label for="iPrecRect1Deg" id="lPrecRect1Deg">1<span style="font-size: 100%;"><em style="margin-left: -0.2em;">° </em></span></label>
+        </div>
+      </div>
+
+      <!-- Query errors -->
+
+      <div id="eQueryErrors"></div>
+
+      <!-- Location display -->
+
+      <div class="locationBox">
+        <table class="location">
+        <tr>
+          <th></th>
+          <th style="text-align: right"><span><a href="http://en.wikipedia.org/wiki/Latitude" target="_blank">latitude</a></span></th>
+          <th style="text-align: right"><span><a href="http://en.wikipedia.org/wiki/Longitude" target="_blank">longitude</a></span></th>
+        </tr>
+        <tr class="padding-above">
+          <th><a href="http://en.wikipedia.org/wiki/WGS_84" target="_blank">Location</a>:</th>
+          <td class="latLng"><span class="output padlr template">{latdegabs}° {latminint}&#x2032; {latsecdec}&#x2033; {latNS}</span></td>
+          <td class="latLng"><span class="output padlr template">{londegabs}° {lonminint}&#x2032; {lonsecdec}&#x2033; {lonEW}</span></td>
+        </tr>
+        <tr class="small">
+          <th></th>
+          <td class="template">{latdegdec}°</td>
+          <td class="template">{londegdec}°</td>
+        </tr>
+        <tr id="trHeading">
+          <th><a href="http://en.wikipedia.org/wiki/Boxing_the_compass" target="_blank">Heading</a>:</th>
+          <td id="tdHeading">
+            <span class="output padlr template">{heading}</span>
+          </td>
+          <td id="tdHeadingClear">
+            <a href="#" class="clrIcon" id="aHeadingClear">[x]</a>
+          </td>
+        </tr>
+        <tr id="trParams">
+          <th><a href="http://en.wikipedia.org/wiki/Template:Coord#Coordinate_Parameters" target="_blank">Params</a>:</th>
+          <td colspan="2" class="tdParams">
+            <a href="http://en.wikipedia.org/wiki/Template:Coord#type:T" target="_blank" class="label">type</a>:
+            <span class="output padlr template type">&nbsp;{type}&nbsp;</span>
+            <a href="#" class="clrIcon" id="aTypeClear">[x]</a>
+
+            <a href="http://en.wikipedia.org/wiki/Template:Coord#dim:D" target="_blank" class="label">diameter</a>:
+            <span class="output padlr template scale" id="eDisplayDim">&nbsp;{dim}&nbsp;</span>
+            <a href="#" class="clrIcon" id="aDimClear">[x]</a>
+
+            <a href="http://en.wikipedia.org/wiki/Template:Coord#scale:N" target="_blank" class="label">scale</a>:
+            <span class="output padlr template scale" id="eDisplayScale">&nbsp;{scale}&nbsp;</span>
+            <a href="#" class="clrIcon" id="aScaleClear">[x]</a>
+
+            <a href="http://en.wikipedia.org/wiki/Template:Coord#region:R" target="_blank" class="label">region</a>:
+            <span class="output padlr template region">&nbsp;{region}&nbsp;</span>
+            <a href="#" class="clrIcon" id="aRegionClear">[x]</a>
+
+            <!--
+            <a href="http://en.wikipedia.org/wiki/Boxing_the_compass" target="_blank" class="label">heading</a>:
+            <span class="output padlr template heading">&nbsp;{heading}&nbsp;</span>
+            <a href="javascript: geoLocator.clearHeading();" id="aHeadingClear">x</a>
+            -->
+          </td>
+        </tr>
+        </table>
+      </div>
+
+      <!-- Location links -->
+
+      <div class="outputParagraph template links">
+      <span class="h2">Show location on:</span>
+      <ul>
+        <li>
+          <a href="http://maps.google.com/maps?ll={latdegdec},{londegdec}&amp;spn={span},{span}&amp;q={latdegdec},{londegdec}" target="_blank">Google</a> (<a href="http://maps.google.com/maps?ll={latdegdec},{londegdec}&amp;spn={span},{span}&amp;q={latdegdec},{londegdec}&amp;t=h" target="_blank">hyb</a>, <a href="http://maps.google.com/maps?ll={latdegdec},{londegdec}&amp;spn={span},{span}&amp;q={latdegdec},{londegdec}&amp;hl=en&amp;lci=org.wikipedia.en" target="_blank">wiki</a>, <a href="http://maps.google.com/maps?ll={latdegdec},{londegdec}&amp;spn={span},{span}&amp;q={latdegdec},{londegdec}&amp;lci=com.panoramio.all" target="_blank">panor</a>, <a href="http://maps.google.com/maps?ll={latdegdec},{londegdec}&amp;spn={span},{span}&amp;q=http://tools.wikimedia.de/~para/GeoCommons/GeoCommons-simple.kml" target="_blank">commons</a>)
+          &middot;
+          <a href="http://maps.bing.com/default.aspx?v=2&amp;cp={latdegdec}~{londegdec}&amp;style=r&amp;lvl={osmzoom}&amp;sp=Point.{latdegdec}_{londegdec}" target="_blank">Bing</a> (<a href="http://maps.bing.com/default.aspx?v=2&amp;cp={latdegdec}~{londegdec}&amp;style=h&amp;lvl={osmzoom}&amp;sp=Point.{latdegdec}_{londegdec}" target="_blank">hyb</a>, <a href="http://maps.bing.com/default.aspx?v=2&amp;cp={latdegdec}~{londegdec}&amp;style=o&amp;lvl={osmzoom}&amp;sp=Point.{latdegdec}_{londegdec}" target="_blank">bird</a>)
+          &middot;
+          <a href="http://www.openstreetmap.org/index.html?mlat={latdegdec}&amp;mlon={londegdec}&amp;zoom={osmzoom}" target="_blank">OSM</a> (<a href="http://www.openstreetmap.org/index.html?mlat={latdegdec}&amp;mlon={londegdec}&amp;zoom={osmzoom}&amp;layers=C" target="_blank">cyk</a>, <a href="http://www.openstreetmap.org/index.html?mlat={latdegdec}&amp;mlon={londegdec}&amp;zoom={osmzoom}&amp;layers=T" target="_blank">trf</a>)
+          &middot;
+          <a href="http://www.wikimapia.org/#lat={latdegdec}&amp;lon={londegdec}&amp;spnx={span}&amp;spny={span}" target="_blank">WikiMapia</a>
+        </li>
+        <li>
+          <a href="http://www.flickr.com/map/?fLat={latdegdec}&amp;fLon={londegdec}&amp;zl=5" target="_blank">Flickr</a> (<a href="http://www.flickr.com/nearby/{latdegdec},{londegdec}?show=thumb&amp;fromfilter=1&amp;by=everyone&amp;taken=alltime&amp;sort=distance" target="_blank">near</a>)
+          &middot;
+          <a href="http://www.geocaching.com/seek/nearest.aspx?origin_lat={latdegdec}&amp;origin_long={londegdec}&amp;dist=20&amp;submit3=" target="_blank">Geocaching</a>
+        </li>
+        <li>
+          <a href="http://toolserver.org/~geohack/geohack.php?params={latdegdec}_N_{londegdec}_E_{ghparams}" target="_blank">GeoHack</a>
+          &middot;
+          <a href="http://toolserver.org/~geohack/geohack.php?params={latdegdec}_N_{londegdec}_E_{ghparams}_globe:export" target="_blank">GeoHack:export</a>
+          &middot;
+          <a href="{selfurl}" target="_blank">GeoLocator</a> <span>(permalink incl. settings)</span>
+        </li>
+      </ul>
+      </div>
+
+      <!-- Custom template -->
+
+      <div class="outputParagraph">
+      <span class="h2">Custom template:</span> <a href="#" class="showHideLink" id="tCustomLink"></a>
+      <div id="tCustom" class="showHide hidden">
+      <form id="fCustomTemplate" action="">
+      <ul>
+        <li>
+          <input id="iCustomTemplateDefault" value="{latdegabs}°{latminint:2}&#x2032;{latsecdec:2}&#x2033; {latNS}, {londegabs}°{lonminint:2}&#x2032;{lonsecdec:2}&#x2033; {lonEW}" />
+          <input id="iCustomTemplate" style="width: 83%;" type="text" name="customTemplate" value="" />
+          <a href="javascript: geoLocator.customTemplateApply();" class="internal">apply</a>
+          <a href="javascript: geoLocator.customTemplateReset();" class="internal">reset</a>
+        </li>
+        <li><code><span id="eCustomTemplate">&nbsp;</span></code></li>
+      </ul>
+      </form>
+      </div>
+      </div>
+
+      <!-- Standard wiki templates -->
+
+      <div class="outputParagraph">
+      <span class="h2">Basic <a href="http://en.wikipedia.org/wiki/Category:Coordinates_templates" target="_blank">wikipedia</a>/<a href="http://commons.wikimedia.org/wiki/Category:Geocoding_templates" target="_blank">commons</a> templates:</span> <a href="#" class="showHideLink" id="tWiki1Link"></a>
+      <div id="tWiki1" class="template showHide">
+      <ul class="code output">
+        <li><code>{{coord|{latdegabs}|{latminint}|{latsecdec}|{latNS}|{londegabs}|{lonminint}|{lonsecdec}|{lonEW}{ghparamsnhp}}}</code></li>
+        <li><code>{{coord|{latdegabs}|{latminint}|{latsecdec}|{latNS}|{londegabs}|{lonminint}|{lonsecdec}|{lonEW}{ghparamsnhp}|display=title}}</code></li>
+        <li><code>{{coord|{latdegabs}|{latminint}|{latsecdec}|{latNS}|{londegabs}|{lonminint}|{lonsecdec}|{lonEW}{ghparamsnhp}|display=inline,title}}</code></li>
+
+        <li style="margin-top: 0.5em">
+            <code>{{Location|{latdegabs}|{latminint}|{latsecdec}|{latNS}|{londegabs}|{lonminint}|{lonsecdec}|{lonEW}{ghparamsntp}}}</code></li>
+        <li><code>{{Location dec|{latdegdec}|{londegdec}{ghparamsntp}}}</code></li>
+
+        <li style="margin-top: 0.5em">
+            <code>{{Object location|{latdegabs}|{latminint}|{latsecdec}|{latNS}|{londegabs}|{lonminint}|{lonsecdec}|{lonEW}{ghparamsnhp}}}</code></li>
+        <li><code>{{Object location dec|{latdegdec}|{londegdec}{ghparamsnhp}}}</code></li>
+      </ul>
+      </div>
+      </div>
+
+      <!-- More wiki templates -->
+
+      <div class="outputParagraph">
+      <span class="h2">More wikipedia templates:</span> <a href="#" class="showHideLink" id="tWiki2Link"></a>
+      <div id="tWiki2" class="template showHide hidden">
+      <ul class="code output">
+        <li><code>{{Coordinate|NS={latdegdec}|EW={londegdec}{% (type ? '|type=' + type : '') %}{% (dim ? '|dim=' + dim : '') %}{% (region ? '|region=' + region : '') %}}}</code></li>
+
+        <li style="margin-top: 0.5em">
+            <code>{{coord|{latdegdec}|{londegdec}{ghparamsnhp}}}</code></li>
+        <li><code>{{coord|{latdegdec}|{londegdec}{ghparamsnhp}|display=title}}</code></li>
+        <li><code>{{coord|{latdegdec}|{londegdec}{ghparamsnhp}|display=inline,title}}</code></li>
+
+        <li style="margin-top: 0.5em">
+          <code>| lat_d = {latdegabs} | lat_m = {latminint:2} | lat_s = {latsecdec:2} | lat_NS = {latNS} <br />| long_d = {londegabs} | long_m = {lonminint:2} | long_s = {lonsecdec:2} | long_EW = {lonEW}</code></li>
+
+      </ul>
+      </div>
+      </div>
+
+      <!-- Microformats -->
+
+      <div class="outputParagraph">
+      <span class="h2">Various geo metadata formats:</span> <a href="#" class="showHideLink" id="tMicroformatsLink"></a>
+      <div id="tMicroformats" class="template showHide hidden">
+        <table class="niceTable output" style="margin: 0.5em 0 0 1em;" border="0" cellpadding="3" cellspacing="1">
+          <tr>
+            <td><a target="_blank" href="http://en.wikipedia.org/wiki/Geo_(microformat)">Geo microformat</a><br />(simple, with ';')</td>
+            <td>
+              <code>&lt;span class="geo"&gt;{latdegdec};{londegdec}&lt;/span&gt;</code>
+            </td>
+          </tr>
+          <tr>
+            <td>Geo microformat<br />(verbose, with ',')</td>
+            <td>
+              <code>&lt;span class="geo"&gt;&lt;span class="latitude"&gt;{latdegdec}&lt;/span&gt;, &lt;span class="longitude"&gt;{londegdec}&lt;/span&gt;&lt;/span&gt;</code>
+            </td>
+          </tr>
+          <tr>
+            <td><a target="_blank" href="http://en.wikipedia.org/wiki/ICBM_address">ICBM</a></td>
+            <td>
+              <code>&lt;meta name="ICBM" content="{latdegdec}, {londegdec}"&gt;</code>
+            </td>
+          </tr>
+          <tr>
+            <td><a target="_blank" href="http://geotags.com/geo/geotags2.html">geo.position</a></td>
+            <td>
+              <code>&lt;meta name="geo.position" content="{latdegdec}; {londegdec}"&gt;</code>
+            </td>
+          </tr>
+          <tr>
+            <td><a target="_blank" href="http://en.wikipedia.org/wiki/Dublin_Core">Dublin Core</a></td>
+            <td>
+              <pre>&lt;meta name="DC.Coverage.Spatial.Lat" content="{latdegdec}"&gt;
+    &lt;meta name="DC.Coverage.Spatial.Long" content="{londegdec}"&gt;</pre>
+            </td>
+          </tr>
+          <tr>
+            <td><a target="_blank" href="http://en.wikipedia.org/wiki/GeoTagging">GeoTags</a></td>
+            <td>
+              <pre>geotagged
+    geo:lat={latdegdec}
+    geo:lon={londegdec}</pre>
+            </td>
+          </tr>
+          <tr>
+            <td><a target="_blank" href="http://en.wikipedia.org/wiki/Keyhole_Markup_Language">KML</a> placemark</td>
+            <td>
+              <pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;kml xmlns="http://www.opengis.net/kml/2.2"&gt;
+  &lt;Placemark&gt;
+    &lt;name&gt;PM {latdegdec},{londegdec}&lt;/name&gt;
+      &lt;Point&gt;
+        &lt;coordinates&gt;{londegdec},{latdegdec}&lt;/coordinates&gt;
+      &lt;/Point&gt;
+     &lt;description&gt;&lt;/description&gt;
+  &lt;/Placemark&gt;
+&lt;/kml&gt;</pre></td>
+          </tr>
+          <tr>
+            <td><a target="_blank" href="http://en.wikipedia.org/wiki/GPS_eXchange_Format">GPX</a> waypoint</td>
+            <td>
+              <pre>&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;gpx version="1.1"
+  creator="GeoLocator - http://tools.freeside.sk/geolocator/"
+  xmlns="http://www.topografix.com/GPX/1/1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd"&gt;
+  &lt;wpt lat="{latdegdec}" lon="{londegdec}"&gt;
+    &lt;name&gt;WP {latdegdec},{londegdec}&lt;/name&gt;
+    &lt;cmt&gt;&lt;/cmt&gt;
+    &lt;desc&gt;&lt;/desc&gt;
+  &lt;/wpt&gt;
+&lt;/gpx&gt;</pre></td>
+          </tr>
+        </table>
+      </div>
+      </div>
+
+      <!-- Debug variable dump -->
+
+      <div class="outputParagraph">
+      <span class="h2">Debug:</span> <a href="#" class="showHideLink" id="tDebugLink"></a>
+      <div id="tDebug" class="template showHide hidden">
+      <ul class="sparse">
+        <li>Latitude macros:
+          <ul>
+            <li>D: \{latdegabs\}: '{latdegabs}', \{latdegdec\}: '{latdegdec}', \{latdegint\}: '{latdegint}', \{latdeground\}: '{latdeground}', \{latdegdecabs\}: '{latdegdecabs}'</li>
+            <li>M: \{latmindec\}: '{latmindec}', \{latminint\}: '{latminint}', \{latminround\}: '{latminround}'</li>
+            <li>M:2: \{latmindec:2\}: '{latmindec:2}', \{latminint:2\}: '{latminint:2}', \{latminround:2\}: '{latminround:2}'</li>
+            <li>S: \{latsecdec\}: '{latsecdec}', \{latsecint\}: '{latsecint}', \{latsecround\}: '{latsecround}'</li>
+            <li>S:2: \{latsecdec:2\}: '{latsecdec:2}', \{latsecint:2\}: '{latsecint:2}', \{latsecround:2\}: '{latsecround:2}'</li>
+            <li>N/S: \{latNS\}: '{latNS}', \{\% (latNS == 'N' ? 's.š.' : 'j.š.') \%\}: '{% (latNS == 'N' ? 's.š.' : 'j.š.') %}'<!--, \{latantipodes\}: '{latantipodes}' --></li>
+          </ul>
+        </li>
+        <li>Longitude macros:
+          <ul>
+            <li>D: \{londegabs\}: '{londegabs}', \{londegdec\}: '{londegdec}', \{londegint\}: '{londegint}', \{londeground\}: '{londeground}', \{londegdecabs\}: '{londegdecabs}'</li>
+            <li>M: \{lonmindec\}: '{lonmindec}', \{lonminint\}: '{lonminint}', \{lonminround\}: '{lonminround}'</li>
+            <li>M:2: \{lonmindec:2\}: '{lonmindec:2}', \{lonminint:2\}: '{lonminint:2}', \{lonminround:2\}: '{lonminround:2}'</li>
+            <li>S: \{lonsecdec\}: '{lonsecdec}', \{lonsecint\}: '{lonsecint}', \{lonsecround\}: '{lonsecround}'</li>
+            <li>S:2: \{lonsecdec:2\}: '{lonsecdec:2}', \{lonsecint:2\}: '{lonsecint:2}', \{lonsecround:2\}: '{lonsecround:2}'</li>
+            <li>E/W: \{lonEW\}: '{lonEW}', \{\% (lonEW == 'E' ? 'v.d.' : 'z.d.') \%\}: '{% (lonEW == 'E' ? 'v.d.' : 'z.d.') %}'<!--, \{longantipodes\}: '{longantipodes}', \{londegneg\}: '{londegneg}' --></li>
+          </ul>
+        </li>
+        <li>Other macros:
+          <ul>
+            <li>\{type\}: '{type}'</li>
+            <li>\{dim\}: '{dim}', \{dimm\}: '{dimm}', \{dimmint\}: '{dimmint}'</li>
+            <li>\{scale\}: '{scale}', \{span\}: '{span}', \{osmzoom\}: '{osmzoom}'</li>
+            <li>\{region\}: '{region}'</li>
+            <li>\{globe\}: '{globe}'</li>
+            <li>\{heading\}: '{heading}'</li>
+            <li>\{elevation\}: '{elevation}', \{elevationint\}: '{elevationint}'</li>
+            <li>\{ghparams\}: '{ghparams}', \{ghparamsp\}: '{ghparamsp}', \{ghparamsu\}: '{ghparamsu}' <em>(incl. heading)</em></li>
+            <li>\{ghparamsnh\}: '{ghparamsnh}', \{ghparamsnhp\}: '{ghparamsnhp}', \{ghparamsnhu\}: '{ghparamsnhu}' <em>(excl. heading)</em></li>
+            <li>\{ghparamsnt\}: '{ghparamsnt}', \{ghparamsntp\}: '{ghparamsntp}', \{ghparamsntu\}: '{ghparamsntu}' <em>(excl. type)</em></li>
+            <li>\{selfurl\}: '{selfurl}'</li>
+            <li>\{selfurlparams\}: '{selfurlparams}'</li>
+            <!--
+            <li>\{geocountry\}: '{geocountry}' </li>
+            <li>geoa1: '{geoa1}' </li>
+            -->
+          </ul>
+        </li>
+      </ul>
+      </div>
+      </div>
+
+      <div id="eTrace"></div>
+    </div>
+
+    <!-- Footer -->
+
+    <div id="footer">
+      <a href="http://en.wikipedia.org/wiki/User:Teslaton/Tools/GeoLocator" target="_blank">GeoLocator</a> v1.33 (<a href="http://en.wikipedia.org/wiki/User:Teslaton/Tools/GeoLocator#ChangeLog" title="ChangeLog" target="_blank">2014/01/28</a>)
+      <span style="margin: 0 0.3em 0 0.3em;">&middot;</span>
+      Written by <a href="http://en.wikipedia.org/wiki/User:Teslaton" target="_blank">Teslaton</a>, 2008-2014
+      <span style="margin: 0 0.3em 0 0.3em;">&middot;</span>
+      Please, post issues (bugs, wishes, etc.) related to this tool at <a href="http://en.wikipedia.org/wiki/User_talk:Teslaton/Tools/GeoLocator" target="_blank">this wiki talk page</a>
+    </div>
+  </div>
+
+  <!-- Right (main) column: fluid -->
+
+  <div id="main">
+
+    <!-- Presets -->
+
+    <div id="mainHeader">
+      <a href="#" class="internal" onclick="return geoLocator.setMapPreset('0.000000, 0.000000, 178, 360');">World</a> &middot;
+      <a href="#" class="internal" onclick="return geoLocator.setMapPreset('49.837982, 104.414063, 70, 140');">Asia</a> &middot;
+      <a href="#" class="internal" onclick="return geoLocator.setMapPreset('-1.406109, 19.863281, 63.6, 79.5');">Africa</a> &middot;
+      <a href="#" class="internal" onclick="return geoLocator.setMapPreset('54.367759, -92.812500, 50, 100');">N.America</a> &middot;
+      <a href="#" class="internal" onclick="return geoLocator.setMapPreset('-16.299051, -62.929688, 61.5, 79.5');">S.America</a> &middot;
+      <a href="#" class="internal" onclick="return geoLocator.setMapPreset('50.625073, 11.425781, 20, 40');">Europe</a> &middot;
+      <a href="#" class="internal" onclick="return geoLocator.setMapPreset('-26.902477, 140.625000, 57.9, 79.5');">Australia</a>
+    </div>
+
+    <!-- Google Map -->
+
+    <div id="mainMap">
+      <div id="eMap"></div>
+    </div>
+
+    <!-- Legend -->
+
+    <div id="mainFooter">
+      <div class="mapLegend0">
+      <div class="mapLegend">
+        <div><span id="eMapCoords" title="Current marker location. Use [Ctrl+click], [Alt+click] or drag marker to set"></span></div>
+        <div><span id="eMapPixelScale" title="Meters per pixel at current zoom"></span></div>
+        <div><span id="eMapElevation" title="Elevation at current marker location, obtained via selected geocoding service"></span></div>
+        <div><span id="eMapDistance"></span></div>
+        <div><span id="eMapHeading"></span></div>
+        <div><span id="eMapRegion" title="Region info, obtained via GoogleMaps reverse geocoding service"></span></div>
+      </div></div>
+
+      <div class="mapWizzSteps">
+      <span class="wizzText"><span class="wizzNo">3.</span> Set/update/improve location using map:</span><br />
+      <ol>
+        <li>search/zoom/move the map as required</li>
+        <li>place the location marker using [Ctrl+click] or [Alt+click]</li>
+        <li>optionally improve marker position by dragging it</li>
+        <li>optionally set <a href="http://en.wikipedia.org/wiki/Boxing_the_compass" target="_blank">heading</a> (cam. direction) using [Shift+click]</li>
+        <li>optionally set <a href="http://en.wikipedia.org/wiki/Template:Coord#dim:D" target="_blank">viewing diameter</a> using [Ctrl/Alt+Shift+click]</li>
+      </ol>
+      <span class="wizzText"><span class="wizzNo">4.</span> Click on coordinate markup in preferred format to copy it to clipboard</span>
+      </div>
+
+      <div id="test"></div>
+    </div>
+  </div>
+
+  <!-- Application startup -->
+
+  <script type="text/javascript">
+    geoLocator = new GeoLocator();
+    geoLocator.init();
+  </script>
+
+</body>
+</html>
+
+</body>
+
+</html>
