@@ -1,0 +1,13 @@
+#rightcolumn{
+background-color: #E0FFB3;
+}
+
+#cartooltip{
+position: absolute;
+visibility: hidden;
+background-color: lightyellow;
+border: 2px solid red;
+padding: 5px;
+font-size: 120%;
+font-weight: bold;
+}
