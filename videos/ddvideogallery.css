@@ -1,0 +1,65 @@
+.ddvideoGallery{
+	width: 100%; /* width of DD Youtube Slider. Height auto determined using 16:9 ratio */
+}
+
+.ddvideoGallery *{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+.videoWrapper{
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 ratio. See https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php */
+	padding-top: 25px;
+	height: 0;
+}
+
+
+.videoWrapper iframe{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+
+
+.videoNav{
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	background: #eee; /* background of navigation strip */
+}
+
+.videoNav ul{
+	list-style: none;
+	margin: 5px 0;
+	position: relative;
+	width: auto;
+	padding: 0;
+	overflow: auto;
+	white-space: nowrap;
+	text-align: center;
+}
+
+.videoNav ul li{
+	display: inline;
+	margin-right: 5px; /* margin between thumbnails */
+}
+
+.videoNav ul li img{
+	max-width: 90px;
+	width: 20%;
+	height: auto;
+	position: relative;
+	border: 4px solid transparent;
+	cursor: pointer;
+	transition: all .5s;
+}
+
+.videoNav ul li img:hover, .videoNav ul li img.selected{
+	border: 4px solid #47d2e9;
+}
