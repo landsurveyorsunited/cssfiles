@@ -1,0 +1,95 @@
+
+
+.videowrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.fluid{ /* class to make video container fluid */
+    padding-top: 25px;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
+    overflow: hidden;
+    height: 0;
+}
+
+
+.videowrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+div.ddoutro {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    bottom: 42px; /* default gap at bottom of outro, to allow video controls to show */
+    padding: 10px;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 0 0 30% 30%/50%;
+    background: #a5dff9; /* outtro background color */
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    font: bold 1em 'Bitter', sans-serif; /* Google font */
+    line-height: 1.5;
+    z-index: 1000;
+}
+
+div.ddoutro a{
+    color: blue;
+    text-decoration: none;
+}
+
+div.ddoutro div.ddclosebutton {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 2px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    background: black;
+    color: white;
+    font-size: 25px;
+    font-family: Arial;
+    z-index: 2;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0,0,0,.6);
+    cursor: pointer;
+    -webkit-transition: background 0.3s;
+    transition: background 0.3s;
+}
+
+div.ddoutro div.ddclosebutton:hover {
+    background: blue;
+}
+
+/* class added to outro to reveal it */
+
+div.ddoutro.reveal {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    border-radius: 0;
+    -webkit-transition: -webkit-transform .5s, border-radius .5s .5s;
+    transition: transform .5s, border-radius .5s .5s;
+}
+
+/* Mobile devices CSS */
+
+@media (max-device-width: 750px){ /* on mobile devices*/
+	div.ddoutro{
+		bottom: 0 !important; /* Outro should slide down completely (no gap at the bottom) */
+	}
+}
