@@ -1,0 +1,78 @@
+div.uldropdown{
+	box-sizing: border-box;
+  padding: 10px; 
+  border: 2px solid purple; 
+  width: 250px;
+	position: relative;
+	cursor: pointer;
+  border-radius: 5px;
+}
+
+div.uldropdown .titletext{
+	font-weight: bold;
+	white-space: nowrap; /* don't allow text to spill to next line */
+	overflow: hidden;
+}
+
+div.uldropdown > ul{
+	box-sizing: border-box;
+	list-style: none;
+	margin: 0;
+	width: 100%;
+	padding: 5px;
+	background: white;
+	overflow: hidden;
+}
+
+div.uldropdown >ul.overlay{ /* additional tyle for UL if set to overlay page (position = absolute) */
+	width: 200%;
+	max-width: 90vw;
+	border: 1px solid black;
+	position: absolute;
+	box-shadow: 5px 5px 5px rgba(0,0,0, .3);
+	margin-top: 0;
+	padding-right: 10px;
+	left: 0;
+	top: 100%;
+}
+
+div.uldropdown > ul{
+	display: none;
+}
+
+div.uldropdown > ul li{
+	box-sizing: border-box;
+	width: 100%;
+	overflow: hidden;
+}
+
+div.uldropdown > ul li a{
+	display: block;
+	padding: 10px;
+	white-space: nowrap; /* don't allow text to spill to next line */
+	text-decoration: none;
+}
+
+div.uldropdown > ul li a:hover,
+div.uldropdown > ul li a.selected{
+	background: #eee;
+}
+
+/* mobile friendly setting */
+@media only screen and (max-width: 550px) {
+
+	div.uldropdown{
+		width: 100%;
+	}
+
+	div.uldropdown >ul.overlay{
+		width: 100%;
+		max-width: 100%;
+		border: none;
+		position: static;
+		box-shadow: none;
+		margin-top: 0;
+		padding-right: auto;
+	}
+
+}
