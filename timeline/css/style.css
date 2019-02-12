@@ -1,0 +1,267 @@
+/* Convert px to ems
+// ========================================================================== */
+/* Mixins
+// ========================================================================== */
+/* =Slick
+// ========================================================================== */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.slick-list:focus {
+  outline: none;
+}
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+}
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
+.slick-track:after {
+  clear: both;
+}
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  float: left;
+  min-height: 1px;
+  outline: none;
+  display: none;
+}
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+.slick-slide img {
+  display: block;
+}
+.slick-slide.slick-loading img {
+  display: none;
+}
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+.slick-initialized .slick-slide {
+  display: block;
+}
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: url(http://api.ning.com:80/files/gazlj1ijHLDU8mquncBeXshzm026EdJyYWb-uvzIT6cjbfYjM9ZXeOmOTw9S84jv3gnIG1GQfts33JIJ0LzTv4hyXMdrbE3R/bg2.jpg) repeat;
+  font-family: 'Droid Sans',sans-serif;
+}
+
+#timeline {
+  background: url(http://api.ning.com:80/files/gazlj1ijHLAApcR4enHL5Gia5N40fuZm9ae77x2k4zTTip5Zq2U1*tdQku-1vB5U1aLSrAtOQ1ePQmCnDVsXv*QflIoLXW-T/treemantimeline.png) no-repeat center 40px;
+  margin-top: 9.375em;
+  min-height: 31.25em;
+}
+#timeline .container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 58.75em;
+}
+
+.timeline-title {
+  background: url(http://jeffbridgforth.com/codepen/timeline/dotted-radius.png) no-repeat center 20px;
+  color: #fa8e29;
+  font-size: 1.875em;
+  height: 1.6666666667em;
+  text-align: center;
+  text-transform: lowercase;
+}
+
+#timeline-dates {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 11.875em;
+}
+#timeline-dates li {
+  margin: 0;
+  padding: 0;
+}
+#timeline-dates .slick-list {
+  padding: 0 !important;
+}
+#timeline-dates .slick-list:before {
+  content: '';
+  background: #fa8e29;
+  height: 2px;
+  position: absolute;
+  width: 66%;
+  left: 17%;
+  top: 2.625em;
+}
+@media (min-width: 480px) {
+  #timeline-dates .slick-list:before {
+    width: 80%;
+    left: 10%;
+  }
+}
+#timeline-dates li {
+  color: white;
+  font-size: 1.125em;
+  line-height: 1.3888888889em;
+  position: relative;
+  text-align: center;
+}
+#timeline-dates li:after {
+  background: white;
+  border: 1px solid #fa8e29;
+  border-radius: 50%;
+  content: '';
+  height: 0.8888888889em;
+  width: 0.8888888889em;
+  display: block;
+  margin: 0.5555555556em auto 0;
+}
+#timeline-dates li:hover {
+  cursor: pointer;
+  font-size: 1.5625em;
+  line-height: 1em;
+  width: 0.64em;
+}
+#timeline-dates li:hover:after {
+  background: #fa8e29;
+  height: 0.64em;
+  width: 0.64em;
+  margin: 0.4em auto 0;
+}
+#timeline-dates .slick-current {
+  color: purple;
+  font-size: 1.5625em;
+  line-height: 1em;
+}
+#timeline-dates .slick-current:after {
+  background: #fa8e29;
+  margin-top: 0.32em;
+  height: 0.8em;
+  width: 0.8em;
+}
+#timeline-dates li.slick-current:hover:after {
+  margin-top: 0.32em;
+  height: 0.8em;
+  width: 0.8em;
+}
+
+#timeline-details {
+  background: white;
+  color: #474c55;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin: 2em auto 0;
+  padding: 1.5em;
+  position: relative;
+  text-align: center;
+  width: 90%;
+  max-width: 19.375em;
+}
+#timeline-details li {
+  margin: 0;
+  padding: 0;
+}
+#timeline-details:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid white;
+  position: absolute;
+  top: -1.25em;
+  left: 50%;
+  margin-left: -1.25em;
+}
+
+.slick-prev {
+  background: url(http://jeffbridgforth.com/codepen/timeline/arrows.png) no-repeat 0 0;
+  border: 0;
+  position: absolute;
+  top: 13.125em;
+  left: 50%;
+  margin-left: -50px;
+  height: 1.5625em;
+  outline: none;
+  text-indent: -999em;
+  width: 1.5625em;
+}
+@media (min-width: 480px) {
+  .slick-prev {
+    top: 7.8125em;
+    margin-left: -12.5em;
+  }
+}
+
+.slick-next {
+  background: url(http://jeffbridgforth.com/codepen/timeline/arrows.png) no-repeat -55px 0;
+  border: 0;
+  position: absolute;
+  top: 13.125em;
+  right: 50%;
+  margin-right: -3.125em;
+  height: 1.5625em;
+  outline: none;
+  text-indent: -999em;
+  width: 1.5625em;
+}
+@media (min-width: 480px) {
+  .slick-next {
+    top: 7.8125em;
+    margin-right: -12.5em;
+  }
+}

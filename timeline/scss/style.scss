@@ -1,0 +1,282 @@
+$color-orange:#fa8e29;
+$browser-default-font-size:16px;
+/* Convert px to ems
+// ========================================================================== */
+@function px-to-ems( $pixels, $context: $browser-default-font-size ) {
+  @return #{$pixels/$context}em;
+}
+
+@function return-ems( $pixels, $context ) {
+  @return #{$pixels/$context}em;
+}
+@function layout-ems( $pixels, $context: $layout-size ) {
+  @return #{$pixels/$context}em;
+}
+
+/* Mixins
+// ========================================================================== */
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+@mixin delist {
+	list-style-type: none;
+	margin:0;
+	padding: 0;
+	li {
+		margin: 0;
+		padding: 0;
+	}
+}
+@mixin center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* =Slick
+// ========================================================================== */
+
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    &:focus {
+        outline: none;
+    }
+
+    &.dragging {
+        cursor: pointer;
+        cursor: hand;
+    }
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: block;
+
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    .slick-loading & {
+        visibility: hidden;
+    }
+}
+.slick-slide {
+    float: left;
+    min-height: 1px;
+    outline:none;
+    [dir="rtl"] & {
+        float: right;
+    }
+    img {
+        display: block;
+    }
+    &.slick-loading img {
+        display: none;
+    }
+
+    display: none;
+
+    &.dragging img {
+        pointer-events: none;
+    }
+
+    .slick-initialized & {
+        display: block;
+    }
+
+    .slick-loading & {
+        visibility: hidden;
+    }
+
+    .slick-vertical & {
+        display: block;
+        height: auto;
+        border: 1px solid transparent;
+    }
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+* {
+	box-sizing:border-box;
+}
+body {
+	background:url(http://api.ning.com:80/files/gazlj1ijHLDU8mquncBeXshzm026EdJyYWb-uvzIT6cjbfYjM9ZXeOmOTw9S84jv3gnIG1GQfts33JIJ0LzTv4hyXMdrbE3R/bg2.jpg) repeat;
+	font-family:'Droid Sans',sans-serif;
+}
+
+#timeline {
+background:url(http://api.ning.com:80/files/gazlj1ijHLAApcR4enHL5Gia5N40fuZm9ae77x2k4zTTip5Zq2U1*tdQku-1vB5U1aLSrAtOQ1ePQmCnDVsXv*QflIoLXW-T/treemantimeline.png) no-repeat center 40px;
+	margin-top:px-to-ems(150px);
+	min-height:px-to-ems(500px);
+	.container {
+		@include center;
+		max-width:px-to-ems(940px);
+	}
+}
+.timeline-title {	background:url(http://jeffbridgforth.com/codepen/timeline/dotted-radius.png) no-repeat center 20px;
+	color:$color-orange;
+	font-size:px-to-ems(30px);
+	height:return-ems(50px,30px);
+	text-align:center;
+	text-transform:lowercase;
+}
+#timeline-dates {
+	@include delist;
+	margin-top:px-to-ems(190px);
+	.slick-list {
+		padding:0 !important;
+		&:before {
+			content:'';
+			background:$color-orange;
+			height:2px;
+			position:absolute;
+			width:66%;
+			left:17%;
+			top:px-to-ems(42px);
+			@media (min-width:480px) {
+				width:80%;
+				left:10%;
+			}
+		}
+	}
+	li {
+		color:white;
+		font-size:px-to-ems(18px);
+		line-height:return-ems(25px,18px);
+		position:relative;
+		text-align:center;
+	//	transition:font .5s ease-in-out;
+		
+		&:after {
+			background:white;
+			border:1px solid $color-orange;
+			border-radius:50%;
+			content:'';
+			height:return-ems(16px,18px);
+			width:return-ems(16px,18px);
+			display:block;
+			margin:return-ems(10px,18px) auto 0;
+		}
+		&:hover {
+			cursor:pointer;
+			font-size:px-to-ems(25px);
+			line-height:return-ems(25px,25px);
+			width:return-ems(16px,25px);
+			&:after {
+				background:$color-orange;
+				height:return-ems(16px,25px);
+				width:return-ems(16px,25px);
+				margin:return-ems(10px,25px) auto 0;
+			}
+		}
+	}
+	.slick-current {
+		color:purple;
+		font-size:px-to-ems(25px);
+		line-height:return-ems(25px,25px);
+		&:after {
+			background:$color-orange;
+			margin-top:return-ems(8px,25px);
+			height:return-ems(20px,25px);
+			width:return-ems(20px,25px);
+		}
+	}
+	li.slick-current:hover:after {
+			margin-top:return-ems(8px,25px);
+			height:return-ems(20px,25px);
+			width:return-ems(20px,25px);
+	}
+}
+#timeline-details {
+	background:white;
+	color:#474c55;
+	@include delist;
+	margin:px-to-ems(32px) auto 0;
+	padding:px-to-ems(24px);
+	position:relative;
+	text-align:center;
+	width:90%;
+	max-width:px-to-ems(310px);
+	&:before {
+		content:'';
+		width: 0; 
+		height: 0; 
+		border-left: 20px solid transparent;
+		border-right: 20px solid transparent;
+		border-bottom: 20px solid white;
+		position:absolute;
+		top:px-to-ems(-20px);
+		left:50%;
+		margin-left:px-to-ems(-20px);
+	}
+}
+.slick-prev {	background:url(http://jeffbridgforth.com/codepen/timeline/arrows.png) no-repeat 0 0;
+	border:0;
+	position:absolute;
+	top:px-to-ems(210px);
+	left:50%;
+	margin-left:-50px;
+	height:px-to-ems(25px);
+	outline:none;
+	text-indent:-999em;
+	width:px-to-ems(25px);
+	@media (min-width:480px) {
+		top:px-to-ems(125px);
+		margin-left:px-to-ems(-200px);
+	}
+}
+.slick-next {	background:url(http://jeffbridgforth.com/codepen/timeline/arrows.png) no-repeat -55px 0;
+	border:0;
+	position:absolute;
+	top:px-to-ems(210px);
+	right:50%;
+	margin-right:px-to-ems(-50px);
+	height:px-to-ems(25px);
+	outline:none;
+	text-indent:-999em;
+	width:px-to-ems(25px);
+	@media (min-width:480px) {
+		top:px-to-ems(125px);
+		margin-right:px-to-ems(-200px);
+	}
+}
