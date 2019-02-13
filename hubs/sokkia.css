@@ -6,12 +6,12 @@ body:before{content:",";
     background-repeat: no-repeat;}
 	
 ul.tabContainerSection-tabs.subnavline,section.module-body,div.photoDetailPage-mainSection.sheet.grid-frame,a.date-count-down.button.isAdmin,a.button.button-iconic,article.media-frame.entry.discussionListPage-entry,nav.header-nav.navbar a:active,li.mainTab-item a,div.gsc-control-cse.gsc-control-cse-en,div.status-container.media-frame,section.module-body.activityFeed,a.entry-readMore,section.entry-content.cf,header.entry-headline.media-frame,footer.entry-footnote,div.entry-socialActions.cf,article.media-frame.entry.discussionSection-entry,div.banner-frame,header.activityFeed-headline,.module-header, div#tabzilla-contents {
-  background:url(sokkia-grey.png) repeat;position: relative;
+  background:url(https://landsurveyorsunited.github.io/cssfiles/hubs/sokkia-grey.png) repeat;position: relative;
 color: #212121;
 }
-.sheet {  background:url(sokkia-teal.png);color:#ffffff;
+.sheet {  background:url(https://landsurveyorsunited.github.io/cssfiles/hubs/sokkia-teal.png);color:#ffffff;
 }
-div.banner-box.banner-overlay,div.banner-header.groupHeader.groupHeader-coverPhoto, header.content-header.cf {  background:url(sokkia-banner.jpg)#fff;color:#212121;
+div.banner-box.banner-overlay,div.banner-header.groupHeader.groupHeader-coverPhoto, header.content-header.cf {  background:url(https://landsurveyorsunited.github.io/cssfiles/hubs/sokkia-banner.jpg)#fff;color:#212121;
 }
 /* Groups Page Categories Menu */
 .groupHeader-nav .subnavline > li { margin-right:3px; margin-bottom:5px }
