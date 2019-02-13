@@ -1,4 +1,4 @@
-body:before{content:",";
+<style>body:before{content:",";
     background-image: url('http://api.ning.com/files/x7p0yuCwu9uqVfAHRXFkR32kkXzlzU*wj7XFtXZWnsh1XiLYTPWzQHH-ah3*49bjHiCPX*4*Ppq7FrP6K*-lYiE-gm8luebT/headerwhite.jpg.1409967310969.jpg');
     background-attachment: fixed;
     background-position: left top;
@@ -6,12 +6,12 @@ body:before{content:",";
     background-repeat: no-repeat;}
 	
 ul.tabContainerSection-tabs.subnavline,section.module-body,div.photoDetailPage-mainSection.sheet.grid-frame,a.date-count-down.button.isAdmin,a.button.button-iconic,article.media-frame.entry.discussionListPage-entry,nav.header-nav.navbar a:active,li.mainTab-item a,div.gsc-control-cse.gsc-control-cse-en,div.status-container.media-frame,section.module-body.activityFeed,a.entry-readMore,section.entry-content.cf,header.entry-headline.media-frame,footer.entry-footnote,div.entry-socialActions.cf,article.media-frame.entry.discussionSection-entry,div.banner-frame,header.activityFeed-headline,.module-header, div#tabzilla-contents {
-  background:url(leica-grey.png) repeat;position: relative;
+  background:url(https://landsurveyorsunited.github.io/cssfiles/hubs/leica-grey.png) repeat;position: relative;
 color: #212121;
 }
-.sheet {  background:url(leica-pink.png);color:#ffffff;
+header.module-header,.sheet {  background:url(https://landsurveyorsunited.github.io/cssfiles/hubs/leica-pink.png);color:#ffffff;
 }
-div.banner-box.banner-overlay,div.banner-header.groupHeader.groupHeader-coverPhoto, header.content-header.cf {  background:url(leica-banner.jpg)#fff;color:#212121;
+div.banner-box.banner-overlay,div.banner-header.groupHeader.groupHeader-coverPhoto, header.content-header.cf {  background:url(https://landsurveyorsunited.github.io/cssfiles/hubs/leica-banner.jpg)#fff;color:#212121;
 }
 /* Groups Page Categories Menu */
 .groupHeader-nav .subnavline > li { margin-right:3px; margin-bottom:5px }
@@ -42,4 +42,4 @@ li.subnav-current,.groupHeader-nav .subnavline > li:hover > a, .subnavline > li.
     background-image: linear-gradient(#ff0033, rgba(192, 57, 43,1.0));
     color: #FFF;
     text-decoration: none;
-}
+}</style>
