@@ -21,7 +21,7 @@ position: absolute;
 left: -14px;
 top: 0;
 cursor: pointer;
-background: transparent url(handle.gif) center left no-repeat; /* path to "handle" gif */
+background: transparent url(https://landsurveyorsunited.github.io/cssfiles/videos/handle.gif) center left no-repeat; /* path to "handle" gif */
 }
 
 .ddajaxsidepanel .contentarea{ /* CSS for main content area DIV */
