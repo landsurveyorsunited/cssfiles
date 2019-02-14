@@ -5,7 +5,7 @@
 */
 
 var ddajaxsidepanel = {
-	defaults: {ajaxloadgif:'squareloading.gif', fx:{dur:'normal', easing:'swing'}, openamount:'80%', openamount_minthreshold:'400px'},
+	defaults: {ajaxloadgif:'https://landsurveyorsunited.github.io/cssfiles/videos/squareloading.gif', fx:{dur:'normal', easing:'swing'}, openamount:'80%', openamount_minthreshold:'400px'},
 
 	$panelref: null,
 	$contentarea: null,
@@ -125,7 +125,7 @@ jQuery.extend(jQuery.easing, {  //see http://gsgd.co.uk/sandbox/jquery/easing/
 jQuery(function(){
 	ddajaxsidepanel.init({
 		targetselector: 'a[rel="ajaxpanel"]',
-		ajaxloadgif: 'squareloading.gif', //full path to "loading" gif relative to document. When in doubt use absolute URL to image.
+		ajaxloadgif: 'https://landsurveyorsunited.github.io/cssfiles/videos/squareloading.gif', //full path to "loading" gif relative to document. When in doubt use absolute URL to image.
 		fx: {dur:500, easing: 'easeInQuad'}, // dur: duration of slide effect (milliseconds), easing: 'ease_in_type_string'
 		openamount:'80%', // Width of panel when fully opened (Percentage value relative to page, or pixel value
 		openamount_minthreshold:'400px' //Minimum required width of panel (when fully opened)  before panel is shown. This prevents panel from being shown on small screens or devices.
