@@ -1,0 +1,297 @@
+/** START OF MY NEW MENU SYSTEM **/
+/* This is the Nings down arrow, not set it to just the main menu to see if it also shows anywhere else*/
+.icon-down::before {
+    font-family: 'ning-icon-fonts';
+    content: '\e60d';
+    float: right;
+}
+  /*Mobile Settings*/
+@media only screen and (max-width:769px){
+.menuContainer.open{ width:100%!important }
+.mainMenu-container{width:60%!important}
+.topicsMenu{ width:39%!important }
+.topicsMenu-container{ width:100%!important}
+.topicsList-item > a {
+    display: block;
+    width: 50px!important;
+    height: 50px!important;
+    margin: 0px auto;
+}
+.topicsTitle{ font-size:0.8em; text-align:center }
+.topicsList::before{ font-size:1em!important }
+.mainMenu-container ul:before{ font-size:1em!important }
+/* Stop scroll bar (when menu is open) on the main body content */
+body.body-menuNoScroll{
+  overflow:hidden;
+}
+}
+
+/* Remove the Ning Mobile Button For Menu */
+.occasional-button{ display:none!important }
+
+.menuBar{ 
+  width:100%;height:40px;position:fixed;bottom:0;background-color:black;border-bottom:solid 2px lightgray;border-top:solid 2px lightgray;overflow:hidden;z-index:99999!important ;
+}
+.menuContainer{
+  height:0;width:0; left:-600px;position:absolute;
+}
+.menuContainer.open{ 
+  height: 92%;
+  width: 600px;
+  background-color:rgba(0,0,0,0.9);
+  position: fixed;  
+  display:block;
+  left:0px;
+  bottom:0;
+  right:0px;
+  margin-bottom: 37px;
+  border: solid 1px gray;
+  border-bottom: solid 1px;
+  border-left: none;
+  z-index:9999!important
+}
+.mainMenu-container >ul:before{content:"Main Site Menu";display:block;padding:10px 5px;color:white;font-size:1.2em }
+.mainMenu-container{
+  position:absolute;
+  width:300px;
+  height:100%;
+  overflow:auto;
+  padding-left:5px;
+   }
+.mainMenu-container ul > li {
+   display:block
+ }
+.mainMenu-container ul.mainTab{ 
+  display:block!important;
+  margin-top:10px;
+ }
+.mainMenu-container .mainTab-item{
+margin-bottom:4px;
+width:100%;
+}
+.mainMenu-container .mainTab-item a {
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+    display: block;
+    padding: 12px 15px 12px 15px!important;
+}
+.mainMenu-container .mainTab-item > a {
+    background-color: rgba(0,0,0,0);
+    color: #d9beb1;
+}
+.mainMenu-container .mainTab-item > a:hover, .mainMenu-container .mainTab-item.active > a:hover, .mainMenu-container .subTab-item:hover{ background-color:#727292;color:white;
+ }
+.mainMenu-container .mainTab-item.active{
+border:solid 1px lightgray;background-color:#2a2b39;
+}
+/*Menu Bar Tools*/
+.menuBar-tools{
+  width:100%;
+  height:39px;
+  position:absolute;
+     /*background-color:royalblue;*/
+  z-index:99999!important;
+}
+a.menuLinks{
+display:inline-block;
+padding: 10px 6px;
+text-align:center;
+float:left;
+}
+a.menuStart{
+    color: white;
+    margin-right:30px;
+   width:80px;
+   background-color:royalblue;
+}
+a.menuBarHome{
+background-image: url(http://api.ning.com:80/files/F2Psn398QBzkYu7FvzufjsG5BSOkDFQ9HWMDh6SG-Kq2TmmjY-8JheXW4kfa5EX-0kJffacl5leK5xYa4PjrJPfL4hacBpQj/homefolder.png);
+background-size:contain;background-repeat:no-repeat;
+width:40px;
+height:39px;
+}
+/** SUB TABS **/
+
+.mainMenu-container .mainTab-item.MainTab-Subactive{
+border:solid 1px lightgray;
+}
+
+/*Makes the subtabs show below rather than over the top*/
+.mainMenu-container .subTab {
+    position: relative!important;
+    border:solid 1px lightgray;
+}
+.mainMenu-container .subTab-item:not(:last-of-type){
+margin-bottom:6px;
+}
+.mainMenu-container .MainTab-Subactive a.icon-down{
+  background-color:royalblue;color:white;
+}
+.mainMenu-container .MainTab-Subactive a.icon-down:hover{
+  background-color:darkblue;
+}
+.mainMenu-container .mainTab-item.MainTab-Subactive .subTab-item > a:hover{
+  background-color:orange;color:black;
+}
+.mainMenu-container .subTab-item.Subactive > a{
+background-color:orange; color:black;
+}
+
+@media only screen and (min-width:769px){
+.mainTab-item[dojotype="SubTabHover"]:hover > .subTab, .mainTab-item[dojotype="SubTabHover"] > .subTab{ display:none!important }
+/* Display the subtab menu if that parent tab is active */
+.mainMenu-container .mainTab-item.MainTab-Subactive .subTab{
+   display:block!important;position:relative!important;
+ }
+.mainMenu-container .mainTab-item.MainTab-Subactive:hover .subTab{
+   display:block!important;position:relative!important;
+}
+}
+
+/** 2nd TOPICS MENU **/
+.topicsMenu{ float:right;height:100%;display:inline-block; background-color: rgba(89, 85, 85, 0.5); }
+.topicsMenu-container{ width:250px;height:100%;overflow:auto }
+.topicsList { margin-top:5px; margin-bottom:15px }
+.topicsList::before{content:"Popular Topics";display:block;color:white;padding:10px 5px;font-size:1.2em }
+
+.topicsTitle{ color:lightgray; margin-bottom:5px; padding:4px;width:100% }
+.topicsList-item{ margin-bottom:15px }
+.topicsList-item > a{ display:block; width:80px; height:80px; margin:0px auto;}
+/*Topics Images in order they appear in list*/
+a.questionsLink{
+background-image: url( http://api.ning.com:80/files/6fprwX91sU15sSsgtHO3exSDEeRLHEvuyqWVbVs7Q-CyeIcQnhVwOzPndLUqzngnzz*SJC0vxZCYjRDCFOdITIzJwSFEj8ep/user_help128.png);
+background-size:contain;background-repeat:no-repeat;
+}
+a.tipsTricksLink{
+background-image: url( http://api.ning.com:80/files/gZbzFOaCBxhjPq8rOQLb2w8mTHSGA4HIEO6TLAkvIu3qHFiF0BhoCHXpfkqKuso-vXNQMd98OmxM3ivmQVwQKtM7FUTUIty9/Web_Development.png);
+background-size:contain;background-repeat:no-repeat;
+}
+a.eventsLink{
+background-image: url(http://api.ning.com:80/files/gZbzFOaCBxh*zFox5z30CiLMlTpaYdeMvIQlhysPfwXmQz7pNqwHlyXu02zrOBYeRtCY92eYTF0sNglk2ySC8uc89O5**-5*/textcalendar.png);
+background-size:contain;background-repeat:no-repeat;
+}
+a.groupsLink{
+background-image: url(http://api.ning.com:80/files/F2Psn398QBzMhbJlPim74fVeTE3haGsivL6VKNP0yQ*pFMgusNm54PwKRwcSqA0TGX94KR0UX-DvKY-Se7D46sU6jN87mzqA/socialgroup.png);
+background-size:contain;background-repeat:no-repeat;
+}
+
+
+/********* END MENU SYSTEM *******/
+
+@media only screen and (max-width:769px){
+.menuContainer-Notifications.open{ width:100%!important }
+}
+
+/** Notifications Menu**/
+.menuContainer-Notifications{
+  height:0;width:0; right:-400px;position:absolute;overflow:hidden;
+}
+.menuContainer-Notifications.open{ 
+  height: 92%;
+  width: 400px;
+  background-color:rgba(0,0,0,0.9);
+  position: fixed;  
+  display:block;
+  bottom:0;
+  right:0px;
+  margin-bottom: 37px;
+  border: solid 1px gray;
+  border-bottom: solid 1px;
+  border-right: none;
+  overflow:hidden;
+   z-index:9999!important
+}
+a.menuStart-Notification{ float:right }
+
+.mainMenuNotifications-container{ width:100%;height:100%; overflow:auto }
+
+/*** NOTIFICATIONS ALERT BOX **/
+/* Highlights the Notifications Link In The Menu Bar */
+a.notiAlert{ color:white; font-weight:bold; background-color:darkred }
+a.notiAlert::before{content:"New";display:inline-block; margin-right:5px }
+
+/* Notification Alert Box */
+.Notification-Alert {
+    position: fixed;
+    right: -350px;
+    bottom: 40px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+   overflow:hidden;
+}
+.Notification-Alert{ width:300px;height:130px; border:solid white 4px; background-color:black;z-index:9998; overflow:hidden}
+.alertTitle{ color:white;text-align:center; border-bottom:solid 1px lightgray; padding:10px }
+a.NotificationAlert-closer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    padding: 4px 7px;
+    border-radius: 70px;
+    background-color: lightgray;
+    margin-top: 5px;
+    margin-right: 5px;
+    font-size: 16px;
+    }
+a.NotificationAlert-closer:hover{ background-color:royalblue;color:white }
+.alertContent{ color:white; padding:10px; text-align:center }
+.alertContent > p{ line-height:1.5em }
+
+.notiList{ padding:10px }
+ul.notiList::before{content:"Notifications Center";display:block;color:white;margin-bottom:10px; }
+.notiList-item{ margin-bottom:10px; border-bottom:solid 1px lightgray; display:block;width:100%;float:left; padding:15px 0px }
+.notiListTitle{ color:lightgray; margin-bottom:5px }
+.notiListFriends .ningbar-list{ display:inline-block; float:right; padding-right:25px }
+.notiListFriends .ningbar-link > .icon{ display:inline }
+.notiListFriends .friendRequests-panel{ right:-25%; margin-right:-21px }
+.notiListFriends .ningbar-panel.friendRequests-panel::before, .notiListFriends .ningbar-panel.friendRequests-panel::after{ right:70%!important}
+.notiListFriends .ningbar-countNotification{ font: normal bold 12px/12px sans-serif; top: -12px; right: -12px; }
+
+@media only screen and (max-width:481px){
+.notiListFriends .recentMessages-list{ position:relative; left:0em }
+.notiListFriends .ningbar-link > .icon{ display:inline }
+.ningbar-panel.recentMessages-panel{ left:-100%}
+.ningbar-panel.recentMessages-panel::before, .ningbar-panel.recentMessages-panel::after { left:70%}
+}
+
+/**** EVENTS EVENTS CANCELLED MEMBER GOING TO ****/
+.cancelledEvents-list{ float:right }
+/*Message In Ning Bar*/
+a.cancelledEvents-link{ 
+    margin-right: 5px;
+    background-color: #c02525;
+    color: white;
+    padding: 6px;
+    font-weight:bold;
+z-index:9999;cursor:default;
+font-size:14px;border-radius:4px;
+display:inline-block;
+}
+
+.cancelledEvents-list::before{content:"Upcoming events you are going to: ";display:inline-block;color:white; margin-right:10px }
+a.cancelledEvents-link:hover{ background-color:royalblue;cursor:pointer }
+/*Main Cancelled Panel*/
+.EventsNotification-siteWide{ background-color:white; padding:5px; width:300px; border-radius:6px 0px 6px 6px; border:solid 2px lightgray; box-shadow:0px 4px 7px rgba(0,0,0,0.5);position:absolute;z-index:100;right:15px;margin-top:5px }
+.EventsNotification-siteWide-close { border-bottom:solid 1px lightgray;padding:6px;margin-bottom:4px }
+.EventsCancelled-closer{ float:right;clear:both;margin-bottom:5px }
+a.EventsCancelled-closer{ cursor:pointer;font-size:18px;padding:4px 8px;border-radius:70px;background-color:lightgray }
+a.EventsCancelled-closer:hover{ background-color:royalblue;color:white }
+.EventsCancelled-info{ 
+text-align: center;
+font-size: 14px;
+font-weight: bold;
+word-wrap: initial;
+width:80%;
+}
+.EventsNotification-siteWide-list .eventPage-details{ padding:8px }
+.EventsNotification-siteWide-list .eventPage-details:hover{ background-color:#f3f1f1 }
+.EventsNotification-siteWide-list li.eventPage-detail:nth-child(n+3){ display:none }
+.EventsNotification-siteWide-list .span10{ width:100%;padding:0px }
+.EventsNotification-siteWide-list .entry-title > a{ font-size:16px }
+.EventsNotification-siteWide-list .media-frame{ margin-bottom:4px; border-bottom:solid 1px darkgray }
+.EventsNotification-siteWide-list{ max-height:60vh; overflow:auto }
+.EventsNotification-siteWide-list .media-frame > .eventPage-image{ max-width:30px }
