@@ -7,8 +7,8 @@
 //Updated Aug 28th, 10 to v1.3
 
 var sagscroller_constants={
-	navpanel: {height:'16px', downarrow:'down.gif', opacity:0.6, title:'Go to Next Content', background:'black'},
-	loadingimg: {src:'ajaxloading.gif', dimensions:[100,15]}
+	navpanel: {height:'16px', downarrow:'https://landsurveyorsunited.github.io/cssfiles/videos/down.gif', opacity:0.6, title:'Go to Next Content', background:'black'},
+	loadingimg: {src:'https://landsurveyorsunited.github.io/cssfiles/videos/ajaxloading.gif', dimensions:[100,15]}
 }
 
 function sagscroller(options){
