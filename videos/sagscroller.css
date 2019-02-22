@@ -1,0 +1,40 @@
+/*default CSS for SAG scroller*/
+
+.sagscroller{
+width: 200px;  /*default width of scroller*/
+height:250px;
+overflow:hidden;
+position:relative;
+border:7px solid black;
+border-radius: 8px; /*css3 round corners*/
+-moz-border-radius: 8px; /*css3 round corners*/
+-webkit-border-radius: 8px; /*css3 round corners*/
+}
+
+.sagscroller a{
+font-weight:bold;
+}
+
+.sagscroller ul{
+position:absolute;
+margin:0;
+padding:0;
+background:white;
+list-style:none;
+width: 100%;
+}
+
+.sagscroller ul li{
+display:block;
+}
+
+.sagscroller ul li .rsscontent{ /*div containing body of each RSS entry*/
+font-size:90%;
+}
+
+.sagscroller ul li .rsslabel{ /*div containing label of each RSS entry*/
+margin-top:5px;
+background: #eee;
+font-size:12px;
+clear: both;
+}
