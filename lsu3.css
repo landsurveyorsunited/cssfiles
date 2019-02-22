@@ -163,19 +163,19 @@ background-color:orange; color:black;
 .topicsList-item > a{ display:block; width:80px; height:80px; margin:0px auto;}
 /*Topics Images in order they appear in list*/
 a.questionsLink{
-background-image: url( http://api.ning.com:80/files/6fprwX91sU15sSsgtHO3exSDEeRLHEvuyqWVbVs7Q-CyeIcQnhVwOzPndLUqzngnzz*SJC0vxZCYjRDCFOdITIzJwSFEj8ep/user_help128.png);
+background-image: url( https://storage.ning.com/topology/rest/1.0/file/get/1181773054?profile=original);
 background-size:contain;background-repeat:no-repeat;
 }
 a.tipsTricksLink{
-background-image: url( http://api.ning.com:80/files/gZbzFOaCBxhjPq8rOQLb2w8mTHSGA4HIEO6TLAkvIu3qHFiF0BhoCHXpfkqKuso-vXNQMd98OmxM3ivmQVwQKtM7FUTUIty9/Web_Development.png);
+background-image: url( https://storage.ning.com/topology/rest/1.0/file/get/1181790576?profile=original);
 background-size:contain;background-repeat:no-repeat;
 }
 a.eventsLink{
-background-image: url(http://api.ning.com:80/files/gZbzFOaCBxh*zFox5z30CiLMlTpaYdeMvIQlhysPfwXmQz7pNqwHlyXu02zrOBYeRtCY92eYTF0sNglk2ySC8uc89O5**-5*/textcalendar.png);
+background-image: url(https://storage.ning.com/topology/rest/1.0/file/get/1181736759?profile=original);
 background-size:contain;background-repeat:no-repeat;
 }
 a.groupsLink{
-background-image: url(http://api.ning.com:80/files/F2Psn398QBzMhbJlPim74fVeTE3haGsivL6VKNP0yQ*pFMgusNm54PwKRwcSqA0TGX94KR0UX-DvKY-Se7D46sU6jN87mzqA/socialgroup.png);
+background-image: url(https://storage.ning.com/topology/rest/1.0/file/get/1181747793?profile=original);
 background-size:contain;background-repeat:no-repeat;
 }
 
