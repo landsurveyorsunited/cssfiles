@@ -1,0 +1,150 @@
+<script>
+// OVERLAYS AND LOADERS
+x$(document).ready(function(){
+x$("<div></div>").attr('id','overlayClear').prependTo('.central-content').hide();
+});
+</script>
+
+<script>
+//Menu Codes
+x$(document).ready(function(){
+var menuStart = ('<a class="menuLinks menuStart" title="Menu">Menu</a>');
+var menuBarLinks = menuStart;
+x$('<div/>',{ class: 'menuContainer'}).prependTo('body');
+x$('.menuContainer').append('<div class="mainMenu-container"></div>');
+x$('ul.mainTab').appendTo('.mainMenu-container');
+x$('<div/>',{ class: 'menuBar'}).prependTo('body');
+x$('.menuBar').append('<div class="menuBar-tools"></div>');
+x$('.menuBar-tools').append(menuBarLinks);
+x$('a.menuLinks').css('cursor','pointer');
+x$('a.menuStart').click(function(){
+x$('.menuContainer-Notifications.open').removeClass('open');
+x$('.menuContainer').toggleClass('open');
+x$('#overlayClear').toggle('show');
+x$('body').toggleClass('body-menuNoScroll');
+});
+});
+</script>
+<script>
+//2nd Menu Codes
+x$(document).ready(function(){
+var liQuestions = ('<li class="topicsList-item"><h3 class="topicsTitle">Surveyor Forum</h3><a class="questionsLink" href="/forums" title="Community Forum"></a></li>');
+var liTips = ('<li class="topicsList-item"><h3 class="topicsTitle">Surveyor Jobs</h3><a class="tipsTricksLink" href="/tips-and-tricks" title="Tips & Tricks"></a></li>');
+var liEvents = ('<li class="topicsList-item"><h3 class="topicsTitle">Events</h3><a class="eventsLink" href="/events-demo" title="Events"></a></li>');
+var liGroups = ('<li class="topicsList-item"><h3 class="topicsTitle">Member Groups</h3><a class="groupsLink" href="/member-groups" title="Member Groups"></a></li>');
+var liTopicsList = liQuestions+liTips+liEvents+liGroups ;
+
+x$('<div class="topicsMenu"></div>').appendTo('.menuContainer');
+x$('.topicsMenu').append('<div class="topicsMenu-container"></div>')
+x$('<ul class="topicsList"></ul>').appendTo('.topicsMenu-container');
+x$('.topicsList').append(liTopicsList);
+});
+</script>
+
+<script>
+// Click the overlay hide the menu
+x$(document).ready(function(){
+x$('#overlayClear').click(function(){
+x$('.menuContainer.open, .menuContainer-Notifications.open').removeClass('open');
+x$(this).hide()
+   });
+});
+</script>
+
+<script>
+//Notification Menu Codes
+x$(document).ready(function(){
+var menuStartNotification = ('<a class="menuLinks menuStart-Notification" title="Notification Menu">Notifications</a>');
+var emailFriends = ('<li class="notiList-item"><h3 class="notiListTitle">Friends and Email</h3><div class="notiListFriends"></div></li>');
+var cancelledEvents = ('<li class="notiList-item"><h3 class="notiListTitle">Cancelled Events</h3><div class="notiListCancelledEvents"></div></li>');
+var linotiList = emailFriends+cancelledEvents;
+
+x$('<div/>',{ class: 'menuContainer-Notifications'}).prependTo('body');
+x$('.menuContainer-Notifications').append('<div class="mainMenuNotifications-container"></div>');
+x$('.mainMenuNotifications-container').append('<ul class="notiList"></ul>');
+x$('.notiList').append(linotiList);
+x$('.ningbar-userLinks.linkbar li.ningbar-list.recentMessages-list').appendTo('.notiListFriends');
+x$('.ningbar-userLinks.linkbar li.ningbar-list.friendRequests-list').appendTo('.notiListFriends');
+
+
+x$('.menuBar-tools').append(menuStartNotification);
+x$('a.menuLinks').css('cursor','pointer');
+x$('a.menuStart-Notification').click(function(){
+x$('.menuContainer.open').removeClass('open');
+x$('.menuContainer-Notifications').toggleClass('open');
+x$('#overlayClear').toggle('show');
+x$('body').toggleClass('body-menuNoScroll');
+});
+});
+</script>
+
+<script>
+//Site wide event notification for ning bar by media frame 1 event page
+x$(document).ready(function(){
+x$('<li class="cancelledEvents-list"><a class="cancelledEvents-link" title="Cancelled Events Your Going To"></a></li>').appendTo('.notiListCancelledEvents');
+x$('<div/>',{ class: 'EventsNotification-siteWide'}).appendTo('.cancelledEvents-list').hide();
+x$('.EventsNotification-siteWide').append('<div class="EventsNotification-siteWide-close"><a class="EventsCancelled-closer">X</a></div>');
+x$('.EventsNotification-siteWide-close').append('<div class="EventsCancelled-info"><h1>Upcoming Cancelled Events You Are Going To</h1></div>');
+x$('<div/>',{ class: 'EventsNotification-siteWide-list'}).appendTo('.EventsNotification-siteWide');
+x$('.cancelledEvents-list').hide();
+x$('.EventsNotification-siteWide-list').load("/events-demo .column-wide .eventListPage .media-frame", function(){
+x$('.EventsNotification-siteWide .eventPage-detail a[href$="/list/tag/%23cancelled"]').closest('.media-frame').addClass('eventCancelled');
+x$('.EventsNotification-siteWide .eventRsvp-currentOption:contains(Going)').closest('.media-frame').addClass('goingToEvent');
+x$('.EventsNotification-siteWide .media-frame:not(.media-frame.eventCancelled.goingToEvent)').remove();
+x$('.EventsNotification-siteWide .span6').remove();
+var totalCancelled = x$('.media-frame.eventCancelled.goingToEvent').length;
+if (totalCancelled >= 1 ){
+x$('a.cancelledEvents-link').text('( '+totalCancelled+' )');
+}
+if (totalCancelled >= 1 ){
+x$('.cancelledEvents-list').show();
+x$('body').addClass('notiAlert menuEventCancelled');
+x$('body.notiAlert a.menuLinks.menuStart-Notification').addClass('notiAlert');
+
+x$('body.notiAlert.menuEventCancelled').find('.alertContent > p').text('You Have A Cancelled Event');
+
+x$('body.notiAlert .Notification-Alert').addClass('notiAlert-BoxShow');
+x$('.page-home .notiAlert-BoxShow').animate( { right:'0px' },300).delay(4000).animate({right:'-350px'},200);
+}else{
+x$('.cancelledEvents-list').hide();
+         }
+     });
+});
+</script>
+<script>
+//Close cancelled list
+x$(document).ready(function(){
+x$('a.EventsCancelled-closer').on('click', function(){
+x$('.EventsNotification-siteWide').hide();
+    });
+});
+</script>
+<script>
+//Toggle Open Close cancelled list on click link
+x$(document).ready(function(){
+x$('a.cancelledEvents-link').on('click', function(){
+x$('.EventsNotification-siteWide').toggle();
+    });
+});
+</script>
+
+<script>
+x$(document).ready(function(){
+x$('<div class="Notification-Alert"><h1 class="alertTitle">Notification Alert</h1><a class="NotificationAlert-closer" title="Close">X</a></div>').prependTo('body');
+x$('.Notification-Alert').append('<div class="alertContent"><p>You have new items in the notifications panel</p></div>');
+x$('span.ningbar-countNotification').closest('body').addClass('notiAlert menuNewMessage');
+x$('body.notiAlert a.menuLinks.menuStart-Notification').addClass('notiAlert');
+
+x$('body.notiAlert.menuNewMessage').find('.alertContent > p').text('You Have New Email');
+
+x$('body.notiAlert').find('.Notification-Alert').addClass('notiAlert-BoxShow');
+x$('.page-home .notiAlert-BoxShow').animate( { right:'0px' },300).delay(4000).animate({right:'-350px'},200).find('body');
+x$('a.NotificationAlert-closer').click(function(){
+x$('.notiAlert-BoxShow').animate( { right:'-350px' },200);
+});
+});
+</script>
+
+<script>
+x$('.site-header.container').append('<div class="pagesClose"><a class="pagesGoBack" href="javascript: history.go(-1)">Back To Previous Page</a><a class="pagesClose-closer" href="/" title="Close Page">X</a></div>');
+</script></div>
