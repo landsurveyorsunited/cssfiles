@@ -1,0 +1,400 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,500,700);
+
+p.dy-right a {color:#000!important;}
+p.dy-small.xg_lightfont {color:#a12712!important;} 
+div.fb-comments.fb_iframe_widget {height:500px!important;}
+div.quickadd-options-links,div.quickpost.quickadd-options,.xg_theme #xg_foot {
+  background:#f7f4f7 url(https://landsurveyorsunited.github.io/cssfiles/blackfoots2.png) repeat scroll 0 0;
+  border-width:;
+color:#fff;
+  border-style:none;
+  border-color:transparent;
+}
+div.news, .xg_status_wrapper,html { 
+  background: url(http://api.ning.com/files/gLRz0qCeA0XuCpUDoIwcwNlXEyR5g7v05OMWJCf5h8L-O1dPcqZv3RhY1Udlx9JGBy6oeWs9fatvECOahbql9iM7iCVx2FpG/bgthreatsindex.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+div#xg_navigation.xj_navigation li a {background:#fff;border-radius:5px;padding:2px;}
+.tabs {
+
+  overflow: hidden;
+  border-bottom: 1px solid #999;
+  margin: 0;
+  padding: 0;
+}
+
+.tabs > li {
+  
+  float: left;
+  margin: 0;
+  margin-left: 10px;
+}
+
+.tabs > li:first-child {
+  
+  margin-left: 0;
+}
+
+.tabs > li > a {
+  
+  background-color: #eee;
+  border-radius: 3px 3px 0 0;
+  border-width: 1px 1px 0;
+  border-color: #999;
+  border-style: solid;
+  color: #333;
+  display: block;
+  padding: 7px 10px;
+  text-decoration: none;
+}
+ul.spicesocialwidget {
+/*float:right;*/
+margin: 140px 0;
+padding: 0;
+width: auto;
+height: 32px;
+border: 1px solid rgba(0,0,0,0.6);
+text-align: center;
+font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+ul.spicesocialwidget li {
+/*float:left;*/
+list-style:none outside none;
+border:none;
+display: inline-block;
+}
+ul.spicesocialwidget li a {
+background-color:rgba(236, 240, 241,1.0);
+background-image:url('https://goo.gl/FxfviT');
+background-repeat:no-repeat;
+background-size:auto 96px;
+border:0 none;
+display:block;
+height:32px;
+/*overflow:hidden;*/
+text-align:left;
+text-decoration:none;
+/*transition:all 0.2s ease 0s;*/
+width:32px;
+position: relative;
+display: flex;
+}
+
+
+.tooltip {
+visibility: hidden;
+opacity: 0;
+position: absolute;
+top: -25px;
+left: 50%;
+z-index: 1;
+-webkit-transition: all 0.3s ease;
+-moz-transition: all 0.3s ease;
+transition: all 0.3s ease;
+-webkit-backface-visibility: hidden;
+-moz-backface-visibility: hidden;
+-ms-backface-visibility: hidden;
+backface-visibility: hidden;
+
+}
+.tooltip span {
+position: relative;
+left: -50%;
+padding: 6px 8px 5px 8px;
+border-radius: 3px;
+font-size: .7rem;
+z-index: 1;
+line-height: 1;
+}
+.tooltip span:after {
+position: absolute;
+content: " ";
+width: 0;
+height: 0;
+top: 100%;
+left: 50%;
+margin-left: -8px;
+border: 8px solid transparent;
+}
+.spicesocialwidget a:hover .tooltip {
+display: block;
+visibility: visible;
+opacity: 1;
+-webkit-transform: translate(0, -10px);
+-moz-transform: translate(0, -10px);
+-ms-transform: translate(0, -10px);
+transform: translate(0, -10px);
+}
+
+.ie7 ul.spicesocialwidget li a,
+.ie8 ul.spicesocialwidget li a {
+background-image:url('https://go.srvyr.com/2lpOLC6');
+}
+ul.spicesocialwidget li.facebook a { background-position:0 0; }
+ul.spicesocialwidget li.flickr a { background-position:-32px 0; }
+ul.spicesocialwidget li.dribbble a { background-position:-64px 0; }
+ul.spicesocialwidget li.googleplus a { background-position:-96px 0; }
+ul.spicesocialwidget li.linkedin a { background-position:-128px 0; }
+ul.spicesocialwidget li.pinterest a { background-position:-160px 0; }
+ul.spicesocialwidget li.rss a { background-position:-192px 0; }
+ul.spicesocialwidget li.skype a { background-position:-224px 0; }
+ul.spicesocialwidget li.twitter a { background-position:-256px 0; }
+ul.spicesocialwidget li.vimeo a { background-position:-288px 0; }
+ul.spicesocialwidget li.youtube a { background-position:-320px 0; }
+
+ul.spicesocialwidget li.facebook a:hover { background-position:0 -32px}
+ul.spicesocialwidget li.flickr a:hover { background-position:-32px -32px}
+ul.spicesocialwidget li.dribbble a:hover { background-position:-64px -32px}
+ul.spicesocialwidget li.googleplus a:hover { background-position:-96px -32px}
+ul.spicesocialwidget li.linkedin a:hover { background-position:-128px -32px}
+ul.spicesocialwidget li.pinterest a:hover { background-position:-160px -32px}
+ul.spicesocialwidget li.rss a:hover { background-position:-192px -32px}
+ul.spicesocialwidget li.skype a:hover { background-position:-224px -32px}
+ul.spicesocialwidget li.twitter a:hover { background-position:-256px -32px}
+ul.spicesocialwidget li.vimeo a:hover { background-position:-288px -32px}
+ul.spicesocialwidget li.youtube a:hover { background-position:-320px -32px}
+
+.spicesocialwidget .facebook span { background: #3b5a9b; color: #dce5ed; text-shadow: 0px 1px 0px #2f487c; }
+.spicesocialwidget .facebook span:after { border-top-color: #3b5a9b; }
+
+
+.gdpr {
+  height: 0;
+  background-color: black;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.gdpr a {
+  color: yellow;
+}
+.gdpr.on {
+  height: 90px;
+  transition-property: height;
+  transition-duration: 1s;
+  transition-delay: .5s;
+}
+DIV.xg_module.xg_lightborder.signin-module FORM.xg_module_body.xg_lightborder {
+background-image: url(signin.jpg)!important;
+ background-size:100% 100%; }
+  
+  .xg_theme #xg_themebody DIV#xg.account.external-auth.xg_widget_main.xg_widget_main_authorization.xg_widget_main_authorization_signIn {
+padding-top: 4.5%!important;
+padding-bottom: 42% ;}
+DIV#xg.account.external-auth.xg_widget_main.xg_widget_main_authorization.xg_widget_main_authorization_signIn{
+background-image: url(https://st3.ning.com/topology/rest/1.0/file/get/136318745?profile=original)!important;
+background-attachment:
+fixed; background-size:100% 100%; }
+DIV.xg_module.xg_lightborder.signin-module a {
+        font-family: Helvetica Neue ; color:white;}
+DIV.xg_module.xg_lightborder.signin-module DIV.signin-about H3 {
+        font-family: Helvetica Neue ;color:#212121;}
+div.signin-about {background: #eee !important;border-radius:5px 5px 5px 5px;
+   -moz-border-radius:5px 5px 5px 5px;
+   -webkit-border-radius:5px 5px 5px 5px;}
+
+
+.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+main {
+  display: block;
+  box-sizing: border-box;
+  width: 90%;
+  margin: 1em auto;
+  padding: 1em 2em;
+  color: #000;
+  background-color: rgba(204,204,204,.7);
+  border: .07em solid rgba(0,0,0,.5);
+  border-radius: .5em;
+}
+
+
+/* Expando Bits */
+
+.expando {
+  display: none;
+}
+
+.expando:target {
+  display: block;
+}
+
+.home-hero {
+  display: grid;
+  grid-gap: 1px;
+  grid-auto-rows: minmax(150px, auto);
+}
+
+.home-hero > * {
+  padding: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #333;
+  color: #fff;
+}
+
+.feature {
+  background-image: url(http://api.ning.com/files/cTmi0hNRm8K-AXP5roc9Mj4bp8jsrGHxcctqAKwiLvOmKkbHQSFCF0COTHxjBN8OPlr-y4Cr77sJMlnDv67rC8JdhzWoD7xb/wedeurope.png);
+  background-position: bottom left;
+  color: #fff;
+}
+
+.photos {
+  background-image: url(http://api.ning.com/files/JPX5gKnxX7KxQGaNYPc8SHoBqmUYgRvOSmlV3QEcz9MCm4VsJOViGcdc3HrHwjauei8Ri*04u9jsInd6ICeLXWa9aeKwNY-0/1290185054.jpeg); 
+  color: #fff;
+}
+
+.news {
+  background-image: url(http://api.ning.com/files/pBrEDFyKDmMM-lGKpkLmoWCFVN0GFGGrTTcPtm2IQGy2MVZ9QK6k**WtN-Qoz8G3jgFQE-E74cbax3a35sU1VR8tPRewaGkT/IMG01015201505131119.jpg); 
+  color: #fff;
+}
+
+.special {
+  background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8)),url(https://www.surveyearth.com/assets/public/images/vids/7.png); 
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.special h3,
+.amazing h3{
+  margin-top: auto;
+}
+
+.amazing {
+  background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9)), url(http://api.ning.com/files/Y8XlnL4WDeCMNj66-iragXBb*StKHjdIMQHC7anOW9U3VtDVA3NkoMUzpVm*-OVAMnyRFTXDUqJTA5aZcaHwBNOKHDUmiBG8/surveyingjobsboard.png); 
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+
+p#tagsList.small {color:black;}
+div.quickadd-options-links a {color:#cc0000;}
+
+.xg_list_groups_main ul li  { {width:200px!important;float:left !important;margin-right: 1px !important;clear:none !important;}
+
+.button {
+ display: inline-block;
+ margin: 10px;
+ -webkit-border-radius: 8px;
+ -moz-border-radius: 8px;
+ border-radius: 8px;
+ -webkit-box-shadow: 0 8px 0 #212121, 0 15px 20px rgba(0, 0, 0, .35);
+ -moz-box-shadow: 0 8px 0 #212121, 0 15px 20px rgba(0, 0, 0, .35);
+ box-shadow: 0 8px 0 #212121, 0 15px 20px rgba(0, 0, 0, .35);
+ -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+ -moz-transition: -moz-box-shadow .1s ease-in-out;
+ -o-transition: -o-box-shadow .1s ease-in-out;
+ transition: box-shadow .1s ease-in-out;
+ font-size: 50px;
+ color: #fff;
+}
+.button:hover span {
+ background-color: #1b1b1b;
+ text-shadow: 0 -1px 1px rgba(175, 49, 95, .9), 0 0 5px rgba(255, 255, 255, .8);
+}
+
+.button:active, .button:focus {
+ -webkit-box-shadow: 0 8px 0 #e74c3c, 0 12px 10px rgba(0, 0, 0, .3);
+ -moz-box-shadow: 0 8px 0 #e74c3c, 0 12px 10px rgba(0, 0, 0, .3);
+ box-shadow: 0 8px 0 #e74c3c, 0 12px 10px rgba(0, 0, 0, .3);
+}
+
+.button:active span {
+ -webkit-transform: translate(0, 4px);
+ -moz-transform: translate(0, 4px);
+ -o-transform: translate(0, 4px);
+ transform: translate(0, 4px);
+}
+.button span {
+ display: inline-block;
+ padding: 20px 30px;
+ background-color: #e74c3c;
+ background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(hsla(338, 90%, 80%, .8)), to(hsla(338, 90%, 70%, .2)));
+ background-image: -webkit-linear-gradient(hsla(338, 90%, 80%, .8), hsla(338, 90%, 70%, .2));
+ background-image: -moz-linear-gradient(hsla(338, 90%, 80%, .8), hsla(338, 90%, 70%, .2));
+ background-image: -o-linear-gradient(hsla(338, 90%, 80%, .8), hsla(338, 90%, 70%, .2));
+ -webkit-border-radius: 8px;
+ -moz-border-radius: 8px;
+ border-radius: 8px;
+ -webkit-box-shadow: inset 0 -1px 1px rgba(255, 255, 255, .15);
+ -moz-box-shadow: inset 0 -1px 1px rgba(255, 255, 255, .15);
+ box-shadow: inset 0 -1px 1px rgba(255, 255, 255, .15);
+ font-family: 'Francois One', Arial, sans-serif;
+ line-height: 1;
+ text-shadow: 0 -1px 1px rgba(175, 49, 95, .7);
+ -webkit-transition: background-color .2s ease-in-out, -webkit-transform .1s ease-in-out;
+ -moz-transition: background-color .2s ease-in-out, -moz-transform .1s ease-in-out;
+ -o-transition: background-color .2s ease-in-out, -o-transform .1s ease-in-out;
+ transition: background-color .2s ease-in-out, transform .1s ease-in-out;
+}
+div#xg_canvas div.xg_module.module_forum.indented_content > div.xg_module_head > h2 {color:#a12712!important;}
+.toggle-box {
+  display: none;
+}
+
+.toggle-box + label {
+  cursor: pointer;
+  display: block;
+  font-weight: bold;
+  line-height: 31px;
+  margin-bottom: 5px;
+  color:#212121;
+}
+
+.toggle-box + label + div {
+  display: none;
+  margin-bottom: 10px;
+}
+
+.toggle-box:checked + label + div {
+  display: block;
+}
+
+.toggle-box + label:before {
+  background-color: #FF0000;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  color: #FFFFFF;
+  content: "+";
+  display: block;
+  float: left;
+  font-weight: bold;
+  height: 30px;
+  line-height: 30px;
+  margin-right: 5px;
+  text-align: center;
+  width: 30px;
+}
+
+.toggle-box:checked + label:before {
+  content: "\2212";
+}
+/* ----------------------------------------- 
+
+div.feed-more {background:#a12712!important;}
+
+
+
+div.photo {  object-fit: cover;}
+
+html body div.xg_theme div#xg_themebody div#xg.xg_widget_video div#xg_body div#column1.xg_column div#xg_canvas.xj_canvas div.xg_module div.xg_module_body div.vid_container div iframe {
+width: 736px;
+height: 414px;
+}
+/** Related Videos to the right **/
+html body div.xg_theme div#xg_themebody div#xg.xg_widget_video div#xg_body div#column1.xg_column div#xg_canvas.xj_canvas div.xg_module div.xg_module_body div.xg_column ul.videothumbs {position:relative;
+right: -200px;
+top: 600px;
+}
+html body div.xg_theme div#xg_themebody div#xg.xg_widget_video div#xg_body div#column1.xg_column div#xg_canvas.xj_canvas div.xg_module div.xg_module_body div.xg_column h3 {position:relative;
+right: -200px;
+top: 600px;
+}
