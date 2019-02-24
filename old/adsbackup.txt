@@ -1,0 +1,8 @@
+<script language="Javascript" type="text/javascript">
+function banner() { } ; b = new banner() ; n = 0
+b[n++]= "<A HREF='https://goo.gl/wkebAQ'><IMG name=randimg SRC='http://api.ning.com:80/files/3QCA0XbBBMzjbN2zWennJ28aOT6uOTfgP7HExFilYXFwaRg7KGmfub60LLOMV9I4oO645OiO5uQMirHRI5O7rPguFyAGc*we/precisionleasingbanner.jpg' border='0' ALT='Precision Leasing Surveying Equipment'><\/A>"
+b[n++]= "<A HREF='https://goo.gl/8jDYYK'><IMG name=randimg SRC='https://go.srvyr.com/surveystars-software' border='0' ALT='Survey Stars'><\/A>"
+b[n++]= "<A HREF='http://surveying.link/surveyor-sites'><IMG name=randimg SRC='http://api.ning.com:80/files/M8Ss5X0EB7LhQOiHhmlR8syx2KeNjWPdboLCqdiMdJ4urOqg0iEXEObC4qcqBYVvTMuOAugdbGaLXYunVtUjNIXJBZq*k-sE/jbirdssurveyorswebsites.png' border='0' ALT='American Building Records'><\/A>"
+i=Math.floor(Math.random() * n) ;
+document.write( b[i] )
+</script>
