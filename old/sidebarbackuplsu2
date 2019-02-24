@@ -1,0 +1,162 @@
+<center>
+<p>DEDICATED TO THE MEMORY OF SKIP FARROW (1953-2015)</p>
+</center>
+<hr />
+<div class="toggle_list">
+<p class="toggle_head">Help With Survey Equipment</p>
+<div class="toggle_body">
+<div>
+<h4>Social Support For Equipment</h4>
+<form name="form5" id="form5"><select style="font-size: 1.1em; color: #e74c3c; font-family: 'Lato'; background-color: #ecf0f1;" name="menu">
+<option value="http://landsurveyorsunited.com/group/sokkiasupportgroup">Sokkia</option>
+<option value="http://landsurveyorsunited.com/group/topconsupportgroup">Topcon</option>
+<option value="http://landsurveyorsunited.com/group/trimblesupportgroup">Trimble</option>
+<option value="http://landsurveyorsunited.com/group/leicasupportgroup">Leica</option>
+<option value="http://landsurveyorsunited.com/group/nikonsupportgroup">Nikon</option>
+<option value="http://landsurveyorsunited.com/group/pentax">Pentax</option>
+<option value="http://landsurveyorsunited.com/group/magellansupportgroup">Magellan</option>
+<option value="http://landsurveyorsunited.com/group/spectrasupportgroup">Spectra</option>
+<option value="http://landsurveyorsunited.com/group/navcomsupportgroup">NAVCOM</option>
+<option value="http://landsurveyorsunited.com/survey-equipment-support-groups">More Support</option>
+</select><input style="font-size: 1.1em; color: #ecf0f1; font-family: 'Lato'; background-color: #212121;" onclick="location=document.form5.menu.options[document.form5.menu.selectedIndex].value;" value="Target Help " type="button" ></input></form>
+</div>
+</div>
+<p class="toggle_head">Surveying Video Categories</p>
+<div class="toggle_body">
+<div><select style="font-size: 1.1em; color: #e74c3c; font-family: 'Lato'; background-color: #ecf0f1;" name="menu">
+<option value="http://landsurveyorsunited.com/video/video/listTagged?tag=tutorial">Tutorial</option>
+<option value="http://landsurveyorsunited.com/video/video/listTagged?tag=software">Survey Software</option>
+<option value="http://landsurveyorsunited.com/video/video/listTagged?tag=mapping">Mapping</option>
+<option value="http://landsurveyorsunited.com/video/video/listTagged?tag=autocad">AUTOCAD</option>
+<option value="http://landsurveyorsunited.com/video/video/listTagged?tag=funny">Surveying Funny</option>
+<option value="http://landsurveyorsunited.com/video/video/listTagged?tag=GPS">GPS/GNSS</option>
+<option value="http://landsurveyorsunited.com/video/video/listTagged?tag=GIS">GIS</option>
+<option value="http://landsurveyorsunited.com/video/video/listTagged?tag=demo">Survey Demos</option>
+<option value="http://landsurveyorsunited.com/video/video/listTagged?tag=lecture">Survey Lecture</option>
+<option value="http://landsurveyorsunited.com/video/video/listTagged?tag=equipment">Survey Equipment</option>
+</select><input style="font-size: 1.1em; color: #ecf0f1; font-family: 'Lato'; background-color: #212121;" onclick="location=document.form2.menu.options[document.form1.menu.selectedIndex].value;" value="Watch &amp; Learn" type="button" ></input></div>
+</div>
+<p class="toggle_head">Surveying Photo Categories</p>
+<div class="toggle_body">
+<div><select style="font-size: 1.1em; color: #e74c3c; font-family: 'Lato'; background-color: #ecf0f1;" name="menu">
+<option value="http://landsurveyorsunited.com/photo/photo/listTagged?tag=history">Survey History</option>
+<option value="http://landsurveyorsunited.com/photo/photo/listTagged?tag=marker">Markers</option>
+<option value="http://landsurveyorsunited.com/photo/photo/listTagged?tag=map">Maps</option>
+<option value="http://landsurveyorsunited.com/photo/photo/listTagged?tag=total+station">Total Stations</option>
+<option value="http://landsurveyorsunited.com/photo/photo/listTagged?tag=danger">DANGER</option>
+<option value="http://landsurveyorsunited.com/photo/photo/listTagged?tag=gps">GPS/GNSS</option>
+<option value="http://landsurveyorsunited.com/photo/photo/listTagged?tag=construction">Construction</option>
+<option value="http://landsurveyorsunited.com/photo/photo/listTagged?tag=crew">Survey Crews</option>
+<option value="http://landsurveyorsunited.com/photo/photo/listTagged?tag=wildlife">Wildlife</option>
+<option value="http://landsurveyorsunited.com/photo/photo/listTagged?tag=monument">Monuments</option>
+</select><input style="font-size: 1.1em; color: #ecf0f1; font-family: 'Lato'; background-color: #212121;" onclick="location=document.form1.menu.options[document.form1.menu.selectedIndex].value;" value="Look and See" type="button" ></input></div>
+</div>
+<p class="toggle_head">United States Hub Forums</p>
+<div class="toggle_body">
+<div class="unvisited" style="background-color: #f1f3f8; padding: 7px 7px 12px 0px; border: 1px solid #C5C6C6;">
+<table width="100%">
+<tbody>
+<tr>
+<td style="line-height: 40px; width: 55px;" valign="top" align="center"><a href="http://landsurveyorsunited.com/group/alaskalandsurveyors" title="Alaska">AK</a><br />
+<a href="http://landsurveyorsunited.com/group/alabamalandsurveyors" title="Alabama">AL</a><br />
+<a href="http://landsurveyorsunited.com/group/arkansaslandsurveyors" title="Arkansas">AR</a><br />
+<a href="http://landsurveyorsunited.com/group/arizonalandsurveyors" title="Arizona">AZ</a><br />
+<a href="http://landsurveyorsunited.com/group/californialandsurveyors" title="California">CA</a><br />
+<a href="http://landsurveyorsunited.com/group/coloradolandsurveyors/" title="Colorado">CO</a><br />
+<a href="http://landsurveyorsunited.com/group/connecticutlandsurveyors/" title="Connecticut">CT</a><br />
+<a href="http://landsurveyorsunited.com/group/delawarelandsurveyors/" title="Delaware">DE</a><br />
+<a href="http://landsurveyorsunited.com/group/floridalandsurveyors/" title="Florida">FL</a><br />
+<a href="http://landsurveyorsunited.com/group/georgialandsurveyors/" title="Georgia">GA</a><br />
+<a href="http://landsurveyorsunited.com/group/hawaiilandsurveyors/" title="Hawaii">HI</a><br />
+<a href="http://landsurveyorsunited.com/group/iowalandsurveyors/" title="Iowa">IA</a><br />
+<a href="http://landsurveyorsunited.com/group/idaholandsurveyors/" title="Idaho">ID</a></td>
+<td style="border-left: 4px solid #FFFFFF; line-height: 40px; width: 50px;" valign="top" align="center"><a href="http://landsurveyorsunited.com/group/illinoislandsurveyors/" title="Illinois">IL</a><br />
+<a href="http://landsurveyorsunited.com/group/indianalandsurveyors/" title="Indiana">IN</a><br />
+<a href="http://landsurveyorsunited.com/group/kansaslandsurveyors/" title="Kansas">KS</a><br />
+<a href="http://landsurveyorsunited.com/group/kentuckylandsurveyors/" title="Kentucky">KY</a><br />
+<a href="http://landsurveyorsunited.com/group/louisianalandsurveyors/" title="Louisiana">LA</a><br />
+<a href="http://landsurveyorsunited.com/group/massachusettslandsurveyors/" title="Massachusetts">MA</a><br />
+<a href="http://landsurveyorsunited.com/group/marylandlandsurveyors/" title="Maryland">MD</a><br />
+<a href="http://landsurveyorsunited.com/group/mainelandsurveyors/" title="Maine">ME</a><br />
+<a href="http://landsurveyorsunited.com/group/michiganlandsurveyors" title="Michigan">MI</a><br />
+<a href="http://landsurveyorsunited.com/group/minnesotalandsurveyors/" title="Minnesota">MN</a><br />
+<a href="http://landsurveyorsunited.com/group/missouri-land-surveyors" title="Missouri">MO</a><br />
+<a href="http://landsurveyorsunited.com/group/mississippilandsurveyors/" title="Mississippi">MS</a><br />
+<a href="http://landsurveyorsunited.com/group/montanalandsurveyors/" title="Montana">MT</a></td>
+<td style="border-left: 4px solid #FFFFFF; line-height: 40px; width: 50px;" valign="top" align="center"><a href="http://landsurveyorsunited.com/group/northcarolinasurveyors/" title="North Carolina">NC</a><br />
+<a href="http://landsurveyorsunited.com/group/north-dakota-land-surveyors" title="North Dakota">ND</a><br />
+<a href="http://landsurveyorsunited.com/group/nebraska-land-surveyors/" title="Nebraska">NE</a><br />
+<a href="http://landsurveyorsunited.com/group/newhampshirelandsurveyors/" title="New Hampshire">NH</a><br />
+<a href="http://landsurveyorsunited.com/group/newjerseylandsurveyors/" title="New Jersey">NJ</a><br />
+<a href="http://landsurveyorsunited.com/group/newmexicolandsurveyors/" title="New Mexico">NM</a><br />
+<a href="http://landsurveyorsunited.com/group/nevadalandsurveyors/" title="Nevada">NV</a><br />
+<a href="http://landsurveyorsunited.com/group/newyorklandsurveyors/" title="New York">NY</a><br />
+<a href="http://landsurveyorsunited.com/group/ohiolandsurveyors/" title="Ohio">OH</a><br />
+<a href="http://landsurveyorsunited.com/group/oklahomalandsurveyors/" title="Oklahoma">OK</a><br />
+<a href="http://landsurveyorsunited.com/group/oregonlandsurveyors/" title="Oregon">OR</a><br />
+<a href="http://landsurveyorsunited.com/group/pennsylvanialandsurveyors/" title="Pennsylvania">PA</a><br />
+<a href="http://landsurveyorsunited.com/group/rhodeislandlandsurveyors/" title="Rhode Island">RI</a></td>
+<td style="border-left: 4px solid #FFFFFF; line-height: 40px;" valign="top" align="center"><a href="http://landsurveyorsunited.com/group/southcarolinalandsurveyors/" title="South Carolina">SC</a><br />
+<a href="http://landsurveyorsunited.com/group/southdakotalandsurveyors/" title="South Dakota">SD</a><br />
+<a href="http://landsurveyorsunited.com/group/tennesseelandsurveyors/" title="Tennessee">TN</a><br />
+<a href="http://landsurveyorsunited.com/group/texaslandsurveyors/" title="Texas">TX</a><br />
+<a href="http://landsurveyorsunited.com/group/utahlandsurveyors/" title="Utah">UT</a><br />
+<a href="http://landsurveyorsunited.com/group/virginialandsurveyors/" title="Virginia">VA</a><br />
+<a href="http://landsurveyorsunited.com/group/vermontlandsurveyors/" title="Vermont">VT</a><br />
+<a href="http://landsurveyorsunited.com/group/washingtonlandsurveyors/" title="Washington">WA</a><br />
+<a href="http://landsurveyorsunited.com/group/wisconsinlandsurveyors/" title="Wisconsin">WI</a><br />
+<a href="http://landsurveyorsunited.com/group/westvirginiasurveyors/" title="West Virginia">WV</a><br />
+<a href="http://landsurveyorsunited.com/group/wyominglandsurveyors/" title="Wyoming">WY</a><br />
+<span style="padding-left: 4px;"><a href="http://landsurveyorsunited.com/group/surveyorscanada" title="Canada"><img class="nomargin" alt="Canada" src="//api.ning.com/files/q6wbtYM1kBQmIWrFoQjq30keppQhd1j-jy0QwJFxJjqh3KQzyBcpk1qP5U7TiYeUjPXfsNzzFYirexVAoiIrw9BXx3OsCrMy/Canada.gif"  /></a></span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p class="toggle_head">International Surveyor Hub Forums</p>
+<div class="toggle_body">
+<div><select style="font-size: 1.3em; color: #e74c3c; font-family: 'Lato'; background-color: #ecf0f1;" name="menu">
+<option value="http://landsurveyorsunited.com/group/surveyorsnorthamerica/">North America</option>
+<option value="http://landsurveyorsunited.com/group/surveyorssouthamerica/">South America</option>
+<option value="http://landsurveyorsunited.com/group/surveyorscanada">Canada</option>
+<option value="http://landsurveyorsunited.com/group/surveyorsasia/">Asia</option>
+<option value="http://landsurveyorsunited.com/group/caribbeansurveyors">Caribbean</option>
+<option value="http://landsurveyorsunited.com/group/indiageomatics/">India</option>
+<option value="http://landsurveyorsunited.com/group/surveyorsrussia">Russia</option>
+<option value="http://landsurveyorsunited.com/group/surveyorsantarctica/">Antarctica</option>
+<option value="http://landsurveyorsunited.com/group/surveyorsafrica/">Africa</option>
+<option value="http://landsurveyorsunited.com/group/surveyorseurope/">Europe</option>
+<option value="http://landsurveyorsunited.com/group/surveyorsaustralia/">Australia</option>
+<option value="http://landsurveyorsunited.com/group/unitedstatessurveyors/">United States</option>
+<option value="http://landsurveyorsunited.com/page/organization-structure">More Locations</option>
+</select><input style="font-size: 1.1em; color: #ecf0f1; font-family: 'Lato'; background-color: #212121;" onclick="location=document.form3.menu.options[document.form3.menu.selectedIndex].value;" value="Go There" type="button" ></input></div>
+</div>
+<p class="toggle_head">Resources for Company Owners</p>
+<div class="toggle_body">
+<div><a class="button" href="https://goo.gl/JJEfoW" target="_blank" rel="noopener">Does Your Company Need a Website?</a><br />
+<a class="button" href="http://surveying.link/surveyorswag" target="_blank" rel="noopener">Order Custom Company Gear</a><br />
+<a class="button" href="http://landsurveyorsunited.com/page/donate-to-lsu" target="_blank" rel="noopener">Donate to Community Pool</a><br />
+<a class="button" href="https://www.paypal.com/pools/c/80OtP6dThj" target="_blank" rel="noopener">Donate to Community Pool Paypal</a><br />
+<a class="button" href="http://jobs.landsurveyorsunited.org" target="_blank" rel="noopener">Surveying Jobs Board</a></div>
+</div>
+<p class="toggle_head">Land Surveyor Social Media</p>
+<div class="toggle_body">
+<div><a href="//plus.google.com/u/0/109111509878871219550?prsrc=3" rel="publisher" target="_top" style="text-decoration:none;display:inline-block;color:#333;text-align:center; font:13px/16px arial,sans-serif;white-space:nowrap;"><span style="display:inline-block;font-weight:bold;vertical-align:top;margin-right:5px; margin-top:8px;">+LandSurveyorsUnited</span><span style="display:inline-block;vertical-align:top;margin-right:15px; margin-top:8px;">on</span> <img src="//ssl.gstatic.com/images/icons/gplus-32.png" alt="Google+" style="border:0;width:32px;height:32px;"  /></a><br />
+<a class="twitter-follow-button" href="https://twitter.com/landsurveyorsu" data-size="large"><br />
+Follow @LandSurveyorsU</a><br />
+<div class="fb-group" data-href="https://www.facebook.com/groups/landsurveyors/" data-width="280" data-show-social-context="true" data-show-metadata="false"></div>
+</div>
+</div>
+<p class="toggle_head">Surveyor Resources Collections</p>
+<div class="toggle_body">
+<div><!-- ZEEF widget start --><iframe src="//zeef.io/block/130007?user_id=17273&amp;title=Surveyor+Collections&amp;max_links=21&amp;font_size=11&amp;color_header_background=0a090a&amp;color_header_text=f7fafa" scrolling="no" width="300" height="600" frameborder="0"></iframe><!-- ZEEF widget end --></div>
+</div>
+<p class="toggle_head">Getting Started &amp; Newsletter</p>
+<div class="toggle_body">
+<div><a class="button" href="http://landsurveyorsunited.com/getstartedlsu" target="_blank" rel="noopener">Get Started</a><br />
+<a class="button" href="http://landsurveyorsunited.com/page/surveying-community-newsletter" target="_blank" rel="noopener">Subscribe to Newsletter</a><br />
+<a class="button" href="http://landsurveyorsunited.com/page/land-surveyor-health-insurance" target="_blank" rel="noopener">Surveyor Health Insurance</a><br />
+<a class="button" href="http://landsurveyorsunited.com/main/invitation/new" target="_self">Invite Your Survey Crew</a><br />
+<a class="button" href="http://landsurveyorsunited.com/main/index/feedback" target="_self">Community Feedback</a></div>
+</div>
+</div>
