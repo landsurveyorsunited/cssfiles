@@ -1,0 +1,371 @@
+<link rel="stylesheet" type="text/css" href="https://landsurveyorsunited.github.io/cssfiles/lsu2css.css" >
+
+<!-- this is for ads above forum content -->
+<div id="ads_navunder" style="display:none;"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-7580100043952411";
+/* Forums */
+google_ad_slot = "7248482724";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+<script type="text/javascript">if (typeof(x$) != 'undefined') {  x$(".xg_widget_forum_topic_show .discussion").before('<div id="navunderads"></div>');    var inject_adsnavundercode = document.getElementById('ads_navunder');    var adsnavundercode = document.getElementById('navunderads');    adsnavundercode.innerHTML = inject_adsnavundercode.innerHTML; }</script>
+<!-- this is for ads below forum content -->
+<div id="ads_forum" style="display:none;"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-7580100043952411";
+/* Forum Bottom */
+google_ad_slot = "8455289968";
+google_ad_width = 468;
+google_ad_height = 15;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+
+<script type="text/javascript">if (typeof(x$) != 'undefined') {  x$(".xg_widget_forum_topic_show .discussion").after('<div id="forumads"></div>');    var inject_adsforumcode = document.getElementById('ads_forum');    var adsforumcode = document.getElementById('forumads');    adsforumcode.innerHTML = inject_adsforumcode.innerHTML; }</script>
+
+
+<script type="text/javascript" src="https://landsurveyorsunited.github.io/cssfiles/featuretable.js"></script>
+<script type="text/javascript" src="http://go.srvyr.com/1HqzNkJ"></script>
+<script type="text/javascript" src="http://go.srvyr.com/1U1c6Fa"></script>
+<script type="text/javascript" src="http://go.srvyr.com/1GIm6sH"></script>
+<script type="text/javascript" src="http://go.srvyr.com/1g31PIO"></script>
+<script type="text/javascript" src="https://go.srvyr.com/forum-alt"></script>
+<script type="text/javascript" src="http://go.srvyr.com/1eeWltt"></script>
+<script type="text/javascript" src="http://go.srvyr.com/1CEWw7d"></script>
+<script type="text/javascript">
+
+// Copy Share links to bottom of navigation byline:
+var sharelinks = x$('p.share-links').html();
+x$('div.xg_headline-2l').after('<div id="jQH_new_sharelinks"><p class="share-links.clear">' + sharelinks + '</p></div>');
+
+// Put Comment Wall followed by Latest Activity at the END of Profile pages:
+if (x$('.xg_widget_profiles_profile_show').length > 0) {
+x$('div.xg_module_comment_wall').appendTo('div#xg_layout_column_2');
+x$('div#xg_profile_activity').appendTo('div#xg_layout_column_2');
+}
+
+
+
+x$(document).ready(function() {
+function jQH_Remove_Activity_Parameter() {
+x$('a[href*="?xg_source=activity"]').each(function() {
+var url = x$(this).attr('href');
+url = url.replace("?xg_source=activity", "");
+x$(this).attr('href', url);
+});
+}
+jQH_Remove_Activity_Parameter();
+});
+
+
+x$('.thatuserlocation').html(ning.CurrentProfile.location);
+
+
+
+if(ning.CurrentProfile == null){
+    location.href = "/main/authorization/signIn?";
+}
+
+x$(".xg_widget_profiles_blog_show .xg_span-7").remove();
+x$(".xg_widget_profiles_blog_show .xg_span-14").addClass("xg_span-21");
+x$(".xg_widget_profiles_blog_show .xg_span-14").removeClass("xg_span-14");
+
+// Copy tags links to bottom of navigation byline:
+var tagslist = x$('#tagsList.small').html();
+x$('div.xg_headline-2l').after('<div id="jQH_new_tagslist"><p class="small" id="tagsList">' + tagslist + '</p></div>');
+
+if (typeof(x$) != 'undefined') {
+x$(".xg_widget_main_index_index .account-links").after('<div class="bigwelcome"><center>Welcome Back, <div class="thisusername"></div><div class="userthumb"></div></center></div><br />');
+}
+else{
+}
+
+var box3 = x$("#boxy3").parent().parent();
+x$("#xg_body").children(":first-child").before(box3);
+box3.width(970);
+
+x$(document).ready(function(){
+  x$("address").each(function(){                         
+    var embed ="<iframe width='100%' height='350' frameborder='0' scrolling='no'  marginheight='0' marginwidth='0'   src='https://maps.google.com/maps?&amp;q="+ encodeURIComponent( x$(this).text() ) +"&amp;output=embed'></iframe>";
+                                x$(this).html(embed);
+                             
+   });
+});
+
+x$('.trigger').on('click', function(){
+  x$(this).toggleClass('active').next().toggleClass('active');
+});
+
+
+
+x$(document).ready(function(){
+x$("div#discussionReplies").after('<div id="fb-root"></div><div class="fb-comments"></div>');
+});
+
+
+if (ning.CurrentProfile != null) x$('#xn_bar_menu').find('a#xn_username').after('<div style="font-size:11px; font-family:Tahoma;"><img style="border:solid 1px white;margin:0px;padding:0px;" src="' + ning.CurrentProfile.photoUrl + '" width="26" height="26" /><a href="/profiles" style="color:#f5f5f5; font-weight:bold;">Me</a> </div>');
+
+
+x$("a[href^='http']:not([href*='landsurveyorsunited.com']").attr("rel", "nofollow");
+
+<!-- Profile Information on top -->
+
+if (x$(".xg_widget_profiles_profile_show").length > 0){
+x$('.module_about_user').appendTo(x$('#xg_layout_column_2 .xg_headline'));
+}
+
+
+
+
+if (typeof(x$) != 'undefined') {
+x$(".xg_widget_profiles_profile_show .xg_2col h1").after('<div style="background-color:#000; padding:3px;">Invite your Fellow Surveyors on Facebook<div class="fb-send" data-href="http://landsurveyorsunited.com"></div></div>');
+}
+else{
+}
+
+
+x$('.thisusername').html(ning.CurrentProfile.fullName);
+
+
+
+var sizeofthumb = 70;
+
+x$('.userthumb').html('<img src="'+ning.CurrentProfile.photoUrl +'&width='+ sizeofthumb +'">');
+
+
+if (typeof(x$) != 'undefined') {
+x$("#xg_canvas > div.xg_headline.xg_widget_photo.xg_widget_photo_photo.xg_widget_photo_photo_listForLocation div.xg_headline").after('<address>%1$s</address>');
+}
+else{
+}
+
+<!-- Add QuickPost Links to GOTO links in Status Box -->
+
+if (typeof(x$) != 'undefined') {
+x$(".quickpost").before('<div style="padding-left:18px;">GO:&nbsp;<a title="GOTO Your Blog" href="/profiles/blog/list?my=1">Blog</a>&nbsp;&#183;&nbsp;<a title="GOTO Your Discussions" href="/forum/topic/listForContributor">Discussion</a>&nbsp;&#183;&nbsp;<a title="GOTO Your Events" href="/events/event/listUserEvents?my=1">Events</a>&nbsp;&#183;&nbsp;<a title="GOTO Your Photos" href="/photo/photo/listForContributor">Photos</a>&nbsp;&#183;&nbsp;<a title="GOTO Your Videos" href="/video/video/listForContributor">Videos</a></div>');
+}
+else{
+}
+
+<!-- Toggle Content -->
+
+//hide the all of the element with class toggle_body
+x$(".toggle_body").hide();
+//toggle the content with class toggle_body
+x$(".toggle_head").click(function()
+{
+// 200 is good for fast, and 600 for slow open
+x$(this).next(".toggle_body").slideToggle(200);
+});
+
+<!-- End Toggle Content -->
+
+
+if (typeof(x$) != 'undefined') {
+x$("#xn_bar_menu_tabs").prepend('<div style="float:left;padding-right:20px;" id="translatenbar"></div>');
+var t_translatenbarCode = document.getElementById('tmp_translatenbar');
+var translatenbarCode = document.getElementById('translatenbar');
+translatenbarCode.innerHTML = t_translatenbarCode.innerHTML;
+}
+
+
+x$('.attachments li a').click(function () { 
+       if (x$('#xn_signout').html() != "Sign Out" || x$('#xn_signout').html() == null) {
+            x$(window.location).attr('href', 'http://landsurveyorsunited.com/main/authorization/signUp');
+       return false;
+}
+});
+
+
+if (x$(".xg_widget_groups_group_show").length > 0){
+x$('.module_forum').prependTo(x$('.module_text'));
+}
+
+
+
+</script>
+
+
+ <script src='https://landsurveyorsunited.github.io/cssfiles/superembed.js'></script>
+<meta name="p:domain_verify" content="b41aa458b95173fe46e9e19960cd92ba"/>
+
+
+<script type="text/javascript" src="http://go.srvyr.com/1Jkq1Ac"></script>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+
+
+
+<!--  NingBar Navigation Links for Member Account Box -->
+<style>
+.lsep { margin:10px 2px 0;float:left;color:#ccc;font-size:110%; }
+.account-links { display:none!important; }
+.ningbarlink a { text-decoration:underline!important; }
+</style>
+
+
+ <script src="http://yui.yahooapis.com/3.4.1/build/yui/yui-min.js"></script>
+<script src="https://landsurveyorsunited.github.io/cssfiles/dsvSF.txt" charset="utf-8"></script>
+<!-- End Ning Bar customization-->
+<script type="text/javascript">
+var qimessagetxt = "Message";
+var qifriendtxt = "Add As Associate";
+</script>
+
+<script type="text/javascript" src="https://landsurveyorsunited.github.io/cssfiles/quickview.js"></script>
+<script type="text/javascript" src="https://landsurveyorsunited.github.io/cssfiles/quickinfo.js"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="https://landsurveyorsunited.github.io/cssfiles/quickinfo.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://landsurveyorsunited.github.io/cssfiles/quickview.css" />
+<script type = "text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-28999098-1']);
+_gaq.push(['_setDomainName', '.landsurveyorsunited.com']);
+_gaq.push(['_trackPageview']);
+(function() {
+    var ga = document.createElement('script');
+    ga.type = 'text/javascript';
+    ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<!-- TJ - 7/16/12 - Latest Activity More on Scroll -->
+<!-- COPYRIGHT B K SERVICES INC. ALL RIGHTS RESERVED -->
+
+<script type="text/javascript">
+function isScrolledIntoView(elt) {
+    var docViewTop = x$(window).scrollTop();
+    var docViewBottom = docViewTop + x$(window).height();
+
+    var eltTop = x$(elt).offset().top;
+    var eltBottom = eltTop + x$(elt).height();
+
+    return ((eltBottom <= docViewBottom) && (eltTop >= docViewTop));
+}
+
+if (x$('#xg_network_activity').length > 0) {
+    x$(window).scroll(function() {
+        if (x$('#xg_network_activity').css('display') != 'none') {
+            var elt = x$('button.xj_see_more');
+            if (isScrolledIntoView(elt)) x$(elt).click();
+        }
+    });
+}
+</script>
+
+
+
+
+
+<meta property="fb:app_id" content="188527637881347" />
+        
+
+
+<link href = "https://plus.google.com/101859867657440745231"
+rel = "publisher" / > <script type = "text/javascript"> (function() {
+    var po = document.createElement("script");
+    po.type = "text/javascript";
+    po.async = true;
+    po.src = "https://apis.google.com/js/plusone.js";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(po, s);
+})(); </script>
+
+
+
+<script src="http://maps.google.com/maps?
+file=api&v=2&key=ABQIAAAAaYvyH4mrY2VAxuatgfqGbBSrM36IpC_CQoTA5lex6_vgowypaxQkA54BVwzaRDivBKx0hg-7oijcXg" type="text/javascript"></script>
+
+
+<script src="https://www.google.com/jsapi?ABQIAAAAWyVygJYhNi1NMcZMYreEGBSrM36IpC_CQoTA5lex6_vgowypaxSkqMeS9QWYuFNJLFvfRM_kRtsiwQ"></script>
+
+
+
+<link rel="alternate" type="application/rss+xml" title="Latest Activity - Land Surveyors United" href="http://landsurveyorsunited.com/activity/log/list?fmt=rss" /><link rel="alternate" type="application/atom+xml" title="Forum - Land Surveyors United" href="http://landsurveyorsunited.com/forum/topic/list?feed=yes&amp;xn_auth=no" /><link rel="alternate" type="application/atom+xml" title="Blog Posts - Land Surveyors United" href="http://landsurveyorsunited.com/profiles/blog/feed?xn_auth=no" />
+
+
+
+
+<div id = "google_translate_element" > </div><script type="text/javascript">
+function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'en',pageLanguage:'en',includedLanguages:'af,sq,ar,be,bg,zh-CN,hr,cs,da,nl,en,tl,fr,de,el,iw,hi,hu,is,id,ga,it,ja,ko,lv,lt,mk,mt,no,fa,pl,pt,ro,ru,sk,sl,es,sw,sv,th,tr,uk,vi,cy,yi'layout:google.translate.TranslateElement.InlineLayout.SIMPLE,multilanguagePage:true,gaTrack:true,gaId:'UA-28999098-1'},'google_translate_element');}
+</script>
+
+
+
+
+
+<script type="text/javascript" language="javascript">
+
+if (x$('.module_forum').length > 0) {
+var jQH_GroupForumLinks = '<div id="jQH_GroupForumLinks">';
+var jQH_GroupURL = window.location.href + '';
+jQH_GroupForumLinks = '<span id="jQH_GroupForumLinksAll"><a href="' + jQH_GroupURL + 'forum">View All Discussions</a></span>';
+jQH_GroupForumLinks += ' <span id="jQH_GroupForumLinksAdd"><a href="' + jQH_GroupURL + 'forum/topic/new?=' + jQH_GroupURL + '">Start a New Discussion</a></span></div>';
+x$(".xg_widget_groups_group_show .xg_headline .tb h1").after(jQH_GroupForumLinks);
+}
+</script>
+
+
+
+<script type="text/javascript">
+ jQuery(document).ready(function(){
+jQuery("a[href*='http://']:not([href*='http://landsurveyorsunited.com'])").attr("target","_blank");
+jQuery("a[href*='https://']:not([href*='https://landsurveyorsunited.com'])").attr("target","_blank");
+}); 
+</script>
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=213209075871&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+
+
+<style>
+#google_translate_element {height:26px!important;margin-top:3px;}
+.goog-te-gadget-simple {padding:0px!important;height:24px!important;}
+.goog-te-gadget img {float: left;}
+.goog-te-menu-value {margin-top:-5px!important;}
+</style>
+
+<!-- Google Translate -->
+<div id="tmp_translatenbar" style="display:none;">
+<div id="google_translate_element"></div>
+<script type="text/javascript">// <![CDATA[
+function googleTranslateElementInit() {
+new google.translate.TranslateElement({
+pageLanguage: 'en',
+layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+}, 'google_translate_element');
+}
+// ]]></script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript">// <![CDATA[
+
+// ]]></script>
+</div>
+
+<!-- End Google Translate -->
+
+<!-- GEOCOMs_Sign-Up_Sign-In_Pop-Up v2.7--> 
+<script src="//api.ning.com/files/mIPhWuyPvDvKHHUtyNzATOU-z2ev0e7x8oms5hMtJVk0mZ34S1c70iTFbMMfqiydT1uYyKPpUJ3EsK1OqwAKVWrrJqDUW6lt/popup_N2.0.js" type="text/javascript" id="RE_UP_60"></script> 
+<script type="text/javascript"> 
+x$("P.date-count-down-top-big").after('<P class="date-count-down-bottom-big">Land Surveyors United</p>'); 
+x$("P.your-text").before('<p class="your-new-text">Global Land Surveyor Community</p>'); 
+</script>
+           <a href="https://siteexplorer.info/">Site Explorer</a>
