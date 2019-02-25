@@ -12,7 +12,7 @@ font: normal 12px Arial;
 .ddpanel .ddpaneltab a{ /*"toggle" tab related CSS*/
 float: right;
 color: white;
-background: black url(toggleleft.gif) no-repeat left bottom; /*background of toggle tab*/
+background: black url(https://landsurveyorsunited.github.io/cssfiles/videos/toggleleft.gif) no-repeat left bottom; /*background of toggle tab*/
 text-decoration: none;
 letter-spacing: 1px;
 }
@@ -20,7 +20,7 @@ letter-spacing: 1px;
 .ddpanel .ddpaneltab a span{ /*"toggle" tab related CSS*/
 float: left;
 display: block;
-background: transparent url(toggleright.gif) no-repeat right bottom;
+background: transparent url(https://landsurveyorsunited.github.io/cssfiles/videos/toggleright.gif) no-repeat right bottom;
 padding: 1px 12px 4px 13px;
 cursor: pointer;
 }
