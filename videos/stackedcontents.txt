@@ -1,0 +1,34 @@
+	<div class="inner">
+		<div>
+		<h4><a href="http://www.dynamicdrive.com/style/csslibrary/item/swinging_keyframe_animation/">Swinging keyframe animation</a></h4>
+Using CSS3 keyframe animations, we can control the exact style of an element at any point in time. Here we use keyframes to create a swinging effect, by modifying an element's rotation gradually over time until resting position, or 0 degrees.
+		</div>
+	</div>
+	
+	<div class="inner">
+<div>
+		<h4><a href="http://www.dynamicdrive.com/style/csslibrary/item/flipboard_css_buttons/">Flipboard CSS buttons</a></h4>
+Flipboard creates a series of CSS buttons that flip horizontally on themselves when the mouse rolls over them, creating an elegant, eye catching effect.
+</div>
+	</div>
+	
+	<div class="inner">
+<div>
+		<h4><a href="http://www.dynamicdrive.com/style/csslibrary/item/rollover_text_menu/">Rollover Text Menu</a></h4>
+This CSS menu creates the popular rollover text effect of text sliding up to reveal a duplicate of itself when the mouse rolls over a menu item. It uses CSS2 generated content to first duplicate the menu item's text, then CSS3 transitions and transform to slide up the original menu text.
+</div>
+	</div>
+	
+	<div class="inner">
+<div>
+		<h4><a href="http://www.dynamicdrive.com/style/csslibrary/item/split_drop_down_menu/">Split Drop Down Menu</a></h4>
+Using a combination of CSS2 selectors, pseudo classes, CSS3 transitions, plus a tough of JavaScript, we arrive at a CSS based split menu button, even sans images!
+</div>
+	</div>
+	
+	<div class="inner">
+<div>
+		<h4><a href="http://www.dynamicdrive.com/style/csslibrary/item/animated_ul_background_effect/">Animated UL background effect</a></h4>
+This CSS example demonstrates animating the min-width property of an element to create a stretching background effect. Here we use the technique to add a nice rollover effect to UL lists, so the user can easily home in on a particular list item by mousing over.
+</div>
+	</div>
