@@ -1,1 +1,129 @@
 
+<html>
+
+<head>
+<title>Chained Select Menu</title>
+<script language="javascript" src="chainedmenu.js">
+
+/***********************************************
+* Chained Select Menu- By Xin Yang (http://www.yxscripts.com/) & Dynamic Drive (http://dynamicdrive.com)
+* Script featured on/available at http://www.dynamicdrive.com/
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+* This notice must stay intact for legal use!
+***********************************************/
+
+</script>
+<script language="javascript" src="config.js"></script>
+</head>
+
+<body onload="initListGroup('chainedmenu', document.listmenu0.firstlevel, document.listmenu0.secondlevel, document.listmenu0.thirdlevel, 'saveit')">
+<h2>Chained Select Menu</h2>
+<p><font size="2" face="Verdana">Based on Xin's great
+<a href="http://www.dynamicdrive.com/dynamicindex16/chainedselects/index.htm">
+Chained Selects</a> script, we modified it here to specifically act as a 
+navigational menu. It includes a helper function that loops through the 
+interdependant select lists, and if an &quot;<b>end selection</b>&quot; has been made, 
+takes the user to that selection's value (aka URL). Also supports opening the 
+URLs in a new window. You can use this script to create a multi-level form menu 
+of any dimension.</font></p>
+<table align="center" cellpadding="0" cellspacing="0" border="0" width="90%"><tr><td>
+
+<form name="listmenu0">
+<table align="center"><tr>
+<td><select name="firstlevel" style="width:180px;"></select></td>
+<td><select name="secondlevel" style="width:160px;"></select></td>
+<td><select name="thirdlevel" style="width:160px;"></select></td>
+<td><input type="button" value="Go" onclick="goListGroup(document.listmenu0.firstlevel, document.listmenu0.secondlevel, document.listmenu0.thirdlevel)">
+ <input type="button" value="Reset" onclick="resetListGroup('chainedmenu')">
+</tr></table>
+</form>
+
+<h2>Installation:</h2>
+<p>To install Chained Select menu, refer to &quot;sample.html&quot;. It contains a fully 
+functional example of the script, from the HTML required to put on your page, to the two .js 
+files that also need to be uploaded. Study the <b>&quot;config .js&quot;</b> file to 
+customize the list contents.</p>
+<h2>Documentation:</h2>
+<p>&quot;Chained Select Menu&quot; is based almost entirely on the &quot;Chained Selects&quot; 
+script, so the documentation for the later is applicable entirely here as well. 
+Also see <b><a href="#note">Important Note</a></b> in the next section.</p>
+<p>A list group is like a folder tree. Imagine that you want to "chain" three select lists and you would prepare options for them. It's just like mapping a three-level folder tree to three select lists, the folders/items at top-level will populate the first select list, and when a top-level folder is selected, its sub-folders/sub-items will populate the second select list, and same goes for the third select list.</p>
+<p>To define a list group, Chained Selects introduces the following function calls:</p>
+<ul>
+<li>addListGroup("list-group-name", "first-list-name")</li>
+<p>The "first-list-name" is like the root of the folder tree, and the "list-group-name" will be referred to later when we are to bind form select lists to this list group.</p>
+
+<li>addList("first-list-name", "option text", "option value", "sub-list-name", default-selected)</li>
+<p>This is like adding a top-level folder to the folder tree. This option will populate the first select list binded to the list group.</p>
+<p>The "default-selected" parameter can be ignored. If supplied, it can be any value (1 would be handy).</p>
+
+<li>addOption("first-list-name", "option text", "option value", default-selected)</li>
+<p>This is like adding a top-level item to the folder tree. This option will populate the first select list binded to the list group.</p>
+<p>The "default-selected" parameter can be ignored. If supplied, it can be any value.</p>
+</ul>
+
+<p>The "addList()" and "addOption()" will be re-used to define options for the second select list and the rest of select lists:</p>
+<ul>
+<li>addList("sub-list-name", "option text", "option value", "nested-sub-list-name", default-selected)</li>
+<li>addOption("sub-list-name", "option text", "option value", default-selected)</li>
+</ul>
+
+<p>As you might notice, the first parameter in "addList()" and "addOption()" calls refer to some "list-name"s, the "addList()" calls also have a fourth parameter for names of nested sub-lists. These names should be unique.</p>
+<p>When you finish the definition of a list group, you can define another with the "addListGroup()" call again, followed by a bunch of "addList()" calls and "addOption()" calls.</p>
+
+<p>For any list (identified by a "list-name") in a list group, we could specify at most one item (could be a sub-list or an option in this list) with "default-selected" (if more than one item given the "default-selected" parameter, the last one will be taken), so that when this list is used to populate a form select list, the specified item will be selected by default.</p>
+
+<p>Once you have a list group, you can bind form select lists to it and populate the select lists with options defined in the list group. To do so, you can have:</p>
+<ul>
+<li>&lt;body onload="initListGroup('list-group-name', select-list-1, select-list-2, ..., 'cookie_name')"&gt;
+</ul>
+
+<p>The 'cookie_name' parameter is optional, if provided, will be used as the name prefix of the cookies to store the last selections and resume them for re-visits within the same browser session.</p>
+<p>If you implement a list group into more than one page with the same 'cookie_name' parameter, those pages can share the last selections within the same browser session. If different 'cookie_name' parameters are used, each page will be able to have its own copy of last selections.</p>
+<p>If you have more than one list group in a single page, you should have different 'cookie_name' parameters for each list group.</li>
+<p>If you want to re-use a list group for different sets of select lists in a single page, you can do so like this:</p>
+<ul>
+<li>&lt;body onload="initListGroup('MyList', select-list-1, select-list-2, 'cookie-A'); initListGroup('MyList', select-list-3, select-list-4, 'cookie-B')"&gt;
+</ul>
+
+<p>Usually the number of select lists should be equal to the number of maximum nested levels in a list group. For a selection that doesn't have sub-options for its "child" select list, its "child" select list and all the "grand-child" select lists will be emptied.</p>
+<p>When a select list is emptied, you can choose to just leave it there, to disable it or to hide it.</p>
+<p>To disable empty lists, you can embed the following line before the include line of the function script:</p>
+<ul>
+<li>var disable_empty_list=true;</li>
+<p>a disabled list will be enabled when there are some options to pupolate it.</p>
+</ul>
+<p>To hide empty lists, you can embed the following line before the include line of the function script:</p>
+<ul>
+<li>var hide_empty_list=true;</li>
+<p>a hidden list will become visible when there are some options to pupolate it.</p>
+</ul>
+
+<p># Update History:</p>
+<ul>
+<li>added the ability to re-use a list group ... 2004-08-23.</li>
+<li>fixed a bug in sub-list sharing ... 2004-08-13.</li>
+<li>added the "cookie_name" parameter ... 2004-07-17.</li>
+<li>added the "default-selected" parameter ... 2004-06-18.</li>
+<li>first release ... 2004-04-28.</li>
+</ul>
+<h2><a name="note"></a>Important Note:</h2>
+<p>It's important to understand how the script actually determines when a user's 
+selection is an &quot;<b>end selection</b>&quot; (so to take the user to that value when 
+the &quot;Go&quot; button is clicked), or simply a selection that leads to additional 
+selection lists. The script does this by looping through the lists backwards, 
+and examining the value of the selected item- if it contains a value (ie: 
+&quot;http://www.cnn.com&quot;), the script assumes this is an &quot;end selection&quot;, and takes 
+the user to the page specified by this item's value. If the item doesn't contain 
+a value (&quot;&quot;), the script assumes this is parent list to something else, and 
+continues scanning the remainder lists.</p>
+<p>What this means is that when customizing &quot;<b>config.js</b>&quot;, ONLY give &quot;end 
+selection&quot; items a value. All other items should have a blank value (&quot;&quot;). This 
+is demonstrated in the enclosed &quot;config.js&quot; file.</p>
+</td></tr></table>
+<p align="center">Copyright 2004&nbsp;Xin Yang &amp;
+<a href="http://www.dynamicdrive.com">Dynamicdrive.com</a>. Based on &quot;Chained 
+Selects&quot; script.</p>
+</body>
+
+</html>
