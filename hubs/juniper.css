@@ -1,17 +1,17 @@
-body:before{content:",";
-    background-image: url('http://blog.junipersys.com/wp-content/uploads/2013/04/Cracked-Earth-Background.jpg');
+<style>body:before{content:",";
+    background-image: url('https://landsurveyorsunited.github.io/cssfiles/hubs/poly-background.jpg');
     background-attachment: fixed;
     background-position: left top;
     background-size: cover;
     background-repeat: no-repeat;}
 	
 ul.tabContainerSection-tabs.subnavline,section.module-body,div.photoDetailPage-mainSection.sheet.grid-frame,a.date-count-down.button.isAdmin,a.button.button-iconic,article.media-frame.entry.discussionListPage-entry,nav.header-nav.navbar a:active,li.mainTab-item a,div.gsc-control-cse.gsc-control-cse-en,div.status-container.media-frame,section.module-body.activityFeed,a.entry-readMore,section.entry-content.cf,header.entry-headline.media-frame,footer.entry-footnote,div.entry-socialActions.cf,article.media-frame.entry.discussionSection-entry,div.banner-frame,header.activityFeed-headline,.module-header, div#tabzilla-contents {
-  background:url(http://blog.junipersys.com/wp-content/uploads/2013/04/Cracked-Earth-Background.jpg) repeat;position: relative;
+  background:url(https://landsurveyorsunited.github.io/cssfiles/hubs/poly-background.jpg) repeat;position: relative;
 color: #212121;
 }
-.sheet {  background:url(nikon-grey.png);color:#ffffff;
+.sheet {  background:url(https://landsurveyorsunited.github.io/cssfiles/hubs/poly-background.jpg);color:#cc823c;
 }
-div.banner-header.groupHeader.groupHeader-coverPhoto,header.content-header.cf {  background:url(juniper-logo.png)#fff!important;color:#ffffff;
+div.banner-header.groupHeader.groupHeader-coverPhoto,header.content-header.cf {  background:url(https://landsurveyorsunited.github.io/cssfiles/hubs/juniper-logo.png)#fff!important;color:#ffffff;
 }
 /* Groups Page Categories Menu */
 .groupHeader-nav .subnavline > li { margin-right:3px; margin-bottom:5px }
@@ -42,4 +42,4 @@ li.subnav-current,.groupHeader-nav .subnavline > li:hover > a, .subnavline > li.
     background-image: linear-gradient(#ffdd00, rgba(243, 156, 18,1.0));
     color: #FFF;
     text-decoration: none;
-}
+}</style>
