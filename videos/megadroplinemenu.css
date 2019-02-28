@@ -1,5 +1,5 @@
 #megadroplinemenu {
-    font: bold 16px 'Bitter', sans-serif;
+    font: bold 13px 'Bitter', sans-serif;
     /* use Google font */
     position: relative;
     z-index: 1000;
@@ -118,7 +118,7 @@
 
 /* Sub level menu links style */
 #megadroplinemenu ul li ul li a {
-    font: normal 14px 'Bitter', sans-serif;
+    font: normal 12px 'Bitter', sans-serif;
     padding: 10px;
     margin: 0;
     background: white;
@@ -178,7 +178,7 @@
 #searchtoggler input {
     width: 100%;
     font-weight: bold;
-    font-size: 36px;
+    font-size: 32px;
     padding: 5px;
 }
 
@@ -262,7 +262,7 @@ div#burgertoggler.open div.line3 {
 
     #megadroplinemenu > ul {
         display: block;
-        font-size: 18px;
+        font-size: 16px;
     }
 
     #megadroplinemenu > ul li {
@@ -303,7 +303,7 @@ div#burgertoggler.open div.line3 {
         height: auto;
         padding: 20px;
         font-weight: bold;
-        font-size: 16px;
+        font-size: 14px;
     }
 
     /* Undo Top level menu items link style on hover for touch devices */
