@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>iframe html content</title>
+
+<script type="text/javascript">
+
+function closeWindow() {
+	window.parent.document.getElementById('mask_popup').style.display='none';
+
+	//get the element node
+	popup_info = window.parent.document.getElementById('popup_info');
+	
+	//remove the element from the document
+	popup_info.parentNode.removeChild(popup_info);
+}
+
+/*
+function addToCart() {
+	window.parent.document.getElementById('mycart_on_main_page').innerHTML = document.getElementById('addcart').value;
+}
+*/
+
+</script>
+<style>
+body { 
+	font-family:Arial, Helvetica, sans-serif; font-size:12px; 
+	background:#f4f4f4; color:#333; padding:10px; line-height:16px;
+	height:100%; max-height: 100%; overflow:auto; -webkit-overflow-scrolling: touch;
+	-webkit-transform: translate3d(0, 0, 0);
+}
+img { float:left; margin:0 15px 15px 0; border:5px solid #fff; }
+</style>
+
+</head>
+
+<body>
+<h2>Iframe HTML Content - Internal or External</h2>
+<p><br />
+<img src="../images/someproduct.png" width="81" height="107" />Consectetur adipiscing elit. Pellentesque urna augue, laoreet eget pharetra quis, ornare eget lorem. Nam malesuada dolor in arcu ullamcorper feugiat. Morbi sit amet nulla at tellus varius porta. Nam justo augue, blandit at gravida ac, laoreet vel metus. Nulla nec gravida risus. Sed urna lectus, iaculis non dapibus eu, mattis nec risus. Cras in metus tristique augue porta eleifend. </p>
+<p>Nullam fermentum, sapien tempor ultrices aliquam, diam nibh pretium risus, nec dignissim ligula ante eget nisl. Mauris a mauris purus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus at arcu justo, sed egestas sem. Duis eget mi magna, sit amet pulvinar nibh. </p>
+
+<a href="javascript:closeWindow();">[Close Window]</a>
+
+<!-- 
+<input type="text" name="addcart" id="addcart" value="" size="4" >
+<input type="button" value="Add to Cart" size="4" onclick='addToCart()' >
+-->
+
+</body>
+</html>

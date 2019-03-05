@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<title>Bookshelf Slider - jQuery Plugin</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<!-- load styles -->
+<link rel="stylesheet" type="text/css" href="css/bookshelf_slider.css" />
+<link rel="stylesheet" type="text/css" href="css/skin01.css" />
+
+<style type="text/css">
+body { background:#54493e url(assets/bg_texture_11.png) repeat; margin-top:50px; }
+</style>
+
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/jquery.bookshelfslider.min.js"></script>
+
+<script type="text/javascript">
+
+jQuery(document).ready(function() {
+
+	//define custom parameters
+	$.bookshelfSlider('#bookshelf_slider_1', {
+		'item_width': 515,
+		'item_height': 170,
+		'products_box_margin_left': 30,
+		'product_title_textcolor': '#ffffff',
+		'product_title_bgcolor': '#c33b4e',
+		'product_margin': 30,
+		'product_show_title': true,
+		'show_title_in_popup': true,
+		'show_selected_title': true,
+		'show_icons': true,
+		'buttons_margin': 15,
+		'buttons_align': 'center', // left, center, right
+		'slide_duration': 800,
+		'slide_easing': 'easeInOutExpo',
+		'arrow_duration': 800,
+		'arrow_easing': 'easeInOutExpo',
+		'video_width_height': [500,290],
+		'iframe_width_height': [500,330],
+		'folder': ''
+	});
+	
+	//define custom parameters
+	$.bookshelfSlider('#bookshelf_slider_2', {
+		'item_width': 315,
+		'item_height': 170,
+		'products_box_margin_left': 30,
+		'product_title_textcolor': '#ffffff',
+		'product_title_bgcolor': '#c33b4e',
+		'product_margin': 30,
+		'product_show_title': true,
+		'show_title_in_popup': true,
+		'show_selected_title': true,
+		'show_icons': true,
+		'buttons_margin': 15,
+		'buttons_align': 'center', // left, center, right
+		'slide_duration': 800,
+		'slide_easing': 'easeOutQuart',
+		'arrow_duration': 800,
+		'arrow_easing': 'easeOutQuart',
+		'video_width_height': [500,290],
+		'iframe_width_height': [500,330],
+		'folder': ''
+	});
+	
+});//ready
+
+</script>
+
+</head>
+
+<body>
+
+<div id="bookshelf_slider_1" class="bookshelf_slider">
+
+    <div class="panel_title">
+        <div class="selected_title_box"><div class="selected_title">Selected Title</div></div>
+        
+        <div class="menu_top">
+            <ul>
+                <li class="show_hide_titles"><a href="#">Titles</a></li>
+                <li class="show_hide_icons"><a href="#">Icons</a></li>
+            </ul>
+        </div>
+    </div><!-- .panel_title -->
+    
+    <div class="panel_slider">
+    	<div class="panel_items">
+        
+            <div class="slide_animate">
+            	<div class="products_box" id="products_box_1">
+                    <div class="product" data-type="" data-popup="true" data-url="images/phone_large.jpg" title="$459"><img src="images/phone.png" alt="" width="47" height="89" /></div>
+                    <div class="product" data-type="" data-popup="true" data-url="images/phone_large.jpg" title="$789"><img src="images/phone.png" alt="" width="47" height="89" /></div>
+					<div class="product" data-type="" data-popup="true" data-url="images/phone_large.jpg" title="$343"><img src="images/phone2.png" alt="" width="43" height="84" /></div>
+                    <div class="product" data-type="book" data-popup="true" data-url="http://vimeo.com/25348908" title="Vimeo Video"><img src="images/book.png" alt="" width="81" height="107" /></div>
+                    <div class="product" data-type="book" data-popup="true" data-url="images/book_large.png" title="Book"><img src="images/book2.png" alt="" width="100" height="107" /></div>
+                    <div class="product" data-type="magazine" data-popup="true" data-url="images/magazine_large.png" title="Magazine"><img src="images/magazine.png" alt="" width="76" height="107" /></div>
+                    <div class="product" data-type="dvd" data-popup="true" data-url="images/dvd_large.jpg" title="DVD1 Info"><img src="images/dvd.jpg" alt="" width="77" height="107" /></div>
+                    <div class="product" data-type="dvd" data-popup="true" data-url="images/dvd_large.jpg" title="DVD2 Info"><img src="images/dvd.jpg" alt="" width="77" height="107" /></div>
+                    <div class="product" data-type="dvd" data-popup="true" data-url="images/dvd_large.jpg" title="DVD3 Info"><img src="images/dvd.jpg" alt="" width="77" height="107" /></div>
+            	</div>
+            </div>
+            
+            <div class="slide_animate">
+            	<div class="products_box" id="products_box_2">
+                	<div class="product" data-type="magazine" data-popup="true" data-url="images/magazine_large.png" title="Magazine"><img src="images/magazine.png" alt="" width="76" height="107" /></div>
+                    <div class="product" data-type="magazine" data-popup="true" data-url="images/magazine_large.png" title="Magazine"><img src="images/magazine.png" alt="" width="76" height="107" /></div>
+                    <div class="product" data-type="magazine" data-popup="true" data-url="images/magazine_large.png" title="Magazine"><img src="images/magazine.png" alt="" width="76" height="107" /></div>
+                    <div class="product" data-type="magazine" data-popup="true" data-url="images/magazine_large.png" title="Magazine2"><img src="images/magazine2.png" alt="" width="76" height="107" /></div>
+                    <div class="product" data-type="magazine" data-popup="true" data-url="images/magazine_large.png" title="Magazine"><img src="images/magazine.png" alt="" width="76" height="107" /></div>
+                    <div class="product" data-type="magazine" data-popup="true" data-url="images/magazine_large.png" title="Magazine"><img src="images/magazine.png" alt="" width="76" height="107" /></div>
+            	</div>
+            </div>
+            
+        </div><!-- panel_items -->
+    </div><!-- panel_slider -->
+    
+    <div class="panel_bar">
+    	<div class='buttons_container'>
+            <div id="arrow_box"><div id="arrow_menu"></div></div>
+            <div class="button_items">
+                <div id="btn1" class="button_bar"><a href="#">Mix Products</a></div>
+                <div id="btn2" class="button_bar"><a href="#">Magazines</a></div>
+            </div>
+		</div>
+    </div>
+    
+</div><!-- bookshelf_slider -->
+
+
+<br><br>
+
+<!-- Instance 2 -->
+
+<div id="bookshelf_slider_2" class="bookshelf_slider">
+
+    <div class="panel_title">
+        <div class="selected_title_box"><div class="selected_title">Selected Title</div></div>
+        
+        <div class="menu_top">
+            <ul>
+                <li class="show_hide_titles"><a href="#">Titles</a></li>
+                <li class="show_hide_icons"><a href="#">Icons</a></li>
+            </ul>
+        </div>
+    </div><!-- .panel_title -->
+    
+    <div class="panel_slider">
+    	<div class="panel_items">
+        
+            <div class="slide_animate">
+            	<div class="products_box" id="products_box_1">
+                    <div class="product" data-type="" data-popup="true" data-url="images/phone_large.jpg" title="$459"><img src="images/phone.png" alt="" width="47" height="89" /></div>
+                    <div class="product" data-type="" data-popup="true" data-url="images/phone_large.jpg" title="$789"><img src="images/phone.png" alt="" width="47" height="89" /></div>
+					<div class="product" data-type="" data-popup="true" data-url="images/phone_large.jpg" title="$343"><img src="images/phone2.png" alt="" width="43" height="84" /></div>
+                    <div class="product" data-type="book" data-popup="true" data-url="http://vimeo.com/25348908" title="Vimeo Video"><img src="images/book.png" alt="" width="81" height="107" /></div>
+                    <div class="product" data-type="book" data-popup="true" data-url="images/book_large.png" title="Book"><img src="images/book2.png" alt="" width="100" height="107" /></div>
+                    <div class="product" data-type="magazine" data-popup="true" data-url="images/magazine_large.png" title="Magazine"><img src="images/magazine.png" alt="" width="76" height="107" /></div>
+                    <div class="product" data-type="dvd" data-popup="true" data-url="images/dvd_large.jpg" title="DVD1 Info"><img src="images/dvd.jpg" alt="" width="77" height="107" /></div>
+                    <div class="product" data-type="dvd" data-popup="true" data-url="images/dvd_large.jpg" title="DVD2 Info"><img src="images/dvd.jpg" alt="" width="77" height="107" /></div>
+                    <div class="product" data-type="dvd" data-popup="true" data-url="images/dvd_large.jpg" title="DVD3 Info"><img src="images/dvd.jpg" alt="" width="77" height="107" /></div>
+            	</div>
+            </div>
+            
+            <div class="slide_animate">
+            	<div class="products_box" id="products_box_2">
+                	<div class="product" data-type="magazine" data-popup="true" data-url="images/magazine_large.png" title="Magazine"><img src="images/magazine.png" alt="" width="76" height="107" /></div>
+                    <div class="product" data-type="magazine" data-popup="true" data-url="images/magazine_large.png" title="Magazine"><img src="images/magazine.png" alt="" width="76" height="107" /></div>
+                    <div class="product" data-type="magazine" data-popup="true" data-url="images/magazine_large.png" title="Magazine"><img src="images/magazine.png" alt="" width="76" height="107" /></div>
+                    <div class="product" data-type="magazine" data-popup="true" data-url="images/magazine_large.png" title="Magazine2"><img src="images/magazine2.png" alt="" width="76" height="107" /></div>
+                    <div class="product" data-type="magazine" data-popup="true" data-url="images/magazine_large.png" title="Magazine"><img src="images/magazine.png" alt="" width="76" height="107" /></div>
+                    <div class="product" data-type="magazine" data-popup="true" data-url="images/magazine_large.png" title="Magazine"><img src="images/magazine.png" alt="" width="76" height="107" /></div>
+            	</div>
+            </div>
+            
+        </div><!-- panel_items -->
+    </div><!-- panel_slider -->
+    
+    <div class="panel_bar">
+    	<div class='buttons_container'>
+            <div id="arrow_box"><div id="arrow_menu"></div></div>
+            <div class="button_items">
+                <div id="btn1" class="button_bar"><a href="#">Mix Products</a></div>
+                <div id="btn2" class="button_bar"><a href="#">Magazines</a></div>
+            </div>
+		</div>
+    </div>
+    
+</div><!-- bookshelf_slider_2 -->
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<title>Bookshelf Slider - jQuery Plugin</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<!-- load styles -->
+<link rel="stylesheet" type="text/css" href="css/bookshelf_slider.css" />
+<link rel="stylesheet" type="text/css" href="css/skin01.css" />
+
+<style type="text/css">
+body { background:#54493e url(assets/bg_texture_11.png) repeat; margin-top:50px; }
+</style>
+
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/jquery.bookshelfslider.min.js"></script>
+
+<script type="text/javascript">
+
+jQuery(document).ready(function() {
+	
+	//Use this example on a server to function properly
+	
+	$.ajax({
+		url: 'ajax/content.html',
+		success: function(data) {
+			$('#ajax_result').html(data);
+			initBookshelfSlider();
+		}
+	});
+
+	function initBookshelfSlider() {
+		//define custom parameters
+		$.bookshelfSlider('#bookshelf_slider', {
+			'item_width': 710,
+			'item_height': 170,
+			'products_box_margin_left': 20,
+			'product_title_textcolor': '#ffffff',
+			'product_title_bgcolor': '#c33b4e',
+			'product_margin': 20,
+			'buttons_align': 'center',
+			'folder': ''
+		});
+	}
+	
+});//ready
+
+</script>
+
+</head>
+
+<body>
+<div id="ajax_result"></div>
+</body>
+</html>
