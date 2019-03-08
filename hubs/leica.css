@@ -21,13 +21,13 @@ li..subnav.expanded,.groupHeader-nav .subnavline > li:hover > a, .subnavline > l
 /** End Groups Pages Categories Nave Menu **/
 /* NAV BAR FOR CATEGORIES ETC */
 .subnav li { margin-right:3px; margin-bottom:5px }
-.subnav li a { background-color: #323232;
-    background-image: linear-gradient(#ecf0f1, rgba(189, 195, 199,1.0));
+.subnav li a { background-color: #ff0328;
+    background-image: linear-gradient(#ff0328, rgba(189, 195, 199,1.0));
     color: #323232; padding:10px; border-radius:2px; box-shadow:1px 3px 6px #424242 }
 
 .subnav li a:hover, .subnav li.subnav-current > a {
     background-color: #ED2A00;
-    background-image: linear-gradient(#ff0033, rgba(44, 62, 80,1.0));
+    background-image: linear-gradient(#ff0328, rgba(44, 62, 80,1.0));
     color: #FFF;
     text-decoration: none;
 }
@@ -39,7 +39,7 @@ li..subnav.expanded,.groupHeader-nav .subnavline > li:hover > a, .subnavline > l
     color: #34495e; padding:10px; border-radius:2px; box-shadow:1px 3px 6px #424242;border:none }
 
 li.subnav-current,.groupHeader-nav .subnavline > li:hover > a, .subnavline > li.current > a { background-color: #323232;
-    background-image: linear-gradient(#ff0033, rgba(192, 57, 43,1.0));
+    background-image: linear-gradient(#ff0328, rgba(192, 57, 43,1.0));
     color: #FFF;
     text-decoration: none;
 }</style>
