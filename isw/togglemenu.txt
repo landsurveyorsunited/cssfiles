@@ -1,8 +1,8 @@
 <link rel="stylesheet" href="https://landsurveyorsunited.github.io/cssfiles/isw/sidetogglemenu.css" />
 <div id="togglemenu2" class="sidetogglemenu">
 <ul class="mainnav">
-	<li><a href="https://landsurveyorsunited.com/surveying"><i class="fa fa-bolt"></i> ISW2019</a></li>
-	<li><a href="http://www.dynamicdrive.com/style/"><i class="fa fa-css3"></i> Africa</a>
+	<li><a href="https://landsurveyorsunited.com/isw19"><i class="fa fa-bolt"></i> ISW2019</a></li>
+	<li><a href="https://landsurveyorsunited.com/hubs/"><i class="fa fa-css3"></i> Africa</a>
 		<ul>
 		<li><a href="https://landsurveyorsunited.com/hubs/africa-land-surveyors/angola" >Angola</a></li>
 <li><a href="https://landsurveyorsunited.com/hubs/africa-land-surveyors/algeria" >Algeria</a></li>
@@ -29,7 +29,7 @@
 <li><a href="https://landsurveyorsunited.com/hubs/africa-land-surveyors/zimbabwe" >Zimbabwe</a></li>
 		</ul>
 	</li>
-<li><a href="http://www.dynamicdrive.com/style/"><i class="fa fa-css3"></i> Asia</a>
+<li><a href="https://landsurveyorsunited.com/hubs/"><i class="fa fa-css3"></i> Asia</a>
 		<ul>
 		<li><a href="https://landsurveyorsunited.com/hubs/asia/afghanistan" >Afghanistan</a></li>
 <li><a href="https://landsurveyorsunited.com/hubs/asia/china" >China</a></li>
@@ -45,11 +45,11 @@
 <li><a href="https://landsurveyorsunited.com/hubs/asia/pakistan" >Pakistan</a></li>
 		</ul>
 	</li>
-<li><a href="http://www.dynamicdrive.com/style/"><i class="fa fa-css3"></i> North America</a>
+<li><a href="https://landsurveyorsunited.com/hubs/"><i class="fa fa-css3"></i> North America</a>
 		<ul>
 		<li><a href="https://landsurveyorsunited.com/hubs/surveyorscanada">Canada</a></li>
 		<li><a href="https://landsurveyorsunited.com/hubs/mexicolandsurveyors">Mexico</a></li>
-		<li><a href="http://www.dynamicdrive.com/style/csslibrary/category/C8/">United States</a>
+		<li><a href="https://landsurveyorsunited.com/hubs/">United States</a>
 			<ul>
 			<li><a href="https://landsurveyorsunited.com/hubs/usa-surveyors/arizona" >Arizona</a></li>
 <li><a href="https://landsurveyorsunited.com/hubs/usa-surveyors/alabama" >Alabama</a></li>
@@ -100,7 +100,7 @@
 		</li>
 		</ul>
 	</li>
-<li><a href="http://www.dynamicdrive.com/style/"><i class="fa fa-css3"></i> South America</a>
+<li><a href="https://landsurveyorsunited.com/hubs/"><i class="fa fa-css3"></i> South America</a>
 		<ul>
 		<li><a href="https://landsurveyorsunited.com/hubs/south-america/brazil" >Brazil</a></li>
 <li><a href="https://landsurveyorsunited.com/hubs/south-america/colombia" >Colombia</a></li>
@@ -118,7 +118,7 @@
 <li><a href="https://landsurveyorsunited.com/hubs/south-america/falkland-islands" >Falkland Islands</a></li>
 		</ul>
 	</li>
-    <li><a href="http://www.dynamicdrive.com/style/"><i class="fa fa-css3"></i> Europe</a>
+    <li><a href="https://landsurveyorsunited.com/hubs/"><i class="fa fa-css3"></i> Europe</a>
 		<ul>
 		<li><a href="https://landsurveyorsunited.com/hubs/europe/france" >France</a></li>
 <li><a href="https://landsurveyorsunited.com/hubs/europe/spain" >Spain</a></li>
@@ -144,7 +144,7 @@
 <li><a href="https://landsurveyorsunited.com/hubs/europe/albania" >Albania</a></li>
 		</ul>
 	</li>
-    <li><a href="http://www.dynamicdrive.com/style/"><i class="fa fa-css3"></i>Middle Eastern Surveyors</a>
+    <li><a href="https://landsurveyorsunited.com/hubs/"><i class="fa fa-css3"></i>Middle Eastern Surveyors</a>
 		<ul>
 		<li><a href="https://landsurveyorsunited.com/hubs/middle-east/bahrain" >Bahrain</a></li>
 <li><a href="https://landsurveyorsunited.com/hubs/middle-east/cyprus" >Cyprus</a></li>
@@ -187,7 +187,7 @@
 	<li><a href="http://seiad8.glideapp.io"><i class="fa fa-gears"></i>#SEIAD8</a></li>
 	</ul>
 	
-	<p style="padding:10px">
+	<p style="padding:10px;font-size:10px;">
 	Each local chapter hub has a dedicated forum for introducing yourself, a photos section for uploading photos from the field and a videos section for uploading videos from your phone. Join the Hub for your location then Start a new discussion and Introduce Yourself! Organize Meetups for sharing as groups or classrooms.  Use the International Surveyors Week 2019 app to make this simple for you.
 	</p>
 
