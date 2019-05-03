@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://landsurveyorsunited.github.io/cssfiles/isw/sidetogglemenu.css" />
 <div id="togglemenu2" class="sidetogglemenu">
 <ul class="mainnav">
 	<li><a href="https://landsurveyorsunited.com/surveying"><i class="fa fa-bolt"></i> ISW2019</a></li>
