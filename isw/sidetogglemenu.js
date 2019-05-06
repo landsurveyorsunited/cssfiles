@@ -16,7 +16,7 @@
 		pushcontent: true,
 		source: 'inline',
 		revealamt: 0,
-		downarrowsrc: 'toggledown.png',
+		downarrowsrc: 'https://landsurveyorsunited.github.io/cssfiles/isw/toggledown.png',
 		marginoffset: 0,
 		dismissonclick: true,
 		curstate: 'closed'
