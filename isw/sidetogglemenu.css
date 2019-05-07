@@ -63,7 +63,7 @@ body{ /* CSS for BODY transition when menu is set to push BODY content. */
 #togglemenu2{
 	width: 250px;
 	border-width: 0;
-	background: rgb(53,106,160);
+	background: rgb(61, 61, 61);
 	box-shadow: -5px 0 5px rgba(174, 174, 174, .8);
 }
 
