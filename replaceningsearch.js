@@ -1,0 +1,23 @@
+xg.addOnRequire(function() {
+document.getElementById('xn_bar_menu_search').action = 'https://landsurveyorsunited.com/page/advanced-search';
+var cx = document.createElement('input');
+cx.setAttribute('name', 'cx');
+cx.setAttribute('value', '005365999122624380592:dun8td__v2e');
+cx.setAttribute('type', 'hidden');
+document.getElementById('xn_bar_menu_search').appendChild(cx);
+var ie = document.createElement('input');
+ie.setAttribute('name', 'ie');
+ie.setAttribute('type', 'hidden');
+ie.setAttribute('value', 'UTF-8');
+document.getElementById('xn_bar_menu_search').appendChild(ie);
+var cof = document.createElement('input');
+cof.setAttribute('name', 'cof');
+cof.setAttribute('type', 'hidden');
+cof.setAttribute('value', 'FORID:11;NB:1');
+document.getElementById('xn_bar_menu_search').appendChild(cof);
+var sa = document.createElement('input');
+sa.setAttribute('name', 'sa');
+sa.setAttribute('type', 'hidden');
+sa.setAttribute('value', 'Search');
+document.getElementById('xn_bar_menu_search').appendChild(sa);
+});
