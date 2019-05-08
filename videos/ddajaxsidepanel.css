@@ -29,3 +29,13 @@ height: 100%;
 padding: 10px;
 overflow: auto;
 }
+.page-hubs .groupHeader-nav{ display:none }
+.groupMenu{
+width: 100%;
+    clear: both;
+    padding: 10px 0px 10px 0px;
+}
+.groupMenu  a:hover{ cursor:pointer }
+.groupMenuLink{
+padding:10px
+}
