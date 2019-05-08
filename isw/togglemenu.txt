@@ -1,8 +1,11 @@
 <link rel="stylesheet" href="https://landsurveyorsunited.github.io/cssfiles/isw/sidetogglemenu.css" />
 <div id="togglemenu2" class="sidetogglemenu">
 <ul class="mainnav">
-	<li><a href="https://landsurveyorsunited.com/isw19"><i class="fa fa-bolt"></i> ISW2019</a></li>
-	<li><a href="https://landsurveyorsunited.com/hubs/"><i class="fa fa-css3"></i> Africa</a>
+	<li><a href="https://landsurveyorsunited.com/start"><i class="fa fa-bolt"></i>Get Started</a></li>
+	<li><a href="https://landsurveyorsunited.com/Marketplace"><i class="fa fa-bolt"></i>Marketplace</a></li>
+	<li><a href="https://landsurveyorsunited.com/apps"><i class="fa fa-bolt"></i>Surveyor Apps</a></li>
+	<li><a href="https://landsurveyorsunited.com/jobs"><i class="fa fa-bolt"></i>Employment</a></li>
+	<li><a href="https://landsurveyorsunited.com/hubs/Africa"><i class="fa fa-css3"></i> Africa</a>
 		<ul>
 		<li><a href="https://landsurveyorsunited.com/hubs/africa-land-surveyors/angola" >Angola</a></li>
 <li><a href="https://landsurveyorsunited.com/hubs/africa-land-surveyors/algeria" >Algeria</a></li>
