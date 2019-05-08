@@ -151,7 +151,7 @@
 <li><a href="https://landsurveyorsunited.com/hubs/europe/albania" >Albania</a></li>
 		</ul>
 	</li>
-    <li><a href="https://landsurveyorsunited.com/hubs/"><i class="fa fa-css3"></i>Middle Eastern Surveyors</a>
+    <li><a href="https://landsurveyorsunited.com/hubs/"><i class="fa fa-css3"></i>Middle East</a>
 		<ul>
 		<li><a href="https://landsurveyorsunited.com/hubs/middle-east/bahrain" >Bahrain</a></li>
 <li><a href="https://landsurveyorsunited.com/hubs/middle-east/cyprus" >Cyprus</a></li>
