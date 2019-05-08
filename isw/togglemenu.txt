@@ -2,9 +2,13 @@
 <div id="togglemenu2" class="sidetogglemenu">
 <ul class="mainnav">
 	<li><a href="https://landsurveyorsunited.com/start"><i class="fa fa-bolt"></i>Get Started</a></li>
-	<li><a href="https://landsurveyorsunited.com/Marketplace"><i class="fa fa-bolt"></i>Marketplace</a></li>
+	<li><a href="https://landsurveyorsunited.com/Marketplace"><i class="fa fa-shopping-basket"></i>Marketplace</a></li>
 	<li><a href="https://landsurveyorsunited.com/apps"><i class="fa fa-bolt"></i>Surveyor Apps</a></li>
 	<li><a href="https://landsurveyorsunited.com/jobs"><i class="fa fa-bolt"></i>Employment</a></li>
+	<li><a href="https://landsurveyorsunited.com/photo"><i class="fa fa-file-image-o"></i>+Add Photos</a></li>
+	<li><a href="https://landsurveyorsunited.com/video/video/new"><i class="fa fa-file-video-o"></i>+Add Videos</a></li>
+	<li><a href="https://landsurveyorsunited.com/forum/topics/discussion/new"><i class="fa fa-plus-square"></i>+Add Post</a></li>
+	<li><a href="https://landsurveyorsunited.com/profiles/blog/list/blogpost/new"><i class="fa fa-plus-square"></i>+Add Story</a></li>
 	<li><a href="https://landsurveyorsunited.com/hubs/Africa"><i class="fa fa-css3"></i> Africa</a>
 		<ul>
 		<li><a href="https://landsurveyorsunited.com/hubs/africa-land-surveyors/angola" >Angola</a></li>
