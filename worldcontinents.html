@@ -1,0 +1,46 @@
+<script type='text/javascript' src='http://www.google.com/jsapi'></script>
+<script type='text/javascript'>google.load('visualization', '1', {'packages': ['geochart']});
+google.setOnLoadCallback(drawVisualization);
+
+  function drawVisualization() {var data = new google.visualization.DataTable();
+
+ data.addColumn('string', 'Country');
+ data.addColumn('number', 'Value'); 
+ data.addColumn({type:'string', role:'tooltip'});var ivalue = new Array();
+
+ data.addRows([[{v:'002',f:'Africa'},0,'Click to go to Africa Land Surveyors Hub']]);
+ ivalue['002'] = 'http://en.wikipedia.org/wiki/Africa';
+
+ data.addRows([[{v:'150',f:'Europe'},1,'Click to visit European Land Surveyors Hub']]);
+ ivalue['150'] = 'http://en.wikipedia.org/wiki/Europe';
+
+ data.addRows([[{v:'019',f:'Americas'},2,'Click to visit Americas Land Surveyors Hub']]);
+ ivalue['019'] = 'http://en.wikipedia.org/wiki/Americas';
+
+ data.addRows([[{v:'142',f:'Asia'},3,'Click to visit Asia Land Surveyors Hub']]);
+ ivalue['142'] = 'http://en.wikipedia.org/wiki/Asia';
+
+ data.addRows([[{v:'009',f:'Oceania'},4,'Click to visit Oceania Land Surveyors Hub']]);
+ ivalue['009'] = 'http://en.wikipedia.org/wiki/Oceania';
+
+ var options = {
+ backgroundColor: {fill:'#FFFFFF',stroke:'#FFFFFF' ,strokeWidth:0 },
+ colorAxis:  {minValue: 0, maxValue: 4,  colors: ['#A8A8A8','#939473','#B1B38B','#90AD89','#87AAAD',]},
+ legend: 'none',	
+ backgroundColor: {fill:'#FFFFFF',stroke:'#FFFFFF' ,strokeWidth:0 },	
+ datalessRegionColor: '#f5f5f5',
+ displayMode: 'regions', 
+ enableRegionInteractivity: 'true', 
+ resolution: 'continents',
+ sizeAxis: {minValue: 1, maxValue:1,minSize:10,  maxSize: 10},
+ region:'world',
+ keepAspectRatio: true,
+ width:600,
+ height:400,
+ tooltip: {textStyle: {color: '#444444'}, trigger:'focus'}	
+ };
+  var chart = new google.visualization.GeoChart(document.getElementById('visualization')); 
+ chart.draw(data, options);
+ }
+ </script>
+ <div id='visualization'></div>
