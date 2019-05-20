@@ -1,0 +1,280 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>Tabbed menu demo</title>
+
+<style>
+ul.tabs {
+margin: 0;
+padding: 0;
+float: left;
+list-style: none;
+height: 32px; /*--Set height of tabs--*/
+border-bottom: 1px solid #999;
+border-left: 1px solid #999;
+width: 100%;
+}
+ul.tabs li {
+float: left;
+margin: 0;
+padding: 0;
+height: 31px; /*--Subtract 1px from the height of the unordered list--*/
+line-height: 31px; /*--Vertically aligns the text within the tab--*/
+border: 1px solid #999;
+border-left: none;
+margin-bottom: -1px; /*--Pull the list item down 1px--*/
+overflow: hidden;
+position: relative;
+background: #e0e0e0;
+}
+ul.tabs li a {
+text-decoration: none;
+color: #000;
+display: block;
+font-size: 1.2em;
+padding: 0 20px;
+border: 1px solid #fff; /*--Gives the bevel look with a 1px white border inside the list item--*/
+outline: none;
+}
+ul.tabs li a:hover {
+background: #ccc;
+}
+html ul.tabs li.active, html ul.tabs li.active a:hover { /*--Makes sure that the active tab does not listen to the hover properties--*/
+background: #fff;
+border-bottom: 1px solid #fff; /*--Makes the active tab look like it's connected with its content--*/
+}
+.tab_container {
+border: 1px solid #999;
+border-top: none;
+overflow: hidden;
+clear: both;
+float: left; width: 100%;
+background: #fff;
+}
+.tab_content {
+padding: 20px;
+font-size: 1.2em;
+color:#333;
+}
+</style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+//Default Action
+$(".tab_content").hide(); //Hide all content
+$("ul.tabs li:first").addClass("active").show(); //Activate first tab
+$(".tab_content:first").show(); //Show first tab content
+//On Click Event
+$("ul.tabs li").click(function() {
+$("ul.tabs li").removeClass("active"); //Remove any "active" class
+$(this).addClass("active"); //Add "active" class to selected tab
+$(".tab_content").hide(); //Hide all tab content
+var activeTab = $(this).find("a").attr("href"); //Find the rel attribute value to identify the active tab + content
+$(activeTab).fadeIn(); //Fade in the active content
+return false;
+});
+});
+</script>
+</head>
+<body>
+<ul class="tabs">
+<li><a href="#tab1">Getting Started</a></li>
+<li><a href="#tab2">Network Features</a></li>
+<li><a href="#tab3">Get Involved</a></li>
+<li><a href="#tab4">Explore</a></li>
+<li><a href="#tab5">Community Projects</a></li>
+<li><a href="#tab6">Give Back</a></li>
+</ul>
+<div class="tab_container">
+<div id="tab1" class="tab_content">
+<h4>Welcome to Our Mega Sitemap</h4>
+<dl>
+<dt><a href="http://landsurveyorsunited.com/about/">About
+Land
+Surveyors United</a></dt>
+<dd><a href="http://landsurveyorsunited.com/about"><img style="border: 0px solid ; width: 80px; height: 119px; float: right;" title="Learn about How to teach and learn the basics of land surveying" src="http://api.ning.com/files/3l99CJZaunh1wZj22Hp36v4zWThLD7g*P5WrRCDhX5nKBx5BkgI6Xo9GKBVSPTlfbXYRwubEeYRUehSFAXePJQ__/teachsurveying.png" alt="Learn about How to teach and learn the basics of land surveying"></a>The
+hub for general information about Land Surveyors United Network. Learn
+more about our <a href="http://landsurveyorsunited.com/philosophy">philosophy</a>,
+<a title="Find and post jobs for surveying related positions" href="http://landsurveyorsunited.com/employment">employment
+opportunities</a> and how to <a title="Contact Land Surveyors United" href="http://landsurveyorsunited.com/contact">contact support</a>
+for
+the network.</dd>
+<dt></dt>
+<dt><a href="http://landsurveyorsunited.com/why-use-land-surveyors-united">Why
+Join?</a></dt>
+<dd>Learn about the benefits of joining our <span style="font-weight: bold;">global geospatial support network</span>
+and what it can do for your reputation online!</dd>
+<dt></dt>
+<dt><a href="http://www.ning.com/about/product/">Welcome
+Center</a></dt>
+<dd><a href="http://landsurveyorsunited.com/welcome"><img style="border: 0px solid ; width: 48px; height: 48px; float: right;" title="Land Surveyors United Welcome Center" src="http://api.ning.com/files/BE3SybESYDTQJkGl43jp2ihMRPoH9L9RQj4Uu6A9-2ApQBFnp6OHvnNxeoen*3ztDUQ2qmaWq33OqFQ5ucT2Iw__/welcomelandsurveyorsunited.png" alt="Welcome Surveyors"></a>Learn more about how to
+use the <a href="http://landsurveyorsunited.com/photo">photos</a>,
+<a href="http://landsurveyorsunited.com/video">videos</a>,
+<a href="http://landsurveyorsunited.com/forum">forum</a>
+and <a href="http://landsurveyorsunited.com/groups">group
+forums</a> features
+of the LSU network and tips for engaging your fellow members.</dd>
+<dt></dt>
+<dt><a href="http://www.ning.com/about/spotlight/">Our
+Organization</a></dt>
+<dd><a href="http://landsurveyorsunited.com/page/organization-structure"><img style="border: 0px solid ; width: 68px; height: 68px; float: right;" title="Land Surveyors United Organization" src="http://api.ning.com/files/L2qQFWBlV7Vr-nZCPLCER0OPbMiTjjO1*Frru*1CBPxjIBWPvNhDrH3vOg5uHi6yWejBy8wxFYw6w37Tq2HNRw__/organization_chart.png" alt="Land Surveyors United Organization Structure"></a>Learn
+more
+about Land Surveyors United's growing organizational structure and the
+various ways that we moderate our global community.</dd>
+<dt></dt>
+</dl>
+</div>
+<div id="tab2" class="tab_content">
+<h4>Get Involved</h4>
+<dl>
+<dt><a title="Shared Surveying Photos from the Field Submitted by Surveyors on the network" href="http://landsurveyorsunited.com/photo">Surveying Photos Archive</a></dt>
+<dd><a href="http://landsurveyorsunited.com/photo/photo/newWithUploader"><img style="border: 0px solid ; width: 48px; height: 48px; float: right;" title="Share Photos from the Field" src="http://api.ning.com/files/0LkAJB3pYochgkOGN0aotvOSESs3Du-naU1GTCc3RYuEefqIl27lN5gWyoKCEHilC1vn*g*NGvymSODdAOPX0g__/surveyorsupport.png" alt="Surveyor Photos"></a>Never lose a property corner
+again! Help
+preserve surveying history and share visual tips from the field in
+pictures. <a title="Upload your surveying photos and share" href="http://landsurveyorsunited.com/photo/photo/newWithUploader">Upload Your Photos</a></dd>
+<dt></dt>
+<dt><a href="http://landsurveyorsunited.com/video/video/newWithUploader">Upload
+Your Videos and
+Tutorials</a></dt>
+<dd><a href="http://landsurveyorsunited.com/video/"><img style="border: 0px solid ; width: 100px; height: 73px; float: right;" title="Surveying Video Library" src="http://api.ning.com/files/zOxOn5w0LZV0cGUBNcIZrHp8tVDvyiLZup0bZVL-wY62qC9o9xs6dMS15uyuP15S3Ll3Ui9mAjmaAB6MAhRFig__/surveyingvideos.png" alt="Watch Surveying Videos"></a>Upload surveying
+videos from your
+hard-drive or simply <a title="Embed a Video" href="http://landsurveyorsunited.com/video/video/addEmbed">embed
+a
+helpful geospatial video</a> from Youtube, Vimeo, Dailymotion and
+more.</dd>
+<dt></dt>
+<dt></dt>
+<dt><a title="Donate to Land Surveyors United and Help Keep Us Free!" href="http://landsurveyorsunited.com/notes/index/allNotes">Donate
+and Contribute</a></dt>
+<dd><a href="http://landsurveyorsunited.com/page/donate-to-lsu"><img style="border: 0px solid ; width: 90px; height: 90px; float: right;" title="Donate to Land Surveyors United and help keep the network FREE" src="http://api.ning.com/files/mBFEJqp6LPDWqEBiPg*vNWnStNdRb-KQCkEJq77hUWy4sCuz4ssqMmSunTvCPpjw2vgo0tbtwQWL*X1jgidM3Q__/donate.png" alt="Donate to Land Surveyors United"></a>Learn about
+our network
+which runs 100% on member donations and how you can contribute to the
+cause. Your donation helps with hosting, maintenance and helps keep the
+network free for surveyors everywhere!</dd>
+</dl>
+<h4>Main Feature Pages on Network</h4>
+<dl>
+<dt><a href="http://landsurveyorsunited.com/profiles/blog/list">Shared
+Surveyor Stories</a></dt>
+<dd>Our network blog is for surveyors to share stories from the
+field, share geospatial industry news, informative articles and press
+releases. Stay current on the latest Land Surveyors United news with
+our official network blog.</dd>
+<dt></dt>
+<dt><a class="button" title="Featured Blogs on Land Surveyors United" href="http://landsurveyorsunited.com/profiles/blog/list?promoted=1">Featured
+Blog Posts</a></dt>
+</dl>
+<dt></dt>
+<dt><a title="Land Surveyors Geospatial Discussion Forum" href="http://landsurveyorsunited.com/forum/">LSU Network
+Forum</a></dt>
+<dd><a href="http://landsurveyorsunited.com/forum"><img style="border: 0px solid ; width: 32px; height: 32px; float: right;" title="Land Surveyors Forum" src="http://api.ning.com/files/r8NnV0AQY-f6Qkidk3ko59vdhD6EkYiE70cz7uC7A5m0Ril09gvtL9feedKYLk1wMiFsFFTyoR7CXCeV7ez-xg__/usersforum.png" alt="Land Surveyors United Forums"></a>Have a question
+or suggestion
+for the network? This is the place to post these discussions. Also ask
+questions about Land Surveying and Geospatial practices in &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; general.</dd>
+<dt><a title="Learn about Group Forums for Surveyor 2 Surveyor Support" href="http://landsurveyorsunited.com/groupforums">Geospatial
+Group
+Forums for Support</a></dt>
+<dd><a href="http://landsurveyorsunited.com/groups"><img style="border: 0px solid ; width: 65px; height: 65px; float: right;" title="Surveyor 2 Surveyor Group Forums" src="http://api.ning.com/files/yZ5VlTwQtazSINk1XaBw4lZt**0msw3JY1UYImDWt48aC7QgYA9jqds6ynBCV*II9eNtb1EesVNkjbobg9OM6A__/groups.png" alt="Join a group forum based on location, type of surveying or support for equipment"></a>Land
+Surveyors United has over 200 group forums based on location, topical
+discussions related to geospatial topics and special forums for
+surveying equipment &nbsp; &nbsp; &nbsp; &nbsp;
+support. Go Deep!.</dd>
+<dt><a title="Land Surveyors United Network Notes and Community Announcements" href="http://landsurveyorsunited.com/notes/index/allNotes">Network
+Notes</a></dt>
+<dd><a href="http://landsurveyorsunited.com/notes/Notes_Home"><img style="border: 0px solid ; width: 60px; height: 55px; float: right;" title="Land Surveyors United Network Updates and Notes" src="http://api.ning.com/files/-ElowzIJtJdQLo2HhtFSMy7BB-L3K3QpJ2Jj8f*lnKlkNbbySzkKiBu7TgZSjbpGtGXU9EAp3qkpVEJ*tIrV-w__/icon_endorse_60x55.gif" alt="Network Updates and Notes"></a>This section of
+the network is for
+postings regarding network updates, release of new features on Land
+Surveyors United and tips for maximizing your efforts towards building
+your professional reputation online.</dd>
+</div>
+<div id="tab3" class="tab_content">
+<h4>Dive Deeper</h4>
+<dl>
+<dt><a title="Explore all feature sections of Land Surveyors United network and search by subject" href="http://landsurveyorsunited.com/explore">Explore</a></dt>
+<dd>Find help and resources on using Land Surveyors United or
+search
+the various sections of the site to find exactly what you are searching
+for. Also see Advanced Search.</dd>
+<dt></dt>
+<dt><a title="Surveying Stories shared by Land Surveyors United members around the world" href="http://landsurveyorsunited.com/profiles/blog/list">Shared
+Surveying Stories and Geospatial News</a></dt>
+<dd>Our network blog is for surveyors to share stories from the
+field,
+share geospatial industry news,&nbsp; informative articles and
+press
+releases. Stay current on the latest Land Surveyors United news with
+our official network blog.</dd>
+<dt></dt>
+<dt><a title="Visit the leaderboards to see top content by month and week" href="http://landsurveyorsunited.com/leaderboards">Network
+Leaderboards</a></dt>
+<dd>Find the most popular content on Land Surveyors United with
+one
+click by visiting the network leaderboards. Find the <a title="Most active and popular surveyors on the network" href="http://landsurveyorsunited.com/leaderboards/topmembers/month">Top
+Surveyors on
+the network</a>, Most Popular Photos and Videos for the month,
+week or year!</dd>
+<dt></dt>
+<dt><a href="http://landsurveyorsunited.com/tools">Surveyor
+Tools Online</a></dt>
+<dd><a href="http://landsurveyorsunited.com/tools"><img style="border: 0px solid ; width: 123px; height: 107px; float: right;" title="Online Tools for Land Surveyors" src="http://api.ning.com/files/eauL-IkFq6hEnuue8Ect5lnRyuhezX7NPJy7jz*xLoMfaeySAlpvcthl4Fs*WO3AoaG2B-jJVRf3k3I3eEt14A__/brief.png" alt="Surveyors Online Toolbox"></a>We have a growing
+suite of online
+tools which are useful for surveyors and geospatial professionals, such
+as <a title="Live Language Translator for Communication" href="http://landsurveyorsunited.com/livetranslate">Live
+Language
+Translator</a>, <a title="Free Public Records Search" href="http://landsurveyorsunited.com/pages/public-records-search">Public
+Records Search</a>, Reverse Geocoder, Live Video Broadcast and
+more...</dd>
+</dl>
+<a title="Surveyor's Online Toolbox Group" href="http://landsurveyorsunited.com/group/surveyorsonlinetoolbox">Surveyors
+Online Toolbox</a><br>
+<div style="margin-left: 40px;">The Surveyors Online
+Toolbox Group <a title="Surveyors Online Toolbox Forum" href="http://landsurveyorsunited.com/group/surveyorsonlinetoolbox/forum/">Forum</a>
+is for sharing tools, tips and tricks that other surveyors on the
+network might find helpful in trimming down the time it takes to
+accomplish normal tasks online.</div>
+<br>
+</div>
+<div id="tab4" class="tab_content"><br>
+</div>
+<div id="tab5" class="tab_content">
+<h4>Community Projects for Surveyors</h4>
+<dl>
+<dt><a title="Global Land Surveyors Directory" href="http://directory.landsurveyorsunited.com/" target="_blank">Global
+Directory</a></dt>
+<dd>Add your surveying company listing to our Global Surveyors
+Directory and be found higher in search engines.</dd>
+<dt></dt>
+<dt><a title="Land Surveying Support Documents" href="http://docs.landsurveyorsunited.com/" target="_blank">Documents
+Library</a></dt>
+<dd><a href="http://docs.landsurveyorsunited.com/"><img style="border: 0px solid ; width: 55px; height: 55px; float: right;" title="Surveying Documents Library" src="http://api.ning.com/files/zOxOn5w0LZWZTWS7iUw4LUNHbO3cBVaSqxw3A5UqcfMhQrgb4f2PDZX1UfvI6SnKD8RdMGw0TAIfZNIfmlJ*-w__/documentslibrary.png" alt="Documents Library"></a>Our Surveying Documents
+Library is full of
+support manuals and user guides for <a title="Surveying Equipment Social Support Groups" href="http://landsurveyorsunited.com/survey-equipment-support-groups">surveying
+equipment support</a> on products from various manufacturers.</dd>
+<dt></dt>
+<dt><span style="text-decoration: underline;">Land
+Surveyors
+University</span></dt>
+<dd>Land Surveyors University is a community social surveying
+education event which happens all year from June 21st (the day after
+Survey Earth in a Day event) and ends on June 19th. The university is
+comprised of TEN Levels of experience where members of Land Surveyors
+United are able to demonstrate their expertise for a chance to win
+prizes and klout in the surveying industry.</dd>
+<dt></dt>
+<dt><a href="http://landsurveyorsunited.com/group/survey-earth-in-a-day/"><span style="text-decoration: underline;">Survey Earth in a Day®</span></a></dt>
+<dd>Geospatial Professionals around the world take survey grade
+GPS
+readings on June 20th @ 12 Noon in order to remeasure the earth's
+surface as a community. Survey Earth in a Day is a reoccuring annual
+event on Land Surveyors United.</dd>
+</dl>
+</div>
+<div id="tab6" class="tab_content"><dt><a title="Donate to Land Surveyors United and Help Keep us Free" href="http://landsurveyorsunited.com/page/donate-to-lsu">Donate
+and Contribute</a></dt>
+<dd><a href="http://landsurveyorsunited.com/page/donate-to-lsu"><img style="border: 0px solid ; width: 90px; height: 90px; float: right;" title="Donate to Land Surveyors United and help keep the network FREE" src="http://api.ning.com/files/mBFEJqp6LPDWqEBiPg*vNWnStNdRb-KQCkEJq77hUWy4sCuz4ssqMmSunTvCPpjw2vgo0tbtwQWL*X1jgidM3Q__/donate.png" alt="Donate to Land Surveyors United"></a>Learn about
+our network
+which runs 100% on member donations and how you can contribute to the
+cause. Your donation helps with hosting, maintenance and helps keep the
+network free for surveyors everywhere!</dd>
+</div>
+</div>
+</body></html>
