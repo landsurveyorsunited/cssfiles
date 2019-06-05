@@ -1,8 +1,7 @@
 <div class="notify" id="mynotify">
 <div class='content'>
 
-<img src="https://api.ning.com/files/Zvv5IkevefvV-d1yhtLE68senZhsTF8tjdDLxakejQIM0miVoaLekIvjIX7BTfLO-vdNWUBGyaP35z*NR2Xyy2sVKhXJAm2a/usalandsurveyorsall50states.png?profile=RESIZE_180x180&crop=1%3A1&width=171" class="float" style="float:left" /> Welcome to the United States Land Surveyors Hub for Introductions.  This Hub is for Introducing yourself to your local surveyors forum in order to help us all get to know one another better.  If you're a land surveyor based in the United States, we would like to understand more about the differences and similarities between state associations, boards, laws and practices. Please join the hub forum for your state and start a discussion today! And by all means, bring this up at the next conference or chapter meeting in your state.
-
+<a href="https://landsurveyorsunited.com/events/international-surveyors-week-2019" target="_blank"><img src="https://storage.ning.com/topology/rest/1.0/file/get/2746882597?profile=RESIZE_930x" class="float" style="float:left" /></a> <p><a href="https://landsurveyorsunited.com/events/international-surveyors-week-2019" target="_blank" rel="noopener">International Land Surveyors Week 2019</a>, which occurs from&nbsp;<strong>June 16th through 23rd</strong>, is for Professional Land Surveyors and surveying students in any country on earth to celebrate the value of professional land surveyors in society, promote public awareness and introduce careers in surveying to the next generation. There are dedicated days of the week for all locations in order to share surveying stories, photo and videos of land surveying in different parts of the world.&nbsp;<a href="http://landsurveyorsunited.com/hubs/SEIAD" target="_blank" rel="noopener">SURVEY EARTH in a DAY 8</a>&nbsp;will occur on Thursday June 21st at noon worldwide.&nbsp;</p>
 <p>Note: Click on the "close" button to dismiss the panel.</p>
 
 <div class="close">X Close</div>
