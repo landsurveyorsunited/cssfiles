@@ -1,0 +1,4 @@
+div.card:hover {background:white!important;
+color:black;}
+
+div.card-content {background-image: radial-gradient( circle 770.6px at 10% 20%,  rgba(246,71,71,1) 0%, rgba(189,35,35,1) 74.9% );color:white!important;}
