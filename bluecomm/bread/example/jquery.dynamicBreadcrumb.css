@@ -1,0 +1,126 @@
+
+/* BEGIN Breadcrumb */
+#breadcrumb {
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	display: none;
+	background-color: #fafafa;
+	border-bottom: 1px solid black;
+	opacity: 0.95;
+}
+
+#breadcrumb .tocLinkBreadcrumb {
+	color: #707070;
+	font: 0.8em Helvetica, Arial, Sans-Serif;
+	font-style: italic;
+	float: right;
+	margin-right: 20px;
+	margin-top: -18px;
+}
+
+.breadcrumb { 
+	list-style: none; 
+	overflow: hidden; 
+	font: 0.8em Helvetica, Arial, Sans-Serif;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	padding-left: 0;
+}
+
+.breadcrumb > li { 
+	float: left; 
+}
+
+.breadcrumb > li > a {
+	color: white;
+	text-decoration: none; 
+	padding: 2px 0 2px 55px;
+	background: #808080; 
+	position: relative; 
+	display: block;
+	float: left;
+}
+
+.breadcrumb > li > a:after { 
+	content: " "; 
+	display: block; 
+	width: 0; 
+	height: 0;
+	border-top: 50px solid transparent;
+	border-bottom: 50px solid transparent;
+	border-left: 30px solid #808080;
+	position: absolute;
+	top: 50%;
+	margin-top: -50px; 
+	left: 100%;
+	z-index: 2; 
+}
+
+.breadcrumb > li > a:before { 
+	content: " "; 
+	display: block; 
+	width: 0; 
+	height: 0;
+	border-top: 50px solid transparent;
+	border-bottom: 50px solid transparent;
+	border-left: 30px solid white;
+	position: absolute;
+	top: 50%;
+	margin-top: -50px; 
+	margin-left: 2px;
+	left: 100%;
+	z-index: 1;
+}
+
+.breadcrumb > li:first-child > a {
+	padding-left: 10px;
+}
+
+.breadcrumb > li:nth-child(2) > a       { background:        #808080; }
+.breadcrumb > li:nth-child(2) > a:after { border-left-color: #808080; }
+.breadcrumb > li:nth-child(3) > a       { background:        #808080; }
+.breadcrumb > li:nth-child(3) > a:after { border-left-color: #808080; }
+.breadcrumb > li:nth-child(4) > a       { background:        #808080; }
+.breadcrumb > li:nth-child(4) > a:after { border-left-color: #808080; }
+.breadcrumb > li:nth-child(5) > a       { background:        #808080; }
+.breadcrumb > li:nth-child(5) > a:after { border-left-color: #808080; }
+
+.breadcrumb > li > a:hover {
+	background: blue;
+}
+.breadcrumb > li a:hover:after {
+	border-left-color: blue !important;
+}
+
+.breadcrumb > li > div {
+	display: none;
+	position: absolute;
+	margin-top: 1.55em;
+	background-color: white;
+	border: 1px solid #808080;
+	padding: 5px;
+	margin-left: 25px;
+	box-shadow: 3px 3px 3px -1px #808080;
+}
+
+.breadcrumb > li > div ul {
+	padding-left: 0;
+	list-style-type: none;
+}
+
+.breadcrumb > li > div a {
+	text-decoration: none;
+	color: #808080;
+	display: block;
+	padding: 1px;
+}
+
+.breadcrumb > li > div a:hover {
+	color: blue;
+}
+
+.breadcrumb > li:hover > div {
+	display: block;
+}
+/* END Breadcrumb */
