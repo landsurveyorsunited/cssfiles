@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<!-- saved from url=(0096)https://www.geody.com/home/?fbclid=IwAR2pJx4cmKRDyfsdCd4KPRfvEpbtRDqS7jjCCRCxKStATbojeXSoBwM1S9g -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<meta name="Author" content="Valerio Capello - http://labs.geody.com/">
+<meta name="Generator" content="Handwritten using EditPlus">
+<meta name="Description" content="Home Page. Browser Splash Screen.">
+<meta name="Keywords" content="browser web home page splash screen start">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>Home</title>
+<script async="" src="./Home_files/async-ads.js.download"></script><script type="text/javascript" async="" src="./Home_files/f.txt"></script><script language="JavaScript" type="text/javascript" src="./Home_files/config.js.download"></script>
+<script language="JavaScript" type="text/javascript" src="./Home_files/lang_en.js.download"></script>
+<script language="JavaScript" type="text/javascript" src="./Home_files/config_favlinks.js.download"></script>
+<script language="JavaScript" type="text/javascript" src="./Home_files/config_events.js.download"></script>
+<script language="JavaScript" type="text/javascript">
+<!--
+// Geody Home by Valerio Capello -- http://labs.geody.com/ -- r2018-06-07 fr2017-10-16
+
+function fix(n) {
+n*=1.0; n+="";
+var n1="";
+for (var i=0;i<=n.length;i++) {
+var c=n.substring(i-1,i); if (c==".") {i=n.length;} else {n1+=c;}
+}
+n1*=1.0;
+return n1;
+}
+
+// shwflag: 0: hidden, 1: visible, 2: toggle
+function toggleBox(divid,shwflag) {
+if (document.getElementById) {
+// Gecko (Netscape 6+, Mozilla Firefox) / IE 5+
+// obj.style.display = shwflag ? "block" : "none"; // <div id="demodiv1" style="display:none"> // if you want to collapse the DIV
+// obj.style.visibility = shwflag ? "visible" : "hidden"; // <div id="demodiv1" style="visibility:hidden"> // if you don't want to collapse the DIV
+var obj=document.getElementById(divid);
+switch (shwflag) {
+case 0:
+obj.style.display='none';
+break;
+case 1:
+obj.style.display='block';
+break;
+default:
+case 2:
+if (obj.style.display=='block') { obj.style.display='none'; } else { obj.style.display='block'; }
+break;
+}
+} else if (document.layers) {
+// Netscape 4+
+switch (shwflag) {
+case 0:
+document.layers[divid].visibility='hide';
+break;
+case 1:
+document.layers[divid].visibility='show';
+break;
+default:
+case 2:
+if (document.layers[divid].visibility=='show') { document.layers[divid].visibility='hide'; } else { document.layers[divid].visibility='show'; }
+break;
+}
+}
+else if (document.all) {
+// IE 4
+switch (shwflag) {
+case 0:
+document.all[divid].style.visibility='hidden';
+break;
+case 1:
+document.all[divid].style.visibility='visible';
+break;
+default:
+case 2:
+if (document.all[divid].style.visibility=='visible') { document.all[divid].style.visibility='hidden'; } else { document.all[divid].style.visibility='visible'; }
+break;
+}
+}
+}
+
+function writeBox(where,what) {
+document.getElementById(where).innerHTML=''+what+'';
+}
+
+function toggleFavX(i,i2,shwflag) {
+var obj1=document.getElementById('img_favsx'+i2);
+switch (shwflag) {
+case 0:
+toggleBox('favsx'+i2,shwflag);
+if ((3 in favs[i]) && (2 in favs[i])) {
+obj1.src=favs[i][3];
+}
+break;
+case 1:
+toggleBox('favsx'+i2,shwflag);
+if ((3 in favs[i]) && (2 in favs[i])) {
+obj1.src=favs[i][2];
+}
+break;
+case 2:
+toggleBox('favsx'+i2,shwflag);
+if ((3 in favs[i]) && (2 in favs[i])) {
+if (document.getElementById('favsx'+i2).style.display=='block') {obj1.src=favs[i][3];} else {obj1.src=favs[i][2];}
+}
+break;
+}
+}
+
+function npadf2(num,size) {
+var r="0"+num;
+return r.substr(r.length-size);
+}
+
+var hexDigits = new Array('0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'); 
+function hex(x) {
+return isNaN(x) ? '00' : hexDigits[(x - x % 16) / 16] + hexDigits[x % 16];
+}
+
+function rgb2hex(rgb) {
+if (rgb) {
+rgb=rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+return '#'+hex(rgb[1])+hex(rgb[2])+hex(rgb[3]);
+} else {
+return ''; // return false;
+}
+}
+
+function setPrefTime(cxTheme,dlsthm,dlenhm) {
+switch (cxTheme) {
+case 0:
+default:
+getDateTime(0);
+if (dlenhm>=dlsthm) {var dlenhm2=dlenhm;} else {var dlenhm2=2359;}
+if (nhhmm>=dlsthm && nhhmm<=dlenhm2) {var tdap=0;} else {var tdap=1;}
+break;
+case 1:
+var tdap=0;
+break;
+case 2:
+var tdap=1;
+break;
+case 3:
+var tdap=2;
+break;
+}
+return tdap;
+}
+
+function changeThemeTime(cxTheme,dlsthm,dlenhm) {
+var tdap=setPrefTime(cxTheme,dlsthm,dlenhm);
+switch (tdap) {
+case 0:
+default:
+document.getElementById('home_css').href='home_light.css';
+document.getElementById('img_home_logo').src=homeimgdir+homeimg_lite;
+if (shwMouse) {document.getElementById('img_jxface').src=jxfaceimgmouseinlite;}
+if (shwMap) {document.getElementById('img_mapw').src='img/terra_day_geody.jpg';}
+if (checkOnline && rgb2hex(document.getElementById('displaybox').style.backgroundColor)==offlBgDark) {document.getElementById('displaybox').style.backgroundColor=offlBgLight;}
+break;
+case 1:
+document.getElementById('home_css').href='home_dark.css';
+document.getElementById('img_home_logo').src=homeimgdir+homeimg_dark;
+if (shwMouse) {document.getElementById('img_jxface').src=jxfaceimgmouseindark;}
+if (shwMap) {document.getElementById('img_mapw').src='img/terra_nit_geody.jpg';}
+if (checkOnline && rgb2hex(document.getElementById('displaybox').style.backgroundColor)==offlBgLight) {document.getElementById('displaybox').style.backgroundColor=offlBgDark;}
+break;
+case 2:
+document.getElementById('home_css').href='';
+document.getElementById('img_home_logo').src='';
+if (shwMouse) {document.getElementById('img_jxface').src='';}
+if (shwMap) {document.getElementById('img_mapw').src='img/terra_day_geody.jpg';}
+break;
+}
+}
+
+function clockTick(tikDatel,tikDateu) {
+// alert('tik tak');
+if (tikDatel) {showTime(0,1);}
+if (tikDateu) {showTime(1,1);}
+setTimeout('clockTick('+tikDatel+','+tikDateu+');',20);
+}
+
+function toCapitalCase(s) {
+return s.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+}
+
+function sundfix(n) {
+--n; if (n==-1) {n=6;}
+return n;
+}
+
+function showTime(tmd,outp) {
+var ndateObj=new Date();
+switch (tmd) {
+case 0:
+default:
+var nddl=ndateObj.getDate();
+var nmml=ndateObj.getMonth();
+var nyyl=ndateObj.getFullYear();
+var ndwl=ndateObj.getDay();
+var nhhl=ndateObj.getHours();
+var nmnl=ndateObj.getMinutes();
+var nssl=ndateObj.getSeconds();
+var ntzl=ndateObj.getTimezoneOffset(); ntzl*=-1;
+if (ntzl>0) {var ntzsl='+';} else {var ntzsl='-';}
+var evdesc=getEventDesc(nddl,nmml+1);
+if (outp!=0) {
+/* if (tikDatel) { */
+writeBox('timeloc',"<div class='datenote'><span class='txtdate' title='"+evdesc+"'>"+es_dwds[sundfix(ndwl)]+" "+npadf2(nddl,2)+sepDate+es_dmms[nmml]+sepDate+nyyl+"</span>"+"<br /><span class='txttime'>"+npadf2(nhhl,2)+sepTime+npadf2(nmnl,2)+sepTime+npadf2(nssl,2)+"</span>"+' '+"<span class='txttz'><sup>"+"UTC"+ntzsl+""+(ntzl/60)+"</sup></span>"+"</div>"+"");
+/* } else {
+writeBox('timeloc','<a href="javascript:infoDateNow(0,\'infodate\');">'+"<span class='txtdate' title='"+evdesc+"'>"+es_dwds[sundfix(ndwl)]+" "+npadf2(nddl,2)+sepDate+es_dmms[nmml]+sepDate+nyyl+"</span>"+'</a>'+"<br /><span class='txttime'>"+npadf2(nhhl,2)+sepTime+npadf2(nmnl,2)+sepTime+npadf2(nssl,2)+"</span>"+' '+"<span class='txttz'><sup>"+"UTC"+ntzsl+""+(ntzl/60)+"</sup></span>"+"<br />");
+} */
+} else {
+document.write(""+es_dwds[sundfix(ndwl)]+" "+npadf2(nddl,2)+sepDate+es_dmms[nmml]+sepDate+nyyl+" "+npadf2(nhhl,2)+sepTime+npadf2(nmnl,2)+sepTime+npadf2(nssl,2)+' '+''+"UTC"+ntzsl+""+(ntzl/60)+'');
+}
+break;
+case 1:
+var nddu=ndateObj.getUTCDate();
+var nmmu=ndateObj.getUTCMonth();
+var nyyu=ndateObj.getUTCFullYear();
+var ndwu=ndateObj.getUTCDay();
+var nhhu=ndateObj.getUTCHours();
+var nmnu=ndateObj.getUTCMinutes();
+var nssu=ndateObj.getUTCSeconds();
+var evdesc=getEventDesc(nddu,nmmu+1);
+if (outp!=0) {
+/* if (tikDateu) { */
+writeBox('timeutc',"<div class='datenote'><span class='txtdate' title='"+evdesc+"'>"+es_dwds[sundfix(ndwu)]+" "+npadf2(nddu,2)+sepDate+es_dmms[nmmu]+sepDate+nyyu+"</span>"+"<br /><span class='txttime'>"+npadf2(nhhu,2)+sepTime+npadf2(nmnu,2)+sepTime+npadf2(nssu,2)+"</span> <span class='txttz'><sup>"+"UTC"+"</sup></span>"+"</div>"+"");
+/* } else {
+writeBox('timeutc','<a href="javascript:infoDateNow(1,\'infodate\');">'+"<span class='txtdate' title='"+evdesc+"'>"+es_dwds[sundfix(ndwu)]+" "+npadf2(nddu,2)+sepDate+es_dmms[nmmu]+sepDate+nyyu+"</span>"+'</a>'+"<br /><span class='txttime'>"+npadf2(nhhu,2)+sepTime+npadf2(nmnu,2)+sepTime+npadf2(nssu,2)+"</span> <span class='txttz'><sup>"+"UTC"+"</sup></span>"+"<br />");
+} */
+} else {
+document.write(""+es_dwds[sundfix(ndwu)]+" "+npadf2(nddu,2)+sepDate+es_dmms[nmmu]+sepDate+nyyu+" "+npadf2(nhhu,2)+sepTime+npadf2(nmnu,2)+sepTime+npadf2(nssu,2)+' '+''+"UTC"+'');
+}
+break;
+}
+}
+
+function getEventDesc(d,m) {
+var emmdd=(m)+""+npadf2(d,2);
+if (emmdd in eventx) {return eventx[emmdd][0];} else {return '';}
+}
+
+function getfnnam(f) {
+return f.replace(/\.[^/.]+$/,'');
+}
+
+function getfnext(f) {
+return f.substring(f.lastIndexOf('.')+1,f.length) || f;
+}
+
+function getHomeImgEvent(d,m,img) {
+var emmdd=(m)+""+npadf2(d,2);
+if (emmdd in eventx) {sfx=eventx[emmdd][1];} else {var sfx='';}
+if (sfx) {return getfnnam(img)+sfx+'.'+getfnext(img);} else {return img;}
+}
+
+function infoDateNow(tx,infodatebox) {
+var ndateObj=new Date();
+if (tx==0) {
+infoDate(ndateObj.getDate(),ndateObj.getMonth(),ndateObj.getFullYear(),infodatebox);
+} else {
+infoDate(ndateObj.getUTCDate(),ndateObj.getUTCMonth(),ndateObj.getUTCFullYear(),infodatebox);
+}
+}
+
+function infoDate(d,m,y,infodatebox) {
+++m;
+if (checkDate(d,m,y)) {
+var ous=''; // ous+=d+' '+m+' '+y;
+var dw=dayWeek(d,m,y); if (dw==7) {dw=0;}
+var jd=DateToJulianDay(d,m,y);
+var evdesc=getEventDesc(d,m);
+if (!leapYr(y)) {var ndy=365;} else {var ndy=366;}
+var dy1=DiffDates(1,1,y,d,m,y); var dy2=ndy-dy1-1; // var dy2=DiffDates(31,12,y,d,m,y);
+if (window.innerWidth<293) {var bardv=.5;} else if (window.innerWidth<386) {var bardv=.75;} else {var bardv=1;}
+var ndyb=Math.floor(ndy*bardv); var dy1b=Math.floor(dy1*bardv);
+ous+='<table border="0" cellpadding="1" cellspacing="1"><tr><td class="txtsml1l">';
+if (shwZod) {
+var zn=zodiac(d,m);
+var zc=y-1900+1;
+if (zc>12) {zc%=12;}
+while (zc<1) {zc+=12;}
+var zcyel=''; var ys=y+'';
+switch (ys.slice(-1)) {
+case '0': zcyel=es_yin+' '+es_metal; break;
+case '1': zcyel=es_yang+' '+es_metal; break;
+case '2': zcyel=es_yin+' '+es_water; break;
+case '3': zcyel=es_yang+' '+es_water; break;
+case '4': zcyel=es_yin+' '+es_wood; break;
+case '5': zcyel=es_yang+' '+es_wood; break;
+case '6': zcyel=es_yin+' '+es_fire; break;
+case '7': zcyel=es_yang+' '+es_fire; break;
+case '8': zcyel=es_yin+' '+es_earth; break;
+case '9': zcyel=es_yang+' '+es_earth; break;
+}
+ous+='<table border="0" cellpadding="1" cellspacing="1" width="100%"><tr><td align="left" valign="bottom">';
+}
+ous+="<span class='txtdateinf'>"+es_dwds[sundfix(dw)]+" "+npadf2(d,2)+sepDate+es_dmms[m-1]+sepDate+y+"</span>";
+if (shwZod) {
+ous+='</td><td align="right" valign="bottom">';
+ous+='<img src="'+es_zsfn[zn-1]+'" alt="'+es_zs[zn-1]+'" title="'+es_zs[zn-1]+'" class="favlink_rouimg" /> <img src="'+es_zscfn[zc-1]+'" alt="'+es_zsc[zc-1]+'" title="'+es_zsc[zc-1]+'" class="favlink_rouimg" />';
+ous+='</td></tr></table>';
+} else {
+ous+="<br />";
+}
+if (shwDayYrBar) {ous+="<div class='colbar' style='width: "+ndyb+"px; background:linear-gradient(to right, #22aadd 0px, #22aadd "+(dy1b+1)+"px, #ddaa22 "+(dy1b+1)+"px, #ddaa22 "+ndyb+"px);' title='Tempus Fugit, Carpe Diem'></div>";}
+if (evdesc!='') {ous+='<span class="txtevdesc">'+evdesc+'</span>'+"<br />";}
+ous+="<br />";
+ous+=es_dds+': '+es_passed+': '+dy1+', '+es_togo+': '+dy2+"<br />";
+ous+=es_jd+': '+jd+"<br />";
+ous+=es_mjd+': '+(jd-2400000)+"<br />";
+ous+=es_ratd+': '+(jd-1721425)+"<br />";
+if (shwZod) {
+ous+=es_zodsign+': '+es_zs[zn-1]+"<br />";
+}
+ous+="<br />";
+if (y<0) {yylb=es_ylbbc;} else {yylb=es_ylbad;}
+ous+=es_yy+': '+y+' '+yylb+"<br />";
+ous+=es_ygregref+': '+convYr(y,0,2)+"<br />";
+ous+=es_yfondrome+': ~'+convYr(y,0,1)+' '+es_ylbau+"<br />";
+ous+=es_yjws+': ~'+convYr(y,0,3)+' '+es_ylbam+"<br />";
+ous+=es_ymsm+': ~'+convYr(y,0,4)+' '+es_ylbah+"<br />";
+if (leapYr(y)) {lyS=es_y;} else {lyS=es_n;}
+ous+=es_ylp+': '+lyS+"<br />";
+ous+=es_easter+': '+easter(y)+' '+y+"<br />";
+if (shwZod) {
+ous+=es_cnzd+': '+es_zsc[zc-1]+' - '+zcyel
+}
+ous+="<br />";
+ous+='</td></tr></table>';
+writeBox(infodatebox,ous);
+}
+if (infodatebox=='infodate') {toggleBox(infodatebox,2);}
+}
+
+function checkDate(d,m,y) {
+var ok=true;
+if (d<1 || d>31 || m<1 || m>12) {ok=false;}
+if (ok && d==31 && (m==4 || m==6 || m==9 || m==11)) {ok=false;}
+if (ok) {
+var b=leapYr(y);
+if (m==2 && ((d>28 && !b) || (d>29 && b))) {ok=false;}
+}
+// if (!ok) {alert("Invalid date");}
+return ok;
+}
+
+function leapYr(yr) {
+var b=false;
+if (yr/4==Math.floor(yr/4)) {b=true;}
+if (yr/100==Math.floor(yr/100) && yr/400!=Math.floor(yr/400)) {b=false;}
+return b;
+}
+
+function DiffDates(d1,m1,y1,d2,m2,y2) {
+var a1=DateToJulianDay(d1,m1,y1); var a2=DateToJulianDay(d2,m2,y2); var a3=Math.abs(a1-a2);
+return a3;
+}
+
+function DateToJulianDay(d,m,y) {
+if (m<3) {m+=12; y--;}
+if (isJulian(d,m,y)) {
+// var jd=d+fix((153*m-457)/5)+365*y+Math.floor(y/4)+1721116+1;
+var jd=d+fix((153*m-457)/5)+365*y+Math.floor(y/4)-Math.floor(y/100)+Math.floor(y/400)+1721118+1;
+} else {
+var jd=d+fix((153*m-457)/5)+365*y+Math.floor(y/4)-Math.floor(y/100)+Math.floor(y/400)+1721118+1;
+}
+return jd;
+}
+
+function isJulian(d,m,y) {
+var ij=false;
+if ((y<1582) || (y==1582 && m<10) || (y==1582 && m==10 && d<15)) {ij=true;}
+return ij;
+}
+
+function dayWeek(d,m,y) {
+if (y<1) {y++;} // BC years
+var jd=DateToJulianDay(d,m,y)+0.0;
+var dw=(Math.floor(jd+1.5))%7;
+dw++;
+if (dw==1) {dw=7;} else {dw--;}
+return dw;
+}
+
+function convYr(yr,ca1,ca2) {
+var y1=yr;
+if (ca1==1) {y1=yr-753;}
+if (ca1==2) {y1=yr+1582;}
+if (ca1==3) {y1=yr-3761;}
+if (ca1==4) {y1=Math.floor((32*yr+20526)/33);}
+var y2=y1;
+if (ca2==1) {y2=y1+753;}
+if (ca2==2) {y2=y1-1582;}
+if (ca2==3) {y2=y1+3761;}
+if (ca2==4) {y2=Math.floor((33*yr-20526)/32);}
+return y2;
+}
+
+function easter(y) {
+if (y<1583) {return false;} // Invalid
+
+var a, b, c, d, e, f, g, h, i, j, k, m, n, p;
+var temp;
+var mon;
+
+temp = y / 19;
+a = Math.floor( ( temp - Math.floor( temp ) ) * 19 + 0.001 );
+
+temp = y / 100;
+b = Math.floor( temp );
+c = Math.floor( ( temp - Math.floor( temp ) ) * 100 + 0.001 );
+
+temp = b / 4;
+d = Math.floor( temp );
+e = Math.floor( ( temp - Math.floor( temp ) ) *4 + 0.001 );
+f = Math.floor( ( ( b + 8 ) / 25 ) + 0.001 );
+g = Math.floor( ( b - f + 1 ) / 3 )
+
+temp = ( 19 * a + b - d - g + 15 ) / 30;
+h = Math.floor( ( temp - Math.floor( temp ) ) * 30 + 0.001 );
+
+temp = c / 4;
+i = Math.floor( temp );
+j = Math.floor( ( temp - i ) * 4 + 0.001 );
+
+temp = ( 32 + 2 * e + 2 * i - h - j ) / 7;
+k = Math.floor( ( temp - Math.floor( temp ) ) * 7 + 0.001 );
+m = Math.floor( ( a + 11 * h + 22 * k ) / 451 );
+
+temp = ( h + k - 7 * m + 114 ) / 31;
+n = Math.floor( temp );
+p = Math.floor( ( temp - n ) * 31 + 0.001 );
+
+if (n==3) {mon = es_dmms[2];} else {mon = es_dmms[3];}
+
+return (++p)+' '+mon;
+}
+
+function zodiac(d,m) {
+var zsn=1;
+if ((m==4 && d>=21) || (m==5 && d<=20)) {zsn=2;}
+if ((m==5 && d>=21) || (m==6 && d<=21)) {zsn=3;}
+if ((m==6 && d>=22) || (m==7 && d<=22)) {zsn=4;}
+if ((m==7 && d>=23) || (m==8 && d<=23)) {zsn=5;}
+if ((m==8 && d>=24) || (m==9 && d<=22)) {zsn=6;}
+if ((m==9 && d>=23) || (m==10 && d<=22)) {zsn=7;}
+if ((m==10 && d>=23) || (m==11 && d<=22)) {zsn=8;}
+if ((m==11 && d>=23) || (m==12 && d<=21)) {zsn=9;}
+if ((m==12 && d>=22) || (m==1 && d<=20)) {zsn=10;}
+if ((m==1 && d>=21) || (m==2 && d<=19)) {zsn=11;}
+if ((m==2 && d>=20) || (m==3 && d<=20)) {zsn=12;}
+return zsn;
+}
+
+function bpress(bgr,bnm,btx,md) {
+var oncls='button_dn'; var ontxt='-';
+var ofcls='button_up'; var oftxt='+';
+switch (md) {
+case 0:
+document.getElementById('bt_'+bgr+'_'+bnm).className=ofcls; if (btx==1) {document.getElementById('bt_'+bgr+'_'+bnm).innerHTML=oftxt;}
+break;
+case 1:
+document.getElementById('bt_'+bgr+'_'+bnm).className=oncls; if (btx==1) {document.getElementById('bt_'+bgr+'_'+bnm).innerHTML=ontxt;}
+break;
+case 2:
+if (document.getElementById('bt_'+bgr+'_'+bnm).className==ofcls) {
+document.getElementById('bt_'+bgr+'_'+bnm).className=oncls; if (btx==1) {document.getElementById('bt_'+bgr+'_'+bnm).innerHTML=ontxt;}
+} else {
+document.getElementById('bt_'+bgr+'_'+bnm).className=ofcls; if (btx==1) {document.getElementById('bt_'+bgr+'_'+bnm).innerHTML=oftxt;}
+}
+break;
+}
+}
+
+function bpressgrp(bgr,bnm,bgrmx) {
+for (var j=1;j<=bgrmx;++j) {
+if (j!=bnm) {document.getElementById('bt_'+bgr+'_'+j).className='button_up';} else {document.getElementById('bt_'+bgr+'_'+j).className='button_dn';}
+}
+}
+
+function win_resized() {
+writeBox('win_size',es_winsiz+'<br />'+window.innerWidth+" x "+window.innerHeight+" "+"px");
+}
+
+function getDateTime(tx) {
+var ndateObj1=new Date();
+if (tx==0) {
+nmm=ndateObj1.getMonth();
+ndd=ndateObj1.getDate();
+nhhmm=ndateObj1.getHours()+""+npadf2(ndateObj1.getMinutes(),2);
+nmmdd=(ndateObj1.getMonth()+1)+""+npadf2(ndateObj1.getDay(),2);
+} else {
+nmm=ndateObj1.getUTCMonth();
+ndd=ndateObj1.getUTCDate();
+nhhmm=ndateObj1.getUTCHours()+""+npadf2(ndateObj1.getUTCMinutes(),2);
+nmmdd=(ndateObj1.getUTCMonth()+1)+""+npadf2(ndateObj1.getUTCDay(),2);
+}
+}
+
+function findme() {
+if (navigator.geolocation) {
+navigator.geolocation.getCurrentPosition(coordshow);
+} else {
+alert(es_posno+"\n\n"+es_poschkperm);
+}
+}
+
+function coordshow(pos) {
+var ox=document.getElementById('q');
+ox.value=pos.coords.latitude+' , '+pos.coords.longitude;
+}
+
+
+getDateTime(0);
+
+homeimg_lite=getHomeImgEvent(ndd,nmm+1,homeimg_lite);
+homeimg_dark=getHomeImgEvent(ndd,nmm+1,homeimg_dark);
+homeimg_title=getEventDesc(ndd,nmm+1);
+
+var tdap=setPrefTime(cxTheme,dlsthm,dlenhm);
+
+if (tdap==0) {
+document.writeln('<link rel="stylesheet" type="text/css" id="home_css" href="home_light.css" />');
+} else {
+document.writeln('<link rel="stylesheet" type="text/css" id="home_css" href="home_dark.css" />');
+}
+
+if (shwCalc) {
+document.writeln('<link rel="stylesheet" type="text/css" id="calc_css" href="CalcSS3.css" />');
+}
+
+if (xmltenhm>=xmltsthm) {var xmltenhm2=xmltenhm;} else {var xmltenhm2=2359;}
+if (xmltenmd>=xmltstmd) {var xmltenmd2=xmltenmd;} else {var xmltenmd2=1231;}
+
+if (shwXmasLit && (nhhmm>=xmltsthm && nhhmm<=xmltenhm2) && (nmmdd>=xmltstmd && nmmdd<=xmltenmd2)) {
+document.writeln('<link rel="stylesheet" type="text/css" href="lightrope.css" />');
+}
+
+// -->
+</script><link rel="stylesheet" type="text/css" id="home_css" href="./Home_files/home_dark.css">
+<link rel="stylesheet" type="text/css" id="calc_css" href="./Home_files/CalcSS3.css">
+
+<script language="JavaScript" type="text/javascript" src="./Home_files/jxeyes_config.js.download"></script>
+<script language="JavaScript" type="text/javascript" src="./Home_files/jxeyes.js.download"></script>
+<script language="JavaScript" type="text/javascript" src="./Home_files/cal.js.download"></script>
+<script language="JavaScript" type="text/javascript" src="./Home_files/colorpicker.js.download"></script>
+<script src="./Home_files/cse_element__en.js.download" type="text/javascript"></script><link type="text/css" rel="stylesheet" href="./Home_files/default+en.css"><link type="text/css" rel="stylesheet" href="./Home_files/default.css"><style id="ace_editor.css">.ace_editor {position: relative;overflow: hidden;font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;direction: ltr;text-align: left;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}.ace_scroller {position: absolute;overflow: hidden;top: 0;bottom: 0;background-color: inherit;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;cursor: text;}.ace_content {position: absolute;box-sizing: border-box;min-width: 100%;}.ace_dragging .ace_scroller:before{position: absolute;top: 0;left: 0;right: 0;bottom: 0;content: '';background: rgba(250, 250, 250, 0.01);z-index: 1000;}.ace_dragging.ace_dark .ace_scroller:before{background: rgba(0, 0, 0, 0.01);}.ace_selecting, .ace_selecting * {cursor: text !important;}.ace_gutter {position: absolute;overflow : hidden;width: auto;top: 0;bottom: 0;left: 0;cursor: default;z-index: 4;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;}.ace_gutter-active-line {position: absolute;left: 0;right: 0;}.ace_scroller.ace_scroll-left {box-shadow: 17px 0 16px -16px rgba(0, 0, 0, 0.4) inset;}.ace_gutter-cell {padding-left: 19px;padding-right: 6px;background-repeat: no-repeat;}.ace_gutter-cell.ace_error {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABOFBMVEX/////////QRswFAb/Ui4wFAYwFAYwFAaWGAfDRymzOSH/PxswFAb/SiUwFAYwFAbUPRvjQiDllog5HhHdRybsTi3/Tyv9Tir+Syj/UC3////XurebMBIwFAb/RSHbPx/gUzfdwL3kzMivKBAwFAbbvbnhPx66NhowFAYwFAaZJg8wFAaxKBDZurf/RB6mMxb/SCMwFAYwFAbxQB3+RB4wFAb/Qhy4Oh+4QifbNRcwFAYwFAYwFAb/QRzdNhgwFAYwFAbav7v/Uy7oaE68MBK5LxLewr/r2NXewLswFAaxJw4wFAbkPRy2PyYwFAaxKhLm1tMwFAazPiQwFAaUGAb/QBrfOx3bvrv/VC/maE4wFAbRPBq6MRO8Qynew8Dp2tjfwb0wFAbx6eju5+by6uns4uH9/f36+vr/GkHjAAAAYnRSTlMAGt+64rnWu/bo8eAA4InH3+DwoN7j4eLi4xP99Nfg4+b+/u9B/eDs1MD1mO7+4PHg2MXa347g7vDizMLN4eG+Pv7i5evs/v79yu7S3/DV7/498Yv24eH+4ufQ3Ozu/v7+y13sRqwAAADLSURBVHjaZc/XDsFgGIBhtDrshlitmk2IrbHFqL2pvXf/+78DPokj7+Fz9qpU/9UXJIlhmPaTaQ6QPaz0mm+5gwkgovcV6GZzd5JtCQwgsxoHOvJO15kleRLAnMgHFIESUEPmawB9ngmelTtipwwfASilxOLyiV5UVUyVAfbG0cCPHig+GBkzAENHS0AstVF6bacZIOzgLmxsHbt2OecNgJC83JERmePUYq8ARGkJx6XtFsdddBQgZE2nPR6CICZhawjA4Fb/chv+399kfR+MMMDGOQAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: 2px center;}.ace_gutter-cell.ace_warning {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAmVBMVEX///8AAAD///8AAAAAAABPSzb/5sAAAAB/blH/73z/ulkAAAAAAAD85pkAAAAAAAACAgP/vGz/rkDerGbGrV7/pkQICAf////e0IsAAAD/oED/qTvhrnUAAAD/yHD/njcAAADuv2r/nz//oTj/p064oGf/zHAAAAA9Nir/tFIAAAD/tlTiuWf/tkIAAACynXEAAAAAAAAtIRW7zBpBAAAAM3RSTlMAABR1m7RXO8Ln31Z36zT+neXe5OzooRDfn+TZ4p3h2hTf4t3k3ucyrN1K5+Xaks52Sfs9CXgrAAAAjklEQVR42o3PbQ+CIBQFYEwboPhSYgoYunIqqLn6/z8uYdH8Vmdnu9vz4WwXgN/xTPRD2+sgOcZjsge/whXZgUaYYvT8QnuJaUrjrHUQreGczuEafQCO/SJTufTbroWsPgsllVhq3wJEk2jUSzX3CUEDJC84707djRc5MTAQxoLgupWRwW6UB5fS++NV8AbOZgnsC7BpEAAAAABJRU5ErkJggg==");background-position: 2px center;}.ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAJ0Uk5TAAB2k804AAAAPklEQVQY02NgIB68QuO3tiLznjAwpKTgNyDbMegwisCHZUETUZV0ZqOquBpXj2rtnpSJT1AEnnRmL2OgGgAAIKkRQap2htgAAAAASUVORK5CYII=");background-position: 2px center;}.ace_dark .ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAJFBMVEUAAAChoaGAgIAqKiq+vr6tra1ZWVmUlJSbm5s8PDxubm56enrdgzg3AAAAAXRSTlMAQObYZgAAAClJREFUeNpjYMAPdsMYHegyJZFQBlsUlMFVCWUYKkAZMxZAGdxlDMQBAG+TBP4B6RyJAAAAAElFTkSuQmCC");}.ace_scrollbar {position: absolute;right: 0;bottom: 0;z-index: 6;}.ace_scrollbar-inner {position: absolute;cursor: text;left: 0;top: 0;}.ace_scrollbar-v{overflow-x: hidden;overflow-y: scroll;top: 0;}.ace_scrollbar-h {overflow-x: scroll;overflow-y: hidden;left: 0;}.ace_print-margin {position: absolute;height: 100%;}.ace_text-input {position: absolute;z-index: 0;width: 0.5em;height: 1em;opacity: 0;background: transparent;-moz-appearance: none;appearance: none;border: none;resize: none;outline: none;overflow: hidden;font: inherit;padding: 0 1px;margin: 0 -1px;text-indent: -1em;-ms-user-select: text;-moz-user-select: text;-webkit-user-select: text;user-select: text;white-space: pre!important;}.ace_text-input.ace_composition {background: inherit;color: inherit;z-index: 1000;opacity: 1;text-indent: 0;}[ace_nocontext=true] {transform: none!important;filter: none!important;perspective: none!important;clip-path: none!important;mask : none!important;contain: none!important;perspective: none!important;mix-blend-mode: initial!important;z-index: auto;}.ace_layer {z-index: 1;position: absolute;overflow: hidden;word-wrap: normal;white-space: pre;height: 100%;width: 100%;box-sizing: border-box;pointer-events: none;}.ace_gutter-layer {position: relative;width: auto;text-align: right;pointer-events: auto;}.ace_text-layer {font: inherit !important;}.ace_cjk {display: inline-block;text-align: center;}.ace_cursor-layer {z-index: 4;}.ace_cursor {z-index: 4;position: absolute;box-sizing: border-box;border-left: 2px solid;transform: translatez(0);}.ace_multiselect .ace_cursor {border-left-width: 1px;}.ace_slim-cursors .ace_cursor {border-left-width: 1px;}.ace_overwrite-cursors .ace_cursor {border-left-width: 0;border-bottom: 1px solid;}.ace_hidden-cursors .ace_cursor {opacity: 0.2;}.ace_smooth-blinking .ace_cursor {transition: opacity 0.18s;}.ace_marker-layer .ace_step, .ace_marker-layer .ace_stack {position: absolute;z-index: 3;}.ace_marker-layer .ace_selection {position: absolute;z-index: 5;}.ace_marker-layer .ace_bracket {position: absolute;z-index: 6;}.ace_marker-layer .ace_active-line {position: absolute;z-index: 2;}.ace_marker-layer .ace_selected-word {position: absolute;z-index: 4;box-sizing: border-box;}.ace_line .ace_fold {box-sizing: border-box;display: inline-block;height: 11px;margin-top: -2px;vertical-align: middle;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi+P//fxgTAwPDBxDxD078RSX+YeEyDFMCIMAAI3INmXiwf2YAAAAASUVORK5CYII=");background-repeat: no-repeat, repeat-x;background-position: center center, top left;color: transparent;border: 1px solid black;border-radius: 2px;cursor: pointer;pointer-events: auto;}.ace_dark .ace_fold {}.ace_fold:hover{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACBJREFUeNpi+P//fz4TAwPDZxDxD5X4i5fLMEwJgAADAEPVDbjNw87ZAAAAAElFTkSuQmCC");}.ace_tooltip {background-color: #FFF;background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));border: 1px solid gray;border-radius: 1px;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);color: black;max-width: 100%;padding: 3px 4px;position: fixed;z-index: 999999;box-sizing: border-box;cursor: default;white-space: pre;word-wrap: break-word;line-height: normal;font-style: normal;font-weight: normal;letter-spacing: normal;pointer-events: none;}.ace_folding-enabled > .ace_gutter-cell {padding-right: 13px;}.ace_fold-widget {box-sizing: border-box;margin: 0 -12px 0 1px;display: none;width: 11px;vertical-align: top;background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42mWKsQ0AMAzC8ixLlrzQjzmBiEjp0A6WwBCSPgKAXoLkqSot7nN3yMwR7pZ32NzpKkVoDBUxKAAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: center;border-radius: 3px;border: 1px solid transparent;cursor: pointer;}.ace_folding-enabled .ace_fold-widget {display: inline-block;   }.ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42m3HwQkAMAhD0YzsRchFKI7sAikeWkrxwScEB0nh5e7KTPWimZki4tYfVbX+MNl4pyZXejUO1QAAAABJRU5ErkJggg==");}.ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAOUlEQVR42jXKwQkAMAgDwKwqKD4EwQ26sSOkVWjgIIHAzPiCgaqiqnJHZnKICBERHN194O5b9vbLuAVRL+l0YWnZAAAAAElFTkSuQmCCXA==");}.ace_fold-widget:hover {border: 1px solid rgba(0, 0, 0, 0.3);background-color: rgba(255, 255, 255, 0.2);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);}.ace_fold-widget:active {border: 1px solid rgba(0, 0, 0, 0.4);background-color: rgba(0, 0, 0, 0.05);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);}.ace_dark .ace_fold-widget {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHklEQVQIW2P4//8/AzoGEQ7oGCaLLAhWiSwB146BAQCSTPYocqT0AAAAAElFTkSuQmCC");}.ace_dark .ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAH0lEQVQIW2P4//8/AxQ7wNjIAjDMgC4AxjCVKBirIAAF0kz2rlhxpAAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAYAAACAcVaiAAAAHElEQVQIW2P4//+/AxAzgDADlOOAznHAKgPWAwARji8UIDTfQQAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget:hover {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);background-color: rgba(255, 255, 255, 0.1);}.ace_dark .ace_fold-widget:active {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);}.ace_inline_button {border: 1px solid lightgray;display: inline-block;margin: -1px 8px;padding: 0 5px;pointer-events: auto;cursor: pointer;}.ace_inline_button:hover {border-color: gray;background: rgba(200,200,200,0.2);display: inline-block;pointer-events: auto;}.ace_fold-widget.ace_invalid {background-color: #FFB4B4;border-color: #DE5555;}.ace_fade-fold-widgets .ace_fold-widget {transition: opacity 0.4s ease 0.05s;opacity: 0;}.ace_fade-fold-widgets:hover .ace_fold-widget {transition: opacity 0.05s ease 0.05s;opacity:1;}.ace_underline {text-decoration: underline;}.ace_bold {font-weight: bold;}.ace_nobold .ace_bold {font-weight: normal;}.ace_italic {font-style: italic;}.ace_error-marker {background-color: rgba(255, 0, 0,0.2);position: absolute;z-index: 9;}.ace_highlight-marker {background-color: rgba(255, 255, 0,0.2);position: absolute;z-index: 8;}.ace_br1 {border-top-left-radius    : 3px;}.ace_br2 {border-top-right-radius   : 3px;}.ace_br3 {border-top-left-radius    : 3px; border-top-right-radius:    3px;}.ace_br4 {border-bottom-right-radius: 3px;}.ace_br5 {border-top-left-radius    : 3px; border-bottom-right-radius: 3px;}.ace_br6 {border-top-right-radius   : 3px; border-bottom-right-radius: 3px;}.ace_br7 {border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px;}.ace_br8 {border-bottom-left-radius : 3px;}.ace_br9 {border-top-left-radius    : 3px; border-bottom-left-radius:  3px;}.ace_br10{border-top-right-radius   : 3px; border-bottom-left-radius:  3px;}.ace_br11{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-left-radius:  3px;}.ace_br12{border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br13{border-top-left-radius    : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br14{border-top-right-radius   : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br15{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;}.ace_text-input-ios {position: absolute !important;top: -100000px !important;left: -100000px !important;}
+/*# sourceURL=ace/css/ace_editor.css */</style><style id="ace-tm">.ace-tm .ace_gutter {background: #f0f0f0;color: #333;}.ace-tm .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-tm .ace_fold {background-color: #6B72E6;}.ace-tm {background-color: #FFFFFF;color: black;}.ace-tm .ace_cursor {color: black;}.ace-tm .ace_invisible {color: rgb(191, 191, 191);}.ace-tm .ace_storage,.ace-tm .ace_keyword {color: blue;}.ace-tm .ace_constant {color: rgb(197, 6, 11);}.ace-tm .ace_constant.ace_buildin {color: rgb(88, 72, 246);}.ace-tm .ace_constant.ace_language {color: rgb(88, 92, 246);}.ace-tm .ace_constant.ace_library {color: rgb(6, 150, 14);}.ace-tm .ace_invalid {background-color: rgba(255, 0, 0, 0.1);color: red;}.ace-tm .ace_support.ace_function {color: rgb(60, 76, 114);}.ace-tm .ace_support.ace_constant {color: rgb(6, 150, 14);}.ace-tm .ace_support.ace_type,.ace-tm .ace_support.ace_class {color: rgb(109, 121, 222);}.ace-tm .ace_keyword.ace_operator {color: rgb(104, 118, 135);}.ace-tm .ace_string {color: rgb(3, 106, 7);}.ace-tm .ace_comment {color: rgb(76, 136, 107);}.ace-tm .ace_comment.ace_doc {color: rgb(0, 102, 255);}.ace-tm .ace_comment.ace_doc.ace_tag {color: rgb(128, 159, 191);}.ace-tm .ace_constant.ace_numeric {color: rgb(0, 0, 205);}.ace-tm .ace_variable {color: rgb(49, 132, 149);}.ace-tm .ace_xml-pe {color: rgb(104, 104, 91);}.ace-tm .ace_entity.ace_name.ace_function {color: #0000A2;}.ace-tm .ace_heading {color: rgb(12, 7, 255);}.ace-tm .ace_list {color:rgb(185, 6, 144);}.ace-tm .ace_meta.ace_tag {color:rgb(0, 22, 142);}.ace-tm .ace_string.ace_regex {color: rgb(255, 0, 0)}.ace-tm .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-tm.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px white;}.ace-tm .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-tm .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-tm .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-tm .ace_marker-layer .ace_active-line {background: rgba(0, 0, 0, 0.07);}.ace-tm .ace_gutter-active-line {background-color : #dcdcdc;}.ace-tm .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-tm .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}
+/*# sourceURL=ace/css/ace-tm */</style><style>    .error_widget_wrapper {        background: inherit;        color: inherit;        border:none    }    .error_widget {        border-top: solid 2px;        border-bottom: solid 2px;        margin: 5px 0;        padding: 10px 40px;        white-space: pre-wrap;    }    .error_widget.ace_error, .error_widget_arrow.ace_error{        border-color: #ff5a5a    }    .error_widget.ace_warning, .error_widget_arrow.ace_warning{        border-color: #F1D817    }    .error_widget.ace_info, .error_widget_arrow.ace_info{        border-color: #5a5a5a    }    .error_widget.ace_ok, .error_widget_arrow.ace_ok{        border-color: #5aaa5a    }    .error_widget_arrow {        position: absolute;        border: solid 5px;        border-top-color: transparent!important;        border-right-color: transparent!important;        border-left-color: transparent!important;        top: -5px;    }</style><style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-weight: 400;
+  font-style:  italic;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 500;
+  font-style:  normal;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Medium.woff2') format('woff2');
+}
+@font-face {
+  font-weight: 500;
+  font-style:  italic;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-MediumItalic.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Bold.woff2') format('woff2');
+}
+@font-face {
+  font-weight: 700;
+  font-style:  italic;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-BoldItalic.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 900;
+  font-style:  normal;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Black.woff2') format('woff2');
+}
+@font-face {
+  font-weight: 900;
+  font-style:  italic;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-BlackItalic.woff2') format('woff2');
+}</style><style type="text/css">.gsc-control-cse{font-family:arial, sans-serif}.gsc-control-cse .gsc-table-result{font-family:arial, sans-serif}.gsc-refinementsGradient{background:linear-gradient(to left,rgba(255,255,255,1),rgba(255,255,255,0))}.gsc-control-cse{border-color:#FFFFFF;background-color:#FFFFFF}input.gsc-input,.gsc-input-box,.gsc-input-box-hover,.gsc-input-box-focus{border-color:#BCCDF0}.gsc-search-button-v2,.gsc-search-button-v2:hover,.gsc-search-button-v2:focus{border-color:#336699;background-color:#E9E9E9;background-image:none;filter:none}.gsc-search-button-v2 svg{fill:#FFFFFF}.gsc-tabHeader.gsc-tabhActive,.gsc-refinementHeader.gsc-refinementhActive{color:#CCCCCC;border-color:#CCCCCC;background-color:#FFFFFF}.gsc-tabHeader.gsc-tabhInactive,.gsc-refinementHeader.gsc-refinementhInactive{color:#CCCCCC;border-color:#CCCCCC;background-color:#FFFFFF}.gsc-webResult.gsc-result,.gsc-results .gsc-imageResult{border-color:#FFFFFF;background-color:#FFFFFF}.gsc-webResult.gsc-result:hover,.gsc-imageResult:hover{border-color:#FFFFFF;background-color:#FFFFFF}.gs-webResult.gs-result a.gs-title:link,.gs-webResult.gs-result a.gs-title:link b,.gs-imageResult a.gs-title:link,.gs-imageResult a.gs-title:link b{color:#0000CC}.gs-webResult.gs-result a.gs-title:visited,.gs-webResult.gs-result a.gs-title:visited b,.gs-imageResult a.gs-title:visited,.gs-imageResult a.gs-title:visited b{color:#0000CC}.gs-webResult.gs-result a.gs-title:hover,.gs-webResult.gs-result a.gs-title:hover b,.gs-imageResult a.gs-title:hover,.gs-imageResult a.gs-title:hover b{color:#0000CC}.gs-webResult.gs-result a.gs-title:active,.gs-webResult.gs-result a.gs-title:active b,.gs-imageResult a.gs-title:active,.gs-imageResult a.gs-title:active b{color:#0000CC}.gsc-cursor-page{color:#0000CC}a.gsc-trailing-more-results:link{color:#0000CC}.gs-webResult .gs-snippet,.gs-imageResult .gs-snippet,.gs-fileFormatType{color:#000000}.gs-webResult div.gs-visibleUrl,.gs-imageResult div.gs-visibleUrl{color:#008000}.gs-webResult div.gs-visibleUrl-short{color:#008000}.gs-webResult div.gs-visibleUrl-short{display:none}.gs-webResult div.gs-visibleUrl-long{display:block}.gs-promotion div.gs-visibleUrl-short{display:none}.gs-promotion div.gs-visibleUrl-long{display:block}.gsc-cursor-box{border-color:#FFFFFF}.gsc-results .gsc-cursor-box .gsc-cursor-page{border-color:#CCCCCC;background-color:#FFFFFF;color:#CCCCCC}.gsc-results .gsc-cursor-box .gsc-cursor-current-page{border-color:#CCCCCC;background-color:#FFFFFF;color:#CCCCCC}.gsc-webResult.gsc-result.gsc-promotion{border-color:#336699;background-color:#FFFFFF}.gsc-completion-title{color:#0000CC}.gsc-completion-snippet{color:#000000}.gs-promotion a.gs-title:link,.gs-promotion a.gs-title:link *,.gs-promotion .gs-snippet a:link{color:#0000FF}.gs-promotion a.gs-title:visited,.gs-promotion a.gs-title:visited *,.gs-promotion .gs-snippet a:visited{color:#663399}.gs-promotion a.gs-title:hover,.gs-promotion a.gs-title:hover *,.gs-promotion .gs-snippet a:hover{color:#0000FF}.gs-promotion a.gs-title:active,.gs-promotion a.gs-title:active *,.gs-promotion .gs-snippet a:active{color:#0000FF}.gs-promotion .gs-snippet,.gs-promotion .gs-title .gs-promotion-title-right,.gs-promotion .gs-title .gs-promotion-title-right *{color:#000000}.gs-promotion .gs-visibleUrl,.gs-promotion .gs-visibleUrl-short{color:#008000}.gcsc-find-more-on-google{color:#0000CC}.gcsc-find-more-on-google-magnifier{fill:#0000CC}</style><style type="text/css">.gscb_a{display:inline-block;font:27px/13px arial,sans-serif}.gsst_a .gscb_a{color:#a1b9ed;cursor:pointer}.gsst_a:hover .gscb_a,.gsst_a:focus .gscb_a{color:#36c}.gsst_a{display:inline-block}.gsst_a{cursor:pointer;padding:0 4px}.gsst_a:hover{text-decoration:none!important}.gsst_b{font-size:16px;padding:0 2px;position:relative;user-select:none;-webkit-user-select:none;white-space:nowrap}.gsst_e{vertical-align:middle;opacity:0.55;}.gsst_a:hover .gsst_e,.gsst_a:focus .gsst_e{opacity:0.72;}.gsst_a:active .gsst_e{opacity:1;}.gsst_f{background:white;text-align:left}.gsst_g{background-color:white;border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);margin:-1px -3px;padding:0 6px}.gsst_h{background-color:white;height:1px;margin-bottom:-1px;position:relative;top:-1px}.gsib_a{width:100%;padding:4px 6px 0}.gsib_a,.gsib_b{vertical-align:top}.gssb_c{border:0;position:absolute;z-index:989}.gssb_e{border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:default}.gssb_f{visibility:hidden;white-space:nowrap}.gssb_k{border:0;display:block;position:absolute;top:0;z-index:988}.gsdd_a{border:none!important}.gsq_a{padding:0}.gsq_a{padding:0}.gssb_a{padding:0 7px}.gssb_a,.gssb_a td{white-space:nowrap;overflow:hidden;line-height:22px}#gssb_b{font-size:11px;color:#36c;text-decoration:none}#gssb_b:hover{font-size:11px;color:#36c;text-decoration:underline}.gssb_g{text-align:center;padding:8px 0 7px;position:relative}.gssb_h{font-size:15px;height:28px;margin:0.2em;-webkit-appearance:button}.gssb_i{background:#eee}.gss_ifl{visibility:hidden;padding-left:5px}.gssb_i .gss_ifl{visibility:visible}a.gssb_j{font-size:13px;color:#36c;text-decoration:none;line-height:100%}a.gssb_j:hover{text-decoration:underline}.gssb_l{height:1px;background-color:#e5e5e5}.gssb_m{color:#000;background:#fff}.gssb_a{padding:0 9px}.gsib_a{padding:5px 9px 4px 9px}.gscb_a{line-height:27px}.gssb_e{border:0}.gssb_l{margin:5px 0}input.gsc-input::-webkit-input-placeholder{font-size:14px}input.gsc-input:-moz-placeholder{font-size:14px}input.gsc-input::-moz-placeholder{font-size:14px}input.gsc-input:-ms-input-placeholder{font-size:14px}input.gsc-input:focus::-webkit-input-placeholder{color:transparent}input.gsc-input:focus:-moz-placeholder{color:transparent}input.gsc-input:focus::-moz-placeholder{color:transparent}input.gsc-input:focus:-ms-input-placeholder{color:transparent}.gssb_c .gsc-completion-container{position:static}.gssb_c{z-index:5000}.gsc-completion-container table{background:transparent;font-size:inherit;font-family:inherit}.gssb_c > tbody > tr,.gssb_c > tbody > tr > td,.gssb_d,.gssb_d > tbody > tr,.gssb_d > tbody > tr > td,.gssb_e,.gssb_e > tbody > tr,.gssb_e > tbody > tr > td{padding:0;margin:0;border:0}.gssb_a table,.gssb_a table tr,.gssb_a table tr td{padding:0;margin:0;border:0}</style></head>
+<body onresize="javascript:win_resized();"><div id="overlayselected"></div><div id="overlayhover" style="display: none;"></div><div id="template-image-dropdown" class="image-dropdown"><select><option>a</option><option>b</option><option>c</option><option>d</option><option>e</option><option>f</option><option>g</option><option>h</option><option>i</option><option>j</option><option>k</option><option>l</option><option>m</option><option>n</option><option>o</option><option>p</option><option>q</option><option>r</option><option>s</option><option>t</option><option>u</option><option>v</option><option>w</option><option>x</option><option>y</option><option>z</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option><option>I</option><option>J</option><option>K</option><option>L</option><option>M</option><option>N</option><option>O</option><option>P</option><option>Q</option><option>R</option><option>S</option><option>T</option><option>U</option><option>V</option><option>W</option><option>X</option><option>Y</option><option>Z</option></select><div style="display:inline;width: 1em; background-color: white">X</div></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+if (shwXmasLit && (nhhmm>=xmltsthm && nhhmm<=xmltenhm2) && (nmmdd>=xmltstmd && nmmdd<=xmltenmd2)) {
+document.write('<ul class="lightrope">');
+for (i=1; i<=30; ++i) {document.write('<li></li>');}
+document.write('</ul>');
+}
+// -->
+</script>
+
+<center>
+<table border="0" cellpadding="10" cellspacing="0" class="t1" id="displaybox"><tbody><tr><td align="center"><div class="main">
+
+<script language="JavaScript" type="text/javascript">
+<!--
+
+document.write('<a href="">');
+if (tdap==0) {
+document.write('<img src="'+homeimgdir+homeimg_lite+'" alt="Home Page" title="'+homeimg_title+'" border="0" class="im1" id="img_home_logo" />');
+} else {
+document.write('<img src="'+homeimgdir+homeimg_dark+'" alt="Home Page" title="'+homeimg_title+'" border="0" class="im1" id="img_home_logo" />');
+}
+document.write('</a>');
+// -->
+</script><a href="https://www.geody.com/home/?fbclid=IwAR2pJx4cmKRDyfsdCd4KPRfvEpbtRDqS7jjCCRCxKStATbojeXSoBwM1S9g"><img src="./Home_files/home_geody-1_dark.png" alt="Home Page" title="" border="0" class="im1" id="img_home_logo"></a>
+<noscript>
+<img src="img/home/home_geody-1_anytime.png" alt="Home Page" title="" border="0" class="im1" />
+</noscript>
+<script language="JavaScript" type="text/javascript">
+<!--
+
+if (ctitle) {
+document.write('<br /><span class="txth1">'+ctitle+'</span>');
+}
+if (cmsg) {
+if (ctitle) {document.write("<br />");}
+document.write('<span class="txtsml2">'+cmsg+'</span>');
+}
+document.write("<br /><br />");
+
+if (shwSearch) {
+  (function() {
+    var cx = 'partner-pub-8967366162508675:9322894246';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+
+document.writeln('<gcse:search enableAutoComplete="true"></gcse:search>');
+document.writeln("<br />");
+}
+
+if (shwDatel && shwDateu) {document.writeln('<table border="0" cellpadding="2" cellspacing="2"><tr><td valign="top" align="center">');}
+if (shwDatel) {
+if (shwDatel && shwDateu) {document.write("<div class='tztitle'>"+es_tlocal+"</div>"+"");}
+/* if (tikDatel) {  */
+document.write('<table border="0" cellpadding="0" cellspacing="0"><tr><td valign="top" align="left">');
+document.write('<a href="javascript:bpress('+'3'+','+'1'+',1,2); ');
+if (shwDateu) {document.write('bpress('+'4'+','+'1'+',1,2); ');}
+document.write('infoDateNow(0,\'infodate\');" class="button_'+'up'+'" id="bt_'+'3'+'_'+'1'+'">'+'+'+'</a>'+'&nbsp;'+'</td><td valign="top" align="center">'+"<div id='timeloc'></div>");
+document.write('</td></tr></table>');
+/* } else {
+document.write("<div id='timeloc'></div>");
+} */
+showTime(0,1);
+}
+if (shwDatel && shwDateu) {document.writeln('</td><td valign="top" align="center">');}
+if (shwDateu) {
+if (shwDatel && shwDateu) {document.write("<div class='tztitle'>"+es_tutc+"</div>"+"");}
+/* if (tikDateu) { */
+document.write('<table border="0" cellpadding="0" cellspacing="0"><tr><td valign="top" align="left">');
+document.write('<a href="javascript:bpress('+'4'+','+'1'+',1,2); ');
+if (shwDatel) {document.write('bpress('+'3'+','+'1'+',1,2); ');}
+document.write('infoDateNow(1,\'infodate\');" class="button_'+'up'+'" id="bt_'+'4'+'_'+'1'+'">'+'+'+'</a>'+'&nbsp;'+'</td><td valign="top" align="center">'+"<div id='timeutc'></div>");
+document.write('</td></tr></table>');
+/* } else {
+document.write("<div id='timeutc'></div>");
+} */
+showTime(1,1);
+}
+if (shwDatel && shwDateu) {document.writeln('</td></tr></table>');}
+if (shwDatel || shwDateu) {
+document.write('<div id="infodate" style="display:none;">');
+document.write('</div>');
+}
+
+var bgrn=1; var itms=0;
+document.write('<div class="toolbar1">');
+if (startshwAsc) {var hidshw='dn';} else {var hidshw='up';}; if (shwAsc) {if (itms>0) {document.write(sepItem);}; ++itms; document.write('<a href="javascript:bpress('+bgrn+','+itms+',0,2); toggleBox(\'asciichars\',2);" class="button_'+hidshw+'" id="bt_'+bgrn+'_'+itms+'">'+es_chars+'</a>');}
+if (startshwCal) {var hidshw='dn';} else {var hidshw='up';}; if (shwCal) {if (itms>0) {document.write(sepItem);}; ++itms; document.write('<a href="javascript:bpress('+bgrn+','+itms+',0,2); toggleBox(\'cal\',2); writeBox(\'calinfodate\',\'\');" class="button_'+hidshw+'" id="bt_'+bgrn+'_'+itms+'">'+es_cal+'</a>');}
+if (startshwCalc) {var hidshw='dn';} else {var hidshw='up';}; if (shwCalc) {if (itms>0) {document.write(sepItem);}; ++itms; document.write('<a href="javascript:bpress('+bgrn+','+itms+',0,2); toggleBox(\'calc\',2);" class="button_'+hidshw+'" id="bt_'+bgrn+'_'+itms+'">'+es_calc+'</a>');}
+if (startshwMap) {var hidshw='dn';} else {var hidshw='up';}; if (shwMap) {if (itms>0) {document.write(sepItem);}; ++itms; document.write('<a href="javascript:bpress('+bgrn+','+itms+',0,2); toggleBox(\'mapw\',2);" class="button_'+hidshw+'" id="bt_'+bgrn+'_'+itms+'">'+es_mapw+'</a>');}
+if (startshwFav) {var hidshw='dn';} else {var hidshw='up';}; if (shwFav) {if (itms>0) {document.write(sepItem);}; ++itms; document.write('<a href="javascript:bpress('+bgrn+','+itms+',0,2); toggleBox(\'favs\',2);" class="button_'+hidshw+'" id="bt_'+bgrn+'_'+itms+'">'+es_favs+'</a>');}
+document.write('</div>');
+
+if (shwAsc) {
+if (startshwAsc) {var hidshw='block';} else {var hidshw='none';}
+document.write('<div id="asciichars" style="display:'+hidshw+';">');
+document.write('<div class="txtsml1ms">'+"0123456789<br />ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />abcdefghijklmnopqrstuvwxyz<br />ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞß<br />àáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ<br />!\"#$%&'()*+,-./ :;&lt;=&gt;?@ [\]^_`<br />{|}~ €?‚ƒ„…†‡ˆ‰Š‹Œ?Ž??‘’“”•–—˜™ š›œ?žŸ<br />¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿"+'</div>'+"<br />");
+document.write('<div class="txtsml">'); 
+document.write(toCapitalCase(es_thequickfox)+"<br />"+es_thequickfox.toLowerCase()+"<br />"+es_thequickfox.toUpperCase()+"<br /><br />");
+document.write('</div>');
+// document.write('<div class="txtsml">'+"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br />Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br />Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br />Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."+'</div>');
+document.write('</div>');
+}
+
+if (shwCal) {
+if (startshwCal) {var hidshw='block';} else {var hidshw='none';}
+document.write('<div id="cal" style="display:'+hidshw+';">');
+document.write('<div id="cal1"></div>');
+document.write('<br /></div>');
+calendarNow(0,cal_dwfirst,'cal1');
+document.write('<div id="calinfodate"></div>');
+}
+
+if (shwCalc) {
+if (startshwCalc) {var hidshw='block';} else {var hidshw='none';}
+document.write('<div id="calc" style="display:'+hidshw+';">');
+document.write('<div class="calc-main">');
+document.write('<div class="calc-display">');
+document.write('<span>0</span>');
+document.write('<div class="calc-rad">Rad</div>');
+document.write('<div class="calc-hold"></div>');
+document.write('<div class="calc-buttons">');
+document.write('<div class="calc-info" style="cursor: pointer;">?</div>');
+document.write('<div class="calc-smaller" style="cursor: pointer;">&gt;</div>');
+document.write('<div class="calc-ln" style="cursor: pointer;">.</div>');
+document.write('</div>');
+document.write('</div>');
+document.write('<div class="calc-left">');
+document.write('<div><div style="cursor: pointer;">2nd</div></div>');
+document.write('<div><div style="cursor: pointer;">(</div></div>');
+document.write('<div><div style="cursor: pointer;">)</div></div>');
+document.write('<div><div style="cursor: pointer;">%</div></div>');
+document.write('<div><div style="cursor: pointer;">1/x</div></div>');
+document.write('<div><div style="cursor: pointer;">x<sup>2</sup></div></div>');
+document.write('<div><div style="cursor: pointer;">x<sup>3</sup></div></div>');
+document.write('<div><div style="cursor: pointer;">y<sup>x</sup></div></div>');
+document.write('<div><div style="cursor: pointer;">x!</div></div>');
+document.write('<div><div style="cursor: pointer;">sqr</div></div>');
+document.write('<div><div class="calc-radxy" style="cursor: pointer;">');
+document.write('sqr<sup>x,y</sup>');
+document.write('</div></div>');
+document.write('<div><div style="cursor: pointer;">log</div></div>');
+document.write('<div><div style="cursor: pointer;">sin</div></div>');
+document.write('<div><div style="cursor: pointer;">cos</div></div>');
+document.write('<div><div style="cursor: pointer;">tan</div></div>');
+document.write('<div><div style="cursor: pointer;">ln</div></div>');
+document.write('<div><div style="cursor: pointer;">sinh</div></div>');
+document.write('<div><div style="cursor: pointer;">cosh</div></div>');
+document.write('<div><div style="cursor: pointer;">tanh</div></div>');
+document.write('<div><div style="cursor: pointer;">e<sup>x</sup></div></div>');
+document.write('<div><div style="cursor: pointer;">Deg</div></div>');
+document.write('<div><div style="cursor: pointer;">Pi</div></div>');
+document.write('<div><div style="cursor: pointer;">EE</div></div>');
+document.write('<div><div style="cursor: pointer;">Rand</div></div>');
+document.write('</div>');
+document.write('<div class="calc-right">');
+document.write('<div><div style="cursor: pointer;">mc</div></div>');
+document.write('<div><div style="cursor: pointer;">m+</div></div>');
+document.write('<div><div style="cursor: pointer;">m-</div></div>');
+document.write('<div><div style="cursor: pointer;">mr</div></div>');
+document.write('<div class="calc-brown"><div style="cursor: pointer;">AC</div></div>');
+document.write('<div class="calc-brown"><div style="cursor: pointer;">+/<sup>_</sup></div></div>');
+document.write('<div class="calc-brown calc-f19"><div style="cursor: pointer;">/</div></div>');
+document.write('<div class="calc-brown calc-f21"><div style="cursor: pointer;">*</div></div>');
+document.write('<div class="calc-black"><div style="cursor: pointer;">7</div></div>');
+document.write('<div class="calc-black"><div style="cursor: pointer;">8</div></div>');
+document.write('<div class="calc-black"><div style="cursor: pointer;">9</div></div>');
+document.write('<div class="calc-brown calc-f18"><div style="cursor: pointer;"><sup>_</sup></div></div>');
+document.write('<div class="calc-black"><div style="cursor: pointer;">4</div></div>');
+document.write('<div class="calc-black"><div style="cursor: pointer;">5</div></div>');
+document.write('<div class="calc-black"><div style="cursor: pointer;">6</div></div>');
+document.write('<div class="calc-brown calc-f18"><div style="cursor: pointer;">+</div></div>');
+document.write('<div class="calc-black"><div style="cursor: pointer;">1</div></div>');
+document.write('<div class="calc-black"><div style="cursor: pointer;">2</div></div>');
+document.write('<div class="calc-black"><div style="cursor: pointer;">3</div></div>');
+document.write('<div class="calc-blank"><textarea></textarea></div>');
+document.write('<div class="calc-orange calc-eq calc-f17"><div>');
+document.write('<div class="calc-down" style="cursor: pointer;">=</div>');
+document.write('</div></div>');
+document.write('<div class="calc-black calc-zero"><div>');
+document.write('<span style="cursor: pointer;">0</span>');
+document.write('</div></div>');
+document.write('<div class="calc-black calc-f21"><div style="cursor: pointer;">.</div></div>');
+document.write('</div>');
+document.write('</div>');
+document.write('<br /></div>');
+}
+
+if (shwMap) {
+var earthpicw=620; var earthpich=310;
+if (earthpicw>window.innerWidth) {var oearthpicw=earthpicw; earthpicw=window.innerWidth-16; earthpich=Math.floor(earthpich/(oearthpicw/earthpicw));}
+if (earthpicw<0) {earthpicw=0;}
+if (earthpich<0) {earthpich=0;}
+if (startshwMap) {var hidshw='block';} else {var hidshw='none';}
+document.write('<div id="mapw" style="display:'+hidshw+';">');
+document.write('<div style="position: relative;">');
+document.write('<a href="https://www.geody.com/geolook.php?world=terra&ms=5&mw='+earthpicw+'&mh='+earthpich+'&cs=">');
+if (tdap==0) {
+document.write('<img src="img/terra_day_geody.jpg" id="img_mapw" alt="'+es_mapw+'" border="0" width="'+earthpicw+'" height="'+earthpich+'" ismap />');
+} else {
+document.write('<img src="img/terra_nit_geody.jpg" id="img_mapw" alt="'+es_mapw+'" border="0" width="'+earthpicw+'" height="'+earthpich+'" ismap />');
+}
+document.write('</a>');
+document.write('</div>');
+document.write('<div class="txtsml">');
+document.write(es_entplc);
+if (shwgetpos) {document.write(' - '+'<a href="javascript:findme();">'+es_mypos+'</a>');}
+document.write('</div>');
+document.write('<form name="qinp" id="qinp" action="https://www.geody.com/geolook.php" method="get">');
+document.write('<input type="hidden" name="world" value="terra"><input type="hidden" name="map" value="col"><input type="text" name="q" id="q" value="" size="50" maxlength="128">');
+document.write('<button type="submit" name="subm1" value="go">'+es_go+'</button>');
+document.write('</form>');
+document.write("<br />");
+document.write('</div>');
+}
+
+if (shwFav) {
+if (startshwFav) {var hidshw='block';} else {var hidshw='none';}
+document.write('<div id="favs" style="display:'+hidshw+';">');
+document.write('<center><table border="0" cellpadding="0" cellspacing="0"><tr><td><div class="favlink_tablediv">');
+var i1=1; var i2=1;
+for (var i=1;i<=favsn;++i) {
+if (favs[i][1]!='!+') {
+document.write('<div class="favlink_cell" onClick="javascript:window.open(\''+favs[i][1]+'\',\''+favNewWin+'\');">');
+document.write('<a href="'+favs[i][1]+'" target="'+favNewWin+'"><img src="'+favs[i][2]+'" alt="'+favs[i][0]+'" class="favlink_rouimg" /></a><br />');
+document.write(favs[i][0]);
+document.write('</div>');
+if (favsprow>0 && i1%favsprow==0) {document.write('<br clear="all" />');}
+++i1;
+} else {
+document.write('<div class="favlinkmore_cell" onClick="javascript:toggleFavX('+i+','+i2+',2);">');
+document.write('<img src="'+favs[i][2]+'" id="img_favsx'+i2+'" alt="'+'+'+'" class="favlinkmore_rouimg" /><br />');
+document.write(favs[i][0]);
+document.write('</div>');
+document.write('</div><div id="favsx'+i2+'" style="display:none;">');
+// if (favsprow>0 && i1%favsprow==0) {document.write('<br clear="all" />');}
+++i2; i1=1;
+}
+}
+document.write('</div></td></tr></table></center>');
+document.write('</div>');
+// document.write('<br clear="all" />');
+}
+
+document.write("<br clear=\"all\" />");
+
+if (shwScrnInfo) {
+document.write('<table border="0" cellpadding="2" cellspacing="2"><tr>');
+document.write('<td class="txtsml1" valign="middle">'+es_scnres+'<br />'+window.screen.width+" x "+window.screen.height+" "+"px"+'</td>');
+document.write('<td class="txtsml1" valign="middle">'+es_coldep+'<br />'+window.screen.colorDepth+" bit"+"<!-- "+"("+Math.pow(2,window.screen.colorDepth)+" "+es_colors+")"+" -->"+'</td>');
+document.write('<td class="txtsml1" valign="middle"><div id="win_size">'+es_winsiz+'<br />'+window.innerWidth+" x "+window.innerHeight+" "+"px"+'</div></td>');
+}
+if (shwMouse) {
+if (shwScrnInfo) {
+if (shwScrnColors) {
+document.write('<td class="txtsml1" rowspan="2" valign="middle">');
+} else {
+document.write('<td class="txtsml1" valign="middle">');
+}
+}
+if (tdap==0) {var jxfaceimg=jxfaceimgmouseinlite;} else {var jxfaceimg=jxfaceimgmouseindark;}
+jxeyes(false,false);
+if (shwScrnInfo) {document.write('</td>');} else {document.write('<br />');}
+}
+if (shwScrnColors) {
+if (shwScrnInfo) {document.write('</tr><tr><td colspan="3">');}
+var numalf='0123456789abcdef';
+for (i=0;i<=15;++i) {document.write('<div class="grad_cols_0_'+numalf.charAt(i)+numalf.charAt(i)+numalf.charAt(i)+'" onClick="javascript:toggleBox(\'colorpicker\',2);" style="cursor: pointer;"></div>');}
+for (i=14;i>=0;--i) {document.write('<div class="grad_cols_0_'+numalf.charAt(i)+numalf.charAt(i)+numalf.charAt(i)+'" onClick="javascript:toggleBox(\'colorpicker\',2);" style="cursor: pointer;"></div>');}
+// document.write('<div class="grad_grays"></div>');
+if (shwScrnInfo) {document.write('</td>');}
+}
+if (shwScrnInfo) {
+document.write('</tr>');
+document.write('</table>');
+if (!shwScrnColors) {document.write('<br />');}
+}
+
+if (shwScrnColors) {
+if (startshwColPk) {var hidshw='block';} else {var hidshw='none';}
+document.write('<div id="colorpicker" style="display:'+hidshw+';">');
+document.write('<form name="console" id="console" method="post">');
+document.write('<table border="0" cellpadding="2" cellspacing="2">');
+document.write('<tr><td>'+es_color+'</td><td><input type="color" id="colpick1" name="colpick1" onChange="javascript:cpcolpick2colval(); colupdate();" /></td></tr>');
+document.write('<tr><td>'+es_colrgbh+'</td><td><input type="text" id="colrgbhex" name="colrgbhex" value="" size="7" maxlength="7" onChange="javascript:cpcolval2colpick(); colupdate();" /></td></tr>');
+document.write('<tr><td>'+es_colrgbd+'</td><td><input type="text" id="colrgbdec" name="colrgbdec" value="" readonly /></td></tr>');
+document.write('<tr><td>'+es_colhsl+'</td><td><input type="text" id="colhsl" name="colhsl" value="" readonly /></td></tr>');
+document.write('<tr><td>'+es_colhsv+'</td><td><input type="text" id="colhsv" name="colhsv" value="" readonly /></td></tr>');
+document.write('<tr><td>'+es_colcmyk+'</td><td><input type="text" id="colcmyk" name="colcmyk" value="" readonly /></td></tr>');
+document.write('</table>');
+document.write('</form>');
+document.write('</div>');
+document.write('<br />');
+cpcolpick2colval(); colupdate();
+}
+
+if (shwChooseTheme) {
+var bgrn=2; var bgrmx=4; var itms=0;
+document.write('<center><div class="choosetheme">');
+document.write(es_theme+': ');
+++itms; if (cxTheme==itms-1) {var hidshw='dn';} else {var hidshw='up';}
+document.write('<a href="javascript:var cxTheme='+(itms-1)+'; bpressgrp('+bgrn+','+itms+','+bgrmx+'); changeThemeTime(cxTheme,dlsthm,dlenhm);" class="button_'+hidshw+'" id="bt_'+bgrn+'_'+itms+'">'+es_thmauto+'</a>'+sepItem);
+++itms; if (cxTheme==itms-1) {var hidshw='dn';} else {var hidshw='up';}
+document.write('<a href="javascript:var cxTheme='+(itms-1)+'; bpressgrp('+bgrn+','+itms+','+bgrmx+'); changeThemeTime(cxTheme,dlsthm,dlenhm);" class="button_'+hidshw+'" id="bt_'+bgrn+'_'+itms+'">'+es_thmlite+'</a>'+sepItem);
+++itms; if (cxTheme==itms-1) {var hidshw='dn';} else {var hidshw='up';}
+document.write('<a href="javascript:var cxTheme='+(itms-1)+'; bpressgrp('+bgrn+','+itms+','+bgrmx+'); changeThemeTime(cxTheme,dlsthm,dlenhm);" class="button_'+hidshw+'" id="bt_'+bgrn+'_'+itms+'">'+es_thmdark+'</a>'+sepItem);
+++itms; if (cxTheme==itms-1) {var hidshw='dn';} else {var hidshw='up';}
+document.write('<a href="javascript:var cxTheme='+(itms-1)+'; bpressgrp('+bgrn+','+itms+','+bgrmx+'); changeThemeTime(cxTheme,dlsthm,dlenhm);" class="button_'+hidshw+'" id="bt_'+bgrn+'_'+itms+'">'+es_thmnone+'</a>');
+document.write('</div></center>');
+document.write('<br />');
+}
+
+if (shwPageLoadLoc) {
+document.write("<div class='txtsml'>"); document.write(es_pageloaded+': '); showTime(0,0); document.write("</div>");
+}
+if (shwPageLoadUTC) {
+document.write("<div class='txtsml'>"); document.write(es_pageloaded+': '); showTime(1,0); document.write("</div>");
+}
+
+if (shwUsrAg) {
+document.write('<div class="txtsml">'+navigator.userAgent+"<br />"+'</div>');
+}
+
+if (shwJSEn) {
+document.write('<div class="txtsml">'+'JavaScript'+': '+es_enab+"<br />"+'</div>');
+}
+
+document.write("<br />");
+
+if (checkOnline) {
+function sysOnline() {
+document.getElementById('displaybox').style.backgroundColor='';
+document.getElementById('onlineled').className='ledon';
+document.getElementById('onlinestatus').innerHTML='<span class="online">'+es_online+'</span>'; // alert(es_online);
+}
+function sysOffline() {
+var tdap=setPrefTime(cxTheme,dlsthm,dlenhm);
+switch (tdap) {
+case 0:
+document.getElementById('displaybox').style.backgroundColor=offlBgLight;
+break;
+case 1:
+document.getElementById('displaybox').style.backgroundColor=offlBgDark;
+break;
+}
+document.getElementById('onlineled').className='ledoff';
+document.getElementById('onlinestatus').innerHTML='<span class="offline">'+es_offline+'</span>'; // alert(es_offline);
+}
+document.write('<table border="0" cellspacing="1" cellpadding="1" width="100%"><tr><td valign="bottom" align="left" width="15%">');
+document.write('<div style="white-space: nowrap;"><span id="onlineled"></span> <span id="onlinestatus"></span></div>');
+document.write('</td><td valign="middle" align="center" width="70%">');
+if (window.addEventListener) {
+window.addEventListener("online", function(){ sysOnline(); }, false);
+window.addEventListener("offline", function(){ sysOffline(); }, false);
+} else {
+document.body.ononline=sysOnline();
+document.body.onoffline=sysOffline();
+}
+if (navigator.onLine) {sysOnline();} else {sysOffline();} 
+}
+
+if (shwMouse && window.addEventListener) {
+function winMouseOut() {
+var tdap=setPrefTime(cxTheme,dlsthm,dlenhm);
+switch (tdap) {
+case 0:
+default:
+document.getElementById('img_jxface').src=jxfaceimgmouseoulite;
+break;
+case 1:
+document.getElementById('img_jxface').src=jxfaceimgmouseoudark;
+break;
+case 2:
+break;
+}
+}
+function winMouseIn() {
+var tdap=setPrefTime(cxTheme,dlsthm,dlenhm);
+switch (tdap) {
+case 0:
+default:
+document.getElementById('img_jxface').src=jxfaceimgmouseinlite;
+break;
+case 1:
+document.getElementById('img_jxface').src=jxfaceimgmouseindark;
+break;
+case 2:
+break;
+}
+}
+// if (window.addEventListener) {
+window.addEventListener("mouseout", function(){ winMouseOut(); }, false);
+window.addEventListener("mouseover", function(){ winMouseIn(); }, false);
+// }
+}
+
+if (startshwAbt) {var hidshw='block';} else {var hidshw='none';}
+document.write('<div id="about" class="about" style="display:'+hidshw+';">');
+// document.write('<table border="1" cellpadding="4" cellspacing="0"><tr><td>');
+document.write('<b><a href="https://www.geody.com/home">Geody Home</a> by Valerio Capello / Geody Labs, 2018</b><br />');
+document.write('Third Party Modules:<br />');
+document.write('CalcCSS3: <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a> by Peter Dematté, 2010-2015.<br />');
+document.write('Christmas Light: <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a> by Toby, 2018.<br />');
+document.write('RGB, HSV, HSL Color Conversion Algorithms: <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a> by Michael Jackson<!-- [not the King of Pop] -->, 2013.<br />');
+// document.write('</td></tr></table>');
+document.write('</div>');
+document.write('<center><div class="aboutlink">');
+document.write('<a href="javascript:toggleBox(\'about\',2);">'+es_about+'</a>'+sepItem);
+document.write('<a href="https://www.geody.com/home">Geody Home</a>'+sepItem);
+document.write('<a href="http://www.geody.org/">Geody.org</a>');
+document.write('</div></center>');
+
+if (checkOnline) {
+document.write('</td><td valign="bottom" align="right" width="15%"></tr></table>');
+}
+
+if (shwCalc && !startshwCalc) {
+toggleBox('calc',1);
+}
+
+if (tikDatel || tikDateu) {clockTick(tikDatel,tikDateu);}
+// -->
+</script><br><br><div id="___gcse_0"><div class="gsc-control-cse gsc-control-cse-en"><div class="gsc-control-wrapper-cse" dir="ltr"><form class="gsc-search-box gsc-search-box-tools" accept-charset="utf-8"><table cellspacing="0" cellpadding="0" class="gsc-search-box"><tbody><tr><td class="gsc-input"><div class="gsc-input-box" id="gsc-iw-id1"><table cellspacing="0" cellpadding="0" id="gs_id50" class="gstl_50 gsc-input" style="width: 100%; padding: 0px;"><tbody><tr><td id="gs_tti50" class="gsib_a"><input autocomplete="off" type="text" size="10" class="gsc-input" name="search" title="search" id="gsc-i-id1" placeholder="Custom Search" style="width: 100%; padding: 0px; border: none; margin: 0px; height: auto; background: url(&quot;https://www.google.com/cse/static/images/1x/googlelogo_lightgrey_46x16dp.png&quot;) left center no-repeat rgb(255, 255, 255); text-indent: 48px; outline: none;" dir="ltr" spellcheck="false" x-webkit-grammar="builtin:search" lang="en"></td><td class="gsib_b"><div class="gsst_b" id="gs_st50" dir="ltr"><a class="gsst_a" href="javascript:void(0)" style="display: none;" title="Clear search box" role="button"><span class="gscb_a" id="gs_cb50" aria-hidden="true">×</span></a></div></td></tr></tbody></table></div></td><td class="gsc-search-button"><button class="gsc-search-button gsc-search-button-v2"><svg width="13" height="13" viewBox="0 0 13 13"><title>search</title><path d="m4.8495 7.8226c0.82666 0 1.5262-0.29146 2.0985-0.87438 0.57232-0.58292 0.86378-1.2877 0.87438-2.1144 0.010599-0.82666-0.28086-1.5262-0.87438-2.0985-0.59352-0.57232-1.293-0.86378-2.0985-0.87438-0.8055-0.010599-1.5103 0.28086-2.1144 0.87438-0.60414 0.59352-0.8956 1.293-0.87438 2.0985 0.021197 0.8055 0.31266 1.5103 0.87438 2.1144 0.56172 0.60414 1.2665 0.8956 2.1144 0.87438zm4.4695 0.2115 3.681 3.6819-1.259 1.284-3.6817-3.7 0.0019784-0.69479-0.090043-0.098846c-0.87973 0.76087-1.92 1.1413-3.1207 1.1413-1.3553 0-2.5025-0.46363-3.4417-1.3909s-1.4088-2.0686-1.4088-3.4239c0-1.3553 0.4696-2.4966 1.4088-3.4239 0.9392-0.92727 2.0864-1.3969 3.4417-1.4088 1.3553-0.011889 2.4906 0.45771 3.406 1.4088 0.9154 0.95107 1.379 2.0924 1.3909 3.4239 0 1.2126-0.38043 2.2588-1.1413 3.1385l0.098834 0.090049z"></path></svg></button></td><td class="gsc-clear-button"><div class="gsc-clear-button" title="clear results">&nbsp;</div></td></tr></tbody></table></form><div class="gsc-results-wrapper-nooverlay"><div class="gsc-positioningWrapper"><div class="gsc-tabsAreaInvisible"><div class="gsc-tabHeader gsc-inline-block gsc-tabhActive">Web</div><span class="gs-spacer"> </span><div tabindex="0" class=" gsc-tabHeader gsc-tabhInactive gsc-inline-block">Image</div><span class="gs-spacer"> </span></div></div><div class="gsc-positioningWrapper"><div class="gsc-refinementsAreaInvisible"></div></div><div class="gsc-above-wrapper-area-invisible"><table cellspacing="0" cellpadding="0" class="gsc-above-wrapper-area-container"><tbody><tr><td class="gsc-result-info-container"><div class="gsc-result-info-invisible"></div></td></tr></tbody></table></div><div class="gsc-adBlockInvisible"></div><div class="gsc-wrapper"><div class="gsc-adBlockInvisible"></div><div class="gsc-resultsbox-invisible"><div class="gsc-resultsRoot gsc-tabData gsc-tabdActive"><table cellspacing="0" cellpadding="0" class="gsc-resultsHeader"><tbody><tr><td class="gsc-twiddleRegionCell"><div class="gsc-twiddle"><div class="gsc-title">Web</div></div><div class="gsc-stats"></div><div class="gsc-results-selector gsc-all-results-active"><div class="gsc-result-selector gsc-one-result" title="show one result">&nbsp;</div><div class="gsc-result-selector gsc-more-results" title="show more results">&nbsp;</div><div class="gsc-result-selector gsc-all-results" title="show all results">&nbsp;</div></div></td><td class="gsc-configLabelCell"></td></tr></tbody></table><div><div class="gsc-expansionArea"></div></div></div><div class="gsc-resultsRoot gsc-tabData gsc-tabdInactive"><table cellspacing="0" cellpadding="0" class="gsc-resultsHeader"><tbody><tr><td class="gsc-twiddleRegionCell"><div class="gsc-twiddle"><div class="gsc-title">Image</div></div><div class="gsc-stats"></div><div class="gsc-results-selector gsc-all-results-active"><div class="gsc-result-selector gsc-one-result" title="show one result">&nbsp;</div><div class="gsc-result-selector gsc-more-results" title="show more results">&nbsp;</div><div class="gsc-result-selector gsc-all-results" title="show all results">&nbsp;</div></div></td><td class="gsc-configLabelCell"></td></tr></tbody></table><div><div class="gsc-expansionArea"></div></div></div></div></div></div></div></div></div>
+<br>
+<table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td valign="top" align="left"><a href="javascript:bpress(3,1,1,2); infoDateNow(0,&#39;infodate&#39;);" class="button_up" id="bt_3_1">+</a>&nbsp;</td><td valign="top" align="center"><div id="timeloc"><div class="datenote"><span class="txtdate" title="">Fri 09 Aug 2019</span><br><span class="txttime">17:47:07</span> <span class="txttz"><sup>UTC--4</sup></span></div></div></td></tr></tbody></table><div id="infodate" style="display:none;"></div><div class="toolbar1"><a href="javascript:bpress(1,1,0,2); toggleBox(&#39;asciichars&#39;,2);" class="button_up" id="bt_1_1">Characters</a>&nbsp;&nbsp;<a href="javascript:bpress(1,2,0,2); toggleBox(&#39;cal&#39;,2); writeBox(&#39;calinfodate&#39;,&#39;&#39;);" class="button_up" id="bt_1_2">Calendar</a>&nbsp;&nbsp;<a href="javascript:bpress(1,3,0,2); toggleBox(&#39;calc&#39;,2);" class="button_up" id="bt_1_3">Calc</a>&nbsp;&nbsp;<a href="javascript:bpress(1,4,0,2); toggleBox(&#39;mapw&#39;,2);" class="button_up" id="bt_1_4">World Map</a>&nbsp;&nbsp;<a href="javascript:bpress(1,5,0,2); toggleBox(&#39;favs&#39;,2);" class="button_dn" id="bt_1_5">Favorites</a></div><div id="asciichars" style="display:none;"><div class="txtsml1ms">0123456789<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞß<br>àáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ<br>!"#$%&amp;'()*+,-./ :;&lt;=&gt;?@ []^_`<br>{|}~ €?‚ƒ„…†‡ˆ‰Š‹Œ?Ž??‘’“”•–—˜™ š›œ?žŸ<br>¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿</div><br><div class="txtsml">The Quick Brown Fox Jumps Over The Lazy Dog<br>the quick brown fox jumps over the lazy dog<br>THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG<br><br></div></div><div id="cal" style="display:none;"><div id="cal1"><table border="0" cellpadding="2" cellspacing="2"><tbody><tr><th colspan="7" class="elh1">Aug 2019</th></tr><tr><td class="elcmd"><a href="javascript:calendar(9,8,2018,1,&#39;cal1&#39;);" class="button_up">«</a></td><td class="elcmd"><a href="javascript:calendar(9,7,2019,1,&#39;cal1&#39;);" class="button_up">‹</a></td><td colspan="3" class="elcmdb"><a href="javascript:calendarNow(0,1,&#39;cal1&#39;);" class="button_up">Today</a></td><td class="elcmd"><a href="javascript:calendar(9,9,2019,1,&#39;cal1&#39;);" class="button_up">›</a></td><td class="elcmd"><a href="javascript:calendar(9,8,2020,1,&#39;cal1&#39;);" class="button_up">»</a></td></tr><tr><td class="elwklab">Mo</td><td class="elwklab">Tu</td><td class="elwklab">We</td><td class="elwklab">Th</td><td class="elwklab">Fr</td><td class="elwklabholpre">Sa</td><td class="elwklabhol">Su</td></tr><tr><td class="elcal elcal_dmnpre elday" onclick="javascript:selday(&#39;29&#39;,&#39;7&#39;,&#39;2019&#39;,&#39;cal1&#39;);" style="cursor: pointer;" "="">29</td><td class="elcal elcal_dmnpre elday" onclick="javascript:selday(&#39;30&#39;,&#39;7&#39;,&#39;2019&#39;,&#39;cal1&#39;);" style="cursor: pointer;" "="">30</td><td class="elcal elcal_dmnpre elday" onclick="javascript:selday(&#39;31&#39;,&#39;7&#39;,&#39;2019&#39;,&#39;cal1&#39;);" style="cursor: pointer;" "="">31</td><td class="elcal elday" onclick="javascript:selday(&#39;1&#39;,&#39;8&#39;,&#39;2019&#39;,&#39;cal1&#39;);" style="cursor: pointer;">1</td><td class="elcal elday" onclick="javascript:selday(&#39;2&#39;,&#39;8&#39;,&#39;2019&#39;,&#39;cal1&#39;);" style="cursor: pointer;">2</td><td class="elcal elcal_dayholpre" onclick="javascript:selday(&#39;3&#39;,&#39;8&#39;,&#39;2019&#39;,&#39;cal1&#39;);" style="cursor: pointer;">3</td><td class="elcal elcal_dayhol" onclick="javascript:selday(&#39;4&#39;,&#39;8&#39;,&#39;2019&#39;,&#39;cal1&#39;);" style="cursor: pointer;">4</td></tr><tr><td class="elcal elday" onclick="javascript:selday(&#39;5&#39;,&#39;8&#39;,&#39;2019&#39;,&#39;cal1&#39;);" style="cursor: pointer;">5</td><td class="elcal elday" onclick="javascript:selday(&#39;6&#39;,&#39;8&#39;,&#39;2019&#39;,&#39;cal1&#39;);" style="cursor: pointer;">6</td><td class="elcal elday" onclick="javascript:selday(&#39;7&#39;,&#39;8&#39;,&#39;2019&#39;,&#39;cal1&#39;);" style="cursor: pointer;">7</td><td class="elcal elday" onclick="javascript:selday(&#39;8&#39;,&#39;8&#39;,&#39;2019&#39;,&#39;cal1&#39;);" style="cursor: pointer;">8</td><td class="elcal elday elcaltoday" onclick="javascript:selday(&#39;9&#39;,&#39;8&#39;,&#39;2019&#39;,&#39;cal1&#39;);" style="cursor: pointer;">9</td><td class="elcal elcal_dayholpre" onclick="javascript:selday(&#39;10&#39;,&#39;8&#39;,&#39;2019&#39;,&#39;cal1&#39;);" style="cursor: pointer;">10</td><td class="elcal elcal_dayhol" onclick="javascript:selday(&#39;11&#39;,&#39;8&#39;,&#39;2019&#39;,&#39;cal1&#39;);" style="cursor: pointer;">11</td></tr><tr><td class="elcal elday" onclick="javascript:selday(&#39;12&#39;,&#39;8&#39;,&#39;2019&#39;,&#39;cal1&#39;);" style="cursor: pointer;">12</td><td class="elcal elday" onclick="javascript:selday(&#39;13&#39;,&#39;8&#39;,&#39;2019&#39;,&#39;cal1&#39;);" style="cursor: pointer;">13</td><td class="elcal elday" onclick="javascript:selday(&#39;14&#39;,&#39;8&#39;,&#39;2019&#39;,&#39;cal1&#39;);" style="cursor: pointer;">14</td><td class="elcal elday" onclick="javascript:selday(&#39;15&#39;,&#39;8&#39;,&#39;2019&#39;,&#39;cal1&#39;);" style="cursor: pointer;">15</td><td class="elcal elday" onclick="javascript:selday(&#39;16&#39;,&#39;8&#39;,&#39;2019&#39;,&#39;cal1&#39;);" style="cursor: pointer;">16</td><td class="elcal elcal_dayholpre" onclick="javascript:selday(&#39;17&#39;,&#39;8&#39;,&#39;2019&#39;,&#39;cal1&#39;);" style="cursor: pointer;">17</td><td class="elcal elcal_dayhol" onclick="javascript:selday(&#39;18&#39;,&#39;8&#39;,&#39;2019&#39;,&#39;cal1&#39;);" style="cursor: pointer;">18</td></tr><tr><td class="elcal elday" onclick="javascript:selday(&#39;19&#39;,&#39;8&#39;,&#39;2019&#39;,&#39;cal1&#39;);" style="cursor: pointer;">19</td><td class="elcal elday" onclick="javascript:selday(&#39;20&#39;,&#39;8&#39;,&#39;2019&#39;,&#39;cal1&#39;);" style="cursor: pointer;">20</td><td class="elcal elday" onclick="javascript:selday(&#39;21&#39;,&#39;8&#39;,&#39;2019&#39;,&#39;cal1&#39;);" style="cursor: pointer;">21</td><td class="elcal elday" onclick="javascript:selday(&#39;22&#39;,&#39;8&#39;,&#39;2019&#39;,&#39;cal1&#39;);" style="cursor: pointer;">22</td><td class="elcal elday" onclick="javascript:selday(&#39;23&#39;,&#39;8&#39;,&#39;2019&#39;,&#39;cal1&#39;);" style="cursor: pointer;">23</td><td class="elcal elcal_dayholpre" onclick="javascript:selday(&#39;24&#39;,&#39;8&#39;,&#39;2019&#39;,&#39;cal1&#39;);" style="cursor: pointer;">24</td><td class="elcal elcal_dayhol" onclick="javascript:selday(&#39;25&#39;,&#39;8&#39;,&#39;2019&#39;,&#39;cal1&#39;);" style="cursor: pointer;">25</td></tr><tr><td class="elcal elday" onclick="javascript:selday(&#39;26&#39;,&#39;8&#39;,&#39;2019&#39;,&#39;cal1&#39;);" style="cursor: pointer;">26</td><td class="elcal elday" onclick="javascript:selday(&#39;27&#39;,&#39;8&#39;,&#39;2019&#39;,&#39;cal1&#39;);" style="cursor: pointer;">27</td><td class="elcal elday" onclick="javascript:selday(&#39;28&#39;,&#39;8&#39;,&#39;2019&#39;,&#39;cal1&#39;);" style="cursor: pointer;">28</td><td class="elcal elday" onclick="javascript:selday(&#39;29&#39;,&#39;8&#39;,&#39;2019&#39;,&#39;cal1&#39;);" style="cursor: pointer;">29</td><td class="elcal elday" onclick="javascript:selday(&#39;30&#39;,&#39;8&#39;,&#39;2019&#39;,&#39;cal1&#39;);" style="cursor: pointer;">30</td><td class="elcal elcal_dayholpre" onclick="javascript:selday(&#39;31&#39;,&#39;8&#39;,&#39;2019&#39;,&#39;cal1&#39;);" style="cursor: pointer;">31</td><td class="elcal elcal_dmnnxt elcal_dayhol" onclick="javascript:selday(&#39;1&#39;,&#39;9&#39;,&#39;2019&#39;,&#39;cal1&#39;);" style="cursor: pointer;">1</td></tr></tbody></table></div><br></div><div id="calinfodate"></div><div id="calc" style="display: none;"><div class="calc-main"><div class="calc-display" style="line-height: 61px;"><span style="font-size: 45px;">0</span><div class="calc-rad">Rad</div><div class="calc-hold"></div><div class="calc-buttons"><div class="calc-info" style="cursor: pointer;">?</div><div class="calc-smaller" style="cursor: pointer;">&gt;</div><div class="calc-ln" style="cursor: pointer;">.</div></div></div><div class="calc-left"><div><div style="cursor: pointer;">2nd</div></div><div><div style="cursor: pointer;">(</div></div><div><div style="cursor: pointer;">)</div></div><div><div style="cursor: pointer;">%</div></div><div><div style="cursor: pointer;">1/x</div></div><div><div style="cursor: pointer;">x<sup>2</sup></div></div><div><div style="cursor: pointer;">x<sup>3</sup></div></div><div><div style="cursor: pointer;">y<sup>x</sup></div></div><div><div style="cursor: pointer;">x!</div></div><div><div style="cursor: pointer;">sqr</div></div><div><div class="calc-radxy" style="cursor: pointer;">sqr<sup>x,y</sup></div></div><div><div style="cursor: pointer;">log</div></div><div><div style="cursor: pointer;">sin</div></div><div><div style="cursor: pointer;">cos</div></div><div><div style="cursor: pointer;">tan</div></div><div><div style="cursor: pointer;">ln</div></div><div><div style="cursor: pointer;">sinh</div></div><div><div style="cursor: pointer;">cosh</div></div><div><div style="cursor: pointer;">tanh</div></div><div><div style="cursor: pointer;">e<sup>x</sup></div></div><div><div style="cursor: pointer;">Deg</div></div><div><div style="cursor: pointer;">Pi</div></div><div><div style="cursor: pointer;">EE</div></div><div><div style="cursor: pointer;">Rand</div></div></div><div class="calc-right"><div><div style="cursor: pointer;">mc</div></div><div><div style="cursor: pointer;">m+</div></div><div><div style="cursor: pointer;">m-</div></div><div><div style="cursor: pointer;">mr</div></div><div class="calc-brown"><div style="cursor: pointer;">AC</div></div><div class="calc-brown"><div style="cursor: pointer;">+/<sup>_</sup></div></div><div class="calc-brown calc-f19"><div style="cursor: pointer;">/</div></div><div class="calc-brown calc-f21"><div style="cursor: pointer;">*</div></div><div class="calc-black"><div style="cursor: pointer;">7</div></div><div class="calc-black"><div style="cursor: pointer;">8</div></div><div class="calc-black"><div style="cursor: pointer;">9</div></div><div class="calc-brown calc-f18"><div style="cursor: pointer;"><sup>_</sup></div></div><div class="calc-black"><div style="cursor: pointer;">4</div></div><div class="calc-black"><div style="cursor: pointer;">5</div></div><div class="calc-black"><div style="cursor: pointer;">6</div></div><div class="calc-brown calc-f18"><div style="cursor: pointer;">+</div></div><div class="calc-black"><div style="cursor: pointer;">1</div></div><div class="calc-black"><div style="cursor: pointer;">2</div></div><div class="calc-black"><div style="cursor: pointer;">3</div></div><div class="calc-blank"><textarea></textarea></div><div class="calc-orange calc-eq calc-f17"><div><div class="calc-down" style="cursor: pointer;">=</div></div></div><div class="calc-black calc-zero"><div><span style="cursor: pointer;">0</span></div></div><div class="calc-black calc-f21"><div style="cursor: pointer;">.</div></div></div></div><br></div><div id="mapw" style="display:none;"><div style="position: relative;"><a href="https://www.geody.com/geolook.php?world=terra&amp;ms=5&amp;mw=620&amp;mh=310&amp;cs="><img src="./Home_files/terra_nit_geody.jpg" id="img_mapw" alt="World Map" border="0" width="620" height="310" ismap=""></a></div><div class="txtsml">Enter a Place or a Coordinate - <a href="javascript:findme();">My Position</a></div><form name="qinp" id="qinp" action="https://www.geody.com/geolook.php" method="get"><input type="hidden" name="world" value="terra"><input type="hidden" name="map" value="col"><input type="text" name="q" id="q" value="" size="50" maxlength="128"><button type="submit" name="subm1" value="go">Go</button></form><br></div><div id="favs" style="display:block;"><center><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><div class="favlink_tablediv"><div class="favlink_cell" onclick="javascript:window.open(&#39;https://www.google.com/&#39;,&#39;_self&#39;);"><a href="https://www.google.com/" target="_self"><img src="./Home_files/favx_google_favicon.gif" alt="Google" class="favlink_rouimg"></a><br>Google</div><div class="favlink_cell" onclick="javascript:window.open(&#39;https://mail.google.com/&#39;,&#39;_self&#39;);"><a href="https://mail.google.com/" target="_self"><img src="./Home_files/favx_gmail_favicon.gif" alt="GMail" class="favlink_rouimg"></a><br>GMail</div><div class="favlink_cell" onclick="javascript:window.open(&#39;https://keep.google.com/&#39;,&#39;_self&#39;);"><a href="https://keep.google.com/" target="_self"><img src="./Home_files/favx_googlekeep_favicon.gif" alt="Notes" class="favlink_rouimg"></a><br>Notes</div><div class="favlink_cell" onclick="javascript:window.open(&#39;https://www.elfqrin.com/fakeid.php&#39;,&#39;_self&#39;);"><a href="https://www.elfqrin.com/fakeid.php" target="_self"><img src="./Home_files/favx_eq-man_favicon.gif" alt="ID Gen" class="favlink_rouimg"></a><br>ID Gen</div><div class="favlinkmore_cell" onclick="javascript:toggleFavX(5,1,2);"><img src="./Home_files/fav_more_bigpad_blu.gif" id="img_favsx1" alt="+" class="favlinkmore_rouimg"><br></div></div><div id="favsx1" style="display:none;"><div class="favlink_cell" onclick="javascript:window.open(&#39;https://news.google.com/&#39;,&#39;_self&#39;);"><a href="https://news.google.com/" target="_self"><img src="./Home_files/favx_google-news_favicon.gif" alt="News" class="favlink_rouimg"></a><br>News</div><div class="favlink_cell" onclick="javascript:window.open(&#39;https://www.youtube.com/&#39;,&#39;_self&#39;);"><a href="https://www.youtube.com/" target="_self"><img src="./Home_files/favx_youtube_favicon.gif" alt="YouTube" class="favlink_rouimg"></a><br>YouTube</div><div class="favlink_cell" onclick="javascript:window.open(&#39;https://www.netflix.com/&#39;,&#39;_self&#39;);"><a href="https://www.netflix.com/" target="_self"><img src="./Home_files/favx_netflix_favicon.gif" alt="Netflix" class="favlink_rouimg"></a><br>Netflix</div><div class="favlink_cell" onclick="javascript:window.open(&#39;https://www.facebook.com/&#39;,&#39;_self&#39;);"><a href="https://www.facebook.com/" target="_self"><img src="./Home_files/favx_facebook_favicon.gif" alt="Facebook" class="favlink_rouimg"></a><br>Facebook</div><div class="favlink_cell" onclick="javascript:window.open(&#39;https://www.merriam-webster.com/&#39;,&#39;_self&#39;);"><a href="https://www.merriam-webster.com/" target="_self"><img src="./Home_files/favx_merriam-webster_favicon.gif" alt="Dictionary" class="favlink_rouimg"></a><br>Dictionary</div><br clear="all"></div></td></tr></tbody></table></center></div><br clear="all"><table border="0" cellpadding="2" cellspacing="2"><tbody><tr><td class="txtsml1" valign="middle">Screen resolution<br>1366 x 768 px</td><td class="txtsml1" valign="middle">Color depth<br>24 bit<!-- (16777216 Colors) --></td><td class="txtsml1" valign="middle"><div id="win_size">Window size<br>1366 x 586 px</div></td><td class="txtsml1" rowspan="2" valign="middle"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><div id="jxface" style="position:relative; z-index:5; width:75; height:75; overflow:hidden;"><div id="jxeye1" style="position: absolute; z-index: 6; left: 27.9797px; top: 19.6144px;"><img src="./Home_files/jxeye_1.gif" width="6" height="11" alt="" id="img_jxeye1"></div><div id="jxeye2" style="position: absolute; z-index: 6; left: 47.9693px; top: 19.7549px;"><img src="./Home_files/jxeye_2.gif" width="6" height="11" alt="" id="img_jxeye2"></div><img src="./Home_files/jxface_happy_dark.gif" width="75" height="75" alt="" title="Meep!" id="img_jxface" onclick="javascript:alert(&quot;Meeeep!&quot;);"></div></td></tr></tbody></table></td></tr><tr><td colspan="3"><div class="grad_cols_0_000" onclick="javascript:toggleBox(&#39;colorpicker&#39;,2);" style="cursor: pointer;"></div><div class="grad_cols_0_111" onclick="javascript:toggleBox(&#39;colorpicker&#39;,2);" style="cursor: pointer;"></div><div class="grad_cols_0_222" onclick="javascript:toggleBox(&#39;colorpicker&#39;,2);" style="cursor: pointer;"></div><div class="grad_cols_0_333" onclick="javascript:toggleBox(&#39;colorpicker&#39;,2);" style="cursor: pointer;"></div><div class="grad_cols_0_444" onclick="javascript:toggleBox(&#39;colorpicker&#39;,2);" style="cursor: pointer;"></div><div class="grad_cols_0_555" onclick="javascript:toggleBox(&#39;colorpicker&#39;,2);" style="cursor: pointer;"></div><div class="grad_cols_0_666" onclick="javascript:toggleBox(&#39;colorpicker&#39;,2);" style="cursor: pointer;"></div><div class="grad_cols_0_777" onclick="javascript:toggleBox(&#39;colorpicker&#39;,2);" style="cursor: pointer;"></div><div class="grad_cols_0_888" onclick="javascript:toggleBox(&#39;colorpicker&#39;,2);" style="cursor: pointer;"></div><div class="grad_cols_0_999" onclick="javascript:toggleBox(&#39;colorpicker&#39;,2);" style="cursor: pointer;"></div><div class="grad_cols_0_aaa" onclick="javascript:toggleBox(&#39;colorpicker&#39;,2);" style="cursor: pointer;"></div><div class="grad_cols_0_bbb" onclick="javascript:toggleBox(&#39;colorpicker&#39;,2);" style="cursor: pointer;"></div><div class="grad_cols_0_ccc" onclick="javascript:toggleBox(&#39;colorpicker&#39;,2);" style="cursor: pointer;"></div><div class="grad_cols_0_ddd" onclick="javascript:toggleBox(&#39;colorpicker&#39;,2);" style="cursor: pointer;"></div><div class="grad_cols_0_eee" onclick="javascript:toggleBox(&#39;colorpicker&#39;,2);" style="cursor: pointer;"></div><div class="grad_cols_0_fff" onclick="javascript:toggleBox(&#39;colorpicker&#39;,2);" style="cursor: pointer;"></div><div class="grad_cols_0_eee" onclick="javascript:toggleBox(&#39;colorpicker&#39;,2);" style="cursor: pointer;"></div><div class="grad_cols_0_ddd" onclick="javascript:toggleBox(&#39;colorpicker&#39;,2);" style="cursor: pointer;"></div><div class="grad_cols_0_ccc" onclick="javascript:toggleBox(&#39;colorpicker&#39;,2);" style="cursor: pointer;"></div><div class="grad_cols_0_bbb" onclick="javascript:toggleBox(&#39;colorpicker&#39;,2);" style="cursor: pointer;"></div><div class="grad_cols_0_aaa" onclick="javascript:toggleBox(&#39;colorpicker&#39;,2);" style="cursor: pointer;"></div><div class="grad_cols_0_999" onclick="javascript:toggleBox(&#39;colorpicker&#39;,2);" style="cursor: pointer;"></div><div class="grad_cols_0_888" onclick="javascript:toggleBox(&#39;colorpicker&#39;,2);" style="cursor: pointer;"></div><div class="grad_cols_0_777" onclick="javascript:toggleBox(&#39;colorpicker&#39;,2);" style="cursor: pointer;"></div><div class="grad_cols_0_666" onclick="javascript:toggleBox(&#39;colorpicker&#39;,2);" style="cursor: pointer;"></div><div class="grad_cols_0_555" onclick="javascript:toggleBox(&#39;colorpicker&#39;,2);" style="cursor: pointer;"></div><div class="grad_cols_0_444" onclick="javascript:toggleBox(&#39;colorpicker&#39;,2);" style="cursor: pointer;"></div><div class="grad_cols_0_333" onclick="javascript:toggleBox(&#39;colorpicker&#39;,2);" style="cursor: pointer;"></div><div class="grad_cols_0_222" onclick="javascript:toggleBox(&#39;colorpicker&#39;,2);" style="cursor: pointer;"></div><div class="grad_cols_0_111" onclick="javascript:toggleBox(&#39;colorpicker&#39;,2);" style="cursor: pointer;"></div><div class="grad_cols_0_000" onclick="javascript:toggleBox(&#39;colorpicker&#39;,2);" style="cursor: pointer;"></div></td></tr></tbody></table><div id="colorpicker" style="display:none;"><form name="console" id="console" method="post"><table border="0" cellpadding="2" cellspacing="2"><tbody><tr><td>Color</td><td><input type="color" id="colpick1" name="colpick1" onchange="javascript:cpcolpick2colval(); colupdate();"></td></tr><tr><td>RGB H</td><td><input type="text" id="colrgbhex" name="colrgbhex" value="" size="7" maxlength="7" onchange="javascript:cpcolval2colpick(); colupdate();"></td></tr><tr><td>RGB D</td><td><input type="text" id="colrgbdec" name="colrgbdec" value="" readonly=""></td></tr><tr><td>HSL</td><td><input type="text" id="colhsl" name="colhsl" value="" readonly=""></td></tr><tr><td>HSV</td><td><input type="text" id="colhsv" name="colhsv" value="" readonly=""></td></tr><tr><td>CMYK</td><td><input type="text" id="colcmyk" name="colcmyk" value="" readonly=""></td></tr></tbody></table></form></div><br><center><div class="choosetheme">Theme: <a href="javascript:var cxTheme=0; bpressgrp(2,1,4); changeThemeTime(cxTheme,dlsthm,dlenhm);" class="button_up" id="bt_2_1">Auto</a>&nbsp;&nbsp;<a href="javascript:var cxTheme=1; bpressgrp(2,2,4); changeThemeTime(cxTheme,dlsthm,dlenhm);" class="button_up" id="bt_2_2">Light</a>&nbsp;&nbsp;<a href="javascript:var cxTheme=2; bpressgrp(2,3,4); changeThemeTime(cxTheme,dlsthm,dlenhm);" class="button_dn" id="bt_2_3">Dark</a>&nbsp;&nbsp;<a href="javascript:var cxTheme=3; bpressgrp(2,4,4); changeThemeTime(cxTheme,dlsthm,dlenhm);" class="button_up" id="bt_2_4">None</a></div></center><br><div class="txtsml">Page Loaded: Fri 09 Aug 2019 17:45:31 UTC--4</div><div class="txtsml">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36<br></div><br><table border="0" cellspacing="1" cellpadding="1" width="100%"><tbody><tr><td valign="bottom" align="left" width="15%"><div style="white-space: nowrap;"><span id="onlineled" class="ledon"></span> <span id="onlinestatus"><span class="online">Online</span></span></div></td><td valign="middle" align="center" width="70%"><div id="about" class="about" style="display:none;"><b><a href="https://www.geody.com/home">Geody Home</a> by Valerio Capello / Geody Labs, 2018</b><br>Third Party Modules:<br>CalcCSS3: <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a> by Peter Dematté, 2010-2015.<br>Christmas Light: <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a> by Toby, 2018.<br>RGB, HSV, HSL Color Conversion Algorithms: <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a> by Michael Jackson<!-- [not the King of Pop] -->, 2013.<br></div><center><div class="aboutlink"><a href="javascript:toggleBox(&#39;about&#39;,2);">About</a>&nbsp;&nbsp;<a href="https://www.geody.com/home">Geody Home</a>&nbsp;&nbsp;<a href="http://www.geody.org/">Geody.org</a></div></center></td><td valign="bottom" align="right" width="15%"></td></tr></tbody></table>
+<script language="JavaScript" type="text/javascript" src="./Home_files/CalcSS3.js.download"></script>
+<script language="JavaScript" type="text/javascript">
+<!--
+if (shwCalc && !startshwCalc) {
+toggleBox('calc',0);
+}
+// -->
+</script>
+
+<noscript>
+<div class="txtsml">JavaScript: DISABLED<br /></div>
+</noscript>
+
+</div></td></tr></tbody></table>
+</center>
+
+
+<script type="text/javascript" src="chrome-extension://mefkdbekccdbdihhondepjimindlbpfg/js/content.js"></script><script type="text/javascript" async="" src="./Home_files/21a72d882921295225.js.download"></script><table cellspacing="0" cellpadding="0" class="gstl_50 gssb_c" style="width: 183px; display: none; top: 175px; left: 533px; position: absolute;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table>
+  <a href="https://www.geody.com/home/?fbclid=IwAR2pJx4cmKRDyfsdCd4KPRfvEpbtRDqS7jjCCRCxKStATbojeXSoBwM1S9g#!" class="sheetaki-trigger hidden" id="sheetaki_trigger">
+    <img src="./Home_files/logo.png" width="20" height="20">
+    SheetAside
+  </a>
+  <div id="sheetaki_container">
+    <a href="https://www.geody.com/home/?fbclid=IwAR2pJx4cmKRDyfsdCd4KPRfvEpbtRDqS7jjCCRCxKStATbojeXSoBwM1S9g#!" class="sheetaki-close-button">Close</a>
+    <iframe class="sheetaki_frame" id="sheetaki_frame" src="./Home_files/saved_resource.html" width="100%" height="100%"></iframe>
+  </div>
+<span style="margin: 0px auto; border: 2px dotted rgb(0, 0, 0); position: absolute; z-index: 2147483647; visibility: hidden; left: 1040px; width: 0px; top: 122px; height: 0px;"></span><span style="z-index: 2147483647; position: absolute; visibility: hidden; left: 1025px; width: 50px; top: 107px; height: 20px; font-size: 10px; color: black;"></span></body><loom-container id="lo-engage-ext-container"><loom-shadow classname="resolved"></loom-shadow></loom-container></html>
