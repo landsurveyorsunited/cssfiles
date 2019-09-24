@@ -11,6 +11,123 @@
 <script type='text/javascript' src='../x.js'></script>
 <script type='text/javascript' src='../lib/xaniline.js'></script>
 <script type='text/javascript' src='layout8.js'></script>
+  <style>/* A Cross-Browser.com X demo.
+   Default style rules for layout8.html.
+*/
+
+/* Presentational rules. */
+
+body, html {
+  margin:0;
+  padding:0;
+  color:#000;
+  background:#a7a09a;
+  font-family:verdana,arial,helvetica,sans-serif;
+}
+p {
+  margin:.5em 0;
+  padding:0;
+}
+h4 {
+  margin-top: 1.5em;
+}
+img.w3cImg {
+  border:none;
+}
+
+#Header {
+  padding:0;
+}
+#Header h1 {
+  margin:0;
+  padding:5px;
+}
+#Header p {
+  margin:0;
+  padding:5px 5px 10px 5px;
+}
+#Page {
+  background:#99c;
+}
+#Header {
+  background:#ddd;
+}
+#NavBar {
+  background:#c99;
+  font-size:smaller;
+}
+#PgBody {
+  background:transparent;
+}
+.Content {
+  padding: 10px;
+  background:#9c9;
+}
+.Content li {
+  margin: 0 0 1.5em 0;
+}
+#SideBar {
+  background:#99c;
+  padding:10px;
+  font-size:smaller;
+}
+#Footer {
+  padding:5px;
+  background:#cc9;
+  font-size:smaller;
+}
+
+/* Downgrade layout rules.
+   If Js is enabled, some of these rules will be over-ridden by the rules in layout8x.css.
+*/
+
+body {
+  min-width:750px;
+  text-align:center; /* to center idPage in IE6 */
+}
+#Page {
+  position: relative;
+  margin:10px auto; /* to center Page in modern browsers */
+  padding:0;
+  width:750px;
+  text-align:left; /* to keep the above from being inherited */
+}
+#Header {
+  margin:0;
+}
+#NavBar {
+  margin:0;
+  padding:5px;
+}
+#NavBar ul {
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+#NavBar li {
+  display:inline;
+  margin:0 4px;
+  padding:0;
+}
+#PgBody {
+  position: relative;
+  width:750px;
+  margin:0;
+  padding:0;
+}
+.Content {
+  margin: 0 0 0 250px;
+}
+#SideBar {
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  width:230px;
+  margin:0;
+  padding:10px;
+}
+ SheetAside</style>
 </head>
 <body>
 <div id="Page">
