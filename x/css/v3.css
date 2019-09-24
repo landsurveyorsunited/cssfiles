@@ -1,0 +1,398 @@
+/* v3.css
+   cross-browser.com
+   These are site-wide styles and are not required for any of the demos.
+*/
+
+* {
+  margin:0;
+  padding:0;
+}
+
+html {
+  color:#000; background:#fff;
+}
+body {
+  color:#000; background:#fff;
+  font-size:small;
+  font-family:verdana,arial,helvetica,sans-serif;
+}
+
+/* Anchor Elements */
+
+a:link {
+  color:#596380; background:transparent;
+  text-decoration:underline;
+}
+a:visited {
+  color:#596380; background:transparent;
+  text-decoration:underline;
+}
+a:active {
+  color:#596380; background:transparent;
+  text-decoration:underline;
+}
+a:hover {
+  color:#333333; background:#BF8660;
+  text-decoration:none;
+}
+            
+a.googlelogo, a:hover.googlelogo {
+  background:transparent;
+}
+img.googleImg, img.w3cImg, img.fsfImg, img.ppImg {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  vertical-align: top;
+  border: none;
+}
+#menubar1 a:link, #menubar1 a:visited, #menubar1 a:active {
+  color:#596380; background:transparent;
+  text-decoration:none;
+  font-weight:bold;
+  padding:1px;
+}
+#menubar1 a:hover {
+  color:#333333; background:#BF8660;
+  text-decoration:none;
+  font-weight:bold;
+  padding:1px;
+}
+
+.mnuBox a:link {
+  color:#596380; background:transparent; /* #727EA3; */
+  text-decoration:none;
+  padding:1px;
+  display:block;
+  width:100%;
+}
+.mnuBox a:visited, .mnuBox a:active {
+  color:#596380; background:transparent; /* #727EA3; */
+  text-decoration:none;
+  padding:1px;
+  display:block;
+  width:100%;
+}
+.mnuBox a:hover {
+  color:#333333; background:#BF8660;
+  text-decoration:none;
+  padding:1px;
+  display:block;
+  width:100%;
+}
+
+.xPopupMenu .mnuBox a:link, .xPopupMenu .mnuBox a:visited, .xPopupMenu .mnuBox a:active {
+  color:#596380; background:transparent; /* #CFD4E6; */
+}
+.xPopupMenu .mnuBox a:hover {
+  color:#333333; background:#BF8660;
+}
+
+.mnuOpt a:link {
+  color:#BF8660; background:#BF8660; /* 727EA3; */
+  text-decoration:none;
+  display:inline;
+  width:100%;
+}
+.mnuOpt a:visited, .mnuOpt a:active {
+  color:#596380; background:#727EA3;
+  text-decoration:none;
+  display:inline;
+  width:100%;
+}
+.mnuOpt a:hover {
+  color:#333333; background:#BF8660;
+  text-decoration:none;
+  display:inline;
+  width:100%;
+}
+
+.xPopupMenu .mnuOpt a:link, .xPopupMenu .mnuOpt a:visited, .xPopupMenu .mnuOpt a:active {
+  color:#596380; background:#CFD4E6;
+}
+.xPopupMenu .mnuOpt a:hover {
+  color:#333333; background:#BF8660; /* CCA78F; */
+}
+
+#footer a:link, #footer a:visited, #footer a:active, #footer a:hover {
+  text-decoration:none;
+}
+
+.inA {
+  display:inline;
+}
+
+/* Misc. Elements */
+
+b {
+  font-weight:bold;
+  color:#000; background:transparent;
+}
+p {
+  color:#000; background:transparent;
+  margin:.3em 0 .5em 0; padding:0;
+  line-height:1.5em;
+}
+li {
+  margin-left: 1em;
+  margin-bottom:.5em;
+}
+pre {
+  font-family:'courier new',monospace;
+  color:#596380; background:transparent;
+  border:1px dotted #596380;
+  margin:4px 2px 10px 2px; padding:10px;
+  overflow:auto;
+  font-size:small; /* had to add this because IE was rendering it smaller */
+  max-height:32em;
+}
+code, tt {
+  font-family:'courier new',monospace;
+  color:#596380; background:transparent;
+  font-size:small; /* had to add this because IE was rendering it smaller */
+}
+
+/* Heading Elements */
+
+.h1Color { color:#596380; }
+h1 {
+  color:#596380;
+  background:transparent;
+  font-weight:normal;
+  margin:0; padding:0 0 6px 0;
+  text-align:left;
+  font-size:xx-large;
+}
+
+.h2Color { color:#BF8660; }
+.h2Bkgnd { background:#BF8660; }
+h2 {
+  color:#BF8660;
+  background:transparent;
+  font-weight:bold;
+  margin:2em 0 1em 0; padding:4px 0px;
+  font-size:large;
+}
+
+.h3Color { color:#596380; }
+h3 {
+  color:#596380;
+  margin:2em 0 1em 0; padding:0 0 0 0;
+  font-weight:bold;
+  font-size:medium;
+}
+
+#rightColumn h3 {
+  font-size:small;
+}
+
+.h4Color { color:#BF8660; }
+h4 {
+  color:#BF8660;
+  margin:1.6em 0 .6em 0; padding:0;
+  font-weight:bold;
+  font-size:small;
+}
+
+.mnuBox h4 {
+  margin:.5em 0;
+}
+
+h5 {
+  color:#596380; background:transparent;
+  margin:1.6em 0 .6em 0; padding:0;
+  font-weight:bold;
+  font-size:x-small;
+}
+
+.h5i { /* H5 'inline' */
+  color:#596380;
+  background:transparent;
+  margin:1.6em 2em .6em 0;
+  padding:0;
+  font-weight:bold;
+  font-size:x-small;
+}
+
+.h4P {
+  margin:.3em 0 .5em .25em; padding:0;
+}
+.h5P {
+  margin:.3em 0 .5em .5em; padding:0;
+  font-size:x-small;
+}
+
+/* Misc. Classes */
+
+#topLinkCon {
+  margin:0; padding:0;
+}
+.smaller {
+  font-size:smaller;
+}
+.textInput {
+  font-family:'courier new',monospace;
+  color:#000; background:#fff;
+  width:140px;
+}
+.inpTxt {
+  color:#000; background:#CCA78F;
+  font-family:'Courier New',monospace;
+  font-size:12px;
+  border:1px solid #596380;
+}
+.inpBtn {
+  color:#000; background:#CCA78F;
+  font-size:10px;
+  border:1px solid #596380;
+  cursor:pointer;
+}
+.noDisp {
+  display:none;
+}
+.collapsible {
+  margin:0; padding:0;
+  overflow:hidden;
+  display:block;
+}
+
+.hint, .titleHover { /* for non-A elements that have title='some info' */
+  border-bottom: 1px dotted #BF8660;
+  cursor: help;
+}
+
+/* Sidebar Menu */
+
+.mnuBox, .mnuOpt {
+  margin:0 0 4px 0; padding:4px 2px 4px 2px;
+  overflow:hidden;
+}
+.mnuBox p, .mnuOpt p {
+  margin:0; padding:0;
+  line-height:1.2em;
+  font-size:smaller;
+}
+
+/* Layout */
+
+#header {
+  background:transparent;
+  overflow:hidden;
+  margin:0; padding:0;
+  margin-bottom:30px;
+}
+
+#menubar1 {   /* static, horizontal site menu */
+  color:#596380;
+  background:transparent;
+  padding:2px;
+  margin:0;
+  font-weight:normal;
+  text-align:right;
+}
+#menubar1 b {
+  color:#BF8660;
+}
+
+.column {
+  top:20px; /* 90px; */ /* just estimate it ;-) */
+  position:absolute; overflow:hidden;
+  background:transparent;
+  margin:0; padding:0;
+}
+#leftColumn {
+  left:3%; width:70%;
+}
+#rightColumn {
+  left:73%; /* rightCol.left = leftCol.left + leftCol.width */
+  width:26%; /* rightCol.width = 99 - rightCol.left */
+}
+.leftContent, .firstLeftContent {
+  background:#fff; /* CFD4E6; */
+  overflow:hidden;
+  margin:0 0 10px 0;
+  padding:10px 20px 20px 20px;
+}
+.rightContent {
+  background:#CFD4E6; /* 727EA3; */
+  overflow:hidden;
+  margin:0 0 10px 0;
+  padding:10px 20px 20px 20px;
+}
+/*
+.rightContent .collapsible p {
+  font-size:smaller;
+}
+*/
+.rightContent {
+  font-size:smaller;
+}
+
+#footer {
+  font-size:smaller;
+  text-align:center;
+  padding:10px 20px 10px 20px;
+  border:none;
+}
+
+/* Objects */
+
+.xToolbar {
+  position:absolute; overflow:hidden;
+  background:transparent;
+  width:24px;
+}
+
+.xButton {
+  overflow:hidden;
+  margin:2px;
+  width:16px; height:14px;
+  color:#596380; background:#CFD4E6;
+  font-size:xx-small;
+  font-weight:bold;
+  cursor:pointer;
+  text-align:center;
+  border-left:1px solid #CFD4E6;
+  border-top:1px solid #CFD4E6;
+  border-right:1px solid #BF8660;
+  border-bottom:1px solid #BF8660;
+}
+.xButtonHover {
+  overflow:hidden;
+  margin:2px;
+  width:16px; height:14px;
+  color:#CFD4E6; background:#BF8660;
+  font-size:xx-small;
+  font-weight:bold;
+  cursor:pointer;
+  text-align:center;
+  border:1px solid #BF8660;
+}
+
+.xPopupMenu {
+  position:absolute;
+  color:#596380; background:#FFF; /* CFD4E6; */
+  margin:0; padding:3px;
+  border:1px outset #596380;
+}
+
+h3 {
+  position:relative;
+}
+.CollapseIcon, .ExpandIcon {
+  position:absolute;
+  overflow:hidden;
+  left:-20px;
+  top:3px;
+  width:13px;
+  height:13px;
+  margin:0;
+  padding:0;
+  cursor:pointer;
+}
+.CollapseIcon {
+  background-image:url("../images/down_arrow_13x13.gif");
+}
+.ExpandIcon {
+  background-image:url("../images/right_arrow_13x13.gif");
+}

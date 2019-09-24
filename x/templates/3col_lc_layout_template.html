@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Three Column Liquid Center CSS Layout Template</title>
+<meta name='author' content='Author'>
+<meta name='description' content='Description'>
+<meta name='keywords' content='Keywords'>
+<link rel='stylesheet' type='text/css' href=''>
+<style type='text/css'>
+* {
+  margin:0;
+  padding:0;
+}
+html, body {
+  color:#000;
+  background-color:#e5e4d7;
+  font-size:small;
+  font-family:verdana,arial,helvetica,sans-serif;
+}
+
+p {
+  margin: .5em 0;
+}
+h1 {
+  margin: .5em 0 .25em 0;
+  font-size: x-large;
+  color: #2C6700;
+}
+h2 {
+  margin: 1em 0 .5em 0;
+  font-size: large;
+  color: #2C6700;
+}
+h3 {
+  margin: 1em 0 .5em 0;
+  font-size: medium;
+  color: #2C6700;
+}
+h4 {
+  margin: 1em 0 .5em 0;
+  font-size: small;
+  color: #2C6700;
+}
+a {
+  color: #2C6700;
+  background-color: transparent;
+}
+a:hover {
+  color: #FFF;
+  background-color: #2C6700;
+}
+.fw {
+  font-weight:bold;
+}
+.btn {
+  cursor: pointer;
+  border-bottom: 1px dotted #2C6700; 
+}
+#layout-vmenu ul {
+  list-style:none;
+}
+#layout-vmenu li {
+  margin:0 0 .5em 0;
+  line-height:1.1em;
+}
+#layout-container {
+  margin: 20px 40px;
+}
+#layout-col-container {
+  position: relative;
+  overflow:hidden;
+  height: 100%;
+  background-color: #FFCF79; /* same as left/right cols */
+}
+#layout-cen-col-container {
+  float:left;
+  width:100%;
+  background-color: transparent;
+}
+#layout-cen-col-content {
+  margin: 0 175px;
+  background-color: #E5E4D7;
+}
+#layout-left-col-container,
+#layout-right-col-container {
+  background-color: #FFCF79;
+  float:left;
+  width:175px;
+}
+#layout-left-col-container {
+  margin-left:-100%;
+}
+#layout-right-col-container {
+  margin-left:-175px;
+}
+#layout-left-col-content,
+#layout-right-col-content {
+  font-size: smaller;
+}
+#layout-left-col-content,
+#layout-cen-col-content,
+#layout-right-col-content {
+  padding: 10px;
+}
+#layout-header,
+#layout-footer {
+  padding: 10px;
+  text-align: center;
+  background-color: #92CD00;
+}
+#layout-footer {
+  clear:left;
+}
+</style>
+<script type='text/javascript' src='../x.js'></script>
+<script type='text/javascript'>
+xAddEventListener(window, 'load',
+  function() {
+  }, false
+);
+</script>
+</head>
+<body>
+
+<div id='layout-container'>
+
+<div id='layout-header'>
+  <h1>CSS Layout Template</h1>
+  <p><em>3-Column CSS Layout with liquid center and fixed-width left/right columns</em></p>
+</div><!-- end layout-header -->
+
+<div id='layout-col-container'>
+
+<div id='layout-cen-col-container' class='Column'>
+  <div id='layout-cen-col-content'>
+    <h2>Behaviors</h2>
+    <p><a href='../x/examples/layout7.html'>Here</a> is a demo that adds some Js behaviors to this layout.</p>
+    <h2>But I must explain</h2>
+    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui do<a href="http://lipsum.com/" title="Read about Lorem Ipsum at lipsum.com">lorem ipsum</a> quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+    <h2>Sed ut perspiciatis</h2>
+    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui do<a href="http://lipsum.com/" title="Read about Lorem Ipsum at lipsum.com">lorem ipsum</a> quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+    <h3>Nemo enim ipsam</h3>
+    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+    <h3>Neque porro quisquam</h3>
+    <p>Neque porro quisquam est, qui do<a href="http://lipsum.com/" title="Read about Lorem Ipsum at lipsum.com">lorem ipsum</a> quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+  </div><!-- end layout-cen-col-content -->
+</div><!-- end layout-cen-col-container -->
+
+<div id='layout-left-col-container' class='Column'>
+  <div id='layout-left-col-content'>
+    <div id='layout-vmenu'>
+      <h3>Menu</h3>
+      <ul>
+        <li><a href='http://cross-browser.com/x/lib/view.php?sym=xHeight'>xHeight</a></li>
+        <li><a href='http://cross-browser.com/x/lib/view.php?sym=xMoveTo'>xMoveTo</a></li>
+        <li><a href='http://cross-browser.com/x/lib/view.php?sym=xSlideTo'>xSlideTo</a></li>
+        <li><a href='http://cross-browser.com/x/lib/view.php?sym=xSplitter'>xSplitter</a></li>
+        <li><a href='http://cross-browser.com/x/lib/view.php?sym=xAnimation'>xAnimation</a></li>
+        <li><a href='http://cross-browser.com/x/lib/view.php?sym=xHttpRequest'>xHttpRequest</a></li>
+        <li><a href='http://cross-browser.com/x/lib/view.php?sym=xGetElementById'>xGetElementById</a></li>
+        <li><a href='http://cross-browser.com/x/lib/view.php?sym=xAddEventListener'>xAddEventListener</a></li>
+      </ul>
+    </div><!-- end layout-vmenu -->
+    <h3>Stuff</h3>
+    <p><span class='fw'>Excepteur</span> sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p><span class='fw'>Lorem ipsum</span> dolor sit amet, consectetaur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p><span class='fw'>Ut enim</span> ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div><!-- end layout-left-col-content -->
+</div><!-- end layout-left-col-container -->
+
+<div id='layout-right-col-container' class='Column'>
+  <div id='layout-right-col-content'>
+    <h3>More Stuff</h3>
+    <p><span class='fw'>This</span> demo uses a CSS layout technique illustrated at the <a href='http://blog.html.it/layoutgala/'>Layout Gala</a>.</p>
+    <p><span class='fw'>Ut enim</span> ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p><span class='fw'>Lorem ipsum</span> dolor sit amet, consectetaur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p><span class='fw'>Excepteur</span> sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div><!-- end layout-right-col-content -->
+</div><!-- end layout-right-col-container -->
+
+</div><!-- end layout-col-container -->
+
+<div id='layout-footer'>
+For more Javascript toys visit <a href='http://cross-browser.com/'>Cross-Browser.com</a></a>
+</div><!-- end layout-footer -->
+
+</div><!-- end layout-container -->
+
+</body>
+</html>

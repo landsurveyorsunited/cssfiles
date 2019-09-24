@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  The comments on each node below refer to how "view.php" displays that node.
+
+  Using "[code]...[/code]" for preformatted text is supported in these nodes:
+  description, syntax, parameters.par.note, return, properties.prop.note,
+  methods.meth.note, comments.comment.note and revisions.rev.note.
+-->
+
+<x_symbol id=''>
+
+<!-- The sources node is optional. The first src node is considered the default
+     implementation. Any other src nodes are alternative implementations. -->
+<sources>
+  <src><sym></sym><file></file><note><![CDATA[]]></note></src>
+</sources>
+
+<!-- The copyright and license nodes are optional. -->
+<copyright>Copyright [your date] [your name] ([your URL])</copyright>
+<license>Part of X, a Cross-Browser Javascript Library, Distributed under the terms of the GNU LGPL</license>
+
+<!-- Valid values for a grp node are: Animation, DOM, Debug, Event, Image,
+     Iteration, Misc, Position, Size, String, Style, Table, UI or Window. -->
+<groups>
+  <grp></grp>
+</groups>
+
+<!-- Valid values for the type node are: Var, Object, Property, Method or
+     Function. -->
+<type></type>
+
+<!-- The description node is optional. -->
+<description><![CDATA[]]></description>
+
+<!-- The syntax node is optional. -->
+<syntax></syntax>
+
+<!-- The parameters node is optional. -->
+<parameters>
+  <par><name></name><note><![CDATA[]]></note></par>
+  <par><name></name><note><![CDATA[]]></note></par>
+</parameters>
+
+<!-- The properties node is optional. The heading for this section is
+     "Public Properties". -->
+<properties>
+  <prop><name></name><note><![CDATA[]]></note></prop>
+  <prop><name></name><note><![CDATA[]]></note></prop>
+</properties>
+
+<!-- The methods node is optional. The heading for this section is
+     "Public Methods". sym is optional within meth. If sym is present it will
+     become a link to the viewer for that symbol. See xAnimation for an example. -->
+<methods>
+  <meth><name></name><sym></sym><note><![CDATA[]]></note></meth>
+  <meth><name></name><note><![CDATA[]]></note></meth>
+</methods>
+
+<!-- The return node is optional. -->
+<return><![CDATA[]]></return>
+
+<!-- The dependencies node is optional. If present each dep will become a link
+     to the viewer for that symbol. -->
+<dependencies>
+  <dep></dep>
+  <dep></dep>
+</dependencies>
+
+<!-- The demos node is optional. -->
+<demos>
+  <demo><url></url><note><![CDATA[]]></note></demo>
+  <demo><url></url><note><![CDATA[]]></note></demo>
+</demos>
+
+<!-- The tests node is optional. The heading for this section is
+     "Discussions & Tests". -->
+<tests>
+  <test><date></date><author></author><url></url><note><![CDATA[]]></note></test>
+  <test><date></date><author></author><url></url><note><![CDATA[]]></note></test>
+</tests>
+
+<!-- The comments node is optional.  The heading for this section is "Notes". -->
+<comments>
+  <comment><date></date><author></author><note><![CDATA[]]></note></comment>
+  <comment><date></date><author></author><note><![CDATA[]]></note></comment>
+</comments>
+
+<!-- The revisions node is optional. -->
+<revisions>
+  <rev><num></num><date></date><author></author><note><![CDATA[]]></note></rev>
+  <rev><num></num><date></date><author></author><note><![CDATA[]]></note></rev>
+</revisions>
+
+</x_symbol>
