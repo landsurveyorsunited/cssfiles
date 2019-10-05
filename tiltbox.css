@@ -1,0 +1,138 @@
+/* Default Tilt Boxes Effect CSS
+	Original files here: http://www.dynamicdrive.com/dynamicindex17/tilt-content-boxes.htm
+*/
+
+
+.tiltwrapper{
+  overflow: hidden; /*remove this line to allow tilt content to spill over to other elements or trigger scrollbar */
+  padding: 0;
+}
+
+.tiltit{
+  transform-style: preserve-3d;
+  position: relative;
+  margin: auto 0;
+  display: flex;
+  justify-content: center; /* Horizontal alignment of content */
+  align-items: center; /* Vertical alignment of content */
+  margin: 10px; /* add some margin between wrapper */
+}
+
+.tiltit, .tiltit *{
+  box-sizing: border-box;
+}
+
+/* left column and children style */
+
+.tiltit .leftcol{}
+
+.tiltit .leftcol img{
+  width: 400px; /*width of left featured image */
+  height: auto;
+}
+
+/* right column and children style */
+
+.tiltit .rightcol{
+  margin-left: 10px;
+  font: bold 20px 'Bitter', sans-serif; /* use google font */
+  text-align: center;
+}
+
+.tiltit .rightcol > div{
+  margin-bottom: 10px; /* spacing between header text */
+}
+
+.tiltit div.smallheader{
+  font-size: 90%;
+}
+
+.tiltit div.mediumheader{
+  font-size: 150%;
+}
+
+.tiltit div.largeheader{
+  font-size: 200%;
+  text-transform: uppercase;
+}
+
+.tiltit input[type="text"]{
+  width: 100%;
+  font-size: 120%;
+  padding: 5px;
+}
+
+.tiltit button[type="submit"]{
+  display: block;
+  margin: 10px auto;
+  font-size: 100%;
+  padding: 5px 10px;
+}
+
+/* class that when applied raises up that area onhover */
+
+.tiltit .riseup{
+  transform: translateZ(0);
+  transition: all 1s;
+}
+
+.tiltit:hover .riseup{
+  transform: translateZ(50px);
+  transition: all 1s;
+}
+
+/* class that creates submit button drape effect */
+
+.drapeeffect{
+  background: none; /* button background */
+  color: white; /* button text color */
+  outline: none;
+  border-width: 0;
+  padding: 8px 10px; 
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 2;
+  position: relative;
+	display: inline-block;
+  cursor: pointer;
+  color: black;
+  border: 4px solid navy;
+	text-decoration: none; /* remove underline if using A instead of BUTTON tag */
+  overflow: hidden;
+  transition: all .5s;
+}
+
+.drapeeffect:after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: navy; /* white background with high transparency */
+  top: 0;
+  left: -100%;
+  z-index: -1;
+  transition: all .5s;
+}
+
+.drapeeffect:hover{
+  color: white;
+}
+
+.drapeeffect:hover:after{
+  border-radius: 0;
+  left: 0;
+  transition: left .5s, border-radius .1s .5s;
+}
+
+/* Responsive Layout CSS for tilt boxes */
+
+@media screen and (max-width: 765px){
+  
+  .tiltwrapper{
+    overflow: hidden;
+  }
+  
+  .tiltit{
+    flex-direction: column; /* display flex children as columns */
+  }
+}
