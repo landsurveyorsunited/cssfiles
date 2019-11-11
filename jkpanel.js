@@ -30,4 +30,4 @@ var jkpanel={
 }
 
 //Initialize script: jkpanel.init('path_to_content_file', 'height of content DIV in px', animation_duration)
-jkpanel.init('panelcontent.htm', '200px', 500)
+jkpanel.init('https://landsurveyorsunited.github.io/cssfiles/panelcontent.htm', '200px', 500)
