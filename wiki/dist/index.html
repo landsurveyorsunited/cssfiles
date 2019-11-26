@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Wikipedia Viewer App</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<script src="https://use.fontawesome.com/2605df8b93.js"></script>
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+ 
+<div class="container-fluid wrapper" id="cont">
+ <!-- App's head beginning -->
+   <div class="row">
+    <div class="text-center" id="head">
+      <h1>Wikipedia Viewer Application</h1>
+      </div>
+    </div>
+  <!--App's head end -->
+  
+  <!--App's body beginning-->
+    <div class="row">
+    <div class="col-sm-12  text-center" id="content">
+  <input type="text" href="#myModal" class="form-control" id="searchField" placeholder="Search Wikipedia...">
+    <a href="#myModal" type="submit" class="btn btn-primary" id="inputSearch" >
+    Get an article
+      </a>
+    <a class="btn btn-primary" type="submit"  href="https://en.wikipedia.org/wiki/Special:Random" id="randomBtn" target="blank">
+      or get a random article...
+      </a>  
+    </div>
+    </div>
+ <!--container-fluid's end -->
+  <!--App's body end -->
+
+<!-- Modal block's beginning -->
+<div class="dm-overlay" id="myModal">
+    <div class="dm-table">
+        <div class="dm-cell">
+            <div class="dm-modal">
+              <a href="#close" class="close"><p>Close</p></a>
+              <ul id="myOutput" type="text" class="col-md-6 col-md-offset-3" ></ul>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Modal block's end -->
+
+  <!--App's footer beginning -->
+<div id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+      <p>By Nikolay Milya &copy; 2017. All Rights Reserved</p>
+      </div>
+    </div>
+    </div>
+</div>
+  <!--App's footer end-->
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

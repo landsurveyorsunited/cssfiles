@@ -1,0 +1,173 @@
+body{
+  font-family: Lobster, Times New Roman;
+  background:url("https://s8.hostingkartinok.com/uploads/images/2017/07/19bfccb4dc75777efc97daeb7840eb0b.jpg") no-repeat;
+  width: 100%; 
+}
+
+#head{
+  color: white;
+  padding-bottom: 10px;
+  height: 100%;
+  width: 100%;
+  margin-top: 20px;
+  text-shadow: 2px 2px 3px black;  
+}
+  
+#randomBtn,
+#inputSearch{
+  height: 35px;
+  min-height: 30px;
+  line-height: 25px;
+  display: inline-block;
+  margin: 20px auto 15px;
+  padding: .5rem 1rem;
+  background: #300d11;
+  font-color: white;
+}
+
+
+
+#searchField{
+  height: 35px;
+  font-size: 20px;
+  width: 420px;
+  background: #fff;
+  border: 0.7px solid #ccc;
+  box-shadow: inset 0 0 0 1px #ccc;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 0 10px 10px;  
+}
+  
+#footer {
+    color: white;
+    height: 50px;
+    width: 100%;
+    display: inline-block;
+    text-shadow: 1px 1px 1px black;
+    font-color: red;                   
+}
+
+/* Close button css style BEGINNING */
+.close{
+  top: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    padding: 0;
+    border: 2px solid #ccc;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+    background-color: rgba(61, 61, 61, 0.8);
+    -webkit-box-shadow: 0px 0px 10px #000;
+    -moz-box-shadow: 0px 0px 10px #000;
+    box-shadow: 0px 0px 10px #000;
+    text-align: center;
+    text-decoration: none;
+    font: 13px/20px 'Tahoma', Arial, sans-serif;
+    font-weight: bold;
+    -webkit-transition: all ease .8s;
+    -moz-transition: all ease .8s;
+    -ms-transition: all ease .8s;
+    -o-transition: all ease .8s;
+     transition: all ease .8s;
+}
+
+.close:before {
+    color: rgba(255, 255, 255, 0.9);
+    content: "X";
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+    font-size: 12px;
+}
+.close:hover {
+    background-color: rgba(252, 20, 0, 0.8);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);    
+}
+/* Close button css style END */
+
+
+.txtStyle {
+  font-size: 2rem;
+  font-color: red;
+  width: 100%;
+  max-width: 1000px;
+  background: #fff;
+  border: .8px solid #ccc;
+  box-shadow: inset 0 0 0 .1em #ccc;
+  border-radius: .2em;
+  padding: 1rem;
+  margin: .2rem;
+}
+
+/* Modal block's settings*/
+.dm-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.65);
+    display: none;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.dm-overlay:target {
+    display: block;
+    -webkit-animation: fade .6s;
+    -moz-animation: fade .6s;
+    animation: fade .6s;
+}
+/* BLock's cell */
+.dm-table {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+/* Block's table cell */
+.dm-cell {
+    display: table-cell;
+    padding: 0 1em;
+    vertical-align: middle;
+    text-align: center;
+}
+/* Modal block */
+.dm-modal {
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 8px solid #ccc;
+    Border-radius: 7px; 
+    max-width: 1300px;
+    background: url('http://supernovathemes.com/wp-content/themes/supernovathemes/images/bg/b10.png');
+/* External shadow */
+    -webkit-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.22), 0px 19px 60px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.22), 0px 19px 60px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.22), 0px 19px 60px rgba(0, 0, 0, 0.3);
+    color: #4a3535;
+/* Animation */
+    -webkit-animation: fade .8s;
+    -moz-animation: fade .8s;
+    animation: fade .8s;
+}
+
+@-moz-keyframes fade {
+    from { opacity: 0; }
+to { opacity: 1 }
+}
+@-webkit-keyframes fade {
+    from { opacity: 0; }
+to { opacity: 1 } 
+}
+@keyframes fade {
+    from { opacity: 0; }
+to { opacity: 1 }
+}
