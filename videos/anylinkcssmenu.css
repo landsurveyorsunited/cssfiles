@@ -21,6 +21,7 @@ width: 200px; /* default width for menu */
 }
 
 .anylinkcss ul{
+  background-image: radial-gradient( circle farthest-corner at 5.2% 14.3%,  rgba(255,73,18,1) 0%, rgba(235,118,36,1) 47.4%, rgba(235,69,69,1) 100.2% );
 margin: 0;
 padding: 0;
 list-style-type: none;
