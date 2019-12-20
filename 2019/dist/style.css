@@ -13,6 +13,7 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   display: grid;
+  background-image: radial-gradient( circle 907px at 3.4% 19.8%,  rgba(255,243,122,1) 0%, rgba(255,102,145,1) 97.4% );
   grid-template-rows: min-content 1fr min-content;
 }
 
