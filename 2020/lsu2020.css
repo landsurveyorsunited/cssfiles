@@ -1,0 +1,3110 @@
+div#popupLogin.sign_form {background-image: radial-gradient( circle 907px at 3.4% 19.8%,  rgba(255,243,122,1) 0%, rgba(255,102,145,1) 97.4% );}
+/*Sub Heading Using Module*/
+.Site-SubHeading {margin-bottom:0px; font-size:16px;padding:10px 0px }
+a.tagit-label {color:#000!important;}
+/* Under Site Name Version, contents are available to add links etc*/
+.Site-Heading {margin-bottom:0px;margin-top:10px;font-size:16px;padding:0px 0px 10px 30px; color:white}
+.Site-Heading a{ color: gold }
+@media only screen and (max-width:771px){
+.Site-Heading {padding:10px}
+}
+ div.entry-tags.ux-entry-tags.pull-left a, div.entry-byline a, .entry-tags a {background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,0,0,1) 0%, rgba(0,0,0,1) 90% ); -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+padding:5px;
+line-height: 1.5;}
+
+a.pull-right,div.entry-tags.ux-entry-tags.pull-left a:hover, div.entry-byline a:hover, .entry-tags a:hover {background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(182,60,20,1) 0%, rgba(251,100,31,1) 90% );}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  box-shadow: 0px 0 10px rgba(0, 0, 0, 0.8);
+  z-index: 100;
+}
+section.entry-content.cf,div.groupHub-groupTitleContainer:hover, article.media-frame.entry.discussionSection-entry,article.media-frame.entry.discussionListPage-entry {background-image: radial-gradient( circle 906px at 9.7% -9%,  rgba(163,0,0,1) 25.7%, rgba(250,13,13,1) 60.5%, rgba(255,59,20,1) 100.2% );border-style: solid;
+  border-width: 5px;
+  border-top-color: lighten(#000, 20%);
+  border-right-color: lighten(#000, 0%);
+  border-bottom-color: lighten(#000, 20%);
+  border-left-color: lighten(#000, 0%);
+  box-shadow: 2px 2px 4px rgba(0,0,0,.6);
+ -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;}
+nav.header-nav.navbar {-webkit-transform: rotateY(30deg);
+    -moz-transform: rotateY(30deg);
+    -ms-transform: rotateY(30deg);
+    -o-transform: rotateY(30deg);
+    transform: rotateY(30deg) ;
+    -webkit-transition:-webkit-transform 1s;
+    -moz-transition:-moz-transform 1s;
+    -o-transition: -o-transform 1s;
+    -ms-transition: -ms-transform 1s;
+    transition: transform 1s;}
+nav.header-nav.navbar:hover { -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    -moz-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    -o-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+/** TAGS CLOUD SETTINGS, note this applies site wide **/
+.tagsList a{margin: 2.5px 1.5px }
+.tagsList a{ background:linear-gradient(#4BB2ED, #3692E5); padding: 3px 6px; font-size:13px; text-align:center; border-radius:4px; color:seashell;display:inline-block;float:left; box-shadow:1px 1px 2px grey }
+.tagsList a:hover{ background:#0177E5; color:white;text-decoration:none }
+.tagsList{ max-height:60vh; overflow:auto; padding:2px 0px; }
+.tagsList > a:first-letter{ text-transform:uppercase }
+
+div#cookieUsageBanner.cookie_usage_banner.top_banner {background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,0,0,1) 0%, rgba(0,0,0,1) 90% );}
+ p.membersListPage-userName,div.SP_Photo_Title,div.span4.pull12.tablet16.mobile16.column.column-narrow > div > footer > a, div.module-actions.cf > select,span.videoListPage-metaComments > a,span.videoListPage-metaViews > a,span.videoListPage-userName > a,span.videoListPage-metaElapsed > a,div.videoListPage-metaTitle > a {
+ font-family: 'Work Sans', sans-serif;
+  font-weight: 900;
+  font-size: 0.9vw;
+}
+@-ms-viewport{
+  width: device-width;
+}
+div.mebox {
+   background-image: radial-gradient( circle farthest-corner at -8.9% 51.2%,  rgba(255,124,0,1) 0%, rgba(255,124,0,1) 15.9%, rgba(255,163,77,1) 15.9%, rgba(255,163,77,1) 24.4%, rgba(19,30,37,1) 24.5%, rgba(19,30,37,1) 66% )!important;
+  display: flex;
+  
+}
+div.notice-successMessage, div.grid-frame.sheet.section-aboutGroup {background:#cc0000!important;color:white;}
+div.grid-frame.sheet.section-aboutGroup::after{content:"Follow this hub to contribute to discussions & share photos "; display:inline-block; color:#FF5733 }
+@media only screen and (min-width:481px){
+#xn_bar_menu_search::before{content:"Search:"; display:inline-block; color:white }
+}
+.fb-share-button.fb_iframe_widget {float:left; margin-right: 10px;} 
+
+section.module-body.activityFeed {
+height: 800px;
+overflow: auto;
+}
+div.dashboardBarWrap {background:transparent!important;}
+
+h1.content-name {text-shadow: 2px 2px 4px #666;}
+h3.module-name,h2.content-name, h2.groupHeader-groupName,div.groupHub-groupTitle, h2.content-name.pull-left {
+  color: #fff;
+  text-shadow: 2px 2px 4px #000;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 900;
+  font-size: 1.1em;
+}
+
+h3.entry-title.polls__title {
+  color: #000!important;
+ font-family: 'Work Sans', sans-serif;
+  font-weight: 900;
+  font-size: 1.1vw;
+}
+
+h3.entry-title a,h1.lf-title,a.activityFeed-commentFormDisplay.js-displayActivityItemCommentForm,small.event-info-timestamp {
+ font-family: 'Work Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1.3vw;
+}
+
+h1.lf-title {
+  font-size: 1.1em!important;
+}
+
+h3.entry-title a {
+  font-size: 1.1em!important;
+}
+
+div.lf-about_network {
+  background: #fff!important;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+ /* future proofing */
+  -khtml-border-radius: 10px;
+ /* for old Konqueror browsers */;
+}
+
+ul.tabContainerSection-tabs.subnavline,header.activityFeed-headline {
+  font-family: 'Work Sans', sans-serif;
+}
+
+a.dashboardBar-ningLogo,div.dashboardBar-toggleButton.toggle-button,div#dashboardBar,div.dashboardBar-innerSection {
+  background: #000!important;
+}
+
+div.videoListPage-metaTitle {
+  word-wrap: break-word;
+}
+
+a.button.button-primary.pull-right {background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,0,0,1) 0%, rgba(0,0,0,1) 90% );}
+div.entry-commentsCount a,div.entry-tags.ux-entry-tags a {
+  color: #fff;
+  text-shadow: 0 0 5px #fff,
+    0 0 10px #fff,;
+}
+div.entry-commentsCount {color: #ffeaa7;padding:5px; -moz-border-radius: 10px;
+   -webkit-border-radius: 10px;
+   border-radius: 10px; /* future proofing */
+   -khtml-border-radius: 10px; /* for old Konqueror browsers */}
+
+#google_translate_element {
+  position: absolute;
+  top: 2px;
+  z-index: 99999;
+  left: 8px;
+}
+
+@media (max-width: 667px) {
+  #google_translate_element {
+    top: 65px;
+    right: 160px;
+  }
+li.groupHeader-tab {width:100%}
+}
+
+ul.pagination.clear {z-index:100}
+
+/* start dark google translate theme */
+div#google_translate_element div.goog-te-gadget-simple {
+  background-color: #333;
+  border-color: #222;
+}
+
+div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value span {
+  color: #ccc;
+}
+
+div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value span:hover {
+  color: #eee;
+}
+/* end dark google translate theme */
+@media (max-width: 667px) {
+img.photo.avatar.avatar-48 {
+    z-index:1000;
+  }
+}
+
+td {
+  vertical-align: top!important;
+  padding: 5px;
+}
+
+a.button.button-primary {
+background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(152,35,35,1) 0%, rgba(225,64,64,1) 100.2% );
+  font-size: 1.1em;
+}
+a.button.button-primary:hover {background-image: radial-gradient( circle 822px at 14.3% 74.3%,  rgba(252,1,1,1) 0%, rgba(138,21,21,1) 66.2% );}
+div.entry-commentsCount,div.entry-tags.ux-entry-tags,a.entry-readMore {
+  font-size: 1.1em;
+  color: #fff;
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,0,0,1) 0%, rgba(0,0,0,1) 90% ); -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+padding:5px
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+ /* future proofing */
+  -khtml-border-radius: 10px;
+ /* for old Konqueror browsers */
+  padding: 5px;
+}
+a.entry-readMore:hover {color:#ffeaa7;}
+
+select.categorySelectionList {
+  height: 6.5em!important;
+}
+
+div.module-actions select {
+  height: 2.5em!important;
+}
+
+select {
+  height: 2.5em!important;
+}
+
+.profileCoverArea-frame .linkbar .ningbar-panel {
+  z-index: 99999!important;
+}
+
+.profileCoverArea-frame .ningbar-link .icon {
+  font-size: 26px;
+  height: 26px;
+}
+
+.profileCoverArea-frame .ningbar-countNotification {
+  font: normal bold 12px/12px sans-serif;
+  top: -7px;
+  right: -8px;
+}
+
+div.media-body {
+  position: relative;
+}
+
+div.media-body:before,div.media-body:after {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width: 300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+
+div.media-body:after {
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+
+h3.entry-title, article.media-frame.entry.discussionListPage-entry {
+  box-shadow: 1px 3px 3px rgba(0,0,0,0.6);
+  -moz-box-shadow: 0px 3px 3px rgba(0,0,0,0.7);
+  -webkit-box-shadow: 0px 3px 3px rgba(0,0,0,0.7);
+  font-family: 'Staatliches', cursive;
+  font-size: 1.1em;
+}
+
+p.aboutTab-question {
+  background-image: linear-gradient( 269.7deg,  rgba(213,91,91,1) 0.2%, rgba(104,4,4,1) 100.1% );
+  color: gold!important;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.9em;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+ /* future proofing */
+  -khtml-border-radius: 10px;
+ /* for old Konqueror browsers */
+  padding: 5px;
+}
+
+div.banner-footer {
+  background-image: linear-gradient( 180.2deg,  rgba(24,24,24,1) 1.2%, rgba(58,58,58,1) 89.8% );
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+ /* future proofing */
+  -khtml-border-radius: 10px;
+ /* for old Konqueror browsers */;
+}
+
+div#audioPageList.audioPageList.slick-initialized.slick-slider {
+  background: url(https://storage.ning.com/topology/rest/1.0/file/get/1037159765?profile=original) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+ul.subnav.expanded,article.entry.rssFeed.rssFeed-detail {
+  background-image: radial-gradient( circle 906px at 9.7% -9%,  rgba(163,0,0,1) 25.7%, rgba(250,13,13,1) 60.5%, rgba(255,59,20,1) 100.2% );border-style: solid;
+  border-width: 5px;
+  border-top-color: lighten(#000, 20%);
+  border-right-color: lighten(#000, 0%);
+  border-bottom-color: lighten(#000, 20%);
+  border-left-color: lighten(#000, 0%);
+  box-shadow: 2px 2px 4px rgba(0,0,0,.6);
+ -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+div.auth_copy,span.poweredBy-text {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+navbar > ul > li > a {
+  font-family: 'Staatliches', cursive!important;
+  font-weight: 900;
+  font-size: 2em;
+}
+
+.ddajaxsidepanel {
+ /* Main Panel Container */
+  position: fixed;
+ /* keep this value as is */
+  top: 0;
+ /* keep this value as is */
+  visibility: hidden;
+ /* keep this value as is */
+  background: #1e272e;
+  z-index: 1000;
+  border-color: white;
+  border-left: 1px ridge #eee;
+  -moz-box-shadow: -10px 0 10px rgba(137,137,137, 0.8);
+ /* CSS 3 box shadow */
+  -webkit-box-shadow: -10px 0 10px rgba(137,137,137, 0.8);
+  box-shadow: -10px 0 10px rgba(137,137,137, 0.8);
+  -webkit-box-sizing: border-box;
+ /* Set .ddajaxsidepanel width so that any padding or borders are added inside this width, not in addition to */
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.ddajaxsidepanel .panelhandle {
+ /* CSS for Panel Handle DIV */
+  width: 24px;
+  height: 100%;
+  position: absolute;
+  left: -14px;
+  top: 0;
+  cursor: pointer;
+  background: transparent url(https://landsurveyorsunited.github.io/cssfiles/videos/handle.gif) center left no-repeat;
+ /* path to "handle" gif */;
+}
+
+.ddajaxsidepanel .contentarea {
+ /* CSS for main content area DIV */
+  height: 100%;
+  padding: 10px;
+  overflow: auto;
+}
+
+div.banner-frame,div.banner-actionsGroup.cf {
+  background: url(http://api.ning.com/files/gLRz0qCeA0XuCpUDoIwcwNlXEyR5g7v05OMWJCf5h8L-O1dPcqZv3RhY1Udlx9JGBy6oeWs9fatvECOahbql9iM7iCVx2FpG/bgthreatsindex.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+ul.footer-links {
+  font-size: 0.7em!important;
+}
+
+div.module-actions.cf,footer.activityFeed-footer,footer.entry-footnote,.status-container {
+background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,0,0,1) 0%, rgba(0,0,0,1) 90% ); -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+padding:5px;
+line-height: 1.5;
+  padding: .25em;
+  margin: .25em;
+  color: #eee;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+ /* future proofing */
+  -khtml-border-radius: 10px;
+ /* for old Konqueror browsers */;
+}
+
+footer {
+  background-image: linear-gradient( 180.2deg,  rgba(24,24,24,1) 1.2%, rgba(58,58,58,1) 89.8% );
+  color: #fff;
+  margin: 0;
+  @import "https://fonts.googleapis.com/css?family=Open+Sans";
+  font-family: 'Open Sans', sans-serif;
+}
+
+footer .centered {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .centered .footer-logo {
+  width: 10%;
+}
+
+footer .centered .footer-logo img.logo {
+  padding: 30px 20px 10px 20px;
+  max-width: 100%;
+}
+
+footer .centered .footer-contact {
+  width: 20%;
+}
+
+footer .centered .footer-navigation {
+  width: 60%;
+}
+
+footer .centered .footer-navigation .footer-links-holder {
+  width: 33.33333%;
+  position: relative;
+  float: left;
+  margin: 0;
+}
+
+footer .centered .footer-navigation .footer-links-holder .footer-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-transition: max-height .5s;
+  transition: max-height .5s;
+}
+
+footer .bottom-bar a {
+  color: #000;
+}
+
+footer .bottom-bar {
+  position: relative;
+  color: #000;
+  text-align: center;
+  font-size: .6em;
+  text-transform: uppercase;
+  background: #eee;
+  padding: 15px 0;
+}
+
+.form-field label {
+  color: red;
+}
+
+@media only screen and (max-width: 749px) {
+  footer .centered {
+    flex-wrap: wrap;
+  }
+
+  footer .centered .footer-logo {
+    max-width: 250px;
+    width: 50%;
+  }
+
+  footer .centered .footer-contact {
+    width: 50%;
+    padding: 0 20px;
+  }
+
+  footer .centered .footer-navigation {
+    width: 100%;
+  }
+
+  footer .centered .footer-navigation .footer-links-holder {
+    padding: 0 20px;
+  }
+}
+/* Responsive Mobile Sizes */
+@media only screen and (max-width: 500px) {
+  footer .centered .footer-logo {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  footer .centered .footer-contact {
+    width: 100%;
+  }
+
+  footer .centered .footer-navigation .footer-links-holder {
+    width: 100%;
+    padding: 0;
+  }
+
+  footer .centered .footer-navigation .footer-links-holder h3 {
+    margin: 0;
+    padding: 10px 20px;
+    border-top: #000 1px solid;
+    cursor: pointer;
+  }
+
+  footer .centered .footer-navigation .footer-links-holder .footer-links {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+  }
+
+  footer .centered .footer-navigation .footer-links-holder.active h3::after {
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  footer .centered .footer-navigation .footer-links-holder.active .footer-links {
+    max-height: 10000px;
+  }
+}
+/* Social Icons */
+.social {
+  text-align: center;
+}
+
+.social a {
+  display: inline-block;
+  padding: 7px;
+  width: 35px;
+  height: 35px;
+  margin: 0 2px;
+  background: #fff;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.social a:hover {
+  background: #65c2ed;
+}
+
+.social a.linkedin {
+  padding: 4px;
+}
+
+.social a svg .face, .social a svg .twit, .social a svg .link {
+  fill: #000;
+}
+
+/* Typography */
+footer h3 {
+  font-weight: lighter;
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+footer p, footer li {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 10px 0;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: color .5s, background .5s;
+  transition: color .5s, background .5s;
+}
+
+footer a:hover {
+  color: #65c2ed;
+}
+
+/* Misc CSS */
+.clearfix:before, .clearfix:after {
+  content: '\0020';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  clear: both;
+}
+
+ul.spicesocialwidget {
+  /*float:right;*/
+  margin: 140px 0;
+  padding: 0;
+  width: auto;
+  height: 32px;
+  border: 1px solid rgba(0,0,0,0.1);
+  text-align: center;
+font-family: 'Staatliches', cursive;
+}
+
+ul.spicesocialwidget li {
+  /*float:left;*/
+  list-style: none outside none;
+  border: none;
+  display: inline-block;
+}
+
+ul.spicesocialwidget li a {
+  background-color: transparent;
+  background-image: url('https://landsurveyorsunited.github.io/cssfiles/social-sprite.png');
+  background-repeat: no-repeat;
+  background-size: auto 96px;
+  border: 0 none;
+  display: block;
+  height: 32px;
+  /*overflow:hidden;*/
+  text-align: left;
+  text-decoration: none;
+  /*transition:all 0.2s ease 0s;*/
+  width: 32px;
+  position: relative;
+  display: flex;
+}
+
+@keyframes ticker {
+  0% {
+    margin-top: -50px;
+  }
+
+  11% {
+    margin-top: -100px;
+  }
+
+  22% {
+    margin-top: -150px;
+  }
+
+  33% {
+    margin-top: -200px;
+  }
+
+  44% {
+    margin-top: -250px;
+  }
+
+  55% {
+    margin-top: -300px;
+  }
+
+  66% {
+    margin-top: -350px;
+  }
+
+  77% {
+    margin-top: -400px;
+  }
+
+  88% {
+    margin-top: -450px;
+  }
+
+  100% {
+    margin-top: -50px;
+  }
+}
+
+.news {
+  background: #c8102e;
+  box-shadow: inset 0 -15px 30px rgba(0,0,0,0.4), 0 5px 10px rgba(0,0,0,0.5);
+  width: 50%;
+  height: 40px;
+  margin: 30px auto;
+  overflow: hidden;
+  border-radius: 4px;
+  padding: 3px;
+  -webkit-user-select: none;
+}
+
+.news span {
+  float: left;
+  color: #fff;
+  padding: 4px;
+  position: relative;
+  top: 1%;
+  border-radius: 4px;
+  background: #000;
+  font: 28px Raleway, Arial, sans-serif;
+  vertical-align: -webkit-baseline-middle;
+  -webkit-font-smoothing: antialiased;
+  -webkit-user-select: none;
+  cursor: pointer;
+}
+
+.news ul {
+  float: left;
+  padding-left: 10px;
+  animation: ticker 25s cubic-bezier(1, 0, .5, 0) infinite;
+  -webkit-user-select: none;
+}
+
+.news ul li {
+  line-height: 40px;
+  list-style: none;
+}
+
+.news ul li a {
+  margin-left: 160px;
+  color: #fff;
+  text-decoration: none;
+  font: 20px Raleway, Arial, sans-serif;
+  vertical-align: -webkit-baseline-middle;
+  vertical-align: -moz-middle-with-baseline;
+  -webkit-font-smoothing: antialiased;
+  -webkit-user-select: none;
+}
+
+ul.subnav.expanded {
+  background-image: linear-gradient( 109.6deg,  rgba(8,8,8,1) 11.2%, rgba(201,3,3,1) 91.1% );
+}
+
+.news ul:hover {
+  animation-play-state: paused;
+}
+
+.news span:hover+ul {
+  animation-play-state: paused;
+}
+
+div.button-tiny {
+  background: #cc0000!important;
+}
+
+span.js-followDescription.followDescription, div.button-tiny a {
+  color: #fff!important;
+}
+
+.SP_Photo_Title {
+  background-color: rgba(0, 0, 0, 0.7);
+  bottom: 0;
+  float: center;
+  font-size: 1.3em;
+  padding: 5px;
+  position: absolute;
+}
+
+.SP_Photo_Title a {
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#construction {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: 1000;
+  font-size: 2.7em;
+  color: black;
+  font-weight: bold;
+  -webkit-transform: rotate(315deg) scale(1) skew(1deg) translate(-200px, 0);
+  -moz-transform: rotate(315deg) scale(1) skew(1deg) translate(-200px, 0);
+  -o-transform: rotate(315deg) scale(1) skew(1deg) translate(-200px, 0);
+  -ms-transform: rotate(315deg) scale(1) skew(1deg) translate(-200px, 0);
+  transform: rotate(315deg) scale(1) skew(1deg) translate(-200px, 0);
+  background-image: repeating-linear-gradient(55deg, rgb(255, 255, 255), rgb(255, 255, 255) 50px, rgb(248, 174, 94) 50px, rgb(252, 144, 3) 110px);
+  -webkit-box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, .2);
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, .2);
+}
+
+#construction p {
+  margin: 0;
+  /* color: #F2F2F2; */
+  border-top: 1px solid #eee;
+}
+
+.toggle-box {
+  display: none;
+}
+
+.toggle-box + label {
+  cursor: pointer;
+  display: block;
+  font-weight: bold;
+  line-height: 31px;
+  margin-bottom: 5px;
+  color: black;
+  text-shadow: 2px 2px 4px #fff;
+}
+
+.toggle-box + label + div {
+  display: none;
+  margin-bottom: 10px;
+}
+
+.toggle-box:checked + label + div {
+  display: block;
+}
+
+.toggle-box + label:before {
+  background-color: #212121;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  color: #FFFFFF;
+  content: "+";
+  display: block;
+  float: left;
+  font-weight: bold;
+  height: 20px;
+  line-height: 20px;
+  margin-right: 5px;
+  text-align: center;
+  width: 30px;
+}
+
+.toggle-box:checked + label:before {
+  content: "\2212";
+}
+
+
+/* Groups Page Categories Menu */
+.groupHeader-nav .subnavline > li {
+  font-size: 0.8em;
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+.groupHeader-nav .subnavline > li a {
+  background-color: #000;
+  color: #FFF;
+  padding: 10px;
+  border-radius: 2px;
+  border-bottom: none;
+}
+
+.groupHeader-nav .subnavline > li:hover > a, .subnavline > li.current > a {
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+/* Tab Containers Navigation */
+.tabContainerSection-tabs.subnavline > li > span {
+  color: white;
+  border: none;
+  background-color: #cc0000;
+  margin-right: 3px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  font-size: 0.8em;
+}
+
+.tabContainerSection-tabs.subnavline span:hover {
+  color: black;
+  background-color: #fff;
+  border: solid 1px #cc0000;
+}
+
+li.tabContainerSection-tab.current > span {
+  background-color: #fff2cc;
+  color: black;
+  border: solid 1px black;
+}
+
+/* MOBILE MENU BUTTON */
+nav.navbar button.button.button-iconic:before {
+  content: "Menu"!important;
+  padding-right: 3px;
+}
+
+nav.navbar BUTTON.button.button-iconic.active:before {
+  content: "Close"!important;
+  color: white;
+  padding-right: 3px;
+}
+
+nav.navbar button.button.button-iconic {
+  background-image: none;
+}
+
+.page-photos .subnav li a {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 2px;
+}
+
+.page-photos .subnav li a:hover, .page-photos .subnav li.subnav-current > a {
+  background-color: lightblue;
+  color: black;
+  text-decoration: none;
+}
+
+
+
+/** PHOTO MODULES LAYOUT CHANGE **/
+@media only screen and (min-width:959px) {
+  .column-narrow .photoSection-entry.matrix-itemFluid {
+    max-width: 50%;
+    float: left;
+  }
+}
+
+/** Show the member count above the latest members module **/
+.MemberCount-load .module-name {
+  font-size: 1.1em;
+  margin-bottom: 4px;
+  text-align: left;
+}
+
+.page-home .MemberCount-load .module-name {
+  font-size: 0.95em;
+  margin-bottom: 2px;
+  text-align: right;
+}
+
+/* Color Change As The Original Module Name In Members Page Was White **/
+.MemberCount-Module .module-name, .MemberFeaturedCount-Module .module-name {
+  color: black;
+}
+
+span.entryEditPage-publishedInContainer:before {
+  content: "NOTE: You can move this content to any HUB you belong to";
+  display: block;
+  margin: 4px;
+}
+/* Add A Small Heading Above Category Selection Box */
+.page-photos-tips .entryEditPage-categoryContainer:before {
+  content: "Please Select A Category";
+  display: block;
+  margin: 4px;
+}
+
+.activityFeed-title a:first-of-type:before {
+  content: "Posted By";
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.activityFeed-embed[data-type="video"] {
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+a.button.activityFeed-updateButton.activityFeed-moreNewItemsButton {
+  display: none!important;
+}
+
+.stHeading {
+  margin-top: 5px;
+}
+
+.subTab {
+  background: #FFF;
+  padding: 0px 4px 4px 4px;
+  border: solid 1px black;
+  border-radius: 0px 0px 4px 4px;
+}
+
+a.css3dbutton {
+  background: darkred;
+ /* background color of button */
+  color: white;
+  text-decoration: none;
+  font: bold 28px Arial;
+ /* font size and style */
+  position: relative;
+  top: 0;
+ /* anchor main button's position */
+    bottom: -12px; /* Depth of 3D effect. :after pseudo element inherits this value so it's animated in Chrome. See: kizu.ru/en/pseudos */
+  margin-bottom: 12px;
+  -moz-box-shadow: 0 -15px 5px darkred inset;
+  -webkit-box-shadow: 0 -15px 5px darkred inset;
+  box-shadow: 0 -15px 5px darkred inset;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+a.css3dbutton, a.css3dbutton:after {
+  display: inline-block;
+  padding: 10px 15px;
+ /* vertical and horizontal padding of button */
+  -moz-border-radius: 8px/15px;
+  -webkit-border-radius: 8px/15px;
+  border-radius: 8px/15px;
+  outline: none;
+}
+
+a.css3dbutton:after {
+ /* pseudo element to construct 3D side of button */
+  content: "";
+  position: absolute;
+  padding: 0;
+  z-index: -1;
+  bottom: inherit;
+ /* Inherit main button bottom value to animate it. See: kizu.ru/en/pseudos */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #6e0e0c;
+ /* background color of 3D effect */
+  -moz-box-shadow: 1px 0 3px gray;
+  -webkit-box-shadow: 1px 0 3px gray;
+  box-shadow: 1px 0 3px gray;
+}
+
+a.css3dbutton:hover {
+  -moz-box-shadow: 0 25px 5px rgba(182, 64, 61, 0.7) inset;
+  -webkit-box-shadow: 0 25px 5px rgba(182, 64, 61, 0.7) inset;
+  box-shadow: 0 25px 5px rgba(182, 64, 61, 0.7) inset;
+  background: #bc3835;
+ /* background color when mouse rolls over button */;
+}
+
+a.css3dbutton:active {
+  top: 12px;
+ /* shift button down 12px when depressed. Change 12px to match button's "bottom" property above */
+    bottom: 0;
+    -moz-box-shadow: 0 -20px 5px darkred inset, 1px 1px 2px #eee;
+    -webkit-box-shadow: 0 -20px 5px darkred inset, 1px 1px 2px #eee;
+    box-shadow: 0 -20px 5px darkred inset, 1px 1px 2px #eee;
+}
+
+
+
+
+.OpenStatusAddPhoto {
+  min-height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a.OpenStatusAddPhoto {
+  color: #212121;
+  text-decoration: none;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s ease all;
+}
+a.OpenStatusAddPhoto:hover {
+  color: #007;
+}
+a.OpenStatusAddPhoto:focus {
+  color: #FFF;
+}
+
+.bttn {
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  width: 270px;
+  font-weight: bold;
+  padding: 14px 0px;
+  border: 3px solid #FF0072;
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+.bttn:before {
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: '';
+  background-color: #FF0072;
+  z-index: -2;
+}
+.bttn:hover:before {
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+.bttn:focus:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+.SP_sign_up{
+text-align:center;
+background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,0,0,1) 0%, rgba(0,0,0,1) 90% ); -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+padding:5px;
+line-height: 1.5;
+border-radius:3px;
+-webkit-border-radius:3px;
+-moz-border-radius:3px;
+padding:10px 0;
+}
+
+.SP_sign_up h4{
+font-weight:bold;
+}
+
+.SP_sign_up_button{
+padding:7% 10%;
+}
+
+.SP_sign_up_button a{
+color:#333;
+font-size:16px;
+border-radius:3px;
+-webkit-border-radius:3px;
+-moz-border-radius:3px;
+padding:5% 15%;
+background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #F8F7F7), color-stop(1, #ECEBEB));
+background:-moz-linear-gradient(top, #F8F7F7 5%, #ECEBEB 100%);
+background:-webkit-linear-gradient(top, #F8F7F7 5%, #ECEBEB 100%);
+background:-o-linear-gradient(top, #F8F7F7 5%, #ECEBEB 100%);
+background:-ms-linear-gradient(top, #F8F7F7 5%, #ECEBEB 100%);
+background:linear-gradient(to bottom, #F8F7F7 5%, #ECEBEB 100%);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#F8F7F7', endColorstr='#ECEBEB',GradientType=0);
+background-color:#F8F7F7;
+border:solid 1px #c9c9c9;
+}
+
+.SP_sign_up_in p{
+font-size:12px;
+}
+
+.SP_sign_up_external{
+text-align:center;
+}
+.SP_sign_up_external ul{
+padding: 0;
+margin:0;
+}
+
+.SP_sign_up_external img{
+max-width: 15%;
+}
+
+.SP_sign_up_external li{
+display: inline;
+list-style: none;
+padding: 2px;
+}
+
+.SP_sign_up_external > p {
+font-size: 10px;
+}
+/* HOVER SETTINGS*/
+.matrix-itemFluid.matrix-itemFrame.feedListPage-item:hover .matrix-item.matrix-sheet{ background:rgba(192, 57, 43,1.0); border-radius:10px 10px 0px 0px}
+.matrix-itemFluid.matrix-itemFrame.feedListPage-item:hover .feedListPage-itemTitle{ font-size:0.9em;color:antiquewhite }
+
+/* ACTIVE VIDEO */
+.videoActive.matrix-itemFluid.matrix-itemFrame.feedListPage-item .matrix-item.matrix-sheet{ background:rgba(169, 0, 37, 0.59); box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.87);border-radius:10px ;}
+.videoActive .feedListPage-itemTitle{ color:antiquewhite }
+
+
+/** SCROLL TO TOP **/
+
+.scrollToTop{
+    width:50px; 
+    height:50px;
+    text-decoration: none;
+    position:fixed;    
+    right:30px;
+        bottom:40px;
+    display:none;
+        z-index:19999;
+    background: url('https://storage.ning.com/topology/rest/1.0/file/get/1261355126?profile=RESIZE_180x180') no-repeat ;
+        background-size:50px;
+ }
+@media only screen and ( max-width:771px ){
+.scrollToTop{height:50px!important;width:50px!important;background-size:50px!important;}}
+#designStudio textarea[name="themeCss"], #designStudio textarea[name="globalCss"] {
+    height: 400px!important;overflow:auto;
+    width: 100%;z-index:1000!important; }
+
+/* FOOTER */
+/*.poweredBy-text { display:none!important}*/
+
+/* Select Menus Adjustment to stop text getting cut off */
+select {
+    height: 2.35em;
+}
+
+/** SITE HEADER AUTO ADJUSTMENT IN HEIGHT **/
+.site-header{ height:auto}
+
+/**** ACTIVITY FEED CODE ***/
+
+ .activityFeed-title a:first-of-type:before{ content:"Posted By";display:inline-block;margin-right:5px }
+ .activityFeed-embed[data-type="video"]{ max-width:100vw; max-height:100vh;} 
+
+/* This adds a little  > after the person name */
+.activityFeed-comment .media-body a:first-of-type:after{ content:">"; display:inline-block; margin-left:3px;margin-right:4px }
+.activityFeed-comment {font-size:0.85em }
+
+/* Reveal The Word Comment before the count number */
+.activityFeed .icon-comment{display:inline;vertical-align:bottom}
+a.activityFeed-commentCount, a.activityFeed-commentFormDisplay {font-size: 0.9em; line-height: 1em; float:right; }
+.icon-comment.icon:before{ float:right!important;margin-left:5px;margin-top:-5px }
+
+
+/* Add the word 'Add' before comment on a activity feed post*/
+a.activityFeed-commentFormDisplay:before{content:"Add";display:inline-block;margin-right:2px;}
+
+.activityFeed-comments.js-activityFeedCommentsList .feedEvent-createStatusComment{display:none}
+.activityFeed-comments.js-activityFeedCommentsList .feedEvent-createStatusComment:first-child::before{content:"Latest Comment";display:block;margin-bottom:5px; }
+.activityFeed-comments.js-activityFeedCommentsList .feedEvent-createStatusComment:first-child{display:block }
+.status-commentForm.js-statusCommentForm:before{content:"Add Comment";display:block;font-size:14px;margin-bottom:5px}
+.addCommentContainer:before{content:"Add Comment";display:block;font-size:14px;margin-bottom:5px}
+
+/* For The Photos */
+.activityFeed-comments.js-activityFeedCommentsList .feedEvent-createPhotoComment{display:none}
+.activityFeed-comments.js-activityFeedCommentsList .feedEvent-createPhotoComment:first-child{display:block }
+.activityFeed-comments.js-activityFeedCommentsList .feedEvent-createPhotoComment:first-child::before{content:"Latest Comment";display:block;margin-bottom:5px; }
+.activityFeed-comments.js-activityFeedCommentsList .media-body{border-top: solid 1px lightgrey;}
+
+
+
+/********* PHOTOS****/
+/* Adjust the viewer to adjust to photo size eliminating white space and showing photo size 100% **/
+
+.photoDetailPage-image > img {
+    position: relative; display: flex; max-height: 100vh; height:auto; margin: 0px auto ;}
+.photoDetailPage-image { position: relative;}
+.photoDetailPage .image-aspect-4-3 {
+    width: 100%;
+    height: auto;
+max-height:100vh;
+padding-bottom:0px; }
+
+/** BLOGS CODE **/
+/* Filter Blogs Box Under Module Header In Blogs */
+.filterBlogsBox{ 
+    border-width:2px;
+    border-style: none none solid;
+    border-color: lightgrey;
+    padding: 4px 10px;
+    border-radius: 0px;}
+/* Adjust the size for the font for the additional text under the name to show the filter state */
+.blogListPage .sortstate{ font-size:0.6em }
+/*.blogListPage .module-name{font-size:24px }*/
+/*.page-blog .blogListPage .module-header{ margin: -20px -20px 0px -20px; }*/
+
+.feed-story a.activity-close{color:white }
+.feed-story .activity-close:hover{background-color:black }
+.feed-story .activity-close{ padding:4px;border:solid 1px lightgrey;background-color:#00a6eb}
+div.sourceContainer.cl {background: url(https://storage.ning.com/topology/rest/1.0/file/get/834420499?profile=original) no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;}
+.toggle {
+	display: flex;
+	flex-direction: column-reverse;
+}
+.toggle__input:not(checked) {
+    display: none;
+}
+.toggle__input + label {	
+	background-color: #D65D5D;
+	border-radius: 5px; 
+	color: #fff;
+	cursor: pointer;
+	font-szie: 0.8em;
+	margin-top: 0.5em;
+	margin-bototm: 0.5em;
+	padding: 0.5em;
+	text-align: center;
+	width: 12em;
+}
+.toggle__input + label:before {
+	color: #fff;
+	content: "+";
+	font-size: 1em;
+	padding-right: 0.3em;
+	width: 1em;
+}
+.toggle__input:not(checked) ~ .toggle__content {
+    display: none;
+}
+.toggle__input:checked ~ .toggle__content {       
+    display: block;
+}
+.toggle__input:checked + label:before {
+  content: "\2212";
+}
+.toggle__input + label .toggle__less, .toggle__input:checked + label .toggle__more  {
+    display: none;
+}
+.toggle__input:checked + label .toggle__less {
+    display: inline;
+}
+
+/*VIDEO LIST PAGE METADATA*/
+ span.videoListPage-userName > a {font-size: 0.8em;}
+div.gsc-control-cse.gsc-control-cse-en,.videoListPage-metadata{ background-image: radial-gradient( circle 906px at 9.7% -9%,  rgba(163,0,0,1) 25.7%, rgba(250,13,13,1) 60.5%, rgba(255,59,20,1) 100.2% );border-style: solid;
+  border-width: 5px;
+  border-top-color: lighten(#000, 20%);
+  border-right-color: lighten(#000, 0%);
+  border-bottom-color: lighten(#000, 20%);
+  border-left-color: lighten(#000, 0%);
+  box-shadow: 2px 2px 4px rgba(0,0,0,.6);
+ -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;} /* background color of the box. Add colour or transparent */
+.videoListPage-metadata:hover{ background-image: radial-gradient( circle 964.7px at 10% 20%,  rgba(0,0,0,1) 0%, rgba(46,52,79,1) 44%, rgba(187,187,187,1) 100.1% ); } /* background color of the box. Add colour or transparent */
+.videoListPage-metaTitle{ padding:0px 4px } /* padding for the title */
+.videoListPage-metadata .videoListPage-row{ padding:3px 6px } /* padding for the other two parts below */
+.videoListPage-metadata a{ color: #e9e8c1 } /* colour of the links . You can use your own default settings by using inherit instead of adding a colour */
+.videoListPage-metadata a:hover{ color: white } /* color of the links on hover. You can use your own default settings by using inherit instead of adding a colour */
+.videoListPage-metadata{ border-radius:0px 0px 4px 4px }
+/* .videoListPage-metadata a, .videoListPage-metadata a:hover{ color: inherit } */
+span.videoListPage-metaElapsed,div.videoListPage-metaTitle {font-size: 0.8em;}
+
+.videoDetailPage-getEmbedCode_wrap { margin: 0 0 5px 8px }
+.videoDetailPage-viewVideo { float:none; margin-bottom:5px }
+.videoForm-inputTitle { height: auto;}
+.videoDetailPage .socialActions{ margin-top:5px }
+.videoDetailPage .entry-tags{ margin-top:10px }
+.videoDetailPage-viewVideo .icon-eye{margin-right:5px }
+.videoDetailPage .entry-content{ width:100%; clear:both }
+
+/*Optional to show the word views*/
+.videoDetailPage-viewVideo .icon-eye{
+vertical-align:bottom;
+display:inline;margin-right:0px;
+}
+/** NEW VIDEO PAGE **/
+/*Detail Page Corrections*/
+.videoDetailPage-video{
+margin-bottom:5px;
+}
+.videoDetailPage-viewVideo {
+float: left;
+margin: 10px 0px 10px 10px;
+width:100%;
+}
+.videoDetailPage-viewVideo .icon-eye{
+vertical-align:bottom;
+display:inline;
+}
+.videoDetailPage .icon-love{
+display:block;
+vertical-align:top;
+}
+.videoDetailPage-mainVideo .button-tiny.likeButton a{ font-size:12px }
+
+/** Adding A Video Input Correction As It Was Cutting If The Text Top And Bottom **/
+.input-full.videoForm-inputTitle{
+ padding: 0px 0px 0px 4px;
+}
+/* Social Actions Box */
+.videoDetailPage .socialActions{
+margin-top:12px;
+margin-bottom:6px;
+}
+/* Spacing for the social buttons */
+.videoDetailPage .socialSharingButton {
+margin-bottom:5px; margin-right:5px;
+}
+
+/* Make video Responsive */
+.videoDetailPage-video {
+    margin-bottom: 5px;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+.videoDetailPage-video iframe{
+    max-width: 100%;
+    height: 100%;
+    width:100%;
+    position: absolute;
+}
+/* Adjust get embed code button after being moved */
+.button.button-secondary.videoDetailPage-getEmbedCode{ font-size:12px }
+.videoDetailPage-embedCode{ width:100%; margin-bottom:20px }
+.videoDetailPage-getEmbedCode_wrap { text-align:right; width:100%; margin: -20px 10px 10px 0px;float:right }
+
+/* Add a title to the video description */
+.videoDetailPage-mainVideo >.entry-content::before{content:"About this Surveying Video"; display:block; margin-bottom:5px; text-decoration:underline }
+
+
+
+/********** FEED LIST PLAYER **********/
+
+@media only screen and (min-width:771px){
+a.feedListPagePlayer-close,a.feedListPagePlayer-close:hover{font-size:25px;margin-bottom:10px }}
+
+.feedListPagePlayer { background-color: rgba(0, 0, 0, 0.82); height:100%}
+.feedListPagePlayer .sourceContainer{ border: 1px solid rgb(54, 54, 54);background-color:rgba(0, 0, 0, 0.4);}
+
+/*Sizing The Playing Video*/
+@media only screen and ( min-width:481px){
+.feedListPagePlayer-source {height:100vh; width:95vw;margin:auto;padding-bottom:1em}
+.feedListPagePlayer-source iframe {
+    max-width: 85vw;
+    height: 80vh;
+        width: 100%;}
+.feedListPagePlayer-source .nav {font-size:3em}
+}
+
+/* Adjust social page nav to go above the video inline with the close button*/
+@media only screen and (max-width:771px){
+.feedListPagePlayer-source >.cf{ float:right!important; }
+.feedListPagePlayer-source .nav{ width:auto!important;top:0%;margin-top:0px;font-size:2em;padding:0px}
+.feedListPagePlayer-source .navNext{margin-right:0.7em!important}}
+
+/* Replaces the max width of 400px for the list page */
+@media only screen and (min-width:959px){
+.feedListPage-item.matrix-itemFluid { max-width: 100%;}}
+
+@media only screen and ( max-width:769px){
+.feedListPage-item.matrix-itemFluid {width:50%;}}
+
+.feedListPage-itemTitle {overflow:hidden;padding:.2em 0.5em;line-height:1.28;height:4.2em;max-height:4.2em;font-size:1.1em;}
+
+
+/** Highlight Videos Colours And Active**/
+.feedListPage-item:hover .matrix-item.matrix-sheet{ box-shadow:0px 10px 8px rgba(0,0,0,0.3);border-radius:0px 0px 4px 4px}
+.feedListPage-item:hover .feedListPage-itemTitle, .videoActive.feedListPage-item .feedListPage-itemTitle{ color:whitesmoke;background: rgba(169, 0, 0, 0.74);border-radius:0px 0px 4px 4px; }
+
+/* Pagination on pages, shows the words next previous*/
+#feedListPagination.pagination .icon{ display:inline!important; }
+#feedListPagination.pagination .icon-next::before{ display:none }
+#feedListPagination.pagination .icon-next::after {
+    content: "";
+}
+
+#feedListPagination.pagination .icon-next::after {
+    font-family: "ning-icon-fonts";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    display: inline-block;
+    margin-left: 0.5em;
+}
+#feedListPagination a.pagination-previous{ margin-right:10px}
+#feedListPagination a.pagination-next{ margin-left:10px }
+#feedListPagination a.pagination-previous:hover{text-decoration:none}
+#feedListPagination a.pagination-next:hover{text-decoration:none}
+#feedListPagination .pagination .is-disabled{ display:none }
+#feedListPagination{ margin-top:15px }
+
+
+/*** VIDEO LIST UNDER THE VIDEO PLAYER ***/
+
+/** SHOW VIDEOS LIST ON PLAYER **/
+@media only screen and ( max-width:481px){
+.videolistControl {
+position:relative!important;
+}}
+
+.videolistControl:before { content:"More Videos";display:block;color:white }
+.videolistControl {
+position:absolute;
+height: 45px;width:65px;
+background-color:rgba(40, 32, 66, 0.84);
+padding: 4px;
+cursor:pointer;
+border-radius: 0px 0px 4px 0px;
+}
+.videolistControl:hover, .videolistControl:focus{
+background-color:rgb(69, 27, 16);
+}
+.videolistControl.close:before { content:"Close Videos";display:block;color:white }
+.videolist .feedListPage-item.matrix-itemFluid {
+max-width: 200px;
+}
+.videolist .matrix-item.matrix-sheet{
+border: solid 1px #565252;
+background-color: #4e4040;
+padding: 4px;
+border-radius:0px 0px 4px 4px;
+}
+.feedListPagePlayer-source .videolist .feedListPage-itemTitle{
+overflow:hidden;
+padding:0.1em 0.2em;
+line-height:1.1em;
+height:3.58em;
+max-height:3.58em;
+font-size:12px;
+color:whitesmoke;
+}
+.videolist .matrix-item.matrix-sheet:hover{
+background-color: darkgrey;
+}
+.videolist .matrix-item.matrix-sheet:hover .feedListPage-itemTitle{
+background-color: rgba(169, 0, 0, 0.74);
+}
+.videolist{
+position: absolute;
+margin-top:50px;
+width: 94.9vw;
+background: rgba(0, 0, 0, 0.91) none repeat scroll 0% 0%;
+overflow-x: auto;
+overflow-y: hidden;
+border-bottom: solid 1px #666;
+}
+.videolist .module-body {
+padding: 0px 5px 10px 5px;
+width: 2400px;
+}
+.videolist #feedListPagination{
+display:none;
+ }
+.tabContainerSection-pane .videolistControl{ display:none }
+.section-channel .videolistControl{ display:none }
+
+@media only screen and ( min-width:771px ){
+.sourceContainer:hover .videolistControl::after { position: absolute; top: -50px; left: -50px;display:block}}
+.videolistControl::after {
+    display:none;
+    content: "View More Videos By Clicking More Videos Box";
+    margin-left: 52px;
+    color: #d7d7d7;
+    background: rgba(0,0,0,0.95);
+    float: left;
+    width: 300px;
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 0.8em;
+    border: solid 1px lightgrey; }
+.videolistControl.close::after{display:none!important}
+
+/*** END CSS CODE FOR SOCIAL CHANNEL PLAYER **/
+
+/* Adjust the viewer to adjust to photo size eliminating white space **/
+
+.photoDetailPage-image > img {
+    position: relative; display: flex; max-height: 100vh; height:auto; margin: 0px auto ;}
+.photoDetailPage-image { position: relative;}
+.photoDetailPage .image-aspect-4-3 {
+    width: 100%;
+    height: auto;
+max-height:100vh;
+padding-bottom:0px; }
+
+/** VIDEOS PLAY IMAGE **/
+/*ON VIDEOS IN ACTIVITY*/
+.feedEvent-createVideoRollup .activityFeed-content a.activityFeed-image,.feedEvent-createVideoRollup .activityFeed-content a.media-img, .feedEvent-createVideoComment .activityFeed-content a.media-img, .feedEvent-createVideoLike .activityFeed-content a.activityFeed-image{ display:table-cell; height:100%;position:relative; }
+.feedEvent-createVideoRollup .activityFeed-content a.activityFeed-image::before, .feedEvent-createVideoRollup .activityFeed-content a.media-img::before, .feedEvent-createVideoComment .activityFeed-content a.media-img::before, .feedEvent-createVideoLike .activityFeed-content a.activityFeed-image::before{content:' ';display:block;
+background-image: url( https://storage.ning.com/topology/rest/1.0/file/get/933140138?profile=RESIZE_180x180 );background-repeat:no-repeat; background-position:center center; background-size:19%; width:100%;height:100%;position:absolute; }
+
+.feedEvent-createVideoRollup .activityFeed-content a.activityFeed-image:hover::before, .feedEvent-createVideoRollup .activityFeed-content a.media-img:hover::before, .feedEvent-createVideoComment .activityFeed-content a.media-img:hover::before, .feedEvent-createVideoLike .activityFeed-content a.activityFeed-image:hover::before{background-image: url( https://storage.ning.com/topology/rest/1.0/file/get/558903?profile=original );background-size:17%; }
+
+/* ON VIDEO IN LIST PAGE */
+.videoListPage-image::before{content:' ';display:block;
+background-image: url(https://storage.ning.com/topology/rest/1.0/file/get/933140138?profile=RESIZE_180x180);background-repeat:no-repeat; background-position:center center; background-size:22%; width:100%;height:100%;position:absolute;}
+.videoListPage-image:hover::before{background-image: url(https://storage.ning.com/topology/rest/1.0/file/get/558903?profile=original );}
+
+div.groupHub-groupInfo {display:none;}
+article.entry.blogListPage-entry {background-image: radial-gradient( circle 906px at 9.7% -9%,  rgba(163,0,0,1) 25.7%, rgba(250,13,13,1) 60.5%, rgba(255,59,20,1) 100.2% );box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
+-moz-box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
+-webkit-box-shadow: 0px 3px 3px rgba(0,0,0,0.2); -moz-border-radius: 10px;
+   -webkit-border-radius: 10px;
+   border-radius: 10px; /* future proofing */
+   -khtml-border-radius: 10px; /* for old Konqueror browsers */}
+section.entry-content.cf {
+background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,0,0,1) 0%, rgba(64,64,64,1) 90.2% );
+border-radius:5px;
+padding:1em;
+margin:1em;
+color:#eee;
+}
+section.entry-content.cf a {color:rgba(253, 203, 110,1.0)}
+.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+/* Make video Responsive */
+.videoDetailPage-video.iframed {
+    margin-bottom: 5px;
+    width: 100%;
+    height: 0;
+    padding-bottom: 66.25%;
+    position: relative;
+}
+.videoDetailPage-video.iframed iframe{
+    max-width: 100%;
+    height: 100%;
+    width:100%;
+    position: absolute;
+}
+
+@media only screen and (min-width:771px){
+/* Adjust the Column Widths */
+.videoDetailPage .span8{ width:80% }
+.videoDetailPage-list { margin:0px }
+.videoDetailPage .span6{ width:20%}
+.videoDetailPage-titleList { text-align:center; font-size:1.1em }
+.videoDetailPage .matrix-itemFluid { min-width: 80%;max-width:100%; float:none }
+.videoDetailPage .span6 .matrix-itemFluid { width: 80%; margin: 0px auto; }
+}
+
+/* PHOTOS Adjust the viewer to adjust to photo size eliminating white space and showing photo size 100% **/
+.photoDetailPage-image > img {
+    position: relative; display: flex; max-height: 100vh; height:auto; margin: 0px auto ;}
+.photoDetailPage-image { position: relative;}
+.photoDetailPage .image-aspect-4-3 {
+    width: 100%;
+    height: auto;
+max-height:100vh;
+padding-bottom:0px; }
+
+
+/****** UNIVERSAL CONTAINER ***********/
+#loading{ position:fixed;height:100%;width:100%;top:0;bottom:0;z-index:9999999;overflow:hidden;background-color:rgba(0, 0, 0, 0.5);}
+#loading:before{content:"...Loading";position:fixed;color:white;font-size:28px;top:40%;width:100%;text-align:center }
+
+.universalContainer{   
+ position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+   bottom: 0;
+    background-color:rgba(0,0,0,0.5);
+    z-index: 100;
+    height: 100vh;
+    width: 100%;
+}
+.universalSource{
+    width: 100%;    
+    max-width: 760px;    
+    margin: 0px auto 0px;
+    display: block;
+    border-radius: 0px 0px 6px 6px;    
+    border: solid 4px lightgray;
+    overflow:hidden;
+    position:relative;
+     transition:0.4s linear;
+}
+.ucHeader{
+    width: 100%;
+    height:auto;
+    background-color:#212121;
+    display:block;    
+}
+a.ucClose, a.ucMax{
+    color: white;
+    background-color: royalblue;
+    padding: 6px 12px 6px 12px;
+    display: inline-block;
+    font-size:1.4em;
+}
+a.ucMax:hover{ cursor:pointer }
+a.ucClose{ float:right }
+a.ucClose:hover{
+background-color:red;cursor:pointer;
+}
+@media only screen and (max-width:771px){
+a.ucClose, a.ucMax{
+   padding: 6px 12px 6px 12px;
+    display: inline-block;
+    font-size:1.8em;
+}
+}
+.universalSource-Container{
+    width: 100%;
+    position: relative;
+    max-height: 90vh;
+    min-height:490px;
+}
+.universalSource-Container iframe{
+position: relative;
+max-width: 100%;
+width: 100%;
+height: 90vh;
+}
+/** Max and Min For The Container **/
+a.ucMax::before{content: '\2751';font-size:1em; color:white}
+.universalSource.unSourceMax a.ucMax::before{content: '\2752';font-size:1em; color:white}
+.universalSource.unSourceMax{ max-width:100%; transition:0.4s linear }
+.universalSource.unSourceMax .universalSource-Container { max-height:100%;padding-bottom:100vh;transition:0.4s linear}
+.universalSource.unSourceMax .universalSource-Container iframe{ height:95vh }
+.statusDetailPage { width: 100%;}
+/*Messages In The Container*/
+.page-profiles-message .site-headerFrame, .page-profiles-message .site-footerFrame, .page-profiles-message .ningbar{ display:none }
+.page-profiles-message.notInIframeMessages .site-headerFrame, .page-profiles-message.notInIframeMessages .ningbar{ display:block }
+.areInIframeMessages .content-body.composeMessagePage{ width:100%!important; }
+.areInIframeMessages .composeMessagePage .tagit{ width:100%!important }
+.areInIframeMessages .content-header{ padding:0px 10px;display:block!important }
+.areInIframeMessages .content-name{ font-size:20px }
+.areInIframeMessages .content-nav{ margin-bottom:3px }
+.areInIframeMessages .module-actions{ display:block }
+.header-nav a.hasEmail .ningbar-countNotification{ font-size:13px;padding: 0.10em 0.5em; position:relative;}
+
+/* Navbar Email Options */
+a.hasEmail{ color:white; font-weight:bold!important }
+a.hasEmail:hover, a.icon-down.hasEmail:hover{background-color:darkorange; font-weight:bold }
+
+
+/*NAVIGATION MENUS*/
+
+
+/* SubTab Active Colour*/
+.subTab-item.Subactive > a{ background-color:#00a6eb!important }
+                                                           
+/* Categories etc */
+.subnav li { margin-right:3px;margin-bottom:5px }
+.subnav li a { background-color: #212121; color:white; padding:10px; border-radius:2px;}
+
+.subnav li a:hover, .subnav li.subnav-current > a {
+    background-color: #fff; color: #000; text-decoration: bold;}
+.arrowlistmenu{
+width: 100%; /*width of menu*/
+background-image: radial-gradient( circle 906px at 9.7% -9%,  rgba(163,0,0,1) 25.7%, rgba(250,13,13,1) 60.5%, rgba(255,59,20,1) 100.2% );
+}
+
+.arrowlistmenu .headerbar{
+font: bold 14px Arial;
+color: white;
+background: black url(https://storage.ning.com/topology/rest/1.0/file/get/1079840462?profile=original) repeat-x center left;
+margin-bottom: 10px; /*bottom spacing between header and rest of content*/
+text-transform: uppercase;
+padding: 4px 0 4px 10px; /*header text is indented 10px*/
+}
+
+.arrowlistmenu ul{
+list-style-type: none;
+margin: 0;
+padding: 0;
+margin-bottom: 8px; /*bottom spacing between each UL and rest of content*/
+}
+
+.arrowlistmenu ul li{
+padding-bottom: 2px; /*bottom spacing between menu items*/
+}
+
+.arrowlistmenu ul li a{
+color: #eee;
+background: url(https://storage.ning.com/topology/rest/1.0/file/get/1079880602?profile=original) no-repeat center left; /*custom bullet list image*/
+display: block;
+padding: 2px 0;
+padding-left: 19px; /*link text is indented 19px*/
+text-decoration: none;
+font-weight: bold;
+border-bottom: 1px solid #dadada;
+font-size: 90%;
+}
+
+.arrowlistmenu ul li a:visited{
+color: #ffffff;
+}
+
+.arrowlistmenu ul li a:hover{ /*hover state CSS*/
+color: #CC0000;
+background-color: #F3F3F3;
+}
+a.glidebutton{
+display: inline-block;
+position: relative;
+color: #4A4A4A; /* default color */
+background: #ececec; /* default bg color */
+text-decoration: none;
+font: bold 14px Arial; /* font settings */
+letter-spacing: 2px; /* font settings */
+overflow: hidden;
+height: 30px; /* height of each button */
+text-align: center;
+border-radius: 5px; /* border radius */
+-moz-transition: all 0.3s ease-in-out; /* Enable CSS transition between property changes */
+-webkit-transition: all 0.3s ease-in-out;
+-o-transition: all 0.3s ease-in-out;
+-ms-transition: all 0.3s ease-in-out;
+transition: all 0.3s ease-in-out;
+}
+
+a.glidebutton > span:first-child{ /* first span inside button */
+position: relative;
+display: block;
+height: 100%;
+padding: 6px; /* padding of button */
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+-moz-transition: all 0.3s ease-in-out; /* Enable CSS transition between property changes */
+-webkit-transition: all 0.3s ease-in-out;
+-o-transition: all 0.3s ease-in-out;
+-ms-transition: all 0.3s ease-in-out;
+transition: all 0.3s ease-in-out;
+}
+
+a.glidebutton > span:first-child:after{ /* CSS generated content */
+content: attr(data-text); /* Duplicate text of span markup */
+display: block;
+width: 100%;
+height: 100%;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+padding: inherit;
+position: absolute;
+top:100%;
+left:0;
+}
+
+a.glidebutton:hover{
+color: white; /* color of button on hover */
+background: #a12712; /* bg color of button on hover */
+box-shadow: 0 0 4px green inset;
+}
+
+a.glidebutton:hover > span:first-child{
+-moz-transform: translateY(-100%);
+-webkit-transform: translateY(-100%);
+-ms-transform: translateY(-100%);
+-o-transform: translateY(-100%);
+transform: translateY(-100%);
+}
+
+.add_discussion{
+margin-bottom: -30px;
+}
+.span11.column .pull-right a,.add_discussion a, .add_discussion_page a{
+color: #fff!important;
+text-decoration: none;
+font-weight: bold;
+line-height: 1.4545em;
+text-shadow: 0 -1px #00629c;
+text-align: center;
+background-color: #0079c1;
+background: -moz-linear-gradient(center bottom,#0079c1 0,#0079c1 20%,#00a1ff 100%);
+background: -webkit-gradient(linear,left bottom,left top,color-stop(0%,#0079c1),color-stop(20%,#0079c1),color-stop(100%,#00a1ff));
+background: -webkit-linear-gradient(bottom,#0079c1 0,#0079c1 20%,#00a1ff 100%);
+background: -ms-linear-gradient(bottom,#0079c1 0,#0079c1 20%,#00a1ff 100%);
+background: -o-linear-gradient(bottom,#0079c1 0,#0079c1 20%,#00a1ff 100%);
+background: linear-gradient(bottom,#0079c1 0,#0079c1 20%,#00a1ff 100%);
+-moz-box-shadow: 0 1px #4dbeff inset;
+-webkit-box-shadow: 0 1px #4dbeff inset;
+box-shadow: 0 1px #4dbeff inset;
+-webkit-border-radius: 5px 5px 5px 5px;
+-moz-border-radius: 5px 5px 5px 5px;
+border-radius: 5px 5px 5px 5px;
+border-color: #313131 #212121 #000;
+border-style: solid;
+border-width: 1px;
+height: 1.4545em;
+padding: 7px 15px 8px;
+-moz-box-sizing: content-box;
+-webkit-box-sizing: content-box;
+box-sizing: content-box;
+cursor: pointer;
+}
+
+@media only screen and ( min-width:771px ){
+.eventDetail .content-actions .optionsDropdown-button{ display:none }
+.eventDetail .content-actions #eventPage-optionsDropdown{ display:block!important }
+.eventDetail .content-actions .optionsDropdown-list{ width:auto; position:relative; border:none }
+.eventDetail .content-actions .optionsDropdown-list > li { padding: 4px; display: inline-block; float: left; }
+.eventDetail .content-actions .linkbar{ width:100%; clear:both }
+.eventDetail .content-actions .linkbar > li{ float:right;  }
+.eventDetail .content-actions .optionsDropdown a{ margin-right:5px }
+.eventDetail .content-actions .optionsDropdown{ float:right }
+}
+.eventDetail .content-actions .optionsDropdown a{ padding: 6px 8px;border-radius:4px }
+.eventDetail .content-actions .optionsDropdown a:hover{ background-color:royalblue; color:white }
+.eventDetail .optionsDropdown-featureButton.feature-button.is-selected{ background-color:darkblue;color:black; border-radius:4px }
+
+@media only screen and ( max-width:771px ){
+.eventDetail .content-actions .optionsDropdown-list{
+background-color:#c9d3f2;
+border-radius:4px;
+box-shadow: 0px 8px 7px darkgray;
+}
+.eventDetail .content-actions .optionsDropdown a{
+color: #5c5151
+}
+.eventDetail .content-actions .optionsDropdown-button {
+background-color: #d1e0f8;
+}
+.eventDetail .content-actions .optionsDropdown{
+margin-right:10px;
+}
+}
+
+/* Open Photo Page*/
+a.OpenStatusAddPhoto{ float:left;cursor:default }
+a.OpenStatusAddPhoto:hover{ cursor:pointer }
+/* Position of box in the member photo tabContainer section*/
+.page-members .tabContainerSection-pane.section-member-photoEntries a.OpenStatusAddPhoto{ float:none;display:inline-block; margin:10px 0px }
+footer.module-footer.cf {background:transparent!important;}
+div.footer-contact {font-size: 0.7em!important;}
+
+/* Background colour behind photo, padding, border radius etc */
+.row.photoEditPage-entry .span6.tablet16.mobile16{
+background: background-color: rgba(115, 115, 115, 0.76);
+background-image: linear-gradient(rgba(115, 115, 115, 0.76), rgba(31, 31, 31, 0.88));
+padding: 4px 0px;box-shadow: 1px 1px 1px 7px #606060;border: solid 10px #2D2D2D; margin-bottom:20px}
+/* This makes the photo clickable on either side to go forward or back */
+.page-photo .adjacentEntryLink {
+height: 100%;
+width: 50%;
+position:absolute;top:0%;
+}
+
+.page-photo .adjacentEntryLink a{ width:100%; height:100%;position:absolute;top:0px;/* this shows the text for next and previous */ text-indent: 35%; margin-top:-20px}
+.page-photo .adjacentEntryLink a:after{/* this goes before the next previous text */ content:" Photo "; }
+
+.page-photo .adjacentEntryLink-previous a:hover { opacity:1;cursor:pointer; z-index:0}
+
+.page-photo .adjacentEntryLink-previous a{
+background: url("http://api.ning.com:80/files/Ho7RWhwBiVe3dmAuaRU2Rapx5KVFh0tYJ71TgKrw5Mp2w5pXVLkq5O4PVrPOzRxSXnHfb5t8MbH*b8XHhZIU-*rIUidUNccA/oldplumbobprevious.png") no-repeat scroll 0% 0% transparent;background-size:10%;background-position:center left;opacity:0; left: 0px;z-index:20;}
+
+.page-photo .adjacentEntryLink-next a:hover { opacity:1; cursor: pointer; z-index:20;}
+.page-photo .adjacentEntryLink-next a {
+background: url("https://storage.ning.com/topology/rest/1.0/file/get/1201730044?profile=RESIZE_180x180") no-repeat scroll 0% 0% transparent;background-size:10%;background-position:center right;opacity:0; right: 0px;z-index:20;}
+
+
+/* Adds Some Info Before the Input Box's */
+  .photoEditPage header.form-field: before{ content:"Photo Title";
+  display: block;
+}
+
+.photoEditPage section.form-field:before {
+  content: " Photo Description ";
+  display: block;
+}
+
+.photoEditPage-slug.form-field:before {
+  content: "Photo Web URL";
+  display: block;
+}
+
+.photoEditPage .form-field:before {
+  color: bisque;
+  font-size: 22PX;
+  font-family: 'Staatliches', cursive;
+  font-style: italic;
+  background-color: #005A84;
+  background-image: linear-gradient(#005A84, rgba(31, 31, 31, 0.57));
+  border-color: rgba(187, 179, 120, 0.83);
+  border-style: dotted;
+  border-width: 0px 0px 2px;
+  border-radius: 4px 4px 0px 0px;
+  padding: 6px 10px;
+}
+
+/*** PHOTOS DEFAULTS PHONE IMAGE 100% ***/
+/* Makes the image bigger for phones */
+@media only screen and ( max-width:481px ) {
+  .photoDetailPage .image-aspect-4-3 {
+    padding-bottom: 100%;
+  }
+}
+
+.photoDetailPage-image > img {
+  position: relative;
+  display: flex;
+  max-height: 100vh;
+  height: auto;
+  margin: 0px auto;
+}
+
+.photoDetailPage-image {
+  position: relative;
+}
+
+.photoDetailPage .image-aspect-4-3 {
+  width: 100%;
+  height: auto;
+  max-height: 100vh;
+  padding-bottom: 0px;
+}
+
+div.pagination,ul.subnav.expanded,span.js-followDescription.followDescription, div.entry-tags.ux-entry-tags.pull-left,div.groupHub.sheet.grid-frame {
+  background-image: linear-gradient( 109.6deg,  rgba(8,8,8,1) 11.2%, rgba(201,3,3,1) 91.1% );
+  border-width: 2px;
+  color: #fff;
+  border-style: none;
+  padding: 5px;
+  border-color: transparent;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+ /* future proofing */
+  -khtml-border-radius: 10px;
+ /* for old Konqueror browsers */;
+}
+
+
+
+
+li.matrix-itemFluid.photoListPage-entry:before {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+}
+
+.speech {
+  border: 1px solid #DDD;
+  width: 300px;
+  padding: 0;
+  margin: 0;
+}
+
+.speech input {
+  border: 0;
+  width: 240px;
+  display: inline-block;
+  height: 30px;
+}
+
+.speech img {
+  float: right;
+  width: 40px;
+}
+
+/******** JOHN BIZLEY CSS **********/
+/***** START EVENT LIST CSS *************************************************************/
+
+/* NEW CALENDAR GRID This is the grid which will surround each of the months */
+.calendarGrid {
+  border: solid 1px lightgray;
+  border-radius: 6px;
+  padding: 4px;
+  margin-bottom: 20px;
+}
+
+.calendarGrid-Title {
+  width: 100%;
+  float: left;
+  clear: both;
+  margin-bottom: 20px;
+}
+
+.calendarGrid-Title {
+  background-image: url("https://storage.ning.com/topology/rest/1.0/file/get/1272199983?profile=RESIZE_180x180");
+  background-position: center center;
+  background-size: initial;
+  background-repeat: repeat;
+}
+
+.monthHeader-name {
+  font-weight: bold;
+  display: block;
+  padding: 10px 20px;
+  color: white;
+  background-color: #a12712;
+  float: left;
+  border-radius: 6px 0px 0px 0px;
+  font-size: 16px;
+}
+/* Margin between each post */
+/** Margin between each of the posts plus some padding**/
+.eventListPage .entry {
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+.section-eventBundle .entry {
+  margin-bottom: 15px;
+}
+
+/*OPTIONAL Links In The Header Module ByLine For Inviting Members when creating an event */
+.module-byline &gt; a {
+  color: white;
+  font-size: 16px;
+}
+
+.module-byline &gt; a:hover {
+  color: antiquewhite;
+  text-decoration: none;
+}
+
+/*OPTIONAL Make a button for the inivite members links*/
+.module-byline {
+  margin-top: 10px;
+}
+
+.module-byline &gt; a {
+  background-color: royalblue;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+
+.module-byline &gt; a:hover {
+  background-color: darkblue;
+}
+
+/* Add a border around each entry to make give them more seperation */
+.eventListPage .span13 {
+  border: solid 1px lightgray;
+}
+
+/** New Entry Title Adjustment After Moving It Above the Event Content **/
+.eventListPage .eventPage-details &gt; .entry-title {
+  margin-bottom: 14px;
+  box-shadow: 0px 5px 5px lightgray;
+  padding: 6px;
+  border: solid 1px #eaeaea;
+}
+/*Add little Padding To The Details Section */
+.eventPage-details {
+  padding: 4px;
+}
+
+/*Entry Title Make Uppercase */
+.eventPage-details .entry-title &gt; a, .section-eventBundle .entry-title &gt; a {
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+
+/*Entry Title hover*/
+.eventListPage .entry-title &gt; a:hover, .eventPage-details .entry-title &gt; a:hover, .section-eventBundle .entry-title &gt; a:hover {
+  color: green;
+  font-size: 1.2em;
+}
+
+/* Change the spans of the main content and the date day column to 100% width */
+.eventListPage .span3, .eventListPage .span13 {
+  width: 100%;
+}
+
+.eventListPage .span3 {
+  text-align: center;
+  padding: 6px;
+  border-bottom: none;
+  margin-bottom: 0px;
+}
+
+/*Move the start date to the left and make it an inline block */
+.eventListPage .eventListPage-startDate {
+  text-align: center;
+  display: inline-block;
+  padding: 0 10px 0px 0;
+}
+/* Do the same for the day of the week */
+.eventListPage .eventListPage-startDayOfWeek {
+  text-align: left;
+  display: inline-block;
+  padding: 0 10px 0px 0;
+}
+
+/*Remove entry content image from list pages*/
+.eventListPage .eventPage-detail.entry-content.cf a &gt; img {
+  display: none!important;
+}
+
+.column-narrow .eventPage-detail.entry-content.cf a &gt; img {
+  display: none!important;
+}
+
+/*Remove entry content iframes from list pages */
+.eventListPage .eventPage-detail.entry-content.cf iframe {
+  display: none!important;
+}
+
+.column-narrow .eventPage-detail.entry-content.cf iframe {
+  display: none!important;
+}
+
+.section-eventBundle .eventPage-detail.entry-content.cf iframe {
+  display: none!important;
+}
+
+
+/* Add Box Shadow To The Entries */
+.eventListPage .entry, .section-eventBundle .entry {
+  box-shadow: 0px 5px 5px lightgray;
+  padding: 6px;
+  border-top: solid 1px #eaeaea;
+}
+
+.eventListPage .entry:hover, .section-eventBundle .entry:hover {
+  box-shadow: 0px 8px 7px darkgray;
+}
+
+/* Margin between each post */
+/** Margin between each of the posts **/
+.eventListPage .entry {
+  margin-bottom: 30px;
+}
+
+.section-eventBundle .entry {
+  margin-bottom: 15px;
+}
+
+/* Add a border around each entry to make give them more seperation */
+.eventListPage .span13 {
+  border: solid 1px lightgray;
+}
+
+.eventListPage .span3 {
+  border-top: solid 1px lightgray;
+  border-left: solid 1px lightgray;
+  border-right: solid 1px lightgray;
+}
+
+/* Space out the Events Details li list */
+li.eventPage-detail {
+  margin: 10px;
+}
+
+.eventPage-detail {
+  margin-bottom: 0px;
+}
+
+li.eventPage-detail.entry-content {
+  margin: 15px 0px;
+  border-top: solid 1px lightgray;
+  border-bottom: solid 1px lightgray;
+  padding: 4px;
+}
+
+li.eventPage-detail.entry-content p {
+  font-size: 0.93em;
+}
+
+/* EVENTS MOBILE VIEW*/
+/* Move the image above the content so it gives the text more space to fill the screen either side */
+@media only screen and (max-width:771px) {
+  .eventListPage .media-frame.eventPage-details &gt; .media-img {
+    float: none!important;
+  }
+
+  .eventDetailPage .media-frame &gt; .media-body {
+    overflow: visible;
+  }
+
+  .section-eventBundle .entry-headline &gt; .media-img {
+    float: none!important;
+  }
+
+  .section-eventBundle .media-frame &gt; .media-body {
+    overflow: visible;
+  }
+}
+/*************************************** Make video Responsive IN IFRAME ***************************************************/
+/*************************************
+.videoDetailPage-video{
+    margin-bottom: 5px;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+.videoDetailPage-video iframe, .videoDetailPage-video video{
+    max-width: 100%;
+    height: 100%;
+    width:100%;
+    position: absolute;
+}
+********************************************/
+
+.videoDetailPage-video.iframed {
+  margin-bottom: 5px;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+.videoDetailPage-video.iframed iframe {
+  max-width: 100%;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+/** VIDEO DETAIL PAGE **/
+@media only screen and (min-width:771px) {
+  .videoDetailPage .span8 {
+    width: 75%;
+  }
+
+  .videoDetailPage-list {
+    margin: 0px;
+  }
+
+  .videoDetailPage .span6 {
+    width: 25%;
+  }
+
+  .videoDetailPage-list {
+    margin: 0px;
+  }
+
+  .videoDetailPage .matrix-itemFluid {
+    min-width: 100%;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .videoDetailPage .matrix-item {
+    width: 35%;
+    float: left;
+    margin-right: 10px;
+  }
+
+  .videoDetailPage .icon-love {
+    display: inline;
+    vertical-align: bottom;
+  }
+
+  .videoDetailPage-mainVideo .button-tiny.likeButton a {
+    font-size: 12px;
+  }
+}
+
+.videoDetailPage .videoListPage-metaTitle a {
+  white-space: pre-wrap;
+}
+
+.videoDetailPage .videoListPage-metaTitle {
+  font-size: 0.9em;
+  margin-bottom: 0px;
+  height: 61px;
+  max-height: 61px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.
+/* Add a title to the video description */
+.videoDetailPage-mainVideo >.entry-content::before {
+  content: "About";
+  display: block;
+  margin-bottom: 5px;
+  text-decoration: underline;
+}
+
+.videoLocation {
+  background-image: url(http://api.ning.com:80/files/LDHPzI5awtAzNGzmE2kXLDxGXlQIN6KuZnvupsOuqguLGTBAB1SCUn7UJEJD8R92JDqXrBGwmMy36q3kFXCYAagMxVqPSOdp/earth_search.png);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  padding: 10px;
+  padding-left: 35px;
+}
+
+
+/** Friends List **/
+.section-member-friends .avatar-90 {
+  width: 60px;
+}
+
+@media only screen and (min-width:969px) {
+  .section-member-friends .matrix-itemFluid {
+    display: inline-block;
+  }
+
+  .section-member-friends .membersListPage-user {
+    width: 33.3333%;
+    height: 60px;
+    margin-bottom: 20px;
+  }
+}
+/* SP's PHOTO TITLES */
+.SP_Photo_Title a {
+    color: #fff;
+    font-size: 16px; }
+.SP_Photo_Title a:hover { color:gold; text-decoration:none }
+a.matrix-item:hover .SP_Photo_Title a{ color:gold }
+
+.SP_Photo_Title {
+    background-color: rgba(0, 0, 0, 0.7);
+    bottom: 0;
+    padding: 5px;
+    position: absolute;
+    width: 95%;
+    text-align: center;
+    height: auto;
+    border-radius: 10px 10px 0px 0px;
+    left: 0;
+    right: 0;
+    margin: auto;}
+/* Remove the link underline for these items */
+a.matrix-item:hover{ text-decoration:none }
+/** PHOTO MODULES LAYOUT CHANGE **/
+@media only screen and (min-width:959px){
+.column-narrow .photoSection-entry.matrix-itemFluid {
+    max-width: 50%; float:left;}}
+
+/** Show the member count above the latest members module **/
+.MemberCount-load .module-name{ font-size:0.85em; margin-bottom:4px;text-align:left}
+.page-home .MemberCount-load .module-name {font-size:0.75em; margin-bottom:2px;text-align:right }
+
+/* Color Change As The Original Module Name In Members Page Was White **/
+.MemberCount-Module .module-name, .MemberFeaturedCount-Module .module-name{ color:black }
+
+
+
+/** PHOTO ADD MODULE**/
+/* Open Add Photo Camera Image*/
+a.OpenStatusAddPhoto{ background:url(http://api.ning.com:80/files/K*6yCKTfahR2WnZvqjD2I*Jk1swMbOsyRnB4rgHYVIf3fTyU704w4BJlqLC7esMV71SyRn16kxEVgxoQTbJ5Q-Ug6nE8nZci/smalldslr.png) no-repeat center right; background-size: 30px; padding-right:40px }
+
+/* Positon of the icon link by the status box's */
+a.OpenStatusAddPhoto {
+  float: right;
+  padding: 5px 40px 5px 5px;
+  display: block;
+  margin-right: 30px;
+  cursor: default;
+}
+
+a.OpenStatusAddPhoto:hover {
+  cursor: pointer;
+}
+
+/* Position of box in the member photo tabContainer section*/
+.page-members .tabContainerSection-pane.section-member-photoEntries a.OpenStatusAddPhoto {
+  float: none;
+  display: inline-block;
+  margin-right: 30px;
+}
+
+
+/** CSS LAYOUT FOR THE ADD PHOTO BOX **/
+iframe.StatusAddPhoto-iframe {
+  width: 100%;
+  height: 100vh;
+}
+
+.AddPhotoContainer-Header {
+  height: 100%;
+  width: 100vw;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  margin: auto;
+  bottom: 0;
+  z-index: 999999;
+}
+
+.AddPhotoContainer-Module {
+  max-width: 1280px;
+  margin: 0px auto;
+}
+
+.AddPhotoContainer-Tools {
+  width: 100%;
+  height: 40px;
+  background-color: royalblue;
+  text-align: center;
+}
+
+a.AddPhotoContainer-Closer {
+  color: white;
+  padding: 5px 10px;
+  display: inline-table;
+  margin: 4px;
+  border-radius: 4px;
+  font-size: 1.5em;
+}
+
+a.AddPhotoContainer-Closer:hover {
+  cursor: pointer;
+  background-color: #4bb2ed;
+  color: black;
+  text-decoration: none;
+}
+
+/* Postion of camera icon and link on photo modules */
+.section-photoBundle .OpenStatus-Links {
+  float: left;
+}
+
+/** This hides all the items listed in the photo page to make the loader quicker rather than adding it into custom code **/
+.page-photos .site-headerFrame, .page-photos .content-nav.condenseable.subnavBar.cl, .page-photos .pagination, .page-photos .site-footerFrame, .page-photos .ningbar, .page-photos .ningbar, .page-photos a.scrollToTop, .page-photos .module-footer a {
+  display: none;
+}
+
+.page-photos .content-body .grid-frame {
+  display: none;
+}
+
+.page-photos .content-body .section-primaryContent .grid-frame {
+  display: block;
+}
+
+.page-photos .content-body.entryEditPage.photoEditPage.cf .grid-frame {
+  display: block;
+}
+
+.page-photos .belowHeaderAdHtml {
+  display: none;
+}
+
+.page-photos .aboveFooterAdHtml {
+  display: none;
+}
+
+/* This is the page not in the iframe so the items are added back to the page in normal photo view **/
+.page-photos.notInIframe .site-headerFrame,
+ .page-photos.notInIframe .content-nav.condenseable.subnavBar.cl,
+ .page-photos.notInIframe .pagination,
+ .page-photos.notInIframe .site-footerFrame,
+ .page-photos.notInIframe .ningbar,
+ .page-photos.notInIframe a.scrollToTop, .page-photos.notInIframe .content-body .grid-frame, .page-photos.notInIframe .module-footer a, .page-photos.notInIframe .belowHeaderAdHtml, .page-photos.notInIframe .aboveFooterAdHtml {
+  display: block;
+}
+/** Message above the photo edit add page **/
+.content-body.entryEditPage.photoEditPage.cf::before {
+  content: "Important: Use the PUBLISH button at the bottom to add your photos or Cancel to quit. Please provide Descriptive Titles and Descriptions with subject tags and approximate or precise location information so that other surveyors can Picture Themselves There.  Thank you.";
+  display: block;
+  font-size: 1em;
+  padding: 6px;
+  background-color: #212121;
+  color: white;
+  margin-bottom: 4px;
+  border-radius: 4px;
+}
+
+a.pull-right {
+  color: #fff!important;
+  padding: 5px;
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(238,56,56,1) 0%, rgba(206,21,0,0.92) 90.1% );
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+ /* future proofing */
+  -khtml-border-radius: 10px;
+ /* for old Konqueror browsers */
+  box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
+  -webkit-box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
+}
+a.pull-right:hover {background-image: radial-gradient( circle 919px at 1.7% 6.1%,  rgba(41,58,76,1) 0%, rgba(40,171,226,1) 100.2% );}
+/** NEW VIDEO PAGE **/
+/*Detail Page Corrections*/
+.videoDetailPage-video {
+  margin-bottom: 5px;
+}
+div.pluginSkinLight.pluginFontHelvetica {color:white!important;}
+
+.videoDetailPage-viewVideo {
+  float: left;
+  margin: 10px 0px 10px 10px;
+  width: 100%;
+}
+
+.videoDetailPage-viewVideo .icon-eye {
+  vertical-align: bottom;
+  display: inline;
+}
+
+.videoDetailPage .icon-love {
+  display: inline;
+  vertical-align: bottom;
+}
+
+.videoDetailPage-mainVideo .button-tiny.likeButton a {
+  font-size: 12px;
+}
+
+/** Adding A Video Input Correction As It Was Cutting If The Text Top And Bottom **/
+.input-full.videoForm-inputTitle {
+  padding: 0px 0px 0px 4px;
+}
+/* Social Actions Box */
+.videoDetailPage .socialActions {
+  margin-top: 12px;
+  margin-bottom: 6px;
+}
+/* Spacing for the social buttons */
+.videoDetailPage .socialSharingButton {
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+/* Make video Responsive */
+.videoDetailPage-video {
+  margin-bottom: 5px;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+.videoDetailPage-video iframe {
+  max-width: 100%;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+/* Adjust get embed code button after being moved */
+.button.button-secondary.videoDetailPage-getEmbedCode {
+  font-size: 12px;
+}
+
+.videoDetailPage-embedCode {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.videoDetailPage-getEmbedCode_wrap {
+  text-align: right;
+  width: 100%;
+  margin: -20px 10px 10px 0px;
+  float: right;
+}
+
+/* Add a title to the video description */
+.videoDetailPage-mainVideo >.entry-content::before {
+  content: "About";
+  display: block;
+  margin-bottom: 5px;
+  text-decoration: underline;
+}
+
+
+.likeButton-count {
+  vertical-align: middle;
+}
+
+
+
+
+#infscr-loading {
+  margin: 20px;
+  text-align: center;
+}
+/*Download Button*/
+.SP_Download {
+  color: #a12712!important;
+  font-size: 16px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  padding: 10px 15px 10px 40px;
+  background-image: radial-gradient( circle 919px at 1% 2.6%,  rgba(215,240,213,1) 0%, rgba(244,245,216,1) 90% );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F8F7F7', endColorstr='#ECEBEB',GradientType=0);
+  background-color: #F8F7F7;
+  background-image: url("https://storage.ning.com/topology/rest/1.0/file/get/11391124?profile=original");
+  background-repeat: no-repeat;
+  background-position: 7px 5px;
+  border: solid 1px #c9c9c9;
+}
+
+footer.site-footerFrame {
+  bottom: 0px!important;
+  background: transparent!important;
+}
+
+@media only screen and ( max-width:771px ) {
+  h2.content-name {
+    font-size: 0.9em;
+  }
+}
+}
+
+@media only screen and (min-width:771px){
+/* Adjust the Column Widths */
+.videoDetailPage .span8{ width:80% }
+.videoDetailPage-list { margin:0px }
+.videoDetailPage .span6{ width:20%}
+.videoDetailPage-titleList { text-align:center; font-size:1.1em }
+.videoDetailPage .matrix-itemFluid { min-width: 80%;max-width:100%; float:none }
+.videoDetailPage .span6 .matrix-itemFluid { width: 80%; margin: 0px auto; }
+}
+
+p.footer-left,p.footer-right {font-size: 0.8em;color:#fff!important;}
+p.footer-right a{color:#fff!important}
+div.media-body.activityFeed-storyBody {
+background-image: radial-gradient( circle 906px at 9.7% -9%,  rgba(163,0,0,1) 25.7%, rgba(250,13,13,1) 60.5%, rgba(255,59,20,1) 100.2% );border-style: solid;
+  border-width: 5px;
+   padding: 20px;
+  max-width: 650px;
+  margin: 20px;
+  box-shadow: 
+    0 0 0 10px hsl(0, 0%, 50%),
+    0 0 0 15px hsl(0, 0%, 60%),
+    0 0 0 20px hsl(0, 0%, 70%),
+    0 0 0 25px hsl(0, 0%, 80%),
+    0 0 0 30px hsl(0, 0%, 90%);
+  color: #000;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1em;
+  text-align: center;
+background-image: linear-gradient( 109.6deg,  rgba(205,139,81,1) 32.7%, rgba(234,178,118,1) 77.5% );
+}
+div.media-body.activityFeed-storyBody a {color:#cc0000!important;}
+/*Reveal The Like Word */
+.activityFeed-counts .icon{ display:inline;vertical-align:0 }
+.button-tiny.likeButton a{ padding:3px 6px;font-size:0.75em }
+.button-tiny.likeButton a:hover, .button-tiny.likeButton a.is-selected {background-color:royalblue;border: 1px solid #a2bf1f;text-decoration: none; color:white}
+/* Only use this line if using the Like option rather than Favorite or Promoted */
+a.is-selected .icon-love:after{content:"s";display:inline;}
+
+/*Site Wide*/
+.button-tiny.likeButton a .icon {
+float:right;
+    display: inline;
+    width: auto;
+    overflow: hidden;
+    vertical-align: middle;}
+.likeButton-count{ vertical-align:middle;}
+.button-tiny.likeButton a .icon {
+  display: inline;
+  width: auto;
+  margin: -5px;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 15px;
+  padding-left: 5px;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
+div.matrix-media-1-1 div.groupHub-groupTitle span a {font-size:0.8em;}
+
+/** Adding Photos Via Activity ver 5 03-04-19 John Bizz***/
+/*** OVERLAYS; LOADERS ETC ***/
+/* Overlay, Loading Screen And Updating */
+#overlay, #loading, #updating-screen{ position:fixed;height:100%;width:100%;top:0;bottom:0;z-index:9999999;overflow:hidden;background-color:rgba(0, 0, 0, 0.35);}
+#loading:before{content:"...Loading";position:fixed;color:white;font-size:28px;top:40%;width:100%;text-align:center }
+#updating-screen:before{content:"Checking For Updates..."; position:fixed;color:white;font-size:22px;top:40%;width:100%;text-align:center;}
+/** OVERLAY FOR THE ACTIVITY PHOTO ADD AS DIFFERENT Z-INDEX **/
+#overlayPhoto{ position:fixed;height:100%;width:100%;top:0;bottom:0;z-index:199;overflow:hidden;background-color:rgba(0, 0, 0, 0.1);}
+/** OVERLAY LIGHT **/
+#overlayLight{ position:fixed;height:100%;width:100%;top:0;bottom:0;z-index:198;overflow:hidden;background-color:rgba(0, 0, 0, 0.02);}
+
+/* Hide Content On Photos Page this will allow quicker loading for iframe then add it back on normal photos page */
+.page-photos .before-content, .page-photos .site-headerFrame, .page-photos .site-footerFrame, .page-photos .after-content, .page-photos .belowHeaderAdHtml, .page-photos .aboveFooterAdHtml, .page-photos .subnavBar, .page-photos .xg_chatPopup, .page-photos .xg_chat, .page-photos .content-body .span4, .page-photos .content-header{display:none;}
+.page-photos.areInIframe .content-actions.pull-right{ float:none; text-align:center; }
+.page-photos.areInIframe .content-name.pull-left{float:none }
+.page-photos.areInIframe .linkbar.linkbar-iconic #photoupload .button.button-iconic { font-size: 20px;}
+.page-photos.areInIframe .photoEditPage-entry .mce-top-part{ display:none }
+.page-photo.areInIframe .content-header{ display:none }
+
+/** Add Content Back **/
+.page-photos.notInIframe .before-content, .page-photos.notInIframe .site-headerFrame, .page-photos.notInIframe .site-footerFrame, .page-photos.notInIframe .after-content, .page-photos.notInIframe .belowHeaderAdHtml, .page-photos.notInIframe .aboveFooterAdHtml, .page-photos.notInIframe .subnavBar, .page-photos.notInIframe .xg_chatPopup, .page-photos.notInIframe .xg_chat, .page-photos.notInIframe .content-body .span4, .page-photos.notInIframe .content-header{
+display:block;
+}
+#chat-widget-container{ display:none }
+#photooutsidediv{
+display: block;
+z-index: 99999;
+position: absolute;
+left: 0;
+right: 0;
+top: 0px;
+bottom: 0;
+height:100%;
+background-color:#0006;
+max-width: 1280px;
+margin: 0px auto;
+width: 100%;
+}
+@media only screen and ( min-width:1280px ){
+#photoinnerdiv{
+max-width:1280px;
+margin:0px auto;
+height:100%;
+}}
+#photoinnerdiv.addPhotoActivity{ width:100% }
+iframe.StatusAddPhoto-iframe{ width:100%; height:99%;overflow: auto!important;}
+
+
+/* Add photo blog discussion video link buttons*/
+a.OpenStatusAddPhoto:hover, a.AddPhotoContainer-Closer:hover{ cursor: pointer}
+.OpenStatus-Links{ float:left; margin-top:10px; margin-bottom:10px; clear:both }
+.OpenStatus-Links a{ display:inline-block; margin-right:10px;margin-bottom:10px;background-color:#cbcbcb; color: white; padding: 4px 6px; border-radius:4px; }
+
+
+.OpenStatus-Links a:hover{ cursor:pointer; background-color: #7690EA; color: white; text-decoration: none;}
+/* Exit button for photos */
+.AddPhotoContainer-Tools{ width:100%;height:40px; background-color:royalblue;text-align:right }
+a.AddPhotoContainer-Closer{ background-color: transparent; color:white; padding:10px; display:inline-table;font-size:24px; }
+a.AddPhotoContainer-Closer:hover{ cursor:pointer; background-color: red;color:white;text-decoration:none;}
+
+/** MOBILE **/
+@media only screen and (max-width:771px){.header-logoImage {
+display:none;
+}}
+@media only screen and (max-width:771px){.header.siteName {
+display:block;
+}}
+@media only screen and (max-width:771px){.header-hidden {
+display:block;
+}}
+
+.mainTab.condensed-visible{ left:0!important }
+.site-headerFrame .occasional-button{ text-align:left; }
+.site-headerFrame .occasional-button .button{ font-size:25px }
+
+ a#header-siteName.header-siteName.header-hidden {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.4rem;
+  color:#fff;
+  text-transform: uppercase;
+  padding: 0 25px; /* to extend the border past the text */
+  margin: 80px 0;
+  background: #cc0000;
+  box-shadow: 0 0 0px 10px #cc0000;
+  border: 10px solid #fff;
+  transform: rotate(-5.5deg) skew(-10.5deg);
+}
+
+/*****PHOTOS NAVIGATION CONTROLS******/
+
+/* This makes the photo clickable on either side to go forward or back */
+.adjacentEntryLink { 
+height: 100%;
+width: 50%; 
+position:absolute;top:0%;z-index:1;}
+
+.adjacentEntryLink a{ width:100%; height:100%;position:absolute;top:0px;}
+.adjacentEntryLink-previous a:hover, .adjacentEntryLink-next a:hover {opacity:1;cursor:pointer; z-index:0; }
+.adjacentEntryLink-previous a{
+background-position:center left;opacity:0; left: 0px;}
+.adjacentEntryLink-next a {
+background-position:center right;opacity:0; right: 0px;}
+
+div.mrs-achievementTitle {font-size:0.7rem;color:#fff;}
+div:nth-child(3) > div.mrs-achievementTitle {font-size:0.6rem;color:#000;}
+
+/** Adding Photos Via Activity ver 5 03-04-19 John Bizz***/
+/*** OVERLAYS; LOADERS ETC ***/
+/* Overlay, Loading Screen And Updating */
+#overlay, #loading, #updating-screen{ position:fixed;height:100%;width:100%;top:0;bottom:0;z-index:9999999;overflow:hidden;background-color:rgba(0, 0, 0, 0.35);}
+#loading:before{content:"...Loading";position:fixed;color:white;font-size:28px;top:40%;width:100%;text-align:center }
+#updating-screen:before{content:"Checking For Updates..."; position:fixed;color:white;font-size:22px;top:40%;width:100%;text-align:center;}
+/** OVERLAY FOR THE ACTIVITY PHOTO ADD AS DIFFERENT Z-INDEX **/
+#overlayPhoto{ position:fixed;height:100%;width:100%;top:0;bottom:0;z-index:199;overflow:hidden;background-color:rgba(0, 0, 0, 0.1);}
+/** OVERLAY LIGHT **/
+#overlayLight{ position:fixed;height:100%;width:100%;top:0;bottom:0;z-index:198;overflow:hidden;background-color:rgba(0, 0, 0, 0.02);}
+
+/* Hide Content On Photos Page this will allow quicker loading for iframe then add it back on normal photos page */
+.page-photos .before-content, .page-photos .site-headerFrame, .page-photos .site-footerFrame, .page-photos .after-content, .page-photos .belowHeaderAdHtml, .page-photos .aboveFooterAdHtml, .page-photos .subnavBar, .page-photos .xg_chatPopup, .page-photos .xg_chat, .page-photos .content-body .span4, .page-photos .content-header{display:none;}
+.page-photos.areInIframe .content-actions.pull-right{ float:none; text-align:center; }
+.page-photos.areInIframe .content-name.pull-left{float:none }
+.page-photos.areInIframe .linkbar.linkbar-iconic #photoupload .button.button-iconic { font-size: 20px;}
+.page-photos.areInIframe .photoEditPage-entry .mce-top-part{ display:none }
+.page-photo.areInIframe .content-header{ display:none }
+
+/** Add Content Back **/
+.page-photos.notInIframe .before-content, .page-photos.notInIframe .site-headerFrame, .page-photos.notInIframe .site-footerFrame, .page-photos.notInIframe .after-content, .page-photos.notInIframe .belowHeaderAdHtml, .page-photos.notInIframe .aboveFooterAdHtml, .page-photos.notInIframe .subnavBar, .page-photos.notInIframe .xg_chatPopup, .page-photos.notInIframe .xg_chat, .page-photos.notInIframe .content-body .span4, .page-photos.notInIframe .content-header{
+display:block;
+}
+#chat-widget-container{ display:none }
+#photooutsidediv{
+display: block;
+z-index: 99999;
+position: absolute;
+left: 0;
+right: 0;
+top: 0px;
+bottom: 0;
+height:100%;
+background-color:#0006;
+max-width: 1280px;
+margin: 0px auto;
+width: 100%;
+}
+@media only screen and ( min-width:1280px ){
+#photoinnerdiv{
+max-width:1280px;
+margin:0px auto;
+height:100%;
+}}
+#photoinnerdiv.addPhotoActivity{ width:100% }
+iframe.StatusAddPhoto-iframe{ width:100%; height:99%;overflow: auto!important;}
+
+
+/* Add photo blog discussion video link buttons*/
+a.OpenStatusAddPhoto:hover, a.AddPhotoContainer-Closer:hover{ cursor: pointer}
+.OpenStatus-Links{ float:left; margin-top:10px; margin-bottom:10px; clear:both }
+.OpenStatus-Links a{ display:inline-block; margin-right:10px;margin-bottom:10px;background-color:#cbcbcb; color: white; padding: 4px 6px; border-radius:4px; }
+
+
+.OpenStatus-Links a:hover{ cursor:pointer; background-color: #a12712; color: white; text-decoration: none;}
+/* Exit button for photos */
+.AddPhotoContainer-Tools{ width:100%;height:40px; background-color:royalblue;text-align:right }
+a.AddPhotoContainer-Closer{ background-color: transparent; color:white; padding:10px; display:inline-table;font-size:24px; }
+a.AddPhotoContainer-Closer:hover{ cursor:pointer; background-color: red;color:white;text-decoration:none;}
+
+/** NING ADMIN MENU **/
+@media (min-width: 768px) {
+#dashboardBar {
+background-color: #4b5342;
+float:none!important;
+}
+.dashboardBar-ningLogo, .dashboardBar-ningLogo.ningbar-show.show {
+display:none!important;
+}
+.dashboardBar-innerSection {
+float: right;
+position: fixed;
+width: 200px;
+left: 0;
+top:36px;
+display:none; 
+}
+.ningbar .dashboardBarWrap {
+width:auto
+}
+.dashboardBar-innerIcons {
+float: left;
+padding-top: 3px;
+margin-left: 0px;
+background-color: #2f2c2c;
+border-radius: 0px 0px 6px 6px;
+border: solid 1px #746f6f;
+}
+.dashboardBar-icon {
+width:100%; border-radius:0px; text-align:left
+}
+.dashboardBar-innerIcons a:hover{
+background-color:royalblue;
+}
+.dashboardBar-innerIcons a:hover span{
+color:white!important;
+}
+}
+
+@media (max-width: 768px) {
+.ningbar .dashboardBar-innerIcons { position:fixed }
+.ningbar .dashboardBarWrap {width:auto }
+.ningbar .dashboardBar-ningLogo.ningbar-show {display:none }
+}
+
+/* Add this if you want it hidden in mobile view */
+
+@media (max-width: 768px) {.dashboardBarWrap{ display:none!important }}
+/* Adds the drop down arrow for subtabs in navbar **/
+@media only screen and (min-width:769px){
+.icon-down::before {
+    font-family: 'ning-icon-fonts';
+    content: '\e60d';
+    float: right;
+    margin-left:5px;
+    margin-top:2px;
+}}
+
+
+.button-tiny.likeButton a:hover{ color:white; background-color: #ff0024 }
+                              /* .button-tiny.likeButton a.is-selected{ color:white; background-color: #ff0024 } */
+.icon-love{ display:inline;vertical-align:middle;padding:1px }
+
+.button-tiny.likeButton a.is-selected .icon{ width:1.2em }
+.button-tiny.likeButton a.is-selected .icon-love{ display:inline-block!important }
+.button-tiny.likeButton a.is-selected{ background-color:transparent; font-size:1.5em; color:grey }
+.button-tiny.likeButton a.is-selected .icon-love::before { color:red }
+.button-tiny.likeButton a.is-selected .likeButton-count{ font-size:0.7em; color:#a7a5a5 }
+
+
+.js-followUnfollow .button-tiny a.is-selected{color:white; padding:5px 10px;font-size:12px}
+.js-followUnfollow .button-tiny a.is-selected:hover{ color:gold }
+.js-followUnfollow .button-tiny a{ color:darkblue; padding:5px 10px;font-size:12px }
+.js-followUnfollow .button-tiny a:hover{ color:white }
+
+.mainTab.condensed-visible{ left:0!important }
+.mainTab.condensed-visible .mainTab-item{ margin-bottom:5px }
+.site-headerFrame .occasional-button{ text-align:left; }
+.site-headerFrame .occasional-button .button{ font-size:25px }
+
+/* Footer */
+.poweredBy-text { display:none!important}
+
+/* PAGINATION */
+.pagination{ background-color:#212121;color:#fff;border-radius: 4px;margin-top:10px}
+.pagination-number {padding:  10px;font-size: 18px;}
+a.pagination-number{ color:white }
+.pagination-current { color: #FFF; background-color: royalblue; }
+a.pagination-number:hover{ background-color: royalblue;color:white; text-decoration:none }
+
+a.pagination-last:hover{ color:white!important }
+a.pagination-first, a.pagination-next, a.pagination-previous{ color:white }
+a.pagination-first:hover , a.pagination-next:hover, a.pagination-previous:hover, a.pagination-last:hover{ color:royalblue }
+@media only screen and (min-width:771px){
+a.pagination-next .icon, a.pagination-previous .icon, a.pagination-first .icon{width:auto; vertical-align:0; font-size:16px }
+}
+@media only screen and (max-width:771px){
+a.pagination-next .icon, a.pagination-previous .icon, a.pagination-first .icon{ font-size:16px }
+}
+
+/* FEATURING SOCIAL CHANNELS */
+/* Add feature ribbon */
+.feedListPage-item.featured DIV.matrix-media-4-3:after{
+    position: absolute!important; content: ""!important; width:100%; height:100%;left:-1%;top:-1.4%;     
+    background-image: url(https://api.ning.com/files/AgFOgF-tqnS1zHE6BOj0YEQuLDVkDwEAAqBwVciV8jHgBjnOmeJXCHORslM4MTBaeiG0ncK44XLXYyPR0JkAQj4AAwk4CPgt/featured.png);
+    background-size: 65px !important;background-repeat: no-repeat;background-position: top left;}
+
+.groupHeader-nav .subnavline li.hideshow ul{
+position:absolute;
+background: #f3f3f3;
+display:none;
+left:0px;
+}
+
+.more_menu{ display:none;margin-top:10px }
+.more_menu li{ display:inline-block; margin:5px 5px 10px 0px; }
+.more_menu li a {
+background-color: black;
+color: white;
+padding: 5px 10px;
+border-radius: 2px;
+border: none;
+}
+.more_menu li a:hover, .more_menu li.current a {
+background-color: white;
+color: black;
+text-decoration:none;
+}
+
+a.pagination-number {z-index:9999!important;}
+
+@charset "UTF-8";@media screen and (prefers-reduced-motion:reduce){*{-webkit-transition:0s!important;transition:0s!important}}*,::after,::before{-webkit-box-sizing:border-box;box-sizing:border-box}a{text-decoration:none}footer{display:block}[hidden]{display:none}html{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;margin:0;padding:0}body{margin:0}img{border:0;-ms-interpolation-mode:bicubic}html{font-family:-system-ui,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;font-size:20px;font-weight:400;line-height:1.35}@media (max-width:1200px){html{font-size:18px}}@media (max-width:1200px){html{font-size:16px}}::-moz-selection{background:#9c27b0;color:#fff}::selection{background:#9c27b0;color:#fff}a{color:#fff}b,strong{font-weight:700}p{margin:0 0 1rem}.bold-underline-links a{white-space:nowrap;position:relative;font-weight:700}.bold-underline-links a::after{content:"";height:2px;background:-webkit-gradient(linear,left top,right top,from(#ff8a00),to(#da1b60));background:linear-gradient(to right,#ff8a00,#da1b60);width:100%;position:absolute;bottom:-2px;left:0;border-radius:2px}p:empty{display:none}.center{text-align:center}.token.doctype{color:#5e7671;font-style:italic}html{--maxWidth:1284px;scrollbar-color:linear-gradient(to bottom,#cc0000,#a12712);scrollbar-width:30px;background:#100e17;color:#fff;overflow-x:hidden}html::-webkit-scrollbar{width:30px;height:30px}html::-webkit-scrollbar-thumb{background-image: radial-gradient( circle farthest-corner at 10.6% 22.1%,  rgba(206,18,18,1) 0%, rgba(122,21,21,1) 100.7% );;border-radius:30px;-webkit-box-shadow:inset 2px 2px 2px rgba(255,255,255,.25),inset -2px -2px 2px rgba(0,0,0,.25);box-shadow:inset 2px 2px 2px rgba(255,255,255,.25),inset -2px -2px 2px rgba(0,0,0,.25)}html::-webkit-scrollbar-track{background-image: linear-gradient( 102deg,  rgba(68,110,92,1) 17.4%, rgba(107,156,120,1) 49.3%, rgba(154,183,130,1) 83.4%, rgba(247,237,191,1) 110.3% );}.footer-jobs{max-width:var(--maxWidth);margin:0 auto}:root{--nav-height:130px}@media (max-width:1250px){:root{--nav-height:100px}}@media (max-width:950px){:root{--nav-height:60px}}@-webkit-keyframes move-down{100%{-webkit-transform:translateY(0);transform:translateY(0)}}@keyframes move-down{100%{-webkit-transform:translateY(0);transform:translateY(0)}}@media (max-width:950px){body{padding-top:var(--nav-height)}}.footer-jobs{padding:2rem 0 1rem;display:-webkit-box;display:-ms-flexbox;display:flex}@media (max-width:1200px){.footer-jobs{scrollbar-color:linear-gradient(to right,#da1b60,#ff8a00);scrollbar-width:15px;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;-ms-scroll-snap-points-x:repeat(200px);scroll-snap-points-x:repeat(200px);-ms-scroll-snap-type:mandatory;scroll-snap-type:mandatory}.footer-jobs::-webkit-scrollbar{width:15px;height:15px}.footer-jobs::-webkit-scrollbar-thumb{background:-webkit-gradient(linear,left top,right top,from(#cc0000),to(#a12712));background:linear-gradient(to right,#cc0000,#a12712);border-radius:15px;-webkit-box-shadow:inset 2px 2px 2px rgba(255,255,255,.25),inset -2px -2px 2px rgba(0,0,0,.25);box-shadow:inset 2px 2px 2px rgba(255,255,255,.25),inset -2px -2px 2px rgba(0,0,0,.25)}.footer-jobs::-webkit-scrollbar-track{background-image: linear-gradient( 109.6deg,  rgba(250,165,147,1) 11.2%, rgba(250,149,71,1) 91.1% );}}@-webkit-keyframes sail{0%{-webkit-transform:translateX(0);transform:translateX(0)}50%{-webkit-transform:translateX(125vw);transform:translateX(125vw)}100%{-webkit-transform:translateX(125vw);transform:translateX(125vw)}}@keyframes sail{0%{-webkit-transform:translateX(0);transform:translateX(0)}50%{-webkit-transform:translateX(125vw);transform:translateX(125vw)}100%{-webkit-transform:translateX(125vw);transform:translateX(125vw)}}@-webkit-keyframes bounce{from{-webkit-transform:translateY(-5px) rotate(1.5deg);transform:translateY(-5px) rotate(1.5deg)}to{-webkit-transform:translateY(5px) rotate(-1.5deg);transform:translateY(5px) rotate(-1.5deg)}}@keyframes bounce{from{-webkit-transform:translateY(-5px) rotate(1.5deg);transform:translateY(-5px) rotate(1.5deg)}to{-webkit-transform:translateY(5px) rotate(-1.5deg);transform:translateY(5px) rotate(-1.5deg)}}@keyframes bounce{from{-webkit-transform:translateY(-5px) rotate(1.5deg);transform:translateY(-5px) rotate(1.5deg)}to{-webkit-transform:translateY(5px) rotate(-1.5deg);transform:translateY(5px) rotate(-1.5deg)}}@-webkit-keyframes spin{to{-webkit-transform:rotateX(360deg);transform:rotateX(360deg)}}@keyframes spin{to{-webkit-transform:rotateX(360deg);transform:rotateX(360deg)}}.footer-partners{background:#151514;display:grid;grid-template-columns:1fr 1fr 1fr;grid-gap:1rem;text-align:center;font-size:14px;padding:2rem 2rem 1rem}@media (max-width:800px){.footer-partners{grid-template-columns:1fr}}.footer-partner{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding:2rem;border-radius:8px;border-bottom:1px solid #333;border-right:1px solid #333;-webkit-box-shadow:inset 1px 1px 0 #000;box-shadow:inset 1px 1px 0 #000}.footer-partner a{color:#fff}.footer-partner img{display:block;margin:0 auto 1rem}.footer-partner p{margin:0;line-height:1.5;color:#bdbdbd}.footer-partner-flywheel{background:radial-gradient(circle at top right,#3f6e79,#0f0e16)}.footer-partner-codepen{background:radial-gradient(180px at top right,#685e31,rgba(0,0,0,0)),radial-gradient(180px at top left,#0d92c3,rgba(0,0,0,0)),radial-gradient(180px at bottom left,#8a43bd,rgba(0,0,0,0)),radial-gradient(180px at bottom right,#1d8d42,rgba(0,0,0,0))}.footer-partner-shoptalk{background:radial-gradient(circle at top right,#813102,rgba(0,0,0,0))}.footer-partner-shoptalk .shoptalk-img{width:130px}.footer-subsites{background:#151514;display:grid;grid-template-columns:1fr 1fr;padding:0 2rem 2rem;grid-gap:1rem}@media (max-width:800px){.footer-subsites{grid-template-columns:minmax(0,1fr)}.footer-subsites a{white-space:normal}.footer-subsites a::after{display:none}}.footer-subsite{text-align:center;padding:3rem 2rem;display:block;border-bottom:1px solid #333;border-right:1px solid #333;-webkit-box-shadow:inset 1px 1px 0 #000;box-shadow:inset 1px 1px 0 #000;border-radius:8px}@media (max-width:800px){.footer-subsite{padding:2rem 1rem}}.presents{display:block;font-size:.8rem}.presents strong{color:#ff8a00}.footer-subsite-conferences{background:radial-gradient(circle at top right,#663700,rgba(0,0,0,0))}.footer-subsite-serverless{background:radial-gradient(circle at top right,#1e0e48,rgba(0,0,0,0))}img{max-width:100%;height:auto!important}.link-links{font-weight:700;color:#7a7a8c;margin:0 0 1.5rem}.link-links a:focus,.link-links a:hover{-webkit-text-fill-color:#fff!important;color:#fff}.icon-link{width:20px;height:12px;fill:#fff}@-webkit-keyframes ad_come_in{100%{opacity:1}}@keyframes ad_come_in{100%{opacity:1}}img[src*="doubleclick.net"]{position:absolute!important;top:-9999px;left:-9999px}.link-to-issue{border:2px solid #312d3c;padding:.5rem;border-radius:5px}@media print{.search,[class*=bsa],footer{display:none!important}body{background:0 0}a,html{background:0 0!important;color:#000!important}}
+
+
+dd.result.res_user > a:nth-child(1) > img {width:30%!important;}
+
+
+
+a.advanced-search__link {
+ text-decoration: none;
+ color: black;
+ display: block;
+ background-color: #EEEEFF;
+ box-shadow: 5px 5px 5px gray;
+ margin-bottom: 2px;
+border-radius:5px;
+}
+
+a.advanced-search__link:hover {
+ text-decoration: none;
+ color: white!important;
+ display: block;
+ background-color: #000000;
+ box-shadow: 5px 5px 5px gray;
+ margin-bottom: 2px;
+border-radius:5px;
+}
+span.profileCoverArea-info {color:#ffffff!important;}
+.news-ticker,
+.news-ticker li {
+width: 100%;
+padding: 0;
+margin: 0;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+.news-ticker a {color:orange;}
+.news-ticker ul {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.news-ticker {
+height: 60px;
+top: 0;
+left: 0;
+background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,0,0,1) 0%, rgba(0,0,0,1) 90% ); -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+padding:5px;
+line-height: 1.5;
+color: #fff;
+font-family: 'Work Sans', sans-serif;
+font-size:0.8em;
+}
+
+.news-ticker li {
+text-align: center;
+top: 50%;
+-webkit-transform: translateY(-50%);
+-moz-transform: translateY(-50%);
+-o-transform: translateY(-50%);
+transform: translateY(-50%);
+}
+
+.close-ticker {
+width: 50px;
+height: 50px;
+position: absolute;
+right: 0;
+top: 0;
+cursor: pointer;
+}
+h1.content-name.pull-left {font: 1.55rem/1.7rem 'Work Sans', sans-serif;
+	letter-spacing: 0.15rem;
+	text-transform: uppercase;
+	color: #fff;
+	text-shadow: -1px  1px 0 #cc0000,
+			     	 -4px  4px 0 #cc0000, 
+			     	 -5px  5px 0 rgb(59, 234, 147),		
+			     	 -6px  6px 0 rgb(59, 234, 147),
+		    		 -8px 11px 25px #000;}
+ 
