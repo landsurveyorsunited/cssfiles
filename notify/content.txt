@@ -1,5 +1,5 @@
 <div class="notify" id="mynotify">
-<div class='content'>
+<div style="overflow: auto;" class='content'>
 
 <img src="https://storage.ning.com/topology/rest/1.0/file/get/3861195566?profile=RESIZE_180x180" width="10%"class="float" style="float:left" /> <p><span style="font-size: 26px; font-weight: bold;">THANK YOU FOR SUPPORTING LAND SURVEYORS UNITED.</span></p>
 <p>It costs roughly $500 per month to host and maintain this community. For over 14 years, Justin has paid for this out of pocket while surviving as graduate student. We do not run ads or distractions on the site. &nbsp;Your donation will go towards keeping LSU alive and free for the entire Surveying Industry. &nbsp; In addition, rest assure that your hard earned money will be put to use in at least one of the following ways:</p>
@@ -11,11 +11,11 @@
           'scrollbars=yes,
           toolbar=no,
           width=700,
-          height=500'
+          height=700'
         )
       )
     ">
-      Member Dues & Donations
+      Open Member Dues & Donations Form
     </a>
 <details>
     <summary>Help us become more financially sustainable by contributing any amount you can afford</summary>
@@ -62,7 +62,7 @@
 </details>
 
 
-<p>Note: Click on the "close" button to dismiss the panel.</p>
+<p style="font-size:10px;">Note: Click on the "close" button to dismiss the panel.</p>
 
 <div class="close">X Close</div>
 </div>
