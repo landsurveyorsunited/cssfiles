@@ -1,0 +1,10 @@
+<div class="notify" id="mynotify">
+<div class='content'>
+
+<img src="http://www.dynamicdrive.com/dynamicindex17/milkyway.jpg" class="float" style="float:left" /> The Milky Way is a barred spiral galaxy that is part of the Local Group of galaxies. Although the Milky Way is one of billions of galaxies in the observable universe,[4] its special significance to humanity is that it is the home galaxy of our Solar System. The plane of the Milky Way galaxy is visible from Earth as a band of light in the night sky, and it is the appearance of this band of light which has inspired the name for our galaxy. It is extremely difficult to define the age at which the Milky Way formed, but the age of the oldest star in the Galaxy yet discovered, HE 1523-0901, is estimated to be about 13.2 billion years, nearly as old as the Universe itself. -Source: Wikipedia. 
+
+<p>Note: Click on the "close" button to dismiss the panel.</p>
+
+<div class="close">X Close</div>
+</div>
+</div>
