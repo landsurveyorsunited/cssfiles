@@ -1,0 +1,35 @@
+body { 
+  background-color: #101010; 
+}
+
+.display {
+  font-family: 'Arial';
+  color: #fbfbfb;
+  margin: 50px auto 0 auto;
+  text-align: center; 
+}
+
+h1 { 
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 56px;
+}
+
+.btn-bar button {
+  width: 60px;
+  height: 35px;
+  background-color: #800000;
+  border: none;
+  color: #fbfbfb;
+  font-weight: bold;
+  border-radius: 2px;
+  transition: all .3s ease;
+}
+
+.btn-bar button:hover {
+  background-color: #e60000;
+  position: relative;
+  bottom: 3px;
+}
