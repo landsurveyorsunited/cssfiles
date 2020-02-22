@@ -1,0 +1,47 @@
+body {
+  background-color: #AFE0D5;
+}
+.counter, .reset, .themes, .minus {
+  background-color: #407F7F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #B8F8F8;
+  user-select: none;
+}
+.counter {
+  width: 78vh;
+  height: 78vh;
+  border-radius: 50%;
+  margin: auto;
+  border: 10px solid #B8F8F8;
+  font-size: 250px;
+}
+.buttonscont {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2vh;
+}
+.reset, .minus {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  padding: 10px;
+  border: 3px solid #B8F8F8;
+  font-size: 30px;
+  cursor:pointer;
+}
+.themes {
+  width: auto;
+  height: auto;
+  padding: 0 30px;
+  float: right;
+  border: 3px solid #B8F8F8;
+  font-size: 30px;
+  cursor:pointer;
+}
+.minus span {
+  font-size: 100px;
+  position: relative;
+  top: -0.6rem;
+}
