@@ -8,7 +8,7 @@
 // -------------------------------------------------------------------
 
 var dhtmlwindow={
-imagefiles:['windowfiles/min.gif', 'windowfiles/close.gif', 'windowfiles/restore.gif', 'windowfiles/resize.gif'], //Path to 4 images used by script, in that order
+imagefiles:['https://landsurveyorsunited.github.io/cssfiles/modal/windowfiles/min.gif', 'https://landsurveyorsunited.github.io/cssfiles/modal/windowfiles/close.gif', 'https://landsurveyorsunited.github.io/cssfiles/modal/windowfiles/restore.gif', 'https://landsurveyorsunited.github.io/cssfiles/modal/windowfiles/resize.gif'], //Path to 4 images used by script, in that order
 ajaxbustcache: true, //Bust caching when fetching a file via Ajax?
 ajaxloadinghtml: '<b>Loading Page. Please wait...</b>', //HTML to show while window fetches Ajax Content?
 
