@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>jquery.rss accordion example</title>
+    <title>Latest Activity Land Surveyors United</title>
 
     <link
       rel="stylesheet"
@@ -22,7 +22,7 @@
           {
             layoutTemplate: "{entries}",
             entryTemplate:
-              "<div class='entry'><h3>{title}</h3><div><p>{bodyPlain}</p></div></div>",
+              "<li><a href="{url}">[{author}@{date}] {title}</a><br/>{shortBodyPlain}</li>",
             success: function() {
               $(".entry").each(function(i, entry) {
                 $(entry).slideDown();
@@ -41,7 +41,7 @@
   </head>
   <body>
     <div>
-      <h1>jquery.rss example</h1>
+      <h1>Latest Activity Land Surveyors United</h1>
       <div id="rss-feeds"></div>
     </div>
   </body>
