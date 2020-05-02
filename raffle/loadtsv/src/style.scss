@@ -1,0 +1,132 @@
+@import "breakpoint";
+
+$my-breakpoint: 750px;
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  height: 100%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 2rem;
+  background-color: #444;
+  color: #e4e4e4;
+  font-size: 1.6rem;
+  font-weight: 100;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100vh;
+  justify-content: space-between;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-basis: 14rem;
+  margin-bottom: 2rem;
+  height: 8.2rem;
+  min-height: 8.2rem;
+  
+  @include breakpoint($my-breakpoint) {
+    flex-direction: row;
+    flex-basis: 8rem;
+    height: 3.2rem;
+    min-height: 3.2rem;
+    max-height: 3.2rem;
+  }
+  
+  &--label {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 32rem;
+    margin-bottom: 0;
+    line-height: 3.5rem;
+    min-width: 25rem;
+  }
+  
+  &--input {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    margin-right: 1rem;
+    width: 100%;
+    background-color: #656565;
+    color: #e4e4e4;
+    border: 1px solid #848484;
+    padding: 0.1rem 1rem;
+    margin-bottom: 1rem;
+    &::placeholder {
+      color: #a9a9a9;
+    }
+    
+    @include breakpoint($my-breakpoint) {
+      margin-bottom: 0;
+    }
+  }
+  
+  &--button {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 15rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    min-height: 3.2rem;
+    margin-bottom: 2rem;
+    
+    @include breakpoint($my-breakpoint) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.textarea-wrapper {
+  margin-bottom: 2rem;
+  flex-grow: 1;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.textarea {
+  height: 100%;
+  padding: 1rem;
+  background-color: #333;
+  color: #e4e4e4;
+  border: 1px solid #848484;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 1.3rem;
+  resize: none;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.array-count {
+  position: absolute;
+  top: 1px;
+  right: 0.8rem;
+  background-color: #000;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  margin-bottom: 0;
+  font-weight: bold;
+  text-align: center;
+  width: 100px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  line-height: 1.1;
+  min-height: 22px;
+}
+
+.copy-btn {
+  font-size: 1.6rem;
+  min-height: 3.2rem;
+}

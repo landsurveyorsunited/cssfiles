@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Load Google Sheets TSV Public URL and display formatted JSON data</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="header">
+  <label for="header--input" class="header--label">Google Sheet (.tsv) Publish URL:</label>
+  <input id="header--input" class="header--input js-input" type="text" placeholder="Enter Google Sheet TSV Publish URL here ..." value="https://docs.google.com/spreadsheets/d/e/2PACX-1vSwS6mST_pthZFwqnuiEXmgS8b1uETvh8-I6xG7g7jZaGXWoRf_h5VoYYeaG7o_uispyQXJYSzBWpji/pub?gid=20287649&single=true&output=tsv">
+  <button class="header--button btn btn-success js-button">Get JSON!</button>
+</div>
+<div class="textarea-wrapper">
+   <textarea class="textarea js-textarea" readonly></textarea>
+  <p class="array-count js-array-count"></p>
+</div>
+<button class="copy-btn btn btn-primary js-copy-btn" disabled>Copy JSON data to clipboard</button>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mouse0270-bootstrap-notify/3.1.7/bootstrap-notify.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
