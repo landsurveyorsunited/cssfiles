@@ -13,9 +13,9 @@
 <div id="vueSearch" v-cloak>
   <div class="input-group mb-3">
     <div class="input-group-prepend">
-      <label class="input-group-text" for="txtQuery">Search Member Name & Number</label>
+      <label class="input-group-text" for="txtQuery">Get Member Number</label>
     </div>
-    <input type="text" id="txtQuery" v-model="search" class="form-control" placeholder="whatever you want to search for...">
+    <input type="text" id="txtQuery" v-model="search" class="form-control" placeholder="type name or username for number...">
   </div>
 
   <div v-for="(link, linkIndex) in results" v-bind:style="linkIndex + 1 < results.length ? 'margin-bottom: 1em;' : ''">
