@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<title>Dropdown Sample</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="description" content="" />
+<meta name="keywords"    content="" />
+
+<script type="text/javascript" src="dropdown.js"></script>
+
+<style type="text/css">
+
+body { font-size: 0.7em; }
+h3   { font-size: 1.6em; margin: 0px; }
+
+a.sample_attach, a.sample_attach:visited, div.sample_attach
+{
+  display: block;
+  width:   100px;
+
+  border:  1px solid black;
+  padding: 2px 5px;
+
+  background: #FFFFEE;
+
+  text-decoration: none;
+  font-family: Verdana, Sans-Sherif;
+  font-weight: 900;
+  font-size: 1.0em;
+  color:   #008000;
+}
+
+a.sample_attach, a.sample_attach:visited { border-bottom: none; }
+div#sample_attach_menu_child             { border-bottom: 1px solid black; }
+
+form.sample_attach
+{
+  position: absolute;
+  visibility: hidden;
+
+  border:  1px solid black;
+  padding: 0px 5px 2px 5px;
+
+  background: #FFFFEE;
+}
+
+form.sample_attach b
+{
+  font-family: Verdana, Sans-Sherif;
+  font-weight: 900;
+  font-size: 1.1em;
+}
+
+input.sample_attach { margin: 1px 0px; width: 170px; }
+
+</style>
+
+</head>
+<body>
+<div>
+
+<h3>Dropdown Sample</h3>
+
+
+<!-- ***** Dropdown Menu *************************************************** -->
+
+<br /><br />
+
+<div id="sample_attach_menu_parent" class="sample_attach">Main Menu</div>
+<div id="sample_attach_menu_child">
+<a class="sample_attach" href="javascript:alert('Item 1');">Item 1</a>
+<a class="sample_attach" href="javascript:alert('Item 2');">Item 2</a>
+<a class="sample_attach" href="javascript:alert('Item 3');">Item 3</a>
+</div>
+
+<script type="text/javascript">
+at_attach("sample_attach_menu_parent", "sample_attach_menu_child", "hover", "y", "pointer");
+</script>
+
+
+<!-- ***** Search Form ***************************************************** -->
+
+<br /><br /><br /><br /><br />
+
+<div  class="sample_attach" id="sample_attach_src_parent">Site Search</div>
+<form class="sample_attach" id="sample_attach_src_child" action="sample.html">
+<div>
+<b>Enter search terms:</b><br />
+<input class="sample_attach" type="text" name="terms" /><br />
+<input type="submit" value="Submit" />
+</div>
+</form>
+
+<script type="text/javascript">
+at_attach("sample_attach_src_parent", "sample_attach_src_child", "click", "x", "pointer");
+</script>
+
+</div>
+</body>
+</html>
