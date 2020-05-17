@@ -1,2 +1,3 @@
-div.at-count.at-count-bottom.count,table.google-visualization-table-table {display:none!important}
-img.mylogo::after{content:"Find and Join your Location Based Hub to Share Local Surveying Photos and Discussions during International Surveyors Week"; display:inline-block; color:#FF5733 }
+div#controlersPanel.at-filter-panel,div.at-count.at-count-bottom.count,table.google-visualization-table-table {display:none!important}
+
+awesome-table#atPreview.card-content::after{content:"Find and Join your Location Based Hub to Share Local Surveying Photos and Discussions during International Surveyors Week"; display:inline-block; color:#FF5733 }
