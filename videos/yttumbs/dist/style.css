@@ -1,0 +1,47 @@
+body {
+  font-family: Arial;
+  background-color: #f4f4f4;
+  margin: 20px 10% 150px 10%;
+}
+
+textarea {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #444;
+  background-color: #fafafa;
+  width: 60vw;
+  height: 200px;
+  padding-top: 20px;
+  padding-left: 20px;
+  margin-left: 0;
+  margin-top: 10%;
+  margin-right: 0;
+  border: solid 1px #ccc;
+  border-radius: 5px;
+  rows: 8;
+}
+
+button {
+  font-size: 20px;
+  width: 120px;
+  height: 50px;
+  color: white;
+  background-color: #555;
+  margin: 50px 50px 50px 0;
+  border: solid 2px #444;
+  border-radius: 5px;
+}
+
+.images {
+  margin: 5px;
+  float: left;
+  font-size: 60px;
+  text-align: center;
+  color: white;
+}
+
+#title {  
+  margin-bottom: 50px;
+  color: #ccc;
+  font-size: 40px;
+}
