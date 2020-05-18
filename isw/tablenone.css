@@ -1,5 +1,5 @@
 div#controlersPanel.at-filter-panel,div.at-count.at-count-bottom.count,table.google-visualization-table-table {display:none!important}
 body {
-    background-image: url('https://storage.ning.com/topology/rest/1.0/file/get/4965591274?profile=original');font-family: arial,sans-serif;
+    background: url('https://storage.ning.com/topology/rest/1.0/file/get/4965591274?profile=original')repeat;font-family: arial,sans-serif;
 }
 awesome-table#atPreview.card-content::after{content:"Find and Join your Location Based Hub to Share Local Surveying Photos and Discussions during International Surveyors Week"; display:inline-block; color:#FF5733 }
