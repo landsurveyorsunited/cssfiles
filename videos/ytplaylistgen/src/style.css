@@ -1,0 +1,75 @@
+body {
+  font-family: helvetica;
+  /*margin:25px;*/
+  background-color: #222;
+  color: #fff;
+  font-size: 20px;
+}
+
+a,
+.nolink {
+  background: #222;
+  width: 90%;
+  padding: 8px 5%;
+  /*text-indent:8px;*/
+  display: block;
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #111;
+  border-radius: 8px;
+  text-align: center;
+}
+
+a:link {
+  color: #fff;
+}
+
+a:visited {
+  color: #fff;
+}
+
+a:hover {
+  color: #ff3c00;
+}
+
+.instructions {
+  margin: auto;
+  display: block;
+  padding: 25px;
+  text-align: center;
+}
+
+textarea {
+  font-size: 20px;
+  line-height: 1.7;
+  width: 80%;
+  margin: auto;
+  display: block;
+  padding: 20px;
+  background: #333;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 5px;
+  height: 50vh;
+}
+
+textarea:active,
+textarea:focus {
+  /*border: 1px solid #FF3300;*/
+  border: 1px solid #aaa;
+}
+
+.create {
+  margin: auto;
+  display: block;
+  background: #333;
+  color: #fff;
+  padding: 4px;
+  border-radius: 2px;
+  border: 1px solid #aaa;
+  font-size: 110%;
+}
+
+#playlistLink {
+  margin: auto;
+  display: block;
+}
