@@ -169,4 +169,4 @@ display:block;
 }
 
 }
-awesome-table#atPreview.card-content::after{content:"Find and Join your Location Based Hub to Share Local Surveying Photos and Discussions during International Surveyors Week"; display:inline-block; color:#FF5733 }
+div.at-action-menu-button::after{content:"Find and Join your Location Based Hub to Share Local Surveying Photos and Discussions during International Surveyors Week"; display:inline-block; color:#FF5733 }
