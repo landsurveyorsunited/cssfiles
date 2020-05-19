@@ -1,4 +1,4 @@
-div#controlersPanel.at-filter-panel,div.at-count.at-count-bottom.count,table.google-visualization-table-table {display:none!important}
+
 body {
     background: url('https://storage.ning.com/topology/rest/1.0/file/get/4965591274?profile=original')repeat!important;font-family: arial,sans-serif;
 }
@@ -207,4 +207,4 @@ display:block;
 }
 
 }
-div.at-action-menu-button::after{content:"Find and Join your Location Based Hub to Share Local Surveying Photos and Discussions during International Surveyors Week"; display:inline-block; color:#000000; }
+div.at-action-menu-button::after{content:"<b>Location Hubs for Surveyors</b>Find and Join your Location Based Hub to Share Local Surveying Photos and Discussions during International Surveyors Week"; display:inline-block; color:#000000; }
