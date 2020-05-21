@@ -1,0 +1,212 @@
+  
+div#controlersPanel.at-filter-panel,div.at-count.at-count-bottom.count,table.google-visualization-table-table {display:none!important}
+body {
+    color:#cc0000;
+    background: url('https://st4.ning.com/topology/rest/1.0/file/get/3823813209?profile=RESIZE_710x')repeat!important;font-family: arial,sans-serif;
+}
+.container {
+width:100%;
+font-family:'Roboto', sans-serif;
+position:relative;
+font-size:13px;
+}
+
+.layer1 {
+color:white;
+text-decoration:none;
+}
+
+.layer1 img {
+width:100%;
+border: 2px #FFFFFF solid;
+display:block;
+opacity:1;
+-webkit-transition: opacity 1s ease;
+-moz-transition: opacity 1s ease;
+-ms-transition: opacity 1s ease;
+-o-transition: opacity 1s ease;
+transition: opacity 1s ease;
+}
+
+.container:hover .layer1 img {
+opacity:0.7;
+-webkit-transition: opacity 0.2s ease;
+-moz-transition: opacity 0.2s ease;
+-ms-transition: opacity 0.2s ease;
+-o-transition: opacity 0.2s ease;
+transition: opacity 0.2s ease;
+}
+
+.layer2 {
+background-color:rgba(0,0,0,0.3);
+position:absolute;
+bottom:0px;
+overflow:hidden;
+max-height: 0;
+width:100%;
+-webkit-transition: all 1s ease;
+-moz-transition: all 1s ease;
+-ms-transition: all 1s ease;
+-o-transition: all 1s ease;
+transition: all 1s ease;
+}
+
+.helper {
+padding:8px;
+}
+
+.layer2 .links a img {
+width:30px;
+margin-left:5px;
+opacity:0.8;
+-webkit-transition: opacity 0.2s ease;
+-moz-transition: opacity 0.2s ease;
+-ms-transition: opacity 0.2s ease;
+-o-transition: opacity 0.2s ease;
+transition: opacity 0.2s ease;
+}
+
+.layer2-onload {
+max-height: 200px;
+-webkit-transition: all 1s ease;
+-moz-transition: all 1s ease;
+-ms-transition: all 1s ease;
+-o-transition: all 1s ease;
+transition: all 1s ease;
+}
+
+.layer2 .links a img:hover {
+opacity:1;
+-webkit-transition: opacity 0.2s ease;
+-moz-transition: opacity 0.2s ease;
+-ms-transition: opacity 0.2s ease;
+-o-transition: opacity 0.2s ease;
+transition: opacity 0.2s ease;
+}
+
+.layer2 .links {
+text-align:right;
+margin-top:10px;
+}
+
+.title {
+    padding: 10px 10px 0px 10px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+        color: rgb(236, 240, 241);
+        
+}
+div.gm-style-iw.gm-style-iw-c {background:url('https://storage.ning.com/topology/rest/1.0/file/get/4965591274?profile=original')repeat;color:#000;}
+.container:hover .layer2 {
+max-height: 200px;
+-webkit-transition: all 1s ease;
+-moz-transition: all 1s ease;
+-ms-transition: all 1s ease;
+-o-transition: all 1s ease;
+transition: all 1s ease;
+}.maps-toolTips-content {
+ width: 400px
+}
+
+.tooltipImage {
+width:170px;
+height: auto;
+float: left;
+border: 1px solid #ddd;
+border-radius: 5px;
+padding: 3px;
+box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.flagImage {
+width: 33px;
+float: right;
+border-style: solid;
+border-width: 0px;
+}
+
+.info-mobile {
+    position: absolute;
+    bottom: 8px;
+    width: 30px;
+    right: 8px;
+z-index:10;
+display:none;
+}
+.awesomeTable-visualization-cards .card-content {
+    box-shadow: 0 0;
+padding:0px;
+color:white;
+    border: 3px #212121 solid;
+border-radius:0;
+margin:16px;
+}
+
+.awesomeTable-visualization-cards .card-content:hover {
+    box-shadow: 0 0;
+    z-index: 10;
+}
+
+.cards-page {
+display:none!important;
+}
+
+@media (max-width: 600px) {
+#AwtCards1468252523536.awesomeTable-visualization-cards .card {
+min-width:100%;
+width:100%;
+}
+
+a[data-icon="copy"] {
+display:none;
+}
+
+.layer2 {
+display : none;
+}
+
+.info-mobile {
+display:block;
+}
+.map {
+  height: 600px;
+}
+.map #map_canvas {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 2;
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
+  /* Firefox 10+ */
+  filter: gray;
+  /* IE6-9 */
+  -webkit-filter: grayscale(99%);
+  /* Chrome 19+ & Safari 6+ */
+  -webkit-backface-visibility: hidden;
+  /* Fix for transition flickering */
+}
+
+.banner-map {
+  height: 600px;
+}
+
+.feature.map {
+  height: 100%;
+}
+.feature.map iframe {
+  height: 100%;
+  width: 100%;
+  border: 0;
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
+  /* Firefox 10+ */
+  filter: gray;
+  /* IE6-9 */
+  -webkit-filter: grayscale(99%);
+  /* Chrome 19+ & Safari 6+ */
+  -webkit-backface-visibility: hidden;
+  /* Fix for transition flickering */
+}
+
+}
+div.at-action-menu-button::after{content:"Land Surveyors United Member Heatmap representing over 16,500 Land Surveyors Around the World"; display:inline-block; color:#fff!important; }
