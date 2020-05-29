@@ -1,0 +1,169 @@
+$siteWidth: 1280px;
+$medium: 768px;
+$small: 590px;
+$xsmall: 320px;
+$primary: #1a1a1a;
+
+code {
+  color: dodgerblue;
+}
+
+h1 {
+  text-align: center;
+}
+
+header {
+  margin: 0 auto;
+  max-width: $siteWidth;
+  padding: 100px 20px;
+}
+
+.carousel {
+  background-image: radial-gradient( circle farthest-corner at 7.2% 19%,  rgba(120,0,0,1) 0%, rgba(239,75,75,1) 100.2% );
+  border: 1px solid black;
+  max-width: $siteWidth;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto 80px;
+}
+
+.carousel-pair {
+   font-size: 0;
+  letter-spacing: 0;
+  position: relative;
+}
+
+.carousel-image, .carousel-text {
+  background:url(https://st4.ning.com/topology/rest/1.0/file/get/3823813209?profile=RESIZE_710x);
+  width: 50%;
+  color:#eeeeee;
+  -webkit-box-shadow: 0px 2px 15px 9px rgba(204,0,0,0.45); 
+box-shadow: 0px 2px 15px 9px rgba(204,0,0,0.45);
+  display: inline-block;
+  font-size: 16px;
+  letter-spacing: normal; 
+
+  @media (max-width: $medium) {
+    width: 100%;
+  }
+}
+
+.carousel-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center center;
+
+  &:after {
+    content: '';
+    display: block;
+    padding-top: 50%;
+
+    @media (max-width: $medium) {
+      content: '';
+      display: block;
+      padding-top: 85%;
+    }
+  }
+
+  @media (max-width: $medium) {
+    position: static;
+  }
+}
+.carousel-text a {color:#ffffff;}
+.carousel-text {
+  margin-left: 50%;
+
+  @media (max-width: $medium) {
+    margin-left: 0;
+  }
+
+}
+
+.carousel-text-wrapper {
+  padding: 35px;
+}
+
+.carousel {
+  
+  .slick-dots {
+    position: absolute;
+    bottom: -45px;
+    list-style: none;
+    display: block;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+  }
+  
+  .slick-dots li {
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .slick-dots {
+    bottom: -40px;
+
+    @media (max-width: $medium) {
+      bottom: -20px;
+    }
+
+    @media (max-width: $small) {
+      bottom: 10px;
+    }
+
+    @media (max-width: $xsmall) {
+      bottom: 0;
+    }
+
+    li {
+      margin: 0 10px 0 0;
+
+      button:before {
+        background-color: $primary;
+        height: 6px;
+        width: 6px;
+      }
+    }
+
+    li.slick-active {
+      margin: 0 10px 0 0;
+
+      button:before {
+        border-color: transparent;
+        background-color: $primary;
+        height: 6px;
+        width: 6px;
+      }
+    }
+  }
+}
+
+.min-height {
+  min-height: 300px;
+
+  @media (max-width: $medium) {
+    min-height: 0;
+  }
+}
+
+.carousel-reverse {
+  
+  .carousel-image {
+    right: 0;
+    left: auto;
+  }
+  
+  .carousel-text {
+    margin-left: auto;
+    margin-right: 50%;
+  }
+  
+}
