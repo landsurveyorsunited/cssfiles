@@ -1,0 +1,28 @@
+body{
+  font-family: 'Roboto', sans-serif;
+}
+.majors{
+  &__container{
+    height:500px;
+    width:90%;
+    max-width:800px;
+  }
+  &__slant{
+    margin-top:-100px;
+    transform:rotate(-10deg);
+  }
+  &__list{
+    &--even{
+      transform:translate(-200%)
+    }
+  }
+  &__list-item{
+    &:nth-child(3){
+      color: #718096;
+    }
+  }
+  &__overlay{
+    background:rgba(255,255,255,0.4);
+    opacity:0;
+  }
+}

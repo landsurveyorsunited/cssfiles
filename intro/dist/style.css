@@ -1,0 +1,25 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.majors__container {
+  height: 500px;
+  width: 90%;
+  max-width: 800px;
+}
+.majors__slant {
+  margin-top: -100px;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
+.majors__list--even {
+  -webkit-transform: translate(-200%);
+          transform: translate(-200%);
+}
+.majors__list-item:nth-child(3) {
+  color: #718096;
+}
+.majors__overlay {
+  background: rgba(255, 255, 255, 0.4);
+  opacity: 0;
+}
