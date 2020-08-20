@@ -1,0 +1,78 @@
+@font-face { font-family: "Gideon";
+    font-weight: 400;
+    font-style: normal;
+    src: url("//fonts.mannfolio.com/gideon/gideon.woff") format("woff");
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
+
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+$color__twitter:   #55ACEE;
+$color__facebook:  #3B5998;
+$color__pinterest: #CB2027;
+$color__google:    #DD4B39;
+$color__instagram: #3C5A96;
+$color__youtube:   #CD201F;
+$color__rss:       #FBC70D;
+$color__boulder:   #7A7A7A;
+$color__tumblr:    #35465C;
+$color__flipboard: #E12828;
+
+$iconColors: (
+    email: $color--boulder,
+    facebook: $color--facebook,
+    feed: $color--rss,
+    flipboard: $color--flipboard,
+    google: $color--google,
+    google_plus: $color--google,
+    instagram: $color--instagram,
+    pinterest: $color--pinterest,
+    tumblr: $color--tumblr,
+    twitter: $color--twitter,
+    youtube: $color--youtube
+);
+
+@mixin icon-colors($icons:$iconColors){
+    @each $icon, $color in $icons {
+        [data-icon="#{$icon}"] {
+            &:before {
+                color: $color;
+            }
+        }
+    }
+}
+
+@include icon-colors();
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+i {
+    &[data-icon] {
+        display: inline-block;
+        font-style: normal;
+        font-family: Gideon, 'Open Sans', sans-serif;
+
+        /* Support for IE. */
+        font-feature-settings: 'liga';
+    }
+    &:not([data-icon=""]):before {
+        content: attr(data-icon);
+        user-select: all;
+    }
+}
+
+h2 {
+    column-span: all;
+}
+
+article {
+    padding: 2rem;
+}
+
+section {
+    columns: 20rem;
+    margin-bottom: 20px;
+}
