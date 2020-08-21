@@ -1,0 +1,64 @@
+body {
+  /*Image Credit: Books HD by Abhi Sharma, on Flickr*/
+  background: url(https://c1.staticflickr.com/9/8078/8314929977_4d7e817d68_h.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.navbar {
+  background: transparent;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.navbar-brand,
+ul.nav a {
+  color: #fff !important;
+  font-size: 20px;
+}
+
+.navbar-brand:hover,
+ul.nav a:hover {
+  color: #9370DB !important;
+}
+
+.navbar li {
+  color: #000;
+}
+
+.search {
+  background: #FFFFFF;
+  margin: 0 auto;
+  text-align: center;
+  width: 65%;
+}
+
+.return-search {
+  background: #FFFFFF;
+  text-align: center;
+  margin-bottom: 3%;
+}
+
+.form-group,
+button[type="submit"] {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.row {
+  background: #FFF;
+  padding: 2%;
+}
+
+.order-by-group {
+  display: inline-block;
+  margin-left: 2%;
+  margin-right: 3%;
+}
+
+.rating {
+  color: #0000FF;
+  font-weight: bold;
+}
