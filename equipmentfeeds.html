@@ -1,0 +1,43 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<style>select { display: block; } 
+select.switcher {background:#cc0000;color:#fff;font-size:1.5em;}
+</style>
+<select class="switcher">
+  <option value="https://www.rssground.com/services/rss-converter/5f57de8371da9/Total%20Stations%20QGCUAR">Total Stations for Sale</option>
+  <option value="https://www.rssground.com/services/rss-converter/5f594b9d72064/GPS%20GNSS%20QGEUS2">Survey Grade GPS GNSS for Sale</option>
+  <option value="https://www.rssground.com/services/rss-converter/5f593f44a4959/3D%20Scanners%20QGESCM">3D Scanners for Sale</option>
+  <option value="https://www.rssground.com/services/rss-converter/5f57db3ca6a10/Data%20Collectors%20QGCTA0">Data Collectors & Calculators for Sale</option>
+  <option value="https://www.rssground.com/services/rss-converter/5f594df01da88/UAV%20Drones%20QGEV8D">Drone UAV Equopment for Sale</option>
+  <option value="https://www.rssground.com/services/rss-converter/5f57e1881e467/Antique%20Equipment%20QGCVA0">Antique Vintage Surveying Equopment for Sale</option>
+  <option value="https://view-awesome-table.com/-M7ZSf_Zdt51k7NcSnPv/view">Chapter Hub Map for Locations</option>
+   <option value="https://view-awesome-table.com/-Lzi-OhNIpt5BtLTGiMN/view">Marketplace Hubs for Land Surveyors United</option>
+  <option value="https://view-awesome-table.com/-LeiF4pPhCGAVM3dW_lT/view">Mobile Apps for Land Surveyors</option>
+  <option value="https://view-awesome-table.com/-LkRi_r3Av6GSRWfhD3G/view">Join/Follow Hubs based on your Interests </option>
+  <option value="https://view-awesome-table.com/-M7oCThoq0z0e4bXKTGV/view">Global Member Heatmap</option>
+  <option value="https://view-awesome-table.com/-Lypz98FTKRxb3C4Bhzm/view">Land Surveyors United Gear</option>
+  <option value="https://goo.gl/YXdIWs">Magellan</option>
+  <option value="https://goo.gl/J4Ovsp">ARCGIS</option>
+</select>
+
+
+<iframe class="switch-target" width="100%" height="700" src=""></iframe>
+
+
+
+<script>
+var switcher$ = $('.switcher'),          // select element
+    switchTarget$ = $('.switch-target'); // iframe
+
+switcher$.on('change', switchIframeSrc); // event binding
+
+// our functiono to switch the iframe src
+function switchIframeSrc() {
+  // set the 'src' attribute of the iframe
+  // to the value of the selected option
+  switchTarget$.attr('src', switcher$.val());
+}
+
+// call the method on load
+switchIframeSrc();
+
+</script>
