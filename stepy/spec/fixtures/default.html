@@ -1,0 +1,58 @@
+<form id="stepy">
+  <fieldset title="Step 1" class="stepy-step">
+    <legend class="stepy-legend">legend 1</legend>
+
+    <input name="hidden" type="hidden">
+
+    <label>User</label>
+    <input type="text" name="user" value="wbotelhos" disabled="true">
+
+    <label>E-mail</label>
+    <input type="text" name="email" data-validaty="required">
+
+    <label>Checked?</label>
+    <input type="checkbox" name="checked">
+
+    <label>Newsletter?</label>
+
+    <label>Yep</label>
+    <input type="radio" name="newsletter">
+
+    <label>Nop</label>
+    <input type="radio" name="newsletter">
+
+    <label>Password</label>
+    <input type="password" name="password">
+
+    <a class="stepy-back">back</a>
+    <a class="stepy-next">next</a>
+  </fieldset>
+
+  <fieldset title="Step 2" class="stepy-step">
+    <legend class="stepy-legend">legend 2</legend>
+
+    <label>Bio</label>
+    <textarea name="bio"></textarea>
+
+    <a class="stepy-back">back</a>
+    <a class="stepy-next">next</a>
+  </fieldset>
+
+  <fieldset title="Step 3" class="stepy-step">
+    <legend class="stepy-legend">legend 3</legend>
+
+    <label>Birthday</label>
+    <select name="day">
+      <option></option>
+      <option>23</option>
+    </select>
+
+    <label>Site</label>
+    <input type="text" name="site">
+
+    <a class="stepy-back">back</a>
+    <a class="stepy-next">next</a>
+  </fieldset>
+
+  <input type="submit" value="finish" class="stepy-finish">
+</form>
