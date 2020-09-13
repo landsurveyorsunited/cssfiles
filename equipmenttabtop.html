@@ -1,0 +1,257 @@
+<br style="display:none">
+<!-- 
+====================================
+  Begin TabTop IndexCardFlexTabs	
+====================================
+-->
+
+<style>
+/* TabTop IndexCards styles */
+/* all styles are > limited to avoid styling inner content */
+
+/* sizes */
+.tabholder { width:100%; height:35.82em; font-size:16px; } /* base font size for em-scaling */
+.tabholder div.tabtops { width:100%; max-width:800px; }
+.tabholder ul.tabtops > li { height:1.44em; } /* ( 1.44em = 0.9em x 1.6em @ h2 sizes ) */
+.tabholder ul.tabtops > li > div { height:34.38em; top:1.44em; }
+.tabholder ul.tabtops > li > label > h2 { font-size:0.9em; line-height:1.6em; } 
+.tabholder ul.tabtops > li > div > div { font-size:1em; }
+
+/* colors, fonts, and decoration */
+.tabholder { font-family:arial; }
+.tabholder ul.tabtops > li { }
+.tabholder ul.tabtops > li > label > h2 { /* inactive tab tops */
+	background-color:#C5C89C; 
+	color:#000000; 
+	border: 2px solid #949675;   
+	border-bottom:0;
+	border-radius:32px 32px 0 0;
+	text-align:center;  
+	font-weight:bold;
+	} 
+.tabholder ul.tabtops > li > label:hover > h2 { /* hover tab top */
+	background-color:#DEE1AF; 
+	color:#333; 
+	}
+.tabholder ul.tabtops > li > input:checked + label > h2 { /* select active tab */
+	background-color:#F7FBC3; 
+	color:#000000; 
+	z-index:3;
+	}
+.tabholder ul.tabtops > li > input:checked:hover + label > h2 { /* hover active tab */
+	background-color:#F7FBC3; 
+	color:#333; 
+	z-index:3;
+	}
+.tabholder ul.tabtops > li > div  {  /* set content background */
+	background-color:#F7FBC3; 
+	border: 2px solid #949675;
+	}
+.tabholder ul.tabtops > li > div > div  { /* set content text attributes */
+	color:#000000;
+ 	line-height:125%;
+	font-weight:normal;
+	text-align:left;
+	}
+
+
+/* structure */
+.tabholder .tab1 ul.tabtops > li { width:100%; }
+.tabholder .tab2 ul.tabtops > li { width:49.75%; }
+.tabholder .tab3 ul.tabtops > li { width:33%; }
+.tabholder .tab4 ul.tabtops > li { width:24.62%; }
+.tabholder .tab5 ul.tabtops > li { width:19.6%; }
+.tabholder .tab6 ul.tabtops > li { width:16.25%; }
+.tabholder .tab7 ul.tabtops > li { width:13.85%; }
+.tabholder .tab8 ul.tabtops > li { width:12.06%; }
+.tabholder ul.tabtops > li { margin-right:0.5%; }
+.tabholder ul.tabtops > li:last-child { margin-right:0%; } 
+
+.tabholder {
+	position:relative; 
+	padding:0;
+	margin-top:1.5em;
+	margin-bottom:1.5em;
+	}
+.tabholder div.tabtops { 
+	position:relative;
+	height:100%; 
+	margin:auto; 
+	}
+.tabholder ul.tabtops{
+	position:absolute;
+	width:100%; 
+	height:auto; 
+	top:0px;
+	left:0px;
+	margin:0px; 
+	padding:0px;
+	}
+.tabholder ul.tabtops > li { 
+	list-style:none;
+	float:left; 
+	margin-left:0;
+	text-align:center;
+	}
+
+.tabholder ul.tabtops > li > input { /* hide radio elements */ 
+	visibility:hidden; 
+	position:absolute; 
+	top:1em; 
+	left:2em; 
+	}
+.tabholder ul.tabtops > li > label {
+	margin:0; padding:0; border:0;
+	}
+.tabholder ul.tabtops > li > label > h2 {
+	position:relative; 
+	display:block;
+	height:100%; 
+	margin:0px; 
+	padding:0px;
+	overflow:hidden;
+	cursor:pointer;
+	z-index:1; 
+	}
+.tabholder ul.tabtops > li > div {  /* for border and scroller */
+	position:absolute; 
+	left:0px;
+	right:0px;
+	bottom:0px;
+	margin:0px; 
+	padding:0px;
+	overflow:auto;
+	display:none;
+	z-index:2; 
+	}
+.tabholder ul.tabtops > li > div > div { /* the content */
+	position:relative; 
+	top:0; left:0; 
+	width:auto;
+	height:auto;
+	max-height:none;
+	overflow:visible;
+	margin:.8em;
+	}
+
+.tabholder ul.tabtops > li > input:checked ~ div  {
+	        display: block;
+	}
+
+@media(max-width:480px){
+.tabholder .tab1 ul.tabtops > li, 
+.tabholder .tab2 ul.tabtops > li, 
+.tabholder .tab3 ul.tabtops > li, 
+.tabholder .tab4 ul.tabtops > li, 
+.tabholder .tab5 ul.tabtops > li, 
+.tabholder .tab6 ul.tabtops > li, 
+.tabholder .tab7 ul.tabtops > li, 
+.tabholder .tab8 ul.tabtops > li { width:100%; margin-right:0; position:relative; clear:both; float:none; }
+
+/* remove all hover states and create drop open sections */
+.tabholder { height:auto;  }
+.tabholder div.tabtops { width:100%; max-width:none; height:auto; }
+.tabholder ul.tabtops { position:relative; }
+.tabholder ul.tabtops > li { height:auto; margin-top:1px; }
+.tabholder ul.tabtops > li > div { height:auto; top:0em; }
+
+.tabholder div.tabtops ul.tabtops > li > label > h2 { position:relative; height:1.44em; }  /* height if no doctype */
+.tabholder div.tabtops ul.tabtops > li > div { position:relative; display:none; }
+.tabholder div.tabtops ul.tabtops > li > div > div { overflow:visible; }
+
+.tabholder ul.tabtops > li > input:checked + label > h2 { /* select active tab */
+	background-color:#C5C89C; 
+	color:#000000; 
+	z-index:3;
+	}
+.tabholder ul.tabtops > li > input:checked:hover + label > h2 { /* hover active tab */
+	background-color:#C5C89C; 
+	color:#333; 
+	}
+.tabholder ul.tabtops > li > input:checked ~ div  { /* open content */
+	display: block;
+	overflow:hidden;
+	animation-name: rollopen;
+	animation-duration: 1s;
+	}
+}
+/* animation code */
+@keyframes rollopen{
+	from { height:0px; }
+	to { height:300px; }
+}
+</style>
+<!--[if lt ie 8]>
+<style>
+/* lower browser versions can not display tabs */
+.tabholder { height:auto; }
+.tabholder ul.tabtops { position:relative }
+.tabholder ul.tabtops h2 { margin:auto; }
+.tabholder ul.tabtops input { display:none; }
+</style>
+<![endif]-->
+
+
+<!-- begin TabTop terms -->
+<div class="tabholder" >
+<div class="tabtops tab6" ><!-- number of tabs -->
+<ul class="tabtops" >
+
+<li><input id="tabtop1" type="radio" name="tabset" checked >
+<label for="tabtop1"><h2>Total Stations</h2></label>
+<div><div>
+<!-- start www.rssground.com code snippet -->
+<iframe src="//www.rssground.com/services/rss-converter/5f57de8371da9/Total%20Stations%20QGCUAR" width="100%" height="500px" scrolling="yes" align="middle" border="0" frameborder="0" allowtransparency="true" style="background: transparent">Your browser does not support inline frames or is currently configured not to display inline frames.</iframe>
+<!-- end www.rssground.com code snippet -->
+</div></div></li>
+
+<li><input id="tabtop2" type="radio" name="tabset" >
+<label for="tabtop2"><h2>GPS GNSS</h2></label>
+<div><div>
+<!-- start www.rssground.com code snippet -->
+<iframe src="//www.rssground.com/services/rss-converter/5f594b9d72064/GPS%20GNSS%20QGEUS2" width="100%" height="500px" scrolling="yes" align="middle" border="0" frameborder="0" allowtransparency="true" style="background: transparent">Your browser does not support inline frames or is currently configured not to display inline frames.</iframe>
+<!-- end www.rssground.com code snippet -->
+</div></div></li>
+
+<li><input id="tabtop3" type="radio" name="tabset" >
+<label for="tabtop3"><h2>Drones UAV</h2></label>
+<div><div>
+<!-- start www.rssground.com code snippet -->
+<iframe src="//www.rssground.com/services/rss-converter/5f594df01da88/UAV%20Drones%20QGEV8D" width="100%" height="500px" scrolling="yes" align="middle" border="0" frameborder="0" allowtransparency="true" style="background: transparent">Your browser does not support inline frames or is currently configured not to display inline frames.</iframe>
+<!-- end www.rssground.com code snippet -->
+</div></div></li>
+
+<li><input id="tabtop4" type="radio" name="tabset" >
+<label for="tabtop4"><h2>Data Collectors</h2></label>
+<div><div>
+<!-- start www.rssground.com code snippet -->
+<iframe src="//www.rssground.com/services/rss-converter/5f57db3ca6a10/Data%20Collectors%20QGCTA0" width="100%" height="500px" scrolling="yes" align="middle" border="0" frameborder="0" allowtransparency="true" style="background: transparent">Your browser does not support inline frames or is currently configured not to display inline frames.</iframe>
+<!-- end www.rssground.com code snippet -->
+</div></div></li>
+
+<li><input id="tabtop5" type="radio" name="tabset" >
+<label for="tabtop5"><h2>3D Scanners</h2></label>
+<div><div>
+<!-- start www.rssground.com code snippet -->
+<iframe src="//www.rssground.com/services/rss-converter/5f593f44a4959/3D%20Scanners%20QGESCM" width="100%" height="500px" scrolling="yes" align="middle" border="0" frameborder="0" allowtransparency="true" style="background: transparent">Your browser does not support inline frames or is currently configured not to display inline frames.</iframe>
+<!-- end www.rssground.com code snippet -->
+</div></div></li>
+
+<li><input id="tabtop6" type="radio" name="tabset" >
+<label for="tabtop6"><h2>Antique Equipment</h2></label>
+<div><div>
+<!-- start www.rssground.com code snippet -->
+<iframe src="//www.rssground.com/services/rss-converter/5f57e1881e467/Antique%20Equipment%20QGCVA0" width="100%" height="500px" scrolling="yes" align="middle" border="0" frameborder="0" allowtransparency="true" style="background: transparent">Your browser does not support inline frames or is currently configured not to display inline frames.</iframe>
+<!-- end www.rssground.com code snippet -->
+</div></div></li>
+
+</ul>
+</div>
+</div>
+
+<!-- 
+====================================
+  End TabTop IndexCardFlexTabs	
+  https://www.isdntek.com/csstools/	
+====================================
+-->
