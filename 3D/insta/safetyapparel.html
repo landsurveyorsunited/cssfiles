@@ -1,0 +1,130 @@
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+<style>.ig-wrapper {
+  overflow: hidden;
+}
+
+.ig-container {
+  min-width: 120%;
+  white-space: nowrap;
+  height: 200px;
+}
+.ig-container a {
+  display: inline-block;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+.ig-container a:link {
+  text-decoration: none;
+}
+.ig-container a + a {
+  margin-left: 12px;
+}
+.ig-container a.video::after, .ig-container a.series::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 48px;
+  width: 48px;
+  content: '';
+  background-repeat: no-repeat;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAAAwCAMAAADZyI/9AAABI1BMVEUAAAD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJCQn6+vr4+PgAAADY2NjHx8cAAAAFBQXNzc0AAAAAAAAAAAAoKCjq6uoAAAACAgIAAAAAAAAAAAD+/v7+/v4AAAAAAAD////p6ekpKSk5OTkAAAAsLCz9/f36+vr19fWpqan4+Pj39/fw8PD09PTq6uru7u7c3NzJycm1tbWKiop9fX0AAAD9/f36+vr6+vru7u7r6+vq6urk5OTj4+Pg4ODQ0NC2trbDw8OcnJxhYWFkZGT29vb4+Pjg4ODd3d3GxsbCwsLY2NjT09OcnJxTU1OdnZ21tbU6OjoRERHm5ubT09PV1dWxsbHJyckaGhqzs7OAgICbm5t7e3sgICC1qwbGAAAAYXRSTlMA5gEDBQgKEg8NFRAby8I5cm8rF1wmESgUhzsZLSIf5dE2NNCZJB0cE97YtkPIurOroZOHamNBOS/i29GppZuXjHt2VlM9LSXNxIlxaGNYUEtHQikhHo9vbk5HOy8uIRsYH3G2nwAAA+pJREFUWMPlmNdW20AQhiOwNFuUOLGwiKPIxgSMwZTQe+iQ3nt//6fIaIuEdteGnHCRnPwXsjjM/p9Ho92d9bX/V0P9dJXuw6auilF2r2QqM67AX1qbyhF/7q/t/UIScQUE6a/dAy3BkIg/BGh/4U4pkaKUZowLCENl9YtR/pk7j0Eq5ggJcgLKaW6/c+4EpD8HFiVJmClJogi4QLgJmXnFkgi0AMqfsKm0XqvV7mbCz9F0ivUlCHva7d4+p263i7EmQQMCyiYbY955jTUmBUF+M1TZ339x/7qhuaU3OokiWiVA+VTDM9VogiQUhS4Gvdj0bM3/kARZkwKACUA6ZoWP1aOYUN8gyASC+3lYa7OV3z8fxljhWJEEDSCs7tmqhQyILkM56/iRDJnZe7a2/vJwQTGeyNJ/X5p/o0ZgsHhCUc0B2EibU0hwAHy4ISIW1xknhPN3qw/F3zfFdP2M/3x+7RwgoHHiAozX7jUmAVMwARUFWMYqQaeTEIC1GwLgB373YBrvRsQQDSDgBmxgpcM8Be2fA3bfAcwuzW33npwBvJyRgK+yOiM4RgIqAhDedQDa4553r8lNwLACzKwBjKAtqvcNYDkDBP6SlwOGLwJUEeClIF4kA8AQ8IDFJzMqdOcnrG9lgODB7wDaeKkDDdyApxze5+/qLA8XMgAtAJULAXcEgLkAgAD0xKvSTQoTAjChAP5lAFUBIH0AJzy8nsceULKXYYgBMN8iGzAqARUbcESiYj4/I2y3P4DGAwGiyjbggMQrOnT7NH77yAYYM9kNiPoB5jvwdlfVeAXIcUvUYNEGVHxKotHfB3grHE73smn78GkCnQUxD8iHTQcgIM7VtPpq4CPytl9zCNduHa6eMmDLngDw6GiuAAzeD/bbqxLgngeo658AgHMOcbjckgBK+Pri+YmmU7B3tP0v1d7A1xQ1vX/SARKdHePzUYsdIsLDLe+4DMAqsGa9tjE+3q5W7whV29XHXjGTzcVu3pOa7i1O7Mx5Sh8RgCKzI7f9HCAIyIUoTAUCGahXqz0xJnUCKMJtTc8GfiYcIPyHdF8kCTFr3rPG4GpqLHZi9gdnOy0rdutmjNZCeo8qUhA5uHb+xNgP9OTsHN0ytPIaLH+MLhEmG+UccEeL1aZsdiIBlhMVSKk7v9T6a4DuTsWi10zr9fpoJvxMm0lctEZms+brNlnfFZ2mPlhYhIBwAMZYFEV4BeAkMLsKlK6bIdU9SpXCjQ6bErPHVgkbHbMpM84gaAQyiqerW/gigYKAMt2LMBuRx9tpFxWzEdap8ZIHNeU96Bw15NClTprmU9X+f/lZ9sLT+D/we8Jfol9R7mQ/WN5iEAAAAABJRU5ErkJggg==");
+}
+.ig-container a.video::after {
+  background-position: 0 0;
+}
+.ig-container a.series::after {
+  background-position: 100% 0;
+}
+.ig-container a img {
+  height: 200px;
+  width: auto;
+  transition: all 0.1s ease-in-out;
+}
+.ig-container a span {
+  position: absolute;
+  white-space: normal;
+  z-index: 100;
+  font-family: sans-serif;
+  font-size: .8em;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  max-height: 184px;
+  vertical-align: bottom;
+  margin-bottom: -200px;
+  color: white;
+  overflow: hidden;
+  transition: margin .2s ease-in-out;
+}
+.ig-container a:hover span {
+  margin: 0;
+}
+.ig-container a:hover img {
+  filter: brightness(30%) grayscale(100%);
+}
+</style>
+
+<script>/*
+<username> must be provided without "@"
+<container> is query to the parent element for inserting feed into it
+<items> is unnecesary number used as maximum count of requested media
+*/
+function getInstagramFeed(username, container, items) {
+	if(!$(container).length)
+		return false;
+	items = items || 32;
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+		if(xmlhttp.readyState==4 && xmlhttp.status==200) {
+			data = xmlhttp.responseText;
+			data = data.split("window._sharedData = ");
+			data = data[1].split("<\/script>");
+			data = data[0];
+			data = data.substr(0, data.length-1);
+			data = JSON.parse(data);
+			data = data.entry_data.ProfilePage[0].graphql.user;
+			if(data.is_private) {
+				console.log('This account is private');
+				return false;
+			}
+			else {
+				var imgs = data.edge_owner_to_timeline_media.edges;
+				max = (imgs.length>items) ? items : imgs.length;
+				if(!max)
+					return false;
+				var html = "<div class='ig-wrapper'><div class='ig-container'>";
+				for(var i=0; i<max; i++) {
+					var url = "https://www.instagram.com/p/"+ imgs[i].node.shortcode +"/";
+					var type = "";
+					if(imgs[i].node.__typename=="GraphVideo")
+						type = " class='video'";
+					else if(imgs[i].node.__typename=="GraphSidecar")
+						type = " class='series'";
+					var caption = imgs[i].node.edge_media_to_caption.edges[0].node.text;
+					caption = caption.replace(/#/g," #");
+					caption = caption.replace(/(•\n)|#(.+?)(?=[\s.,:,]|$)/g, "");
+					caption = caption.replace(/\n/g,"<br/>");
+					caption = caption.replace(/[\s]{2,}/g," ");
+					caption = caption.trim();
+					if(caption)
+						caption = "<span>"+ caption +"</span>\n";
+					html += "<a href='"+ url +"' target='_blank'"+ type +">";
+					html += "<img src='"+ imgs[i].node.thumbnail_resources[2].src +"' alt='"+ username +" instagram image "+ i+"' />";
+					html += caption;
+					html += "</a>";
+				}
+				html += "</div></div>";
+			}
+			$(container).html(html);
+		}
+	}
+	xmlhttp.open("GET", "https://www.instagram.com/"+ username +"/", true);
+	xmlhttp.send();
+}
+
+
+getInstagramFeed("thepartychiefsurveyvest", "#instagramfeed", 12);
+</script>
+
+<div id="instagramfeed"></div>
