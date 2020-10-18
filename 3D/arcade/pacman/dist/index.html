@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Pac-Man Game (vanilla JS) - Responsive</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Pac-Man</title>
+		<link rel="stylesheet" href="styles.css">
+		<link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/ca42bbbf84.js" crossorigin="anonymous"></script>
+	</head>
+
+	
+	<body>
+		<button id="play"  onClick="document.getElementById('play').style.display = 'none'; document.getElementById('h2bestScore').style.display = 'block'; document.getElementById('footer').style.display = 'none'; document.getElementById('mobile').style.display = 'none'">Click here to play</button>
+		<script src="script.js" charset="utf-8"></script>
+		<img src="https://upload.wikimedia.org/wikipedia/fr/thumb/a/a2/Pac-Man_Logo.svg/langfr-1920px-Pac-Man_Logo.svg.png" alt="Logo Pac-Man" id="logo">
+		<h2>Score : <span id="score">0</span></h2>
+		<p id="computer">Use <kbd>←</kbd> <kbd>↑</kbd> <kbd>→</kbd> <kbd>↓</kbd> to play</p>
+		<p id="mobile">Swipe Up, Down, Left or Right to move Pac-Man</p>
+		<div class="grid"></div>
+		<h2 id="h2bestScore" style="display: none">Your best score : <span id="bestScore">0</span></h2>
+		<footer id="footer">PAC-MAN™ & ©1980 BANDAI NAMCO Entertainment Inc.</footer>
+	</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
