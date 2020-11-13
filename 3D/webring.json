@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Smarketplace Virtual Mall App",
+    "url": "https://app.smarketplace.org",
+    "owner": "Land Surveyors United"
+  },
+  {
+    "name": "CSS { In Real Life }",
+    "url": "https://css-irl.info/",
+    "owner": "Michelle Barker"
+  },
+  {
+    "name": "CSS Wizardry",
+    "url": "https://csswizardry.com/archive/",
+    "owner": "Harry Roberts"
+  },
+  {
+    "name": "Adactio",
+    "url": "https://adactio.com/",
+    "owner": "Jeremy Keith"
+  },
+  {
+    "name": "Codrops",
+    "url": "https://tympanus.net/codrops/",
+    "owner": "Manoela Ilic"
+  }
+]
