@@ -7,7 +7,7 @@
 	left: 0;
 	width: 100%;
 	z-index: 20
-  background-image: linear-gradient( 109.6deg,  rgba(5,84,94,1) 16%, #bbb 91.1% );
+  background-image: linear-gradient( 109.6deg,  rgba(5,84,94,1) 16%, #bbb 91.1% )!important;
 }
 .desktop-header-wrap .desktop-header {
 	border-bottom-width: 1px;
@@ -25,7 +25,7 @@
 }
 .desktop-header-wrap .desktop-header a.nav-item {
 	--text-opacity: 1;
-	color: #718096;
+	color: #cc0000;
 	color: rgba(113, 128, 150, var(--text-opacity));
 	font-size: .875rem;
 	padding-bottom: .25rem;
