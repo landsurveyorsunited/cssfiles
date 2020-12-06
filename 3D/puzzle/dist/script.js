@@ -1521,7 +1521,7 @@ function lookForLoops (tbCases) {
 
 window.addEventListener("load", function(){
 
-let img = 'https://storage.ning.com/topology/rest/1.0/file/get/8253083489?profile=RESIZE_1200x';
+let img = 'https://storage.ning.com/topology/rest/1.0/file/get/8253117500';
 
 autoStart = isMiniature(); // used for nice miniature in CodePen
 
