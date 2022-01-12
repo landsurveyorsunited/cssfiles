@@ -1,0 +1,231 @@
+body {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  box-sizing: content-box;
+  scroll-behavior: smooth;
+}
+main section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center center;
+}
+main section:nth-child(1) {
+  background-image: url("https://storage.ning.com/topology/rest/1.0/file/get/8759407491?profile=original");
+}
+main section:nth-child(1) .nav-anchor {
+  -webkit-animation: 1000ms ease 0ms forwards infinite notice-me;
+          animation: 1000ms ease 0ms forwards infinite notice-me;
+}
+main section:nth-child(2) {
+  background-image: url("https://storage.ning.com/topology/rest/1.0/file/get/9992470700?profile=original");
+}
+main section:nth-child(2) .main-title {
+  color: rgba(255, 255, 255, 0.85);
+}
+main section:nth-child(3) {
+  background-image: url("https://storage.ning.com/topology/rest/1.0/file/get/9992471896?profile=original");
+}
+main section:nth-child(4) {
+  background-image: url("https://storage.ning.com/topology/rest/1.0/file/get/9992472455?profile=original");
+}
+main section:nth-child(4) .main-title {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.main-title {
+  font-size: 1.5vw;
+  font-family: "Alfa Slab One";
+  color: rgba(26, 26, 26, 0.85);
+  text-align: center;
+}
+
+h1 small {
+  font-size: 15px;
+}
+
+h2 {
+  font-size: 11px;
+}
+
+.nav-anchor {
+  position: absolute;
+  color: #fff;
+  font-size: 50px;
+}
+.nav-anchor.top {
+  top: 10px;
+}
+.nav-anchor.bottom {
+  bottom: 10px;
+}
+
+#progress {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  height: 100%;
+}
+
+#tape-body {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/86186/tape2.png");
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50px;
+  height: 76px;
+  background-size: cover;
+  z-index: 10;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+#tape-measure {
+  position: absolute;
+  right: 12px;
+  top: 0;
+  height: 0;
+  width: 24px;
+  background-color: #fada34;
+  z-index: 9;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/86186/tape2.jpg");
+  background-size: 100% auto;
+}
+
+@-webkit-keyframes notice-me {
+  0%, 100% {
+    transform: translate3d(0, -5px, 0);
+  }
+  50% {
+    transform: translate3d(0, 5px, 0);
+  }
+}
+
+@keyframes notice-me {
+  0%, 100% {
+    transform: translate3d(0, -5px, 0);
+  }
+  50% {
+    transform: translate3d(0, 5px, 0);
+  }
+}
+:root {
+  --gutter-horizontal: 10vw;
+  --gutter-vertical: 10vh;
+}
+
+img {
+  max-width: 100%;
+}
+
+details + details {
+  margin-top: 1em;
+}
+
+details.modal summary {
+  background: #fff;
+  color: #000066;
+  border: 2px solid black;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.25em 0.5em;
+}
+
+details.modal summary::-webkit-details-marker {
+  display: none;
+}
+
+details.modal summary::before {
+  content: "";
+  display: inline-block;
+  padding-right: 0.25em;
+}
+
+details[open].modal summary::before {
+  content: "Close";
+}
+
+details[open].modal {
+  overflow: auto;
+  padding: 1em;
+  position: fixed;
+  z-index: 10;
+}
+
+details[open].modal,
+details[open].modal::after {
+  bottom: 10vh;
+  bottom: var(--gutter-vertical);
+  left: 10vw;
+  left: var(--gutter-horizontal);
+  right: 10vw;
+  right: var(--gutter-horizontal);
+  top: 10vh;
+  top: var(--gutter-vertical);
+}
+
+details[open].modal::before,
+details[open].modal::after {
+  content: "";
+  position: fixed;
+  z-index: -1;
+}
+
+details[open].modal::before {
+  background: rgba(0, 0, 0, 0.75);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+details[open].modal::after {
+  background: #fff;
+}
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.embed-container iframe, .embed-container object, .embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.frameContainer {
+  position: fixed;
+  height: 100%;
+  top: 0px;
+  left: 300px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1;
+}
+
+.main_iframe {
+  height: 100%;
+  width: 100%;
+  border: none;
+  background: #3366ff;
+}
