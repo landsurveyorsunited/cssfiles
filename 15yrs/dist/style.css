@@ -1,0 +1,544 @@
+@charset "UTF-8";
+body {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  box-sizing: content-box;
+  scroll-behavior: smooth;
+}
+main section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center center;
+}
+main section:nth-child(1) {
+  background-image: url("https://storage.ning.com/topology/rest/1.0/file/get/8759407491?profile=original");
+}
+main section:nth-child(1) .nav-anchor {
+  -webkit-animation: 1000ms ease 0ms forwards infinite notice-me;
+          animation: 1000ms ease 0ms forwards infinite notice-me;
+}
+main section:nth-child(2) {
+  background-image: url("https://storage.ning.com/topology/rest/1.0/file/get/9992470700?profile=original");
+}
+main section:nth-child(2) .main-title {
+  color: rgba(255, 255, 255, 0.85);
+}
+main section:nth-child(3) {
+  background-image: url("https://storage.ning.com/topology/rest/1.0/file/get/9992471896?profile=original");
+}
+main section:nth-child(4) {
+  background-image: url("https://storage.ning.com/topology/rest/1.0/file/get/9992472455?profile=original");
+}
+main section:nth-child(4) .main-title {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.main-title {
+  font-size: 1.9vw;
+  font-family: "Alegreya", serif;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.border-webkit {
+  -webkit-text-stroke: 3px red;
+}
+
+.border-white {
+  /*border white with light shadow*/
+  text-shadow: 1px 1px #fff, -1px 1px #fff, 1px -1px #fff, -1px -1px #fff, 1px 1px 5px #555;
+}
+
+.border-black {
+  color: grey;
+  /*border white with light shadow*/
+  text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 5px #000;
+}
+
+.combined {
+  -webkit-text-stroke: 1px black;
+  color: white;
+  text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.inset {
+  background: #333;
+  color: rgba(255, 255, 255, 0.3);
+  text-shadow: 1px 2px 2px #fff, 0 0 0 #000, 1px 2px 2px #fff;
+  line-height: 1;
+}
+
+.inset-dark-bg {
+  background: #747474;
+  color: #fff;
+  line-height: 1;
+  text-shadow: 0px -1px 0px #374683;
+}
+
+.inset-light-bg {
+  color: #777;
+  text-shadow: 0px 1px 0px #e5e5ee;
+}
+
+.inset-bg {
+  background: #8A3DAD;
+  line-height: 1em;
+  color: transparent;
+  text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.3);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+}
+
+.emboss {
+  color: #9c8468;
+  opacity: 0.8;
+  line-height: 1;
+  padding: 0;
+  text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+}
+
+.image-clip {
+  line-height: 1;
+  color: gray;
+  background: url(http://eofdreams.com/data_images/dreams/image/image-07.jpg) no-repeat -1034px -942px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+}
+
+.glow {
+  text-shadow: 0px 0px 10px rgba(255, 0, 0, 0.9);
+}
+
+.neon {
+  color: #fff;
+  font-size: 8em;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #0f0, 0 0 35px #0f0, 0 0 40px #0f0, 0 0 60px #0f0, 0 0 90px #0f0;
+}
+
+/* Don't show shadows when selecting text */
+::-moz-selection {
+  background: red;
+  color: #fff;
+  text-shadow: none;
+}
+
+::selection {
+  background: red;
+  color: #fff;
+  text-shadow: none;
+}
+
+h1 small {
+  font-weight: bold;
+  font-size: 6em;
+}
+
+h2 {
+  font-size: 1.3vw;
+  text-shadow: 2px 1px 1px #000;
+}
+
+.nav-anchor {
+  position: absolute;
+  color: #fff;
+  font-size: 50px;
+}
+.nav-anchor.top {
+  top: 10px;
+}
+.nav-anchor.bottom {
+  bottom: 10px;
+}
+
+#progress {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  height: 100%;
+}
+
+#tape-body {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/86186/tape2.png");
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50px;
+  height: 76px;
+  background-size: cover;
+  z-index: 10;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+#tape-measure {
+  position: absolute;
+  right: 12px;
+  top: 0;
+  height: 0;
+  width: 24px;
+  background-color: #fada34;
+  z-index: 9;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/86186/tape2.jpg");
+  background-size: 100% auto;
+}
+
+@-webkit-keyframes notice-me {
+  0%, 100% {
+    transform: translate3d(0, -5px, 0);
+  }
+  50% {
+    transform: translate3d(0, 5px, 0);
+  }
+}
+
+@keyframes notice-me {
+  0%, 100% {
+    transform: translate3d(0, -5px, 0);
+  }
+  50% {
+    transform: translate3d(0, 5px, 0);
+  }
+}
+:root {
+  --gutter-horizontal: 10vw;
+  --gutter-vertical: 10vh;
+}
+
+img {
+  max-width: 100%;
+}
+
+details + details {
+  margin-top: 1em;
+}
+
+details.modal summary {
+  background-image: radial-gradient(circle 911px at 0.4% 50.5%, #bb4430 18.7%, #151e21 90%);
+  color: #fff;
+  border: 2px solid black;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.25em 0.5em;
+}
+
+details.modal summary::-webkit-details-marker {
+  display: none;
+}
+
+details.modal summary::before {
+  content: "";
+  display: inline-block;
+  padding-right: 0.25em;
+}
+
+details[open].modal summary::before {
+  content: "✖️/➕";
+}
+
+details[open].modal {
+  overflow: auto;
+  padding: 1em;
+  position: fixed;
+  z-index: 10;
+}
+
+details[open].modal,
+details[open].modal::after {
+  bottom: 10vh;
+  bottom: var(--gutter-vertical);
+  left: 10vw;
+  left: var(--gutter-horizontal);
+  right: 10vw;
+  right: var(--gutter-horizontal);
+  top: 10vh;
+  top: var(--gutter-vertical);
+}
+
+details[open].modal::before,
+details[open].modal::after {
+  content: "";
+  position: fixed;
+  z-index: -1;
+}
+
+details[open].modal::before {
+  background: rgba(0, 0, 0, 0.75);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+details[open].modal::after {
+  background-image: radial-gradient(circle 911px at 0.4% 50.5%, #bb4430 18.7%, #151e21 90%);
+  color: #000;
+}
+
+#google_translate_element {
+  position: absolute;
+  bottom: 17px;
+  z-index: 99999;
+  left: 23px;
+}
+
+@media (max-width: 667px) {
+  #google_translate_element {
+    bottom: 33px;
+    right: 60px;
+  }
+}
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.embed-container iframe, .embed-container object, .embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.frameContainer {
+  position: fixed;
+  height: 100%;
+  top: 0px;
+  left: 300px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1;
+}
+
+.main_iframe {
+  height: 100%;
+  width: 100%;
+  border: none;
+  background: #3366ff;
+}
+
+#elevator {
+  z-index: 1000;
+  /*increase if it's behind something else*/
+  height: 96.3%;
+  /*the height of the tab*/
+  position: fixed;
+  text-align: center;
+  /*you can change it to 'left' or 'right'*/
+  bottom: 0px;
+  left: 5px;
+  /*how long it takes to go up*/
+  /*how long it takes to go up*/
+  /*how long it takes to go up*/
+  transition-duration: 1.5s;
+  /*how long it takes to go up*/
+}
+
+#elevator:hover {
+  z-index: 1000;
+  bottom: 1205px;
+  left: 5px;
+}
+
+#room {
+  bottom: -1200px;
+  position: absolute;
+  width: 300px;
+  /*width of tab*/
+  height: 100%;
+  overflow: scroll;
+  /*change to 'scroll' if you want a scrollbar*/
+  padding: 10px;
+  background: white;
+  /*the tab's background color*/
+  opacity: 1;
+  line-height: 13px;
+  /*shadow border code*/
+  /*shadow border code*/
+  box-shadow: 0px 0px 3px 1px white;
+  /*shadow border code*/
+  /*rounds the tab's corners*/
+  /*rounds the tab's corners*/
+  border-radius: 3px;
+  /*rounds the tab's corners*/
+  border: 1px solid black;
+  /*tab border*/
+  text-align: center;
+  /*you can change it to 'left' or 'right'*/
+}
+
+.button:hover {
+  background: #cc0000;
+}
+
+.button {
+  display: block;
+  position: fixed;
+  left: 5px;
+  /*distance from the left side*/
+  top: 5px;
+  /*distance from the top*/
+  padding: 3px;
+  width: 35px;
+  /*width of button*/
+  height: 35px;
+  /*height of button*/
+  background-color: black;
+  /*button's background color*/
+  border-radius: 85px;
+  /*the lower it is, the less round it'll be*/
+  border: 1px solid black;
+  /*button border code*/
+  overflow: hidden;
+}
+
+.dividers {
+  border: 2px solid black;
+  /*border code for dividers*/
+  width: 95%;
+  /*width of dividers*/
+  height: 21px;
+  /*height of dividers*/
+  padding: 3px;
+  margin: auto;
+  line-height: 20px;
+  background-image: radial-gradient(circle farthest-corner at 10% 20%, #ffd143 0%, #ff9153 90%);
+  /*background color of dividers*/
+  color: black;
+  /*font color of dividers*/
+  font-weight: bold;
+  /*font weight (none or bold)*/
+}
+
+.link-list-block ul {
+  font-size: 1.25rem;
+  background-color: #212121;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.link-list-block li {
+  margin-bottom: 1rem;
+}
+
+.link-list-block a,
+.link-list-block li {
+  display: block;
+  width: 100%;
+}
+
+.btn.-arrow,
+.wp-block-button__link.-arrow {
+  position: relative;
+  padding-right: 0;
+  width: 100%;
+}
+
+.link-list-block a,
+.link-list-block li {
+  display: block;
+  width: 100%;
+}
+
+.link-list-block a {
+  color: #fff;
+}
+
+.btn,
+.wp-block-button__link {
+  background-color: transparent;
+  border: none;
+  position: relative;
+  box-shadow: inset 0 -0.15rem 0 #b53e26;
+  box-sizing: border-box;
+  color: currentColor;
+  cursor: pointer;
+  padding: 0 1.563rem;
+  transition: box-shadow 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+
+.btn.-arrow:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  background-color: #cc0000;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: 300ms ease width;
+}
+
+.btn:focus::after,
+.btn:hover::after,
+.wp-block-button__link:focus::after,
+.wp-block-button__link:hover::after {
+  width: 100%;
+}
+
+.btn.-arrow:before,
+.wp-block-button__link.-arrow:before {
+  background-image: url("https://storage.ning.com/topology/rest/1.0/file/get/8890304673?profile=RESIZE_180x180");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 2rem) 80%;
+  color: red;
+  content: "";
+  height: 54px;
+  mix-blend-mode: difference;
+  position: absolute;
+  right: 200;
+  width: 670px;
+  z-index: 10;
+}
+
+#copy {
+  position: fixed;
+  z-index: 1000;
+  right: 150px;
+  top: -8px;
+  font-size: 0.65em;
+  padding: 8px 8px 2px 8px;
+  background: #000000;
+  border: 2px solid #737c85;
+  border-radius: 0.7em;
+  opacity: 0.9;
+  box-shadow: 0 0 8px #5f7182;
+  color: #eee;
+  background-position: fixed;
+}
+
+#copy a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+#copy a:hover {
+  color: #fff;
+}
