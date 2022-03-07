@@ -240,18 +240,3 @@ x$('.videoDetailPage-video').addClass('iframed');
 });
 
 
-x$(document).ready(function(){
-var socialTitle = 'Social Sharing';
-x$('<a class="Social-more-switch" alt="More" title="Show / Hide">&#9776 Social Sharing</a>').prependTo('.socialButtons');
-x$('.socialSharingList').hide();
-x$('a.Social-more-switch').toggle(
-function(){
-x$('.socialSharingList').slideDown(300);
-x$(this).html("&#9660 Social Sharing");
-},
-function(){
-x$('.socialSharingList').slideUp(300);
-x$(this).html("&#9776 Social Sharing");
-});
-});
-
