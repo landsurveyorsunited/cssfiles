@@ -21,7 +21,7 @@ body {
 .container {
   width: 560px;
   height: auto;
-  background-image: linear-gradient(0deg, black 22.4%, #f8ec07 85.7%);
+  background-image: linear-gradient( 178.2deg,  rgba(118,8,23,1) 10.9%, rgba(158,12,33,1) 62.6% );
   margin: 0 auto;
   padding: 20px, 10px;
 }
@@ -30,7 +30,7 @@ header, section {
   position: fixed;
   text-align: center;
   width: 560px;
-  background-image: linear-gradient(0deg, black 22.4%, #f8ec07 85.7%);
+  background-image: linear-gradient( 178.2deg,  rgba(118,8,23,1) 10.9%, rgba(158,12,33,1) 62.6% );
 }
 
 section {
