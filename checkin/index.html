@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Geonames Powered Check-in Button</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<head>
+    <script>
+    function copyToClipboard_textArea() {
+      var copyText = document.getElementById("Karte");
+      copyText.select();
+      document.execCommand("Copy");
+
+    }
+    function copyToClipboard_div() {
+      let textarea = document.createElement('textarea')
+      textarea.id = 't'
+      textarea.style.height = 0
+      document.body.appendChild(textarea)
+      textarea.value = document.getElementById("myInput_div").innerText
+      let selector = document.querySelector('#t')
+      selector.select()
+      document.execCommand('copy')
+      document.body.removeChild(textarea)
+    }
+  </script>
+</head>
+</head>
+<center><div id="einchecken">
+    <p><button id="btneinchecken">check in</button> <i>(geodata powered by geonames.org)</i></p>
+    <div id="neighbours" style="float:right; width: 300px;"></div>
+    <div id="karte"></div>
+  </div></center>
+<center><button class="btn btn-primary" onclick="copyToClipboard_textArea()">Copy text and hit the backbutton to  paste</button></center>
+  </div>
+<!--
+getCountryCodeByGeodata: http://api.geonames.org/countryCodeJSON?lat=51.676381&lng=8.346648&username=adifah
+
+getCountryInformationByCountryCode: http://api.geonames.org/countryInfoJSON?country=DE&username=adifah
+
+getNeighbouringCountriesByCountry: http://api.geonames.org/neighboursJSON?formatted=true&geonameId=2921044&username=adifah
+
+getCountriesByContinent: http://api.geonames.org/childrenJSON?geonameId=6255148&username=demo
+
+http://forrst.com/posts/A_simple_JSON_RPC_call_to_send_a_SMS_from_Node_J-vvx
+-->
+<!-- partial -->
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://landsurveyorsunited.github.io/cssfiles/copygeo.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
