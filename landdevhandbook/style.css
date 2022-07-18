@@ -1,0 +1,180 @@
+@-webkit-keyframes rotate {
+  0% {
+    -moz-transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  75% {
+    -moz-transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+  100% {
+    -moz-transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
+@-moz-keyframes rotate {
+  0% {
+    -moz-transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  75% {
+    -moz-transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+  100% {
+    -moz-transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
+@-o-keyframes rotate {
+  0% {
+    -moz-transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  75% {
+    -moz-transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+  100% {
+    -moz-transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    -moz-transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  75% {
+    -moz-transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+  100% {
+    -moz-transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
+body {
+  background: url("https://subtlepatterns.com/patterns/concrete_seamless.png");
+}
+
+main {
+  width: 450px;
+  margin: 1em auto;
+}
+
+form section + section {
+  margin-top: .5em;
+}
+form .geoloaction {
+  display: none;
+}
+html.geolocation form .geoloaction {
+  display: inline-block;
+}
+form .debug {
+  opacity: .5;
+}
+form small {
+  display: block;
+  margin: 1em 0;
+  font-size: .75em;
+  color: #86c5da;
+}
+
+.map {
+  position: relative;
+  border: 1px solid #ccc;
+  margin: 1em 0;
+  height: 450px;
+}
+.map.loading:before, .map.loading:after {
+  display: block;
+  position: absolute;
+}
+.map.loading:before {
+  -webkit-animation: rotate 3s;
+  -moz-animation: rotate 3s;
+  -o-animation: rotate 3s;
+  animation: rotate 3s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  z-index: 1001;
+  content: '\f05b';
+  left: 50%;
+  top: 50%;
+  margin-top: -51px;
+  margin-left: -43px;
+  font-family: 'FontAwesome';
+  font-size: 100px;
+  color: #fff;
+}
+.map.loading:after {
+  z-index: 1000;
+  content: '';
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.info {
+  display: block;
+  font-size: .8em;
+  list-style-type: none;
+  padding-left: 0;
+  text-align: center;
+  color: #aaa;
+}
+.info li {
+  display: inline-block;
+}
+.info li:after {
+  content: ', ';
+}
+.info li:last-child:after {
+  content: '';
+}
+
+[type="text"] {
+  border: 1px solid #ccc;
+  padding: .4em .5em;
+}
+[type="text"]:focus {
+  outline: none;
+  border-color: lightblue;
+}
+
+.button {
+  -moz-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  display: inline-block;
+  padding: .4em .5em;
+  border: 1px solid #86c5da;
+  font-size: .9em;
+  border-radius: 5px;
+  background-color: lightblue;
+}
+.button:hover {
+  background-color: #86c5da;
+}
+.button:focus {
+  outline: none;
+}
