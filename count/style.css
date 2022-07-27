@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+}
+
+a {
+  color: yellow;
+}
+
+.align {
+  -webkit-display: flex;
+  -moz-display: flex;
+  -ms-display: flex;
+  -o-display: flex;
+  display: flex;
+  -webkit-flex-align: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.stat-wrap {
+  background: #cc0000;
+  -webkit-display: flex;
+  -moz-display: flex;
+  -ms-display: flex;
+  -o-display: flex;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  width: 100%;
+}
+.stat-wrap div {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 35px;
+  font-weight: bold;
+  color: white;
+}
