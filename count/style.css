@@ -14,11 +14,11 @@ a {
   display: flex;
   -webkit-flex-align: center;
   align-items: center;
-  height: 100vh;
+  height: 50vh;
 }
 
 .stat-wrap {
-  background: #cc0000;
+background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(147,67,67,1) 0%, rgba(111,27,27,1) 90% );
   -webkit-display: flex;
   -moz-display: flex;
   -ms-display: flex;
