@@ -1,0 +1,62 @@
+html, body, #map_canvas { 
+	margin: 0; 
+	padding: 0; 
+	height: 100%;
+}
+#action {
+	overflow: scroll; 
+	width: 25em; 
+	height: 10em;
+}
+#coords {
+	display: none; 
+	position: absolute; 
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	text-align: center;
+	background: rgba(0,0,0,0.6);
+	z-index: 9999; 
+}
+.controls {
+	display: block;
+	margin: auto;
+	text-align: center;
+	border: solid 2px #F00;
+	background: #000;
+  padding-bottom: 0.3em;
+}
+form {
+	margin: auto;
+	padding: 0;
+	display: inline-block;
+}
+button {
+	font-weight: bold;
+	cursor: pointer;
+  margin-top: 0.5em;
+}
+input[type="text"] {
+	padding: 2px 5px;
+}
+.copied {
+	display: none;
+	margin: auto;
+	padding-top: 5em;
+	text-align: center;
+	background: rgba(0,0,0,0.6);
+	font-size: 3em;
+	font-family: Arial;
+	font-weight: bold;
+	color: #FFF;
+	width: 100%;
+	height: 100%;
+	z-index: 99999;
+	position: absolute;
+}
+#clear {
+  color: #FF0000;
+}
+#load {
+  color: #999999;
+}

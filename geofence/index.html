@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - GeoFenceGenerator</title>
+  <meta property="og:image" content="http://www.doctypestudios.com/GeoFence/GeoFence.jpg" itemprop="thumbnailUrl"><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html >
+<head>
+	<meta charset="UTF-8">
+  <meta property="og:image" content="http://www.doctypestudios.com/GeoFence/GeoFence.jpg" itemprop="thumbnailUrl">
+	<title>Geofence Generator</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=drawing"></script>
+<div class="controls">
+	<button class="btn" onClick="toggle()" id="showhide">Show Coordinates</button>
+		<form action="javascript: nsearch()">
+		<input type="text" id="search" placeholder="Search (City, State)" />
+		<button class="btn" type="submit">GO</button>
+	</form>
+</div>
+<div id="coords">
+	<textarea id="action" rows="10" cols="100"></textarea><br / >
+  <button class="btn" data-clipboard-target="#action" id="copy-button">&raquo; Copy to Clipboard &laquo;</button>
+	<button onClick="clearcoords()" id="clear">CLEAR</button><br />
+  <button onClick="loadcoords()" id="load">load</button>
+	<button onClick="toggle()" id="clear">CLOSE</button>
+</div>
+<div class="copied" id="copied">
+	Copied to ClipBoard
+</div>
+<div id="map_canvas"></div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js'></script>
+<script src="js/index.js"></script>
+
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
