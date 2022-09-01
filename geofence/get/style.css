@@ -1,0 +1,10 @@
+#map { width:480px; height:400px; }
+#log { border: 1px solid #c6c6c6; }
+
+#no-results { display: none; }
+#results-table { display: none; }
+
+#doubleclick-hint { color: gray; }
+#latlng.invalid { border-color: red; }
+
+#unit-refresh-button { display: none; }

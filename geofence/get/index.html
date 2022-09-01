@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Get  location&#39;s geofence</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Iberotrack Playground - Show geofences by position</title>
+    <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="//hst-api.wialon.com/wsdk/script/wialon.js"></script>
+</head>
+<body>
+
+<!-- load map -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.2/leaflet.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.2/leaflet.js"></script>
+
+<div id="map"></div>
+<p id='doubleclick-hint'>Doubleclick on the map to manually set location</p>
+
+<p id='no-results'>No geofences at this location</p>
+    
+<table id='results-table'><thead><tr>
+    <td>#</td>
+    <td>Name</td>
+    <td>Type</td>
+    <td>Area</td>
+    <td>Perimeter</td>
+    <td>Resource</td>
+</tr></thead><tbody id='results-table-body'></tbody></table>
+
+<p>Position: <input id='latlng' type='text' placeholder='latitude, longitude'>
+   <button id='apply-location-button'>Apply</button></p>
+<p>Units: <select id='units'><option value='0'>—</option></select> <button id='unit-refresh-button'>Refresh</button></p>
+<p>Resources: <select id='resources'><option value='0'>All</option></select></p>
+
+<div id='log'></div>
+
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
