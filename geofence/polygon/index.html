@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Google Maps Polygon Coordinates Tool</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body onload="initialize()">
+  <div id="map-canvas"></div>
+  <div class="lngLat"><span class="one">Lat</span><span class="two">,Lng</span></div>
+</body>
+<button id="clipboard-btn" onclick="copyToClipboard(document.getElementById('info').innerHTML)">Copy to Clipboard</button>
+<textarea id="info"></textarea>
+<!-- partial -->
+  <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false'></script><script  src="./script.js"></script>
+
+</body>
+</html>
