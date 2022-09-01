@@ -1,0 +1,19 @@
+@import "https://fonts.googleapis.com/css?family=Montserrat";
+#chat {width: 360px;height: 480px;margin:0 0px 0px calc(50vw - 180px);box-shadow: 0 0 10px grey;max-width:calc(100vw - 40px);font-family:'Montserrat',sans-serif;position:relative;background:white}
+.chat_header{padding:15px;border-bottom:5px solid #ff7f50;color:#ff7f50;margin-bottom:8px;font-size:14px;background: #f0f0f0}
+.chat{margin:14px;border:1px solid #ff7f50;padding:8px;width:220px;border-radius:10px 10px 10px 0;max-width:calc(100% - 48px);font-size:.85em}
+.chat_name{text-transform:uppercase;font-size:.75em;margin:4px 0 2px}
+.chat_other{border-radius:10px 10px 0 10px;margin-left:calc(100% - 249px);border-color:grey}
+#chat form{position:absolute;bottom:10px;left:10px;width:calc(100% - 20px)}
+#chat input[type=text]{width:calc(100% - 70px);box-sizing:border-box;padding:10px;border:1px solid grey;font-family:'Montserrat',sans-serif}
+#chat input[type=submit]{width:70px;position:absolute;box-sizing:border-box;padding:10px;margin-left:-1px;border:1px solid grey;font-family:'Montserrat',sans-serif;cursor:pointer}
+#chat input[type=submit]:hover{background:grey;color:#fff}
+#chat_s{overflow-y:scroll;max-height:360px}
+::-webkit-scrollbar{width:13px}
+::-webkit-scrollbar-thumb{border-radius:10px;-webkit-box-shadow:inset 0 0 0 4px #fff;background:rgba(0,0,0,0.2)}
+
+.messages{
+    border: 1px solid #ccc;
+    padding: -10px;
+    overflow-y:scroll;
+}
