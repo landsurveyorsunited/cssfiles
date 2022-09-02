@@ -1,0 +1,149 @@
+@import "compass/css3";
+body {
+  width: 960px;
+  background: *#13756D;
+}
+
+.todo-wrapper {
+  background: #55B6AE;
+  width: 100%;
+}
+
+h2 {
+  font-size: 1em;
+  font-family: megrim, fantasy;
+  background: #1CA89C;
+  padding: 40px;
+  margin: 0;
+  color: #333;
+  text-align: center;
+}
+
+.emphasis {
+  font-family: vast-shadow, sans-serif;
+  font-size: 2.2em;
+  color: #5CB85C;
+}
+
+.emphasisSmall {
+  font-family: vast-shadow, sans-serif;
+  font-size: 1.2em;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+li .from{
+  font-family: fantasy;
+  font-size: 1.2em;
+}
+
+li .msg{
+  font-family: fredericka-the-great, fantasy;
+  font-size: 1.2em;
+}
+
+li {
+  font-family: megrim, fantasy;
+  font-size: 1.2em;
+  padding: 10px;
+  background: #65d8cb;
+  /* Old browsers */
+  
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#65d8cb), to(#72f4e9));
+  background: -webkit-linear-gradient(#65d8cb 0%, #72f4e9 100%);
+  background: -moz-linear-gradient(#65d8cb 0%, #72f4e9 100%);
+  background: -o-linear-gradient(#65d8cb 0%, #72f4e9 100%);
+  background: linear-gradient(#65d8cb 0%, #72f4e9 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#65d8cb', endColorstr='#72f4e9', GradientType=0);
+  list-style-type: none;
+  margin-left: 0px;
+  /* padding-left: 0px; */
+}
+
+li-new {
+  font-family: megrim, fantasy;
+  font-size: 1.3em;
+  padding: 10px;
+  background: #2BC0E4;
+  /* Old browsers */
+  
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#00bfff), to(#00e5e6));
+  background: -webkit-linear-gradient(#00bfff 0%, #00e5e6 100%);
+  background: -moz-linear-gradient(#00bfff 0%, #00e5e6 100%);
+  background: -o-linear-gradient(#00bfff 0%, #00e5e6 100%);
+  background: linear-gradient(#F1F2B5 0%, #ffffff 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#545454', endColorstr='#ffffff', GradientType=0);
+  list-style-type: none;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+li input[type="checkbox"] {
+  width: 40px;
+}
+
+.done-true {
+  text-decoration: line-through;
+  color: #ddd;
+}
+
+.add-input {
+  --width: 40%;
+  height: 10px;
+  float: left;
+  --border: none;
+  padding: 10px 0;
+  font-size: 1em;
+  font-family: megrim, fantasy;
+  text-indent: 55px;
+}
+
+.input-name{
+  width:40%;
+  color: darkorange;
+  font-weight: bold;
+}
+
+.input-message{
+  width:90%;
+  color: orange;
+  font-weight: bold;
+}
+
+.add-btn {
+  width: 20%;
+  border: none;
+  background: #29F4E3;
+  padding: 0;
+  height: 40px;
+  h2 {
+    background: #29F4E3;
+    padding: 0;
+    font-size: 4em;
+    font-family: megrim, fantasy;
+    color: #333;
+  }
+}
+
+.clear-btn {
+  width: 100%;
+  border: none;
+  height: 100px;
+  background: #13756D;
+  font-size: 2em;
+  font-family: megrim, fantasy;
+  color: #aaa;
+}
+
+.error
+{
+  color: red;
+  font-family: megrim;
+}
+
+.green{
+  color: darkgreen;
+}
