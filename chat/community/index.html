@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Sample Chat</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+<script>
+  var config = {
+    apiKey: "AIzaSyCTwFla3m_CIDFfdsaOEF4g5FVab0pjDMY",
+    authDomain: "chat2-volta.firebaseapp.com",
+    databaseURL: "https://chat2-volta.firebaseio.com",
+    storageBucket: "chat2-volta.appspot.com",
+    messagingSenderId: "581516950883"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<div class="topbar">
+<input id="name" placeholder="Name...">
+<input id="msg" placeholder="Message...">
+<button class="btn green" id="send">Send</button>
+<select id="chatList">
+  <optgroup label="Default 'Pippos' chatroom">
+  <option value="pippos">Default chatroom</option>
+  </optgroup>
+  <optgroup label="First 9 'Pippos' default chatrooms">
+  <option value="pippos0">0</option>
+  <option value="pippos1">1</option>
+  <option value="pippos2">2</option>
+  <option value="pippos3">3</option>
+  <option value="pippos4">4</option>
+  <option value="pippos5">5</option>
+  <option value="pippos6">6</option>
+  <option value="pippos7">7</option>
+  <option value="pippos8">8</option>
+  <option value="pippos9">9</option>
+    </optgroup>
+  <optgroup label="Deluxe 'Pippos' chatrooms">
+  <option value="pippos42">Miss Italia</option>
+  <option value="pippos69">Sixty-nine</option>
+  <option value="pippos100">Top</option>
+  <option value="pippos123">Un due tre</option>
+  <option value="pippos360">Three-sixty noscope</option>
+  <option value="pippos420">Noice</option>
+  <option value="pippos666">Il numero della bestia</option>
+  <option value="pippos777">La gang nun se infama</option>
+  <option value="pippos1000">4 cifre</option>
+    </optgroup>
+</select>
+<input id="room" placeholder="Custom chatroom...">
+</div>
+
+<div id="msgDisplay" class="display"></div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
