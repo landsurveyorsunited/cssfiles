@@ -4,7 +4,74 @@
   <meta charset="UTF-8">
   <title>Land Surveyors United Community Stats</title>
   <link rel="stylesheet" href="./style.css">
+  <style>select { display: block;color:orange;font-size:1.5em;background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(226,37,37,1) 0%, rgba(211,49,49,1) 82.8% );}  } /* unimportant */
+.iframe-container { overflow: hidden; position: relative; } .iframe-container iframe { top: 0; border:1px solid #ccc; width: 80%; height: 1100px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin-bottom:20px; margin-top:20px; }
+input[type='checkbox'] {
+  display: none;
+}
+.lbl-toggle {
+  display: block;
 
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-align: center;
+
+  padding: 1rem;
+
+  color: #A77B0E;
+  background: #FAE042;
+
+  cursor: pointer;
+
+  border-radius: 7px;
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle:hover {
+  color: #7C5A0B;
+}
+
+.lbl-toggle::before {
+  content: ' ';
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: translateY(-2px);
+
+  transition: transform .2s ease-out;
+}
+.collapsible-content .content-inner {
+  background: rgba(250, 224, 66, .2);
+  border-bottom: 1px solid rgba(250, 224, 66, .45);
+
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: .5rem 1rem;
+}
+.collapsible-content {
+  max-height: 0px;
+  overflow: hidden;
+
+  transition: max-height .25s ease-in-out;
+}
+.toggle:checked + .lbl-toggle + .collapsible-content {
+  max-height: 950px;
+}
+.toggle:checked + .lbl-toggle::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.toggle:checked + .lbl-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}</style>
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -12,11 +79,11 @@
    <div class="stat-wrap">
       <div>
          <a href="http://landsurveyorsunited.com/surveyors" target="_blank">Land Surveyors</a>
-         <span class="stat-number">20276</span>      
+         <span class="stat-number">20338</span>      
       </div>
       <div>
-        <a href="http://landsurveyorsunited.com/photo" target="_blank">Surveying Photos</a>
-         <span class="stat-number">8317</span>      
+        <a href="https://landsurveyorsunited.com/photo" target="_blank">Surveying Photos</a>
+         <span class="stat-number">84171</span>      
       </div>
          <div>
            <a href="http://landsurveyorsunited.com/video" target="_blank">Surveying Videos</a>
@@ -32,6 +99,38 @@
       </div>
    </div>
 </div>
+  <div class="wrap-collabsible">
+  <input id="collapsible" class="toggle" type="checkbox">
+  <label for="collapsible" class="lbl-toggle">Open Smarketplace</label>
+  <div class="collapsible-content">
+    <div class="content-inner">
+      <center><h4>Smarketplace - Shop for Equipment & Supplies</h4></center>
+<center><p><a href="javascript:void( window.open( 'http://go.srvyr.com/agsgps', 'blank', 'scrollbars=yes, toolbar=no, width=700, height=500' ) ) "><img class="align-left" src="https://storage.ning.com/topology/rest/1.0/file/get/7996652284?profile=RESIZE_180x180" alt="Visit AGSGPS Store in Smarketplace"width="100" /></a><a href="javascript:void( window.open( 'http://go.srvyr.com/junipersystems', 'blank', 'scrollbars=yes, toolbar=no, width=700, height=500' ) ) "><img class="align-left" src="https://storage.ning.com/topology/rest/1.0/file/get/7996653298?profile=RESIZE_180x180" alt="Visit Juniper Systems Store in Smarketplace"width="100" /></a><a href="javascript:void( window.open( 'http://go.srvyr.com/schonstedt', 'blank', 'scrollbars=yes, toolbar=no, width=700, height=500' ) ) "><img class="align-left" src="https://storage.ning.com/topology/rest/1.0/file/get/7996655665?profile=RESIZE_180x180" alt="Visit Schonstedt in Smarketplace" width="100" /></a><a href="javascript:void( window.open( 'http://go.srvyr.com/surveysupply', 'blank', 'scrollbars=yes, toolbar=no, width=700, height=500' ) ) "><img class="align-left" src="https://storage.ning.com/topology/rest/1.0/file/get/7996659264?profile=RESIZE_180x180" alt="Visit Survey Supply Store in Smarketplace" width="100" /></a><a href="javascript:void( window.open( 'http://go.srvyr.com/chrisnik', 'blank', 'scrollbars=yes, toolbar=no, width=700, height=500' ) ) "><img class="align-left" src="https://storage.ning.com/topology/rest/1.0/file/get/7996650884?profile=RESIZE_180x180" alt="Visit Chrisnik Inc.Store in Smarketplace" width="100" /></a><a href="javascript:void( window.open( 'http://go.srvyr.com/safetyapparel', 'blank', 'scrollbars=yes, toolbar=no, width=700, height=500' ) ) "><img class="align-left" src="https://storage.ning.com/topology/rest/1.0/file/get/7996651894?profile=RESIZE_180x180" alt="Visit Safety Apparel Store in Smarketplace" width="100" /></a><a href="javascript:void( window.open( 'https://go.srvyr.com/tigersupplies', 'blank', 'scrollbars=yes, toolbar=no, width=700, height=500' ) ) "><img class="align-left" src="https://storage.ning.com/topology/rest/1.0/file/get/7996647477?profile=RESIZE_180x180" alt="Visit Tiger Supplies Store in Smarketplace" width="100" /></a><a href="javascript:void( window.open( 'http://go.srvyr.com/survipodsmarket', 'blank', 'scrollbars=yes, toolbar=no, width=700, height=500' ) ) "><img class="align-left" src="https://storage.ning.com/topology/rest/1.0/file/get/7996647695?profile=RESIZE_180x180" alt="Visit Survipod Store in Smarketplace" width="100" /></a><a href="javascript:void( window.open( 'http://go.srvyr.com/survipodsmarket', 'blank', 'scrollbars=yes, toolbar=no, width=700, height=500' ) ) "><img class="align-left" src="https://storage.ning.com/topology/rest/1.0/file/get/8227323485?profile=RESIZE_180x180" alt="Visit Accurate Inverts Store in Smarketplace" width="100" /></a></p></center>
+      <details><summary>SHOW ALL OF THE LATEST DEALS</summary>
+        <div>
+ <select class="switcher">
+  <option value="https://rss.smarketplace.org/ZmM4rtgJE8/6522/all/latest/0">Total Stations</option>
+  <option value="https://go.srvyr.com/safetyapparelproducts">Safety Apparel</option>
+  <option value="https://go.srvyr.com/survipodproducts">Survipod</option>
+  <option value="https://view-awesome-table.com/-MR6wHr2JcORIKvVi2yi/view">Tiger Supplies</option>
+  <option value="https://rss.smarketplace.org/ZmM4rtgJE8/6519/all/latest/0">Land Mentor Software</option>
+  <option value="https://rss.smarketplace.org/ZmM4rtgJE8/6514/all/latest/0">AGS GPS</option>
+  <option value="https://rss.smarketplace.org/ZmM4rtgJE8/6521/all/latest/0">Polosoft Technologies</option>
+  <option value="https://rss.smarketplace.org/ZmM4rtgJE8/6525/all/latest/0">3D Scanners</option>
+  <option value="https://rss.smarketplace.org/ZmM4rtgJE8/6523/all/latest/0">Survey Grade GPS</option>
+  <option value="https://rss.smarketplace.org/ZmM4rtgJE8/6524/all/latest/0">Surveying Books</option>
+  <option value="https://www.rssground.com/services/rss-converter/5f57db3ca6a10/Data%20Collectors%20QGCTA0">Data Collectors</option>
+  <option value="https://www.rssground.com/services/rss-converter/5f594df01da88/UAV%20Drones%20QGEV8D">Drone Surveying</option>
+  <option value="https://www.rssground.com/services/rss-converter/5f57e1881e467/Antique%20Equipment%20QGCVA0">Antique Survey Equipment</option>
+</select>
+   
+
+<iframe loading="lazy" class="switch-target" width="100%" height="1100" src=""></iframe>
+          </div>
+  </div>
+</div>
+         </div>
+      </details>
 <!-- partial -->
   <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
 
