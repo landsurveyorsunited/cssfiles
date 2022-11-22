@@ -89,6 +89,14 @@ Images block
   background: #338899 url(../img/img-4.jpg) no-repeat center center;
   background-size: cover;
 }
+.cd-images-list > li:nth-of-type(5) {
+  background: #338899 url(../img/img-5.jpg) no-repeat center center;
+  background-size: cover;
+}
+.cd-images-list > li:nth-of-type(6) {
+  background: #338899 url(../img/img-6.jpg) no-repeat center center;
+  background-size: cover;
+}
 .cd-images-list > li > a {
   /* used to vertically align the h2 child -  mobile version only */
   display: table;
