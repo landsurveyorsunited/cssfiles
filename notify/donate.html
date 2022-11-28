@@ -1,0 +1,169 @@
+
+<html class="no-js" lang="en">
+	<head>
+		<link rel="stylesheet" href="css/style.css" />
+		<!--[if lt IE 9]>
+		  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	<style>
+    /**
+ * 	CSS3 Only Horizontal and Vertical Accordion
+ * 	Author: Paul Underwood for Hongkiat.com
+ *  Website: www.paulund.co.uk
+ *  Date: 27/11/11
+ *  Version: 1.0
+ */
+
+ 
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+body { margin: 0; font-size: 13px; line-height: 1.231; }
+body, button, input, select, textarea { font-family: sans-serif; color: #222; }
+
+/*Define Accordion box*/
+.accordion { width:830px; overflow:hidden; margin:10px auto; color:#474747; background:#414141; padding:10px; }
+
+/*General Accordion****************************************************************************/
+/*Set style of open slide*/
+.accordion section:target { background:#FFF; padding:10px;}
+.accordion section:target:hover { background:#FFF; }
+.accordion section:target h2 {width:100%;}
+.accordion section:target h2 a{ color:#333; padding:0;}
+.accordion section:target p {display:block;}
+.accordion section h2 a{padding:8px 10px;display:block; font-size:16px; font-weight:normal;color:#eee; text-decoration:none; }
+
+/*set style of closed slide*/
+.accordion section{ float:left;	overflow:hidden; color:#333; cursor:pointer; background: #333; margin:3px; }
+.accordion section:hover {background:#444;}
+.accordion section p { display:none; }
+.accordion section:after{position:relative;font-size:24px;color:#000;font-weight:bold;}
+.accordion section:nth-child(1):after{content:'1';}
+.accordion section:nth-child(2):after{content:'2';}
+.accordion section:nth-child(3):after{content:'3';}
+.accordion section:nth-child(4):after{content:'4';}
+.accordion section:nth-child(5):after{content:'5';}
+/*End General Accordion****************************************************************************/
+
+/*Horizontal Accordion *********************************************************************/
+.horizontal section{ width:5%; height:270px; 
+	-moz-transition:width 0.2s ease-out; 
+	-webkit-transition:width 0.2s ease-out;
+  	-o-transition:width 0.2s ease-out;
+	-ms-transition:width 0.2s ease-out;
+  	transition:width 0.2s ease-out;
+}
+
+/*Position the number of the slide*/
+.horizontal section:after{top:140px;left:15px;}
+
+/*Header of closed slide*/
+.horizontal section h2 { 
+	-webkit-transform:rotate(90deg);
+	-moz-transform:rotate(90deg);
+	-o-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+	width:240px; position:relative; left:-100px; top:85px;
+  background:#a12712;
+  color:#fff;
+} 
+h2 a {color:#fff;}
+/*On mouse over open slide*/
+.horizontal :target{ width:73%;height:230px; }
+.horizontal :target h2{ top:0px;left:0;
+	-webkit-transform:rotate(0deg);
+	-moz-transform:rotate(0deg);
+	-o-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	transform: rotate(0deg); 
+}
+/*End Horizontal Accordion *********************************************************************/
+
+/*Vertical Accordion *************************************************************************/
+.vertical section{ width:100%; height:40px;
+	-webkit-transition:height 0.2s ease-out;
+	-moz-transition:height 0.2s ease-out;
+  	-o-transition:height 0.2s ease-out;
+	-ms-transition:height 0.2s ease-out;
+  	transition:height 0.2s ease-out;
+}
+/*Set height of the slide*/
+.vertical :target{ height:250px; width:97%; }
+
+.vertical section h2 { position:relative; left:0; top:-15px; }
+
+/*Set position of the number on the slide*/
+.vertical section:after{ top:-60px;left:810px;}
+.vertical section:target:after{ left:-9999px;}
+
+    </style>
+  </head>
+  
+  
+	<body>
+    <center><h1>Donate to the Community</h1><p>If everyone donates what they can we can remove this before the weekend.</p></center>
+		<div class="accordion horizontal">
+		  <section id="about">
+		      <h2><a style="color:white" href="#about">Help Us Stay Alive</a></h2>
+		      <p>Dear LSU Community Supporter, Please donate what you can to help the Land Surveyors United Community stay alive. You may not know it, but we’re an independent website that the entire world of surveyors depend on. We are dedicated to staying free for all land surveyors but we still have bills to pay. Most users can’t afford to donate, but we hope you can. If everyone chips in $5, we can keep this going for free. For the price of a meal, we can preserve a website forever. We built the Land Surveyors United because open access to knowledge is fragile. If you find our site useful, chip in what you can today. Thank you. ~Justin Farrow</p>
+		  </section>
+		  <section id="services">
+		      <h2><a style="color:white" href="#services">Monthly Community Costs</a></h2>
+		      <p>It costs roughly $500 per month to host and maintain this community. For over 12 years, Justin has paid for this out of pocket while surviving as graduate student. We do sell your data or crowd your learning with distractions on the site. Your donation will go towards keeping LSU alive and free for the entire Surveying Industry. If we are not able to raise the funds needs for operation, we will have to search for alternative means to meet financial requirements.</p>
+		  </section>
+		  <section id="blog">
+		      <h2><a href="#blog">How Your Donation Helps</a></h2>
+		      <p>Monthly costs with maintaining Hosting, Network Maintenance, Live Support, Fees associated with monthly billing related all of the moving parts of LSU, Development of Real-Time support tools, Web Development, Mobile Version and Application Development, Out Reach, Development of Continuing Education Program for Surveyors and Online Training in Foreign Countries and more.</p>
+		  </section>
+		  <section id="portfolio">
+		      <h2><a href="#portfolio">Our Global Mission</a></h2>
+		      <p>Our mission is to provide avenues of professional development for land surveyors worldwide.  Students leaving school are most times not properly equipped to work in the field.  They need the expertise and guidance from those who have been in the field in order to perform their jobs.  On Land Surveyors United, we all learn from one another and support each other across borders.</p>
+		  </section>
+		  <section id="contact">
+		      <h2><a href="#contact">Donate Today</a></h2>
+		      <p><table style="width: 90%;" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td colspan="5"><strong><a id="monthly" name="monthly"></a>Make a contribution to Land Surveyors United:</strong></td>
+</tr>
+<tr>
+<td align="center">
+<p><strong>Micro-Supporter<br />
+ </strong></p>
+<p><strong>$5 Pledge</strong></p>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post"><input name="cmd" value="_s-xclick" type="hidden" /><input name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----" type="hidden" /> <input alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif" type="image" /><img src="https://www.paypal.com/en_US/i/scr/pixel.gif" border="0" height="1" width="1" /></form></td>
+<td align="center">
+<p><strong>Rod Man<br />
+ </strong></p>
+<p><strong>$10 Pledge</strong></p>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post"><input name="cmd" value="_s-xclick" type="hidden" /><input name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----" type="hidden" /> <input alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif" type="image" /><img src="https://www.paypal.com/en_US/i/scr/pixel.gif" border="0" height="1" width="1" /></form></td>
+<td align="center">
+<p><strong>Instrument Man<br />
+ </strong></p>
+<p><strong>$20</strong>Pledge</p>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post"><input name="cmd" value="_s-xclick" type="hidden" /><input name="encrypted" value="-----BEGIN PKCS7-----MIIHkAYJKoZIhvcNAQcEoIIHgTCCB30CAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYBwYN2OO8xYg3GOwCgE3ZzX02QKOGgIiQQP6IwBTkwmvx3elH73SDUDniPMdAJDEy1+dBWlBv8ZszUOb+bGhbj94qYTg/I8forH3bCyAYd3BRg5ZbwE9zAH2my/pikfO9XjUvGP4ZwZIXq2QYW72EDccLtzLF3MdXEABlh1/K+DVzELMAkGBSsOAwIaBQAwggEMBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECIE3VPc2DxgIgIHoMqZTaGmQlN7WUu1XVzSfwPIYk+t6frMUwOU0segH9BA7+XE/ad35QGu0lQJsyEKhEW+017aHbYQSjOjXeOxOmYCZepgw6uqpI5ceRrFAEeerrc3Xul40bRHdaSNz6pVTunbmjUW0VF5cFJUs6CvQtjffli0PCQV4lPio814xzGUY4bnuE530NflnUdkbOku2pmoX13E5zjL4XOn6+QDLkytOcMkUPMubvCHf2GY6gS6Gf9CPxTFf2VXvk6e4Amz4fJS1GKPY5KSaqURbh0Q5z8/LsVT7k8T3kZrYaAMO97KbdrRb7BCEbaCCA4cwggODMIIC7KADAgECAgEAMA0GCSqGSIb3DQEBBQUAMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbTAeFw0wNDAyMTMxMDEzMTVaFw0zNTAyMTMxMDEzMTVaMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAwUdO3fxEzEtcnI7ZKZL412XvZPugoni7i7D7prCe0AtaHTc97CYgm7NsAtJyxNLixmhLV8pyIEaiHXWAh8fPKW+R017+EmXrr9EaquPmsVvTywAAE1PMNOKqo2kl4Gxiz9zZqIajOm1fZGWcGS0f5JQ2kBqNbvbg2/Za+GJ/qwUCAwEAAaOB7jCB6zAdBgNVHQ4EFgQUlp98u8ZvF71ZP1LXChvsENZklGswgbsGA1UdIwSBszCBsIAUlp98u8ZvF71ZP1LXChvsENZklGuhgZSkgZEwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tggEAMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADgYEAgV86VpqAWuXvX6Oro4qJ1tYVIT5DgWpE692Ag422H7yRIr/9j/iKG4Thia/Oflx4TdL+IFJBAyPK9v6zZNZtBgPBynXb048hsP16l2vi0k5Q2JKiPDsEfBhGI+HnxLXEaUWAcVfCsQFvd2A1sxRr67ip5y2wwBelUecP3AjJ+YcxggGaMIIBlgIBATCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwCQYFKw4DAhoFAKBdMBgGCSqGSIb3DQEJAzELBgkqhkiG9w0BBwEwHAYJKoZIhvcNAQkFMQ8XDTEwMTIwNDIyMDYzNFowIwYJKoZIhvcNAQkEMRYEFK6zIw1NANErdSrgELSrDwD8/wl7MA0GCSqGSIb3DQEBAQUABIGAwSFkPgu79T8Bp06UwgQ/TTdfUzqBObAHSuWOidV06x4YMAldUKigSlBQrXScBnDMKVcbB0bK9GIL3SrUwMXeq6u37DaQtL4CjmiUJpxsOtek3d6awSqa6qsvOC3INBOGnmWohk+LdE/9Rz38+V28mciIlbm8XF+kbCkmTm0GbLA=-----END PKCS7-----" type="hidden" /> <input alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif" type="image" /><img src="https://www.paypal.com/en_US/i/scr/pixel.gif" border="0" height="1" width="1" /></form></td>
+<td align="center">
+<p><strong>Crew Chief<br />
+ </strong></p>
+<p><strong>$50 Pledge</strong></p>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post"><input name="cmd" value="_s-xclick" type="hidden" /><input name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----" type="hidden" /> <input alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif" type="image" /><img src="https://www.paypal.com/en_US/i/scr/pixel.gif" border="0" height="1" width="1" /></form></td>
+<td align="center">
+<p><strong>Party Chief<br />
+ </strong></p>
+<p><strong>$100</strong>Pledge</p>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post"><input name="cmd" value="_s-xclick" type="hidden" /><input name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----" type="hidden" /> <input alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif" type="image" /><img src="https://www.paypal.com/en_US/i/scr/pixel.gif" border="0" height="1" width="1" /></form></td>
+</tr>
+</tbody>
+</table>
+<p style="font-weight: bold;">Make a One Time Donation to Land Surveyors United in the Amount of Your Choosing:</p>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post"><input name="cmd" value="_s-xclick" type="hidden" /> <input name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7----- " type="hidden" /> <input alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" type="image" /> <img src="https://www.paypal.com/en_US/i/scr/pixel.gif" border="0" height="1" width="1" /></form>
+</p>
+		  </section>
+		</div>
+		
+		
+	</body>
+</html>
