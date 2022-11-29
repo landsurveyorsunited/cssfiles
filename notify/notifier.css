@@ -92,8 +92,8 @@ cursor: pointer;
 
 .toggle{ /* CSS for arbitrary toggle button */
 border-radius: 4px;
-background: blue;
-color: white;
+background: white;
+color: red;
 text-decoration: none;
 padding: 4px;
 font-size: 110%;
