@@ -73,7 +73,6 @@ transition: all .5s ease-in;
 
 .notify .content img.float{
 margin: auto 10px auto auto;
-border: 10px solid darkred;
 }
 
 .notify .close{ /* CSS for close button inside container */
