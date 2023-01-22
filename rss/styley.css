@@ -1,0 +1,242 @@
+
+
+:root {
+  
+  --light-bg:       #f5f5f5;
+  --light:          #fff;
+  --light-color:    #7f8596;
+  
+  --dark-bg:        #292b33;
+  --dark:           #3b414e;
+  --dark-color:     #a2a8b9;
+   
+  --bg:             var(--light-bg);
+  --lum:            var(--light);
+  --color:          var(--light-color);
+}
+
+
+
+
+* {  
+   box-sizing: border-box;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+   font-size: 18px;
+}
+
+body { 
+  margin: 0; 
+  font-family: Arial;
+  line-height: 1.5rem;
+  transition:0.5s;
+  background: #f5f5f5;
+  background: var(--bg);
+  .dark {
+    --bg:      var(--dark-bg);
+    --lum:     var(--dark);
+    --color:   var(--dark-colo);
+  }
+}
+
+
+hr {
+  border: none;
+  border-bottom: 1px solid #eee;
+  margin: 1.5rem 0;
+}
+p {
+  font-size: 1rem;
+}
+
+
+.preview {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 5rem;
+  .half{
+    width: 50%;
+  }
+  .bigger{
+    display: flex;
+    flex-wrap: wrap;
+    .post {
+      width: 100%;
+      .post-title {
+        opacity: 1;
+        bottom: 0;
+        width: auto;
+        height: auto;
+        background: transparent;
+        padding: 1.5rem 1.875rem;
+        font-size: 1rem;
+        z-index:12;
+      }
+      a:before {
+        content:'';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: #000b;
+        background: linear-gradient(0deg, black -40%, transparent 40%);
+        z-index: 3;
+      }
+     
+    }
+  }
+  .fourth{
+    display: flex;
+    flex-wrap: wrap;
+    .post {
+      width: 50%;
+    }
+  }
+  .post {
+    width: 33.33%;
+    padding: 0.5px;
+    a {
+      display: block;
+      position: relative;
+      &:hover {
+        .post-title {
+          opacity: 1;
+        }
+      }
+      &:after {
+        content:'';
+        padding-top: calc(100% * (5/7));
+        display: block;
+        background: #000;
+      }
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit:cover;
+      }
+      .post-title {
+        position: absolute;
+        color: #fff;
+        height: 100%;
+        width: 100%;
+        background: #000c;
+        transition:0.33s;
+        font-size: 0.875rem;
+        line-height: 1.33;
+        padding: 1.125rem 1.25rem;
+        opacity: 0;
+        p {
+          font-size: 0.75rem;
+          opacity: 0.66;
+          margin: 0.25rem 0;
+        }
+      }
+    }
+  }  
+}
+
+
+
+
+
+.wrapper{
+  max-width: 1450px;
+  display: block;
+  margin: auto;
+  margin: 3rem auto;
+  padding: 0 2.5rem;
+  .post-list{
+    max-width: 100%;
+    column-count: 5;
+    column-gap: 1.25rem;
+    margin: 0;
+    article {
+      display: inline;
+      a {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        margin-bottom: 0.875rem;
+        text-decoration: none;
+        overflow: hidden;
+        border-radius:8px;
+        background: var(--lum);
+        transition:0.5s;
+        &:hover {
+          //transform:translateY(-0.5rem);
+          .post-title{
+            opacity: 1;
+          }
+          img {
+            //transform: scale(1.1);
+          }
+        }
+      }
+      .post-title{
+
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+
+        margin: .75rem 0;
+
+        line-height: 1.25!important;
+        color: var(--color);
+        padding:0rem 0.875rem;
+        font-size: 0.8rem;
+        font-family: 'Arial';
+        font-weight: 400;
+        transition:0.25s;
+      }
+      img{
+        width: 100%;
+        height: auto;
+        display: block;
+        min-height: 6rem;
+        object-fit: cover;
+        transition:0.5s;
+        overflow: hidden;
+      }
+      &:hover{
+        a {
+          box-shadow:0 5px 30px -6px rgba(#222,0.33);
+        }
+      }
+    }
+  }
+}
+
+
+.wrapper #articles .post-list{
+    @media screen and  (max-width: 1150px){
+       column-count: 4;
+    }    
+    @media screen and  (max-width: 950px){
+       column-count: 3;
+      .preview {
+        .half{
+          height: 100%;
+        }
+      }
+    }
+    @media screen and  (max-width: 768px){
+       column-count: 2;
+    }
+    @media screen and  (max-width: 550px){
+       column-count: 1;
+    }
+}
+
+
+      .preview {
+        @media screen and  (max-width: 768px){
+        .half{
+          width: 100%;
+        }
+      }
+    }
