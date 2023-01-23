@@ -1,0 +1,106 @@
+{
+  "IcoMoonType": "selection",
+  "icons": [
+    {
+      "icon": {
+        "paths": [
+          "M992.262 871.396l-242.552-206.294c-25.074-22.566-51.89-32.926-73.552-31.926 57.256-67.068 91.842-154.078 91.842-249.176 0-212.078-171.922-384-384-384-212.076 0-384 171.922-384 384 0 212.078 171.922 384 384 384 95.098 0 182.108-34.586 249.176-91.844-1 21.662 9.36 48.478 31.926 73.552l206.294 242.552c35.322 39.246 93.022 42.554 128.22 7.356s31.892-92.898-7.354-128.22zM384 640c-141.384 0-256-114.616-256-256s114.616-256 256-256 256 114.616 256 256-114.614 256-256 256z"
+        ],
+        "tags": [
+          "search",
+          "magnifier",
+          "lookup",
+          "find"
+        ],
+        "grid": 16,
+        "attrs": []
+      },
+      "attrs": [],
+      "properties": {
+        "id": 127,
+        "order": 5,
+        "prevSize": 16,
+        "code": 59648,
+        "name": "search"
+      },
+      "setIdx": 0,
+      "setId": 3,
+      "iconIdx": 127
+    },
+    {
+      "icon": {
+        "paths": [
+          "M0 0h256v256h-256zM384 64h640v128h-640zM0 384h256v256h-256zM384 448h640v128h-640zM0 768h256v256h-256zM384 832h640v128h-640z"
+        ],
+        "tags": [
+          "list",
+          "bullet",
+          "ul",
+          "todo",
+          "menu"
+        ],
+        "grid": 16,
+        "attrs": []
+      },
+      "attrs": [],
+      "properties": {
+        "id": 180,
+        "order": 4,
+        "prevSize": 16,
+        "code": 59649,
+        "name": "list"
+      },
+      "setIdx": 0,
+      "setId": 3,
+      "iconIdx": 180
+    }
+  ],
+  "height": 1024,
+  "metadata": {
+    "name": "icomoon"
+  },
+  "preferences": {
+    "fontPref": {
+      "prefix": "icon-",
+      "metadata": {
+        "fontFamily": "icomoon"
+      },
+      "showGlyphs": true,
+      "metrics": {
+        "emSize": 512,
+        "baseline": 6.25,
+        "whitespace": 50
+      },
+      "resetPoint": 58880,
+      "showQuickUse": true,
+      "quickUsageToken": false,
+      "showMetrics": true,
+      "showMetadata": false,
+      "autoHost": true,
+      "embed": false
+    },
+    "imagePref": {
+      "color": 0,
+      "height": 32,
+      "columns": 16,
+      "margin": 16,
+      "png": false,
+      "sprites": true,
+      "prefix": "icon-",
+      "autoHost": true
+    },
+    "historySize": 100,
+    "showCodes": true,
+    "gridSize": 16,
+    "showLiga": false,
+    "showGrid": true,
+    "showGlyphs": true,
+    "showQuickUse": true,
+    "search": "",
+    "quickUsageToken": {
+      "UntitledProject1": "MzM2Yzg3M2U2ZjQyNTJlZmQxNWZjZTBmOGI1NjIyMzAjMSMxNDExODQxNDQ5IyMj"
+    },
+    "showQuickUse2": true,
+    "showSVGs": true
+  }
+}
