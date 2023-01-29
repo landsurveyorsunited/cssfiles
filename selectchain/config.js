@@ -21,28 +21,34 @@ addList("Hubs", "Employment", "", "Employment");
 addOption("Hubs", "CodingForums.com", "http://www.codingforums.com"); //END OF THIS NODE
 
 addOption("Locations", "Select an item", "", 1); //HEADER OPTION
-addOption("Locations", "JavaScript Kit", "http://www.javascriptkit.com");
-addOption("Locations", "Dynamic Drive", "http://www.dynamicdrive.com");
-addOption("Locations", "JavaScript Reference", "http://www.javascriptkit.com/jsref/");
+addOption("Locations", "USA", "/hubs/USA");
+addOption("Locations", "Asia", "/hubs/Asia");
+addOption("Locations", "Africa", "/hubs/Africa");
+addOption("Locations", "Europe", "/hubs/USA");
+addOption("Locations", "Oceania", "/hubs/Oceania");
+addOption("Locations", "North America", "/hubs/N+America");
+addOption("Locations", "South America", "/hubs/S+America");
+addOption("Locations", "Middle East", "/hubs/Middle+East");
+addOption("Locations", "Caribbean", "/hubs/Caribbean");
 
 addOption("Equipment", "Select an item", "", 1); //HEADER OPTION
 addOption("Equipment", "PHP.net", "http://www.php.net");
 addOption("Equipment", "mySQL", "http://www.mysql.com");
 
 addOption("Employment", "Select an item", "", 1); //HEADER OPTION
-addList("Employment", "General News", "", "News-General");
-addList("Employment", "Tech News", "", "News-Tech");
+addList("Employment", "Surveying Jobs", "", "Jobs-General");
+addList("Employment", "Employment Tools", "", "Jobs-Tech");
 
-addOption("News-General", "Select an item", "", 1); //HEADER OPTION
-addOption("News-General", "CNN", "http://www.cnn.com");
-addOption("News-General", "MSNBC", "http://www.msnbc.com");
-addOption("News-General", "BBC News", "http://news.bbc.co.uk");
-addOption("News-General", "Fox News", "http://www.foxnews.com");
+addOption("Jobs-General", "Select an item", "", 1); //HEADER OPTION
+addOption("Jobs-General", "CNN", "http://www.cnn.com");
+addOption("Jobs-General", "MSNBC", "http://www.msnbc.com");
+addOption("Jobs-General", "BBC News", "http://news.bbc.co.uk");
+addOption("Jobs-General", "Fox News", "http://www.foxnews.com");
 
-addOption("News-Tech", "Select an item", "", 1); //HEADER OPTION
-addOption("News-Tech", "News.com", "http://www.news.com");
-addOption("News-Tech", "Wired News", "http://www.wired.com");
-addOption("News-Tech", "TheRegister", "http://www.theregister.com");
+addOption("Jobs-Tech", "Select an item", "", 1); //HEADER OPTION
+addOption("Jobs-Tech", "News.com", "http://www.news.com");
+addOption("Jobs-Tech", "Wired News", "http://www.wired.com");
+addOption("Jobs-Tech", "TheRegister", "http://www.theregister.com");
 
 addOption("Market", "Select an item", "", 1); //HEADER OPTION
 addList("Market", "Regular Cars", "", "Market-Regular");
