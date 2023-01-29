@@ -1,0 +1,102 @@
+h1,
+h2 {
+  width: 100%;
+  text-align: center;
+}
+h1 {
+  padding-top: 0.5em;
+  color: #1e1e1e;
+}
+h2 {
+  color: #323232;
+  padding-bottom: 2em;
+}
+.wf-loading h1 {
+  font-family: sans-serif;
+}
+.wf-inactive h1 {
+  font-family: sans-serif;
+}
+.wf-active h1 {
+  font-family: 'Satisfy', sans-serif;
+  font-size: 8em;
+  line-height: 0em;
+  font-weight: 900;
+  text-shadow: 0 1px #fff;
+}
+.wf-loading h2 {
+  font-family: serif;
+}
+.wf-inactive h2 {
+  font-family: serif;
+}
+.wf-active h2 {
+  font-family: 'Exo', serif;
+  font-size: 1.75em;
+  line-height: 0em;
+}
+body {
+  background: url('http://www.erickiddesign.com/playtime/fauxtobooth/grey.png');
+}
+div.video {
+  border-radius: 20px;
+  width: 640px;
+  overflow: hidden;
+  margin: 0 auto;
+  background: #fff;
+}
+a.button {
+  display: block;
+  height: 3em;
+  width: 9em;
+  color: #fff;
+  text-align: center;
+  line-height: 3.2em;
+  text-decoration: none;
+  font-size: 2em;
+  margin: 2em auto;
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+.wf-active a.button {
+  font-family: 'Satisfy', serif;
+  text-shadow: 1px 0 #500000;
+}
+a#activate {
+  background: #dc0000;
+  box-shadow: 0px 1px 1px #500000, inset 0px 1px 1px #ffc8c8;
+}
+a#activate:hover {
+  background: #dc3232;
+}
+a#activate:active {
+  box-shadow: inset 0px 1px 1px #500000, 0px 1px 1px #ffc8c8;
+  line-height: 3.3em;
+}
+a#download {
+  background: #006400;
+  box-shadow: 0px 1px 1px #002800, inset 0px 1px 1px #c8ffc8;
+  height: 0;
+  width: 11em;
+}
+a#download:hover {
+  background: #00c800;
+}
+a#download:active {
+  box-shadow: inset 0px 1px 1px #002800, 0px 1px 1px #c8ffc8;
+  line-height: 3.3em;
+}
+h1#countdown {
+  color: #0000c8;
+  line-height: 0;
+}
+h1.countdown {
+  font-size: 4em;
+}
+canvas {
+  display: none;
+}
+img {
+  width: 50%;
+  margin: 0 25%;
+}
