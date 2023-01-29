@@ -10,27 +10,28 @@ var newwindow=0 //Open links in new window or not? 1=yes, 0=no.
 addListGroup("chainedmenu", "First-Select");
 
 addOption("First-Select", "Select an item", "", 1); //HEADER OPTION
-addList("First-Select", "Webmaster Resources", "", "Webmaster");
-addList("First-Select", "News Sites", "", "News");
-addList("First-Select", "Car Sites", "", "Cars");
+addList("First-Select", "Hubs", "", "Hubs");
+addList("First-Select", "Employment", "", "Employment");
+addList("First-Select", "Marketplace", "", "Market");
 
-addOption("Webmaster", "Select an item", "", 1); //HEADER OPTION
-addList("Webmaster", "JavaScript Links", "", "Webmaster-JavaScript");
-addList("Webmaster", "PHP Links", "", "Webmaster-PHP");
-addOption("Webmaster", "CodingForums.com", "http://www.codingforums.com"); //END OF THIS NODE
+addOption("Hubs", "Select an item", "", 1); //HEADER OPTION
+addList("Hubs", "Locations", "", "Locations");
+addList("Hubs", "Equipment", "", "Equipment");
+addList("Hubs", "Employment", "", "Employment");
+addOption("Hubs", "CodingForums.com", "http://www.codingforums.com"); //END OF THIS NODE
 
-addOption("Webmaster-JavaScript", "Select an item", "", 1); //HEADER OPTION
-addOption("Webmaster-JavaScript", "JavaScript Kit", "http://www.javascriptkit.com");
-addOption("Webmaster-JavaScript", "Dynamic Drive", "http://www.dynamicdrive.com");
-addOption("Webmaster-JavaScript", "JavaScript Reference", "http://www.javascriptkit.com/jsref/");
+addOption("Locations", "Select an item", "", 1); //HEADER OPTION
+addOption("Locations", "JavaScript Kit", "http://www.javascriptkit.com");
+addOption("Locations", "Dynamic Drive", "http://www.dynamicdrive.com");
+addOption("Locations", "JavaScript Reference", "http://www.javascriptkit.com/jsref/");
 
-addOption("Webmaster-PHP", "Select an item", "", 1); //HEADER OPTION
-addOption("Webmaster-PHP", "PHP.net", "http://www.php.net");
-addOption("Webmaster-PHP", "mySQL", "http://www.mysql.com");
+addOption("Equipment", "Select an item", "", 1); //HEADER OPTION
+addOption("Equipment", "PHP.net", "http://www.php.net");
+addOption("Equipment", "mySQL", "http://www.mysql.com");
 
-addOption("News", "Select an item", "", 1); //HEADER OPTION
-addList("News", "General News", "", "News-General");
-addList("News", "Tech News", "", "News-Tech");
+addOption("Employment", "Select an item", "", 1); //HEADER OPTION
+addList("Employment", "General News", "", "News-General");
+addList("Employment", "Tech News", "", "News-Tech");
 
 addOption("News-General", "Select an item", "", 1); //HEADER OPTION
 addOption("News-General", "CNN", "http://www.cnn.com");
@@ -43,16 +44,16 @@ addOption("News-Tech", "News.com", "http://www.news.com");
 addOption("News-Tech", "Wired News", "http://www.wired.com");
 addOption("News-Tech", "TheRegister", "http://www.theregister.com");
 
-addOption("Cars", "Select an item", "", 1); //HEADER OPTION
-addList("Cars", "Regular Cars", "", "Cars-Regular");
-addList("Cars", "Sports Cars", "", "Cars-Sports");
+addOption("Market", "Select an item", "", 1); //HEADER OPTION
+addList("Market", "Regular Cars", "", "Market-Regular");
+addList("Market", "Sports Cars", "", "Market-Vendors");
 
-addOption("Cars-Regular", "Select an item", "", 1); //HEADER OPTION
-addOption("Cars-Regular", "Toyota", "http://www.toyota.com");
-addOption("Cars-Regular", "Ford", "http://www.ford.com");
-addOption("Cars-Regular", "Nissan", "http://www.nissanusa.com");
-addOption("Cars-Regular", "BMW", "http://www.bmw.com");
+addOption("Market-Regular", "Select an item", "", 1); //HEADER OPTION
+addOption("Market-Regular", "Toyota", "http://www.toyota.com");
+addOption("Market-Regular", "Ford", "http://www.ford.com");
+addOption("Market-Regular", "Nissan", "http://www.nissanusa.com");
+addOption("Market-Regular", "BMW", "http://www.bmw.com");
 
-addOption("Cars-Sports", "Select an item", "", 1); //HEADER OPTION
-addOption("Cars-Sports", "Porsche", "http://www.www.porsche.com");
-addOption("Cars-Sports", "Aston Martin", "http://www.astonmartin.com");
+addOption("Market-Vendors", "Select an item", "", 1); //HEADER OPTION
+addOption("Market-Vendors", "Porsche", "http://www.www.porsche.com");
+addOption("Market-Vendors", "Aston Martin", "http://www.astonmartin.com");
