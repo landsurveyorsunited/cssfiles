@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Responsive Test</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!doctype html>
+<!--[if lt IE 8 ]> <html lang="en" class="old"> <![endif]-->
+<!--[if IE 8 ]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+	</head>
+
+	<body>
+    <header>
+      <h1>"Responsiveness" Tester</h1>
+    <form>
+      <fieldset>
+        <div>
+          <a href="#" class="refresh">Refresh</a>&nbsp;|&nbsp;<a href="#" class="rotate">Rotate</a>&nbsp;
+        </div>
+        <div>
+          <label>Width:</label>
+          <select name="width">
+            <option value="240">240</option>
+            <option value="320" selected="selected">320</option>
+            <option value="480">480</option>
+            <option value="564">564</option>
+            <option value="600">600</option>
+            <option value="640">640</option>
+            <option value="768">768</option>
+            <option value="800">800</option>
+            <option value="960">960</option>
+            <option value="1024">1024</option>
+            <option value="1140">1140</option>
+            <option value="1280">1280</option>
+          </select>
+        </div>
+        <div>
+          <label>Height:</label>
+          <select name="height">
+            <option value="240">240</option>
+            <option value="320">320</option>
+            <option value="480" selected="selected">480</option>
+            <option value="564">564</option>
+            <option value="600">600</option>
+            <option value="640">640</option>
+            <option value="768">768</option>
+            <option value="800">800</option>
+            <option value="960">960</option>
+            <option value="1024">1024</option>
+            <option value="1140">1140</option>
+            <option value="1280">1280</option>
+          </select>
+        </div>
+        <div>
+          <label>URL:</label>
+          <input type="text" name="url" value="" placeholder="Enter URL" size="30">
+        </div>
+      </fieldset>
+    </form>
+    </header>
+    <article>
+    <iframe src="http://app.landsurveyorsunited.com" width="320" height="480" border="0" id="iframe"></iframe>
+    <p>Pretending you have a bunch of devices.</p>
+    </article>
+  </body>
+</html>
+<!-- partial -->
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

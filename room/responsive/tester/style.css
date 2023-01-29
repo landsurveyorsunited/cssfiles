@@ -1,0 +1,64 @@
+* {
+  -webkit-transition: all 1.5s ease;
+  -moz-transition: all 1.5s ease;
+  -ms-transition: all 1.5s ease;
+  -o-transition: all 1.5s ease;
+  transition: all 1.5s ease;
+}
+body {
+  font-family: sans-serif;
+  color: #333;
+  background-color: #eee;
+  text-align: center;
+  padding-top: 68px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  padding: 6px 20px;
+  color: #fff;
+}
+
+header h1 {
+  color: #fff;
+  font-size: 18px;
+  float: left;
+}
+
+header form {
+  float: right;
+  margin-right: 20px;
+}
+
+header form fieldset div {
+  display: inline-block;
+}
+
+header form select {
+  font-size: 16px;
+}
+
+#iframe {
+  border: 0;
+  overflow: auto;
+  border-radius: 2em;
+  border: 3em solid #222;
+  margin-bottom: 2em;
+}
+
+fieldset {
+  border: 0;
+}
+
+legend {
+  font-weight: bold;
+  color: #555;
+}
+
+fieldset div {
+  display: inline-block;
+}
