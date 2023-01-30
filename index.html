@@ -1,1 +1,293 @@
-Land Surveyors United
+<head>
+  <base href="https://landsurveyorsunited.com">
+<style>:root, * {
+  var-animation1: colors 4s infinite;
+  var-bg-color: #33CCFF;
+  margin:0px;
+  padding:0px;
+}
+
+.btnfsc {
+  width:45px;
+  height:35px;
+  border:0px;
+  outline:none;
+  #background: var(bg-color);
+  background:url("https://storage.ning.com/topology/rest/1.0/file/get/9515246475?profile=original");
+  background-repeat:no-repeat;
+  background-position:5px 3px;
+  margin:4px;
+  cursor:pointer;
+  -webkit-transition: all 1s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+  -webkit-animation: btnfsc 20s ease-in infinite;
+  opacity:0.05;
+}
+
+.btnfsc:hover {
+  background-repeat:no-repeat;
+  background-position:-39px 3px;
+  transition: all 1s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+  opacity:0.6;
+}
+
+button.btnfsc:-webkit-full-screen {
+  opacity:0;
+}
+
+body {
+  width:100%;
+  height:100%;
+  #-webkit-animation: colors 2s linear infinite alternate;
+  #-webkit-animation-timing-function:linear;
+  #-webkit-animation-timing-function: step-start;
+  -webkit-animation: colors 16s infinite;
+  -moz-animation: colors 16s infinite;
+  -webkit-animation: colors 16s infinite;
+  #background: var(bg-color);
+}
+
+#full {
+  width:122px;
+  height:122px;
+  position:absolute;
+  left:50%;
+  top:50%;
+  margin-left:-61px;
+  margin-top:-61px;
+  
+}
+
+#full .img {
+  box-shadow: inset 0 0 20px -6px #000;
+}
+
+#full #apple {
+  #background: #FFF;
+  -webkit-animation: apple 22s ease-in-out infinite alternate both;
+}
+
+  @-webkit-keyframes apple {
+    0% {
+      -webkit-transform:scale(0.6);
+    }
+    50% {
+      -webkit-transform:scale(1.0);
+    }
+    100% {
+      -webkit-transform:scale(0.6);
+    }
+  }
+
+#full #apple:hover {
+  -webkit-animation: apple2 160ms ease-in-out infinite alternate both;
+  -webkit-transition: all 12s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+}
+
+  @-webkit-keyframes apple2 {
+    0% {
+      -webkit-transform:translateY(-3px);
+    }
+    50% {
+      -webkit-transform:translateY(3px);
+    }
+    100% {
+      -webkit-transform:translateY(-3px);
+    }
+  }
+
+  @-webkit-keyframes btnfsc {
+    0% {
+      -webkit-transform:scale(0.4);
+    }
+    50% {
+      -webkit-transform:scale(0.6);
+    }
+    100% {
+      -webkit-transform:scale(0.4);
+    }
+  }
+
+  /*@keyframes  colors {
+  }
+
+  @-moz-keyframes colors {
+  }*/
+
+  @-webkit-keyframes colors  {
+    0% {
+        background: #2AE380;
+    }
+    10% {
+        background: #D65035;
+    }
+    20% {
+        background: #ED174F;
+    }
+    30% {
+        background: #068894;
+    }
+    40% {
+        background: #47AA42;
+    }
+    50% {
+        background: #0079C2;
+    }
+    60% {
+        background: #64B314;
+    }
+    70% {
+        background: #F21D1D;
+    }
+    80% {
+        background: #F7B929;
+    }
+    90% {
+        background: #EA2E49;
+    }
+    100% {
+        background: #2AE380;
+    }
+}
+ @import "https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css";
+
+body {
+  background: #39D;
+}
+
+.circular-menu {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  position: relative;
+  z-index:2;
+}
+
+.circle {
+  width: 250px;
+  height: 250px;
+  opacity: 0;
+  
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  transform: scale(0);
+
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+.open.circle {
+  opacity: 1;
+
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  transform: scale(1);
+}
+
+.circle a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  margin-left: -20px;
+  margin-top: -20px;
+  position: absolute;
+  text-align: center;
+
+}
+
+.circle a:hover {
+  color: #eef;
+}
+
+.menu-button {
+  position: absolute;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  text-decoration: none;
+  text-align: center;
+  color: #444;
+  border-radius: 50%;
+  display: block;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  padding: 10px;
+  background: #dde;
+}
+
+.menu-button:hover {
+  background-color: #eef;
+}
+
+/* Author stuff */
+h1.author {
+  text-align:center;
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
+h1.author a {
+  color: #348;
+  text-decoration:none;
+}
+
+h1.author a:hover {
+  color: #ddd;
+} 
+.frameContainer{
+    position: fixed; 
+    height: 100%;
+    top:0px;
+    left: 0px;
+    right:0px;
+    bottom:0px;
+    z-index:1;
+}
+
+.main_iframe{
+    height: 100%;
+    width: 100%;
+    border:none;
+    background:transparent;
+} 
+  </style>
+  
+  <head>
+<nav class="circular-menu">
+
+  <div class="circle">
+    <a href="/jobs" target="load" class="fa fa-globe fa-2x"></a>
+    <a href="/events" target="load" class="fa fa-calendar fa-2x"></a>
+    <a href="/membership" target="load" class="fa fa-cog fa-2x"></a>
+    <a href="/photo" target="load" class="fa fa-eye fa-2x"></a>
+    <a href="/hubs" target="load" class="fa fa-group fa-2x"></a>
+    <a href="/megashop" target="load" class="fa fa-rss fa-2x"></a>
+    <a href="/surveyors" target="load" class="fa fa-user fa-2x"></a>
+    <a href="/hubs/mentorship" target="load" class="fa fa-book fa-2x"></a>
+  </div>
+  
+  <a href="" class="menu-button fa fa-bars fa-2x"></a>
+
+</nav>
+
+<div class="frameContainer">
+    <iframe class="main_iframe" name="load" scrolling="yes"></iframe>
+  
+  <script>
+    var items = document.querySelectorAll('.circle a');
+
+for(var i = 0, l = items.length; i < l; i++) {
+  items[i].style.left = (50 - 35*Math.cos(-0.5 * Math.PI - 2*(1/l)*i*Math.PI)).toFixed(4) + "%";
+  
+  items[i].style.top = (50 + 35*Math.sin(-0.5 * Math.PI - 2*(1/l)*i*Math.PI)).toFixed(4) + "%";
+}
+
+document.querySelector('.menu-button').onclick = function(e) {
+   e.preventDefault(); document.querySelector('.circle').classList.toggle('open');
+}
+    
+  </script>
