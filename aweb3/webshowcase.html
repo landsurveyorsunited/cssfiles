@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head><meta charset="utf-8"></head>
+  <body>
+    <script type="module">
+      import {load} from "https://croquet.io/webshowcase/v1.js";
+      load({
+        title: "My Web Showcase", 
+        showcase: "gallery", 
+        cards: [
+          // each item in cards array has a 'place' to specify the location in the art gallery
+          // 'type' is either "image", "pdf", or "video"
+          // 'path' specifies the location of the asset, either as full URL or as path relative to this html file
+          {place: 1, type: "image", path: "https://croquet.io/webshowcase/site/CompanyLogo.jpg"},
+          {place: 2, type: "pdf", path: "https://croquet.io/webshowcase/site/CompanyDeck.pdf"},
+          {place: 3, type: "video", path: "https://croquet.io/webshowcase/site/CustomerVideo.mp4", muted: false},
+          {place: 4, type: "image", path: "https://croquet.io/webshowcase/site/CustomerLogos.png"},
+          {place: 5, type: "image", path: "https://croquet.io/webshowcase/site/CallToAction.png", urlLink: "https://croquet.io/webshowcase"},
+          {place: 6, type: "image", path: "https://croquet.io/webshowcase/site/sunset-tree-on-hill-1.jpg"},
+          {place: 7, type: "image", path: "https://croquet.io/webshowcase/site/sunset-tree-on-hill-2.jpg"},
+          {place: 8, type: "image", path: "https://croquet.io/webshowcase/site/zen-garden-1.jpg"},
+          {place: 9, type: "image", path: "https://croquet.io/webshowcase/site/zen-garden-2.jpg"},
+        ],
+        voiceChat: true,
+        appId: "com.gmail.landsurveyorsunited.webshowcase",
+        apiKey: "1p2v2epLLF6uHdChBkmBnCoy75DyMEjcotAOAtvJl",
+      });
+    </script>
+  </body>
+</html>
