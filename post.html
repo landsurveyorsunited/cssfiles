@@ -1,0 +1,58 @@
+<html>
+   <head>
+<title>Land Surveyors United Community Resources Tool Switcher</title>
+
+<style>select,select.switcher option:hover { display: block;background-image: radial-gradient( circle 907px at 3.4% 19.8%,  rgba(255,243,122,1) 0%, rgba(255,102,145,1) 97.4% );color:black; } /* unimportant */</style>
+</head>
+<p>👀Use this switcher to quickly jump to useful land surveyor resources, tools and hubs</p>
+<select class="switcher">
+   <option value="/forum/topics/discussion/new">Post a New Topic</option>
+   <option value="/video/video/new">Share Video</option>
+   <option value="/forum/topics/discussion/new">Post a New Topic</option>
+   <option value="/forum/topics/discussion/new">Post a New Topic</option>
+   <option value="/forum/topics/discussion/new">Post a New Topic</option>
+  <option value="https://lsucommunity.vercel.app/equipmentfeeds.html">Equipment Deals Feed</option>
+  <option value="https://view-awesome-table.com/-LeiF4pPhCGAVM3dW_lT/view">Land Surveyor App Suite</option>
+  <option value="https://www.sheet2site.com/api/?key=1K8jRhtxCxJKNIByLIgCTmlp6VXO-eIMGvzvxlIg58eI">Become SURVAmbassador For Your Location</option>
+  <option value="https://view-awesome-table.com/-LHF24vGzntvKixw2XGN/view">Global Forum Categories Search</option>
+  <option value="https://view-awesome-table.com/-L8sFT9aUtB10a78mljh/view">Find and Join your Local Group Forum</option>
+  <option value="https://land-surveyor-online-resources.zeef.com/landsurveyorsu">Megalist of Land Surveyor Resources and Links</option>
+  <option value="https://app.additor.io/p/zE8OUzjX">Surveying Tutorials List</option>
+  <option value="https://landsurveyors.carto.com/viz/9c0755a0-8fc6-11e6-b3bf-0ef24382571b/embed_map">Global Member Map</option>
+  <option value="https://view-awesome-table.com/-L0g9Rz-l-kxvJj79wgQ/view">Surveying Equipment Manuals and Guides</option>
+  <option value="https://www.facebook.com/landsurveyorsunited">Land Surveyors United on Facebook</option>
+  <option value="https://www.facebook.com/surveyingjobs">Surveying Jobs on Facebook</option>
+  <option value="https://www.facebook.com/surveyingjobs/app/337680106275807/">Surveyors Seeking Employment</option>
+  <option value="https://www.podbean.com/media/player/multi?playlist=http%3A%2F%2Fplaylist.podbean.com%2F5665676%2Fplaylist_multi.xml&vjs=1&kdsowie31j4k1jlf913=bbfb8b4391735b754173f990f40ebed33ef35ebf&size=430&skin=3&episode_list_bg=%23ffffff&bg_left=%23cccccc&bg_mid=%230c5056&bg_right=%232a1844&auto=0&download=1&show_playlist_recent_number=10&pbad=1">The Geoholics Podcast</option>
+  <option value="https://www.srvyr.com/about">International Surveyors Week</option>
+</select>
+<div id="sidebar" class="visible">
+<ul>
+<li><a href="/photo">Share Surveying Photos</a></li>
+<li><a href="/video/video/new">Share a Video</a></li>
+<li><a href="/forum/topics/discussion/new">Ask a Question</a></li>
+<li><a href="/jobs">Find a Surveying Job</a></li>
+<li><a href="/directory">List Your Company</a></li>
+<li><a href="/mentorship">Find a Mentor</a></li>
+<li><a href="/articles/article/new">Add an Article</a></li>
+<li><a href="/almanac/blogpost/new">Add Surveying Term</a></li>
+</ul>
+
+<iframe class="switch-target" width="100%" height="1200" src=""></iframe>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>var switcher$ = $('.switcher'),          // select element
+    switchTarget$ = $('.switch-target'); // iframe
+
+switcher$.on('change', switchIframeSrc); // event binding
+
+// our functiono to switch the iframe src
+function switchIframeSrc() {
+  // set the 'src' attribute of the iframe
+  // to the value of the selected option
+  switchTarget$.attr('src', switcher$.val());
+}
+
+// call the method on load
+switchIframeSrc();
+</script>
