@@ -1,0 +1,37 @@
+.thumbs {
+  float:left;
+/*   border: solid 1px #ccc */
+}
+.thumbs img{
+  float: left;
+  vertical-align: top;
+  margin: 0 10px 10px 0
+}
+/*
+window.onload = function() {
+  
+
+
+var xhr = new XMLHttpRequest();
+
+xhr.open("GET", "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22miami%2C%20fl%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys");
+xhr.send();
+
+
+
+  xhr.onreadystatechange = function(){
+    
+		if (xhr.readyState == 4 && xhr.status == 200) 
+      {
+			var r = JSON.parse(xhr.responseText);
+       document.getElementById("weather").innerHTML = "Miami's current temp: " + r.query.results.channel.item.condition.temp ;
+      }
+    
+  }
+  
+  
+
+}
+  
+
+*/
