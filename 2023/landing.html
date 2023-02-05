@@ -1,0 +1,282 @@
+<head>
+<style>
+  .container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.search-container {
+ background: rgba(255, 255, 255, 0.34);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(8.2px);
+-webkit-backdrop-filter: blur(8.2px);
+border: 1px solid rgba(255, 255, 255, 0.28);
+  padding: 10px;
+  box-shadow: 0px 0px 10px #888;
+  display: flex;
+  justify-content: center;
+   z-index:1000;
+}
+
+form {
+  width: 80%;
+  display: flex;
+  z-index:3;
+  justify-content: space-between;
+}
+
+input[type="text"] {
+  width: 70%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+ 
+  border-radius: 5px 0px 0px 5px;
+}
+
+button[type="submit"] {
+  width: 30%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #212121;
+  color: #fff;
+  border: none;
+  border-radius: 0px 5px 5px 0px;
+  cursor: pointer;
+}
+a {
+  padding:0.3em;
+  font-size: 16px;
+  background-color: transparent;
+  color: #333;
+  z-index:2;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  border: 1px solid black;
+  background: rgba(255, 255, 255, 0.1);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+
+background: rgba(255, 255, 255, 0.1);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+a:hover {
+  padding: 0.5em;
+  font-size: 34px;
+  background-color: #eee;
+  color: #000;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  border: 2px solid #212121;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+@media (max-width: 600px) {
+  .buttons {
+    flex-direction: column;
+  }
+}
+
+.frameContainer{
+    position: fixed; 
+    height: 100%;
+    top:0px;
+    left: 10px;
+    right:0px;
+    bottom:-100px;
+    z-index:-1;
+}
+
+.main_iframe{
+    height: 100%;
+    width: 100%;
+  z-index:-1
+    border:none;
+    background:transparent;
+}
+abbr[data-title] {
+  position: relative;
+  text-decoration: underline dotted; 
+}
+abbr[data-title]:hover::after,
+abbr[data-title]:focus::after {
+  content: attr(data-title);
+  position: absolute;
+  left: 50%;
+  top: 100px;
+  transform: translateX(-50%);
+  width: auto;
+  white-space: nowrap;
+  background: #000000;
+  color: #fff;
+  z-index:10000;
+  border-radius: 2px;
+  box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.4);
+  font-size: 0.8em;
+  padding: 3px 5px;
+}
+input#gsc-i-id1.gsc-input {background-color:#eee;min-width:300px!important;height:100%;color:#000;}
+@import url('/font-awesome-5.0.7/css/font-awesome.min.css');
+/* No need to import above objects in Elementor */
+
+.elementor-text-editor {
+    text-align: right;
+}
+.elementor-widget-text-editor {
+    color: #212121;
+    font-family: "Titillium Web", Sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+/* Style the search field */
+form.example input[type=text] {
+  padding: 12px;
+  font-size: 17px;
+  border: none;
+  float: left;
+  width: 80%;
+  background: #f2f2f2;
+}
+
+/* Style the submit button */
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 12px;
+  background: #004E92;
+  color: white;
+  font-size: 17px;
+  border: none;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #000428;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.searchBlock {
+    display: flex;
+    flex-drection: row;
+    align-items: center;
+}
+
+.themed {
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-bottom: 24px;
+} 
+.searchBlock .searchButton {
+    height: 36px;
+    line-height: 18px;
+}
+
+.color.themed {
+    --block-accent-color: #3a5ec5;
+
+    background: #abcdef;
+}
+
+.dark.themed {
+    --block-text-color: #f8f8f8;
+    --block-background-color: #222;
+    --block-accent-color: #f2d12e;
+    --block-shadow-color: #555;
+
+    background: #444;
+}
+
+.dark.themed input {
+    color: var(--block-text-color);
+    background: var(--block-background-color);
+}
+
+
+</style>
+  <link rel="stylesheet" href="https://unpkg.com/blocks.css/dist/blocks.min.css" />
+<script async src="https://cse.google.com/cse.js?cx=partner-pub-3544186224970512:2843563337">
+</script>
+<base href="https://landsurveyunited.com">
+</head>
+<body>
+<div class="container">
+  <div class="buttons">
+ <div class="buttons">
+   <a target="load" title="Add Stuff" href="/hi"><abbr data-title="Add stuff"> ➕</abbr></a>
+   <a href="/jobs" target="load"><abbr data-title="Surveyor Jobs">👷‍♂️ </abbr></a>
+   <a href="/photo" target="load"><abbr data-title="Surveying Photos">🖼️</abbr></a>
+   <a href="/video" target="load"><abbr data-title="Surveying Videos">📺️</abbr></a>
+   <a href="/directory" target="load"><abbr data-title="Company Directory">🧩</abbr></a>
+   <a href="/mentorship" target="load"><abbr data-title="Mentorship Hub">🔑</abbr></a>
+   <a href="/events" target="load"><abbr data-title="Surveyor Events">📅</abbr></a>
+   <a href="/jobs-by-location" target="load"><abbr data-title="Jobs by Location">🧰</abbr></a>
+   <a target="load" title="Lab" href="https://landsurveyorsunited.github.io/cssfiles/room/slider/index.html"><abbr data-title="Community Lab">🔥</abbr></a>
+  <a target="load" href="https://landsurveyorsunited.github.io/cssfiles/room/slider/podroom.html"><abbr data-title="Land Surveyor Podroom">🎙️</abbr></a>
+  <a target="load" href="https://landsurveyorsunited.github.io/cssfiles/room/slider/smarketplace.html"><abbr data-title="Smarketplace 3D">⚡️</abbr></a>
+    </div>
+ 
+
+  </div><div class="dark themed">
+  <div class="gcse-searchresults"></div>
+  <div class="search-container">
+     <div class="buttons">
+   <a target="load" title="Add Stuff" href="/post"><abbr data-title="Mobile App"> 📱</abbr></a>
+   <a href="/jobs" target="load"><abbr data-title="Surveyor Jobs">⚙️ </abbr></a>
+
+      </div>
+    
+<div style="width:100%" class="gcse-searchbox"></div>
+ 
+    
+
+      </div>
+</div>
+
+  
+  
+<div class="elementor-text-editor elementor-clearfix">
+ <!-- No need to add div you can drag a html widget and just paste it there  -->
+  
+  
+  
+</div>
+  
+  
+  <div class="frameContainer">
+    <iframe class="main_iframe" name="load" scrolling="yes"></iframe>
+</div>
+  </body>
