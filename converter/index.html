@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Angle Conversion Calculator</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<center><h1>Surveyor Angle Converter</h1></center>
+<form name="MainForm" align="center">
+      <div align="center"><center><table border="0">
+        <tr>
+          <td colspan="2">Convert what quantity? <input type="text" name="what" size="15" onFocus="javascript:resetanswer();" onKeyPress="microsoftKeyPress();">
+		  <a href="javascript:helpQty();"><img src="https://storage.ning.com/topology/rest/1.0/file/get/8911155464?profile=RESIZE_584x" width="16" height="16" border="0" alt="Help with this item"></a></td>
+        </tr>
+        <tr>
+          <td align="center">From:<br>
+          <select name="from" size="9" onChange="javascript:myCon();" style="width: 150px;">
+            <option selected value="1">radian</option>
+            <option value="(Math.PI/3200)">mil</option>
+            <option value="(Math.PI/200)">grad</option>
+            <option value="(Math.PI/180)">degree</option>
+            <option value="(Math.PI/(180*60))">minute</option>
+            <option value="(Math.PI/(180*3600))">second</option>
+            <option value="(Math.PI/16)">point</option>
+            <option value="(Math.PI/8)">1/16 circle</option>
+            <option value="(Math.PI/5)">1/10 circle</option>
+            <option value="(Math.PI/4)">1/8 circle</option>
+            <option value="(Math.PI/3)">1/6 circle</option>
+            <option value="(Math.PI/2)">1/4 circle</option>
+            <option value="(Math.PI)">1/2 circle</option>
+            <option value="(2*Math.PI)">full circle&nbsp;</option>
+          </select></td>
+          <td align="center">To:<br>
+          <select name="to" size="9" onChange="javascript:myCon();" style="width: 150px;">
+            <option selected value="1">radian</option>
+            <option value="(Math.PI/3200)">mil</option>
+            <option value="(Math.PI/200)">grad</option>
+            <option value="(Math.PI/180)">degree</option>
+            <option value="(Math.PI/(180*60))">minute</option>
+            <option value="(Math.PI/(180*3600))">second</option>
+            <option value="(Math.PI/16)">point</option>
+            <option value="(Math.PI/8)">1/16 circle</option>
+            <option value="(Math.PI/5)">1/10 circle</option>
+            <option value="(Math.PI/4)">1/8 circle</option>
+            <option value="(Math.PI/3)">1/6 circle</option>
+            <option value="(Math.PI/2)">1/4 circle</option>
+            <option value="(Math.PI)">1/2 circle</option>
+            <option value="(2*Math.PI)">full circle&nbsp;</option>
+          </select></td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center"><p><a href="javascript:swapUnits();"><img src="/images/swap.png" width="40" height="15" border="0" title="Swap the From and To units."></a></p>
+		  <input type="button" value="»» Convert ««" name="Go" onClick="javascript:myCon();"></td>
+        </tr>
+        <tr>
+          <td align="left" colspan="2">Result: <a href="javascript:helpResult();"><img src="https://storage.ning.com/topology/rest/1.0/file/get/8911155464?profile=RESIZE_584x" width="16" height="16" border="0" alt="Help with this item"></a><br>
+		  <input type="text" name="answer" size="70" style="word-spacing: -0.10em" READONLY></td>
+        </tr>
+      </table>
+      </center></div>
+    </form>
+<hr>
+<details>
+  <summary>Conversion Help</summary>
+<p>- Conversion Help -<br /><br />This is the amount of the 'From' unit you want to convert to the 'To' unit.<br /><br />You can enter a basic quantity value, such as<br />10<br />100<br />1267.9874<br /><br />To enter fractions, separate fractions from whole numbers with a + sign.<br />7/8<br />2+3/4<br />1+1/2<br /><br />Or you may enter formulas, such as<br />100+37+99<br />33 * 56 + (100-23) * 17<br />93*56-13*4<br /><br />To enter numbers in scientific notation, be sure to use the 'e' style of notation. For example<br />1.0e-15<br />9.3478e+23<br />1.0e+18</p>
+<hr>
+<p>- Conversion Help -<br /><br />This is the result of your conversion, suitable for copy and paste as needed. Select the text you wish to copy and press Ctrl-C to copy then press Ctrl-V to paste it into the application of your choice.<br /><br />The format used follows the international standard called the SI standard. Digits are separated by spaces in groups of three, this makes them easier to read. Some countries use the comma as a separator which may be confused with the period so the SI standard is preferred.<br /><br />Scientific notation is displayed in the 'e' format, such as 1.0e-18 or 1.0e+24</p></details>
+<!-- partial -->
+  <script src='https://api.ning.com:80/files/NEC3sUsJox6DPKTiU2RHRW0jtHfUrd2NjLEnnYereU8G4LAX0MzLkd6A9LUGhhv31ouGtWjpYoTyZbotpsb3M8Aah7OxiPwp/convert2.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
