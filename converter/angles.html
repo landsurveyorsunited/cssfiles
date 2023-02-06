@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap" rel="stylesheet">
+<title>Angle Measurement Unit Converter</title>
+<style>
+body {
+color: white;
+background: black;
+font-family: 'Roboto Flex', sans-serif;
+}
+input {
+background: black;
+color: white;
+}
+</style>
+</head>
+<body>
+<div>
+<h2>Angle Measurement Unit Converter</h2>
+<p>Type a value in the Degrees field to convert the value to Radians:</p>
+
+<p>
+  <label>Degrees</label>
+  <input id="inputDegrees" type="number" placeholder="Degrees" oninput="degreesConverter(this.value)" onchange="degreesConverter(this.value)">
+</p>
+<p>Radians: <span id="outputRadians"></span></p>
+</div>
+<script>
+function degreesConverter(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputRadians").innerHTML=(valNum * (Math.PI/180));
+}
+</script>
+<br><br>
+<p>Type a value in the Radians field to convert the value to Degrees:</p>
+
+<p>
+  <label>Radians</label>
+  <input id="inputRadians" type="number" placeholder="Radians" oninput="radiansConverter(this.value)" onchange="radiansConverter(this.value)">
+</p>
+<p>Degrees: <span id="outputDegrees"></span></p>
+</div>
+<script>
+function radiansConverter(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputDegrees").innerHTML=(valNum * (180 / Math.PI));
+}
+</script>
+</body>
+</html>
