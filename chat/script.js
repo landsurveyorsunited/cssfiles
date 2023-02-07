@@ -1,4 +1,4 @@
-$.getJSON("https://spreadsheets.google.com/feeds/list/1Vzh1SWUroDsemRI8Rhsh5WLK08NOk9NFiulK_Nhlv0o/od6/public/values?alt=json", function(data) {
+$.getJSON("https://spreadsheets.google.com/feeds/list/1lu6Wmm3MzcVnnEDRDjLOF51O0KU11N_HnFFYA51ZGl0/od6/public/values?alt=json", function(data) {
   for (var i = 0; i < data.feed.entry.length; i++) {
     var entry = data.feed.entry[i];
     document.getElementById('chat_s').innerHTML += '<div class="chat"><div class="chat_message">' + entry.gsx$message.$t + '</div><div class="chat_name">' + entry.gsx$name.$t + '</div></div>';
