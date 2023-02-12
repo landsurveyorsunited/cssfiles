@@ -1,0 +1,221 @@
+/* TODO: center timeline-slide class with margin: 0 auto & adjust buttons accordingly */
+<style>
+main > p {
+    margin-top:100px;
+}
+.timeline-container {
+    margin-top:30px;
+    background-color: #ECF9EA;
+    padding: 10px 80px 30px;
+}
+.timeline-container {
+    margin-top:0px;
+    border-top: 3px #B7852C solid;
+}
+
+
+/*owl carousel styles*/
+.owl-carousel .owl-dots .owl-dot {
+    background: #fff;
+    border:solid;
+    border-width:1px;
+    border-color: #bfbfbf;
+}
+.owl-carousel .owl-dots .owl-dot.active {
+    background:#417638;
+}
+.owl-prev {
+    position:absolute;
+    top:200px;
+    left: 33px;
+  	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+  left:34px;
+  top:200px;
+	position: absolute;
+	border-right-color: #B7852C;
+	border-width: 18px;
+	margin-top: -16px;
+}
+.owl-next {
+    position:absolute;
+    top:200px;
+    right: -20px;
+    top: 200px;
+    border: solid transparent;
+    height: 0;
+    width: 0;
+    position: absolute;
+  /*   border-color: rgba(194, 225, 245, 0); */
+    border-left-color: #B7852C;
+    right:35px;
+    border-width: 18px;
+    margin-top: -16px;
+}
+.owl-carousel.owl-loaded {
+    display: block;
+}
+.owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    -webkit-transform: translate3d(0px, 0, 0);
+}
+.owl-stage-outer {
+    top: -16px;
+}
+.owl-carousel .owl-stage {
+    position: relative;
+    -ms-touch-action: pan-Y;
+}
+.owl-carousel .owl-stage:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+.owl-carousel .owl-item {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    -webkit-backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.owl-carousel .owl-item img {
+    display: block;
+    width: 100%;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+}
+
+/*timeline slider styles*/
+.timeline-slide {
+    max-width: 165px;
+    margin: 4.2rem 0 0 0;
+    width: 100%;
+    background-color: #006B5A;
+    position:relative;
+}
+.timeline-slide .circle {
+    border: 4px #fff solid;
+    background-color: #B7852C;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-redius: 50%;
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    left: 50%;
+    margin-left: -15px;
+    top: -70px;
+    z-index: 2000;
+    overflow: visible;
+}
+.timeline-copy {
+    font-size: 0.7em;
+    color: #fff;
+    background-color: #006B5A;
+    margin: 1rem;
+    padding-bottom: 5px;
+}
+.timeline-slide .vertical-line {
+    border-left: 3px #B7852C solid;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    margin-left: -4.5px;
+    top: -50px;
+    z-index: 1000;
+}
+.timeline-slide .timeline-copy h3 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom:0px;
+}
+.timeline-slide .timeline-copy {
+    padding: 1rem 0.5rem;
+    color: #fff;
+}
+.timeline-container {
+  margin-top:20px;
+  padding-top:6px;
+}
+.timeline-container .owl-stage {
+    margin-left:18px;
+}
+.owl-carousel .owl-dots .owl-dot {
+    width: 15px;
+    height: 15px;
+    background: #e6c996;
+    border-radius: 100%;
+    display: inline-block;
+    margin: 0 5px;
+}
+.owl-carousel .owl-dots {
+    text-align: center;
+  margin-top:1em;
+}
+.owl-carousel .owl-nav .owl-prev {
+    width: 18px;
+    height: 33px;
+    background: url(/images/ico-arrow-left.svg) no-repeat center;
+}
+.owl-prev:after {
+  z-index: 1000;
+  border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+/* 	border-right-color: #ECF9EA; */
+  border-right-color:#ECF9EA;
+  right:-18px;
+  top: 3px;
+	border-width: 14px;
+	margin-top: -15px;
+}
+.owl-carousel .owl-nav .owl-next {
+    background: #ECF9EA;
+}
+.owl-next:after {
+  z-index: 1000;
+  border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	border-left-color: #ECF9EA;
+/*   border-left-color: #000; */
+  left: -18px;
+  top: 18px;
+	border-width: 14px;
+	margin-top: -30px;
+}
+.owl-prev span {
+  display:none;
+}
+.owl-next span {
+  display:none;
+}
+/* .owl-prev, .owl-next {
+  
+} */
+
+button:focus {outline:0;}
+
+@media screen and (max-width: 560px) {
+  .timeline-slide {
+    margin-top: 4.2rem;
+    margin-left: 3.5rem;
+  }
+}
+</style>
