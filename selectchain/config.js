@@ -46,20 +46,22 @@ addOption("Jobs-General", "Post Job", "/hubs/jobs/post-job");
 addOption("Jobs-General", "CV Generator", "/cv");
 
 addOption("Jobs-Tech", "Select an item", "", 1); //HEADER OPTION
-addOption("Jobs-Tech", "News.com", "http://www.news.com");
-addOption("Jobs-Tech", "Wired News", "http://www.wired.com");
-addOption("Jobs-Tech", "TheRegister", "http://www.theregister.com");
+addOption("Jobs-Tech", "CV Generator", "/cv");
+addOption("Jobs-Tech", "Resume Review", "/hubs/jobs/resume-review");
+addOption("Jobs-Tech", "Share Resume", "/hubs/jobs/seeking");
 
 addOption("Market", "Select an item", "", 1); //HEADER OPTION
-addList("Market", "Regular Cars", "", "Market-Regular");
-addList("Market", "Sports Cars", "", "Market-Vendors");
+addList("Market", "Equipment Types", "", "Market-Regular");
+addList("Market", "Vendor Smarkets", "", "Market-Vendors");
 
 addOption("Market-Regular", "Select an item", "", 1); //HEADER OPTION
-addOption("Market-Regular", "Toyota", "http://www.toyota.com");
-addOption("Market-Regular", "Ford", "http://www.ford.com");
-addOption("Market-Regular", "Nissan", "http://www.nissanusa.com");
-addOption("Market-Regular", "BMW", "http://www.bmw.com");
+addOption("Market-Regular", "Total Stations", "/topics/total-stations");
+addOption("Market-Regular", "GPS GNSS", "/topics/survey-grade-gps");
+addOption("Market-Regular", "Drones", "http://www.nissanusa.com");
+addOption("Market-Regular", "Antique Equipment", "http://www.bmw.com");
 
 addOption("Market-Vendors", "Select an item", "", 1); //HEADER OPTION
-addOption("Market-Vendors", "Porsche", "http://www.www.porsche.com");
-addOption("Market-Vendors", "Aston Martin", "http://www.astonmartin.com");
+addOption("Market-Vendors", "Safety Apparel", "/hubs/safety-apparel");
+addOption("Market-Vendors", "Survipod", "/hubs/survipod");
+addOption("Market-Vendors", "Marketplace Hubs", "/marketplace");
+addOption("Market-Vendors", "Entire Smarketplace", "/smarketplace");
