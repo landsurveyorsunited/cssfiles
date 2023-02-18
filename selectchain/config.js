@@ -40,10 +40,10 @@ addList("Employment", "Surveying Jobs", "", "Jobs-General");
 addList("Employment", "Employment Tools", "", "Jobs-Tech");
 
 addOption("Jobs-General", "Select an item", "", 1); //HEADER OPTION
-addOption("Jobs-General", "CNN", "http://www.cnn.com");
-addOption("Jobs-General", "MSNBC", "http://www.msnbc.com");
-addOption("Jobs-General", "BBC News", "http://news.bbc.co.uk");
-addOption("Jobs-General", "Fox News", "http://www.foxnews.com");
+addOption("Jobs-General", "Jobs Board", "/jobs");
+addOption("Jobs-General", "Jobs Hub", "/hubs/jobs=join");
+addOption("Jobs-General", "Post Job", "/hubs/jobs/post-job");
+addOption("Jobs-General", "CV Generator", "/cv");
 
 addOption("Jobs-Tech", "Select an item", "", 1); //HEADER OPTION
 addOption("Jobs-Tech", "News.com", "http://www.news.com");
