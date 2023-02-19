@@ -26,9 +26,20 @@
 <meta property="twitter:description" content="Land Surveyors United Community is the largest network of Professional Land Surveyors on Planet Earth. Connect with your fellow surveyors in any country.">
 <meta property="twitter:image" content="https://storage.ning.com/topology/rest/1.0/file/get/2821506290?profile=original">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <script language="javascript" src="https://landsurveyorsunited.github.io/cssfiles/selectchain/chainedmenu.js">
+  <script language="javascript" src="https://landsurveyorsunited.github.io/cssfiles/selectchain/config.js"></script>
 </head>
 <body>
 <!-- partial:index.partial.html -->
+  <form name="listmenu0">
+<table align="center"><tr>
+<td><select name="firstlevel" style="width:180px;"></select></td>
+<td><select name="secondlevel" style="width:160px;"></select></td>
+<td><select name="thirdlevel" style="width:160px;"></select></td>
+<td><input type="button" value="Go" onclick="goListGroup(document.listmenu0.firstlevel, document.listmenu0.secondlevel, document.listmenu0.thirdlevel)">
+ <input type="button" value="Reset" onclick="resetListGroup('chainedmenu')">
+</tr></table>
+</form>
 <nav>
   <div class="nav-box">
     <ul class="nav-container">
