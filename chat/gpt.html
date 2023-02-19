@@ -10,6 +10,24 @@
   <body>
     <center><h1>Prompt GPT</h1></center>
     <center><form>
+       <label for="controls">More Controls</label>
+      <select id="controls" name="controls">
+        <option value="return">Return only the main response. Remove pre-text and post-text.</option>
+        <option value="dump">Dump the Pre- and Post-Text.</option>
+      </select><br>
+
+      <label for="explanation">Explanation</label>
+      <select id="explanation" name="explanation">
+        <option value="clear">Clear. Concise. No Jargon.</option>
+        <option value="conversational">Conversational + Relatable</option>
+        <option value="punchy">Punchy Writing that Pops</option>
+        <option value="persuasive">Persuasive Storyteller</option>
+        <option value="clarity">Clarity Snippet</option>
+        <option value="clearthorough">Clear + Thorough</option>
+        <option value="conversationalenglish">Conversational English</option>
+      </select><br>
+
+      
       <label for="tone">Select a Tone:</label>
       <select id="tone" name="tone">
         <option value="Conversational">Conversational</option>
@@ -84,6 +102,42 @@
         const tone = form.tone.value;
         const length = form.length.value;
         prompt.innerHTML = `<p>Write a ${length} ${tone} post.</p>`;
+      });
+    </script>
+     <script>
+      const form = document.querySelector('form');
+      const promptDiv = document.getElementById('prompt');
+      
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const controlsValue = document.getElementById('controls').value;
+        const explanationValue = document.getElementById('explanation').value;
+        const startersValue = document.getElementById('starters').value;
+        
+        let promptText = '';
+        
+        switch (startersValue) {
+          case 'article':
+            promptText = `Write an article using a ${explanationValue} writing style. ${controlsValue} Your topic can be about anything you're interested in.`;
+            break;
+          case 'blogpost':
+            promptText = `Write a blog post using a ${explanationValue} writing style. ${controlsValue} Share a personal story or opinion about a topic you're passionate about.`;
+            break;
+          case 'research':
+            promptText = `Research a topic using a ${explanationValue} writing style. ${controlsValue} Create an outline and gather sources to support your findings.`;
+            break;
+          case 'collection':
+            promptText = `Collect data on a topic using a ${explanationValue} writing style. ${controlsValue} Organize your data using bullet points, headings, and bold text.`;
+            break;
+          case 'idk':
+            promptText = `Choose a writing style and starter to generate a prompt.`;
+            break;
+          default:
+            promptText = `Choose a writing style and starter to generate a prompt.`;
+            break;
+        }
+        
+        promptDiv.innerText = promptText;
       });
     </script>
   </body>
