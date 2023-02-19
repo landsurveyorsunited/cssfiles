@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Prompt Generator</title>
+    <style>
+      body {background:#343541;color:white}
+    </style>
+  </head>
+  <body>
+    <center><h1>Prompt GPT</h1></center>
+    <center><form>
+      <label for="tone">Select a Tone:</label>
+      <select id="tone" name="tone">
+        <option value="Conversational">Conversational</option>
+        <option value="Informative">Informative</option>
+        <option value="Persuasive">Persuasive</option>
+        <option value="Sarcastic">Sarcastic</option>
+        <option value="Inspiring">Inspiring</option>
+        <option value="Humorous">Humorous</option>
+        <option value="Thoughtful">Thoughtful</option>
+        <option value="Passionate">Passionate</option>
+        <option value="Objective">Objective</option>
+        <option value="Professional">Professional</option>
+      </select>
+      <br>
+      <label for="length">Select a Length:</label>
+      <select id="length" name="length">
+        <option value="Short-form">Short-form</option>
+        <option value="Medium-form">Medium-form</option>
+        <option value="Long-form">Long-form</option>
+        <option value="Microblog">Microblog</option>
+        <option value="Listicle">Listicle</option>
+      </select>
+      <br>
+      
+      <br>
+
+      <label for="audience">Audience:</label>
+      <select name="audience" id="audience">
+        <option value="General public">General public</option>
+        <option value="Niche audience">Niche audience</option>
+        <option value="Experts">Experts</option>
+        <option value="Beginners">Beginners</option>
+        <option value="Youth">Youth</option>
+        <option value="Seniors">Seniors</option>
+        <option value="Women">Women</option>
+        <option value="Men">Men</option>
+        <option value="Geographically based">Geographically based</option>
+        <option value="Demographically based">Demographically based</option>
+      </select>
+
+      <br>
+
+      <label for="purpose">Purpose:</label>
+      <select name="purpose" id="purpose">
+        <option value="Informative">Informative</option>
+        <option value="Entertaining">Entertaining</option>
+        <option value="Persuasive">Persuasive</option>
+        <option value="Promotional">Promotional</option>
+        <option value="Thought leadership">Thought leadership</option>
+        <option value="Brand building">Brand building</option>
+        <option value="Customer engagement">Customer engagement</option>
+        <option value="Lead generation">Lead generation</option>
+        <option value="SEO optimization">SEO optimization</option>
+        <option value="News and updates">News and updates</option>
+        <option value="Review">Review</option>
+        <option value="Compare and contrast">Compare and contrast</option>
+        <option value="Q&A">Q&A</option>
+        <option value="Case study">Case study</option>
+        <option value="Problem and solution">Problem and solution</option>
+        <option value="Interview">Interview</option>
+      </select>
+      
+      <input type="submit" value="Generate Prompt">
+      </form></center>
+    <br>
+    <div id="prompt"></div>
+    <script>
+      const form = document.querySelector('form');
+      const prompt = document.querySelector('#prompt');
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const tone = form.tone.value;
+        const length = form.length.value;
+        prompt.innerHTML = `<p>Write a ${length} ${tone} post.</p>`;
+      });
+    </script>
+  </body>
+</html>
