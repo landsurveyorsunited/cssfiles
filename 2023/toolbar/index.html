@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Mobile Bottom Toolbar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<nav>
+  <div class="nav-box">
+    <ul class="nav-container">
+      <li class="nav__item active">
+        <a target="load" href="/membership" class="nav__item-link">
+          <div class="nav__item-icon">
+            <ion-icon name="compass-outline"></ion-icon>
+          </div>
+          <span class="nav__item-text">Membership</span>
+        </a>
+      </li>
+      <li class="nav__item">
+        <a target="load" href="https://go.srvyr.com/you" class="nav__item-link">
+          <div class="nav__item-icon">
+            <ion-icon name="id-card-outline"></ion-icon>
+          </div>
+          <span class="nav__item-text">Profile</span>
+        </a>
+      </li>
+      <li class="nav__item">
+        <a target="load" href="/forum/topics" class="nav__item-link">
+          <div class="nav__item-icon">
+            <ion-icon name="chatbubble-outline"></ion-icon>
+          </div>
+          <span class="nav__item-text">Forum</span>
+        </a>
+      </li>
+      <li class="nav__item">
+        <a target="load" href="/hubs" class="nav__item-link">
+          <div class="nav__item-icon">
+            <ion-icon name="earth-outline"></ion-icon>
+          </div>
+          <span class="nav__item-text">Hubs</span>
+        </a>
+      </li>
+      <li class="nav__item">
+        <a target="load" href="/video" class="nav__item-link">
+          <div class="nav__item-icon">
+            <ion-icon name="caret-forward-circle-outline"></ion-icon>
+          </div>
+          <span class="nav__item-text">Videos</span>
+        </a>
+      </li>
+      <li class="nav__item">
+        <a target="load" href="/main/profilesettings/edit" class="nav__item-link">
+          <div class="nav__item-icon">
+            <ion-icon name="settings-outline"></ion-icon>
+          </div>
+          <span class="nav__item-text">Settings</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="frameContainer">
+  <iframe class="main_iframe" name="load" scrolling="yes"></iframe>
+</div>
+<!-- partial -->
+  <script src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js'></script>
+<script src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
