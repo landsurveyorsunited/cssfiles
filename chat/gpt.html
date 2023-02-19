@@ -102,6 +102,16 @@
       </form></center>
     <br>
     <div id="prompt"></div>
+    <button onclick="copyToClipboard()">Copy Text</button>
+
+<script>
+function copyToClipboard() {
+  const text = document.getSelection().toString();
+  navigator.clipboard.writeText(text);
+}
+</script>
+
+    
     <script>
       const form = document.querySelector('form');
       const prompt = document.querySelector('#prompt');
