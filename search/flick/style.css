@@ -1,0 +1,159 @@
+*, *:before, *:after {
+  position: relative;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FAFAFA;
+}
+
+* {
+  transition: all 0.3s cubic-bezier(0.2, 0, 0.4, 1);
+}
+
+.ui-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 40rem;
+  max-width: 90vw;
+  height: calc(100vh - 2rem);
+}
+.ui-app[data-state=start] {
+  justify-content: center;
+}
+.ui-app[data-state=loading] .ui-item {
+  opacity: 0.5;
+}
+.ui-app[data-state=photo] * {
+  opacity: 0.3;
+}
+.ui-app[data-state=photo] .ui-photo-detail, .ui-app[data-state=photo] .ui-photo-detail * {
+  opacity: 1;
+}
+.ui-app[data-state=photo] .ui-items {
+  pointer-events: none;
+}
+
+.ui-form {
+  margin-bottom: 1rem;
+}
+
+.ui-input {
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.1);
+  display: block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  width: 100%;
+  border: none;
+  font-size: 2rem;
+  height: 3rem;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+.ui-input::-webkit-input-placeholder {
+  color: #CDCDCD;
+}
+.ui-input:focus {
+  outline: none;
+}
+
+.ui-buttons {
+  text-align: center;
+}
+
+.ui-button {
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  border: none;
+  background-color: #EB7452;
+  color: white;
+  height: 3rem;
+  padding: 0 3rem;
+  border-radius: 3rem;
+  margin: 0 1rem;
+}
+.ui-button[disabled] {
+  opacity: 0.5;
+}
+.ui-button[type=button] {
+  background-color: #555;
+}
+
+.ui-items {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  flex-shrink: 1;
+  overflow-y: scroll;
+  margin: 0 -0.25rem;
+}
+.ui-items:hover > .ui-item {
+  opacity: 0.7;
+}
+.ui-items:hover > .ui-item:hover {
+  opacity: 1;
+}
+
+.ui-item {
+  display: block;
+  height: 10rem;
+  width: auto;
+  flex-shrink: 0;
+  flex-grow: 0;
+  margin: 0.25rem;
+  -webkit-animation: item 0.5s calc(var(--i, 0) * .05s) cubic-bezier(0.5, 0, 0.2, 1) both;
+          animation: item 0.5s calc(var(--i, 0) * .05s) cubic-bezier(0.5, 0, 0.2, 1) both;
+  background-color: #EEE;
+}
+@-webkit-keyframes item {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes item {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.ui-photo-detail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ui-photo {
+  height: auto;
+  width: auto;
+  min-height: 50vh;
+  min-width: 50vw;
+  max-height: 100%;
+  max-width: 100%;
+}
