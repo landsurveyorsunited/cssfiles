@@ -1,0 +1,32 @@
+#start{
+      width: 250px;
+      height: 50px;
+      font-size: 20px;
+      color: lightgreen;
+      border-radius: 10px;
+      border-width: 2px;
+      background-color: #fff;
+      border-color: lightgreen;
+      cursor: pointer;
+      font-family: aharoni;
+    }
+    #start:hover{
+      color: #fff;
+      background-color: lightgreen;
+    }
+    #stop{
+      width: 250px;
+      height: 50px;
+      font-size: 20px;
+      color: red;
+      border-radius: 10px;
+      border-width: 2px;
+      background-color: #fff;
+      border-color: red;
+      cursor: pointer;
+      font-family: aharoni;
+    }  
+    #stop:hover{
+      color: #fff;
+      background-color: red;
+    }
