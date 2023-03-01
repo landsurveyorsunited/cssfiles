@@ -1,0 +1,414 @@
+#designStudio textarea[name="themeCss"], #designStudio textarea[name="globalCss"] {
+    height: 600px!important;overflow:auto;
+    width: 100%;z-index:20!important; font-size:18px;color:purple;
+font-family: 'Roboto', sans-serif;
+line-height: var(--lineHeight-medium);
+letter-spacing:var(----letterSpacing-medium);
+}
+#livechat-compact-container{ display:none}
+#chat-widget-container{ display:none }
+
+/************** VIDEOS CODES ************/
+
+
+/*** RESIZE THE VIDEO IN SOCIAL CHANNELS ****/
+@media only screen and (min-width:979px){
+.feedListPagePlayer-source .sourceContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+    max-width: 75%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+}
+@media only screen and (max-width:979px){
+.feedListPagePlayer-source .sourceContainer {
+top:30%;
+}}
+@media only screen and (min-width:771px){
+/* Adjust the Column Widths Video Detail Page */
+.videoDetailPage .span8{ width:80% }
+.videoDetailPage-list { margin:0px }
+.videoDetailPage .span6{ width:20%}
+.videoDetailPage .matrix-itemFluid { min-width: 80%;max-width:100%; float:none }
+.videoDetailPage .span6 .matrix-itemFluid { width: 80%; margin: 0px auto; }
+}
+
+
+
+/********************************************
+.videoDetailPage-video.iframed{
+    margin-bottom: 5px;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+.videoDetailPage-video.iframed iframe{
+    max-width: 100%;
+    height: 100%;
+    width:100%;
+    position: absolute;
+}
+*******************************************/
+
+
+.activityFeed-content.activityVideo{
+max-width:100%;
+}
+
+.videoDetailPage-video,
+.videoFrame {
+position:relative!important;
+padding-bottom:56.25%!important;
+overflow:hidden!important;
+max-width:100%!important;
+height:0!important;
+}
+.activityFeed-embedContent iframe,
+.activityFeed-embedContent video,
+.activityFeed-embedContent embed,
+.videoFrame iframe,
+.videoFrame object,
+.videoFrame embed,
+.videoDetailPage iframe,
+.videoDetailPage object,
+.videoDetailPage embed{
+position:absolute!important;
+top:0!important;
+left:0!important;
+width:100%!important;
+height:100%!important;
+min-height:100%!important;
+}
+
+/*** kept this just for the colours
+.videoListPage .videoPreview-loaded .matrix-item {
+  position: relative;
+  background-image: linear-gradient(rgb(58, 60, 74), rgb(36, 38, 50));
+  border-radius: 6px;
+  box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px, rgb(0 0 0 / 73%) 0px 16px 10px -10px;
+padding:10px
+}
+*****/
+
+/** REMOVE BLACK BORDERS FROM VIDEOS IMAGE PLUS CHANGE RATIO OF PHOTOS **/
+
+.videoListPage .video_img_top{
+/********************************padding:5px 5px 0px 5px;************************/
+position:relative;
+}
+.photoListPage-entry .matrix-media-4-3,
+.photoSection-entry .matrix-media-4-3,
+.videoListPage-image{
+background-size:cover;
+padding-bottom:56.25%;
+}
+
+
+
+/************** VARIABLES SETTINGS **********/
+:root{
+--boxShadowLow:0px 4px 18px 2px rgba(0,0,0,0.1);
+
+--greyBorder: solid 4px #e6e6e6;
+--contentBorder:solid #f1f3f4 3px;
+--greyBorderButton: solid 3px #e6e6e6;
+
+--entryTitle-marginBottom:1.5em;
+--lineHeight-medium:1.5em;
+--letterSpacing-medium:0.6px;
+
+--background-colorRoyal:royalBlue;
+
+--transitionRegular:0.2s;
+--transitionMedium:0.4s;
+--transitionSlow:0.6s;
+
+}
+
+/*************************************************/
+
+/** NING BAR PROFILE SECTION **/
+.ningbar-userLinks #username{
+position:relative;
+}
+
+.ningbar-profilePhoto{padding-right:5px}
+.ningbar-profilePhoto img{ border-radius:50%;}
+
+.header-logoImage img {
+border-radius:50%;
+}
+.header-siteName {
+display:flex!important;
+}
+  @media screen and (max-width: 769px){
+.header-logoImage img {
+  max-height: 200px!important;
+  width: auto;
+}}
+
+@media only screen and (min-width:1360px){
+.central-content .site-body.container{
+max-width:65vw;
+margin:20px 8% auto;
+}}
+.central-content .site-body.container{
+box-shadow: var(--boxShadowLow);
+}
+.sheet.section-activity{
+border:none;
+}
+.feed-story{
+  border: var(--contentBorder)!important;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  padding: 20px 20px 0px 20px;
+}
+@media only screen and (min-width:1360px){
+.feed-story{
+max-width:800px;
+}
+.activityFeed{
+display:grid;
+place-content:center;
+}}
+.activityFeed-content {
+  max-width: 100%;
+}
+.activityFeed-storyBody {
+padding-bottom:10px;
+border-bottom:none;
+}
+
+@media only screen and (min-width:779px){
+.ningbar-userLinks {
+  float: right;
+  margin-right: 1em;
+  font-size: 12px;
+  line-height: 20px;
+  margin-left: auto;
+  width: calc(100% - 260px);
+  display: flex;
+  justify-content: flex-end;
+  }}
+
+/** BUTTONS **/
+.button.button-iconic{
+border-radius:50%
+}
+
+/** COMMENTS **/
+.comments-main{
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 15px;
+}
+.comments-commentBody{
+  border-radius: 4px;
+  padding: 10px 0px 20px 5px;
+  transition: 0.3s;
+  position: relative;
+  margin-bottom:5px;
+}
+.comments-commentBody:hover{
+box-shadow: var(--boxShadowLow);
+transition:0.3s;
+background-color:white;
+}
+.comments-actions{
+/*visibility:hidden;*/
+opacity:0.3;
+position:absolute;
+transition:0.2s;
+bottom:0;
+}
+.comments-commentBody:hover .comments-actions{
+opacity:10;
+pointer-events:all;
+transition:0.2s;
+}
+
+@media only screen and (min-width:967px){
+.comments-level2{
+margin-left:60px!important;
+}}
+
+
+/** line seperator between main comment **/
+.comments-list > hr:nth-child(1){
+display:none;
+}
+hr{
+max-width: 50%;
+    margin: 20px auto;
+    border: none;
+    border-top-width: 3px;
+    border-top-style: solid;
+    border-top-color: #e6e6e6;
+}
+textarea.input-full {
+  border-radius:10px;
+  border: var(--greyBorder);
+}
+.entry-title{
+margin-bottom: var(--entryTitle-marginBottom);
+}
+.entry-byline a:not(:first-of-type){
+  padding: 5px 10px;
+  border: solid 1px lightgray;
+  transition:0.2s;
+  display:inline-block;
+}
+.entry-byline a:not(:first-of-type):hover{
+box-shadow:2px 2px 5px 2px rgba(0,0,0,0.2);
+}
+p{
+line-height :var(--lineHeight-medium);
+letter-spacing: var(--letterSpacing-medium);
+}
+
+/******************************************** UNIVERSAL PAGES *******************************************/
+
+/**** VIDEO PAGE ****/
+.videoDetailPage .ratingResult{
+margin-top:20px;
+}
+.videoDetailPage-viewVideo {
+  display: inline-flex;
+  justify-content: flex-end;
+  margin: 20px 0;
+  float: right;
+}
+.videoDetailPage-mainVideo >.entry-content::before{content:"About"; display:block; margin-bottom:5px; text-decoration:underline; }
+
+.videoListPage-metaViews .icon-eye::before,
+.videoDetailPage-viewVideo .icon-eye::before{
+display:none;
+}
+.videoListPage-metaViews .icon-eye,
+.videoDetailPage-viewVideo .icon-eye{
+overflow:visible;
+width:auto;
+font-style: normal;
+}
+.videoListPage-metaViews > a::before{
+content:"Views:";display:inline-block;
+  }
+@media only screen and (min-width:967px){
+.videoDetailPage .ratingResult {
+float:left;
+}}
+.videoDetailPage-getEmbedCode_wrap {
+float:none;
+text-align:right;
+}
+.videoDetailPage-otherVideo .videoListPage-metadata{
+font-size:0.7em;
+}
+
+
+
+/************************************************ PAGES BY NAME *********************************************/
+/** QUESTIONS PAGE **/
+
+.page-questions .articleListPage-entry{
+border: var(--greyBorder);
+padding:20px;
+border-radius:10px;
+}
+.page-questions .articleListPage-entry .entry-headline::before{
+content:"Question ?";display:block;margin-bottom:15px;border-bottom: solid 2px grey;width:9ch;
+}
+.page-questions .articleListPage-entry .entry-title{
+margin-bottom:0px;
+}
+.page-questions .articleListPage-entry .media-body{
+background-color:#7494f7;
+color:white;
+padding:10px 20px;
+border-radius:6px;
+}
+.page-questions .articleListPage-entry .entry-headline .entry-title a,
+.page-questions .articleListPage-entry .entry-headline .entry-title a:hover{
+color:white;
+}
+.page-questions .articleListPage-entry .entry-headline .entry-title a::after{
+content:"?"; margin-left:2px;
+display:inline-block;
+}
+.page-questions .articleListPage-entry .entry-commentsCount{
+text-align:right;
+}
+.page-questions .articleListPage-entry div + .entry-commentsCount{
+font-size:1.1em;
+}
+.footer-button-container{
+display:flex;
+justify-content:right;
+}
+ @media screen and (max-width: 769px){
+.footer-button-container{
+margin-top:20px;
+}}
+.viewButton{
+padding:5px 15px;
+border-radius:6px;
+border: var(--greyBorderButton);
+transition:var(--transitionRegular);
+}
+.viewButton:hover{
+transition:var(--transitionRegular);
+background-color: var(--background-colorRoyal);
+color:white!important;
+}
+
+
+
+ /*** NING BAR BOX ***/
+.ningbar-box.open{
+  width: 100vw;
+  height: 100%;
+  background-color: rgba(0,0,0,0.1);
+  position: fixed;
+  right: 0;  
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+ transition: var(--transitionMedium);
+}
+.ningbar-box.open > .ningbar-box-container{
+  max-width: 380px;
+  height: 400px;
+  background-color: white;
+  right: 30px;
+  top:20px;
+  position: absolute;
+  border-radius: 10px;
+  min-width: 300px;
+  z-index: 2;
+  box-shadow: var(--boxShadowLow);
+}
+
+
+.matrix-item{
+position: relative;
+background-color:white!important;
+transition-duration: 0.3s;
+}
+.matrix-item:hover{
+transition-property: transform;
+ transition-delay: 0.7s;
+transition-duration: 0.3s;
+transform:scale(1.4);
+border-radius: 4px;
+transform-origin: center;
+z-index: 2;
+}
+
