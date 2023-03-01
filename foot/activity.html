@@ -5,6 +5,455 @@
   <title>Latest Activity - Land Surveyors United</title>
   <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Seymour+One&amp;display=swap'><link rel="stylesheet" href="./style.css">
 <base href="https://landsurveyorsunited.com">
+	<style>/*** debug in progress ***/
+/*** improving button animation ***/
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+	
+:root {
+	--tran: all 2s ease 0s;
+	--yellow-color: #ffdd40;
+	--bg-color: #efefef;
+}
+	
+* {
+	box-sizing: border-box;	
+}
+	
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-color);
+  font-family: 'Lato', Arial, Helvetica, serif;
+}
+
+header {
+  background: #121212;
+  margin: 0vmin 5vmin 0 5vmin;
+  color: #e6e6e6;
+  text-align: center;
+  font-size: 5vmin;
+  padding: 2vmin 2vmin 2.75vmin 2vmin;
+  border-radius: 0 0 1vmin 1vmin;
+  box-shadow: 0 0.75vmin 0.5vmin -0.35vmin #0000004a;
+  border: 0.25vmin solid var(--bg-color);
+  border-top: 0;
+  font-weight: 400;
+  position: relative;
+}
+
+header:before {
+  top: 0;
+  left: -0.2vmin;
+}
+
+header:after {
+  top: 0;
+  right: -0.2vmin;
+}
+
+section {
+  margin: 0 auto;
+  background: #fff;
+  padding: 3vmin;
+  margin-bottom: 38vh;
+  border-radius: 1vmin;
+  margin-top: 5vmin;
+  border-right: 8.5vmin solid var(--bg-color);
+  border-left: 8.5vmin solid var(--bg-color);
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3vmin;
+  font-weight: 400;
+  color: #c1c1c1;
+}
+
+h2 {
+  font-size: 5vmin;
+  margin-top: 0vmin;
+}
+
+h4 {
+  display: inline;
+  font-size: 1.75vmin;
+  margin: 0 1vmin;
+}
+
+article {
+  position: relative;
+}
+
+article:before, article:after {
+  position: absolute;
+  top: -6vh;
+  left: -3vmin;
+  right: 0;
+  width: calc(100% + 6vmin);
+  content: "";
+  height: 3px;
+  border-radius: 5px 5px 0 0;
+  z-index: 1;
+  background: linear-gradient(70deg, #2196f3, #ffcc00, hsl(300deg 100% 25%), #58a500);
+  z-index: 0;
+}
+
+article:after {
+  top: inherit;
+  bottom: -6vh;
+}
+
+footer {
+  position: fixed;
+  bottom: 0vh;
+  width: 100%;
+  background: var(--bg-color);
+  padding: 0vmin 5vmin 0 5vmin;
+  height: 29vh;
+  transition: var(--tran);
+  perspective: 150vmin;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fffb;
+  font-weight: 300;
+  font-size: 1.75vmin;
+  margin: 0 0.75vmin;
+  display: initial;
+}
+
+footer a:hover {
+  color: var(--yellow-color);
+  opacity: 0.8;
+}
+
+footer .big a {
+  font-weight: 400;
+  font-size: 2vmin;
+  color: var(--yellow-color);
+}
+
+.parts {
+  perspective: 50vmin;
+}
+
+.part {
+  background: #121212;
+  transform-style: preserve-3d;
+  height: 6vh;
+  color: #fff;
+  font-size: 2vmin;
+  transform-origin: center top;
+  transition: var(--tran);
+  box-shadow: 0 0 1vmin 0 #0008 inset;
+  position: absolute;
+  bottom: -3.75vh;
+  width: calc(100vw - 12vmin);
+  transform-origin: center bottom;
+  border-top: 0.25vmin solid var(--bg-color);
+  border-radius: 0.5vmin;
+  line-height: 2vmin;
+}
+
+.part .part {
+  bottom: 6vh;
+}
+
+.part.r6 {
+  box-shadow: 0 -0.5vmin 1vmin 0vmin #0000004a;
+}
+
+.part.r1:before, .part.r3:before, .part.r5:before, header:before {
+  content: "";
+  background: linear-gradient(93deg, var(--bg-color) 0 45%, #fff0 55% 100%);
+  width: 0.5vmin;
+  height: 100%;
+  position: absolute;
+  left: -0.1vmin;
+}
+
+.part.r1:after, .part.r3:after, .part.r5:after, header:after {
+  content: "";
+  background: linear-gradient(-93deg, var(--bg-color) 0 45%, #fff0 55% 100%);
+  width: 0.5vmin;
+  height: 100%;
+  position: absolute;
+  right: -0.1vmin;
+  top: 0;
+}
+
+.part.r2:before, .part.r4:before, .part.r6:before {
+  content: "";
+  background: linear-gradient(87deg, var(--bg-color) 0 45%, #fff0 55% 100%);
+  width: 0.5vmin;
+  height: 100%;
+  position: absolute;
+  left: -0.1vmin;
+}
+
+.part.r2:after, .part.r4:after, .part.r6:after {
+  content: "";
+  background: linear-gradient(-87deg, var(--bg-color) 0 45%, #fff0 55% 100%);
+  width: 0.5vmin;
+  height: 100%;
+  position: absolute;
+  right: -0.1vmin;
+  top: 0;
+}
+
+
+input { display: none; }
+
+label {
+  position: fixed;
+  bottom: 27.25vh;
+  background: 
+  #ffeb3b;
+  left: calc(100% - 10vmin);
+  z-index: 2;
+  font-size: 4vmin;
+  width: 4.5vmin;
+  height: 4.5vmin;
+  text-align: center;
+  font-weight: 400;
+  border-radius: 100%;
+  transition: all 1.5s ease 0s;
+  transition: all 2s cubic-bezier(0.4, 0.02, 0.325, 1) 0s;
+  cursor: pointer;
+  box-shadow: 0 0 1.5vmin 0 #000;
+
+}
+
+label:hover {
+  background: var(--yellow-color);
+  transition: var(--tran);
+}
+
+label:before {
+  transform: rotate(-45deg);
+  position: absolute;
+  width: 1vmin;
+  height: 1vmin;
+  right: 1.025vmin;
+  top: 0.75vmin;
+  transition: var(--tran);
+  line-height: 3.4vmin;
+  content: "";
+  transform-origin: center;
+  border-bottom: 0.5vmin solid #121212;
+  border-left: 0.5vmin solid #121212;
+}
+
+.copyright {
+	text-align: right;
+	font-size: 10px;
+	font-weight: 300;
+	padding-top: 0.5vmin;
+	color: #222;
+	text-transform: uppercase;
+	line-height: 1vmin;
+	padding-right: 2vmin;
+}
+
+svg {
+  width: 15vmin;
+  float: right;
+}
+
+nav {
+  margin: 2vmin;
+  transition: var(--tran);
+}
+
+nav div {
+  float: right;
+  font-size: 12px;
+  font-weight: 300;
+  text-align: right;
+  line-height: 1.65vmin;
+  margin-top: -1.55vh;
+  color: #9b9dad;
+}
+
+nav div a {
+  font-size: 12px;
+  font-weight: 100;
+  color: #fff;
+  margin: 0;
+}
+
+nav div a + a {
+  margin-right: 0;
+}
+
+.part.r2 > nav div {
+  float: right;
+  margin-top: -1.5vmin;
+}
+
+.part.r6 svg {
+  opacity: 0;
+  transition: var(--tran);
+}
+
+
+a.hide {
+  float: right;
+  margin-right: 4vmin;
+  max-height: 0;
+  transition: max-height 0.1s ease 2s;
+  overflow: hidden;
+  margin-top: -0.5vmin;
+}
+
+a.logo {
+  float: right;
+  margin-top: 0.5vmin;
+  margin-right: 0;
+}
+
+
+.item {
+  background: transparent;
+  width: calc(32% - 2vmin);
+  height: 21vw;
+  margin: 1%;
+  margin-right: 3vmin;
+  display: inline-block;
+  margin-bottom: 3vmin;
+  border-radius: 1vmin;
+  position: relative;
+}
+
+.item:before {
+  content: "";
+  background: transparent;
+  width: calc(100% - 1vmin);
+  height: calc(100% - 60px);
+  top: -1vmin;
+  position: absolute;
+  border-radius: 1vmin;
+  left: -1vmin;
+}
+
+.item:after {
+  content: "";
+  background: #c1c1c1;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-radius: 1vmin;
+  bottom: 1vmin;
+  left: -1vmin;
+}
+
+.item:nth-child(3n + 1) {
+  margin-right: 0 !important;
+}
+
+
+
+
+/* CHECKED */
+
+input:checked + label {
+  bottom: 2.25vh;
+  transition: all 2s cubic-bezier(0.4, 0.02, 0.325, 1) 0s;
+}
+
+input:checked + label:before {
+  transform: rotate(-225deg);
+  top: 1.25vmin;
+}
+
+input:checked ~ section {
+  transition: var(--tran);
+  margin-bottom: 13vh;
+}
+
+input:checked ~ footer {
+  height: 4vh;
+  transition: var(--tran);
+}
+
+input:checked ~ footer .r1 {
+  transition: var(--tran);
+  bottom: -8vh;
+}
+
+input:checked ~ footer .r2 {
+  transform: rotateX(-85deg);
+  transition: var(--tran);
+}
+
+input:checked ~ footer .r3 {
+  transform: rotateX(165deg);
+  transition: var(--tran);
+}
+
+input:checked ~ footer .r4 {
+  transform: rotateX(-165deg);
+  transition: var(--tran);
+}
+
+input:checked ~ footer .r5 {
+  transform: rotateX(165deg);
+  transition: var(--tran);
+}
+
+input:checked ~ footer .r6 {
+  transform: rotateX(-80deg);
+  transition: var(--tran);
+}
+
+input:checked ~ footer nav, 
+input:checked ~ footer nav a {
+  color: var(--bg-color);
+  transition: var(--tran);
+}
+
+input:checked ~ footer nav.big, 
+input:checked ~ footer nav.big a {
+  color: var(--yellow-color);
+  transition: var(--tran);
+  transform: translate3d(0, 0, 0.01vmin);
+}
+
+input:checked ~ footer svg {
+  opacity: 0.015;
+  transition: var(--tran);
+}
+
+input:checked ~ footer nav div {
+  color: #9b9dad40;
+  transition: var(--tran);
+}
+
+input:checked ~ footer .part.r6 svg {
+  opacity: 1;
+  transition: var(--tran);
+}
+
+input:checked ~ footer .hide {
+  max-height: 4vmin;
+  transition: max-height 0.1s ease 2s;
+  overflow: visible;
+}
+
+
+/*** PORTRAIT ***/
+
+@media only screen and (orientation: portrait) {
+
+    .item {
+        width: calc(100% - 2vmin);
+        height: 35vh
+    }
+    
+}
+	</style>
 </head>
 <body>
 <!-- partial:index.partial.html -->
