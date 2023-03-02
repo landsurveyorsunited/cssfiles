@@ -19,7 +19,13 @@ body {
   background: var(--bg-color);
   font-family: 'Lato', Arial, Helvetica, serif;
 }
-
+body {
+  background-image: url('https://storage.ning.com/topology/rest/1.0/file/get/10973563073?profile=original');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
 header {
   background: #121212;
   margin: 0vmin 5vmin 0 5vmin;
@@ -333,7 +339,7 @@ a.logo {
 
 .item:after {
   content: "";
-  background: #c1c1c1;
+  background: #000000;
   width: 50px;
   height: 50px;
   position: absolute;
