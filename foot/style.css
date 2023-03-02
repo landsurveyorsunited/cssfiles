@@ -16,10 +16,9 @@
 body {
   margin: 0;
   padding: 0;
-  background: var(--bg-color);
   font-family: 'Lato', Arial, Helvetica, serif;
 }
-body {
+html {
   background-image: url('https://storage.ning.com/topology/rest/1.0/file/get/10973563073?profile=original');
   background-size: 100%;
   background-repeat: no-repeat;
