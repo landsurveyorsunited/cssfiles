@@ -1,0 +1,606 @@
+<HTML>
+<HEAD>
+<TITLE>HP-35 RPN Calculator</TITLE>
+<!--
+  HP-35 simulator in JavaScript
+  for the HP Museum (http://hpmuseum.org)
+  by Neil Fraser (http://neil.fraser.name)
+  March 2004, Elgin, Scotland.
+
+  This program is free software; you can redistribute it and/or modify it under the terms of version 2 of the GNU General Public License as published by the Free Software Foundation.
+  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  See the GNU General Public License for more details.  http://www.gnu.org/
+-->
+</HEAD>
+
+<BODY TOPMARGIN=0 LEFTMARGIN=0 MARGINHEIGHT=0 MARGINWIDTH=0>
+
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=288 HEIGHT=528>
+<TR>
+<TD COLSPAN=17 WIDTH=288 HEIGHT=51><IMG SRC="hp-top.jpg" WIDTH=288 HEIGHT=51></TD>
+</TR>
+
+<TR>
+<TD WIDTH=44 HEIGHT=18><IMG SRC="hp-left.jpg" WIDTH=44 HEIGHT=18></TD>
+<TD WIDTH=13 HEIGHT=18><IMG NAME="d0" SRC="led.jpg" WIDTH=13 HEIGHT=18></TD>
+<TD WIDTH=13 HEIGHT=18><IMG NAME="d1" SRC="led.jpg" WIDTH=13 HEIGHT=18></TD>
+<TD WIDTH=13 HEIGHT=18><IMG NAME="d2" SRC="led.jpg" WIDTH=13 HEIGHT=18></TD>
+<TD WIDTH=13 HEIGHT=18><IMG NAME="d3" SRC="led.jpg" WIDTH=13 HEIGHT=18></TD>
+<TD WIDTH=13 HEIGHT=18><IMG NAME="d4" SRC="led.jpg" WIDTH=13 HEIGHT=18></TD>
+<TD WIDTH=13 HEIGHT=18><IMG NAME="d5" SRC="led.jpg" WIDTH=13 HEIGHT=18></TD>
+<TD WIDTH=13 HEIGHT=18><IMG NAME="d6" SRC="led.jpg" WIDTH=13 HEIGHT=18></TD>
+<TD WIDTH=13 HEIGHT=18><IMG NAME="d7" SRC="led.jpg" WIDTH=13 HEIGHT=18></TD>
+<TD WIDTH=13 HEIGHT=18><IMG NAME="d8" SRC="led.jpg" WIDTH=13 HEIGHT=18></TD>
+<TD WIDTH=13 HEIGHT=18><IMG NAME="d9" SRC="led.jpg" WIDTH=13 HEIGHT=18></TD>
+<TD WIDTH=13 HEIGHT=18><IMG NAME="d10" SRC="led.jpg" WIDTH=13 HEIGHT=18></TD>
+<TD WIDTH=13 HEIGHT=18><IMG NAME="d11" SRC="led.jpg" WIDTH=13 HEIGHT=18></TD>
+<TD WIDTH=13 HEIGHT=18><IMG NAME="d12" SRC="led.jpg" WIDTH=13 HEIGHT=18></TD>
+<TD WIDTH=13 HEIGHT=18><IMG NAME="d13" SRC="led.jpg" WIDTH=13 HEIGHT=18></TD>
+<TD WIDTH=13 HEIGHT=18><IMG NAME="d14" SRC="led.jpg" WIDTH=13 HEIGHT=18></TD>
+<TD WIDTH=49 HEIGHT=18><IMG SRC="hp-right.jpg" WIDTH=49 HEIGHT=18></TD>
+</TR>
+
+<TR>
+<TD COLSPAN=17 WIDTH=288 HEIGHT=41><IMG SRC="hp-middle.jpg" WIDTH=288 HEIGHT=41></TD>
+</TR>
+
+<TR>
+<TD COLSPAN=17 WIDTH=288 HEIGHT=21><IMG NAME="power_img" SRC="hp-on.jpg" WIDTH=288 HEIGHT=21 BORDER=0 USEMAP="#powermap"></TD>
+</TR>
+
+<TR>
+<TD COLSPAN=17 WIDTH=288 HEIGHT=397><IMG SRC="hp-keys.jpg" WIDTH=288 HEIGHT=397 BORDER=0 USEMAP="#keymap"></TD>
+</TR>
+</TABLE>
+
+<SCRIPT LANGUAGE="JavaScript1.1">
+<!--
+function ExplorerFix() {
+  // Remove the ugly dotted lines from Explorer's image map
+  for (a in document.links)
+    document.links[a].onfocus = document.links[a].blur;
+}
+if (document.all) {
+  document.onmousedown = ExplorerFix;
+}
+
+
+// Power mode
+var power_mode = 1;
+power_on = new Image(288, 21);
+power_on.src="hp-on.jpg";
+power_off = new Image(288, 21);
+power_off.src="hp-off.jpg";
+
+function power_switch() {
+  power_mode = !power_mode;
+  document.power_img.src = (power_mode ? power_on.src : power_off.src);
+  key_clr();
+}
+
+// Preload the digits
+led_a = new Image(13, 18); led_a.src="led.jpg";
+led_b = new Image(13, 18); led_b.src="led-decimal.gif";
+led_c = new Image(13, 18); led_c.src="led-minus.gif";
+led_d = new Image(13, 18); led_d.src="led-0.gif";
+led_e = new Image(13, 18); led_e.src="led-1.gif";
+led_f = new Image(13, 18); led_f.src="led-2.gif";
+led_g = new Image(13, 18); led_g.src="led-3.gif";
+led_h = new Image(13, 18); led_h.src="led-4.gif";
+led_i = new Image(13, 18); led_i.src="led-5.gif";
+led_j = new Image(13, 18); led_j.src="led-6.gif";
+led_k = new Image(13, 18); led_k.src="led-7.gif";
+led_l = new Image(13, 18); led_l.src="led-8.gif";
+led_m = new Image(13, 18); led_m.src="led-9.gif";
+led_n = new Image(13, 18); led_n.src="led-error1.gif";
+led_o = new Image(13, 18); led_o.src="led-error2.gif";
+
+function display() {
+  // Print the contents of 'd' onto the LED display.
+  var srcs = new Array();
+  for (count = 0; count < 16 ; count++) {
+    digit = d.charAt(count);
+    if (digit && "0123456789".indexOf(digit) != -1)
+      srcs[count] = "led-"+digit+".gif";
+    else if ("." == digit)
+      srcs[count] = "led-decimal.gif";
+    else if ("-" == digit)
+      srcs[count] = "led-minus.gif";
+    else if ("X" == digit)
+      srcs[count] = "led-error1.gif";
+    else if ("x" == digit)
+      srcs[count] = "led-error2.gif";
+    else
+      srcs[count] = "led.jpg";
+    if (!power_mode)
+      srcs[count] = "led.jpg";
+  }
+  document.d0.src = srcs[0];
+  document.d1.src = srcs[1];
+  document.d2.src = srcs[2];
+  document.d3.src = srcs[3];
+  document.d4.src = srcs[4];
+  document.d5.src = srcs[5];
+  document.d6.src = srcs[6];
+  document.d7.src = srcs[7];
+  document.d8.src = srcs[8];
+  document.d9.src = srcs[9];
+  document.d10.src = srcs[10];
+  document.d11.src = srcs[11];
+  document.d12.src = srcs[12];
+  document.d13.src = srcs[13];
+  document.d14.src = srcs[14];
+}
+
+// The Global Registers
+var x; // 1st register (mapped onto the display)
+var y; // 2nd register
+var z; // 3rd register
+var t; // 4th register
+var s; // memory
+var d; // display (text version of x)
+
+// The Typing Mode
+var mode = 0;
+//-1 - Typing a digit will replace x, and be negative (CH S)
+// 0 - Typing a digit will replace x
+// 1 - Typing a digit will append to x
+// 2 - Typing a digit will append to x after decimal
+// 3 - Typing a digit will appear in the exponent
+
+// The Arc Mode
+var arc = 0;
+
+// "The stack is automatically raised by an entry into x or by RCL
+// unless the entry immediately follows CLx, STO or ENTER."
+var auto_enter = 0;
+
+function x2d() {
+  // Convert the JavaScript number 'x' into the display digits for 'd', then display it.
+  // e.g.  6 => ' 6.'
+  // Sometimes has the side-effect of resetting 'x' to a legal value.
+  var MaxFloat = 9.999999999 * Math.pow(10, 99);
+  if (isNaN(x) || x == Number.NEGATIVE_INFINITY || x == Number.POSITIVE_INFINITY) {
+    // "improper operations flash display"
+    d = ' Xx';
+    x = 0;
+  } else if (x >= MaxFloat) {
+    // posative overflow is written as maximum number
+    d = ' 9.999999999 99';
+    x = MaxFloat;
+  } else if (-MaxFloat >= x) {
+    // negative overflow is written as minimum number
+    d = '-9.999999999 99';
+    x = -MaxFloat;
+  } else {
+    // a valid number
+    var ext = '';
+    d = x;
+    if (Math.abs(d) > 9999999999) {
+      // switch to exponential notation
+      ext = 0;
+      while (Math.abs(d) >= 10) {
+        ext++;
+        d = d/10;
+      }
+      ext = ' '+ext;
+    } else if (d != 0 && Math.abs(d) < .01) {
+      // switch to exponential notation
+      ext = 0;
+      while (Math.abs(d) < 1) {
+        ext++;
+        d = d*10;
+      }
+      if (ext > 99) {
+        // underflow is written as zero
+        d = 0;
+        ext = '';
+        x = 0;
+      } else if (ext > 9) {
+        ext = '-' + ext;
+      } else {
+        ext = '-0' + ext;
+      }
+    }
+    if (!ext) // Round away some rounding errors on simple numbers.
+      d = Math.round(d*10000000000)/10000000000;
+    if (x < 0)
+      d = '-'+(-d);
+    else
+      d = ' '+d;
+    if (d.indexOf('.') == -1)
+      d = d + '.';
+    if (d.length > 3 && d.charAt(1) == '0' && d.charAt(2) == '.')
+      d = d.charAt(0) + d.substring(2);
+    d = (d+"               ").substring(0, 12)+ext;
+  }
+  // Display the result.
+  display();
+}
+
+function d2x() {
+  // Convert the display digits for 'd' into the JavaScript number 'x'.
+  // e.g.  ' 06.0' => 6
+  x = parseFloat((d+"               ").substring(0, 12));
+  if (isNaN(x)) x = 0;
+
+  var ext = (d+"               ").substring(12, 15);
+  ext = parseInt(ext, 10);
+
+  if (!isNaN(ext))
+    x = x * Math.pow(10, ext);
+}
+
+function key_clx() {
+  x = 0;
+  x2d();
+  mode = 0;
+  arc = 0;
+  auto_enter = 0;
+}
+
+function key_clr() {
+  y = 0;
+  z = 0;
+  t = 0;
+  s = 0;
+  key_clx();
+}
+
+function key_enter() {
+  d2x();
+  t=z;
+  z=y;
+  y=x;
+  mode = 0;
+  arc = 0;
+  auto_enter = 0;
+}
+
+function key_r() {
+  d2x();
+  temp = x;
+  x = y;
+  y = z;
+  z = t;
+  t = temp
+  x2d();
+  mode = 0;
+  arc = 0;
+  auto_enter = 1;
+}
+
+function key_xy() {
+  d2x();
+  temp = x;
+  x = y;
+  y = temp;
+  x2d();
+  mode = 0;
+  arc = 0;
+  auto_enter = 1;
+}
+
+function key_sto() {
+  d2x();
+  s = x;
+  mode = 0;
+  arc = 0;
+  auto_enter = 0;
+}
+
+function key_rcl() {
+  if (auto_enter) key_enter();
+  x = s;
+  x2d();
+  mode = 0;
+  arc = 0;
+  auto_enter = 1;
+}
+
+function key_pi() {
+  if (auto_enter) key_enter();
+  x = 3.141592654;
+  x2d();
+  mode = 0;
+  arc = 0;
+  auto_enter = 1;
+}
+
+function key_add() {
+  d2x();
+  x = y + x;
+  y = z;
+  z = t;
+  x2d();
+  mode = 0;
+  arc = 0;
+  auto_enter = 1;
+}
+
+function key_subtract() {
+  d2x();
+  x = y - x;
+  y = z;
+  z = t;
+  x2d();
+  mode = 0;
+  arc = 0;
+  auto_enter = 1;
+}
+
+function key_multiply() {
+  d2x();
+  x = y * x;
+  y = z;
+  z = t;
+  x2d();
+  mode = 0;
+  arc = 0;
+  auto_enter = 1;
+}
+
+function key_divide() {
+  d2x();
+  x = y / x;
+  y = z;
+  z = t;
+  x2d();
+  mode = 0;
+  arc = 0;
+  auto_enter = 1;
+}
+
+function key_sqrt() {
+  d2x();
+  x = Math.sqrt(x);
+  x2d();
+  mode = 0;
+  arc = 0;
+  auto_enter = 1;
+}
+
+function key_pow() {
+  d2x();
+  x = Math.pow(x, y);
+  y = z;
+  z = t;
+  x2d();
+  mode = 0;
+  arc = 0;
+  auto_enter = 1;
+}
+
+function key_epow() {
+  d2x();
+  x = Math.pow(Math.E, x);
+  x2d();
+  mode = 0;
+  arc = 0;
+  auto_enter = 1;
+}
+
+function key_ln() {
+  d2x();
+  x = Math.log(x);
+  x2d();
+  mode = 0;
+  arc = 0;
+  auto_enter = 1;
+}
+
+function key_log() {
+  d2x();
+  x = Math.LOG10E * Math.log(x);
+  x2d();
+  mode = 0;
+  arc = 0;
+  auto_enter = 1;
+}
+
+function key_inv() {
+  d2x();
+  x = 1/x;
+  x2d();
+  mode = 0;
+  arc = 0;
+  auto_enter = 1;
+}
+
+function key_arc() {
+  arc = 1;
+  auto_enter = 1;
+}
+
+function key_sin() {
+  d2x();
+  if (arc == 1) {
+    angle = Math.asin(x);
+    x = angle * 180 / Math.PI;
+  } else {
+    angle = Math.PI / 180 * x;
+    x = Math.sin(angle);
+  }
+  t = z;
+  x2d();
+  mode = 0;
+  arc = 0;
+  auto_enter = 1;
+}
+
+function key_cos() {
+  d2x();
+  if (arc == 1) {
+    angle = Math.acos(x);
+    x = angle * 180 / Math.PI;
+  } else {
+    angle = Math.PI / 180 * x;
+    x = Math.cos(angle);
+  }
+  t = z;
+  x2d();
+  mode = 0;
+  arc = 0;
+  auto_enter = 1;
+}
+
+function key_tan() {
+  d2x();
+  if (arc == 1) {
+    angle = Math.atan(x);
+    x = angle * 180 / Math.PI;
+  } else {
+    angle = Math.PI / 180 * x;
+    x = Math.tan(angle);
+  }
+  t = z;
+  x2d();
+  mode = 0;
+  arc = 0;
+  auto_enter = 1;
+}
+
+function key_eex() {
+  d2x();
+  if (x == 0)
+    key_num(1);
+  // 'EEX' automatically presses '1' for you if the display equals zero.
+  mode = 3;
+  arc = 0;
+  auto_enter = 1;
+}
+
+function key_chs() {
+  if (mode == 3) {
+    // Exponential mode
+    if ((d+"               ").substring(12, 15) == "   ") {
+      // Only works if exponent is empty.
+      d = (d+"               ").substring(0, 12)+"-00";
+      display();
+    }
+  } else {
+    // Integer and decimal modes
+    if (d.charAt(0) == "-")
+      d = " "+d.substring(1);
+    else
+      d = "-"+d.substring(1);
+    display();
+    if (mode == 0) // New number mode
+      mode = -1; // HP-35 has a very broken CHS implementation
+  }
+  arc = 0;
+}
+
+function key_decimal() {
+  if (mode == 4) {
+    // The decimal key == the 0 key in exponent mode.  Interesting.
+    key_num(0);
+  } else {
+    if (mode == -1) {
+      x2d(); // restore old number (prior to CH S)
+      if (auto_enter) key_enter();
+      d = '-.';
+      x = 0;
+    } else if (mode == 0) {
+      if (auto_enter) key_enter();
+      d = ' .';
+      x = 0;
+    }
+    display();
+    mode = 2;
+    arc = 0;
+  }
+}
+
+function key_num(num) {
+  if (mode == 3) {
+    // Exponential mode
+    var exp = (d+"                ").charAt(14);
+    if (exp == " ") exp = '0';
+    d = (d+"                ").substring(0, 13)+exp+num;
+  } else if (mode == -1) {
+    x2d(); // restore old number (prior to CH S)
+    if (auto_enter) key_enter();
+    d = '-'+num+'.';
+    mode = 1;
+  } else if (mode == 0) {
+    if (auto_enter) key_enter();
+    d = ' '+num+'.';
+    mode = 1;
+  } else if (d.length >= 12) {
+    return; // Too many digits.
+  } else if (mode == 1) {
+    // Integer mode
+    dec = d.indexOf('.');
+    d = d.substring(0, dec) + num + '.';
+  } else if (mode == 2) {
+    // Decimal mode
+    d = d + num;
+  }
+  display();
+  d2x();
+  arc = 0;
+}
+
+function about() {
+  alert('HP-35 simulator in JavaScript\nfor the HP Museum (http://hpmuseum.org)\nby Neil Fraser (http://neil.fraser.name)\nMarch 2004, Elgin, Scotland.');
+}
+
+key_clr();
+//-->
+</SCRIPT>
+
+<MAP NAME="powermap">
+<AREA SHAPE=RECT COORDS="65,1,100,21" HREF="javascript:power_switch()" TITLE="OFF/ON"></AREA>
+</MAP>
+
+<MAP NAME="keymap">
+<AREA SHAPE=RECT COORDS="42,14,77,41" HREF="javascript:key_pow()" TITLE="x^y"></AREA>
+<AREA SHAPE=RECT COORDS="84,14,119,41" HREF="javascript:key_log()" TITLE="LOG"></AREA>
+<AREA SHAPE=RECT COORDS="124,14,159,41" HREF="javascript:key_ln()" TITLE="LN"></AREA>
+<AREA SHAPE=RECT COORDS="165,14,200,41" HREF="javascript:key_epow()" TITLE="e^x"></AREA>
+<AREA SHAPE=RECT COORDS="206,14,241,41" HREF="javascript:key_clr()" TITLE="CLR"></AREA>
+
+<AREA SHAPE=RECT COORDS="42,57,77,84" HREF="javascript:key_sqrt()" TITLE="ROOT"></AREA>
+<AREA SHAPE=RECT COORDS="84,57,119,84" HREF="javascript:key_arc()" TITLE="ARC"></AREA>
+<AREA SHAPE=RECT COORDS="124,57,159,84" HREF="javascript:key_sin()" TITLE="SIN"></AREA>
+<AREA SHAPE=RECT COORDS="165,57,200,84" HREF="javascript:key_cos()" TITLE="COS"></AREA>
+<AREA SHAPE=RECT COORDS="206,57,241,84" HREF="javascript:key_tan()" TITLE="TAN"></AREA>
+
+<AREA SHAPE=RECT COORDS="42,100,77,127" HREF="javascript:key_inv()" TITLE="1/x"></AREA>
+<AREA SHAPE=RECT COORDS="84,100,119,127" HREF="javascript:key_xy()" TITLE="x&lt;&gt;y"></AREA>
+<AREA SHAPE=RECT COORDS="124,100,159,127" HREF="javascript:key_r()" TITLE="R"></AREA>
+<AREA SHAPE=RECT COORDS="165,100,200,127" HREF="javascript:key_sto()" TITLE="STO"></AREA>
+<AREA SHAPE=RECT COORDS="206,100,241,127" HREF="javascript:key_rcl()" TITLE="RCL"></AREA>
+
+<AREA SHAPE=RECT COORDS="42,142,119,169" HREF="javascript:key_enter()" TITLE="ENTER"></AREA>
+<AREA SHAPE=RECT COORDS="124,142,159,169" HREF="javascript:key_chs()" TITLE="CH S"></AREA>
+<AREA SHAPE=RECT COORDS="165,142,200,169" HREF="javascript:key_eex()" TITLE="E EX"></AREA>
+<AREA SHAPE=RECT COORDS="206,142,241,169" HREF="javascript:key_clx()" TITLE="CL x"></AREA>
+
+<AREA SHAPE=RECT COORDS="42,185,71,214" HREF="javascript:key_subtract()" TITLE="-"></AREA>
+<AREA SHAPE=RECT COORDS="84,185,124,214" HREF="javascript:key_num(7)" TITLE="7"></AREA>
+<AREA SHAPE=RECT COORDS="142,185,182,214" HREF="javascript:key_num(8)" TITLE="8"></AREA>
+<AREA SHAPE=RECT COORDS="201,185,241,214" HREF="javascript:key_num(9)" TITLE="9"></AREA>
+
+<AREA SHAPE=RECT COORDS="42,228,71,257" HREF="javascript:key_add()" TITLE="+"></AREA>
+<AREA SHAPE=RECT COORDS="84,228,124,257" HREF="javascript:key_num(4)" TITLE="4"></AREA>
+<AREA SHAPE=RECT COORDS="142,228,182,257" HREF="javascript:key_num(5)" TITLE="5"></AREA>
+<AREA SHAPE=RECT COORDS="201,228,241,257" HREF="javascript:key_num(6)" TITLE="6"></AREA>
+
+<AREA SHAPE=RECT COORDS="42,271,71,300" HREF="javascript:key_multiply()" TITLE="*"></AREA>
+<AREA SHAPE=RECT COORDS="84,271,124,300" HREF="javascript:key_num(1)" TITLE="1"></AREA>
+<AREA SHAPE=RECT COORDS="142,271,182,300" HREF="javascript:key_num(2)" TITLE="2"></AREA>
+<AREA SHAPE=RECT COORDS="201,271,241,300" HREF="javascript:key_num(3)" TITLE="3"></AREA>
+
+<AREA SHAPE=RECT COORDS="42,313,71,342" HREF="javascript:key_divide()" TITLE="/"></AREA>
+<AREA SHAPE=RECT COORDS="84,313,124,342" HREF="javascript:key_num(0)" TITLE="0"></AREA>
+<AREA SHAPE=RECT COORDS="142,313,182,342" HREF="javascript:key_decimal()" TITLE="."></AREA>
+<AREA SHAPE=RECT COORDS="201,313,241,342" HREF="javascript:key_pi()" TITLE="pi"></AREA>
+
+<AREA SHAPE=RECT COORDS="44,363,70,373" HREF="javascript:about()" TITLE="About..."></AREA>
+</MAP>
+
+</BODY>
+</HTML>
+
