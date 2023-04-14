@@ -1,0 +1,37 @@
+/* hide certain elements from printing */
+header, #footer, .banner, .buttonbar, .right-sidebar, #nav_bottom, .floating-header {
+  display: none !important;
+}
+
+/* adjust page layout for printing */
+#main-content {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* adjust font size for printing */
+body {
+  font-size: 14pt;
+}
+
+/* adjust background color for printing */
+body {
+  background-color: white;
+}
+
+/* adjust link color for printing */
+a {
+  color: black;
+}
+
+/* adjust image size for printing */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* add a page break before certain elements */
+.page-break {
+  page-break-before: always;
+}
