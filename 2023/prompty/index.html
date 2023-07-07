@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - gclick2</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+Enter value for variable 1
+<html>
+<head>
+  <title>Grant Proposal</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <button id="togglePanelButton">Toggle Panel</button>
+
+  <div class="container">
+    <div id="coverLetter" class="section" onclick="copyTemplate('coverLetter')">
+      <div class="template">
+        <h2>Cover Letter</h2>
+        <p>Template content goes here...</p>
+        <button class="copy-button" onclick="copyTemplateContent('coverLetter')">Copy</button>
+  
+      </div>
+      <div class="hidden">
+        <div class="editor">
+          <input id="coverLetterInput1" type="text" placeholder="Enter value for variable 1">
+          <input type="text" placeholder="Enter value for variable 2">
+        </div>
+        <div class="buttons">
+          <button onclick="saveChanges('coverLetter')">Save</button>
+          <button onclick="closeSection('coverLetter')">Close</button>
+        </div>
+      </div>
+    </div>
+    <div id="orgBackground" class="section" onclick="copyTemplate('orgBackground')">
+      <div class="template">
+        <h2>Organizational Background</h2>
+        <p>Template content goes here...</p>
+         <button class="copy-button" onclick="copyTemplateContent('orgBackground')">Copy</button>
+   
+      </div>
+      <div class="hidden">
+        <div class="editor">
+          <input id="orgBackgroundInput1" type="text" placeholder="Enter value for variable 1">
+          <input type="text" placeholder="Enter value for variable 2">
+        </div>
+        <div class="buttons">
+          <button onclick="saveChanges('orgBackground')">Save</button>
+          <button onclick="closeSection('orgBackground')">Close</button>
+        </div>
+      </div>
+    </div>
+    <div id="problemStatement" class="section" onclick="copyTemplate('problemStatement')">
+      <div class="template">
+        <h2>Problem Statement</h2>
+        <p>Template content goes here...</p>
+         <button class="copy-button" onclick="copyTemplateContent('problemStatement')">Copy</button>
+  
+      </div>
+      <div class="hidden">
+        <div class="editor">
+          <input id="problemStatementInput1" type="text" placeholder="Enter value for variable 1">
+          <input type="text" placeholder="Enter value for variable 2">
+        </div>
+        <div class="buttons">
+          <button onclick="saveChanges('problemStatement')">Save</button>
+          <button onclick="closeSection('problemStatement')">Close</button>
+        </div>
+      </div>
+    </div>
+    <div id="projectGoals" class="section" onclick="copyTemplate('projectGoals')">
+      <div class="template">
+        <h2>Project Goals</h2>
+        <p>Template content goes here...</p>
+          <button class="copy-button" onclick="copyTemplateContent('projectGoals')">Copy</button>
+   
+      </div>
+      <div class="hidden">
+        <div class="editor">
+          <input id="projectGoalsInput1" type="text" placeholder="Enter value for variable 1">
+          <input type="text" placeholder="Enter value for variable 2">
+        </div>
+        <div class="buttons">
+          <button onclick="saveChanges('projectGoals')">Save</button>
+          <button onclick="closeSection('projectGoals')">Close</button>
+        </div>
+      </div>
+    </div>
+    <div id="projectDesign" class="section" onclick="copyTemplate('projectDesign')">
+      <div class="template">
+        <h2>Project Design</h2>
+        <p>Template content goes here...</p>
+         <button class="copy-button" onclick="copyTemplateContent('projectDesign')">Copy</button>
+  
+      </div>
+      <div class="hidden">
+        <div class="editor">
+          <input id="projectDesignInput1" type="text" placeholder="Enter value for variable 1">
+          <input type="text" placeholder="Enter value for variable 2">
+        </div>
+        <div class="buttons">
+          <button onclick="saveChanges('projectDesign')">Save</button>
+          <button onclick="closeSection('projectDesign')">Close</button>
+        </div>
+      </div>
+    </div>
+    <div id="methodsStrategies" class="section" onclick="copyTemplate('methodsStrategies')">
+      <div class="template">
+        <h2>Methods and Strategies</h2>
+        <p>Template content goes here...</p>
+          <button class="copy-button" onclick="copyTemplateContent('methodsStrategies')">Copy</button>
+   
+      </div>
+      <div class="hidden">
+        <div class="editor">
+          <input id="methodsStrategiesInput1" type="text" placeholder="Enter value for variable 1">
+          <input type="text" placeholder="Enter value for variable 2">
+        </div>
+        <div class="buttons">
+          <button onclick="saveChanges('methodsStrategies')">Save</button>
+          <button onclick="closeSection('methodsStrategies')">Close</button>
+        </div>
+      </div>
+    </div>
+    <div id="planEvaluation" class="section" onclick="copyTemplate('planEvaluation')">
+      <div class="template">
+        <h2>Plan of Evaluation</h2>
+        <p>Template content goes here...</p>
+         <button class="copy-button" onclick="copyTemplateContent('planEvaluation')">Copy</button>
+   
+      </div>
+      <div class="hidden">
+        <div class="editor">
+          <input id="planEvaluationInput1" type="text" placeholder="Enter value for variable 1">
+          <input type="text" placeholder="Enter value for variable 2">
+        </div>
+        <div class="buttons">
+          <button onclick="saveChanges('planEvaluation')">Save</button>
+          <button onclick="closeSection('planEvaluation')">Close</button>
+        </div>
+
+      </div>
+    </div>
+    <div id="sustainabilityPlan" class="section" onclick="copyTemplate('sustainabilityPlan')">
+      <div class="template">
+        <h2>Sustainability Plan</h2>
+        <p>Template content goes here...</p>
+           <button class="copy-button" onclick="copyTemplateContent('sustainabilityPlan')">Copy</button>
+  
+      </div>
+      <div class="hidden">
+        <div class="editor">
+          <input id="sustainabilityPlanInput1" type="text" placeholder="Enter value for variable 1">
+          <input type="text" placeholder="Enter value for variable 2">
+        </div>
+        <div class="buttons">
+          <button onclick="saveChanges('sustainabilityPlan')">Save</button>
+          <button onclick="closeSection('sustainabilityPlan')">Close</button>
+        </div>
+      </div>
+    </div>
+    <!-- Repeat the structure for other sections -->
+    <!-- Budget information, Appendices -->
+    <div id="budgetInformation" class="section">
+      <div class="template">
+        <!-- Budget Information Template -->
+        <h2>Budget Information</h2>
+        <p>Template content goes here...</p>
+          <button class="copy-button" onclick="copyTemplateContent('budgetInformation')">Copy</button>
+   
+      </div>
+      <div class="hidden">
+        <div class="editor">
+          <!-- Editing inputs and variables list -->
+          <input id="budgetInformationInput1" type="text" placeholder="Enter value for variable 1">
+          <input type="text" placeholder="Enter value for variable 2">
+          <!-- Add more input fields for each variable -->
+        </div>
+        <div class="buttons">
+          <button onclick="saveChanges('budgetInformation')">Save</button>
+          <button onclick="closeSection('budgetInformation')">Close</button>
+        </div>
+      </div>
+    </div>
+    <!-- Repeat the structure for other sections -->
+    <!-- Appendices -->
+    <div id="appendices" class="section">
+      <div class="template">
+        <!-- Appendices Template -->
+        <h2>Appendices</h2>
+        <p>Template content goes here...</p>
+          <button class="copy-button" onclick="copyTemplateContent('appendices')">Copy</button>
+  
+      </div>
+      <div class="hidden">
+        <div class="editor">
+          <!-- Editing inputs and variables list -->
+          <input id="appendicesInput1" type="text" placeholder="Enter value for variable 1">
+          <input type="text" placeholder="Enter value for variable 2">
+          <!-- Add more input fields for each variable -->
+        </div>
+        <div class="buttons">
+          <button onclick="saveChanges('appendices')">Save</button>
+          <button onclick="closeSection('appendices')">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="side-panel" id="sidePanel">
+  <button class="close-button" onclick="closeSidePanel()">Close</button>
+  <div id="mergedDocument" class="merged-document">
+    <!-- Merged document content goes here... -->
+  </div>
+</div>
+
+<script>function copyTemplate(sectionId) {
+  var templateDiv = document.getElementById(sectionId).querySelector('.template');
+  var hiddenDiv = document.getElementById(sectionId).querySelector('.hidden');
+  var editorInputs = hiddenDiv.querySelectorAll('.editor input');
+  
+  editorInputs.forEach(function(input) {
+    var variable = input.placeholder.match(/\[(.*?)\]/);
+    if (variable) {
+      input.value = templateDiv.innerHTML.match(new RegExp(variable[1], 'g')).join(' ');
+    }
+  });
+  
+  hiddenDiv.style.display = 'block';
+  templateDiv.style.display = 'none';
+}
+
+function saveChanges(sectionId) {
+  var hiddenDiv = document.getElementById(sectionId).querySelector('.hidden');
+  var editorInputs = hiddenDiv.querySelectorAll('.editor input');
+  var templateDiv = document.getElementById(sectionId).querySelector('.template');
+  
+  editorInputs.forEach(function(input) {
+    var variable = input.placeholder.match(/\[(.*?)\]/);
+    if (variable) {
+      var variableRegex = new RegExp('\\[' + variable[1] + '\\]', 'g');
+      templateDiv.innerHTML = templateDiv.innerHTML.replace(variableRegex, input.value);
+    }
+  });
+  
+  hiddenDiv.style.display = 'none';
+  templateDiv.style.display = 'block';
+}
+
+function closeSection(sectionId) {
+  var hiddenDiv = document.getElementById(sectionId).querySelector('.hidden');
+  var templateDiv = document.getElementById(sectionId).querySelector('.template');
+  
+  hiddenDiv.style.display = 'none';
+  templateDiv.style.display = 'block';
+}
+
+  </script>
+  <script>
+    function copyTemplateContent(sectionId) {
+      var templateDiv = document.getElementById(sectionId).querySelector('.template');
+      var textArea = document.createElement('textarea');
+      textArea.value = templateDiv.innerText;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+    }
+  </script>
+</body>
+  <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
