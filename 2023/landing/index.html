@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Split screen layout</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300|Raleway:200,900|Over+the+Rainbow' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width, user-scalable=no"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300|Raleway:200,900|Over+the+Rainbow' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width, user-scalable=no">
+  <style>
+    .container {
+      position: relative;
+      max-width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .iframe-container {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .iframe-container iframe {
+      width: 100%;
+      height: 100%;
+    }
+
+    .image-container {
+      position: relative;
+      width: 100%;
+      height: auto;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+    }</style>
+<header>
+  <div class="hero">
+    <div class="hamb-wrap">
+      <div class="hamb"></div>
+    </div>
+    <p class="logo">Land Surveyors United</p>
+    <nav>
+      <ul>
+        <li>
+          <a href="#">Community</a>
+        </li>
+        <li>
+          <a href="#">Membership</a>
+        </li>
+        <li>
+          <a href="#">Tools</a>
+        </li>
+        <li>
+          <a href="#">Resources</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<section class="content">
+  <div class="container">
+    <div class="image-container">
+      <img src="https://storage.ning.com/topology/rest/1.0/file/get/12185186285?profile=RESIZE_1200x" alt="Image" onclick="showIframe()">
+      <div class="iframe-container" id="iframeContainer">
+        <iframe src="https://landsurveyorsunited.com/main/authorization/signUp?" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+  <h1>Welcome to Land Surveyors United</h1>
+  <p>With a vast membership exceeding 21,000 surveyors and over 2,700 esteemed organizations spanning 160 countries, Land Surveyors United stands unrivaled as the nexus where industry, government, and academia converge to champion professional land surveying and geospatial sciences.</p>
+  <img /><img src="https://storage.ning.com/topology/rest/1.0/file/get/12185189259?profile=RESIZE_584x" class="fr" height="250" width="250"/><p>By becoming a part of Land Surveyors United, you gain exclusive access to a plethora of valuable activities and services, including:
+
+   <ul>
+  <li>Up-to-the-minute survey industry insights, recent news, and indispensable information.</li>
+  <li>Tailored forums for categorical discussions, fostering dialogue on innovative ideas, effective solutions, and shared experiences among peers and potential clients.</li>
+  <li>Unparalleled networking prospects, connecting you with likeminded professionals and influential figures in both the industry and government sectors.</li>
+  <li>Substantial discounts on a diverse array of products, cutting-edge equipment, software solutions, and data downloads within the renowned Surveyor's Market, exclusive to Land Surveyors United.</li>
+  <li>Subscriptions to our informative partner publications, keeping you abreast of the latest developments and trends.</li>
+  <li>Essential, cost-free tools designed to empower owners and operators of surveying businesses.</li>
+  <li>Purpose-built communication hubs, facilitating collaboration and knowledge exchange across continents, countries, and states worldwide.</li>
+  <li>Privileged entry to Land Surveyors United's Members-Only enclave, an exclusive community within the larger network.</li>
+</ul></p>
+  <p>Elevate your professional journey by becoming an integral part of the planet's largest community of dedicated land surveyors. Embrace the countless opportunities that await within Land Surveyors United. Join us today and redefine your surveying experience!</p>
+  <img src="https://storage.ning.com/topology/rest/1.0/file/get/12185189079?profile=RESIZE_400x" class="fl" height="250" width="250"/><p>As members of the Land Surveyors United community, we understand the importance of collaboration and networking in our industry. By actively participating in local surveying events, we not only expand our knowledge and skills but also foster meaningful connections with fellow professionals. In this article, we will explore the benefits of event participation, share tips for increasing attendance, and highlight the exciting features available on the Land Surveyors United platform.</p>
+  <p>Enjoy, explore and contribute your surveying experiences to our community....a living library of land surveying which is not controlled by 3rd party interests- it is controlled by you, the surveyor. No one else in the world, aside from our community members, catalogs changes in the surveying industry. No one else focuses on collecting, curating and showcasing the importance of land surveyors to society for future generations to learn from and to promote public awareness of this importance.  We do and thank you for being a part of this effort.
+
+It takes just a few moments per week for you to curate a rock solid legacy in surveying right from your LSU Profile, and every minute you spend sharing your experience will breathe ten years of life into the profession.  Everything you add to this community will someday outlive all of us..which is why I spend so much time doing what I can to make our network as sustainable as possible without having to rely on 3rd parties.</p>
+</section>
+<script>
+    function showIframe() {
+      var iframeContainer = document.getElementById("iframeContainer");
+      iframeContainer.style.display = "block";
+    }
+  </script>
+<!-- partial -->
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/velocity/1.3.1/velocity.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 21px;
+  font-family: "Open Sans";
+}
+
+html, body {
+  height: 100%;
+}
+
+h1 {
+  font-family: "Raleway";
+  font-size: 2.3em;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  color: #cc0000;
+  margin-bottom: 0.3em;
+}
+
+p {
+  font-weight: 200;
+  color: #FFF;
+}
+
+.fl {
+  float: left;
+  margin: 20px;
+}
+
+.fr {
+  float: right;
+  margin: 20px;
+}
+
+.hero {
+  width: 40%;
+  height: 100%;
+  position: fixed;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 30%), url(https://storage.ning.com/topology/rest/1.0/file/get/1206145339?profile=RESIZE_1200x&width=1000);
+  background-size: cover;
+  background-position: center 30%;
+}
+.hero .hamb-wrap {
+  height: 30px;
+  width: 40px;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  cursor: pointer;
+  z-index: 2;
+}
+.hero .hamb {
+  height: 3px;
+  width: 35px;
+  background: #fff;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  transition: 0.2s;
+  border-radius: 10% 10% 10% 10%/40% 40% 40% 40%;
+}
+.hero .hamb:before, .hero .hamb:after {
+  content: "";
+  position: absolute;
+  background: #fff;
+  height: 3px;
+  width: 100%;
+  transition: 0.2s;
+  border-radius: 10% 10% 10% 10%/50% 50% 50% 50%;
+}
+.hero .hamb:before {
+  top: 8px;
+}
+.hero .hamb:after {
+  top: -8px;
+}
+.hero .active {
+  background: none;
+  transition: 0.2s;
+}
+.hero .active:before, .hero .active:after {
+  transition: 0.2s;
+  top: 0;
+}
+.hero .active:before {
+  transform: rotate(45deg);
+}
+.hero .active:after {
+  transform: rotate(-45deg);
+}
+.hero .logo {
+  color: white;
+  font-family: "Raleway";
+  text-decoration: bold;
+  font-size: 1.9em;
+  margin: 0 0 0 85px;
+  line-height: 2;
+}
+.hero nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding-top: 60px;
+  font-family: "Raleway";
+  font-size: 2em;
+  display: none;
+  background: rgba(0, 0, 0, 0.8);
+}
+.hero nav ul {
+  margin: 0 0 0 25px;
+  padding: 0;
+}
+.hero nav li {
+  list-style-type: none;
+  margin: 25px 0;
+  position: relative;
+}
+.hero nav a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.content {
+  width: 60%;
+  min-height: 100%;
+  margin-left: 40%;
+  padding: 4em 1.5em;
+  overflow: hidden;
+  color: #fff;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 30%), url(https://storage.ning.com/topology/rest/1.0/file/get/12185188701?profile=RESIZE_1200x);
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+
+  .hero {
+    height: 350px;
+    width: 100%;
+    display: block;
+    position: relative;
+    padding: 1px;
+  }
+  .hero nav {
+    font-size: 1.7em;
+  }
+
+  .content {
+    margin-left: 0;
+    padding-top: 0;
+    width: 100%;
+    color: #fff;
+  }
+}
+@media (max-width: 480px) {
+  img.fl, img.fr {
+    float: none;
+    margin: 10px 0;
+    width: 100%;
+    height: auto;
+  }
+}
