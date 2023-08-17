@@ -1,0 +1,122 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <style>
+  /* ... Existing styles ... */
+  .modal-dialog {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+  }
+  .modal-content {
+    height: 100%;
+    border: none;
+    border-radius: 0;
+  }
+  .modal-body {
+    height: 100%;
+    padding: 0;
+  }
+  .modal-body iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+</style>
+
+  <style>
+    .carousel-item {
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+    }
+    .carousel-item iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .carousel-thumbnail {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      border-radius: 10%;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+    }
+    .carousel-thumbnail:hover {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <a href="https://atlas.landsurveyorsunited.com/" data-bs-toggle="modal" data-bs-target="#websiteModal">
+          <div class="carousel-thumbnail" style="background-image: url('https://storage.ning.com/topology/rest/1.0/file/get/12199018876?profile=original');"></div>
+        </a>
+      </div>
+      <div class="carousel-item">
+        <a href="https://directory.landsurveyorsunited.com" data-bs-toggle="modal" data-bs-target="#websiteModal">
+          <div class="carousel-thumbnail" style="background-image: url('https://storage.ning.com/topology/rest/1.0/file/get/12164521874?profile=original');"></div>
+        </a>
+      </div>
+      <div class="carousel-item">
+        <a href="https://learn.landsurveyorsunited.com" data-bs-toggle="modal" data-bs-target="#websiteModal">
+          <div class="carousel-thumbnail" style="background-image: url('https://storage.ning.com/topology/rest/1.0/file/get/12199038490?profile=original');"></div>
+        </a>
+      </div>
+      <div class="carousel-item">
+        <a href="https://docs.landsurveyorsunited.com" data-bs-toggle="modal" data-bs-target="#websiteModal">
+          <div class="carousel-thumbnail" style="background-image: url('https://storage.ning.com/topology/rest/1.0/file/get/12199039067?profile=original');"></div>
+        </a>
+      </div>
+      <div class="carousel-item">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#websiteModal">
+          <div class="carousel-thumbnail" style="background-image: url('https://storage.ning.com/topology/rest/1.0/file/get/12164521874?profile=original');"></div>
+        </a>
+      </div>
+      <div class="carousel-item">
+        <a href="https://rss.smarketplace.org" data-bs-toggle="modal" data-bs-target="#websiteModal">
+          <div class="carousel-thumbnail" style="background-image: url('https://storage.ning.com/topology/rest/1.0/file/get/12199039690?profile=original');"></div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="websiteModal" tabindex="-1" aria-labelledby="websiteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+ 
+      <div class="modal-content">
+        <div class="modal-body">
+          <iframe src="" frameborder="0"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+
+ <script>
+  var carouselItems = document.querySelectorAll('.carousel-item');
+  var modalIframe = document.querySelector('#websiteModal iframe');
+  var modalCloseButton = document.querySelector('.modal-content button');
+
+  carouselItems.forEach(function(item) {
+    item.addEventListener('click', function() {
+      var src = this.querySelector('.carousel-thumbnail').dataset.src;
+      modalIframe.src = src;
+    });
+  });
+
+  modalCloseButton.addEventListener('click', function() {
+    modalIframe.src = ''; // Clear the iframe source to stop any embedded content (optional)
+  });
+</script>
+
+</body>
+</html>
