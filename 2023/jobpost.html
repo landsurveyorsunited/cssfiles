@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Job Post Template - Land Surveyor Jobs</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <div style="background:#000;color:#fff;"class="row">
+      <div class="col-md-8">
+        <h2 id="jobTitlePlaceholder"></h2>
+        <h4 id="companyNamePlaceholder"></h4>
+        <p id="jobDescriptionPlaceholder"></p>
+        <h5>Requirements:</h5>
+        <ul id="requirementsList"></ul>
+        <h5>How to Apply:</h5>
+        <p id="howToApplyPlaceholder"></p>
+        <h5>Contact Information:</h5>
+        <p id="contactInfoPlaceholder"></p>
+      </div>
+      <div class="col-md-4">
+        <h4>Job Post Form</h4>
+        <form id="jobPostForm">
+          <div class="mb-3">
+            <label for="jobTitleInput" class="form-label">Job Title</label>
+            <input type="text" class="form-control" id="jobTitleInput" placeholder="Enter job title" required>
+          </div>
+          <div class="mb-3">
+            <label for="companyNameInput" class="form-label">Company Name</label>
+            <input type="text" class="form-control" id="companyNameInput" placeholder="Enter company name" required>
+          </div>
+          <div class="mb-3">
+            <label for="jobDescriptionInput" class="form-label">Job Description</label>
+            <textarea class="form-control" id="jobDescriptionInput" rows="5" placeholder="Enter job description" required></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="requirementsInput" class="form-label">Requirements</label>
+            <textarea class="form-control" id="requirementsInput" rows="3" placeholder="Enter requirements" required></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="howToApplyInput" class="form-label">How to Apply</label>
+            <textarea class="form-control" id="howToApplyInput" rows="3" placeholder="Enter how to apply" required></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="contactInfoInput" class="form-label">Contact Information</label>
+            <textarea class="form-control" id="contactInfoInput" rows="3" placeholder="Enter contact information" required></textarea>
+          </div>
+          <button type="button" class="btn btn-primary" onclick="generateHTML()">Generate Job Post</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-5">
+    <h4>Generated HTML Code</h4>
+    <div class="mb-3">
+      <textarea class="form-control" id="htmlCode" rows="10" readonly></textarea>
+    </div>
+    <button class="btn btn-primary" onclick="copyHTMLCode()">Copy HTML Code</button>
+  </div>
+
+  <script>
+    function generateHTML() {
+      const jobTitle = document.getElementById('jobTitleInput').value;
+      const companyName = document.getElementById('companyNameInput').value;
+      const jobDescription = document.getElementById('jobDescriptionInput').value;
+      const requirements = document.getElementById('requirementsInput').value;
+      const howToApply = document.getElementById('howToApplyInput').value;
+      const contactInfo = document.getElementById('contactInfoInput').value;
+
+      const requirementsList = requirements.split('\n').filter(req => req.trim() !== '').map(req => `<li>${req}</li>`).join('');
+
+      const generatedHTML = `
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <h2>${jobTitle}</h2>
+              <h4>${companyName}</h4>
+              <p>${jobDescription}</p>
+              <h5>Requirements:</h5>
+              <ul>${requirementsList}</ul>
+              <h5>How to Apply:</h5>
+              <p>${howToApply}</p>
+              <h5>Contact Information:</h5>
+              <p>${contactInfo}</p>
+            </div>
+          </div>
+        </div>
+      `;
+
+      document.getElementById('htmlCode').value = generatedHTML;
+    }
+
+    function copyHTMLCode() {
+      const htmlCode = document.getElementById('htmlCode');
+      htmlCode.select();
+      document.execCommand('copy');
+    }
+  </script>
+<script>
+    const jobTitleInput = document.getElementById('jobTitleInput');
+    const companyNameInput = document.getElementById('companyNameInput');
+    const jobDescriptionInput = document.getElementById('jobDescriptionInput');
+    const requirementsInput = document.getElementById('requirementsInput');
+    const howToApplyInput = document.getElementById('howToApplyInput');
+    const contactInfoInput = document.getElementById('contactInfoInput');
+
+    jobTitleInput.addEventListener('input', updateTemplate);
+    companyNameInput.addEventListener('input', updateTemplate);
+    jobDescriptionInput.addEventListener('input', updateTemplate);
+    requirementsInput.addEventListener('input', updateTemplate);
+    howToApplyInput.addEventListener('input', updateTemplate);
+    contactInfoInput.addEventListener('input', updateTemplate);
+
+    function updateTemplate() {
+      document.getElementById('jobTitlePlaceholder').textContent = jobTitleInput.value;
+      document.getElementById('companyNamePlaceholder').textContent = companyNameInput.value;
+      document.getElementById('jobDescriptionPlaceholder').textContent = jobDescriptionInput.value;
+
+      const requirementsList = document.getElementById('requirementsList');
+      const requirements = requirementsInput.value.split('\n');
+      requirementsList.innerHTML = '';
+      for (const requirement of requirements) {
+        if (requirement.trim() !== '') {
+          const li = document.createElement('li');
+          li.textContent = requirement;
+          requirementsList.appendChild(li);
+        }
+      }
+
+      document.getElementById('howToApplyPlaceholder').textContent = howToApplyInput.value;
+      document.getElementById('contactInfoPlaceholder').textContent = contactInfoInput.value;
+    }
+
+    function copyHTMLCode() {
+      const htmlCode = document.getElementById('jobPostForm').outerHTML;
+      document.getElementById('htmlCode').value = htmlCode;
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
