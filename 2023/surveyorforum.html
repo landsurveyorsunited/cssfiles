@@ -1,0 +1,486 @@
+<html>
+<head>
+  <title>Land Surveyors United</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/blocks.css/dist/blocks.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <style>
+    .evenly-distributed-children {
+  display: flex;
+  justify-content: space-between;
+  /* From https://css.glass */
+background: rgba(55, 51, 51, 0.34);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(14.1px);
+-webkit-backdrop-filter: blur(14.1px);
+border: 1px solid rgba(55, 51, 51, 0.65);
+}
+h3.load{
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Nunito', sans-serif;
+  font-size: 2.1em;
+  color: transparent;
+  letter-spacing: 0.01em;
+}
+.load span{
+  text-shadow:
+    0 0 2px rgba(204, 208, 212,0.9),
+    0 15px 25px rgba(0, 0, 0, 0.3),
+    0 -2px 3px rgba(0, 0, 0, 0.1),
+    0 -5px 10px rgba(255, 255, 255, 0.5),
+    0 5px 10px rgba(0, 0, 0, 0.3),
+    0 3px 4px rgba(255, 255, 255, 0.2),
+    0 0 20px rgba(255, 255, 255, 0.45);
+  
+    animation: loading 1.20s ease-in-out infinite alternate;
+}
+
+@keyframes loading {
+	to {text-shadow:
+    0 0 2px rgba(204, 208, 212,0.2),
+    0 0 3px rgba(0, 0, 0, 0.02),
+    0 0 0 rgba(0, 0, 0, 0),
+    0 0 0 rgba(255, 255, 255, 0),
+    0 0 0 rgba(0, 0, 0, 0),
+    0 0 0 rgba(255, 255, 255, 0),
+    0 0 0 rgba(255, 255, 255, 0);}
+}
+
+.load span:nth-child(2){
+  animation-delay:0.15s;
+}
+.load span:nth-child(3){
+  animation-delay:0.30s;
+}
+.load span:nth-child(4){
+  animation-delay:0.45s;
+}
+.load span:nth-child(5){
+  animation-delay:0.60s;
+}
+.load span:nth-child(6){
+  animation-delay:0.75s;
+}
+.load span:nth-child(7){
+  animation-delay:0.90s;
+}
+.load span:nth-child(8){
+  animation-delay:1.05s;
+}
+.load span:nth-child(9){
+  animation-delay:1.20s;
+}
+.border-black{
+  color: white;
+  /*border white with light shadow*/
+  text-shadow: 
+     2px   0  0   #000, 
+    -2px   0  0   #000, 
+     0    2px 0   #000, 
+     0   -2px 0   #000, 
+     1px  1px 0   #000, 
+    -1px -1px 0   #000, 
+     1px -1px 0   #000, 
+    -1px  1px 0   #000,
+     1px  1px 5px #000;
+}
+.combined {
+   -webkit-text-stroke: 1px black;
+   color: white;
+   text-shadow:
+       2px  2px 0 #000,
+      -1px -1px 0 #000,  
+       1px -1px 0 #000,
+      -1px  1px 0 #000,
+       1px  1px 0 #000;
+}
+
+    .MultiCarousel .MultiCarousel-inner .item > div a {color:yellow;}
+   .MultiCarousel { float: left; overflow: hidden; padding: 15px; width: 100%; position:relative; }
+    .MultiCarousel .MultiCarousel-inner { transition: 1s ease all; float: left; }
+        .MultiCarousel .MultiCarousel-inner .item { float: left;background-image: radial-gradient( circle 976px at 51.2% 51%,  rgba(11,27,103,1) 0%, rgba(16,66,157,1) 0%, rgba(11,27,103,1) 17.3%, rgba(11,27,103,1) 58.8%, rgba(11,27,103,1) 71.4%, rgba(16,66,157,1) 100.2%, rgba(187,187,187,1) 100.2% );}
+    div.modal-content,    .MultiCarousel .MultiCarousel-inner .item > div { text-align: center; padding:10px; margin:10px; background-image: linear-gradient( 94.3deg,  rgba(26,33,64,1) 10.9%, rgba(81,84,115,1) 87.1% ); color:#FFF;}
+    .MultiCarousel .MultiCarousel-inner .item > div:hover { text-align: center; padding:10px; margin:10px; background-image: linear-gradient( 359.5deg,  rgba(0,0,0,1) 4.9%, rgba(142,14,0,1) 128.1% );color:#FFF;}
+    .MultiCarousel .leftLst, .MultiCarousel .rightLst { position:absolute; border-radius:50%;top:calc(50% - 20px); }
+    .MultiCarousel .leftLst { left:0; }
+    .MultiCarousel .rightLst { right:0; }
+    
+        .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none; background:#ccc; }
+    .embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    hr.style4 {
+	border-top: 2px dotted yellow;
+}
+  </style>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <style>
+    body {
+      background-image: url("https://source.unsplash.com/featured/?construction");
+      background-size: cover;
+      background-position: center;
+    }
+    .navbar {
+background-color: black!important;
+border-radius: 16px;!important;
+    }
+    .navbar-brand {
+      color: white;
+      font-size: 1.5rem;
+    }
+    .navbar-nav .nav-link {
+      color: white!important;
+      font-size: 1.2rem;
+    }
+    .profile-link img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-right: 5px;
+    }
+    .search-bar {
+      margin-top: 15%;
+      text-align: center;
+    }
+    .search-input {
+      width: 500px;
+      height: 40px;
+      font-size: 1.2rem;
+      padding: 5px;
+    }
+    .search-btn {
+      margin-top: 10px;
+      font-size: 1.2rem;
+    }
+        .buttons-container {
+      margin-top: 2rem;
+    }
+    .buttons-container .btn {
+      margin-right: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="https://storage.ning.com/topology/rest/1.0/file/get/12130907698?profile=original" alt="Land Surveyors United Logo" width="140" height="100">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sign In</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Membership</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Vendors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Educators</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/me">
+                <img src="https://storage.ning.com/topology/rest/1.0/file/get/12201656868?profile=RESIZE_584x" alt="Profile Image" width="100" height="80"
+                  class="rounded-circle">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container-fluid">
+      <div class="row justify-content-center align-items-center vh-100">
+        <div class="col-lg-6 text-center">
+          <div class="grid">
+            <h1 class="border-black">Welcome to <br>Land Surveyors United</h1></div>
+          <form class="d-flex mt-4">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-primary" type="submit">Search</button>
+          </form>
+        </div>
+         <div class="container">
+	<div class="row">
+		<div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
+            <div class="MultiCarousel-inner">
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Surveying Jobs</p>
+                        <p>Find and Post Surveying Jobs</p>
+                        <a href="/hubs/jobs">CV Generator</a><hr class="style4">
+                        <a href="/jobs">Surveyor Jobs</a>
+                      <hr class="style4">
+                        <a href="/jobs">By Location</a>
+                      
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Company Directory</p>
+                        <p>Add your Surveying Company</p>
+                        <a href="/atlas">Surveyor Atlas</a><hr class="style4">
+                        <a href="/directory">Surveyor Directory</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Equipment Market</p>
+                        <p>Sell Your Survey Equipment</p>
+                        <a href="#">Find Deals</a><hr class="style4">
+                        <a href="/equipment">Survey Equipment</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Surveyor Forums</p>
+                        <p>Discuss Land Surveying</p>
+                        <a href="/hubs">Hub Forums</a><hr class="style4">
+                        <a href="/forum/topics">Surveyor Forum</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Surveying Videos</p>
+                        <p>Learn Anything about Surveying</p>
+                        <a href="https://landsurveyorsunited.com/video/video/new">Add Video</a><hr class="style4">
+                        <a href="/video">Surveyor Videos</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Surveying Photos</p>
+                        <p>Share Your Field View</p>
+                         <a href="/photo">Photo Library</a><hr class="style4">
+                        <a href="/photo-categories">Categories</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Surveyor Atlas</p>
+                        <p>Global Surveyors Map</p>
+                        <a href="/atlas">Surveyor Atlas</a><hr class="style4">
+                        <a href="https://landsurveyorsunited.com/hubs/welcome/forum/introducing-the-land-surveyor-s-atlas-a-new-frontier-for-land-sur">How to Use</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Surveying Dictionary</p>
+                        <p>Land Surveyor Global Glossary</p>
+                         <a href="/page/land-surveying-a-to-z">Surveyor Dictionary</a><hr class="style4">
+                        <a href="https://landsurveyorsunited.com/almanac/blogpost/new">Add a Term</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">📄 Surveying Documents</p>
+                        <p>Equipment Manuals & Surveying Guides</p>
+                         <a href="/hubs/docs">Documents Hub</a><hr class="style4">
+                        <a href="/hubs/docs/books">Surveying Books</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Surveyor Spreadsheets</p>
+                        <p>Surveyor Submitted Spreadsheets</p>
+                         <a href="/hubs/excel">Excel Hub</a><hr class="style4">
+                        <a href="/wiki/spreadsheets">Spreadsheet Collection</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Surveyor Mentorship</p>
+                        <p>Become a Mentor</p>
+                         <a href="/mentorship">Mentorship</a><hr class="style4">
+                        <a href="/hubs/mentorship">Mentorship Hub</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Surveying Articles</p>
+                        <p>Learn about Land Surveying</p>
+                         <a href="https://landsurveyorsunited.com/articles/article/new">Add Article</a><hr class="style4">
+                        <a href="articles">Surveyor Articles</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">AI For Surveyors</p>
+                        <p>Learn All about Artificial</p>
+                         <a href="/hubs/ai">AI Learning Hub</a><hr class="style4">
+                        <a href="/hubs/ai/forum/topics">Learn ChatGPT</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Surveyor Live Chat</p>
+                        <p>24/7 Virtual Venue Connect Live</p>
+                         <a href="/chat">Virtual Chat</a><hr class="style4">
+                        <a href="/me">Connect</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Surveyor Marketplace</p>
+                        <p>Control Your Brand in Smarketplace</p>
+                         <a href="/vendors">For Vendors</a><hr class="style4">
+                        <a href="/events">Events</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Surveyor Podcasts</p>
+                        <p>All Land Surveyor Podcasts 24/7</p>
+                         <a href="/radio">Surveyor Radio</a><hr class="style4">
+                        <a href="/audio">Podcasts</a>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary leftLst"><</button>
+            <button class="btn btn-primary rightLst">></button>
+        </div>
+	</div>
+	</div>
+	</div>
+      </div>
+    </div>
+    
+  <div class="evenly-distributed-children">
+  <p><a href="/atlas" target="_self"><img class="align-center" src="https://storage.ning.com/topology/rest/1.0/file/get/12201660466?profile=RESIZE_710x" width="177" /></a>&nbsp;</p>
+  <p><a href="/hubs/docs" target="_self"><img class="align-center" src="https://storage.ning.com/topology/rest/1.0/file/get/12201660265?profile=RESIZE_710x" width="177" /></a>&nbsp;</p>
+  <p><a href="/learn" target="_self"><img class="align-center" src="https://storage.ning.com/topology/rest/1.0/file/get/12201660495?profile=RESIZE_710x" width="177" /></a>&nbsp;</p>
+ <p><a href="hubs/jobs" target="_self"><img class="align-center" src="https://storage.ning.com/topology/rest/1.0/file/get/12201666486?profile=RESIZE_710x" width="177" /></a>&nbsp;</p></div><div class="evenly-distributed-children">
+ <p><a href="/surveyors" target="_self"><img class="align-center" src="https://storage.ning.com/topology/rest/1.0/file/get/12201661062?profile=RESIZE_710x" width="177" /></a>&nbsp;</p>
+     <p><a href="/blog" target="_self"><img class="align-center" src="https://storage.ning.com/topology/rest/1.0/file/get/12201667271?profile=RESIZE_710x" width="177" /></a>&nbsp;</p>
+ <p><a href="/archive" target="_self"><img class="align-center" src="https://storage.ning.com/topology/rest/1.0/file/get/12201667672?profile=RESIZE_710x" width="177" /></a>&nbsp;</p>
+</div>
+
+  </main>
+<script>
+  $(document).ready(function () {
+    var itemsMainDiv = ('.MultiCarousel');
+    var itemsDiv = ('.MultiCarousel-inner');
+    var itemWidth = "";
+
+    $('.leftLst, .rightLst').click(function () {
+        var condition = $(this).hasClass("leftLst");
+        if (condition)
+            click(0, this);
+        else
+            click(1, this)
+    });
+
+    ResCarouselSize();
+
+
+
+
+    $(window).resize(function () {
+        ResCarouselSize();
+    });
+
+    //this function define the size of the items
+    function ResCarouselSize() {
+        var incno = 0;
+        var dataItems = ("data-items");
+        var itemClass = ('.item');
+        var id = 0;
+        var btnParentSb = '';
+        var itemsSplit = '';
+        var sampwidth = $(itemsMainDiv).width();
+        var bodyWidth = $('body').width();
+        $(itemsDiv).each(function () {
+            id = id + 1;
+            var itemNumbers = $(this).find(itemClass).length;
+            btnParentSb = $(this).parent().attr(dataItems);
+            itemsSplit = btnParentSb.split(',');
+            $(this).parent().attr("id", "MultiCarousel" + id);
+
+
+            if (bodyWidth >= 1200) {
+                incno = itemsSplit[3];
+                itemWidth = sampwidth / incno;
+            }
+            else if (bodyWidth >= 992) {
+                incno = itemsSplit[2];
+                itemWidth = sampwidth / incno;
+            }
+            else if (bodyWidth >= 768) {
+                incno = itemsSplit[1];
+                itemWidth = sampwidth / incno;
+            }
+            else {
+                incno = itemsSplit[0];
+                itemWidth = sampwidth / incno;
+            }
+            $(this).css({ 'transform': 'translateX(0px)', 'width': itemWidth * itemNumbers });
+            $(this).find(itemClass).each(function () {
+                $(this).outerWidth(itemWidth);
+            });
+
+            $(".leftLst").addClass("over");
+            $(".rightLst").removeClass("over");
+
+        });
+    }
+
+
+    //this function used to move the items
+    function ResCarousel(e, el, s) {
+        var leftBtn = ('.leftLst');
+        var rightBtn = ('.rightLst');
+        var translateXval = '';
+        var divStyle = $(el + ' ' + itemsDiv).css('transform');
+        var values = divStyle.match(/-?[\d\.]+/g);
+        var xds = Math.abs(values[4]);
+        if (e == 0) {
+            translateXval = parseInt(xds) - parseInt(itemWidth * s);
+            $(el + ' ' + rightBtn).removeClass("over");
+
+            if (translateXval <= itemWidth / 2) {
+                translateXval = 0;
+                $(el + ' ' + leftBtn).addClass("over");
+            }
+        }
+        else if (e == 1) {
+            var itemsCondition = $(el).find(itemsDiv).width() - $(el).width();
+            translateXval = parseInt(xds) + parseInt(itemWidth * s);
+            $(el + ' ' + leftBtn).removeClass("over");
+
+            if (translateXval >= itemsCondition - itemWidth / 2) {
+                translateXval = itemsCondition;
+                $(el + ' ' + rightBtn).addClass("over");
+            }
+        }
+        $(el + ' ' + itemsDiv).css('transform', 'translateX(' + -translateXval + 'px)');
+    }
+
+    //It is used to get some elements from btn
+    function click(ell, ee) {
+        var Parent = "#" + $(ee).parent().attr("id");
+        var slide = $(Parent).attr("data-slide");
+        ResCarousel(ell, Parent, slide);
+    }
+
+});
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
