@@ -1,4 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Simple Responsive Navigation Menu with Media Queries</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  <link rel="stylesheet" href="./style.css">
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
 
+
+<link rel="stylesheet" type="text/css" href="https://landsurveyorsunited.github.io/cssfiles/notify/notifier.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://landsurveyorsunited.github.io/cssfiles/notify/notifier.js">
+/***********************************************
+* 3D Drop In Notifier Panel- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* Please keep this notice intact
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for this script and 100s more
+***********************************************/
+</script>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<nav class="clearfix">  
+        <ul class="clearfix">  
+          <li><a href="/forum/topics">LSU</a></li>
+            <li><a href="/forum/topics">Forum</a></li>  
+            <li><a href="/hubs">Hubs</a></li>  
+            <li><a href="/photo">Photos</a></li>  
+            <li><a href="/video">Videos</a></li>  
+            <li><a href="/jobs">Jobs</a></li>    
+        </ul>  
+        <a href="#" id="pull">✊</a>  
+    </nav>
+<!-- partial -->
+  
+
+
+
+<a href="#" class="toggle" onClick="notifier.toggle(); return false">Toggle Panel</a> <a href="#" class="toggle" onClick="notifier.open(); return false">Open</a> <a href="#" class="toggle" onClick="notifier.close(); return false">Close</a>
 <style>
   iframe {
     position: absolute;
@@ -25,3 +63,23 @@
 <div class="embed-responsive embed-responsive-4by3">
   <iframe class="embed-responsive-item" src="//docs.landsurveyorsunited.com/"></iframe>
 </div>
+<script type="text/javascript">
+
+jQuery(function(){
+	notifier.init({
+		noteid: 'mynotify', //id of main panel div
+		content: 'https://landsurveyorsunited.github.io/cssfiles/notify/content.txt', // 'inline' or 'path to external file'
+		defaultstate: 'closed', // 'open' or 'closed'
+		freq: 'manual', //'manual' or 'session'
+		oninit: function($el, state){
+			// do something when panel loads
+		},
+		onopenclose: function($el, state){
+			// do something when panel opens or closes
+		}
+	})
+})
+
+</script>
+</body>
+  </html>
