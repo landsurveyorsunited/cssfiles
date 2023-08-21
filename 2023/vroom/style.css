@@ -321,7 +321,7 @@ body #wrap .hall .side:first-of-type, body #wrap .hall .inner > .side .side:firs
           backface-visibility: hidden;
 }
 body #wrap .hall .side:first-of-type:before, body #wrap .hall .inner > .side .side:first-of-type:before {
-  content: "AGENDA";
+  content: "ATLAS";
   font-family: "Roboto";
   display: flex;
   justify-content: center;
@@ -349,7 +349,7 @@ body #wrap .hall .side:first-of-type .button, body #wrap .hall .inner > .side .s
   left: 0;
 }
 body #wrap .hall .side:first-of-type .button:after, body #wrap .hall .inner > .side .side:first-of-type .button:after {
-  content: "VIEW AGENDA";
+  content: "VIEW ATLAS";
   color: #fff;
   font-family: "Roboto";
   left: 35vmin;
