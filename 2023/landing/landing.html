@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Land Surveyors United Community -Earth's First Land Surveyor Network</title>
+<link rel="shortcut icon" href="https://landsurveyorsunited.com/favicon.ico" />
+<meta name="keywords" content="land surveyors united, land surveying, surveying community, international surveying, professional land surveyors, land surveyor network, next generation land surveyors">
+<meta name="description" content="Land Surveyors United Community is the largest network of Professional Land Surveyors on Planet Earth. Connect with your fellow surveyors in any country. Prepare for the field and support surveyors worldwide.">
+<meta name="robots" content="index,follow">
+<meta name="googlebot" content="index,follow">
+<meta name="title" content="Land Surveyors United Community - Largest Network of Professional Land Surveyors">
+<meta name="description" content="Land Surveyors United Community is the largest network of Professional Land Surveyors on Planet Earth. Connect with your fellow surveyors in any country. Prepare for the field and support surveyors worldwide.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://landsurveyorsunited.com/">
+<meta property="og:title" content="Land Surveyors United Community - Largest Network of Professional Land Surveyors">
+<meta property="og:description" content="Land Surveyors United Community is the largest network of Professional Land Surveyors on Planet Earth. Connect with your fellow surveyors in any country.">
+<meta property="og:image" content="https://storage.ning.com/topology/rest/1.0/file/get/2821506290?profile=original">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://landsurveyorsunited.com/">
+<meta property="twitter:title" content="Land Surveyors United Community - Largest Network of Professional Land Surveyors">
+<meta property="twitter:description" content="Land Surveyors United Community is the largest network of Professional Land Surveyors on Planet Earth. Connect with your fellow surveyors in any country.">
+<meta property="twitter:image" content="https://storage.ning.com/topology/rest/1.0/file/get/2821506290?profile=original">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap"><link rel="stylesheet" href="./style.css">
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+
+  --black: #242424;
+  --white: #f5f5f5;
+  --pill: #e0d4be;
+  --red: #cc033f;
+}
+
+ul {
+  list-style: none;
+}
+
+.page-wrap {
+  position: relative;
+}
+
+header {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/*  NAV: Top Menu Section
+----------------------------------------------- */
+nav {
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  padding: 1em 5em;
+  display: flex;
+  justify-content: space-between;
+}
+nav h1 {
+  font-size: clamp(1.2rem, 6vw, 3rem);
+  font-weight: normal;
+  text-transform: uppercase;
+  color: var(--pill);
+  font-size: 1.3rem;
+  background-color: var(--red);
+  padding: 5px 10px;
+}
+nav ul {
+  display: flex;
+  color: var(--white);
+}
+nav ul li:not(#burger) {
+  visibility: hidden;
+  margin-right: 1.5em;
+}
+
+#burger {
+  width: min-content;
+  height: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+#burger span {
+  display: block;
+  height: 3px;
+  width: 22px;
+  background-color: var(--red);
+  border-radius: 200px;
+  transition: transform 0.3s 0.3s;
+}
+
+.active span:nth-of-type(1) {
+  transform: translateY(-3px) scaleX(1.3);
+}
+.active span:nth-of-type(3) {
+  transform: translateY(3px) scaleX(1.3);
+}
+
+/*  MAIN: Slider Section
+----------------------------------------------- */
+main {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+article {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: var(--i);
+}
+
+.hero-info {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  z-index: 8;
+}
+.hero-info h2 {
+  font-size: clamp(2rem, 9vw, 5rem);
+  line-height: clamp(2rem, 9vw, 5rem);
+  text-transform: uppercase;
+}
+.hero-info h1 {
+  color: var(--white);
+  font-size: clamp(3.2rem, 10vw, 7rem);
+  line-height: clamp(3.2rem, 10vw, 7rem);
+  text-transform: uppercase;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+.hero-info h3 {
+  color: var(--white);
+  font-size: 1.6rem;
+  font-weight: normal;
+  margin-top: 2em;
+}
+@supports (-webkit-text-stroke: 3px var(--pill)) {
+  .hero-info h2 {
+    color: transparent;
+    -webkit-text-stroke: 3px var(--pill);
+    text-shadow: none;
+  }
+}
+#copy {
+	position:fixed;
+	z-index:1000;
+	right:150px;
+	top:-8px;
+	font-size:.65em;
+	padding:8px 8px 2px 8px;
+	background: #000000;
+	border: 2px solid #737c85;		
+	border-radius:.7em;
+	opacity: 0.9;
+	box-shadow:0 0 8px #5f7182;
+	color:#eee;
+  background-position: fixed;
+}
+#copy a {
+	color:#ccc;
+	text-decoration:none
+}
+#copy a:hover {
+	color:#fff
+}
+  details + details {
+  margin-top: 1em;
+}
+
+details.modal summary {
+  background-image: radial-gradient( circle 911px at 0.4% 50.5%,  rgba(187,68,48,1) 18.7%, rgba(21,30,33,1) 90% );
+  color:#fff;
+  border: 2px solid black;
+  cursor: pointer;
+  display: inline-block;
+  padding: .25em .5em;
+}
+
+details.modal summary::-webkit-details-marker {
+  display: none;
+}
+
+details.modal summary::before {
+  content: "";
+  display: inline-block;
+  padding-right: .25em;
+}
+
+details[open].modal summary::before {
+  content: "✖️/➕";
+}
+
+details[open].modal {
+  overflow: auto;
+  padding: 1em;
+  position: fixed;
+  z-index: 10;
+}
+
+details[open].modal,
+details[open].modal::after {
+  bottom: 10vh;
+  bottom: var(--gutter-vertical);
+  left: 10vw;
+  left: var(--gutter-horizontal);
+  right: 10vw;
+  right: var(--gutter-horizontal);
+  top: 10vh;
+  top: var(--gutter-vertical);
+}
+
+details[open].modal::before,
+details[open].modal::after {
+  content: "";
+  position: fixed;
+  z-index: -1;
+}
+  
+details[open].modal::before {
+  background: rgba(0, 0, 0, .75);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+details[open].modal::after {
+  background-image: radial-gradient( circle 911px at 0.4% 50.5%,  rgba(187,68,48,1) 18.7%, rgba(21,30,33,1) 90% );
+	color:#000;
+}
+#google_translate_element {
+  position: absolute;
+  bottom: 17px;
+  z-index: 99999;
+  left: 23px;
+}
+@media (max-width: 667px) {
+#google_translate_element {
+    bottom: 33px;
+    right: 60px;
+  }
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.hi-1 {
+  background-image: url("https://storage.ning.com/topology/rest/1.0/file/get/10578036869?profile=RESIZE_1200x");
+}
+
+/* Photo by Lucas Favre
+   https://unsplash.com/photos/BRTV55ErUZg
+----------------------------------------------- */
+.hi-2 {
+  background-image: url("https://st12.ning.com/topology/rest/1.0/file/get/3667106881?profile=original");
+}
+
+/* Photo by Roell de Ram
+   https://unsplash.com/photos/2DM7eOR5iyc
+----------------------------------------------- */
+.hi-3 {
+  background-image: url("https://landsurveyorsunited.github.io/cssfiles/2pane/img/img-2.jpg");
+}
+
+/* Photo by Go to Bernd Wahlbrinck
+   https://unsplash.com/photos/lVVvYiR66kw
+----------------------------------------------- */
+.hi-4 {
+  background-image: url("https://landsurveyorsunited.github.io/cssfiles/2pane/img/img-3.jpg");
+}
+
+/* Photo by Micheal Schofield
+   https://unsplash.com/photos/d0ohwP3BRf4
+----------------------------------------------- */
+.hi-5 {
+  background-image: url("https://landsurveyorsunited.github.io/cssfiles/2pane/img/img-4.jpg");
+}
+
+/*  SECTION: Overlay Menu Section
+----------------------------------------------- */
+section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  min-height: 100vh;
+  padding: 8em 5em 2em 5em;
+  background-color: var(--white);
+  background-image: url("https://www.transparenttextures.com/patterns/church.png");
+  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+}
+
+.level-1 {
+  display: grid;
+  grid-template-columns: 65% 1fr;
+  grid-auto-rows: min-content;
+  grid-gap: 2em;
+}
+.level-1 h3 {
+  font-weight: 600;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+.level-1 p {
+  margin: 0.5em 0 0 0.5em;
+}
+.level-1 p small {
+  font-size: 1rem;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.level-1 p small:hover {
+  opacity: 1;
+  color: var(--red);
+}
+.level-1 ul > li {
+  font-size: 1.2rem;
+  padding: 0.3em;
+  transition: color 0.3s;
+}
+.level-1 ul > li:hover {
+  color: var(--red);
+  cursor: pointer;
+}
+.level-1 li:nth-of-type(1) {
+  grid-column: 1/2;
+  grid-row: 1/4;
+}
+.level-1 li:nth-of-type(2) {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.level-1 li:nth-of-type(3) {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.level-1 li:nth-of-type(4) {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+
+.level-2 {
+  padding: 0.3em 1em;
+}
+.level-2 li p {
+  color: var(--red);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 1em 0;
+  text-transform: uppercase;
+  border-bottom: 1px solid #fde0ac;
+}
+
+.level-3 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.level-3 li a {
+  padding: 0.5em 1em !important;
+  background-color: var(--pill);
+  border-radius: 500px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 1rem !important;
+  cursor: pointer;
+  color: var(--black);
+}
+.level-3 li a {
+  padding: 0.5em 1em !important;
+  background-color: var(--pill);
+  border-radius: 500px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 1rem !important;
+  cursor: pointer;
+  color: var(--black);
+}
+ul.level-3 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.level-3 li {
+  display: inline-block;
+  margin-right: 10px;
+}
+@media screen and (max-width: 600px) {
+  nav {
+    padding: 1em 2em;
+  }
+
+  section {
+    padding: 8em 2em 2em 2em;
+  }
+  .level-1 {
+    grid-template-columns: 1fr;
+  }
+  .level-1 li:nth-of-type(1) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .level-1 li:nth-of-type(2) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .level-1 li:nth-of-type(3) {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .level-1 li:nth-of-type(4) {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+}
+
+</style>
+</head>
+<body>
+<div id="google_translate_element"></div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+	<div id="copy"><a href="https://landsurveyorsunited.com/main/authorization/signUp?target=http://landsurveyorsunited.com/community">Sign Up</a> &bull; <a rel="author" href="https://landsurveyorsunited.com/main/authorization/signIn?target=http://landsurveyorsunited.com/community">Sign In</a></div>
+</div><center><script async src="https://cse.google.com/cse.js?cx=partner-pub-3544186224970512:2843563337"></script>
+
+<base href="https://landsurveyorsunited.com">
+<div class="page-wrap">
+<header class="page-header">
+<nav>
+<h1>Land Surveyors United</h1>
+<ul>
+<li>About Us</li>
+<li>Contact Us</li>
+<li id="burger">
+<span></span>
+<span></span>
+<span></span>
+</li>
+</ul>
+</nav>
+<main>
+<article id="hero-1" style="--i: 5">
+<div class="hero-info">
+<h2>Survey Earth</h2>
+<h1>Together</h1>
+<h3>Collaborate with over 21k Land Surveyors around the planet</h3>
+</div>
+<div class="hero-image hi-1"></div>
+</article>
+<article id="hero-2" style="--i: 4">
+<div class="hero-info">
+<h2>Become a Better</h2>
+<h1>Surveyor</h1>
+<h3>Learn something new everyday about the oldest profession</h3>
+</div>
+<div class="hero-image hi-2"></div>
+</article>
+<article id="hero-3" style="--i: 3">
+<div class="hero-info">
+<h2>Become a</h2>
+<h1>Mentor</h1>
+<h3>Help us bridge the education gap in the Surveying Industry</h3>
+</div>
+<div class="hero-image hi-3"></div>
+</article>
+<article id="hero-4" style="--i: 2">
+<div class="hero-info">
+<h2>Curate Your Surveyor</h2>
+<h1>Legacy</h1>
+<h3>Share your expertise and your wisdom will outlive you</h3>
+</div>
+<div class="hero-image hi-4"></div>
+</article>
+<article id="hero-5" style="--i: 1">
+<div class="hero-info">
+<h2>Be Forever Known</h2>
+<h1>For Surveying Career</h1>
+<h3>Surveying will never die because of you</h3>
+</div>
+<div class="hero-image hi-5"></div>
+</article>
+</main>
+</header>
+<section>
+<ul class="level-1">
+<li>
+<h3>Surveyor Regions</h3>
+<ul class="level-2">
+<li>
+<p>Asia</p>
+<ul class="level-3">
+<ul>
+<li><a href="/hubs/Asia"> Asia Land Surveyors</a>
+<li><a href="/hubs/asia/afghanistan">Afghanistan Land Surveyors</a></li>
+<li><a href="/hubs/asia/china">China Land Surveyors</a></li>
+<li><a href="/hubs/asia/japan">Japan Land Surveyors</a></li>
+<li><a href="/hubs/asia/india">India Land Surveyors</a></li>
+<li><a href="/hubs/asia/sri-lanka">Sri Lanka Land Surveyors</a></li>
+<li><a href="/hubs/asia/philippines">Philippines Land Surveyors</a></li>
+<li><a href="/hubs/asia/malaysia">Malaysia Land Surveyors</a></li>
+<li><a href="/hubs/asia/singapore">Singapore Land Surveyors</a></li>
+<li><a href="/hubs/asia/taiwan">Taiwan Land Surveyors</a></li>
+<li><a href="/hubs/asia/thailand">Thailand Land Surveyors</a></li>
+<li><a href="/hubs/asia/nepal">Nepal Land Surveyors</a></li>
+<li><a href="/hubs/asia/pakistan">Pakistan Land Surveyors</a></li>
+</ul>
+</li>
+<li> <li>
+<p>United States of America</p>
+<ul class="level-3">
+<ul>
+<li><a href="/hubs/usa-surveyors/arizona">Arizona Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/alabama">Alabama Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/alaska">Alaska Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/arkansas">Arkansas Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/california">California Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/connecticut">Connecticut Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/delaware">Delaware Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/florida">Florida Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/georgia">Georgia Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/hawaii">Hawaii Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/illinois">Illinois Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/indiana">Indiana Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/iowa">Iowa Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/kansas">Kansas Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/kentucky">Kentucky Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/maine">Maine Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/maryland">Maryland Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/massachusetts">Massachusetts Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/michigan">Michigan Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/minnesota">Minnesota Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/missouri">Missouri Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/montana">Montana Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/nebraska">Nebraska Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/nevada">Nevada Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/new-hampshire">New Hampshire Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/new-york">New York Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/north-carolina">North Carolina Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/north-dakota">North Dakota Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/new-mexico">New Mexico Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/oklahoma">Oklahoma Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/ohio">Ohio Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/oregon">Oregon Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/pennsylvania">Pennsylvania Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/rhode-island">Rhode Island Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/south-carolina">South Carolina Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/south-dakota">South Dakota Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/texas">Texas Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/utah">Utah Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/vermont">Vermont Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/virginia">Virginia Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/washington">Washington Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/wyoming">Wyoming Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/wisconsin">Wisconsin Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/west-virginia">West Virginia Land Surveyors</a></li>
+<li><a href="/hubs/usa-surveyors/events">USA Surveying Events Land Surveyors</a></li>
+</ul>
+</li>
+<li>
+<p>South America</p>
+<ul class="level-3">
+<ul>
+<li><a href="/hubs/south-america/brazil">Brazil Land Surveyors</a></li>
+<li><a href="/hubs/south-america/colombia">Colombia Land Surveyors</a></li>
+<li><a href="/hubs/south-america/argentina">Argentina Land Surveyors</a></li>
+<li><a href="/hubs/south-america/peru">Peru Land Surveyors</a></li>
+<li><a href="/hubs/south-america/venezuela">Venezuela Land Surveyors</a></li>
+<li><a href="/hubs/south-america/chile">Chile Land Surveyors</a></li>
+<li><a href="/hubs/south-america/ecuador">Ecuador Land Surveyors</a></li>
+<li><a href="/hubs/south-america/bolivia">Bolivia Land Surveyors</a></li>
+<li><a href="/hubs/south-america/paraguay">Paraguay Land Surveyors</a></li>
+<li><a href="/hubs/south-america/uruguay">Uruguay Land Surveyors</a></li>
+<li><a href="/hubs/south-america/guyana">Guyana Land Surveyors</a></li>
+<li><a href="/hubs/south-america/suriname">Suriname Land Surveyors</a></li>
+<li><a href="/hubs/south-america/french-guiana">French Guiana Land Surveyors</a></li>
+<li><a href="/hubs/south-america/falkland-islands">Falkland Islands Land Surveyors</a></li>
+</ul>
+</li>
+<li>
+<p>Europe</p>
+<ul class="level-3">
+<ul>
+<li><a href="/hubs/Europe"> Europe Land Surveyors</a>
+<li><a href="/hubs/europe/france">France Land Surveyors</a></li>
+<li><a href="/hubs/europe/spain">Spain Land Surveyors</a></li>
+<li><a href="/hubs/europe/uk">UK Land Surveyors</a></li>
+<li><a href="/hubs/europe/germany">Germany Land Surveyors</a></li>
+<li><a href="/hubs/europe/poland">Poland Land Surveyors</a></li>
+<li><a href="/hubs/europe/switzerland">Switzerland Land Surveyors</a></li>
+<li><a href="/hubs/europe/ireland">Ireland Land Surveyors</a></li>
+<li><a href="/hubs/europe/hungary">Hungary Land Surveyors</a></li>
+<li><a href="/hubs/europe/romania">Romania Land Surveyors</a></li>
+<li><a href="/hubs/europe/italy">Italy Land Surveyors</a></li>
+<li><a href="/hubs/europe/bulgaria">Bulgaria Land Surveyors</a></li>
+<li><a href="/hubs/europe/greece">Greece Land Surveyors</a></li>
+<li><a href="/hubs/europe/portugal">Portugal Land Surveyors</a></li>
+<li><a href="/hubs/europe/serbia">Serbia Land Surveyors</a></li>
+<li><a href="/hubs/europe/belgium">Belgium Land Surveyors</a></li>
+<li><a href="/hubs/europe/russia">Russia Land Surveyors</a></li>
+<li><a href="/hubs/europe/turkey">Turkey Land Surveyors</a></li>
+<li><a href="/hubs/europe/ukraine">Ukraine Land Surveyors</a></li>
+<li><a href="/hubs/europe/sweden">Sweden Land Surveyors</a></li>
+<li><a href="/hubs/europe/norway">Norway Land Surveyors</a></li>
+<li><a href="/hubs/europe/denmark">Denmark Land Surveyors</a></li>
+<li><a href="/hubs/europe/albania">Albania Land Surveyors</a></li>
+</ul>
+</li>
+<li>
+<p>Africa</p>
+<ul class="level-3">
+<li><a href="/hubs/Asia"> Asia Land Surveyors</a>
+<ul>
+<li><a href="/hubs/Africa"> Africa Land Surveyors</a>
+<ul>
+<li><a href="/hubs/africa-land-surveyors/angola">Angola Land Surveyors</a></li>
+<li><a href="/hubs/africa-land-surveyors/algeria">Algeria Land Surveyors</a></li>
+<li><a href="/hubs/africa-land-surveyors/benin">Benin Land Surveyors</a></li>
+<li><a href="/hubs/africa-land-surveyors/botswana">Botswana Land Surveyors</a></li>
+<li><a href="/hubs/africa-land-surveyors/cameroon">Cameroon Land Surveyors</a></li>
+<li><a href="/hubs/africa-land-surveyors/ethiopia">Ethiopia Land Surveyors</a></li>
+<li><a href="/hubs/africa-land-surveyors/egypt">Egypt Land Surveyors</a></li>
+<li><a href="/hubs/africa-land-surveyors/ghana">Ghana Land Surveyors</a></li>
+<li><a href="/hubs/africa-land-surveyors/ivory-coast">Ivory Coast Land Surveyors</a></li>
+<li><a href="/hubs/africa-land-surveyors/liberia">Liberia Land Surveyors</a></li>
+<li><a href="/hubs/africa-land-surveyors/kenya">Kenya Land Surveyors</a></li>
+<li><a href="/hubs/africa-land-surveyors/malawi">Malawi Land Surveyors</a></li>
+<li><a href="/hubs/africa-land-surveyors/madagascar">Madagascar Land Surveyors</a></li>
+<li><a href="/hubs/africa-land-surveyors/morocco">Morocco Land Surveyors</a></li>
+<li><a href="/hubs/africa-land-surveyors/mozambique">Mozambique Land Surveyors</a></li>
+<li><a href="/hubs/africa-land-surveyors/namibia">Namibia Land Surveyors</a></li>
+<li><a href="/hubs/africa-land-surveyors/nigeria">Nigeria Land Surveyors</a></li>
+<li><a href="/hubs/africa-land-surveyors/uganda">Uganda Land Surveyors</a></li>
+<li><a href="/hubs/africa-land-surveyors/rwanda">Rwanda Land Surveyors</a></li>
+<li><a href="/hubs/africa-land-surveyors/south-africa">South Africa Land Surveyors</a></li>
+<li><a href="/hubs/africa-land-surveyors/senegal">Senegal Land Surveyors</a></li>
+<li><a href="/hubs/africa-land-surveyors/sudan">Sudan Land Surveyors</a></li>
+<li><a href="/hubs/africa-land-surveyors/zimbabwe">Zimbabwe Land Surveyors</a></li>
+</ul>
+</li>
+<li>
+<p>Oceania</p>
+<ul class="level-3">
+<li><a href="/hubs/Oceania"> Oceania Surveyors Land Surveyors</a>
+<ul>
+<li><a href="/hubs/oceania/australia">Australia Land Surveyors</a></li>
+<li><a href="/hubs/oceania/new-zealand">New Zealand Land Surveyors</a></li>
+<li><a href="/hubs/oceania/fiji">Fiji Land Surveyors</a></li>
+<li><a href="/hubs/oceania/marshall-islands">Marshall Islands Land Surveyors</a></li>
+<li><a href="/hubs/oceania/papua-new-guinea">Papua New Guinea Land Surveyors</a></li>
+<li><a href="/hubs/oceania/palau">Palau Land Surveyors</a></li>
+<li><a href="/hubs/oceania/kiribati">Kiribati Land Surveyors</a></li>
+<li><a href="/hubs/oceania/vanuatu">Vanuatu Land Surveyors</a></li>
+<li><a href="/hubs/oceania/samoa">Samoa Land Surveyors</a></li>
+<li><a href="/hubs/oceania/solomon-islands">Solomon Islands Land Surveyors</a></li>
+</ul>
+</li>
+<li>
+<p>Middle East</p>
+<ul class="level-3">
+<li><a href="/hubs/Middle+East">Middle Eastern Surveyors Land Surveyors</a>
+<ul>
+<li><a href="/hubs/middle-east/bahrain">Bahrain Land Surveyors</a></li>
+<li><a href="/hubs/middle-east/cyprus">Cyprus Land Surveyors</a></li>
+<li><a href="/hubs/middle-east/egypt">Egypt Land Surveyors</a></li>
+<li><a href="/hubs/middle-east/iran">Iran Land Surveyors</a></li>
+<li><a href="/hubs/middle-east/iraq">Iraq Land Surveyors</a></li>
+<li><a href="/hubs/middle-east/israel">Israel Land Surveyors</a></li>
+<li><a href="/hubs/middle-east/jordan">Jordan Land Surveyors</a></li>
+<li><a href="/hubs/middle-east/kuwait">Kuwait Land Surveyors</a></li>
+<li><a href="/hubs/middle-east/lebanon">Lebanon Land Surveyors</a></li>
+<li><a href="/hubs/middle-east/oman">Oman Land Surveyors</a></li>
+<li><a href="/hubs/middle-east/palestine">Palestine Land Surveyors</a></li>
+<li><a href="/hubs/middle-east/qatar">Qatar Land Surveyors</a></li>
+<li><a href="/hubs/middle-east/saudi-arabia">Saudi Arabia Land Surveyors</a></li>
+<li><a href="/hubs/middle-east/syria">Syria Land Surveyors</a></li>
+<li><a href="/hubs/middle-east/turkey">Turkey Land Surveyors</a></li>
+<li><a href="/hubs/middle-east/uae">United Arab Emirates Land Surveyors</a></li>
+<li><a href="/hubs/middle-east/yemen">Yemen Land Surveyors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h3>Land Surveyor Resources</h3>
+<ul>
+<li><a href="/marketplace">Surveyor Marketplace</a></li>
+<li><a href="/app">Field App</a></li>
+<li><a href="/hubs/docs">Books for Surveyors</a></li>
+<li><a href="/hubs/podcasts">Land Surveyors Podcasts</a></li>
+</ul>
+<p><small>More tips...</small></p>
+</li>
+<li>
+<h3>Surveyor Tools</h3>
+<ul>
+<li><a href="/hubs/ai">AI for Land Surveyors</a></li>
+<li><a href="/hubs/excel">Excel Spreadsheets for Surveyors</a></li>
+<li><a href="/jobs">Land Surveyor Jobs</a></li>
+<li><a href="/cv">Resume Generator</a></li>
+</ul>
+<p><small>
+<p><small>More resources...</small></p>
+</small></p>
+</li>
+<li>
+<h3>About Land Surveyors United</h3>
+<ul>
+<li><a href="/about">Our Community Story</a></li>
+<li><a href="/map">Global Surveyor Map</a></li>
+<li><a href="/surveyors">Community Members</a></li>
+<li><a href="/contact">Contact Us</a></li>
+</ul>
+</li>
+</ul>
+</section>
+</div>
+
+<script src="https://unpkg.co/gsap@3/dist/gsap.min.js" type="09f88effe755522c4c13976b-text/javascript"></script><script src="./script.js" type="09f88effe755522c4c13976b-text/javascript"></script>
+<script type="09f88effe755522c4c13976b-text/javascript">
+let burger = document.getElementById("burger");
+let overlay = document.querySelector("section");
+let heroImage = document.querySelector(".hero-image");
+let showMenu = false;
+let del = 3;
+let i = 1;
+
+let tl = gsap.timeline({
+  repeat: -1,
+  yoyo: true,
+  ease: "expo.out"
+});
+
+overlay.style.display = "none";
+
+burger.addEventListener("click", (e) => {
+  showMenu = !showMenu;
+  if (showMenu) {
+    burger.classList.add("active");
+    overlay.style.display = "block";
+    gsap.to(overlay, 1, {
+      clipPath: "polygon(0% 0%, 100% 0, 100% 100%, 0% 100%)",
+      ease: "expo.in"
+    });
+  } else {
+    burger.classList.remove("active");
+    gsap.to(overlay, 1, {
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+      ease: "expo.out",
+      onComplete: () => (overlay.style.display = "none")
+    });
+  }
+});
+
+gsap.set(["#hero-1 h2, #hero-1 h1, #hero-1 h3"], {
+  clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"
+});
+
+gsap.set(
+  [
+    `#hero-2 h2, #hero-3 h2, #hero-4 h2, #hero-5 h2,
+     #hero-2 h1, #hero-3 h1, #hero-4 h1, #hero-5 h1,
+     #hero-2 h3, #hero-3 h3, #hero-4 h3, #hero-5 h3`
+  ],
+  {
+    clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)"
+  }
+);
+
+while (i < 5) {
+  tl.to(`#hero-${i} h2`, 0.9, {
+    clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
+    delay: del
+  })
+    .to(
+      `#hero-${i} h1`,
+      0.9,
+      {
+        clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)"
+      },
+      "-=0.3"
+    )
+    .to(
+      `#hero-${i} h3`,
+      0.9,
+      {
+        clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)"
+      },
+      "-=0.3"
+    )
+    .to(
+      `#hero-${i} .hi-${i}`,
+      0.7,
+      {
+        clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)"
+      },
+      "-=1"
+    )
+    .to(`#hero-${i + 1} h2`, 0.9, {
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"
+    })
+    .to(
+      `#hero-${i + 1} h1`,
+      0.9,
+      {
+        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"
+      },
+      "-=0.3"
+    )
+    .to(
+      `#hero-${i + 1} h3`,
+      0.9,
+      {
+        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"
+      },
+      "-=0.3"
+    );
+
+  i++;
+}
+
+</script>
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="09f88effe755522c4c13976b-|49" defer></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8b253dfea2ab4077af8c6f58422dfbfd1689876627854" integrity="sha512-bjgnUKX4azu3dLTVtie9u6TKqgx29RBwfj3QXYt5EKfWM/9hPSAI/4qcV5NACjwAo8UtTeWefx6Zq5PHcMm7Tg==" data-cf-beacon='{"rayId":"7fb4f145fdc632ef","version":"2023.8.0","r":1,"token":"fc64f79f4f854b29b228dee535066cc2","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>
