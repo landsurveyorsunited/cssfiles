@@ -7,7 +7,30 @@
 <meta name="viewport" content="width=device-width, user-scalable=no"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel="stylesheet" href="./style.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-
+<style>
+  #copy {
+	position:fixed;
+	z-index:1000;
+	right:150px;
+	top:-8px;
+	font-size:.65em;
+	padding:8px 8px 2px 8px;
+	background: #000000;
+	border: 2px solid #737c85;		
+	border-radius:.7em;
+	opacity: 0.9;
+	box-shadow:0 0 8px #5f7182;
+	color:#eee;
+  background-position: fixed;
+}
+#copy a {
+	color:#ccc;
+	text-decoration:none
+}
+#copy a:hover {
+	color:#fff
+}
+  </style>
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -50,6 +73,15 @@
       cursor: pointer;
     }</style>
 <header>
+  <div id="google_translate_element"></div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+	<div id="copy"><a href="https://landsurveyorsunited.com/main/authorization/signUp?target=http://landsurveyorsunited.com/community">Sign Up</a> &bull; <a rel="author" href="https://landsurveyorsunited.com/main/authorization/signIn?target=http://landsurveyorsunited.com/community">Sign In</a></div>
+</div><center><script async src="https://cse.google.com/cse.js?cx=partner-pub-3544186224970512:2843563337"></script>
   <div class="hero">
     <div class="hamb-wrap">
       <div class="hamb"></div>
