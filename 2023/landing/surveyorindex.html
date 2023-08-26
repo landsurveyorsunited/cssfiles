@@ -338,10 +338,113 @@ ul.level-3 li {
     grid-row: 4/5;
   }
 }
+ /* Use a different font family for search results */
+  .gs-title,
+  .gs-snippet {
+    font-family: courier;
+  }
 
+  /* Add a border between individual search results */
+  .gs-webResult {
+    border: 1px solid #eee;
+    padding: 1em;
+  }
+
+  /* Do no display the count of search results */
+  .gsc-result-info {
+    display: none;
+  }
+
+  /* Hide the Google branding in search results */
+  .gcsc-branding {
+    display: none;
+  }
+
+  /* Hide the thumbnail images in search results */
+  .gsc-thumbnail {
+    display: none;
+  }
+
+  /* Hide the snippets in Google search results */
+  .gs-snippet {
+    display: none;
+  }
+
+  /* Change the font size of the title of search results */
+  .gs-title a {
+    font-size: 16px;
+  }
+
+  /* Change the font size of snippets inside search results */
+  .gs-snippet {
+    font-size: 14px;
+  }
+
+  /* Google Custom Search highlights matching words in bold, toggle that */
+  .gs-title b,
+  .gs-snippet b {
+    font-weight: normal;
+  }
+
+  /* Do no display the URL of web pages in search results */
+  .gsc-url-top,
+  .gsc-url-bottom {
+    display: none;
+  }
+#google_translate_element {
+  position: absolute;
+  bottom: 17px;
+  z-index: 99999;
+  left: 23px;
+}
+@media (max-width: 667px) {
+#google_translate_element {
+    bottom: 33px;
+    right: 60px;
+  }
+}
+  #copy {
+	position:fixed;
+	z-index:1000;
+	right:150px;
+	top:-8px;
+	font-size:.65em;
+	padding:8px 8px 2px 8px;
+	background: #000000;
+	border: 2px solid #737c85;		
+	border-radius:.7em;
+	opacity: 0.9;
+	box-shadow:0 0 8px #5f7182;
+	color:#eee;
+  background-position: fixed;
+}
+#copy a {
+	color:#ccc;
+	text-decoration:none
+}
+#copy a:hover {
+	color:#fff
+}
+  /* Highlight the pagination buttons at the bottom of search results */
+  .gsc-cursor-page {
+    font-size: 1.5em;
+    padding: 4px 8px;
+    border: 2px solid #ccc;
+  }
 </style>
 </head>
 <body>
+  <script async src="https://cse.google.com/cse.js?cx=007237115116832315561:_ojisd2xosq">
+</script><div id="google_translate_element"></div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+	<div id="copy"><a href="https://landsurveyorsunited.com/main/authorization/signUp?target=http://landsurveyorsunited.com/community">Sign Up</a> &bull; <a rel="author" href="https://landsurveyorsunited.com/main/authorization/signIn?target=http://landsurveyorsunited.com/community">Sign In</a></div>
+</div>
+<div class="gcse-search"></div>
 <!-- partial:index.partial.html -->
 <!-- Set the base URL for all relative URLs within the document -->
 <base href="https://landsurveyorsunited.com">
