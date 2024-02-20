@@ -1,0 +1,302 @@
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+  <title>Community Feed Reader -Land Surveyors United Global</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.2.3/dist/slate/bootstrap.min.css">
+  <style>
+     body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+.footer {
+      background-color: #111827;
+      padding: 20px;
+      position: sticky;
+      bottom: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.1);
+    }
+    .footer:hover {
+      background-color: orange;
+      padding: 20px;
+      position: sticky;
+      bottom: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+      overflow: auto;
+    }
+
+    .modal-content {
+      background-color: #111827;
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .close {
+      float: right;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #FFF;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #8c8c8c;
+    }
+
+    .iframe-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+    }
+
+    .iframe-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, system-ui;
+  background: hsl(0 0% 0%);
+  gap: 2rem;
+}
+*/
+.ribbon {
+  font-size: 28px;
+  font-weight: bold;
+  color: #000!important;
+}
+.ribbon {
+  --r: .8em; /* control the cutout */
+  
+  padding-inline: calc(var(--r) + .25em) 1lh;
+  line-height: 1.8;
+  clip-path: polygon(calc(100% - 1lh) 0,0 0,var(--r) 50%,0 100%,calc(100% - 1lh) 100%,calc(100% - 1lh) 999px,100% 999px,100% 100%);
+  border-image: conic-gradient(orange 0 0) fill 0//999px;
+  outline: 999px solid #0004;
+  width: fit-content;
+  color:black;
+}
+body::before {
+	--line: hsl(0 0% 95% / 0.25);
+	content: "";
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	background:
+		linear-gradient(90deg, var(--line) 1px, transparent 1px 10vmin) 0 -5vmin / 10vmin 10vmin,
+		linear-gradient(var(--line) 1px, transparent 1px 10vmin) 0 -5vmin / 10vmin 10vmin;
+	mask: linear-gradient(-15deg, transparent 30%, white);
+	top: 0;
+	z-index: -1;
+}
+    h2 {font-size:1.4em;}
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 col-lg-3">
+        <div class="py-4">
+          <div class="ribbon"><h2> 🧠 Surveyor Community Feeds</h2></div>
+          <details><summary>🤙 What is This?</summary>
+<p>This is a new quick way to navigate all of the various sections of the Land Surveyors United Community all in one page. Simply choose a topic below and the latest posts from that section of the community will load on the right</p></details>
+          <div id="feed-list" class="list-group">
+            <!-- Feeds will be dynamically populated here -->
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8 col-lg-9">
+        <div class="py-4">
+          <div class="ribbon"><h2 id="feed-title">Select a feed</h2></div>
+          <div id="post-list">
+            <!-- Latest posts will be dynamically populated here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="footer">
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#photoModal">+Photo</button>
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModal">+Video</button>
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#postModal">+ Forum</button>
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#localPostModal">+Point</button>
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#articleModal">+Article</button>
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#jobModal">+Job</button>
+  </div>
+
+  <div id="photoModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="iframe-container">
+        <iframe src="https://landsurveyorsunited.com/photo/photo/newWithUploader" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div id="videoModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="iframe-container">
+        <iframe src="https://landsurveyorsunited.com/video/video/new" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div id="postModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="iframe-container">
+        <iframe src="https://landsurveyorsunited.com/forum/topics/discussion/new" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div id="localPostModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="iframe-container">
+        <iframe src="https://landsurveyorsunited.com/postapoint" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div id="articleModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="iframe-container">
+        <iframe src="https://landsurveyorsunited.com/articles/article/new" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+<div id="jobModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="iframe-container">
+        <iframe src="https://landsurveyorsunited.com/post-job" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+  <script>
+    document.querySelectorAll('.close').forEach(function (closeBtn) {
+      closeBtn.addEventListener('click', function () {
+        this.closest('.modal').style.display = 'none';
+      });
+    });
+  </script>
+ <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+  // Fetch OPML content and populate feed list
+  axios.get('https://landsurveyorsuniteddocs.on.drv.tw/membertools/opml/revisedlsuall.opml')
+    .then(response => {
+      const parser = new DOMParser();
+      const xmlDoc = parser.parseFromString(response.data, "text/xml");
+      const outlines = xmlDoc.getElementsByTagName('outline');
+
+      const feedList = document.getElementById('feed-list');
+
+      for (let i = 0; i < outlines.length; i++) {
+        const feed = outlines[i];
+
+        const feedItem = document.createElement('a');
+        feedItem.classList.add('list-group-item', 'list-group-item-action');
+        feedItem.textContent = feed.getAttribute('title');
+        feedItem.href = '#';
+        feedItem.onclick = () => {
+          fetchPosts(feed.getAttribute('xmlUrl'));
+          document.getElementById('feed-title').textContent = feed.getAttribute('title');
+        };
+
+        feedList.appendChild(feedItem);
+      }
+    })
+    .catch(error => {
+      console.error(error);
+    });
+
+  // Fetch and display latest posts from the selected feed
+  function fetchPosts(feedUrl) {
+    axios.get(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feedUrl)}`)
+      .then(response => {
+        const posts = response.data.items;
+        const postList = document.getElementById('post-list');
+        postList.textContent = '';
+
+        for (let i = 0; i < posts.length; i++) {
+          const post = posts[i];
+
+          const postItem = document.createElement('div');
+          postItem.classList.add('card', 'mb-3');
+          postItem.innerHTML = `
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="${getFirstImage(post.content)}" alt="Post Image" class="img-fluid">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">${post.title}</h5>
+                  <p class="card-text">${post.description.substring(0, 200)}</p>
+                  <p class="card-text"><small class="text-muted">${post.pubDate}</small></p>
+                  <a href="${post.link}" target="_blank" class="btn btn-primary">Read More</a>
+                </div>
+              </div>
+            </div>
+          `;
+
+          postList.appendChild(postItem);
+        }
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }
+
+  // Function to extract the first image from HTML content
+  function getFirstImage(content) {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(content, "text/html");
+    const image = doc.querySelector('img');
+    return image ? image.getAttribute('src') : ''; // Return the image source or an empty string if not found
+  }
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-28999098-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-28999098-1');
+</script>
+
+<script src="https://www.drv.tw/inc/wd.js?s=landsurveyorsuniteddocs"></script><script src="https://www.drv.tw/inc/wd.js?s=landsurveyorsuniteddocs"></script></body>
+</html>

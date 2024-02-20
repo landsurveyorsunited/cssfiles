@@ -1,0 +1,161 @@
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+ 
+<title>Post a Survey Point to Community</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+<style>
+   body {
+      background-color: #111827!important;
+      color: #FFFFFF;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, system-ui;
+  background: hsl(0 0% 0%);
+  gap: 2rem;
+}
+
+body::before {
+	--line: hsl(0 0% 95% / 0.25);
+	content: "";
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	background:
+		linear-gradient(90deg, var(--line) 1px, transparent 1px 10vmin) 0 -5vmin / 10vmin 10vmin,
+		linear-gradient(var(--line) 1px, transparent 1px 10vmin) 0 -5vmin / 10vmin 10vmin;
+	mask: linear-gradient(-15deg, transparent 30%, white);
+	top: 0;
+	z-index: -1;
+}
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .logo img {
+      max-width: 50px;
+    }
+    .split-screen {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    .split-screen .iframe-container {
+      flex: 1;
+      padding: 10px;
+    }
+    .split-screen .iframe-container iframe {
+      width: 100%;
+      height: 700px;
+      border: none;
+    }
+    .split-screen .arrow {
+      color: orange;
+      font-size: 40px;
+    }
+    .split-screen .title {
+      color: orange;
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+    .buttons .button {
+      flex: 1;
+      margin-right: 10px;
+    }
+    .buttons .button:last-child {
+      margin-right: 0;
+    }
+    .button a {
+      display: block;
+      padding: 10px;
+      background-color: orange;
+      color: black;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .button a:hover {
+      background-color: #ff6600;
+    }
+    .disclaimer {
+      color: orange;
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+<div class="logo">
+<a href="https://landsurveyorsunited.com/points">
+<img src="https://storage.ning.com/topology/rest/1.0/file/get/12222126291?profile=original" alt="Land Surveyors United" />
+</a>
+</div>
+<div class="split-screen">
+<div class="iframe-container">
+<h2 class="title">Geolocate Your Post</h2>
+<iframe src="/addapoint"></iframe>
+</div>
+<span class="arrow">&#10140;</span>
+<div class="iframe-container">
+<h2 class="title">Submit Your Survey Point</h2>
+<iframe src="https://landsurveyorsunited.com/points/blogpost/new"></iframe>
+</div>
+</div>
+<center>Other places you can use this location HTML inside a post.</center>
+<div class="buttons">
+<div class="button">
+<a href="/map" target="_blank">Global Surveyor Map</a>
+</div>
+<div class="button">
+<a href="/atlas" target="_blank">Surveyor Atlas</a>
+</div>
+<div class="button">
+<a href="/hubsmap" target="_blank">Post to Local Hub</a>
+</div>
+  <div class="button">
+<a href="/post-job" target="_blank">Jobs Post</a>
+</div>
+<div class="button">
+<a href="/post-market" target="_blank">Surveyor Market</a>
+</div>
+<div class="button">
+<a href="/post-directory" target="_blank">Directory Listing</a>
+</div>
+</div>
+<p class="disclaimer">Use the Geolocate section to generate the HTML needed to make a geolocated post about your survey point. <br><strong>IMPORTANT: Upload photos and description about your point in the next section and submit your point.</strong></p>
+</div>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"8481a95a5f8132fe","r":1,"version":"2024.1.0","token":"fc64f79f4f854b29b228dee535066cc2"}' crossorigin="anonymous"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-28999098-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-28999098-1');
+</script>
+
+</body>
+</html>

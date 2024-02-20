@@ -1,0 +1,637 @@
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Futurist Tools for Land Surveyors - Land Surveyors United</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.2/slate/bootstrap.min.css">
+   <style>
+    body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, system-ui;
+  background: hsl(0 0% 0%);
+  gap: 2rem;
+}
+
+body::before {
+	--line: hsl(0 0% 95% / 0.25);
+	content: "";
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	background:
+		linear-gradient(90deg, var(--line) 1px, transparent 1px 10vmin) 0 -5vmin / 10vmin 10vmin,
+		linear-gradient(var(--line) 1px, transparent 1px 10vmin) 0 -5vmin / 10vmin 10vmin;
+	mask: linear-gradient(-15deg, transparent 30%, white);
+	top: 0;
+	z-index: -1;
+}
+    .feedback-container {
+      position: fixed;
+      top: 60%;
+      right: 0;
+      transform: translateY(-50%);
+      transition: transform 0.3s ease-out;
+      z-index: 999;
+    }
+    .feedback-button {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 100px;
+      margin:3px;
+      background-color: #111827;
+      color: orange;
+      border-radius: 5px 0 0 5px;
+      cursor: pointer;
+      transition: width 0.3s ease-out;
+    }
+    .feedback-button:hover {
+      width: 200px;
+    }
+    .feedback-button span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-90deg);
+    }
+    .feedback-form {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 80%;
+      height: 100vh;
+      background-color: #111827;
+      color:orange;
+      padding: 20px;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-out;
+    }
+    .feedback-form.open {
+      transform: translateX(0%);
+    }
+    .feedback-form-header {
+      display: flex;
+      justify-content: space-between;
+    }
+    .feedback-form-close {
+      cursor: pointer;
+      position: absolute;
+      top: 50;
+      left: 0;
+    }
+  </style>
+  <style>
+    /* Custom Styles */
+    .scrolling-shelf {
+      overflow-x: scroll;
+      scrollbar-width: thin;
+      scrollbar-color: #000000 orange;
+    }
+    
+    .scrolling-shelf::-webkit-scrollbar {
+      width: 10px;
+    }
+    
+    .scrolling-shelf::-webkit-scrollbar-thumb {
+      background-color: orange;
+      border-radius: 10px;
+    }
+    
+    .scrolling-shelf::-webkit-scrollbar-track {
+      background-color: orange;
+    }
+    
+    .card {
+      min-width: 80%;
+    }
+    
+   .iframe, .modal.fade,.modal-body {
+      background-color: transparent;
+      color: #ffffff;
+      width:100%!important;
+     max-width:100%;
+    }
+    
+    .modal-body iframe {
+      max-width:100%;
+      min-width: 100%!important;
+      height: 100vh;
+    }
+    .modal-dialog-scrollable .modal-body {width:100%;}
+    .close-button {
+      font-size: 24px;
+      color: #ffffff;
+      z-index:999;
+    }
+    
+    .arrow-icons {
+      font-size: 36px;
+      color: #fff;
+    }
+  </style>
+   <style>
+    body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, system-ui;
+  background: hsl(0 0% 0%);
+  gap: 2rem;
+}
+
+body::before {
+	--line: hsl(0 0% 95% / 0.25);
+	content: "";
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	background:
+		linear-gradient(90deg, var(--line) 1px, transparent 1px 10vmin) 0 -5vmin / 10vmin 10vmin,
+		linear-gradient(var(--line) 1px, transparent 1px 10vmin) 0 -5vmin / 10vmin 10vmin;
+	mask: linear-gradient(-15deg, transparent 30%, white);
+	top: 0;
+	z-index: -1;
+}
+    .feedback-container {
+      position: fixed;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      transition: transform 0.3s ease-out;
+      z-index: 999;
+    }
+    .feedback-button {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 100px;
+      margin:3px;
+      background-color: #111827;
+      color: orange;
+      border-radius: 5px 0 0 5px;
+      cursor: pointer;
+      transition: width 0.3s ease-out;
+    }
+    .feedback-button:hover {
+      width: 200px;
+    }
+    .feedback-button span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-90deg);
+    }
+    .feedback-form {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 80%;
+      height: 100vh;
+      background-color: #111827;
+      color:orange;
+      padding: 20px;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-out;
+    }
+    .feedback-form.open {
+      transform: translateX(0%);
+    }
+    .feedback-form-header {
+      display: flex;
+      justify-content: space-between;
+    }
+    .feedback-form-close {
+      cursor: pointer;
+      position: relative;
+      top: 40!important;
+      right: 50%;
+    }
+      /* CSS for sticky header bar */
+    #header {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background-color: transparent;
+      z-index: 999;
+      transition: height 0.3s ease-in-out;
+    }
+
+    #header.shrink {
+      height: 50px;
+    }
+
+    /* CSS for iframe container */
+    #iframe-container {
+      width: 100%;
+      height: calc(100vh - 50px);
+      overflow: hidden;
+    }
+
+    #iframe-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+   <div id="header">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-6">
+          <button id="go-back-button" class="btn btn-primary">Go Back</button>
+        </div>
+        <div class="col-6 text-end">
+          <button id="jobs-button" class="btn btn-primary">️Jobs</button>
+          <button id="market-button" class="btn btn-primary">Market</button>
+          <button id="directory-button" class="btn btn-primary">Directory</button>
+          <button id="tools-button" class="btn btn-primary">Tools</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="iframe-container"></div>
+  <div class="container">
+    <div class="row scrolling-shelf">
+      <div class="col">
+        <div class="card">
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1">
+            Azimuth
+          </button>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal2">
+            CoordTrans
+          </button>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal3">
+            AreaCalc
+          </button>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal4">
+            VCurveCalc
+          </button>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal5">
+            TrigLevel
+          </button>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal6">
+            Geodetic
+          </button>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal7">
+            GeoRadio
+          </button>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal8">
+            LineSegm
+          </button>
+        </div>
+      </div>
+    </div>
+     <div class="row scrolling-shelf">
+      <div class="col">
+        <div class="card">
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal9">
+            ScaleFac
+          </button>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal10">
+            LegalDesc
+          </button>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal11">
+            HeightCalc
+          </button>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal12">
+            StreetMap
+          </button>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal13">
+            CoordOffset
+          </button>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal14">
+            CoordSys
+          </button>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal15">
+            VidStudio
+          </button>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal16">
+            Jobsite
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modals -->
+  <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-body">
+          <iframe src="https://landsurveyorsuniteddocs.on.drv.tw/membertools/azimuthcalculator.html" frameborder="0"></iframe>
+          <button type="button" class="btn-close close-button" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-body">
+          <iframe src="https://landsurveyorsuniteddocs.on.drv.tw/membertools/toools/coordinatetransformation.html" frameborder="0"></iframe>
+          <button type="button" class="btn-close close-button" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-body">
+          <iframe src="https://landsurveyorsuniteddocs.on.drv.tw/membertools/areacalculator.html" frameborder="0"></iframe>
+          <button type="button" class="btn-close close-button" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="modal4Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-body">
+          <iframe src="https://landsurveyorsuniteddocs.on.drv.tw/membertools/toools/verticalcurvecalculator.html" frameborder="0"></iframe>
+          <button type="button" class="btn-close close-button" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="modal5Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-body">
+          <iframe src="https://landsurveyorsuniteddocs.on.drv.tw/membertools/toools/triglevelling.html" frameborder="0"></iframe>
+          <button type="button" class="btn-close close-button" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modal6" tabindex="-1" aria-labelledby="modal6Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-body">
+          <iframe src="https://landsurveyorsuniteddocs.on.drv.tw/membertools/toools/geodeticcomputations.html" frameborder="0"></iframe>
+          <button type="button" class="btn-close close-button" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modal7" tabindex="-1" aria-labelledby="modal7Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-body">
+          <iframe src="https://landsurveyorsuniteddocs.on.drv.tw/membertools/atozenith/georadio.html" frameborder="0"></iframe>
+          <button type="button" class="btn-close close-button" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modal8" tabindex="-1" aria-labelledby="modal8Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-body">
+          <iframe src="https://landsurveyorsuniteddocs.on.drv.tw/membertools/toools/intersection.html" frameborder="0"></iframe>
+          <button type="button" class="btn-close close-button" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+ <div class="modal fade" id="modal9" tabindex="-1" aria-labelledby="modal9Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-body">
+          <iframe src="https://landsurveyorsuniteddocs.on.drv.tw/membertools/toools/scalefactor.html" frameborder="0"></iframe>
+          <button type="button" class="btn-close close-button" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modal10" tabindex="-1" aria-labelledby="modal10Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-body">
+          <iframe src="https://landsurveyorsuniteddocs.on.drv.tw/membertools/toools/legaldescriptions.html" frameborder="0"></iframe>
+          <button type="button" class="btn-close close-button" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modal11" tabindex="-1" aria-labelledby="modal11Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-body">
+          <iframe src="https://storage.ning.com/topology/rest/1.0/file/get/12366144454?profile=original" frameborder="0"></iframe>
+          <button type="button" class="btn-close close-button" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modal12" tabindex="-1" aria-labelledby="modal12Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-body">
+          <iframe src="https://landsurveyorsuniteddocs.on.drv.tw/membertools/atozenith/streetviewmap.html" frameborder="0"></iframe>
+          <button type="button" class="btn-close close-button" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modal13" tabindex="-1" aria-labelledby="modal13Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-body">
+          <iframe src="https://storage.ning.com/topology/rest/1.0/file/get/12366143481?profile=original" frameborder="0"></iframe>
+          <button type="button" class="btn-close close-button" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modal14" tabindex="-1" aria-labelledby="modal14Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-body">
+          <iframe src="https://storage.ning.com/topology/rest/1.0/file/get/12366143892?profile=original" frameborder="0"></iframe>
+          <button type="button" class="btn-close close-button" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modal15" tabindex="-1" aria-labelledby="modal15Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-body">
+          <iframe src="https://landsurveyorsuniteddocs.on.drv.tw/membertools/toools/videostudio.html" frameborder="0"></iframe>
+          <button type="button" class="btn-close close-button" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modal16" tabindex="-1" aria-labelledby="modal16Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-body">
+          <iframe src="https://www.mixily.com/venue/1523118555920024805/embed" frameborder="0"></iframe>
+          <button type="button" class="btn-close close-button" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center mt-3">
+    <i class="arrow-icons bi bi-arrow-left"></i>
+    <i class="arrow-icons bi bi-arrow-right"></i>
+  </div>
+<div class="feedback-container">
+    <div class="feedback-button" onclick="toggleForm('postJobForm')">
+      <span>Membership</span>
+    </div>
+    <div class="feedback-button" onclick="toggleForm('hiringForm')">
+      <span>Educate</span>
+    </div>
+    <div class="feedback-button" onclick="toggleForm('hireMeForm')">
+      <span>Feedback</span>
+    </div>
+  </div>
+
+  <div id="postJobForm" class="feedback-form">
+    <div class="feedback-form-header">
+      <h3>Get More Tools!  Upgrade to Futurist</h3>
+      <div class="feedback-form-close" onclick="toggleForm('postJobForm')">&times;</div>
+    </div>
+    
+    <!-- Embedded Google Form -->
+    <iframe src="https://e-commerce.ning.com/payment/page?t=11ED9B6427D5B8B889E91866DA4E2AC0" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Loading Options</iframe>
+  </div>
+
+  <div id="hiringForm" class="feedback-form">
+    <div class="feedback-form-header">
+      <h3>Share Your Survey Life to inspire the Future Generations</h3>
+      <div class="feedback-form-close" onclick="toggleForm('hiringForm')">&times;</div>
+    </div>
+    
+    <!-- Embedded Google Form -->
+    <iframe src="https://landsurveyorsuniteddocs.on.drv.tw/membertools/atozenith/postelsewhere.html" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  </div>
+
+  <div id="hireMeForm" class="feedback-form">
+    <div class="feedback-form-header">
+      <h3>Tool Feedback</h3>
+      <div class="feedback-form-close" onclick="toggleForm('hireMeForm')">&times;</div>
+    </div>
+    
+    <!-- Embedded Google Form -->
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSclst-MhIeRm5Nfogrleq1twfAqEq5boeqi92cEDA9rtqeyfg/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  </div>
+
+  <script>
+    function toggleForm(formId) {
+      const form = document.getElementById(formId);
+      form.classList.toggle('open');
+    }
+  </script>
+   <script>
+    // Function to handle external link clicks
+    function handleExternalLinkClick(link) {
+      document.getElementById('header').classList.add('shrink');
+      document.getElementById('iframe-container').innerHTML = `<iframe src="${link}" frameborder="0"></iframe>`;
+    }
+
+    // Event listeners for external link clicks
+    document.getElementById('jobs-button').addEventListener('click', function() {
+      handleExternalLinkClick('https://jobs.landsurveyorsunited.org');
+    });
+
+    document.getElementById('market-button').addEventListener('click', function() {
+      handleExternalLinkClick('https://rss.smarketplace.org');
+    });
+
+    document.getElementById('directory-button').addEventListener('click', function() {
+      handleExternalLinkClick('https://directory.landsurveyorsunited.com');
+    });
+
+    document.getElementById('tools-button').addEventListener('click', function() {
+      handleExternalLinkClick('https://tools.landsurveyorsunited.com');
+    });
+
+    // Event listener for go back button
+    document.getElementById('go-back-button').addEventListener('click', function() {
+      document.getElementById('header').classList.remove('shrink');
+      document.getElementById('iframe-container').innerHTML = '';
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-28999098-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-28999098-1');
+</script>
+
+</body>
+</html>

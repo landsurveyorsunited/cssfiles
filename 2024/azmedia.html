@@ -1,0 +1,323 @@
+<html>
+<head>
+   <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <title>Jobsite Intelligence Tools for Land Surveyors</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  <style>
+    div.modal-footer,div.modal-content,.video-container,.modal-lg, body {
+      background-color: #111827!important;
+      color: orange;
+      margin: 0;
+      padding: 0;
+    }
+    button.btn-close {background-color:orange;border-radius:5px;}
+    body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, system-ui;
+  background: hsl(0 0% 0%);
+  gap: 2rem;
+}
+
+body::before {
+	--line: hsl(0 0% 95% / 0.25);
+	content: "";
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	background:
+		linear-gradient(90deg, var(--line) 1px, transparent 1px 10vmin) 0 -5vmin / 10vmin 10vmin,
+		linear-gradient(var(--line) 1px, transparent 1px 10vmin) 0 -5vmin / 10vmin 10vmin;
+	mask: linear-gradient(-15deg, transparent 30%, white);
+	top: 0;
+	z-index: -1;
+}
+    img:hover {-webkit-transition: all .5s ease-in-out; -webkit-transform: rotate(-360deg);}
+.footer {
+      background-color: #111827;
+      padding: 20px;
+      position: sticky;
+      bottom: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.1);
+    }
+    .footer:hover {
+      background-color: orange;
+      padding: 20px;
+      position: sticky;
+      bottom: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      z-index:900;
+    }
+
+    .button {
+      background-color: #ff8c00;
+      color: #111827;
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin: 10px;
+      font-size: 18px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #ff6f00;
+      color:#fff;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      max-width: 800px;
+      height: 90%;
+      max-height: 600px;
+      background-color: #222;
+      padding: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .modal-iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .close-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #ff8c00;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .close-button:hover {
+      background-color: #ff6f00;
+    }
+     select#iframe-select {font-size:1.4em;color:#fff;
+      background-color:#000;}
+    .dropdown {
+      position: absolute;
+      
+      top: 1%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+    }
+    
+    .iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%!important;
+      height: 100%;
+      z-index: 1;
+    }
+     body {
+      padding-bottom: 60px;
+    }
+   .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 60px;
+      background-color: #111827;
+      display: flex;
+      align-items: center;
+      z-index:999;
+      justify-content: space-between;
+      padding: 0 20px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+    .footer .logo {
+      display: flex;
+      align-items: center;
+    }
+    .footer .logo img {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+    .footer .logo a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+    .footer .actions {
+      display: flex;
+      align-items: center;
+    }
+    .footer .actions .btn {
+      margin-right: 10px;
+    }
+    .footer .avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-right: 10px;
+      object-fit: cover;
+    }
+    @media (max-width: 576px) {
+      .footer .actions .btn {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+   <div class="dropdown">
+      <select id="iframe-select" onchange="loadIframe()">
+        <option value="">Select a Tool to use 🤙</option>
+        <option value="https://landsurveyorsuniteddocs.on.drv.tw/membertools/toools/verticalcurvecalculator.html">Vertical Curve Calculator</option>
+                    <option value="https://landsurveyorsuniteddocs.on.drv.tw/membertools/toools/vectorcomponents.html">Vector Components Calculator</option>
+                    <option value="https://landsurveyorsuniteddocs.on.drv.tw/membertools/toools/triglevelling.html">Trigonometric Leveling Calculator</option>
+                    <option value="https://landsurveyorsuniteddocs.on.drv.tw/membertools/toools/traversenetworkadjustments.html">Traverse Network Adjustment</option>
+                    <option value="https://landsurveyorsuniteddocs.on.drv.tw/membertools/toools/traverseadjustment.html">Traverse Adjustment Tool</option>
+                    <option value="https://landsurveyorsuniteddocs.on.drv.tw/membertools/toools/threepointresectiontool.html">Three-Point Resection Tool</option>
+                    <option value="https://landsurveyorsuniteddocs.on.drv.tw/membertools/toools/scalefactor.html">Scale Factor Calculation</option>
+                    <option value="https://landsurveyorsuniteddocs.on.drv.tw/membertools/toools/intersection.html">Line Segments Intersection Calculator</option>
+                    <option value="https://landsurveyorsuniteddocs.on.drv.tw/membertools/toools/gridazimuth.html">Geodetic to Grid Azimuth Converter</option>
+                    <option value="https://landsurveyorsuniteddocs.on.drv.tw/membertools/toools/feettometers.html">Feet to Meters Converter</option>
+                    <option value="https://landsurveyorsuniteddocs.on.drv.tw/membertools/toools/coordinatetransformation.html">Coordinate Transformation</option>
+                    <option value="https://landsurveyorsuniteddocs.on.drv.tw/membertools/toools/coordinatesystemconverter.html">Coordinate System Converter</option>
+                    <option value="https://landsurveyorsuniteddocs.on.drv.tw/membertools/toools/gridazimuth.html">Grid to Azimuth</option>
+                    <option value="https://landsurveyorsuniteddocs.on.drv.tw/membertools/toools/geodeticcomputations.html">Geodetic Computations</option>
+                    <option value="https://landsurveyorsuniteddocs.on.drv.tw/membertools/toools/coordinateoffset.html">Coordinate Offset Tool</option>
+                    <option value="https://landsurveyorsuniteddocs.on.drv.tw/membertools/toools/intersection.html">Intersection Line Segments</option>
+                    <option value="https://landsurveyorsuniteddocs.on.drv.tw/membertools/toools/curvaturecorrection.html">Curvature Correction Tool</option>
+                    <option value="https://landsurveyorsuniteddocs.on.drv.tw/membertools/toools/curvecalculator.html">Curve Calculator</option>
+                    <option value="https://landsurveyorsuniteddocs.on.drv.tw/membertools/toools/heightcalc.html">Height Calculations</option>
+      </select>
+    </div>
+    <iframe id="iframe" class="iframe"></iframe>
+  </div>
+  <div class="button-container">
+    <a href="#" class="button" onclick="openModal('https://www.mixily.com/venue/1523118555920024805/embed')">Jobsite Switchboard</a>
+    <a href="#" class="button" onclick="openModal('https://landsurveyorsunited.com/videostudio')">Video Studio</a>
+    <a href="#" class="button" onclick="openModal('https://landsurveyorsunited.com/jobsiteaudio')">Audio Studio</a>
+    <a href="#" class="button" onclick="openModal('https://landsurveyorsunited.com/addapoint')">Geolocate Posts</a>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <iframe class="modal-iframe" id="modal-iframe"></iframe>
+      <button class="close-button" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+<footer class="footer">
+    <div class="logo">
+      <img src="https://storage.ning.com/topology/rest/1.0/file/get/12222126291?profile=original" alt="Logo">
+      <a href="https://landsurveyorsunited.com/pointmap">Land Surveyors United</a>
+    </div>
+    <div class="actions">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#chatModal">Tool Feedback</button>
+      <div class="userthumb">&nbsp;</div>
+      <button type="button" class="btn btn-secondary">Like</button>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal fade" id="chatModal" tabindex="-1" aria-labelledby="chatModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="chatModalLabel">Tool Feedback</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <iframe frameborder="0" width="510" height="700"  src="https://docs.google.com/forms/d/e/1FAIpQLSclst-MhIeRm5Nfogrleq1twfAqEq5boeqi92cEDA9rtqeyfg/viewform?embedded=true"></iframe>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+
+  <!-- Custom JS -->
+  <script>
+    function openModal(url) {
+      const modal = document.getElementById('modal');
+      const modalIframe = document.getElementById('modal-iframe');
+      modalIframe.src = url;
+      modal.style.display = 'block';
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('modal');
+      const modalIframe = document.getElementById('modal-iframe');
+      modalIframe.src = '';
+      modal.style.display = 'none';
+    }
+  </script>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-28999098-1"></script>
+  <script>
+    function loadIframe() {
+      var iframeSelect = document.getElementById("iframe-select");
+      var iframe = document.getElementById("iframe");
+      var url = iframeSelect.value;
+      
+      if (url) {
+        iframe.src = url;
+      } else {
+        iframe.src = "";
+      }
+    }
+  </script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-28999098-1');
+</script>
+
+</body>
+</html>

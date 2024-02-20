@@ -1,0 +1,250 @@
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+  <title>Land Surveyors United Tools - Land Surveying Jobs, Surveyor Tools and Directory of Surveying Companies</title>
+  <html>
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://storage.ning.com/topology/rest/1.0/file/get/8857096461?profile=original"></script>
+  <title>Apps for Land Surveyor Mentorship and Surveying Jobs Search</title>
+</head>
+<body style="margin:0">
+  <div id="container">
+    <div id="pattern" class="pattern containerItem">
+      <div class="breadcrumb flat">
+	<a href="https://landsurveyorsunited.com/post-directory" class="active">Directory</a>
+	<a href="https://landsurveyorsunited.com/elsewhere">Elsewhere</a>
+	<a href="https://landsurveyorsunited.com/post-market">Surveyor Marketplace</a>
+	<a href="https://landsurveyorsunited.com/post-point">Survey Atlas</a>
+  <a href="https://landsurveyorsunited.com/post-job">Survey Jobs</a>
+</div>
+    </div>
+    <div id="iframesContainer" class="containerItem">
+      <!-- All the iframes will be populated here -->
+    <div class="iframeSite" style="flex-grow: 1">
+      <iframe src="https://directory.landsurveyorsunited.com/?spider_tab_iframe" style="height: 100%; width: 100%"> </iframe>
+    </div><div class="iframeSite" style="flex-grow: 1">
+      <iframe src="https://tools.landsurveyorsunited.com/?spider_tab_iframe" style="height: 100%; width: 100%"> </iframe>
+    </div><div class="iframeSite" style="flex-grow: 1">
+      <iframe src="https://rss.smarketplace.org/?spider_tab_iframe" style="height: 100%; width: 100%"> </iframe>
+    </div><div class="iframeSite" style="flex-grow: 1">
+      <iframe src="https://atlas.landsurveyorsunited.com?spider_tab_iframe" style="height: 100%; width: 100%"> </iframe>
+    </div></div>
+  </div>
+</body>
+
+<style>
+@import url(https://fonts.googleapis.com/css?family=Merriweather+Sans);
+
+* {margin: 0; padding: 0;}
+body {
+	text-align: center;
+	padding-top: 100px;
+	background: #689976;
+	background: linear-gradient(#000000, #212121);
+	font-family: 'Merriweather Sans', arial, verdana;
+}
+
+.breadcrumb {
+	/*centering*/
+	display: inline-block;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.35);
+	overflow: hidden;
+	border-radius: 5px;
+	/*Lets add the numbers for each link using CSS counters. flag is the name of the counter. to be defined using counter-reset in the parent element of the links*/
+	counter-reset: flag; 
+}
+
+.breadcrumb a {
+	text-decoration: none;
+	outline: none;
+	display: block;
+	float: left;
+	font-size: 1.1em;
+	line-height: 36px;
+	color: white;
+	/*need more margin on the left of links to accomodate the numbers*/
+	padding: 0 10px 0 60px;
+	background: #666;
+	background: linear-gradient(#666, #333);
+	position: relative;
+}
+/*since the first link does not have a triangle before it we can reduce the left padding to make it look consistent with other links*/
+.breadcrumb a:first-child {
+	padding-left: 46px;
+	border-radius: 5px 0 0 5px; /*to match with the parent's radius*/
+}
+.breadcrumb a:first-child:before {
+	left: 14px;
+}
+.breadcrumb a:last-child {
+	border-radius: 0 5px 5px 0; /*this was to prevent glitches on hover*/
+	padding-right: 20px;
+}
+
+/*hover/active styles*/
+.breadcrumb a.active, .breadcrumb a:hover{
+	background: #333;
+	background: linear-gradient(#333, #000);
+}
+.breadcrumb a.active:after, .breadcrumb a:hover:after {
+	background: #333;
+	background: linear-gradient(135deg, #333, #000);
+}
+
+/*adding the arrows for the breadcrumbs using rotated pseudo elements*/
+.breadcrumb a:after {
+	content: '';
+	position: absolute;
+	top: 0; 
+	right: -18px; /*half of square's length*/
+	/*same dimension as the line-height of .breadcrumb a */
+	width: 36px; 
+	height: 36px;
+	/*as you see the rotated square takes a larger height. which makes it tough to position it properly. So we are going to scale it down so that the diagonals become equal to the line-height of the link. We scale it to 70.7% because if square's: 
+	length = 1; diagonal = (1^2 + 1^2)^0.5 = 1.414 (pythagoras theorem)
+	if diagonal required = 1; length = 1/1.414 = 0.707*/
+	transform: scale(0.707) rotate(45deg);
+	/*we need to prevent the arrows from getting buried under the next link*/
+	z-index: 1;
+	/*background same as links but the gradient will be rotated to compensate with the transform applied*/
+	background: #666;
+	background: linear-gradient(135deg, #666, #333);
+	/*stylish arrow design using box shadow*/
+	box-shadow: 
+		2px -2px 0 2px rgba(0, 0, 0, 0.4), 
+		3px -3px 0 2px rgba(255, 255, 255, 0.1);
+	/*
+		5px - for rounded arrows and 
+		50px - to prevent hover glitches on the border created using shadows*/
+	border-radius: 0 5px 0 50px;
+}
+/*we dont need an arrow after the last link*/
+.breadcrumb a:last-child:after {
+	content: none;
+}
+/*we will use the :before element to show numbers*/
+.breadcrumb a:before {
+	content: counter(flag);
+	counter-increment: flag;
+	/*some styles now*/
+	border-radius: 100%;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	margin: 8px 0;
+	position: absolute;
+	top: 0;
+	left: 30px;
+	background: #444;
+	background: linear-gradient(#444, #222);
+	font-weight: bold;
+}
+
+
+.flat a, .flat a:after {
+	background: white;
+	color: black;
+	transition: all 0.5s;
+}
+.flat a:before {
+	background: yellow;
+  color:#000;
+	box-shadow: 0 0 0 1px #ccc;
+}
+.flat a:hover, .flat a.active, 
+.flat a:hover:after, .flat a.active:after{
+	background: #cc0000;
+  color:#eee;
+}
+
+  #container {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  .containerItem {
+    flex-grow: 1;
+  }
+
+  #iframesContainer {
+    display: flex;
+    flex-direction: row;
+    background-color: whitesmoke;
+    height: 550px;
+    margin: 10px;
+  }
+
+  .iframeSite {
+    background-color: white;
+    flex-grow: 1;
+    height: 100%;
+  }
+
+  .is-vishidden {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+
+  .pattern {
+    padding: 1em;
+    line-height: 1;
+  }
+
+  .f {
+    position: relative;
+  }
+
+  input {
+    display: block;
+    border: 1px solid #000;
+    background-color: white;
+  }
+
+  iframe {
+    display: block;
+    border: 1px solid #000;
+  }
+
+  input[type=search] {
+    width: 100%;
+    padding: 1em;
+    padding-right: 7em;
+    position: relative;
+    top: 0;
+  }
+
+  input[type=submit] {
+    position: absolute;
+    right: 0.75em;
+    top: 0.5em;
+    bottom: 0.5em;
+    z-index: 1;
+    width: 6em;
+    padding: 0;
+    cursor: pointer;
+  }
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-28999098-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-28999098-1');
+</script>
+
+</html>

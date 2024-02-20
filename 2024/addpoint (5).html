@@ -1,0 +1,221 @@
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+  <title>Add Point - Geolocate Your FOTD Post on Land Surveyors United</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .map-container {
+      width: 100%;
+      height: 600px;
+    }
+    body {
+      background-color: #111827!important;
+      color: #FFFFFF;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, system-ui;
+  background: hsl(0 0% 0%);
+  gap: 2rem;
+}
+
+body::before {
+	--line: hsl(0 0% 95% / 0.25);
+	content: "";
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	background:
+		linear-gradient(90deg, var(--line) 1px, transparent 1px 10vmin) 0 -5vmin / 10vmin 10vmin,
+		linear-gradient(var(--line) 1px, transparent 1px 10vmin) 0 -5vmin / 10vmin 10vmin;
+	mask: linear-gradient(-15deg, transparent 30%, white);
+	top: 0;
+	z-index: -1;
+}
+    .button:hover {background-color: orange;}
+    .text-gray-700 {color:white;}
+  </style>
+</head>
+<body class="bg-gray-100">
+  <div class="container mx-auto py-8">
+    <div class="flex">
+      <!-- Left Side - User Input -->
+      <div class="w-1/2 pr-4">
+        <h1 style="color:orange;" class="text-2xl font-bold mb-4">MMMarker - Geolocate Your Survey Point Post, FOTD or show us "I Surveyed That"</h1>
+        <details><summary>What is this tool for?</summary>     <p style="color:white;">Making a blog post is one thing.  Geolocating your blog post to show up in the global community points map is entirely on another level. Share your FOTD or Today's Office or just show us where you surveyed.  Use this experimental tool to simply create the HTML needed to make your Point Post which will show up inside the Surveyor Atlas and inside the Surveying Community Globe.</p></details>
+        <p style="color:white;">1️⃣ Add the location information for your point and grab a Point Badge for your post.</p>
+<p style="color:white;">2️⃣ Generate the HTML code needed to add to your post for geolocation.</p>
+<p style="color:white;">3️⃣Add a Point to a new Point Post inside LSU by copying and pasting the HTML <a style="color:orange;"href="https://landsurveyorsunited.com/points/blogpost/new" target="_blank" rel="noopener">into your post >>></a>.</p>
+        <div class="mb-4">
+          <label style="color:black;"class="block text-gray-700 text-sm font-bold mb-2" for="marker-type">Marker Type:</label>
+          <select id="marker-type" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+            <option value="concrete-monuments">Concrete Monuments</option>
+            <option value="metal-pins-rods">Metal Pins or Rods</option>
+            <option value="wooden-stakes">Wooden Stakes</option>
+            <option value="brass-disks-caps">Brass Disks or Caps</option>
+            <option value="benchmark-monuments">Benchmark Monuments</option>
+            <option value="drill-holes-rock">Drill Holes in Rock</option>
+            <option value="chiseled-marks">Chiseled Marks</option>
+            <option value="magnetic-markers">Magnetic Markers</option>
+            <option value="gps-survey-markers">GPS Survey Markers</option>
+            <option value="virtual-markers">Virtual Markers (Digital)</option>
+          </select>
+        </div>
+        <div class="mb-4">
+          <label style="color:orange;" class="block text-gray-700 text-sm font-bold mb-2" for="location">Location:</label>
+          <input id="location" type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="Country, City, Address, Lat/Long">
+        </div>
+        <div class="mb-4">
+          <button id="get-location" class="bg-indigo-500 text-white px-4 py-2 rounded-md">Get Current Location</button>
+        </div>
+        <div class="mb-4">
+          <label style="color:orange;" class="block text-gray-700 text-sm font-bold mb-2" for="latitude">Latitude:</label>
+          <input id="latitude" type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="Latitude">
+        </div>
+        <div class="mb-4">
+          <label style="color:orange;" class="block text-gray-700 text-sm font-bold mb-2" for="longitude">Longitude:</label>
+          <input id="longitude" type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="Longitude">
+        </div>
+        <button id="set-point" class="bg-indigo-500 text-white px-4 py-2 rounded-md">Set Point</button>
+        <div class="bg-white mt-8 p-4 rounded-lg">
+          <h2 style="background:#111827;color:orange;border:solid 1px orange;"class="text-xl font-bold mb-4">Point Description</h2>
+          <p style="color:orange;"class="mb-2">Current Date and Time: <span id="current-date-time"></span></p>
+        </div>
+      </div>
+      
+      <!-- Right Side - Preview and Code -->
+      <div class="w-1/2 pl-4">
+        <div style="background:#111827;color:orange;border:solid 1px orange;"class="bg-white p-4 rounded-lg">
+          <h2 style="color:orange;"class="text-xl font-bold mb-4">HTML Card Preview</h2>
+          <div id="preview-card" class="border border-gray-300 p-4 mb-4">
+            <!-- Preview card content -->
+          </div>
+          <button id="copy-code" class="bg-indigo-500 text-white px-4 py-2 rounded-md">Copy Code to Clipboard</button>
+        </div>
+        <div class="bg-gray mt-8 p-4 rounded-lg">
+          <h2 class="text-xl font-bold mb-4">HTML Embed Code (copy and paste this into the post as HTML.)</h2>
+          <pre style="background:#111827;color:orange;border:solid 1px orange;"id="embed-code" class="bg-gray-100 p-4 rounded-md">
+            <!-- Embed code will appear here -->
+          </pre>
+        </div>
+      </div>
+    </div>
+    
+    <!-- OpenStreetMap -->
+    <div id="map" class="map-container mt-8"></div>
+  </div>
+  
+  <!-- OpenStreetMap Javascript -->
+  <script src="https://www.openstreetmap.org/openlayers/OpenStreetMap.js"></script>
+  <script>
+    // Function to initialize the map
+    function initMap() {
+      var map = new OpenLayers.Map("map");
+      var mapnik = new OpenLayers.Layer.OSM();
+      map.addLayer(mapnik);
+      map.setCenter(new OpenLayers.LonLat(0, 0), 2);
+    }
+    
+    // Call the initMap function on page load
+    window.onload = initMap;
+  </script>
+  
+  <!-- Your code logic goes here -->
+  <script>
+    // Function to get current date and time
+    function getCurrentDateTime() {
+      var currentDateTime = new Date();
+      var options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false };
+      return currentDateTime.toLocaleString('en-US', options);
+    }
+    
+    // Function to update the preview card with marker type and description
+    function updatePreviewCard() {
+      var markerType = document.getElementById('marker-type').value;
+      var latitude = document.getElementById('latitude').value;
+      var longitude = document.getElementById('longitude').value;
+      
+      var previewCard = document.getElementById('preview-card');
+      previewCard.innerHTML = `
+        <h3 class="text-lg font-bold">${markerType}</h3>
+        <p class="text-sm mb-2">Latitude: ${latitude}</p>
+        <p class="text-sm">Longitude: ${longitude}</p>
+      `;
+    }
+    
+    // Function to update the embed code with marker type, latitude, and longitude
+    function updateEmbedCode() {
+      var markerType = document.getElementById('marker-type').value;
+      var latitude = document.getElementById('latitude').value;
+      var longitude = document.getElementById('longitude').value;
+      
+      var embedCode = `
+        <div class="marker">
+          <h3>${markerType}</h3>
+          <address>${latitude},${longitude}</address>
+        </div>
+      `;
+      
+      document.getElementById('embed-code').textContent = embedCode;
+    }
+    
+    // Function to copy the embed code to clipboard
+    function copyEmbedCode() {
+      var embedCode = document.getElementById('embed-code');
+      embedCode.select();
+      embedCode.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+      alert("Embed code copied to clipboard!");
+    }
+    
+    // Event listener for "Get Current Location" button click
+    document.getElementById('get-location').addEventListener('click', function() {
+      // Use browser's geolocation API to get current location
+      navigator.geolocation.getCurrentPosition(function(position) {
+        var latitude = position.coords.latitude.toFixed(6);
+        var longitude = position.coords.longitude.toFixed(6);
+        
+        // Populate latitude and longitude fields
+        document.getElementById('latitude').value = latitude;
+        document.getElementById('longitude').value = longitude;
+        
+        // Update preview card and embed code
+        updatePreviewCard();
+        updateEmbedCode();
+      });
+    });
+    
+    // Event listener for "Set Point" button click
+    document.getElementById('set-point').addEventListener('click', function() {
+      // Update preview card and embed code
+      updatePreviewCard();
+      updateEmbedCode();
+    });
+    
+    // Event listener for "Copy Code to Clipboard" button click
+    document.getElementById('copy-code').addEventListener('click', function() {
+      copyEmbedCode();
+    });
+    
+    // Update current date and time
+    document.getElementById('current-date-time').textContent = getCurrentDateTime();
+  </script>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-28999098-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-28999098-1');
+</script>
+
+</body>
+</html>

@@ -1,0 +1,453 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A to Zenith Mapping - Land Surveyors United Community</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" />
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .footer {
+      background-color: #111827;
+      color: #FFFFFF;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index:999;
+    }
+
+    .logo {
+      height: 40px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    .current-time {
+      font-size: 14px;
+    }
+
+    .location-button {
+      color: #000000;
+      background-color: #F59E0B;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 14px;
+      margin-left: 10px;
+    }
+
+    .make-post-button {
+      background-color: #111827;
+      color: #F59E0B;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .top-drawer {
+      background-color: #111827;
+      border-radius:5px;
+      color: #ffffff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-drawer-button {
+      background-color: #111827;
+      color: #F59E0B;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 14px;
+      margin-right: 10px;
+    }
+.top-drawer-button:hover {
+      background-color: #353539;
+      color: orange;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 14px;
+      margin-right: 10px;
+    }
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #111827;
+      color:#fff;
+      z-index:999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-content {
+      background-color: #111827;
+      padding: 20px;
+      border-radius: 5px;
+      max-width: 100%;
+      width: 100%;
+      max-height: 90%;
+      height: 90%;
+      overflow-y: auto;
+    }
+
+    .close-button {
+      background-color: #F59E0B;
+      color: #000000;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 14px;
+      margin-top: 10px;
+      align-self: flex-start;
+    }
+
+    .feed-container {
+      margin-top: 20px;
+    }
+div.bg-gray-800.p-4.rounded-lg {min-height:700px!important;position:relative;overflow:scroll;}
+    .feed-item {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    .feed-item-image {
+      width: 100px;
+      margin-right: 10px;
+    }
+
+    .feed-item-content {
+      flex: 1;
+    }
+
+    .feed-item-title {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .feed-item-description {
+      margin-bottom: 10px;
+    }
+
+    .read-post-button {
+      background-color: #F59E0B;
+      color: #FFFFFF;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+     .feedback-container {
+      position: fixed;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      transition: transform 0.3s ease-out;
+      z-index: 9999;
+    }
+    .feedback-button {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 100px;
+      margin:3px;
+      background-color: #111827;
+      color: orange;
+      border-radius: 5px 0 0 5px;
+      cursor: pointer;
+      transition: width 0.3s ease-out;
+    }
+    .feedback-button:hover {
+      width: 200px;
+    }
+    .feedback-button span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-90deg);
+    }
+    .feedback-form {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 80%;
+      height: 100vh;
+      z-index:9999;
+      background-color: #111827;
+      color:orange;
+      padding: 20px;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-out;
+    }
+    .feedback-form.open {
+      transform: translateX(0%);
+    }
+    .feedback-form-header {
+      display: flex;
+      justify-content: space-between;
+    }
+    .feedback-form-close {
+      cursor: pointer;
+    }
+  </style>
+<style>
+  html, body, #map {
+    height: 100%;
+    margin: 0;
+    
+  }
+  .leaflet-container {
+    height: 300px;
+    width: 600px;
+    max-width: 100%;
+    max-height: 100%;
+    z-index:1;
+  }
+</style>
+</head>
+<body style="background:#111827;"class="bg-gray-100">
+<img style="width:65px;z-index:1999;"src="https://storage.ning.com/topology/rest/1.0/file/get/12222126291?profile=original" class="block max-w-xs mx-auto mb-8" alt="Land Surveyors United Logo">
+<div id="map" class="w-full h-full"></div>
+<div id="overlay" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center z-10" onclick="document.getElementById('overlay').style.display='none';">
+  <a style="color:black;background:orange;"href="https://landsurveyorsunited.com/main/authorization/signIn?target=/pointmap" class="absolute top-5 right-5 text-white px-4 py-2 rounded-md text-lg font-medium bg-blue-600 hover:bg-blue-700 focus:outline-none focus:bg-blue-700 transition duration-150 ease-in-out">Sign In</a>
+  
+  <div>
+    <a style="color:orange;background:#111827;"href="/postapoint" class="text-white px-8 py-3 rounded-md text-lg font-medium bg-green-500 hover:bg-green-600 focus:outline-none focus:bg-green-600 transition duration-150 ease-in-out mb-4"> Add 📍</a>
+    <a style="color:orange;background:#111827;"href="/azmedia" class="text-white px-8 py-3 rounded-md text-lg font-medium bg-yellow-300 hover:bg-yellow-400 focus:outline-none focus:bg-yellow-400 transition duration-150 ease-in-out">Jobsite 🤙</a>
+ 
+    <a style="color:orange;background:#111827;"href="/georadio" class="text-white px-8 py-3 rounded-md text-lg font-medium bg-yellow-300 hover:bg-yellow-400 focus:outline-none focus:bg-yellow-400 transition duration-150 ease-in-out">Radio 🎙️</a>
+  </div>
+</div>
+<div style="z-index:999;"class="w-full bg-gray-600 text-white p-4 text-center sticky bottom-0">
+   <div class="top-drawer">
+    <button class="top-drawer-button" onclick="openIframeModal('https://landsurveyorsunited.com/post-job')">Post Job</button>
+        <button class="top-drawer-button" onclick="openIframeModal('https://landsurveyorsunited.com/postapoint')">Post Point</button>
+    <button class="top-drawer-button" onclick="openIframeModal('https://landsurveyorsunited.com/post-market')">Post Market</button>
+    <button class="top-drawer-button" onclick="openIframeModal('https://landsurveyorsunited.com/post-directory')">Post Directory</button>
+    <button class="top-drawer-button" onclick="openIframeModal('https://landsurveyorsunited.com/video/video/new')">Post Video</button>
+    <button class="top-drawer-button" onclick="openIframeModal('https://landsurveyorsunited.com/forum/topics/discussion/new')">Post Discussion</button>
+    <button class="top-drawer-button" onclick="openIframeModal('https://landsurveyorsunited.com/events/event/new')">Add Event</button>
+    <button class="top-drawer-button" onclick="openIframeModal('https://landsurveyorsunited.com/hubsmap')">Local Hubs</button>
+
+  </div>
+
+  <div class="modal" id="modal" style="display: none;">
+    <div class="modal-content">
+      <button class="close-button" onclick="closeModal()">Close</button>
+      <iframe src="" frameborder="0" style="width: 100%; height: 100%;"></iframe>
+    </div>
+  </div>
+</div>
+<div class="feedback-container">
+    <div class="feedback-button" onclick="toggleForm('postJobForm')">
+      <span>Membership</span>
+    </div>
+    <div class="feedback-button" onclick="toggleForm('hiringForm')">
+      <span>Participate</span>
+    </div>
+    <div class="feedback-button" onclick="toggleForm('hireMeForm')">
+      <span>Feedback</span>
+    </div>
+  </div>
+
+  <div style="z-index:999;"id="postJobForm" class="feedback-form">
+    <div class="feedback-form-header">
+      <h3>Get More Tools!  Upgrade to Futurist</h3>
+      <div class="feedback-form-close" onclick="toggleForm('postJobForm')">&times;</div>
+    </div>
+    
+    <!-- Embedded Google Form -->
+    <iframe src="https://e-commerce.ning.com/payment/page?t=11ED9B6427D5B8B889E91866DA4E2AC0" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Loading Options</iframe>
+  </div>
+
+  <div id="hiringForm" class="feedback-form">
+    <div class="feedback-form-header">
+      <h3>Share Your Survey Life to inspire the Future Generations</h3>
+      <div class="feedback-form-close" onclick="toggleForm('hiringForm')">&times;</div>
+    </div>
+    
+    <!-- Embedded Google Form -->
+    <iframe src="https://landsurveyorsuniteddocs.on.drv.tw/membertools/atozenith/postelsewhere.html" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  </div>
+
+  <div id="hireMeForm" class="feedback-form">
+    <div class="feedback-form-header">
+      <h3>Tool Feedback</h3>
+      <div class="feedback-form-close" onclick="toggleForm('hireMeForm')">&times;</div>
+    </div>
+    
+    <!-- Embedded Google Form -->
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSclst-MhIeRm5Nfogrleq1twfAqEq5boeqi92cEDA9rtqeyfg/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  </div>
+<script>
+  var map = L.map('map').fitWorld();
+  map.locate({setView: true, maxZoom: 16});
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {}).addTo(map);
+
+  function onLocationFound(e) {
+    var radius = e.accuracy;
+    L.marker(e.latlng).addTo(map)
+      .bindPopup("You are within " + radius + " meters from this point").openPopup();
+
+    L.circle(e.latlng, radius).addTo(map);
+  }
+
+  function onLocationError(e) {
+    alert(e.message);
+  }
+
+  map.on('locationfound', onLocationFound);
+  map.on('locationerror', onLocationError);
+</script>
+<script>
+    function openModal(url) {
+      document.getElementById('modal').style.display = 'flex';
+      document.querySelector('.modal-content iframe').src = url;
+    }
+
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+      document.querySelector('.modal-content iframe').src = '';
+    }
+
+    function openIframeModal(url) {
+      const modal = document.createElement('div');
+      modal.className = 'modal';
+      modal.innerHTML = `
+        <div class="modal-content">
+          <button class="close-button" onclick="document.body.removeChild(this.parentNode.parentNode)">Close</button>
+          <iframe src="${url}" frameborder="0" style="width: 100%; height: 100%;"></iframe>
+        </div>
+      `;
+      document.body.appendChild(modal);
+    }
+
+    function getUserLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showWeather);
+      } else {
+        alert('Geolocation is not supported by this browser.');
+      }
+    }
+
+    function showWeather(position) {
+      const lat = position.coords.latitude;
+      const lon = position.coords.longitude;
+      // Call the weather API with latitude and longitude
+      fetch(`https://www.literallyanything.io/api/integrations/openweather?lat=${lat}&lon=${lon}&units=metric&lang=en`)
+        .then(response => response.json())
+        .then(data => {
+          const weather = data.weather[0].description;
+          const temperature = data.main.temp;
+          const location = data.name;
+          const currentTime = new Date().toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric' });
+
+          document.getElementById('current-time').innerText = `Current Time: ${currentTime}`;
+          document.querySelector('.location-button').innerText = `${location} - ${temperature}°C, ${weather}`;
+        })
+        .catch(error => {
+          console.log(error);
+          alert('Failed to fetch weather data.');
+        });
+    }
+
+    // Get RSS feeds from OPML file
+    fetch('https://landsurveyorsuniteddocs.on.drv.tw/membertools/opml/revisedlsuall.opml')
+      .then(response => response.text())
+      .then(data => {
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(data, 'text/xml');
+        const feedUrls = Array.from(xmlDoc.querySelectorAll('outline[type="rss"]')).map(node => node.getAttribute('xmlUrl'));
+
+        // Populate dropdown select with feed titles
+        const dropdown = document.createElement('select');
+        dropdown.addEventListener('change', showFeedItems);
+        dropdown.innerHTML = feedUrls.map(url => `<option value="${url}">${getFeedTitle(url)}</option>`).join('');
+        document.body.appendChild(dropdown);
+      })
+      .catch(error => {
+        console.log(error);
+        alert('Failed to fetch RSS feeds.');
+      });
+
+    function getFeedTitle(url) {
+      const match = url.match(/\/([^/]+)\/?$/);
+      return match ? match[1] : '';
+    }
+
+    function showFeedItems(event) {
+      const feedUrl = event.target.value;
+
+      fetch(feedUrl)
+        .then(response => response.text())
+        .then(data => {
+          const parser = new DOMParser();
+          const xmlDoc = parser.parseFromString(data, 'text/xml');
+          const items = Array.from(xmlDoc.querySelectorAll('item')).slice(0, 10);
+
+          const feedContainer = document.getElementById('feed-container');
+          feedContainer.innerHTML = '';
+
+          items.forEach(item => {
+            const title = item.querySelector('text').textContent;
+            const description = item.querySelector('description').textContent;
+            const link = item.querySelector('link').textContent;
+            const image = item.querySelector('image')?.getAttribute('url');
+
+            const feedItem = document.createElement('div');
+            feedItem.className = 'feed-item';
+            feedItem.innerHTML = `
+              <img src="${image}" alt="Feed Item Image" class="feed-item-image">
+              <div class="feed-item-content">
+                <div class="feed-item-title">${title}</div>
+                <div class="feed-item-description">${description.substring(0, 200)}</div>
+                <button class="read-post-button" onclick="openModal('${link}')">Read Post</button>
+              </div>
+            `;
+
+            feedContainer.appendChild(feedItem);
+          });
+
+          feedContainer.style.display = 'block';
+        })
+        .catch(error => {
+          console.log(error);
+          alert('Failed to fetch feed items.');
+        });
+    }
+  </script>
+  <!-- Google tag (gtag.js) -->
+ <script>
+    function loadIframe() {
+      var iframeSelect = document.getElementById("iframe-select");
+      var iframe = document.getElementById("iframe");
+      var url = iframeSelect.value;
+      
+      if (url) {
+        iframe.src = url;
+      } else {
+        iframe.src = "";
+      }
+    }
+  </script>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-28999098-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-28999098-1');
+</script>
+
+</body>
+</html>
+

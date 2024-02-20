@@ -1,0 +1,520 @@
+<html>
+<head>
+  <title>Dual Map with Google Maps and Street View</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.2/slate/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #111827!important;
+      color: orange;
+      margin: 0;
+      padding: 0;
+    }
+    button.btn-close {background-color:orange;border-radius:5px;}
+    body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, system-ui;
+  background: hsl(0 0% 0%);
+  gap: 2rem;
+}
+
+body::before {
+	--line: hsl(0 0% 95% / 0.25);
+	content: "";
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	background:
+		linear-gradient(90deg, var(--line) 1px, transparent 1px 10vmin) 0 -5vmin / 10vmin 10vmin,
+		linear-gradient(var(--line) 1px, transparent 1px 10vmin) 0 -5vmin / 10vmin 10vmin;
+	mask: linear-gradient(-15deg, transparent 30%, white);
+	top: 0;
+	z-index: -1;
+}
+    #map {
+      height: 500px;
+      width: 100%;
+    }
+    #street-view {
+      height: 500px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <style>
+      .panel {
+      width: 45%;
+      z-index: 999;
+      position: fixed;
+      top: 0;
+      right: -45%;
+      bottom: 0;
+      background-color: #111827;
+      transition: right 0.3s ease-in-out;
+    }
+    .panel.open {
+      right: 0;
+    }
+    .panel-content {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .panel-title {
+      font-size: 1.5rem;
+      color: #F9FAFB;
+      margin-bottom: 1rem;
+    }
+    .panel-iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .icon {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+        .section-container {
+      height: calc(100% - 120px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .iframe-container {
+    max-width: 100%;
+      width:100%;
+      perspective: 2000px;
+      height: 100%;
+    }
+    .iframe-container iframe {
+      max-width: 100%;
+      width:100%;
+      height: 100%;
+      min-height:2500px;
+      transform: rotateX(30deg);
+      transition: transform 0.5s ease-in-out;
+    }
+    .scroll-rotate {
+      transform: rotateX(0deg) !important;
+    }
+ div.modal-footer,div.modal-content,.video-container,.modal-lg, body {
+      background-color: #111827!important;
+      color: orange;
+      margin: 0;
+      padding: 0;
+    }
+    button.btn-close {background-color:orange;border-radius:5px;}
+    body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, system-ui;
+  background: hsl(0 0% 0%);
+  gap: 2rem;
+}
+
+body::before {
+	--line: hsl(0 0% 95% / 0.25);
+	content: "";
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	background:
+		linear-gradient(90deg, var(--line) 1px, transparent 1px 10vmin) 0 -5vmin / 10vmin 10vmin,
+		linear-gradient(var(--line) 1px, transparent 1px 10vmin) 0 -5vmin / 10vmin 10vmin;
+	mask: linear-gradient(-15deg, transparent 30%, white);
+	top: 0;
+	z-index: -1;
+}
+    img:hover {-webkit-transition: all .5s ease-in-out; -webkit-transform: rotate(-360deg);}
+.footer {
+      background-color: #111827;
+      padding: 20px;
+      position: sticky;
+      bottom: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.1);
+    }
+    .footer:hover {
+      background-color: orange;
+      padding: 20px;
+      position: sticky;
+      bottom: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      z-index:900;
+    }
+
+    .button {
+      background-color: #ff8c00;
+      color: #111827;
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin: 10px;
+      font-size: 18px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #ff6f00;
+      color:#fff;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      max-width: 800px;
+      height: 90%;
+      max-height: 600px;
+      background-color: #222;
+      padding: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .modal-iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .close-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #ff8c00;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .close-button:hover {
+      background-color: #ff6f00;
+    }
+     select#iframe-select {font-size:1.4em;color:#fff;
+      background-color:#000;}
+    .dropdown {
+      position: absolute;
+      
+      top: 1%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+    }
+    
+    .iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%!important;
+      height: 100%;
+      z-index: 1;
+    }
+     body {
+      padding-bottom: 60px;
+    }
+   .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 60px;
+      background-color: #111827;
+      display: flex;
+      align-items: center;
+      z-index:999;
+      justify-content: space-between;
+      padding: 0 20px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+    .footer .logo {
+      display: flex;
+      align-items: center;
+    }
+    .footer .logo img {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+    .footer .logo a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+    .footer .actions {
+      display: flex;
+      align-items: center;
+    }
+    .footer .actions .btn {
+      margin-right: 10px;
+    }
+    .footer .avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-right: 10px;
+      object-fit: cover;
+    }
+    @media (max-width: 576px) {
+      .footer .actions .btn {
+        display: none;
+      }
+    }
+</style>
+<div class="flex">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="flex items-center p-4">
+        <img style="width:100px;"title="Where Are You Surveying Today?" alt="Where Are You Surveying Today?" src="https://storage.ning.com/topology/rest/1.0/file/get/12343640675?profile" alt="Land Surveyors United Logo">
+      </div>
+      <div class="relative">
+    <img style="width:30px;height:30px;margin:50px%;"src="https://storage.ning.com/topology/rest/1.0/file/get/12343098863?profile=RESIZE_584x" alt="Panel Toggle Icon" class="icon" onclick="togglePanel()">
+    <div class="panel" id="panel">
+      <div class="panel-content">
+        <h2 class="panel-title">Where are you surveying?</h2>
+        <iframe src="https://landsurveyorsunited.com/addstuff" class="panel-iframe" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+      
+      <script>
+    function togglePanel() {
+      const panel = document.getElementById('panel');
+      panel.classList.toggle('open');
+    }
+  </script>
+ <script>
+    window.addEventListener('scroll', function() {
+      var iframe = document.querySelector('.iframe-container iframe');
+      var sectionContainer = document.querySelector('.section-container');
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      var sectionOffset = sectionContainer.offsetTop;
+      
+      if (scrollTop > sectionOffset) {
+        iframe.classList.add('scroll-rotate');
+      } else {
+        iframe.classList.remove('scroll-rotate');
+      }
+    });
+  </script>
+  <div class="container">
+    <h1 class="mt-5">Dual Map with Google Maps and Street View</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <h3 class="mt-5">Google Maps</h3>
+        <div id="map"></div>
+        <input id="address-input" class="form-control mt-3" type="text" placeholder="Enter an address">
+        <button id="current-location-btn" class="btn btn-primary mt-3">Use Current Location</button>
+      </div>
+      <div class="col-md-6">
+        <h3 class="mt-5">Google Street View</h3>
+        <div id="street-view"></div>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-md-6">
+        <h3>Share Map Link</h3>
+        <input id="map-link-input" class="form-control mt-3" type="text" readonly>
+        <button id="copy-link-btn" class="btn btn-primary mt-3">Copy Link</button>
+      </div>
+      <div class="col-md-6">
+        <h3>Create Embeddable Map</h3>
+        <textarea id="embed-code-input" class="form-control mt-3" rows="5" readonly></textarea>
+        <button id="copy-embed-code-btn" class="btn btn-primary mt-3">Copy Embed Code</button>
+      </div>
+    </div>
+  </div>
+ <div class="button-container">
+    <a href="#" class="button" onclick="openModal('https://www.mixily.com/venue/1523118555920024805/embed')">Jobsite Switchboard</a>
+    <a href="#" class="button" onclick="openModal('https://landsurveyorsunited.com/videostudio')">Post A Point</a>
+    <a href="#" class="button" onclick="openModal('https://landsurveyorsunited.com/jobsiteaudio')">Audio Studio</a>
+    <a href="#" class="button" onclick="openModal('https://landsurveyorsunited.com/addapoint')">Geolocate Posts</a>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <iframe class="modal-iframe" id="modal-iframe"></iframe>
+      <button class="close-button" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+<footer class="footer">
+    <div class="logo">
+      <img src="https://storage.ning.com/topology/rest/1.0/file/get/12222126291?profile=original" alt="Logo">
+      <a href="https://landsurveyorsunited.com/pointmap">Land Surveyors United</a>
+    </div>
+    <div class="actions">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#chatModal">Tool Feedback</button>
+      <div class="userthumb">&nbsp;</div>
+      <button type="button" class="btn btn-secondary">Like</button>
+    </div>
+  </footer>
+  <script>
+    function initMap() {
+      const mapCenter = { lat: 37.7749, lng: -122.4194 }; // Default center coordinates (San Francisco)
+      const map = new google.maps.Map(document.getElementById("map"), {
+        center: mapCenter,
+        zoom: 14,
+      });
+
+      const streetView = new google.maps.StreetViewPanorama(
+        document.getElementById("street-view")
+      );
+
+      const geocoder = new google.maps.Geocoder();
+
+      function updateLocation(address) {
+        geocoder.geocode({ address: address }, (results, status) => {
+          if (status === "OK") {
+            const location = results[0].geometry.location;
+            map.setCenter(location);
+            streetView.setPosition(location);
+          }
+        });
+      }
+
+      document.getElementById("address-input").addEventListener("change", () => {
+        const address = document.getElementById("address-input").value;
+        updateLocation(address);
+      });
+
+      document.getElementById("current-location-btn").addEventListener("click", () => {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(
+            (position) => {
+              const userLocation = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude,
+              };
+              map.setCenter(userLocation);
+              streetView.setPosition(userLocation);
+            },
+            () => {
+              alert("Unable to retrieve your location.");
+            }
+          );
+        } else {
+          alert("Geolocation is not supported by your browser.");
+        }
+      });
+
+      function generateMapLink() {
+        const center = map.getCenter();
+        const zoom = map.getZoom();
+        const mapLink = `https://maps.google.com/?q=${center.lat()},${center.lng()}&z=${zoom}`;
+        document.getElementById("map-link-input").value = mapLink;
+      }
+
+      document.getElementById("copy-link-btn").addEventListener("click", () => {
+        const mapLinkInput = document.getElementById("map-link-input");
+        mapLinkInput.select();
+        mapLinkInput.setSelectionRange(0, 99999);
+        document.execCommand("copy");
+        alert("Map link copied to clipboard!");
+      });
+
+      function generateEmbedCode() {
+        const center = map.getCenter();
+        const zoom = map.getZoom();
+        const embedCode = `<iframe src="https://maps.google.com/maps?q=${center.lat()},${center.lng()}&z=${zoom}&output=embed" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>`;
+        document.getElementById("embed-code-input").value = embedCode;
+      }
+
+      document.getElementById("copy-embed-code-btn").addEventListener("click", () => {
+        const embedCodeInput = document.getElementById("embed-code-input");
+        embedCodeInput.select();
+        embedCodeInput.setSelectionRange(0, 99999);
+        document.execCommand("copy");
+        alert("Embed code copied to clipboard!");
+      });
+
+      map.addListener("center_changed", generateMapLink);
+      map.addListener("zoom_changed", generateMapLink);
+      map.addListener("center_changed", generateEmbedCode);
+      map.addListener("zoom_changed", generateEmbedCode);
+
+      updateLocation("San Francisco");
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBv_tBwqgUHsHw-6xebzvejK3dNcQgu1gk&callback=initMap" async defer></script>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-28999098-1"></script>
+      <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+
+  <!-- Custom JS -->
+  <script>
+    function openModal(url) {
+      const modal = document.getElementById('modal');
+      const modalIframe = document.getElementById('modal-iframe');
+      modalIframe.src = url;
+      modal.style.display = 'block';
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('modal');
+      const modalIframe = document.getElementById('modal-iframe');
+      modalIframe.src = '';
+      modal.style.display = 'none';
+    }
+  </script>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-28999098-1"></script>
+  <script>
+    function loadIframe() {
+      var iframeSelect = document.getElementById("iframe-select");
+      var iframe = document.getElementById("iframe");
+      var url = iframeSelect.value;
+      
+      if (url) {
+        iframe.src = url;
+      } else {
+        iframe.src = "";
+      }
+    }
+  </script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-28999098-1');
+</script>
+</body>
+</html>
